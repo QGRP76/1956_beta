@@ -1537,7 +1537,7 @@
  STATE_485:0 "Guerrero"
  STATE_485_RENAMING:0 "[485.controller.GetStateName_485]"
 
- STATE_486:0 "Meta"
+ STATE_486:0 "Orinoquía"
  STATE_486_RENAMING:0 "[486.controller.GetStateName_486]"
 
  STATE_487:0 "Santa Cruz"
@@ -1558,7 +1558,7 @@
  STATE_492:0 "Arequipa"
  STATE_492_RENAMING:0 "[492.controller.GetStateName_492]"
 
- STATE_493:0 "La Libertad"
+ STATE_493:0 "Atlántico"
  STATE_493_RENAMING:0 "[493.controller.GetStateName_493]"
 
  STATE_494:0 "Ucayali"
@@ -3297,7 +3297,7 @@
  STATE_1050:0 "Guantanamo Bay"
  STATE_1050_RENAMING:0 "[1050.controller.GetStateName_1050]"
 
- STATE_1051:0 "Choco"
+ STATE_1051:0 "Antioquía"
  STATE_1051_RENAMING:0 "[1051.controller.GetStateName_1051]"
 
  STATE_1052:0 "Acre"

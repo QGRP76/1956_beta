@@ -652,7 +652,7 @@
  #MOR
  MOR_neutrality_party:0 "Sulālat al-'Alawiyyīn al-Fīlālīyn"
  MOR_democratic_party:0 "HI"
- MOR_democratic_party_long:0 "Ḥizb Al-Istiqlāl"
+ MOR_democratic_party_long:0 "Hizb Al-Istiqlāl"
  MOR_communism_party:0 "HSM"
  MOR_communism_party_long:0 "Al-Hizb al-Shuyueiu al-Maghribiu"
  MOR_fascism_party:0 "HFM"
@@ -967,9 +967,9 @@
  UGA_neutrality_party:0 "Abalasangeye Dynasty"
 
  #URG
- URG_neutrality_party:0 "PC-T"
+ URG_neutrality_party:0 "PC-M"
  URG_neutrality_party_long:0 "Partido Colorado - Marzistas"
- URG_democratic_party:0 "PC-M"
+ URG_democratic_party:0 "PC-R"
  URG_democratic_party_long:0 "Partido Colorado - Republicanos"
  URG_communism_party:0 "PCU"
  URG_communism_party_long:0 "Partido Comunista del Uruguay"

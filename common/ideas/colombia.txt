@@ -2,6 +2,97 @@ ideas = {
 
 	country = {
 
+		COL_agrarian_economy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_agrarian_society
+			
+			modifier = {
+				industrial_capacity_factory = -0.15
+				production_speed_buildings_factor = -0.10
+				conscription_factor = -0.35
+				trade_opinion_factor = 0.1
+			}
+		}
+
+		COL_coffee_dependent_economy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ETH_coffee_exports
+			
+			modifier = {
+				industrial_capacity_factory = -0.10
+				production_speed_buildings_factor = -0.05
+				conscription_factor = -0.35
+				trade_opinion_factor = 0.15
+			}
+		}
+
+		COL_coffee_dependent_economy_2 = {
+
+			name = COL_coffee_dependent_economy
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ETH_coffee_exports
+			
+			modifier = {
+				industrial_capacity_factory = -0.05
+				consumer_goods_factor = -0.05
+				conscription_factor = -0.25
+				trade_opinion_factor = 0.15
+			}
+		}
+
+		COL_growing_political_resistance = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = EST_democratic_opposition
+			
+			modifier = {
+				political_power_factor = -0.10
+				stability_factor = -0.05
+				stability_weekly = -0.001
+				fascism_drift = 0.01
+				communism_drift = 0.01
+			}
+		}
+
 		r56_COL_spanish_civil_war_involvement = {
 			
 			allowed = {
@@ -26,7 +117,6 @@ ideas = {
 		}
 
 		COL_workers_protection = {
-			
 			
 			allowed = {
 				always = no

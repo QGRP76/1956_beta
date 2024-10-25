@@ -76,41 +76,41 @@ if = {
 set_country_flag = monroe_doctrine
 set_country_flag = hispanic
 
-set_convoys = 10
-set_war_support = 0.2
-set_stability = 0.50 
-set_research_slots = 4
+set_convoys = 15
+set_war_support = 0.28
+set_stability = 0.34
+set_research_slots = 3
 
 add_ideas = {
-	HON_banana_republic
+	COL_agrarian_economy
+	COL_growing_political_resistance
 }
 
 COL = {
 	add_ai_strategy = {
 		type = antagonize
-		id = "PAN"			
-		value = 1
-	}
-	add_ai_strategy = {
-		type = antagonize
 		id = "PRU"			
-		value = 2
+		value = 25
 	}
 	add_ai_strategy = {
 		type = befriend
 		id = "PRU"			
-		value = -10
+		value = -25
+	}
+	add_ai_strategy = {
+		type = contain
+		id = "PRU"			
+		value = 10
 	}
 }
 
-
-set_convoys = 5
 set_politics = {
 	ruling_party = democratic
 	last_election = "1934.2.11"
 	election_frequency = 48
 	elections_allowed = yes
 }
+
 set_popularities = {
 	democratic = 48
 	fascism = 16
@@ -154,6 +154,7 @@ recruit_character = COL_pablo_emilio_lopez
 recruit_character = COL_antonio_j_tanco
 recruit_character = COL_francisco_santos_calvo
 recruit_character = COL_uribe_guzman
+
 #create_country_leader = {
 #	name = "Jorge Eliécer Gaitán"
 #	desc = "POLITICS_ALFONSO_LOPEZ_PUMAREJO_DESC"
@@ -166,8 +167,6 @@ recruit_character = COL_uribe_guzman
 #		heavy_industry_emphasis_trait
 #	}
 #}
-
-
 
 ### VARIANTS ###
 # 1936 Start #

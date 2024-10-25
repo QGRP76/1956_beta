@@ -58,6 +58,13 @@
 				has_focus_tree = saudi_focus
 			}
 		}
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				has_focus_tree = algeria_focus
+			}
+		}
 		x = 58	
 		y = 0				
 		ai_will_do = {

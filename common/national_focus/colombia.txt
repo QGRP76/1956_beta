@@ -17,505 +17,80 @@
 	default = no
 	
 	reset_on_civilwar = no
+	shared_focus = ABC_establish_a_general_staff
+	shared_focus = GEN_Aviation_Effort
+    shared_focus = GEN_Naval_Effort
 	shared_focus = GCO_UNIFIED_gran_colombian_unification
 	continuous_focus_position = { x = 50 y = 1100 }
-#militar production
 
 	focus = { 
-		id = COL_army_production
-		icon = GFX_goal_polish_wartime_industry
-		x = 1
+		id = COL_industrial_effort
+		icon = GFX_goal_gran_colombia_industry
+		x = 37
 		y = 0
-		cost = 10
+		cost = 8
 		completion_reward = {
-			army_experience = 5
 			random_owned_controlled_state = {
-				prioritize = { 306 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
 			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		ai_will_do = {
-			factor = 2
-		}
-	}
-
-#armas
-	focus = { 
-		id = COL_equipment_effort
-		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = COL_army_production }
-		x = 0
-		y = 1
-		cost = 10
-		completion_reward = {
-			add_tech_bonus = {
-				name = infantry_weapons_bonus
-				bonus = 0.75
-				uses = 2
-				category = infantry_weapons
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-	
-	focus = { 
-		id = COL_equipment_effort_2
-		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus = COL_equipment_effort }
-		x = 0
-		y = 2
-		cost = 10
-		completion_reward = {
-			add_tech_bonus = {
-				name = infantry_artillery_bonus
-				bonus = 1				
-				uses = 1				
-				category = artillery
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-
-	focus = { 
-		id = COL_equipment_effort_3
-		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = COL_equipment_effort_2 }
-		x = 0
-		y = 3
-		cost = 10
-		completion_reward = {
-			add_tech_bonus = {
-				name = infantry_artillery_bonus
-				bonus = 1
-				uses = 1
-				category = infantry_weapons
-				category = artillery
-
-			}
-			add_tech_bonus = {
-				name = motorized_rockets_tech_bonus_name
-				bonus = 1
-				uses = 1				
-				technology = rocket_artillery
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-#mobile
-
-	focus = { 
-		id = COL_motorization_effort
-		icon = GFX_goal_generic_modernizing_the_cavalry
-		prerequisite = { focus = COL_army_production }
-		bypass = { has_tech = motorised_infantry }
-		x = 2
-		y = 1
-		cost = 10
-		completion_reward = {
-			add_tech_bonus = {
-				name = motorized_bonus
-				bonus = 1
-				technology = motorised_infantry
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = { 
-		id = COL_tanque_ligero
-		icon = GFX_goal_tank_map
-		prerequisite = { focus = COL_motorization_effort }
-		bypass = { has_tech = advanced_light_tank }
-		
-		x = 2
-		y = 2
-		cost = 10
-		completion_reward = {
-			add_tech_bonus = {
-				name = armor_bonus
-				bonus = 1				
-				uses = 1
-				category = cat_light_armor
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = { 
-		id = COL_armor_support
-		icon = GFX_goal_ammunitions
-		prerequisite = { focus = COL_tanque_ligero }
-		x = 2
-		y = 3
-		cost = 10
-		completion_reward = {
-			add_tech_bonus = {
-				name = logistics_company_tech_bonus_name
-				bonus = 1
-				uses = 1
-				category = logistics_tech
-			}
-            every_army_leader = {
-                add_logistics = 2
-            }
-           add_ideas = PRU_reformed_logistics			
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-	
-	focus = { 
-		id = COL_mechanization_effort
-		icon = GFX_goal_mechanized_offensive
-		prerequisite = { focus = COL_armor_support }
-		
-		x = 2
-		y = 4
-		cost = 10
-		completion_reward = {
-			
-			add_tech_bonus = {
-				name = motorized_bonus			
-				bonus = 1	
-				uses = 1
-				category = cat_mechanized_equipment
-			}
-			add_tech_bonus = {
-				name = armor_bonus
-				bonus = 1
-				uses = 1				
-				category = cat_medium_armor
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-#hostile enviroment
-
-	focus = { 
-		id = COL_war_with_peru_experience
-		icon = GFX_goal_COL_coa_army
-		x = 5
-		y = 0
-		cost = 10
-		completion_reward = {
-			army_experience = 10
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		ai_will_do = {
-			factor = 2
-		}
-	}
-
-	#doctrines
-	focus = { 
-		id = COL_doctrine_effort
-		icon = GFX_goal_wargaming
-		prerequisite = { focus = COL_war_with_peru_experience }
-		x = 4
-		y = 1
-		cost = 10
-		completion_reward = {
-			army_experience = 5
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
-
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		ai_will_do = {
-			factor = 2
-		}
-	}
-
-	focus = { 
-		id = COL_doctrine_effort_ii
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = COL_doctrine_effort }
-		x = 4
-		y = 3
-		cost = 10
-		completion_reward = {
-			army_experience = 5
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		ai_will_do = {
-			factor = 2
-		}
-	}
-
-	#terrains
-	focus = { 
-		id = COL_montana_effort
-		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = COL_war_with_peru_experience }
-		x = 6
-		y = 1
-		cost = 10
-		completion_reward = {
-			army_experience = 5
-			add_tech_bonus = {
-				name = infantry_artillery_bonus
-				bonus = 1
-				uses = 1
-				category = recon_tech
-			}
-			add_tech_bonus = {
-                name = special_forces_bonus
-				bonus = 1
-				uses = 1				
-				category = r56_mountain_infantry_tech			
-			}
-			add_tech_bonus = {
-                name = special_forces_bonus
-                bonus = 1.0
-                uses = 1
-                category = r56_special_forces_training_tech 
-            }
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		ai_will_do = {
-			factor = 2
-		}
-	}
-	
-	
-	focus = { 
-		id = COL_awaite
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = COL_montana_effort }
-		prerequisite = { focus = COL_motorization_effort }
-		available = {
-			has_tech = tech_recon
-			has_tech = tech_mountaineers
-		}
-		x = 5
-		y = 2
-		cost = 10
-		completion_reward = {
-			army_experience = 5	
-			
-			hidden_effect = {
-				division_template = { 
-					name = "Alta Montaña"
-					division_names_group = SPAN_INFB_02
-					is_locked = no
-					regiments = {
-						mountaineers = { x = 0 y = 0 }
-						mountaineers = { x = 0 y = 1 }
-						mountaineers = { x = 0 y = 2 }
-						mountaineers = { x = 0 y = 3 }
-						mountaineers = { x = 0 y = 4 }
-					}
-					support = {
-						engineer = { x = 0 y = 0 }
-						artillery = { x = 0 y = 1 }
-						recon = { x = 0 y = 2 }		 
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						is_capital = yes
-					}
-					create_unit = {
-						division = "name = \"Alta Montaña\" division_template = \"Alta Montaña\" start_experience_factor = 0.5" 
-						owner = ROOT
-					}
-				}
-			}
-
-			add_tech_bonus = {
-				name = observadores_nature
-				bonus = 1				
-				uses = 1	
-				category = hospital_tech			
-			}
-			custom_effect_tooltip = COL_montana_oob
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
-	}
-	
-	focus = { 
-		id = COL_yarumos #jungle
-		icon = GFX_goal_generic_jungle_warfare
-		prerequisite = { focus = COL_awaite }
-		prerequisite = { focus = COL_explore_amazonia }
-		available = {
-			has_tech = tech_field_hospital			
-		}
-	
-		x = 6
-		y = 3
-		cost = 10
-		ai_will_do = {
-			factor = 4
-		}
-		completion_reward = {
-			custom_effect_tooltip = COL_yarumos_oob
-			hidden_effect = {
-				division_template = { 
-					name = "Unidad de Jungla"
-					division_names_group = SPAN_INFB_02
-					is_locked = no
-					regiments = {
-						cavalry = { x = 0 y = 0 }
-						cavalry = { x = 0 y = 1 }
-						cavalry = { x = 0 y = 2 }
-						cavalry = { x = 0 y = 3 }
-						cavalry = { x = 0 y = 4 }
-					}
-					support = {
-						engineer = { x = 0 y = 0 }
-						artillery = { x = 0 y = 1 }
-						recon = { x = 0 y = 2 }
-						field_hospital = { x = 0 y = 3 }
-					}	
-				}
-				random_owned_controlled_state = {
-					limit = {
-						is_capital = yes
-					}
-					create_unit = {
-						division = "name = \"Unidad de Jungla\" division_template = \"Unidad de Jungla\" start_experience_factor = 0.25" 
-						owner = ROOT
-					}
-				}
-			}
-			add_ideas = COL_yarumos_idea #colombia ideas
-			country_event = { id = colombia.1 }
-
-			custom_effect_tooltip = RAJ_jungle_training_effect
-			hidden_effect = { set_technology = { jungle_warfare = 1 } }
-
-			add_tech_bonus = {
-                name = special_forces_bonus
-				bonus = 1
-				uses = 2
-				category = support_tech
-				category = r56_jungle_infantry_tech
-			}
-		}
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
-	}
-
-	#last production
-
-
-	
-	focus = { 
-		id = COL_arma_comunicaciones
-		icon = GFX_goal_generic_radio_development
-		prerequisite = { focus =  COL_industry_effort_2}
-
-		x = 8
-		y = 3
-		cost = 10
-		bypass = { has_tech = tech_signal_company }
-		completion_reward = {
-			add_tech_bonus = {
-				name = electronics_bonus
-				bonus = 1
-				uses = 1
-				technology = radio
-				technology = electronic_mechanical_engineering
-				technology = tech_signal_company							
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = { 
-		id = COL_support_effort
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = COL_arma_comunicaciones }
-		prerequisite = { focus = COL_armor_support }
-		prerequisite = { focus = COL_yarumos }
-		
-		
-		
-		x = 6
-		y = 4
-		cost = 10
-		completion_reward = {
-			add_tech_bonus = {
-				name = infantry_weapons_bonus
-				bonus = 1
-				uses = 1
-				category = support_tech
-			}
-			add_ideas = COL_support_focus		
-			
-		}
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT FOCUS_FILTER_RESEARCH }
-	}
-	
-#industrial	
-
-	focus = { 
-		id = COL_industrial_effort
-		icon = GFX_goal_excavation
-		x = 10
-		y = 0
-		cost = 10
-		completion_reward = {
+			add_stability = 0.05
 			add_tech_bonus = {
 				name = industrial_bonus
 				bonus = 0.5
 				uses = 1
+				ahead_reduction = 0.5
 				category = industry
 			}
-			add_tech_bonus = {
-				name = raspar_olla
-				bonus = 1
-				uses = 1
-				category = excavation_tech		
-			}
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
 			factor = 3
 		}
 	}
 
-	focus = { 
+	focus = {
 		id = COL_coffe_growth
-		icon = GFX_goal_generic_coffee_plantations
+		icon = GFX_focus_generic_coffee
 		prerequisite = { focus = COL_industrial_effort }
-		x = 10
+		relative_position_id = COL_industrial_effort
+		mutually_exclusive = {
+			focus = COL_acerias_pdr
+		}
+		available = {
+			OR = {
+				controls_state = 306
+				controls_state = 1051
+			}
+		}
+		x = -3
 		y = 1
 		cost = 10
 		completion_reward = {
-			remove_ideas = HON_banana_republic
 			random_owned_controlled_state = {
-				prioritize = { 493 }
-				add_extra_state_shared_building_slots = 1				
+				prioritize = { 306 }
+				add_extra_state_shared_building_slots = 1	
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
+			}
+			swap_ideas = {
+				remove_idea = COL_agrarian_economy
+				add_idea = COL_coffee_dependent_economy
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -525,41 +100,65 @@
 		}
 	}
 	
-#acerias
 	focus = { 
 		id = COL_acerias_pdr
 		icon = GFX_focus_generic_industry_2
 		prerequisite = { focus = COL_industrial_effort }
-		x = 12
+		relative_position_id = COL_industrial_effort
+		mutually_exclusive = {
+			focus = COL_coffe_growth
+		}
+		x = 3
 		y = 1
 		cost = 10
-
-		
 		ai_will_do = {
 			factor = 2
 		}
 		available = {
-			COL = { controls_state = 306 }
+			controls_state = 306
 		}
-
 		completion_reward = {
 			#Cundinamarca
-			306 = {
-				add_extra_state_shared_building_slots = 2	
+			random_owned_controlled_state = {
+				prioritize = { 306 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
-				}	
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 306 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
 				add_building_construction = {
 					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
 			}
 			add_resource = {
 				type = steel
-				amount = 8
+				amount = 6
 				state = 306 #Cundinamarca
 			}
 		}
@@ -570,26 +169,154 @@
 		id = COL_indumil
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = COL_acerias_pdr }
-		x = 12
-		y = 3
+		relative_position_id = COL_acerias_pdr
+		x = -1
+		y = 1
 		cost = 10
 
 		ai_will_do = {
 			factor = 2			
 		}
 		available = {
-			COL = { controls_state = 306 }
+			controls_state = 306
 		}
 		
-		
 		completion_reward = {
-			custom_effect_tooltip = available_materiel_manufacturer
-			show_ideas_tooltip = COL_indumil
-			306 = {
-				add_extra_state_shared_building_slots = 2
+			random_owned_controlled_state = {
+				prioritize = { 306 }
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 306 }
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = COL_indumil_organization
+				mio:COL_indumil_organization = {
+					add_mio_size = 1
+					add_mio_funds = 500
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = COL_indumil
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = { 
+		id = COL_puerto_buenaventura
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = COL_acerias_pdr }
+		relative_position_id = COL_acerias_pdr
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+	
+		available = {
+			controls_state = 306
+		}
+	
+		completion_reward = {
+			# Cauca
+			random_owned_controlled_state = {
+				prioritize = { 306 }
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}				
+				add_building_construction = {
+					type = naval_base
 					level = 2
+					province = 7936 # Buenaventura
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = { 
+		id = COL_infrastructure_caribe
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = COL_puerto_buenaventura focus = COL_indumil }
+		relative_position_id = COL_puerto_buenaventura
+		x = -1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			controls_state = 493
+		}
+		
+		completion_reward = {
+			493 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					province = 1937 #quilla
 					instant_build = yes
 				}
 			}
@@ -601,8 +328,10 @@
 		id = COL_indumil_2
 		icon = GFX_goal_proving_grounds
 		prerequisite = { focus = COL_indumil }
-		x = 12
-		y = 4
+		prerequisite = { focus = COL_infrastructure_caribe }
+		relative_position_id = COL_infrastructure_caribe
+		x = -1
+		y = 1
 		cost = 10
 
 		ai_will_do = {
@@ -642,103 +371,14 @@
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
-	
-#vallecostas
-	focus = { 
-		id = COL_puerto_buenaventura
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = COL_industrial_effort }
-		x = 14
-		y = 1
-		cost = 10
 
-		ai_will_do = {
-			factor = 2
-		}
-	
-		available = {
-		COL = { controls_state = 306 }
-			306 = {
-				infrastructure > 3
-			}
-		}
-	
-		completion_reward = {
-		#cauca
-			306 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}				
-				add_building_construction = {
-					type = naval_base
-					level = 2
-					province = 7936 #buenaventura
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-
-	focus = { 
-		id = COL_infrastructure_caribe
-		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = COL_puerto_buenaventura }
-		x = 14
-		y = 2
-		cost = 10
-
-		ai_will_do = {
-			factor = 2
-		}
-		
-		available = {
-			COL = { controls_state = 493 }
-		}
-		
-		completion_reward = {
-			493 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 1
-					province = 1937 #quilla
-					instant_build = yes
-				}
-				
-			}
-
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	
-#bunkers
 	focus = { 
 		id = COL_fortify_caribe
 		icon = GFX_focus_generic_coastal_fort
 		prerequisite = { focus = COL_infrastructure_caribe }
-		x = 14
-		y = 3
+		relative_position_id = COL_infrastructure_caribe
+		x = 0
+		y = 2
 		cost = 10
 
 		ai_will_do = {
@@ -790,38 +430,38 @@
 				add_building_construction = {
 					type = coastal_bunker
 					level = 1
-					province = 12790 #cartagena
+					province = 12790 # Cartagena
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = coastal_bunker
 					level = 1
-					province = 8056 #stamarta
+					province = 8056 # Stamarta
 					instant_build = yes
 				}
 
 				add_building_construction = {
 					type = coastal_bunker
 					level = 1
-					province = 10864 #sucre
+					province = 10864 # Sucre
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = coastal_bunker
 					level = 1
-					province = 1937 #quilla
+					province = 1937 # Quilla
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = coastal_bunker
 					level = 1
-					province = 2085 #guajira
+					province = 2085 # Guajira
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = naval_base
 					level = 2
-					province = 1937 #quilla
+					province = 1937 # Quilla
 					instant_build = yes
 				}
 			}
@@ -829,13 +469,13 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
 	}
 
-
 	focus = { 
 		id = COL_fortify_caribe_aa
-		icon = GFX_goal_fortify_city_AA
+		icon = GFX_focus_generic_air_defense
 		prerequisite = { focus = COL_fortify_caribe }
-		x = 14
-		y = 4
+		relative_position_id = COL_fortify_caribe
+		x = 0
+		y = 1
 		cost = 10
 
 		ai_will_do = {
@@ -873,14 +513,12 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	}
 	
-	
-#acorddoctrina
 	focus = { 
 		id = COL_industry_effort_2
 		icon = GFX_goal_generic_production2
-		prerequisite = { focus = COL_industrial_effort }
-		prerequisite = { focus = COL_war_with_peru_experience }
-		x = 8
+		prerequisite = { focus = COL_coffe_growth focus = COL_acerias_pdr }
+		relative_position_id = COL_acerias_pdr
+		x = -3
 		y = 1
 		cost = 10
 
@@ -898,14 +536,125 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
+
+	focus = { 
+		id = COL_intensify_exports
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = COL_coffe_growth }
+		relative_position_id = COL_coffe_growth
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+				remove_idea = COL_coffee_dependent_economy
+				add_idea = COL_coffee_dependent_economy_2
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_idea = export_focus
+					}
+				}
+				add_ideas = export_focus
+			}
+			if = {
+				limit = {
+					has_idea = export_focus
+				}
+				add_ideas = free_trade
+			}
+			if = {
+				limit = {
+					has_idea = free_trade
+				}
+				add_political_power = 120
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RUBBER }
+	}
+
+	focus = { 
+		id = COL_minning
+		icon = GFX_goal_generic_coal_mining	
+		prerequisite = { focus = COL_coffe_growth }
+		relative_position_id = COL_coffe_growth
+		x = 1
+		y = 1
+		cost = 10
+		available = {
+			OR = {
+				controls_state = 306
+				controls_state = 493
+				controls_state = 1051
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		bypass = {
+			NOT = {
+				controls_state = 306
+				controls_state = 493
+				controls_state = 1051
+			}
+		}
+		completion_reward = {
+			# Meta
+			add_resource = {
+				type = steel
+				amount = 4
+				state = 306 # Cundinamarca
+			}
+			add_resource = {
+				type = chromium
+				amount = 6
+				state = 493 # Choco
+			}
+			add_resource = {
+				type = chromium
+				amount = 4
+				state = 1051 # Meta
+			}
+			add_ideas = AFG_gold_mining
+			add_tech_bonus = {
+				name = excavation_effort_i
+				bonus = 0.5
+				uses = 1
+				ahead_reduction = 0.5
+				category = industry
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_CHROMIUM FOCUS_FILTER_STEEL FOCUS_FILTER_ALUMINIUM }
+	}
 	
 	focus = { 
 		id = COL_explore_amazonia
-		icon = GFX_goal_COG_Rubber_Farming
-		prerequisite = { focus = COL_industry_effort_2 }
-	
-		x = 7
-		y = 2
+		icon = GFX_focus_BRA_amazon_colonization
+		prerequisite = { focus = COL_intensify_exports }
+		prerequisite = { focus = COL_minning }
+		relative_position_id = COL_minning
+		x = -1
+		y = 1
 		cost = 10
 		available = {
 			COL = { controls_state = 486 }
@@ -918,23 +667,22 @@
 			add_resource = {
 				type = rubber
 				amount = 20
-				state = 486 #guaviare
+				state = 486 # Guaviare
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RUBBER }
 	}
-	
-#complementmonte
 
 	focus = { 
 		id = COL_hidroelectrics
-		icon = GFX_goal_italy_expand_hydroelectricity_production
-		prerequisite = { focus = COL_acerias_pdr }
-		x = 11
-		y = 2
+		icon = GFX_focus_generic_hydroelectric_energy
+		prerequisite = { focus = COL_industry_effort_2 }
+		relative_position_id = COL_industry_effort_2
+		x = 1
+		y = 1
 		cost = 10
 		available = {
-			COL = { controls_state = 306 }#cundin
+			COL = { controls_state = 306 } # Cundin
 			306 = {
 				infrastructure > 2
 			}
@@ -943,36 +691,33 @@
 			factor = 2
 		}
 		completion_reward = {
-
-
-		
 			add_resource = {
 				type = steel
 				amount = 10
-				state = 306 #Cundinamarca
+				state = 306 # Cundinamarca
 			}
-			
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STEEL}
 	}
 
 	focus = { 
 		id = COL_infrastructure_harsh
-		icon = GFX_goal_COG_Jungle_Railroad
+		icon = GFX_goal_generic_road
 		prerequisite = { focus = COL_industry_effort_2 }
-		x = 9
-		y = 2
+		relative_position_id = COL_industry_effort_2
+		x = -1
+		y = 1
 		cost = 10
 		available = {
 			COL = { controls_state = 486 }
 			COL = { controls_state = 493 }
-			COL = { controls_state = 306 }#cundin		
+			COL = { controls_state = 306 }		
 		}
 		ai_will_do = {
 			factor = 2
 		}
 		completion_reward = {
-		#meta
+			# Meta
 			486 = {
 				add_building_construction = {
 					type = infrastructure
@@ -981,7 +726,7 @@
 				}
 				
 			}
-		#cundinamar
+			# Cundinamar
 			486 = {	
 				add_building_construction = {
 					type = infrastructure
@@ -989,7 +734,7 @@
 					instant_build = yes
 				}
 			}
-		#choco		
+			# Choco		
 			493 = {
 				add_building_construction = {
 					type = infrastructure
@@ -1003,79 +748,22 @@
 				amount = 8
 				state = 486 #meta
 			}
-			
-			
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ALUMINIUM}
 	}
 
 	focus = { 
-		id = COL_minning
-		icon = GFX_goal_generic_mining_iron	
-		prerequisite = { focus = COL_infrastructure_harsh }
-		prerequisite = { focus = COL_hidroelectrics }
-		
-		x = 10
-		y = 3
-		cost = 10
-		available = {
-			COL = { controls_state = 306 }#cundin	
-			COL = { controls_state = 486 }#meta
-			COL = { controls_state = 493 }#choco	
-			has_tech = excavation2	
-			493 = {
-				infrastructure > 2
-			}
-			486 = {
-				infrastructure > 2
-			}
-		}
-		ai_will_do = {
-			factor = 2
-		}
-		completion_reward = {
-		#meta
-			486 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				
-			}
-			
-			add_resource = {
-				type = steel
-				amount = 8
-				state = 306 #Cundinamarca
-			}
-			add_resource = {
-				type = chromium
-				amount = 8
-				state = 493 #choco
-			}
-			add_resource = {
-				type = aluminium
-				amount = 8
-				state = 486 #meta
-			}
-			
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_CHROMIUM FOCUS_FILTER_STEEL FOCUS_FILTER_ALUMINIUM }
-	}
-	
-	focus = { 
 		id = COL_altillanura_ress
-		icon = GFX_focus_generic_rubber	
-		prerequisite = { focus = COL_minning }
+		icon = GFX_focus_BRA_rubber_war	
 		prerequisite = { focus = COL_explore_amazonia }
-	
-		x = 9
-		y = 4
+		prerequisite = { focus = COL_infrastructure_harsh }
+		relative_position_id = COL_explore_amazonia
+		x = 1
+		y = 1
 		cost = 10
 		available = {
 			COL = { controls_state = 306 }
-			COL = { controls_state = 486 }#meta
+			COL = { controls_state = 486 } # Meta
 			has_tech = excavation2	
 			486 = {
 				infrastructure > 3
@@ -1096,30 +784,62 @@
 			add_resource = {
 				type = rubber
 				amount = 16
-				state = 486 #guaviare
+				state = 486 # Guaviare
 			}
-	
 			add_resource = {
 				type = aluminium
 				amount = 8
-				state = 486 #MEta
+				state = 486 # Meta
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RUBBER FOCUS_FILTER_ALUMINIUM}
 	}
-	
-	
-###nodef	
-	
 
+	focus = { 
+		id = COL_extra_tech_slot
+		icon = GFX_focus_generic_university_2
+		prerequisite = { focus = COL_infrastructure_caribe }
+		relative_position_id = COL_infrastructure_caribe
+		x = 1
+		y = 1
+		cost = 10
+		completion_reward = {
+			add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = {
+			factor = 20
+		}
+	}
 
-	
+	focus = { 
+		id = COL_extra_tech_slot_2
+		icon = GFX_focus_research
+		prerequisite = { focus = COL_infrastructure_harsh focus = COL_hidroelectrics }
+		relative_position_id = COL_infrastructure_harsh
+		available = {
+			num_of_factories > 50
+		}
+		cancel_if_invalid = no
+		x = 1
+		y = 1
+		cost = 10
+		completion_reward = {
+			add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
 	focus = { 
 		id = COL_secret_weapons
 		icon = GFX_goal_generic_secret_weapon	
 		prerequisite = { focus = COL_extra_tech_slot_2 }
-		x = 8
-		y = 6
+		relative_position_id = COL_extra_tech_slot_2
+		x = 0
+		y = 1
 		cost = 10
 		completion_reward = {
 			add_tech_bonus = {
@@ -1141,13 +861,14 @@
 			}
 		}
 	}
-	
-	focus = { 
+
+	focus = {
 		id = COL_nuclear_effort
 		icon = GFX_focus_wonderweapons
 		prerequisite = { focus = COL_secret_weapons }
-		x = 8	
-		y = 7
+		relative_position_id = COL_secret_weapons
+		x = 0
+		y = 1
 		cost = 10
 		completion_reward = {
 			add_tech_bonus = {
@@ -1168,51 +889,9 @@
 	}
 
 	focus = { 
-		id = COL_extra_tech_slot
-		icon = GFX_focus_research
-		prerequisite = { focus = COL_indumil_2 }
-		prerequisite = { focus = COL_infrastructure_caribe }
-		x = 13
-		y = 5
-		cost = 10
-		completion_reward = {
-			add_research_slot = 1
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		ai_will_do = {
-			factor = 20
-		}
-		
-	}
-	
-
-
-	focus = { 
-		id = COL_extra_tech_slot_2
-		icon = GFX_focus_research
-		prerequisite = { focus = COL_support_effort }
-		prerequisite = { focus = COL_altillanura_ress }
-		
-		available = {
-			num_of_factories > 50
-		}
-		cancel_if_invalid = no
-		x = 8
-		y = 5
-		cost = 10
-		completion_reward = {
-			add_research_slot = 1
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		ai_will_do = {
-			factor = 20
-		}
-	}
-#political
-	focus = { 
 		id = COL_political_effort
 		icon = GFX_goal_COL_political_effort
-		x = 23
+		x = 51
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -1228,11 +907,12 @@
 		id = COL_collectivist_ethos
 		icon = GFX_goal_generic_political #icon = GFX_goal_tripartite_pact
 		prerequisite = { focus = COL_political_effort }
+		relative_position_id = COL_political_effort
 		mutually_exclusive = { focus = COL_liberty_ethos}
 		available = {
-			is_puppet = no
+			is_subject = no
 		}
-		x = 20
+		x = -3
 		y = 1
 		cost = 5
 		#cancel_if_invalid = yes
@@ -1311,12 +991,13 @@
 		id = COL_nationalism_focus
 		icon = GFX_goal_support_fascism #icon = GFX_goal_tripartite_pact
 		prerequisite = { focus = COL_collectivist_ethos }
+		relative_position_id = COL_collectivist_ethos
 		mutually_exclusive = { focus = COL_internationalism_focus }
 		available = {
-			is_puppet = no
+			is_subject = no
 		}
-		x = 19
-		y = 2
+		x = -1
+		y = 1
 		cost = 10
 
 		ai_will_do = {
@@ -1343,8 +1024,9 @@
 		id = COL_militarism
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = COL_nationalism_focus }
-		x = 16
-		y = 4
+		relative_position_id = COL_nationalism_focus
+		x = -3
+		y = 2
 		cost = 10
 		completion_reward = {
 			if = {
@@ -1367,8 +1049,9 @@
 		id = COL_paramilitarism
 		icon = GFX_goal_manpower
 		prerequisite = { focus = COL_militarism }
-		x = 16
-		y = 5
+		relative_position_id = COL_militarism
+		x = 0
+		y = 1
 		cost = 10
 		completion_reward = {
 			add_ideas = paramilitarism_focus
@@ -1376,11 +1059,10 @@
 		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT }
 	}
 
-#alem nazi
-
 	focus = {
 		id = COL_axis_leanings_focus
 		prerequisite = { focus = COL_nationalism_focus}
+		relative_position_id = COL_nationalism_focus
 		available = {
 			has_government = fascism
 			is_in_faction = no
@@ -1399,9 +1081,9 @@
 		bypass = {
 			is_in_faction = yes
 		}
-		x = 18
-		y = 3
-		cost = 3
+		x = -1
+		y = 1
+		cost = 5
 		icon = GFX_goal_molotov_ribbentrop_pact
 		ai_will_do = {
 			factor = 1
@@ -1447,15 +1129,15 @@
 	focus = {
 		id = COL_axis_leanings_focus_2
 		prerequisite = { focus = COL_axis_leanings_focus}
-		
+		relative_position_id = COL_axis_leanings_focus
 		available = {
 			GER = { 
 				has_government = ROOT 
 			}
 			is_in_faction_with = GER
 		}
-		x = 18
-		y = 4
+		x = 0
+		y = 1
 		cost = 10
 		icon = GFX_focus_chi_mission_to_germany
 
@@ -1500,18 +1182,17 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
 	}
 	
-	
-	#comm
 	focus = { 
 		id = COL_internationalism_focus
 		icon = GFX_goal_support_communism #icon = GFX_goal_tripartite_pact
 		prerequisite = { focus = COL_collectivist_ethos }
+		relative_position_id = COL_collectivist_ethos
 		mutually_exclusive = { focus = COL_nationalism_focus }
 		available = {
-			is_puppet = no
+			is_subject = no
 		}
-		x = 21
-		y = 2
+		x = 1
+		y = 1
 		cost = 10
 
 		ai_will_do = {
@@ -1530,14 +1211,14 @@
 		}
 	}
 
-
 	focus = { 
 		id = COL_political_correctness
 		icon = GFX_generic_goal_communist_reforms
 		prerequisite = { focus = COL_internationalism_focus }
 		prerequisite = { focus = COL_gran_colombia }
-		x = 22
-		y = 4
+		relative_position_id = COL_internationalism_focus
+		x = 1
+		y = 2
 		cost = 10
 		ai_will_do = {
 			factor = 5
@@ -1565,8 +1246,9 @@
 		id = COL_join_the_comintern
 		icon = GFX_focus_generic_join_comintern
 		prerequisite = { focus = COL_internationalism_focus }
-		x = 23
-		y = 3
+		relative_position_id = COL_internationalism_focus
+		x = 2
+		y = 1
 		cost = 3
 		bypass = {
 			is_in_faction_with = SOV
@@ -1635,8 +1317,9 @@
 		id = COL_soviet_technological_cooperation
 		icon = GFX_goal_communist_brain
 		prerequisite = { focus = COL_join_the_comintern }
-		x = 24
-		y = 4
+		relative_position_id = COL_join_the_comintern
+		x = 1
+		y = 1
 		available = {
 			has_government = communism
 			is_in_faction_with = SOV
@@ -1674,8 +1357,9 @@
 		id = COL_indoctrination_focus
 		icon = GFX_goal_communist_brigades
 		prerequisite = { focus = COL_political_correctness }
-		x = 22
-		y = 5
+		relative_position_id = COL_political_correctness
+		x = 0
+		y = 1
 		cost = 10
 		available = {
 			has_government = communism
@@ -1702,11 +1386,11 @@
 		search_filters = { FOCUS_FILTER_MANPOWER }
 	}
 	
-	#	all
 	focus = { 
 		id = COL_liberty_ethos
 		icon = GFX_goal_COL_marching_revolution
 		prerequisite = { focus = COL_political_effort }
+		relative_position_id = COL_political_effort
 		mutually_exclusive = { focus = COL_collectivist_ethos }
 		available = {
 			OR = {
@@ -1714,7 +1398,7 @@
 				has_government = neutrality
 			}
 		}
-		x = 26
+		x = 3
 		y = 1
 		cost = 5
 
@@ -1736,8 +1420,9 @@
 		id = COL_affirm_state_role_in_the_economy
 		icon = GFX_goal_generic_state_economy
 		prerequisite = { focus = COL_liberty_ethos }
-		x = 25
-		y = 2
+		relative_position_id = COL_liberty_ethos
+		x = -1
+		y = 1
 		cost = 10		
 		
 		completion_reward = {
@@ -1750,8 +1435,9 @@
 		id = COL_continue_constitutional_reforms
 		icon = GFX_goal_treaty_peoples
 		prerequisite = { focus = COL_liberty_ethos }
-		x = 27
-		y = 2
+		relative_position_id = COL_liberty_ethos
+		x = 1
+		y = 1
 		cost = 10		
 		
 		completion_reward = {
@@ -1764,8 +1450,9 @@
 		id = COL_workers_protection
 		icon = GFX_BEL_union_agreement
 		prerequisite = { focus = COL_affirm_state_role_in_the_economy }
-		x = 25
-		y = 3
+		relative_position_id = COL_affirm_state_role_in_the_economy
+		x = 0
+		y = 1
 		cost = 10
 		completion_reward = {
 			add_ideas = COL_workers_protection
@@ -1777,8 +1464,9 @@
 		id = COL_educational_reform
 		icon = GFX_goal_supremacy_of_will
 		prerequisite = { focus = COL_continue_constitutional_reforms }
-		x = 27
-		y = 3
+		relative_position_id = COL_continue_constitutional_reforms
+		x = 0
+		y = 1
 		cost = 10
 		completion_reward = {
 			add_research_slot = 1
@@ -1789,6 +1477,7 @@
 		id = COL_why_we_fight
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = COL_educational_reform focus = COL_workers_protection }
+		relative_position_id = COL_educational_reform
 		available = { 
 			OR = { 
 				threat > 0.3
@@ -1798,8 +1487,8 @@
 
 		continue_if_invalid = yes
 		
-		x = 26
-		y = 4
+		x = -1
+		y = 1
 		cost = 10
 		completion_reward = {
 			if = {
@@ -1815,6 +1504,8 @@
 		id = COL_join_the_allies
 		icon = GFX_allies
 		prerequisite = { focus = COL_why_we_fight }
+		relative_position_id = COL_why_we_fight
+
 		available = { 
 			has_government = democratic
 			is_subject = no
@@ -1830,8 +1521,8 @@
 
 		continue_if_invalid = yes
 		
-		x = 27
-		y = 5
+		x = 1
+		y = 1
 		cost = 10
 		completion_reward = {
 			if = {
@@ -1859,18 +1550,15 @@
 					country_event = generic.2
 				}
 			}
-			
 		}
 		search_filters = { FOCUS_FILTER_ALLIANCE }
 	}
 
-
-#Gc
 	focus = { 
 		id = COL_gran_colombia
 		icon = GFX_goal_generic_demand_territory 
-		prerequisite = { focus = COL_nationalism_focus focus = COL_internationalism_focus  }
-		
+		prerequisite = { focus = COL_nationalism_focus focus = COL_internationalism_focus }
+		relative_position_id = COL_nationalism_focus
 		available = {
 			is_puppet = no
 			has_army_manpower = {
@@ -1903,8 +1591,8 @@
 				}
 			}
 		}
-		x = 20
-		y = 3
+		x = 1
+		y = 1
 		cost = 10
 		completion_reward = {
 			add_named_threat = { threat = 1.5 name = COL_gran_colombia }
@@ -1979,6 +1667,7 @@
 		id = COL_hermano_bolivariano 
 		icon = GFX_goal_COL_bolivarian_brother
 		prerequisite = { focus = COL_gran_colombia }
+		relative_position_id = COL_gran_colombia
 		available = {
 			is_puppet = no
 			has_army_manpower = { size > 129999 } #130k
@@ -2005,23 +1694,23 @@
 			}
 		}
 		cancel_if_invalid = no	
-		x = 20
-		y = 4
+		x = 0
+		y = 1
 		cost = 5
 		completion_reward = {
 			VEN = {
 				country_event = colombia.2
 			}
 		}
-		
 	}
 	
 	focus = { 
 		id = COL_mosquitos
 		icon = GFX_goal_COL_legitimize_gran_colombia
 		prerequisite = { focus = COL_hermano_bolivariano }
-		x = 20
-		y = 5
+		relative_position_id = COL_hermano_bolivariano
+		x = 0
+		y = 1
 		cost = 10
 		available = { 
 			is_puppet = no
@@ -2061,8 +1750,9 @@
 	
 	focus = { 
 		id = COL_war_with_andeans
-		icon = GFX_goal_COL_war_with_andeas
-		prerequisite = { focus = COL_hermano_bolivariano  }
+		icon = GFX_focus_generic_attack_peru
+		prerequisite = { focus = COL_hermano_bolivariano }
+		relative_position_id = COL_hermano_bolivariano
 		available = { 
 			OR = {
 				has_government = fascism
@@ -2081,7 +1771,6 @@
 			country_exists = PRU
 			country_exists = BOL		
 		}
-
 	
 		ai_will_do = {
 			factor = 1
@@ -2133,8 +1822,8 @@
 			}
 		}
 		
-		x = 18
-		y = 5
+		x = -2
+		y = 1
 		cost = 10
 		completion_reward = {
 			add_named_threat = { threat = 0.5 name = COL_war_with_andean_threat }
@@ -2177,6 +1866,7 @@
 		id = COL_etnocacerismo
 		icon = GFX_goal_morale_bonus
 		prerequisite = { focus = COL_war_with_andeans }
+		relative_position_id = COL_war_with_andeans
 		available = { 
 			is_puppet = no
 			num_of_factories > 50
@@ -2216,8 +1906,8 @@
 			}		
 		}
 		
-		x = 18
-		y = 6
+		x = 0
+		y = 1
 		cost = 10
 		completion_reward = {
 			add_ideas = COL_tupac_amaru
@@ -2239,8 +1929,9 @@
 		id = COL_ideological_fanaticism
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = COL_paramilitarism focus = COL_indoctrination_focus }
-		x = 20
-		y = 6
+		relative_position_id = COL_indoctrination_focus
+		x = -2
+		y = 1
 		cost = 10
 		available = {
 			NOT = {
@@ -2261,9 +1952,10 @@
 		icon = GFX_goal_anschluss
 		prerequisite = { focus = COL_ideological_fanaticism }
 		prerequisite = { focus = COL_etnocacerismo }
+		relative_position_id = COL_etnocacerismo
 		# available = { has_war = no }
-		x = 20
-		y = 7
+		x = 0
+		y = 1
 		cost = 10
 		available = {
 			controls_state = 302
@@ -2283,6 +1975,7 @@
 		id = COL_technology_sharing
 		icon = GFX_goal_research_silver_cooperation
 		prerequisite = { focus = COL_ideological_fanaticism focus = COL_why_we_fight }
+		relative_position_id = COL_ideological_fanaticism
 		available = {
 			has_war = yes
 			is_in_faction = yes
@@ -2294,8 +1987,8 @@
 				}
 			}
 		}
-		x = 23
-		y = 7
+		x = 3
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 50
@@ -2304,823 +1997,6 @@
 			add_research_slot = 1
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-
-#air
-
-	focus = { 
-		id = COL_aviation_effort
-		icon = GFX_goal_COL_coa_air_force
-		x = 31
-		y = 0
-		cost = 10
-
-		complete_tooltip = {
-			air_experience = 25
-			if = { limit = { has_country_flag = aviation_effort_AB }
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}
-			add_doctrine_cost_reduction = {
-				name = air_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
-		}
-
-		completion_reward = {
-			air_experience = 25
-
-			if = {
-				limit = {
-					capital_scope = {
-						NOT = {
-							free_building_slots = {
-								building = air_base
-								size > 1
-							}
-						}
-					}
-				}
-				random_owned_state = {
-					limit = {
-						free_building_slots = {
-							building = air_base
-							size > 1
-						}
-					}
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-					ROOT = { set_country_flag = aviation_effort_AB }
-				}
-			}
-			if = {
-				limit = {
-					capital_scope = {
-						free_building_slots = {
-							building = air_base
-							size > 1
-						}
-					}
-				}
-				capital_scope = {
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-					ROOT = { set_country_flag = aviation_effort_AB }
-				}
-			}
-			add_doctrine_cost_reduction = {
-				name = air_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = { 
-		id = COL_avion_ligero_focus
-		icon = GFX_goal_generic_air_fighter
-		prerequisite = { focus = COL_aviation_effort }
-		
-		x = 29
-		y = 1
-		cost = 10
-		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				add_tech_bonus = {
-					name = COL_avion_ligero_focus
-					bonus = 1
-					uses = 2				
-					category = light_air
-					category = medium_air
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = nav_bomber_bonus
-					bonus = 1
-					uses = 2				
-					category = light_fighter
-					category = cas_bomber
-					category = naval_bomber
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = { 
-		id = COL_avion_pesado_focus
-		icon = GFX_goal_generic_air_bomber
-		prerequisite = { focus = COL_avion_ligero_focus }
-		
-		x = 29
-		y = 2
-		cost = 10
-		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				add_tech_bonus = {
-					name = bomber_bonus
-					bonus = 1
-					uses = 2
-					technology = basic_large_airframe
-					technology =  improved_large_airframe
-					technology = advanced_large_airframe
-					category = medium_air
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = bomber_bonus
-					bonus = 1
-					uses = 2
-					technology = strategic_bomber1
-					technology = strategic_bomber2
-					technology = strategic_bomber3
-					category = tactical_bomber
-					category = cat_heavy_fighter
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = { 
-		id = COL_aviation_effort_2
-		icon = GFX_goal_generic_air_doctrine
-		prerequisite = { focus = COL_avion_ligero_focus }
-		x = 30
-		y = 3
-		cost = 10
-
-		complete_tooltip = {
-			air_experience = 25
-			if = { limit = { has_country_flag = aviation_effort_2_AB }
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}
-			add_doctrine_cost_reduction = {
-				name = air_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
-		}
-		completion_reward = {
-			air_experience = 35
-			if = {
-				limit = {
-					capital_scope = {
-						NOT = {
-							free_building_slots = {
-								building = air_base
-								size > 1
-							}
-						}
-					}
-				}
-				random_owned_state = {
-					limit = {
-						free_building_slots = {
-							building = air_base
-							size > 1
-						}
-					}
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-					ROOT = { set_country_flag = aviation_effort_2_AB }
-				}
-			}
-			if = {
-				limit = {
-					capital_scope = {
-						free_building_slots = {
-							building = air_base
-							size > 1
-						}
-					}
-				}
-				capital_scope = {
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-					ROOT = { set_country_flag = aviation_effort_2_AB }
-				}
-			}
-			add_doctrine_cost_reduction = {
-				name = air_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = { 
-		id = COL_avion_production
-		icon = GFX_goal_generic_air_doctrine
-		prerequisite = { focus = COL_aviation_effort }
-		mutually_exclusive = { focus = COL_navy_production }
-		
-		x = 33
-		y = 1
-		cost = 10
-		completion_reward = {
-			air_experience = 40	
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				add_tech_bonus = {
-					name = COL_avion_production
-					bonus = 0.75				
-					uses = 2
-					technology = early_bombs
-					technology = aa_cannon_1
-					technology = aa_hmg
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = nav_bomber_bonus
-					bonus = 1				
-					uses = 2
-					technology = CAS1
-					technology = naval_bomber1
-				}
-			}
-			add_tech_bonus = {
-				name = industrial_bonus
-				bonus = 0.5				
-				uses = 1				
-				technology = basic_machine_tools
-				technology = improved_machine_tools
-				technology = advanced_machine_tools
-				technology = assembly_line_production
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-	
-	focus = { 
-		id = COL_CAS_effort
-		icon = GFX_goal_generic_CAS
-		prerequisite = { focus = COL_avion_production }
-		mutually_exclusive = { focus = COL_NAV_effort }
-		
-		x = 31
-		y = 2
-		cost = 10
-		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				add_tech_bonus = {
-					name = COL_CAS_effort
-					technology = aa_cannon_2
-					bonus = 0.75
-					uses = 1
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = COL_CAS_effort
-					bonus = 1
-					uses = 1
-					category = cas_bomber
-				}
-			}
-			add_ideas = COL_CAS_focus		
-			
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-
-	
-	focus = { 
-		id = COL_rocket_effort
-		icon = GFX_focus_rocketry
-		prerequisite = { focus = COL_aviation_effort_2 }
-		x = 30
-		y = 4
-		cost = 10
-		completion_reward = {
-			add_tech_bonus = {
-				name = jet_rocket_bonus
-				ahead_reduction = 0.5
-				uses = 2
-				category = rocketry
-				category = jet_technology
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.25
-				always = yes
-			}
-		}
-	}
-
-	focus = { 
-		id = COL_NAV_effort
-		icon = GFX_goal_generic_air_naval_bomber
-		prerequisite = { focus = COL_avion_production }
-		mutually_exclusive = { focus = COL_CAS_effort }
-		x = 33
-		y = 2
-		cost = 10
-		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				add_tech_bonus = {
-					name = COL_NAV_effort
-					bonus = 1
-					ahead_reduction = 1
-					uses = 1
-					category = medium_air
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = nav_bomber_bonus
-					bonus = 1
-					ahead_reduction = 1
-					uses = 1
-					category = naval_bomber
-				}
-			}
-			add_ideas = COL_NAV_focus		
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-#naval	
-	focus = { 
-		id = COL_naval_effort
-		icon = GFX_goal_COL_coa_navy
-		x = 37
-		y = 0
-		cost = 10
-
-		available = {
-			any_state = {
-				is_coastal = yes
-				is_controlled_by = ROOT
-			}
-		}
-
-		complete_tooltip = {
-			navy_experience = 25
-			add_extra_state_shared_building_slots = 3
-			add_building_construction = {
-				type = dockyard
-				level = 3
-				instant_build = yes
-			}
-		}
-		
-		completion_reward = {
-			navy_experience = 25
-			if = {
-				limit = {
-					NOT = {
-						any_owned_state = {
-							dockyard > 0
-							free_building_slots = {
-								building = dockyard
-								size > 2
-								include_locked = yes
-							}
-						}
-					}
-					any_owned_state = {
-						is_coastal = yes
-					}
-				}
-				random_owned_state = {
-					limit = {
-						is_coastal = yes
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = dockyard
-						level = 2
-						instant_build = yes
-					}
-				}
-				set_country_flag = naval_effort_built
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = naval_effort_built }
-					any_owned_state = {
-						dockyard > 0
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
-						}
-					}
-				}
-				random_owned_state = {
-					limit = {
-						dockyard > 0
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = dockyard
-						level = 2
-						instant_build = yes
-					}
-				}
-				set_country_flag = naval_effort_built
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = naval_effort_built }
-					NOT = {
-						any_owned_state = {
-							free_building_slots = {
-								building = dockyard
-								size > 2
-								include_locked = yes
-							}
-						}
-					}
-				}
-				random_state = {
-					limit = {
-						controller = { tag = ROOT }
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = dockyard
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = { 
-		id = COL_doctrine_navy
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = COL_naval_effort }
-		x = 39
-		y = 1
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = fleet_in_being_bonus
-				cost_reduction = 0.5
-				uses = 3
-				category = naval_doctrine
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-	focus = {
-		id = COL_naval_equipment
-		prerequisite = { focus = COL_doctrine_navy }
-		icon = GFX_goal_generic_admirality
-		x = 0
-		y = 1
-		relative_position_id = COL_doctrine_navy
-		cost = 10
-		ai_will_do = {
-			factor = 2
-		}
-
-		allow_branch = {
-			has_dlc = "Man the Guns"		
-		}		
-
-		available_if_capitulated = yes
-
-		available = {
-			has_navy_size = {
-				size > 8
-			}
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = SPR_navy_modernization
-				bonus = 1
-				uses = 1
-				category = naval_gunnery_tech
-				category = naval_shell_tech
-			}
-			add_tech_bonus = {
-				name = SPR_navy_modernization
-				bonus = 1
-				uses = 1
-				category = asw_tech
-				category = torpedo_equipment
-			}
-			add_tech_bonus = {
-				name = SPR_navy_modernization
-				bonus = 1
-				uses = 1
-				category = naval_armor_tech
-				category = damage_control_tech
-				
-			}					
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}	
-	focus = { 
-		id = COL_heavy_cruisers
-		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = { focus = COL_doctrine_navy }
-		
-		x = 40
-		y = 3
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = cr_bonus
-				bonus = 1
-				ahead_reduction = 1
-				uses = 2
-				category = ca_tech
-			}
-			493 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
-	}
-	
-	focus = { 
-		id = COL_navy_production
-		icon = GFX_goal_generic_expand_the_naval_industry
-		prerequisite = { focus = COL_naval_effort }
-		mutually_exclusive = { focus = COL_avion_production }
-		
-		x = 35
-		y = 1
-		cost = 10
-		completion_reward = {
-			navy_experience = 25
-			random_owned_controlled_state = {
-				
-				prioritize = { 493 }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-				
-			}
-			random_owned_controlled_state = {
-				
-				prioritize = { 306 }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-				
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	
-
-	focus = { 
-		id = COL_submarine_effort
-		icon = GFX_goal_generic_navy_submarine
-		prerequisite = { focus = COL_navy_production }
-		mutually_exclusive = { focus = COL_cruiser_effort }
-		x = 35
-		y = 2
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = ss_bonus
-				bonus = 1
-				uses = 1
-				category = ss_tech
-			}
-			add_ideas = COL_submarines_focus
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = { 
-		id = COL_cruiser_effort
-		icon = GFX_goal_generic_navy_cruiser
-		prerequisite = { focus = COL_navy_production }
-		mutually_exclusive = { focus = COL_submarine_effort }
-		x = 37
-		y = 2
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = cr_bonus
-				bonus = 1
-				uses = 1
-				category = ca_tech			
-
-			}
-			add_ideas = COL_cruisers_focus		
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = { 
-		id = COL_mobile_effort
-		icon = GFX_goal_generic_wolf_pack
-		prerequisite = { focus = COL_doctrine_navy }
-		x = 38
-		y = 3
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = dd_bonus
-				bonus = 1
-				uses = 2
-				category = dd_tech
-				category = ss_tech			
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = { 
-		id = COL_carriers_effort
-		icon = GFX_goal_carrier
-		prerequisite = { focus = COL_heavy_cruisers }
-		prerequisite = { focus = COL_mobile_effort }
-		
-		
-		x = 39
-		y = 4
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			navy_experience = 25
-			add_tech_bonus = {
-				name = capital_ships_bonus
-				bonus = 1
-				uses = 1
-				category = cv_tech
-				category = cvl_tech
-			}
-			306 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
-		
 	}
 
 }

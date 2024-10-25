@@ -32,7 +32,7 @@
 			}
 		}
 		offset = {
-			x = -16
+			x = -9
 			y = 0
 			trigger = {
 				tag = BRI
@@ -448,19 +448,13 @@
 			}
 			controls_state = 14
 			NOT = {
-				any_other_country = {
-					has_completed_focus = BRI_construction_effort_2
+				BRI = {
+					has_completed_focus = GEN_improve_civilian_industry_capacity
 				}
 			}
 			NOT = {
 				has_idea = generic_recent_economic_unification
 			}			
-		}
-
-		bypass = {
-			any_other_country = {
-				has_completed_focus = BRI_construction_effort_2
-			}
 		}
 
 		completion_reward = {
@@ -503,7 +497,7 @@
 			controls_state = 14
 			NOT = {
 				any_other_country = {
-					has_completed_focus = BRI_Brest_Oil_Industry
+					has_completed_focus = GEN_focus_on_synthetic_processing
 				}
 			}
 			has_tech = synth_oil_experiments
@@ -547,7 +541,7 @@
 			}
 			NOT = {
 				any_other_country = {
-					has_completed_focus = BRI_morgan_line
+					has_completed_focus = GEN_Anti_Invasion
 				}
 			}
 			NOT = {
@@ -555,12 +549,6 @@
 			}			
 		}
 		cost = 5
-		
-		bypass = {
-			any_other_country = {
-				has_completed_focus = BRI_morgan_line
-			}			
-		}
 		
 		completion_reward = {
 			14 = {
@@ -600,7 +588,7 @@
 		}
 
 		offset = {
-			x = -8
+			x = -3
 			y = 0
 			trigger = {
 				tag = BRI
@@ -807,6 +795,14 @@
 			factor = 10
 		}
 
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				tag = BRI
+			}
+		}
+
 		allow_branch = {
 			NOT = {
 				original_tag = WLS
@@ -933,6 +929,14 @@
 			y = 0
 			trigger = {
 				tag = WLS
+			}
+		}
+
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				tag = BRI
 			}
 		}
 
