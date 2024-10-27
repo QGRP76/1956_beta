@@ -24,7 +24,7 @@ characters={
 		country_leader={
 			ideology=liberalism
 			traits={
-				liberal_grandee
+				moderate_reformist liberal_grandee
 			}
 			expire="1965.1.1"
 			id=-1
@@ -51,8 +51,8 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=rexism
-			traits={ smooth_talking_charmer editor }
+			ideology=clerical_fascism
+			traits={ smooth_talking_charmer nationalist_journalist r56_trait_opposed_to_communism }
 			expire="1950.1.1.12"
 			id=-1
 		}

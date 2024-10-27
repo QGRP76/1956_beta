@@ -2,7 +2,7 @@
 #Edit for Rt56 by Thinking_Waffle#
 	shared_focus = {
 		id = GCO_UNIFIED_gran_colombian_unification
-		icon = GFX_goal_COL_legitimize_gran_colombia
+		icon = GFX_goal_COL_bolivarian_brother
 		cost = 5
 		prerequisite = {
 
@@ -21,7 +21,7 @@
 		x = 57
 		y = 0
 		offset = {
-			x = 4
+			x = 8
 			y = 0
 			trigger = {
 				has_focus_tree = colombian_focus
