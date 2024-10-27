@@ -596,7 +596,6 @@ characters={
 			idea_token = HOL_hendrik_seyffardt
 			allowed = {
 				original_tag = HOL
-				has_dlc = "Man the Guns"
 			}
 			available = {
 				has_government = fascism
@@ -612,7 +611,19 @@ characters={
 		name=HOL_hendrik_seyffardt
 		portraits={
 			army={
-				small="GFX_idea_HOL_hendrik_seyffardt"
+				small="gfx/interface/ideas/hol/advisors/r56_advisor_HOL_Hendrik_Seyffardt.dds"
+				large="gfx/leaders/HOL/r56_portrait_HOL_Hendrik_Seyffardt.dds"
+			}
+		}
+		field_marshal={
+			traits = { offensive_doctrine harsh_leader thorough_planner }
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=3	
+			visible = {
+				has_government = fascism
 			}
 		}
 	}
