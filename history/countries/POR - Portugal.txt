@@ -16,7 +16,12 @@ set_war_support = 0.15
 set_stability = 0.6 
 set_convoys = 50
 set_research_slots = 3	#can get 4th relatively easily
-
+add_ideas = {
+	POR_lackluster_armed_forces
+	POR_disgruntled_republicans
+	POR_austerity_measures
+	limited_exports
+}
 set_technology = {
 
 	# Extended Technologies
@@ -150,7 +155,7 @@ if = { # * = #availability had requirements of one tree while appearing for both
 }
 
 #r56 tree
-recruit_character = POR_raul_brandao								#ported ft check, otherwise unchanged
+#recruit_character = POR_raul_brandao								#ported ft check, otherwise unchanged
 recruit_character = POR_frederico_costa_lopes_silva
 
 #Was in both DLC and non-DLC

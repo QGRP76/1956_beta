@@ -2524,7 +2524,10 @@ country_event = {	#Addressing the Spanish Situation
 	option = {
 		name = portugal.51.d	#This "new Spain" is a threat to everything we stand for!
 		ai_chance = { base = 1 }
-		
+		every_state = {
+			limit = { has_state_flag = SPR_core_of_spain_flag }
+			add_claim_by = ROOT
+		}	
 	}
 }
 

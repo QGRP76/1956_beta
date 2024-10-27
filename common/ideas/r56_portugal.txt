@@ -159,7 +159,7 @@ ideas = {
 			}
 		}
 
-		POR_foment_peace_with_the_church_idea = {
+		POR_reactionary_resistance2 = {
 			name = POR_reactionary_resistance
 			picture = chi_war_of_resistance2
 			allowed_civil_war = { 
@@ -172,6 +172,23 @@ ideas = {
 			modifier = {
 				political_power_factor = -0.4
 				stability_factor = -0.075
+				neutrality_drift = 0.01
+			}
+		}
+
+		POR_reactionary_resistance3 = {
+			name = POR_reactionary_resistance
+			picture = chi_war_of_resistance2
+			allowed_civil_war = { 
+				OR = {
+					has_government = communism
+					has_government = democratic
+				} 
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.3
+				stability_factor = -0.05
 				neutrality_drift = 0.01
 			}
 		}
@@ -307,13 +324,13 @@ ideas = {
 		#Political - Historical/Authoritarian
 
 		POR_silencing_militant_revolutionaries = {
-			picture = generic_infantry_bonus
+			picture = generic_intel_bonus
 			removal_cost = -1
 			modifier = { stability_weekly = 0.001 }
 		}
 
 		POR_expanding_the_propaganda_ministry = {
-			picture = generic_intel_bonus
+			picture = generic_spy_intel
 			removal_cost = -1
 			modifier = {
 				political_power_factor = 0.1

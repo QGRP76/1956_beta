@@ -19,7 +19,7 @@
  POR_integrate_galicia_desc:0 "We have shown the people of Galicia that they are served best under our nations wise leadership. We shall wait no longer to integrate the province into our Portuguese fatherland!"
 
  POR_avenge_the_1890_british_ultimatum:0 "Avenge the 1890 British Ultimatum"
- POR_avenge_the_1890_british_ultimatum_desc:0 ""
+ POR_avenge_the_1890_british_ultimatum_desc:0 "The British Ultimatum of 1890 was a national tragedy for all across our plural-continental empire. With the chance at hand, we can finally connect our African holdings once again!"
 
  #FOCUSES
 
@@ -180,7 +180,7 @@
  POR_continue_the_public_works_r56_desc:0 "Public works projects are a wise investment in the nation that will feed a growing Portugal for years to come. Extending and forming new public works projects would likely bode well for our economy, and show that we are a stabilizing force for the nation as a whole."
 
  POR_exasperate_the_education_expansion:0 "Exasperate the Education Expansion"
- POR_exasperate_the_education_expansion_desc:0 ""
+ POR_exasperate_the_education_expansion_desc:0 "Hi akitten :)"
 
  POR_support_an_industrial_expansion:0 "Support an Industrial Expansion"
  POR_support_an_industrial_expansion_desc:0 ""
@@ -229,10 +229,10 @@
  POR_renewing_the_portuguese_armada:0 "Renewing the Portuguese Armada"
 
  #Colonies
- POR_expand_the_colonial_administration:0 "Expand the Colonial Administration"
- POR_expand_the_colonial_administration_desc:0 ""
- POR_expand_the_colonial_administration_tt:0 "Unlocks occupation law in all §YNon-European§! states:"
- POR_expand_the_colonial_administration_trigger:0 "Has completed focus §YThe Question of Our Colonies§! without §RWithdrawing§! from them"
+ POR_strengthen_the_colonial_administration:0 "Strengthen the Colonial Administration"
+ POR_strengthen_the_colonial_administration_desc:0 ""
+ POR_strengthen_the_colonial_administration_tt:0 "Unlocks occupation law in all §YNon-European§! states:"
+ POR_strengthen_the_colonial_administration_trigger:0 "Has completed focus §YThe Question of Our Colonies§! without §RWithdrawing§! from them"
 
  POR_develop_the_angolan_interior:0 "Develop the Angolan Interior"
  POR_develop_the_angolan_interior_desc:0 ""
@@ -280,6 +280,9 @@
 
  #Socialist/Democratic Decision Menu
  POR_securing_the_revolution:0 "Securing the Revolution"
+
+ POR_answer_the_question_of_our_colonies:0 "Answer the Question of Our Colonies"
+ POR_answer_the_question_of_our_colonies_desc:0 "Our revolution has ended with triumph, and we've secured our hold over the mainland. We must now move to address internal matters, the most important of which being our colonial holdings in Africa and Asia. Are we to withdraw from these long-held regions?"
 
  POR_align_the_british_communist_alternative:0 "Align the British Communist Alternative"
  POR_align_the_british_communist_alternative_desc:0 "The British have been our long protectors, and now, too, has sought elevation to true socialist ideals. United again, Portugal and Britain shall never be torn apart!"
@@ -376,7 +379,7 @@
  POR_crusade_against_colonialism_desc:0 ""
 
  POR_pave_the_path_to_progress:0 "Pave the Path to Progress"
- POR_pave_the_path_to_progress_desc:0 "Our cause will never truly triumph if the victories of today becomes yet another constant tomorrow. Portugal's stride forward must never end if we're to become the nation it needs to be!"
+ POR_pave_the_path_to_progress_desc:0 "Our cause will never truly triumph if the victories of today becomes yet another constant tomorrow. We must ensure that Portugal's stride forward never ends!"
 
  POR_towards_a_prosperous_proletariat:0 "Towards a Prosperous Proletariat"
  POR_towards_a_prosperous_proletariat_desc:0 ""
@@ -415,7 +418,7 @@
  POR_restore_civil_liberties_tt:0 "Unlocks §YRestore Civil Liberties§! decisions"
 
  POR_foment_peace_with_the_church:0 "Foment Peace With the Church"
- POR_foment_peace_with_the_church_desc:0 ""
+ POR_foment_peace_with_the_church_desc:0 "Relations between the Catholic Church and Portuguese republican governments have rarely been productive. There is no better time than now to take steps to resolve our differences, and let the individual decide what role religion shall have in their life."
  POR_peace_between_church_and_state:0 "Peace Between Church and State"
 
  POR_curb_political_militias:0 "Curb Political Militas"
@@ -447,12 +450,12 @@
 
  #Political - Historical (Maintain Salazar's Dictatorship)
  POR_continue_salazars_policies:0 "Continue Salazar's Policies"
- POR_continue_salazars_policies_desc:0 "Salazar's Estado Novo has, in spite of the Great Depression, brought economic success to the nation, while largely ending the decades of instability that defined recent decades. Much is still to be done, but Salazar has more than proven that the nation is best under his wise leadership!"
+ POR_continue_salazars_policies_desc:0 "Despite decades of instability, and the harrowing effects of the Great Depression, Salazar's Estado Novo has brought both, political and economic success to the nation. Much is still to be done, but Salazar has more than proven that the nation is best under his wise leadership!"
  POR_deus_patria_e_familia:0 "Deus, Pátria e Familia"
- POR_deus_patria_e_familia_desc:0 "Salazar's Estado Novo has, in spite of the Great Depression, brought economic success to the nation, while largely ending the decades of instability that defined recent decades. Much is still to be done, but Salazar has more than proven that the nation is best under his wise leadership!"
+ POR_deus_patria_e_familia_desc:0 "Despite decades of instability, and the harrowing effects of the Great Depression, Salazar's Estado Novo has brought both, political and economic success to the nation. Much is still to be done, but Salazar has more than proven that the nation is best under his wise leadership!"
 
  POR_commit_to_internal_security:0 "Commit to Internal Security"
- POR_commit_to_internal_security_desc:0 ""
+ POR_commit_to_internal_security_desc:0 "Liberals, syndicalists, and smaller wings of monarchists have made clear their unwillingness to cooperate with our plans for the nation. Before the existing political situation deteriorates into madness once more, we must take decisive action against these forces of instability."
 
  POR_expand_the_propaganda_ministry:0 "Expand the Propaganda Ministry"
  POR_expand_the_propaganda_ministry_desc:0 ""
@@ -465,6 +468,8 @@
 
  POR_promote_national_catholicism:0 "Promote National Catholicism"
  POR_promote_national_catholicism_desc:0 ""
+ POR_seek_concordat_with_the_holy_see:0 "Seek Concordat With the Holy See"
+ POR_embrace_pluricontinentalism:0 "Embrace Pluricontinentalism"
 
  POR_secretariat_of_national_information:0 "Secretariat of National Information"
  POR_secretariat_of_national_information_desc:0 ""

@@ -657,50 +657,44 @@ on_actions = {
 						rule = POR_focus_tree_selection
 						option = STANDARD_TREE
 					}
-					has_dlc = "La Resistance"
 				}
 				set_global_flag = por_lar_focus_tree
 				POR = {
 					load_focus_tree = portuguese_focus
+					remove_ideas = POR_lackluster_armed_forces
+					remove_ideas =	POR_disgruntled_republicans
+					remove_ideas =	POR_austerity_measures
 					add_ideas = POR_unreliable_army
 					add_ideas = POR_unstable_republic
+				}
+			}
+			else = { set_global_flag = POR_R56_focus_tree }
 
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				POR = {
+					add_opinion_modifier = {
+						target = ENG
+						modifier  = POR_anglo_portuguese_alliance
+					}
 					ENG = {
 						add_opinion_modifier = {
 							target = POR
 							modifier  = POR_anglo_portuguese_alliance
 						}
 					}
-
-					POR = {
-						add_opinion_modifier = {
-							target = ENG
-							modifier  = POR_anglo_portuguese_alliance
-						}
-					}
-
 					GER = {
 						add_opinion_modifier = {
 							target = POR
 							modifier = fascism_leanings_good
 						}
 					}
-
 					ITA = {
 						add_opinion_modifier = {
 							target = POR
 							modifier = fascism_leanings_good
 						}
 					}
-				}
-			}
-			else = {
-				set_global_flag = POR_R56_focus_tree
-				POR = {
-					remove_country_leader_trait = conservative_nationalist_lar
-					add_ideas = POR_lackluster_armed_forces
-					add_ideas = POR_disgruntled_republicans
-					add_ideas = POR_austerity_measures
 				}
 			}
 

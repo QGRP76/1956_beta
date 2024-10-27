@@ -845,14 +845,10 @@ characters = {
 			idea_token = POR_jaime_cortesao_r56
 			allowed = {
 				original_tag = POR
-				NOT = {
-					has_dlc = "La Resistance"
-				}
+				NOT = { has_dlc = "La Resistance" }
 			}
 			available = { has_completed_focus = POR_pave_the_path_to_progress }
-			traits = {
-				captain_of_industry 
-			}
+			traits = { compassionate_gentleman }
 		}
 		name = POR_jaime_cortesao
 		portraits = {
@@ -877,9 +873,7 @@ characters = {
 				else = { has_completed_focus = POR_pave_the_path_to_progress }
 			}
 			name = POR_jaime_cortesao 
-			traits = {
-				compassionate_gentleman 
-			}
+			traits = { compassionate_gentleman }
 		}
 		name = POR_jaime_cortesao
 		portraits = {
@@ -926,7 +920,7 @@ characters = {
 		}
 	}
 
-	#POR_raul_brandao = {
+	#POR_raul_brandao = {		#This guy died 6 years before game start :)
 		#advisor = {
 			#slot = political_advisor
 			#idea_token = POR_raul_brandao
@@ -1128,8 +1122,9 @@ characters = {
 				if = {
 					limit = { has_focus_tree = r56_portuguese_focus }
 					OR = {
-						NOT = { has_completed_focus = POR_unite_against_salazar }
+						has_completed_focus = POR_continue_salazars_policies
 						has_completed_focus = POR_return_to_civil_meritocracy
+						has_completed_focus = POR_united_against_the_bolshevik_threat
 					} 
 				}
 			}
@@ -1147,18 +1142,16 @@ characters = {
 	}
 
 	POR_augusto_de_vasconcelos_r56 = {
-		allowed = {
-			NOT = {
-				has_dlc = "La Resistance"
-			}
-		}
 		advisor = {
 			slot = political_advisor
 			idea_token = POR_augusto_de_vasconcelos
-			allowed = { original_tag = POR }
-			traits = { compassionate_gentleman }
+			allowed = {
+				original_tag = POR
+				NOT = { has_dlc = "La Resistance" }
+			}
+			available = { has_completed_focus = POR_restore_civil_liberties }
+			traits = { democratic_reformer }
 		}
-		available = { has_completed_focus = POR_restore_civil_liberties }
 		name = POR_augusto_de_vasconcelos
 		portraits = {
 			army = {
@@ -1180,9 +1173,7 @@ characters = {
 					has_completed_focus = POR_restore_civil_liberties
 				}
 			}
-			traits = {
-				democratic_reformer 
-			}
+			traits = { democratic_reformer }
 			do_effect = {
 				NOT = {
 					has_government = democratic 

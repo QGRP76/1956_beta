@@ -58,7 +58,7 @@ form_nation_mod_category = {
 		remove_effect = {
 			add_popularity = { 
 				ideology = ROOT 
-				popularity = 0.05
+				popularity = 0.03
 			}
 			add_war_support = 0.03
 			add_state_core = 171
@@ -71,7 +71,7 @@ form_nation_mod_category = {
 		allowed = { original_tag = POR }
 		visible = { 
 			has_focus_tree = r56_portuguese_focus
-			NOT = { has_government = communism } 
+			NOT = { has_country_flag = POR_released_colonies_flag }
 		}
 		highlight_states = {
 			highlight_state_targets = { 
@@ -207,27 +207,63 @@ POR_deus_patria_e_familia = {
 	}
 
 	POR_promote_portuguese_nationalism = {
-		icon = GFX_decision_eng_trade_unions_support
+		icon = generic_form_nation
 		fire_only_once = no
-		cost = 50
+		days_re_enable = 240
+		cost = 60
 		visible = { has_completed_focus = POR_expand_the_propaganda_ministry }
-		days_remove = 30
-		remove_effect = { add_stability = 0.03 }
-		ai_will_do = { base = 500 }
+		days_remove = 60
+		remove_effect = { 
+			add_stability = 0.03
+			add_war_support = 0.02 
+		}
+		ai_will_do = { base = 5 }
 	}
 
 	POR_support_moderate_labor_reforms = {
-		icon = GFX_decision_eng_trade_unions_support
+		icon = hol_exchange_intelligence_data
 		fire_only_once = no
-		cost = 50
+		days_re_enable = 240
+		cost = 60
 		visible = { has_completed_focus = POR_seek_urban_working_class_support }
-		days_remove = 100
-		days_re_enable = 400
+		days_remove = 120
+		days_re_enable = 360
 		modifier = {
 			neutrality_drift = 0.01
-			stability_weekly = 0.004
+			stability_weekly = 0.003
+		}
+		ai_will_do = { base = 5 }
+	}
+
+	POR_seek_concordat_with_the_holy_see = {
+		icon = GFX_decision_eng_trade_unions_support
+		fire_only_once = yes
+		cost = 100
+		visible = { has_completed_focus = POR_promote_national_catholicism }
+		days_remove = 730
+		remove_effect = {
+			add_political_power = 135
+			add_stability = 0.03
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+
 		}
 		ai_will_do = { base = 500 }
+	}
+
+	POR_embrace_pluricontinentalism = {
+		icon = generic_military
+		fire_only_once = yes
+		cost = 125
+		visible = { has_completed_focus = POR_promote_national_catholicism }
+		available = { has_completed_focus = POR_bolster_the_colonial_garrison }
+		complete_effect = {
+			custom_effect_tooltip = ITA_polizia_dell_africa_italiana_occupation_law_tt
+			set_country_flag = ITA_colonial_police_final_flag
+		}
+		ai_will_do = { base = 5 }
 	}
 }
 
@@ -317,7 +353,8 @@ POR_the_path_to_economic_progress = {
 	POR_subsidize_rural_farming = {
 		icon = ger_mefo_bills
 		fire_only_once = no
-		cost = 45
+		days_re_enable = 270
+		cost = 50
 		ai_will_do = { base = 25 }
 		visible = { 
 			OR = {
@@ -326,10 +363,10 @@ POR_the_path_to_economic_progress = {
 				has_completed_focus = POR_assistance_for_the_countryside
 			}
 		}
-		days_remove = 120
+		days_remove = 135
 		modifier = { consumer_goods_factor = 0.15 }
 		remove_effect = {
-			add_political_power = 50
+			add_political_power = 55
 			add_stability = 0.02
 			add_popularity = {
 				ideology = ROOT
@@ -430,7 +467,7 @@ POR_the_path_to_economic_progress = {
 		visible = { has_completed_focus = POR_towards_a_prosperous_proletariat }
 		days_remove = 125
 		modifier = {
-			stability_weekly = 0.003
+			stability_weekly = 0.002
 			civilian_factory_use = 1
 			political_power_factor = -0.1
 		}
@@ -716,6 +753,23 @@ POR_together_against_salazar = {
 }
 
 POR_securing_the_revolution = {
+	POR_answer_the_question_of_our_colonies = {   
+		icon = GFX_decision_generic_operation 
+		activation = { 
+			has_war = no
+			NOT = { has_completed_focus = POR_the_question_of_our_colonies }
+		}
+		available = { has_completed_focus = POR_the_question_of_our_colonies }
+		cancel_if_not_visible = yes 
+		is_good = no
+		fire_only_once = yes                            
+		selectable_mission = no  
+		days_mission_timeout = 240
+		timeout_effect = {
+			add_political_power = -75
+			complete_national_focus = POR_the_question_of_our_colonies
+		}
+	}
 	POR_join_the_global_fight_against_fascism = {
 		icon = generic_form_nation
 		fire_only_once = yes	
@@ -893,19 +947,26 @@ POR_securing_the_revolution = {
 	}
 
 	POR_end_the_polticial_trials = {
+		cost = 40
 		icon = generic_arrest
 		fire_only_once = yes
 		ai_will_do = { base = 400 }
 		visible = { has_completed_focus = POR_unity_and_reconciliation }
 		complete_effect = {
-			add_political_power = 40
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.05
+			if = {
+				limit = { has_idea = POR_reactionary_resistance2 }
+				remove_ideas = POR_reactionary_resistance2
+				custom_effect_tooltip = CHL_skip_one_line_tt
+				add_timed_idea = {
+					idea = POR_reactionary_resistance3
+					days = 365
+				}
 			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.1
+			else = {
+				swap_ideas = {
+					remove_idea = POR_reactionary_resistance
+					add_idea = POR_reactionary_resistance2
+				}
 			}
 		}
 	}
