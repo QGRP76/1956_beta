@@ -66,6 +66,7 @@ set_technology = {
 	tech_recon = 1
 	tech_support = 1
 	tech_engineers = 1
+	tech_military_police = 1
 	tech_mountaineers = 1
 	tech_trucks = 1
 	motorised_infantry = 1
@@ -483,6 +484,7 @@ recruit_character = GER_fedor_von_bock
 recruit_character = GER_felix_steiner
 recruit_character = GER_franz_halder
 recruit_character = GER_friedrich_paulus
+recruit_character = GER_hermann_bernhard_ramcke
 recruit_character = GER_friedrich_schulz
 recruit_character = GER_georg_von_kuchler
 recruit_character = GER_georghans_reinhardt
@@ -578,6 +580,10 @@ recruit_character = GER_theodor_duesterberg
 recruit_character = GER_baldur_von_schirach
 recruit_character = GER_heinrich_brandler
 
+recruit_character = GER_otto_wels
+recruit_character = GER_hans_vogel
+recruit_character = GER_election_comission
+
 recruit_character = GER_bernhard_rogge			#moved from West Germany file, turned into young admiral
 
 add_ideas = {
@@ -585,10 +591,33 @@ add_ideas = {
 }
 recruit_character = GER_hans_kahle			#commie commander
 recruit_character = GER_hans_beimler		#commie commander
-recruit_character = GER_rudolf_hernnstadt	#commie journalist
+recruit_character = GER_rudolf_herrnstadt	#commie journalist
 recruit_character = GER_johannes_becher		#commie poet
 
-country_event = { id = wtt_germany.26 days = 1982 }		#Wilhelm II dies
+country_event = { id = wtt_germany.26 days = 1982 }		#Wilhelm II dies		#it would be funnier if it was 1984 days
+
+# characters dying
+country_event = {	# otto wels
+	id = r56.ger.61
+	days = 1366
+	random_days = 60
+}
+country_event = {
+	id = r56.ger.62
+	days = 1366
+	random_days = 30
+}
+
+country_event = {	# hans vogel
+	id = r56.ger.63
+	days = 3546
+	random_days = 60
+}
+country_event = {
+	id = r56.ger.64
+	days = 3546
+	random_days = 30
+}
 
 
 #create_corps_commander = {

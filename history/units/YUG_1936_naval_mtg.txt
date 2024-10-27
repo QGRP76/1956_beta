@@ -41,71 +41,27 @@ units= {
 			ship = { name = "KB Osvetnik" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = YUG version_name = "Smeli Class" } } }				
 		}				
 	}
-} 
+}
 
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = ship_hull_light_2
-			creator = "YUG" 
-			version_name = "Orjen Class"
+			creator = "YUG"
+			version_name = "Beograd Class"
 		}
-		name = "KB Orjen"
+		name = "KB Beograd"
 		requested_factories = 1
-		progress = 0.85
+		progress = 0.25
 		amount = 1
 	}
 	add_equipment_production = {
 		equipment = {
 			type = ship_hull_light_2
-			creator = "YUG" 
-			version_name = "Orjen Class"
+			creator = "YUG"
+			version_name = "Beograd Class"
 		}
-		name = "KB Durmitor"
-		requested_factories = 1
-		progress = 0.6
-		amount = 1
-	}
-	add_equipment_production = {
-		equipment = {
-			type = ship_hull_light_2
-			creator = "YUG" 
-			version_name = "Orjen Class"
-		}
-		name = "KB Suvobor"
-		requested_factories = 1
-		progress = 0.6
-		amount = 1
-	}
-	add_equipment_production = {
-		equipment = {
-			type = ship_hull_light_2
-			creator = "YUG" 
-			version_name = "Orjen Class"
-		}
-		name = "KB Kajmakčalan"
-		requested_factories = 1
-		progress = 0.35
-		amount = 1
-	}
-	add_equipment_production = {
-		equipment = {
-			type = ship_hull_light_2
-			creator = "YUG" 
-			version_name = "Orjen Class"
-		}
-		name = "KB Velebit"
-		requested_factories = 1
-		progress = 0.35
-		amount = 1
-	}
-	add_equipment_production = {
-		equipment = {
-			type = ship_hull_light_2
-			creator = "YUG" 
-			version_name = "Orjen Class"
-		}
-		name = "KB Dinara"
+		name = "KB Zagreb"
 		requested_factories = 1
 		progress = 0.15
 		amount = 1
@@ -113,24 +69,12 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = ship_hull_light_2
-			creator = "YUG" 
-			version_name = "Orjen Class"
+			creator = "YUG"
+			version_name = "Beograd Class"
 		}
-		name = "KB Rudnik"
+		name = "KB Ljubljana"
 		requested_factories = 1
-		progress = 0.15
-		amount = 1
-	}
-	add_equipment_production = {
-		equipment = {
-			type = ship_hull_light_2
-			creator = "YUG" 
-			version_name = "Orjen Class"
-		}
-		name = "KB Triglav"
-		requested_factories = 1
-		progress = 0.15
+		progress = 0.05
 		amount = 1
 	}
 }
-

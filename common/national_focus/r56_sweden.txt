@@ -473,6 +473,37 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
+		ai_will_do = {
+			base = 1
+			modifier = {
+				is_historical_focus_on = yes
+				add = -10
+			}
+			modifier = {
+				AND = {
+					date > 1938.6.1
+					OR = {
+						GER = {
+							has_added_tension_amount > 25
+						}
+						SOV = {
+							has_added_tension_amount > 25
+						}
+						ITA = {
+							has_added_tension_amount > 25
+						}
+						ENG = {
+							has_added_tension_amount > 25
+						}
+						FRA = {
+							has_added_tension_amount > 25
+						}
+					}
+				}
+				add = 10
+			}
+		}
+
 		available = {
 			is_subject = no
 			is_in_faction = no 
@@ -536,13 +567,13 @@ focus_tree = {
 					}
 					140 = {
 						create_unit = {
-							division = "division_template = \"Dansk Militärpolis\" start_experience_factor = 0.1 start_equipment_factor = 0.2"
+							division = "division_template=\"Polistrupp\" name = \"Dansk Militärpolis\" start_experience_factor = 0.1 start_equipment_factor = 0.2"
 							owner = SWE
 						}
 					}
 					140 = {
 						create_unit = {
-							division = "division_template = \"Dansk Militärpolis\" start_experience_factor = 0.3 start_equipment_factor = 0.4"
+							division = "division_template=\"Polistrupp\" name = \"Dansk Militärpolis\" start_experience_factor = 0.3 start_equipment_factor = 0.4"
 							owner = SWE
 						}
 					}
@@ -558,13 +589,13 @@ focus_tree = {
 					}
 					138 = {
 						create_unit = {
-							division = "division_template = \"Norsk Militärpolis\" start_experience_factor = 0.3 start_equipment_factor = 0.3"
+							division = "division_template=\"Polistrupp\" name = \"Norsk Militärpolis\" start_experience_factor = 0.3 start_equipment_factor = 0.3"
 							owner = SWE
 						}
 					}
 					138 = {
 						create_unit = {
-							division = "division_template = \"Norsk Militärpolis\" start_experience_factor = 0.2 start_equipment_factor = 0.6"
+							division = "division_template=\"Polistrupp\" name = \"Norsk Militärpolis\" start_experience_factor = 0.2 start_equipment_factor = 0.6"
 							owner = SWE
 						}
 					}
@@ -971,6 +1002,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				set_cosmetic_tag = SWE_swedish_empire_cosmetic
+			}
 			custom_effect_tooltip = SWE_integrate_imperial_territories_tt
 			promote_character = SWE_gustaf_adolf_vi 
 			set_politics = {
@@ -1229,6 +1263,37 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				is_historical_focus_on = yes
+				add = -10
+			}
+			modifier = {
+				AND = {
+					date > 1938.6.1
+					OR = {
+						GER = {
+							has_added_tension_amount > 25
+						}
+						SOV = {
+							has_added_tension_amount > 25
+						}
+						ITA = {
+							has_added_tension_amount > 25
+						}
+						ENG = {
+							has_added_tension_amount > 25
+						}
+						FRA = {
+							has_added_tension_amount > 25
+						}
+					}
+				}
+				add = 10
+			}
 		}
 
 		available_if_capitulated = yes
@@ -2849,7 +2914,7 @@ focus_tree = {
 				GER = {
 					is_subject_of = SWE
 					is_subject_of = FRA
-					exists = No
+					exists = no
 				}
 			}
 		}
@@ -2885,9 +2950,24 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			create_wargoal = {
-				target = GER
-				type = annex_everything
+			every_other_country = {
+				limit = {
+					NOT = { is_in_faction_with = ROOT }
+					NOT = { is_subject_of = ROOT }
+					any_owned_state = {
+						OR = {
+							state = 63
+							state = 62
+						}
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						target = PREV
+						type = take_state_focus
+						expire = 0
+					}
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }

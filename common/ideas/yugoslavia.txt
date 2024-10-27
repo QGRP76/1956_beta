@@ -1,5 +1,109 @@
 ideas = {
 	country = {
+
+		r56_YUG_little_entente = {
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				OR = {
+					exists = no
+					has_government = communism
+					has_government = fascism
+					is_ally_with = HUN
+					AND = {
+						is_ally_with = AUS
+						AUS = {
+							OR = {
+								is_ally_with = HUN
+								owns_state = 43
+							}
+						}
+					}
+					any_other_country = {
+						has_idea = r56_YUG_little_entente
+						has_war_with = ROOT
+					}
+					count_triggers = {
+						amount = 2
+						ROM = {
+							OR = {
+								exists = no
+								NOT = {
+									has_idea = r56_YUG_little_entente
+								}
+								AND = {
+									is_in_faction = yes
+									NOT = {
+										any_allied_country = {
+											has_idea = r56_YUG_little_entente
+										}
+									}
+								}
+							}
+						}
+						YUG = {
+							OR = {
+								exists = no
+								NOT = {
+									has_idea = r56_YUG_little_entente
+								}
+								AND = {
+									is_in_faction = yes
+									NOT = {
+										any_allied_country = {
+											has_idea = r56_YUG_little_entente
+										}
+									}
+								}
+							}
+						}
+						CZE = {
+							OR = {
+								exists = no
+								NOT = {
+									has_idea = r56_YUG_little_entente
+								}
+								AND = {
+									is_in_faction = yes
+									NOT = {
+										any_allied_country = {
+											has_idea = r56_YUG_little_entente
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			on_remove = {
+				every_country = {
+					limit = {
+						has_idea = r56_YUG_little_entente
+					}
+					remove_ideas = r56_YUG_little_entente
+				}
+			}
+
+			picture = YUG_little_entente
+
+			removal_cost = -1
+
+			modifier = {
+				guarantee_cost = -0.25
+				opinion_gain_monthly_same_ideology_factor = 0.15
+				defensive_war_stability_factor = 0.05
+				custom_modifier_tooltip = r56_YUG_if_we_go_to_war_with_HUN
+			}
+		}
 	
 		anti_german_military = {
 			
@@ -19,10 +123,9 @@ ideas = {
 			
 			modifier = {
 				drift_defence_factor = 0.05
+				custom_modifier_tooltip = YUG_anti_german_coup
 			}
 		}
-		
-		
 		
 		king_peter_1 = {
 			
@@ -63,7 +166,7 @@ ideas = {
 		
 		YUG_idea_princess_alexandrine_britain = {
 			
-			picture = YUG_serbian_general_staff
+			picture = YUG_serbian_staff
 
 			allowed = {
 				always = no
@@ -83,7 +186,7 @@ ideas = {
 		
 		YUG_idea_princess_alexandra_germany = {
 			
-			picture = YUG_serbian_general_staff
+			picture = YUG_serbian_staff
 
 			allowed = {
 				always = no
@@ -103,7 +206,7 @@ ideas = {
 		
 		YUG_idea_princess_marie_italy = {
 			
-			picture = YUG_serbian_general_staff
+			picture = YUG_serbian_staff
 
 			allowed = {
 				always = no
@@ -123,7 +226,7 @@ ideas = {
 		
 		YUG_idea_serbian_general_staff = {
 			
-			picture = YUG_serbian_general_staff
+			picture = YUG_serbian_staff
 
 			allowed = {
 				always = no
@@ -176,7 +279,7 @@ ideas = {
 			
 			modifier = {
 				max_planning = 0.1
-				defence = 0.1
+			army_defence_factor = 0.1
 			}
 		}
 		
@@ -200,6 +303,7 @@ ideas = {
 		}
 		
 		YUG_idea_local_self_management = {
+			name = YUG_local_self_management
 			
 			picture = generic_local_self_management
 
@@ -214,7 +318,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_speed_buildings_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				political_power_factor = -0.05
+				stability_factor = 0.05
 			}
 		}
 		
@@ -233,7 +339,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_factory = 0.05
+				political_power_factor = 0.05
+				industrial_capacity_factory = 0.1
+				stability_factor = -0.05
 			}
 		}
 		
@@ -266,6 +374,12 @@ ideas = {
 
 			allowed_civil_war = {
 				has_government = communism
+			}
+			
+			cancel = {
+				NOT = {
+					has_government = communism
+				}
 			}
 
 			removal_cost = -1
@@ -513,7 +627,7 @@ ideas = {
 		
 		YUG_idea_croatian_opposition = {
 			
-			picture = FRA_scw_intervention_republicans_focus
+			picture = AUS_croat_resistance
 
 			allowed = {
 				always = no
@@ -526,6 +640,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				neutrality_drift = -0.03
 				stability_factor = -0.3
 			}
 		}
@@ -616,7 +731,7 @@ ideas = {
 		
 		YUG_idea_croats_suppressed = {
 			
-			picture = generic_secret_police
+			picture = generic_oppression
 
 			allowed = {
 				always = no
@@ -778,7 +893,7 @@ ideas = {
 
 		YUG_neutral_foreign_policy = {
 			
-			
+			picture = ast_volunteer_defence_corps
 			allowed = {
 				always = no
 			}
@@ -1973,7 +2088,7 @@ ideas = {
 			traits = { engine_factory }
 
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					maximum_speed = 0.05
 					reliability_factor = 0.1
 				}

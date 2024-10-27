@@ -1,4 +1,3 @@
-
 state={
 	id=764
 	name="STATE_764"
@@ -9,10 +8,7 @@ state={
 		owner = YUG
 		controller = YUG
 		victory_points = {
-			3614 1
-		}
-		victory_points = {
-			11787 5
+			11787 3
 		}
 		buildings = {
 			infrastructure = 3 #was: 6

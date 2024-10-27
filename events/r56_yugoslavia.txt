@@ -12,11 +12,11 @@ country_event = {
 	
 	trigger = {
 		tag = YUG
+		has_idea = YUG_idea_croatian_opposition
 		has_country_leader =  {
 			character = YUG_milan_stojadinovic
 			ruling_only = yes
 		}
-		has_idea = YUG_idea_croatian_opposition
 	}
 
 	fire_only_once = yes
@@ -24,7 +24,7 @@ country_event = {
 	option = {
 		name = r56_yugoslavia.1.a
 		ai_chance = {
-			factor = 90
+			base = 100
 		}
 		add_political_power = -25
 		retire_country_leader = yes
@@ -55,10 +55,6 @@ country_event = {
 	picture = GFX_report_event_generic_funeral
 
 	is_triggered_only = yes
-
-	trigger = {
-		tag = YUG
-	}
 
 	fire_only_once = yes
 	
@@ -92,7 +88,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 90
+			base = 10
 		}
 	}
 	
@@ -105,7 +101,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 90
+			base = 90
 		}
 	}
 }
@@ -142,6 +138,10 @@ country_event = {
 		}
 	}
 
+	immediate = {
+		retire_character = YUG_anton_korosec
+	}
+
 	fire_only_once = yes
 	
 	option = {
@@ -155,7 +155,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 90
+			base = 10
 		}
 	}
 	
@@ -168,7 +168,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 90
+			base = 90
 		}
 	}
 }
@@ -192,12 +192,16 @@ country_event = {
 		}
 	}
 
+	immediate = {
+		retire_character = YUG_mehmed_spaho
+	}
+
 	fire_only_once = yes
 	
 	option = {
 		name = r56_yugoslavia_deaths.1.a
 		ai_chance = {
-			factor = 90
+			base = 100
 		}
 	}
 }
@@ -216,7 +220,7 @@ country_event = {
 	option = {
 		name = r56_yugoslavia.3.a
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 		if = {
 			limit = {
@@ -271,7 +275,7 @@ country_event = {
 	option = {
 		name = r56_yugoslavia.3.b
 		ai_chance = {
-			factor = 20
+			base = 20
 		}
 		if = {
 			limit = {
@@ -336,7 +340,7 @@ country_event = {
 	option = {
 		name = r56_yugoslavia.3.c
 		ai_chance = {
-			factor = 40
+			base = 40
 		}
 		if = {
 			limit = {

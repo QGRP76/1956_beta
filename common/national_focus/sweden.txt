@@ -5673,6 +5673,7 @@ focus_tree = {
 				add_idea = SWE_land_air_warfare_1
 			}
 			add_tech_bonus = {
+				name = SWE_rapid_response_force
 				bonus = 1
 				uses = 2
 				category = support_tech # optional 
@@ -5703,6 +5704,7 @@ focus_tree = {
 				add_idea = SWE_land_air_warfare_2
 			}
 			add_tech_bonus = {
+				name = SWE_tank_development
 				bonus = 1
 				uses = 1
 				category = armor # optional 

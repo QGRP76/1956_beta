@@ -7543,7 +7543,7 @@ YUG = {
 	}
 	cv_nav_bomber_equipment = {
 		prefix = ""
-		generic = { "Torpedo Komanda" }
+		generic = { "Protivmornarički Puk" }
 		generic_pattern = AIR_WING_NAME_YUG_GENERIC
 		unique = {
 		}	
@@ -7575,7 +7575,7 @@ YUG = {
 
 	nav_bomber_equipment = {
 		prefix = ""
-		generic = { "Hidroplanska Komanda" "Torpedo Komanda" }
+		generic = { "Protivmornarički Puk" }
 		generic_pattern = AIR_WING_NAME_YUG_GENERIC
 		unique = {
 		}	
@@ -7607,7 +7607,7 @@ YUG = {
 
 	flying_boat_equipment = {
 		prefix = ""
-		generic = { "Hidroplanska Komanda" }
+		generic = { "Hidroplanski Puk" }
 		generic_pattern = AIR_WING_NAME_YUG_GENERIC
 		unique = {
 		}	
@@ -7621,7 +7621,6 @@ YUG = {
 		}	
 	}
 }
-
 
 VEN = {
 	submarine = {

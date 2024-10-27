@@ -13,7 +13,7 @@ focus_tree = {
 	default = no
 	reset_on_civilwar = no
 
-	continuous_focus_position = { x = 0 y = 1000 }
+	continuous_focus_position = { x = 550 y = 825 }
 
 	focus = {
 		id = SER_state_guard
@@ -1371,7 +1371,7 @@ focus_tree = {
 	focus = {
 		id = SER_build_the_nation
 		icon = GFX_goal_generic_construction
-		x = 26
+		x = 28
 		y = 0
 		cost = 5
 
@@ -2053,7 +2053,7 @@ focus_tree = {
 	focus = {
 		id = SER_political_effort
 		icon = GFX_goal_SER_glory
-		x = 39
+		x = 41
 		y = 0
 		cost = 8
 		ai_will_do = {

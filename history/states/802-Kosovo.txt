@@ -4,10 +4,6 @@ state={
 	provinces={
 		6940 9849 9874 
 	}
-
-	resources = {
-		chromium = 6
-	}
 	
 	history={
 		victory_points = {
@@ -17,13 +13,10 @@ state={
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = ALB
+		add_core_of = YUG
+		add_core_of = SER
 		add_core_of = KOS
-		add_claim_by = YUG
-		add_claim_by = SER
-		add_dynamic_modifier = {
-			modifier = r56_YUG_moderate_serbinisation_effort
-		}
+		add_claim_by = ALB
 	}
 	
 	manpower=414048

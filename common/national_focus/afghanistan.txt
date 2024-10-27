@@ -106,7 +106,7 @@ focus_tree = {
 				limit = { 
 					has_active_mission = AFG_third_loya_jirga_mission
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				effect_tooltip = {
 					add_power_balance_value = {
 						id = AFG_power_balance
@@ -129,7 +129,7 @@ focus_tree = {
 						has_completed_focus = AFG_handle_the_king
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				custom_effect_tooltip = AFG_rural_schools_tt
 				effect_tooltip = {
 					add_power_balance_value = {
@@ -624,7 +624,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = -0.1
@@ -650,7 +650,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = -0.1
@@ -663,7 +663,7 @@ focus_tree = {
 						id = AFG_communist_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_communist_power_balance
 					value = -0.05
@@ -924,7 +924,7 @@ focus_tree = {
 		
 		completion_reward = {
 			custom_effect_tooltip = AFG_the_nomad_population_category_tt
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			hidden_effect = {
 				random_list = {
 					20 = {
@@ -987,7 +987,7 @@ focus_tree = {
 					has_idea = AFG_decentralized_economy_2
 				}
 				remove_ideas = AFG_decentralized_economy_2
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 			}
 			if = {
 				limit = {
@@ -1211,7 +1211,7 @@ focus_tree = {
 			else = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
-					amount = 250
+					amount = 500
 					producer = AFG
 				}
 			}
@@ -1363,7 +1363,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = 0.05
@@ -1443,7 +1443,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = 0.05
@@ -1516,7 +1516,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = -0.05
@@ -1557,7 +1557,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = -0.05
@@ -1626,7 +1626,7 @@ focus_tree = {
 							id = AFG_power_balance
 						}
 					}
-					custom_effect_tooltip = MPL_newline
+					custom_effect_tooltip = r56_newline
 					add_power_balance_value = {
 						id = AFG_power_balance
 						value = 0.05
@@ -1725,7 +1725,7 @@ focus_tree = {
 							id = AFG_power_balance
 						}
 					}
-					custom_effect_tooltip = MPL_newline
+					custom_effect_tooltip = r56_newline
 					add_power_balance_value = {
 						id = AFG_power_balance
 						value = -0.05
@@ -1781,7 +1781,7 @@ focus_tree = {
 							id = AFG_power_balance
 						}
 					}
-					custom_effect_tooltip = MPL_newline
+					custom_effect_tooltip = r56_newline
 					add_power_balance_value = {
 						id = AFG_power_balance
 						value = 0.05
@@ -1841,7 +1841,7 @@ focus_tree = {
 							id = AFG_power_balance
 						}
 					}
-					custom_effect_tooltip = MPL_newline
+					custom_effect_tooltip = r56_newline
 					add_power_balance_value = {
 						id = AFG_power_balance
 						value = 0.05
@@ -1853,7 +1853,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_prussians_orient
-		icon = GFX_goal_generic_army_elite
+		icon = GFX_goal_GER_support_the_freikorps
 		x = 1
 		y = 1
 		cost = 8
@@ -2443,7 +2443,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = available_mio_tt
 				show_mio_tooltip = ITA_imam_organization
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 			}
 			else = {
 				add_equipment_to_stockpile = {
@@ -2506,7 +2506,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = available_mio_tt
 				show_mio_tooltip = ENG_hawker_organization
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 			}
 			else = {
 				add_equipment_to_stockpile = {
@@ -2592,7 +2592,7 @@ focus_tree = {
 				right_side = AFG_tribal_side
 				set_value = 0.1
 			}
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			add_ideas = AFG_loya_jirga_idea
 			custom_effect_tooltip = AFG_remove_loya_jirga_idea
 		}
@@ -2659,7 +2659,7 @@ focus_tree = {
 					id = AFG_power_balance
 					modifier = r56_AFG_bop_left
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 			}
 			if = {
 				limit = {
@@ -2672,7 +2672,7 @@ focus_tree = {
 					id = AFG_power_balance
 					modifier = r56_AFG_bop_right
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = AFG_abdul_majid_zabuli
@@ -2841,6 +2841,14 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = { id = afghanistan.12 hours = 12 }
+			effect_tooltip = {
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.05
+				}
+				add_country_leader_trait = AFG_germanophile
+				set_country_flag = AFG_visited_berlin
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -3032,7 +3040,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 			country_event = { id = afghanistan.14 hours = 3 }
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = AFG_homeira_seljuqi
 			if = {
@@ -3041,7 +3049,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = -0.1
@@ -3361,7 +3369,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = available_mio_tt
 				show_mio_tooltip = ENG_rsaf_enfield_organization
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				ENG = {
 					create_production_license = {
 						target = AFG
@@ -3537,7 +3545,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = -0.05
@@ -3633,7 +3641,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = -0.05
@@ -4010,10 +4018,18 @@ focus_tree = {
 				create_operative_leader = {
 					name = "Dieter Witzel Kirn"
 					GFX = GFX_Portrait_Operative_EuropeMale8
-					traits = { operative_infiltrator operative_commando }
+					traits = { operative_infiltrator operative_demolition_expert }
 					bypass_recruitment = no
 					available_to_spy_master = yes
 					nationalities = { GER }
+				}
+				create_operative_leader = {
+					name = "Shir Muhammad Gazi"
+					gfx = GFX_Portrait_Operative_AsianMale2
+					traits = { operative_infiltrator operative_commando operative_escape_artist }
+					bypass_recruitment = no
+					available_to_spy_master = yes
+					nationalities = { UZB TMS BUK TAJ KYR AFG }
 				}
 				add_ideas = AFG_abwehr_idea
 			}
@@ -4317,7 +4333,7 @@ focus_tree = {
 			unlock_decision_category_tooltip = AFG_inflitrate_pakistan_category
 			activate_mission = AFG_declare_war
 			set_country_flag = AFG_india_war_flag
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			custom_effect_tooltip = AFG_will_lead_to_war_PAK
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -4350,6 +4366,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		will_lead_to_war_with = PER
 
 		completion_reward = {
 			create_wargoal = {
@@ -4694,8 +4712,7 @@ focus_tree = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 5
-				factor = 5
+				add = 25
 				has_completed_focus = AFG_neutrality_reaffirmed
 				PAK = {
 					exists = yes
@@ -4706,16 +4723,14 @@ focus_tree = {
 				is_historical_focus_on = yes
 			}
 			modifier = {
-				add = 5
-				factor = 5
+				add = 25
 				has_completed_focus = AFG_neutrality_reaffirmed
 				PAK = {
 					exists = yes
 				}
 			}
 			modifier = {
-				add = 5
-				factor = 15
+				add = 75
 				has_completed_focus = AFG_neutrality_reaffirmed
 				PAK = {
 					exists = yes
@@ -4735,16 +4750,14 @@ focus_tree = {
 				}
 			}
 			modifier = {
-				add = 5
-				factor = 10
+				add = 50
 				has_completed_focus = AFG_join_allies
 				PAK = {
 					exists = yes
 				}
 			}
 			modifier = {
-				add = 5
-				factor = 20
+				add = 100
 				has_completed_focus = AFG_join_allies
 				PAK = {
 					exists = no
@@ -5018,6 +5031,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		will_lead_to_war_with = SOV
 
 		completion_reward = {
 			create_wargoal = {
@@ -5413,7 +5428,7 @@ focus_tree = {
 				last_election = "1936.12.14"
 				election_frequency = 48
 			}
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			add_ideas = AFG_constitutional_monarchy_idea
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -5487,7 +5502,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = -0.1
@@ -5532,7 +5547,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = -0.1
@@ -5601,7 +5616,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = -0.15
@@ -5648,7 +5663,7 @@ focus_tree = {
 				long_name = "National Revolutionary Party of Afghanistan"
 				name = "NRPA"
 			}
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.15
@@ -5667,7 +5682,6 @@ focus_tree = {
 							is_character = AFG_sardar_shah_mahmud_khan
 							is_character = AFG_sardar_shah_wali_khan
 							is_character = AFG_humaira_begum
-							is_character = AFG_hashim_khan
 						}
 					}
 					retire = yes
@@ -5718,7 +5732,7 @@ focus_tree = {
 				long_name = "Amanullah Loyalists"
 				name = "Amanullah Loyalists"
 			}
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			promote_character = AFG_amanullah_khan
 			hidden_effect = {
 				set_cosmetic_tag = AFG_AMA
@@ -5729,7 +5743,6 @@ focus_tree = {
 							is_character = AFG_sardar_shah_mahmud_khan
 							is_character = AFG_sardar_shah_wali_khan
 							is_character = AFG_humaira_begum
-							is_character = AFG_hashim_khan
 							is_character = AFG_mohammad_gul_khan_momand
 							is_character = AFG_turabaz_khan
 						}
@@ -5809,7 +5822,7 @@ focus_tree = {
 				country_event = { id = afghanistan.62 days = 181 }
 				country_event = { id = afghanistan.63 days = 199 }
 			}		
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			custom_effect_tooltip = AFG_improve_amanullah_spirit
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5954,7 +5967,7 @@ focus_tree = {
 					has_idea = AFG_bank
 				}
 				remove_ideas = AFG_bank
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 			}
 			add_ideas = AFG_banks_nationalized
 		}
@@ -6143,7 +6156,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = -0.1
@@ -6257,7 +6270,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = AFG_young_afghans
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			AFG_amanullah_khan = {
 				add_country_leader_role = {
 					country_leader = {
@@ -6309,7 +6322,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = -0.1
@@ -6350,7 +6363,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = -0.05
@@ -6572,7 +6585,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = -0.1
@@ -6921,7 +6934,7 @@ focus_tree = {
 			unlock_decision_category_tooltip = AFG_inflitrate_pakistan_category
 			activate_mission = AFG_declare_war
 			set_country_flag = AFG_india_war_flag
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			custom_effect_tooltip = AFG_will_lead_to_war_PAK
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -7336,9 +7349,9 @@ focus_tree = {
 					ruling_party = communism
 				}
 			}
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			country_event = { id = afghanistan.28 days = 2 }
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			set_power_balance = {
 				id = AFG_communist_power_balance
 				left_side = AFG_parcham_side
@@ -7390,7 +7403,7 @@ focus_tree = {
 						id = AFG_communist_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_communist_power_balance
 					value = -0.05
@@ -7450,7 +7463,7 @@ focus_tree = {
 			SOV = {
 				country_event = { id = afghanistan.2 hours = 12 random_hours = 12 }
 			}
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			custom_effect_tooltip = AFG_soviet_expedition_tt
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -7484,7 +7497,7 @@ focus_tree = {
 						id = AFG_communist_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_communist_power_balance
 					value = -0.1
@@ -7538,7 +7551,7 @@ focus_tree = {
 						id = AFG_communist_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_communist_power_balance
 					value = 0.05
@@ -7603,7 +7616,7 @@ focus_tree = {
 				idea = AFG_bourgeoisie_purged
 				days = 365
 			}
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			custom_effect_tooltip = AFG_purged_bourgeoisie_tt
 			hidden_effect = {
 				retire_character = AFG_turabaz_khan
@@ -7644,7 +7657,7 @@ focus_tree = {
 						id = AFG_communist_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_communist_power_balance
 					value = 0.1
@@ -7709,7 +7722,6 @@ focus_tree = {
 			if = {
 				limit = {
 					has_completed_focus = AFG_soviet_expedition
-					has_government = communism
 				}
 				add_ideas = AFG_soviet_trade_agreement_idea
 			}
@@ -7719,7 +7731,7 @@ focus_tree = {
 						has_completed_focus = AFG_soviet_expedition
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				custom_effect_tooltip = AFG_soviet_trade_agreement_tt
 			}
 			if = {
@@ -7728,7 +7740,7 @@ focus_tree = {
 						id = AFG_communist_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_communist_power_balance
 					value = 0.05
@@ -7768,7 +7780,7 @@ focus_tree = {
 						id = AFG_communist_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_communist_power_balance
 					value = -0.05
@@ -7848,7 +7860,7 @@ focus_tree = {
 						id = AFG_communist_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_communist_power_balance
 					value = 0.05
@@ -7915,7 +7927,7 @@ focus_tree = {
 						id = AFG_communist_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_communist_power_balance
 					value = 0.05
@@ -7959,7 +7971,7 @@ focus_tree = {
 						id = AFG_communist_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_communist_power_balance
 					value = -0.05
@@ -8003,7 +8015,7 @@ focus_tree = {
 						id = AFG_communist_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_communist_power_balance
 					value = 0.05
@@ -8125,7 +8137,7 @@ focus_tree = {
 						id = AFG_communist_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_communist_power_balance
 					value = -0.05
@@ -8163,7 +8175,7 @@ focus_tree = {
 						id = AFG_communist_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_communist_power_balance
 					value = -0.05
@@ -8289,7 +8301,7 @@ focus_tree = {
 						id = AFG_communist_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_communist_power_balance
 					value = 0.1
@@ -8393,7 +8405,7 @@ focus_tree = {
 						id = AFG_communist_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_communist_power_balance
 					value = 0.1
@@ -8479,7 +8491,7 @@ focus_tree = {
 						id = AFG_communist_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_communist_power_balance
 					value = -0.1
@@ -8521,7 +8533,7 @@ focus_tree = {
 						id = AFG_communist_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_communist_power_balance
 					value = -0.1
@@ -8577,7 +8589,7 @@ focus_tree = {
 						id = AFG_communist_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_communist_power_balance
 					value = -0.1
@@ -8966,7 +8978,7 @@ focus_tree = {
 				}
 				AFG = {
 					custom_effect_tooltip = AFG_anti_fascist_league_tt
-					custom_effect_tooltip = MPL_newline
+					custom_effect_tooltip = r56_newline
 					add_equipment_to_stockpile = {
 						type = infantry_equipment
 						amount = 500
@@ -9033,7 +9045,7 @@ focus_tree = {
 				}
 				set_global_flag = AFG_PER_communist_struggle_gflag
 			}
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			custom_effect_tooltip = AFG_PER_counter_tt
 			set_variable = {
 				AFG_pahlavi_attitude = 0
@@ -9280,7 +9292,7 @@ focus_tree = {
 			unlock_decision_category_tooltip = AFG_inflitrate_pakistan_category
 			activate_mission = AFG_declare_war
 			set_country_flag = AFG_india_war_flag
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			custom_effect_tooltip = AFG_will_lead_to_war_PAK
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -9361,6 +9373,8 @@ focus_tree = {
 
 		cost = 5
 
+		will_lead_to_war_with = SOV
+
         completion_reward = {
 			create_wargoal = {
 				type = topple_government
@@ -9418,14 +9432,14 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = 0.1
 					tooltip_side = AFG_tribal_side
 				}
 			}
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = AFG_haji_mirzali_khan
 		}
@@ -9467,7 +9481,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = 0.1
@@ -9514,7 +9528,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = 0.1
@@ -9606,7 +9620,7 @@ focus_tree = {
 					}
 					promote_character = {
 						character = AFG_hashim_khan
-						ideology = centrism
+						ideology = despotism
 					}
 					1011 = {
 						create_unit = {
@@ -9739,7 +9753,7 @@ focus_tree = {
 				}
 				news_event = { id = afghanistan.53 hours = 18 }
 			}
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			add_ideas = AFG_lawless_emirate
 			if = {
 				limit = {
@@ -9747,7 +9761,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = 0.25
@@ -9799,7 +9813,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = -0.1
@@ -10025,7 +10039,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = -0.1
@@ -10068,7 +10082,7 @@ focus_tree = {
 				ideology = islamism
 				trait = AFG_golden_emir
 		    }
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			custom_effect_tooltip = AFG_emirate_tt
 			if = {
 				limit = {
@@ -10076,7 +10090,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = 0.1
@@ -10557,7 +10571,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = 0.1
@@ -10632,7 +10646,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = 0.1
@@ -10677,7 +10691,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = -0.1
@@ -10774,7 +10788,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = -0.1
@@ -10956,7 +10970,7 @@ focus_tree = {
 			create_faction = "Ittihad-e Islami"
 			add_ideas = AFG_peace_through_islam_idea
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_ALLIANCE }
 	}
 	focus = {
 		id = AFG_global_islamic_revolution
@@ -11026,12 +11040,12 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = AFG_pashtunism
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			add_state_core = 444
 			add_state_core = 445
 			add_state_core = 442
 			add_state_core = 410
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			custom_effect_tooltip = AFG_PSH_tt
 			hidden_effect = {
 				set_cosmetic_tag = AFG_PSH
@@ -11090,6 +11104,8 @@ focus_tree = {
 			factor = 1
 		}
 
+		will_lead_to_war_with = SOV
+
 		completion_reward = {
 			create_wargoal = {
 				type = topple_government
@@ -11147,6 +11163,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		will_lead_to_war_with = ENG
 
 		completion_reward = {
 			add_war_support = 0.05
@@ -11409,6 +11427,14 @@ focus_tree = {
 		cost = 8
 		
 		completion_reward = {
+			create_operative_leader = {
+				name = "Shir Muhammad Gazi"
+				gfx = GFX_Portrait_Operative_AsianMale2
+				traits = { operative_infiltrator operative_commando operative_escape_artist }
+				bypass_recruitment = no
+				available_to_spy_master = yes
+				nationalities = { UZB TMS BUK TAJ KYR AFG }
+			}
 			unlock_decision_category_tooltip = AFG_revive_basmachi_decision_category
 			custom_effect_tooltip = AFG_basmachi_resistance_tt
 		}
@@ -11444,7 +11470,7 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = MPL_newline
+				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
 					value = 0.15
@@ -11765,7 +11791,7 @@ focus_tree = {
 				idea = AFG_pillars_of_islam_idea
 				days = 365
 			}
-			custom_effect_tooltip = MPL_newline
+			custom_effect_tooltip = r56_newline
 			custom_effect_tooltip = AFG_unlock_jizya_tt
 			show_ideas_tooltip = AFG_fake_compulsory_jizya
 		}
@@ -11808,7 +11834,7 @@ focus_tree = {
 				country_event = generic.5
 			}
 		}
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = { FOCUS_FILTER_ALLIANCE }
 	}
 	focus = {
 		id = AFG_the_ten_lost_tribes
@@ -11856,6 +11882,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		will_lead_to_war_with = ISR
+		will_lead_to_war_with = MPL
 
 		completion_reward = {
 			if = {
@@ -11925,6 +11954,8 @@ focus_tree = {
 			factor = 1
 		}
 
+		will_lead_to_war_with = GRE
+
 		completion_reward = {
 			if = {
 				limit = {
@@ -11976,7 +12007,6 @@ focus_tree = {
 				}
 			}
 		}
-		
 
 		prerequisite = {
 			focus = AFG_tunganistan focus = AFG_pillars_of_islam
@@ -11987,6 +12017,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		will_lead_to_war_with = TUR
 
 		completion_reward = {
 			create_wargoal = {

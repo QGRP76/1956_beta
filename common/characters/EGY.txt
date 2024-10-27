@@ -132,7 +132,7 @@ characters={
 				}
 			}
 			traits = {
-				imperial_land_owner_tfv
+				imperial_land_owner
 			}
 			cost = 100
 			ai_will_do = {
@@ -221,7 +221,6 @@ characters={
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 3
-			legacy_id=6981
 		}
 	}
 	EGY_hussein_sirri_amer = { # Aristocrat
@@ -1019,7 +1018,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=centrism
+			ideology = moderate_islamism
 			traits = { religious_figure }
 			expire="1965.1.1"
 			id=-1

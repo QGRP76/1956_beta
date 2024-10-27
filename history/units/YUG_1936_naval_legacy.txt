@@ -1,5 +1,4 @@
-﻿
-units= {
+﻿units= {
 
 	##### NAVAL UNITS #####
 	###### Kraljevska Jugoslovenska Ratna Mornarica (KJRM) ######
@@ -43,59 +42,21 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = destroyer_2
-			creator = "YUG" 
-			version_name="Orjen Class"
+			creator = "YUG"
+			version_name = "Beograd Class"
 		}
+		name = "KB Beograd"
 		requested_factories = 1
-		progress = 0.85
+		progress = 0.25
 		amount = 1
 	}
 	add_equipment_production = {
 		equipment = {
 			type = destroyer_2
-			creator = "YUG" 
-			version_name="Orjen Class"
+			creator = "YUG"
+			version_name = "Beograd Class"
 		}
-		requested_factories = 1
-		progress = 0.6
-		amount = 1
-	}
-	add_equipment_production = {
-		equipment = {
-			type = destroyer_2
-			creator = "YUG" 
-			version_name="Orjen Class"
-		}
-		requested_factories = 1
-		progress = 0.6
-		amount = 1
-	}
-	add_equipment_production = {
-		equipment = {
-			type = destroyer_2
-			creator = "YUG" 
-			version_name="Orjen Class"
-		}
-		requested_factories = 1
-		progress = 0.35
-		amount = 1
-	}
-	add_equipment_production = {
-		equipment = {
-			type = destroyer_2
-			creator = "YUG" 
-			version_name="Orjen Class"
-		}
-		requested_factories = 1
-		progress = 0.35
-		amount = 1
-	}
-	add_equipment_production = {
-		equipment = {
-			type = destroyer_2
-			creator = "YUG" 
-			version_name="Orjen Class"
-		}
+		name = "KB Zagreb"
 		requested_factories = 1
 		progress = 0.15
 		amount = 1
@@ -103,22 +64,12 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = destroyer_2
-			creator = "YUG" 
-			version_name="Orjen Class"
+			creator = "YUG"
+			version_name = "Beograd Class"
 		}
+		name = "KB Ljubljana"
 		requested_factories = 1
-		progress = 0.15
-		amount = 1
-	}
-	add_equipment_production = {
-		equipment = {
-			type = destroyer_2
-			creator = "YUG" 
-			version_name="Orjen Class"
-		}
-		requested_factories = 1
-		progress = 0.15
+		progress = 0.05
 		amount = 1
 	}
 }
-

@@ -12,13 +12,10 @@ state={
 		victory_points = {
 			867 1 
 		}
-		add_core_of = ALB
+		add_core_of = YUG
 		add_core_of = MAC
-		add_claim_by = YUG
 		add_claim_by = SER
-		add_dynamic_modifier = {
-			modifier = r56_YUG_minor_serbinisation_effort
-		}
+		add_claim_by = ALB
 	}
 	manpower=242197
 	buildings_max_level_factor=1.000
