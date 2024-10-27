@@ -99,9 +99,19 @@ GZR = {
 	has_country_flag = r56_conservative_germany_aliases_set
 }
 
+GFR = {
+	original_tag = GER
+	has_country_flag = r56_fascist_germany_aliases_set
+}
+
 GCR = {
 	original_tag = GER
 	has_country_flag = r56_communist_germany_aliases_set
+}
+
+ANZ = {
+	original_tag = AUS
+	has_country_flag = r56_nazi_austria_aliases_set
 }
 
 ###Reichskommissariats###
@@ -155,7 +165,24 @@ PBM = {
 	has_country_flag = r56_CZE_reichskommissariat_i_am
 }
 
+SLW = {
+	original_tag = EIS
+	has_cosmetic_tag = SLW
+}
 
+INJ = {
+	original_tag = INS
+	has_cosmetic_tag = INJ
+}
 
+#### Romanian Civil War
+RPR = {
+	original_tag = ROM
+	has_country_flag = ROM_communist_baddies
+}
+RCW = {
+	original_tag = ROM
+	has_country_flag = ROM_annoying_coalition
+}
 
 

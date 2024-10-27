@@ -12,8 +12,9 @@ mobile_generic = {
 		SOV
 		USA
 		AOI
+		ROM
 	}
-	
+
 	roles = { mobile }
 	upgrade_prio = {
 		factor = 1
@@ -25,7 +26,7 @@ mobile_generic = {
 			factor = 0
 			AND = {
 				tag = CHI
-				date < 1941.1.1 
+				date < 1941.1.1
 			}
 		}
 	}
@@ -121,6 +122,7 @@ mobile_generic = {
 			engineer
 			anti_tank
 			anti_air
+			maintenance_company
 			logistics_company
 		}
 	}
@@ -218,6 +220,7 @@ mobile_generic = {
 			engineer
 			anti_tank
 			anti_air
+			maintenance_company
 			logistics_company
 		}
 	}
@@ -313,6 +316,7 @@ mobile_generic = {
 			engineer
 			anti_tank
 			anti_air
+			maintenance_company
 			logistics_company
 		}
 	}
@@ -402,6 +406,7 @@ mobile_generic = {
 			engineer
 			anti_tank
 			anti_air
+			maintenance_company
 			logistics_company
 		}
 	}
@@ -499,6 +504,7 @@ mobile_generic = {
 			engineer
 			anti_tank
 			anti_air
+			maintenance_company
 			logistics_company
 		}
 	}
@@ -595,6 +601,7 @@ mobile_generic = {
 			engineer
 			anti_tank
 			anti_air
+			maintenance_company
 			logistics_company
 		}
 	}

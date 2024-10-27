@@ -11,7 +11,7 @@ country_event = {
 	option = { #Remember the legacy of Sanchez Cerro
         name = peru.1.a 
           ai_chance = {
-                factor = 1
+			base = 1
             }
         add_popularity = { ideology = fascism popularity = 0.01 }
         hidden_effect = {
@@ -20,9 +20,9 @@ country_event = {
         custom_effect_tooltip = PRU_unlock_sanchez
     }
     option = { #benavies
-        name = peru.2.a 
+        name = peru.1.b
          ai_chance = {
-                factor = 1
+                base = 1
                 modifier = {
                     factor = 100
                     is_historical_focus_on = yes                   
@@ -34,9 +34,9 @@ country_event = {
         custom_effect_tooltip = PRU_unlock_benavides
     }
     option = { #democratic election
-        name = peru.3.a 
+        name = peru.1.c 
           ai_chance = {
-                factor = 1
+			base = 1
             }
         add_political_power = 10
          add_popularity = { ideology = democratic popularity = 0.01 }
@@ -48,88 +48,78 @@ country_event = {
 }
 
 country_event = {
-	id= peru.45
-	title = peru.45.t
-	desc= peru.45.d
-	picture = GFX_report_event_operatives
-	fire_only_once = yes
-	
-    is_triggered_only = yes 
-
+	id= peru.66
+	title = peru.66.t
+	desc= peru.66.d
+	picture =GFX_report_event_PRU_quechua_people
+   
+	is_triggered_only = yes 
 	option = { 
-        name = peru.45.a.1
-		PRU = { country_event = { days = 1 id = peru.46 } }	
+        name = peru.66.a 
+         ai_chance = {
+			base = 1
+            }
+         add_popularity = { ideology = fascism popularity = 0.2 }
     }
     option = { 
-        name = peru.45.a.2
-		PRU = { country_event = { days = 1 id = peru.47 } }	
+        name = peru.66.b
+         ai_chance = {
+			base = 1
+            }
+         add_popularity = { ideology = communism popularity = 0.25 }
     }
-
     option = { 
-        name = peru.45.a.3
-                add_political_power = -60
-        create_wargoal = { type = puppet_wargoal_focus target = PRU 
-			expire = 0}
-		PRU = { country_event = { days = 1 id = peru.48 } }	
+        name = peru.66.c 
+          ai_chance = {
+			base = 1
+            }
+         add_popularity = { ideology = neutrality popularity = 0.2 }
     }
-
 }
 
 country_event = {
-	id= peru.46
-	title = peru.46.t
-	desc= peru.46.d
-	picture = GFX_r56i_generic_event_08
-	fire_only_once = yes
-	
-    is_triggered_only = yes 
-
+	id= peru.67
+	title = peru.67.t
+	desc= peru.67.d
+	picture =GFX_report_event_PRU_quechua_people
+   
+	is_triggered_only = yes 
 	option = { 
-        name = peru.46.a.1
-		hidden_effect = {
-           set_country_flag = PRU_brazil_civil_war
-        }
+        name = peru.67.a 
+         ai_chance = {
+			base = 1
+            }
+				GER = {
+					annex_country = {
+						target = PRU
+						transfer_troops = yes
+					}	
+				}
+				every_state = {
+					limit = {
+						is_core_of = PRU
+					}
+					add_core_of = GER
+				}
+			
     }
-
+    option = { 
+        name = peru.67.b
+         ai_chance = {
+			base = 1
+            }
+			GER = { 
+				set_autonomy = {
+					target = PRU
+					autonomous_state = autonomy_dominion
+					freedom_level = 0.55
+				}
+			}
+			add_war_support = 0.1
+			add_political_power = 100
+    }
 }
 
-country_event = {
-	id= peru.47
-	title = peru.47.t
-	desc= peru.47.d
-	picture = GFX_r56i_generic_event_08
-	fire_only_once = yes
-	
-    is_triggered_only = yes 
-
-	option = { 
-        name = peru.47.a.1
-		hidden_effect = {
-           set_country_flag = PRU_brazil_peace
-        }
-    }
-
-}
-
-country_event = {
-	id= peru.48
-	title = peru.48.t
-	desc= peru.48.d
-	picture = GFX_r56i_generic_event_08
-	fire_only_once = yes
-	
-    is_triggered_only = yes 
-
-	option = { 
-        name = peru.48.a.1
-
-        
-		hidden_effect = {
-           set_country_flag = PRU_brazil_war
-        }
-    }
-
-}
 
 
 country_event = {
@@ -144,7 +134,7 @@ country_event = {
 		division_template = { 
 			name = "Milicias" 
 			division_names_group = SPAN_INF_02 
-			is_locked = yes 
+			is_locked = no 
 			regiments = { 
 				infantry = { x = 0 y = 0 }  
 				infantry = { x = 0 y = 1 } 
@@ -155,9 +145,8 @@ country_event = {
 	}
 
 	option = { 
-        name = peru.49.a.1
+        name = peru.49.a
 		start_civil_war = {
-			ruling_party = ROOT 
 			ideology = neutrality
 			size = 0.4
             capital = 303
@@ -166,7 +155,10 @@ country_event = {
 		}
 		hidden_effect = {
             
-            
+			
+			set_country_flag = PRU_INC_generals
+			
+
 			every_controlled_state = {
 				create_unit = {
 					division = "name = \"Awqaq Runa\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
@@ -185,6 +177,10 @@ country_event = {
 					owner = ROOT
 				}
                 create_unit = {
+					division = "name = \"Awqaq Runa\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
+				create_unit = {
 					division = "name = \"Awqaq Runa\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
 					owner = ROOT
 				}
@@ -207,10 +203,6 @@ country_event = {
 		        promote_character = PRU_junta_militar
               add_popularity = { ideology = neutrality popularity = 0.15 }
 				every_controlled_state = {
-					create_unit = {
-						division = "name = \"Milicias Militares\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
-						owner = PREV
-					}
 					create_unit = {
 						division = "name = \"Milicias Militares\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
 						owner = PREV
@@ -238,7 +230,7 @@ country_event = {
 		division_template = { 
 			name = "Milicias" 
 			division_names_group = SPAN_INF_02 
-			is_locked = yes 
+			is_locked = no  
 			regiments = { 
 				infantry = { x = 0 y = 0 }  
 				infantry = { x = 0 y = 1 } 
@@ -249,13 +241,12 @@ country_event = {
 	}
 
 	option = { 
-        name = peru.50.a.1
+        name = peru.50.a
 		start_civil_war = {
-			ruling_party = ROOT 
 			ideology = neutrality
 			size = 0.4
             capital = 492
-			states = {492 491 494}
+			states = {492 491 494 1061}
 			set_country_flag = PRU_republic_force
 		}
 		hidden_effect = {
@@ -279,6 +270,10 @@ country_event = {
 					owner = ROOT
 				}
                 create_unit = {
+					division = "name = \"Milicia Real\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
+				create_unit = {
 					division = "name = \"Milicia Real\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
 					owner = ROOT
 				}
@@ -307,10 +302,7 @@ country_event = {
 						division = "name = \"Milicias Republicana\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
 						owner = PREV
 					}
-					create_unit = {
-						division = "name = \"Milicias Republicana\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
-						owner = PREV
-					}
+				
                     create_unit = {
 						division = "name = \"Milicias Aprista\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
 						owner = PREV
@@ -334,7 +326,7 @@ country_event = {
 		division_template = { 
 			name = "Milicias" 
 			division_names_group = SPAN_INF_02 
-			is_locked = yes 
+			is_locked = no 
 			regiments = { 
 				infantry = { x = 0 y = 0 }  
 				infantry = { x = 0 y = 1 } 
@@ -345,13 +337,12 @@ country_event = {
 	}
 
 	option = { 
-        name = peru.51.a.1
-		start_civil_war = {
-			ruling_party = ROOT 
+        name = peru.51.a
+		start_civil_war = { 
 			ideology = neutrality
 			size = 0.4
             capital = 492
-			states = {492 491 494}
+			states = {492 491 494 1061}
 			set_country_flag = PRU_republic_force
 		}
 		hidden_effect = {
@@ -375,6 +366,10 @@ country_event = {
 					owner = ROOT
 				}
                 create_unit = {
+					division = "name = \"Milicia Real\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
+				create_unit = {
 					division = "name = \"Milicia Real\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
 					owner = ROOT
 				}
@@ -404,10 +399,6 @@ country_event = {
 						division = "name = \"Milicias Republicana\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
 						owner = PREV
 					}
-					create_unit = {
-						division = "name = \"Milicias Republicana\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
-						owner = PREV
-					}
                     create_unit = {
 						division = "name = \"Milicias Aprista\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
 						owner = PREV
@@ -420,6 +411,381 @@ country_event = {
 }
 
 
+country_event = {
+	id= peru.52
+	title = peru.52.t
+	desc= peru.52.d
+	picture = GFX_report_event_PRU_rally
+   
+	fire_only_once = yes
+	trigger = {
+        original_tag = GER 
+        has_civil_war = no 
+        exists = yes 
+		GER = {    
+			has_civil_war = no 
+			exists = yes 
+			OR = {    
+			    has_completed_focus = GER_revive_the_kaiserreich
+				has_completed_focus = GER_a_new_reich
+			}
+        }
+        PRU = {    
+			has_civil_war = no 
+			exists = yes 
+            has_completed_focus = PRU_crown_an_inca
+        }
+    }
+	mean_time_to_happen = {
+		days = 100			#don't check it every day
+	}
+	option = { 
+        name = peru.52.a 
+        PRU = { country_event = { days = 2 id = peru.53 } }	
+		add_opinion_modifier = { target = PRU modifier = large_increase }
+		PRU = {
+			add_opinion_modifier = { target = ROOT modifier = large_increase }
+		}	
+    }
+	option = { 
+        name = peru.52.b
+    }
+}
+
+country_event = {
+	id= peru.53
+	title = peru.53.t
+	desc= peru.53.d
+	picture = GFX_r56i_generic_event_08
+   
+	is_triggered_only = yes 
+	option = { 
+        name = peru.53.a 
+		PRU = { country_event = { days = 35 id = peru.54 } }	
+		add_opinion_modifier = { target = GER modifier = large_increase }
+		GER = {
+			add_opinion_modifier = { target = ROOT modifier = large_increase }
+		}	
+    }
+
+}
+
+country_event = {
+	id= peru.54
+	title = peru.54.t
+	desc= peru.54.d
+	picture =GFX_report_event_PRU_quechua_people
+   
+	is_triggered_only = yes 
+	option = { 
+        name = peru.54.a 
+		PRU = { country_event = { days = 35 id = peru.55 } }	
+    }
+
+	option = { 
+        name = peru.54.b
+        GER = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = medium_decrease
+			}
+		}
+    }
+}
+
+country_event = {
+	id= peru.55
+	title = peru.55.t
+	desc= peru.55.d
+	picture =GFX_report_event_PRU_quechua_people
+   
+	is_triggered_only = yes 
+
+	option = { 
+        name = peru.55.a 
+		start_civil_war = {
+			ideology = neutrality
+			size = 0.5
+			set_country_flag = PRU_republic_force
+		}
+		set_cosmetic_tag = INC_KR
+		set_party_name = { ideology = neutrality long_name = "Party of InkaReich" name = "Party of Reich" }
+		add_country_leader_role = {
+		character = PRU_Carlos_Francisco
+			promote_leader = yes
+			country_leader = {
+				ideology = absolute_monarchism
+				expire = "1965.1.1.1"
+				traits = {
+					EGY_the_young_king 
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = PRU_inkareich
+            mark_focus_tree_layout_dirty = yes	#seemt to be missing, and required to reload and show the secret branch unlocked above
+			every_controlled_state = {
+				create_unit = {
+					division = "name = \"Awqaq Runa\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
+                create_unit = {
+					division = "name = \"Awqaq Runa\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
+                create_unit = {
+					division = "name = \"Awqaq Runa\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
+                create_unit = {
+					division = "name = \"Awqaq Runa\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
+                    
+			}
+              
+			random_other_country = {
+				limit = {
+					original_tag = PRU 
+					has_civil_war = yes 
+					has_government = neutrality
+					has_country_flag = PRU_republic_force
+				}
+				set_cosmetic_tag = INC
+				add_country_leader_role = {
+					character = PRU_bustamante_y_rivero
+					promote_leader = yes
+					country_leader = {
+						  ideology = absolute_monarchism
+						expire = "1965.1.1.1"
+						traits = {
+							r56_trait_opposed_to_communism
+							son_of_the_sun
+						}
+					}
+				}
+              	add_popularity = { ideology = neutrality popularity = 0.15 }
+				every_controlled_state = {
+
+					create_unit = {
+						division = "name = \"Milicias Incas leales\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+						owner = PREV
+					}
+				}
+			}
+		}
+    }
+
+}
+
+#quechua problem
+country_event = {
+	id= peru.56
+	title = peru.56.t
+	desc= peru.56.d
+	picture =GFX_report_event_PRU_quechua_people
+   
+	is_triggered_only = yes 
+	option = { 
+        name = peru.56.a.1 
+		set_variable = { PRU_que_loyalty = 2 }
+		PRU_partidos_update_update_effect = yes
+		custom_effect_tooltip = PRU_que_loyalty_marina_status_text
+    }
+
+	option = { 
+        name = peru.56.a.2
+        set_variable = { PRU_que_loyalty = 1 }
+		PRU_partidos_update_update_effect = yes
+		custom_effect_tooltip = PRU_que_loyalty_ejercito_status_text
+    }
+}
+
+
+#who can help us ?
+country_event = {
+	id= peru.57
+	title = peru.57.t
+	desc= peru.57.d
+	picture = GFX_report_event_PRU_protests_in_capital
+   
+	is_triggered_only = yes 
+	option = { 
+        name = peru.57.a.1 
+		custom_effect_tooltip = PRU_unlock_friend_apra
+		custom_effect_tooltip = PRU_ur_loyalty_hostile_status_text
+		set_variable = { PRU_apra_loyalty = -2 }
+		PRU = {
+			set_country_flag = PRU_apra_be_friend
+		   set_country_flag = PRU_ur_exclu 
+	     }
+		
+		PRU_partidos_update_update_effect = yes
+    }
+
+	option = { 
+        name = peru.57.a.2
+		custom_effect_tooltip = PRU_unlock_friend_ur
+		custom_effect_tooltip = PRU_apra_loyalty_hostile_status_text
+		set_variable = { PRU_ur_loyalty = -2 }
+		
+        PRU = {
+			set_country_flag = PRU_ur_be_friend
+		set_country_flag = PRU_apra_exclu
+	     }
+		
+		PRU_partidos_update_update_effect = yes
+    }
+}
+
+
+#Flores' requests
+country_event = {
+	id= peru.58
+	title = peru.58.t
+	desc= peru.58.d
+	picture = GFX_report_event_PRU_rally
+   
+	is_triggered_only = yes 
+	option = { 
+        name = peru.58.a.1 
+		custom_effect_tooltip = PRU_ur_loyalty_our_status_text	
+		set_variable = { PRU_ur_loyalty = -1 }
+		PRU= { 
+			set_country_flag = PRU_ur_be_friend
+		  }
+		PRU_partidos_update_update_effect = yes
+        add_political_power = -100
+    }
+
+	option = { 
+        name = peru.58.a.2
+	    add_stability= -0.05
+		add_political_power = 70
+    }
+}
+
+
+#help
+country_event = {
+	id= peru.59
+	title = peru.59.t
+	desc= peru.59.d
+	picture = GFX_report_event_PRU_rally
+   
+	is_triggered_only = yes 
+	option = { 
+        name = peru.59.a.1 
+		custom_effect_tooltip = PRU_oli_loyalty_hostile_status_text
+		custom_effect_tooltip = PRU_que_loyalty_our_status_text	
+		set_variable = { PRU_que_loyalty = -1 }
+		set_variable = { PRU_oli_loyalty = -2 }
+		PRU_partidos_update_update_effect = yes
+		PRU = { 
+			set_country_flag = PRU_oli_exclu
+			set_country_flag = PRU_que_be_friend
+		}
+		remove_ideas = PRU_peru_falangism
+		remove_ideas = PRU_incaism_idea_1
+		add_ideas = PRU_incaism_idea_2
+		add_political_power = -70
+    }
+
+	option = { 
+        name = peru.59.a.2
+		custom_effect_tooltip = PRU_que_loyalty_hostile_status_text
+		custom_effect_tooltip = PRU_oli_loyalty_our_status_text	
+		set_variable = { PRU_oli_loyalty = -1 }
+		set_variable = { PRU_que_loyalty = -2 }
+		PRU_partidos_update_update_effect = yes
+		PRU = { 
+			set_country_flag = PRU_que_exclu
+			set_country_flag = PRU_oli_be_friend
+		}
+		remove_ideas = PRU_peru_falangism
+		remove_ideas = PRU_incaism_idea_1
+		add_ideas = PRU_peru_falangism_1
+		add_political_power = -70
+    }
+
+	option = { 
+        name = peru.59.a.3
+		add_stability= 0.1
+		remove_ideas = PRU_peru_falangism
+		remove_ideas = PRU_incaism_idea_1
+		add_ideas = PRU_a_new_pride
+		add_political_power = 150
+    }
+}
+
+
+#ejercito loyalty
+country_event = {
+	id= peru.60
+	title = peru.60.t
+	desc= peru.60.d
+	picture = GFX_report_event_PRU_benavides_funeral
+   
+	is_triggered_only = yes 
+	option = { 
+        name = peru.60.a.1 
+		custom_effect_tooltip = PRU_ur_loyalty_ejercito_status_text
+		custom_effect_tooltip = PRU_apra_loyalty_ejercito_status_text
+		custom_effect_tooltip = PRU_que_loyalty_ejercito_status_text
+		set_variable = { PRU_ur_loyalty = 1 }
+        set_variable = { PRU_apra_loyalty = 1 }
+		set_variable = { PRU_que_loyalty = 1 }
+		PRU_partidos_update_update_effect = yes
+    }
+
+}
+
+#help2
+country_event = {
+	id= peru.61
+	title = peru.61.t
+	desc= peru.61.d
+	picture = GFX_report_event_PRU_benavides_funeral
+   
+	is_triggered_only = yes 
+	option = { 
+        name = peru.61.a.1 
+		custom_effect_tooltip = PRU_oli_loyalty_hostile_status_text
+		custom_effect_tooltip = PRU_ur_loyalty_our_status_text	
+		set_variable = { PRU_ur_loyalty = -1 }
+		set_variable = { PRU_oli_loyalty = -2 }
+		PRU = {
+			set_country_flag = PRU_oli_exclu
+			set_country_flag = PRU_ur_be_friend
+			}
+		
+		add_political_power = -70
+		PRU_partidos_update_update_effect = yes
+    }
+
+	option = { 
+        name = peru.61.a.2
+		custom_effect_tooltip = PRU_ur_loyalty_hostile_status_text
+		custom_effect_tooltip = PRU_oli_loyalty_our_status_text	
+		set_variable = { PRU_oli_loyalty = -1 }
+		set_variable = { PRU_ur_loyalty = -2 }
+		
+		PRU = {
+			set_country_flag = PRU_ur_exclu
+			set_country_flag = PRU_oli_be_friend
+			}
+		add_political_power = -70
+		PRU_partidos_update_update_effect = yes
+    }
+
+	option = { 
+        name = peru.61.a.3
+		add_stability= 0.05
+		add_political_power = 100
+    }
+}
+
+
 #end radicalism
 country_event = {
 	id= peru.10
@@ -429,7 +795,7 @@ country_event = {
    
 	is_triggered_only = yes 
 	option = { #we will not let them crush the feeling of the people
-        name = peru.10.a.1 
+        name = peru.10.a 
     }
 }
 
@@ -442,7 +808,7 @@ country_event = {
    
 	is_triggered_only = yes 
 	option = { #we must prepare for the fascist horde
-        name = peru.11.a.1 
+        name = peru.11.a 
     }
 }
 
@@ -455,7 +821,7 @@ country_event = {
    
 	is_triggered_only = yes 
 	option = { ##Let's apply an economic sanction
-        name = peru.20.a.1 
+        name = peru.20.a 
          PRU = { 
             add_timed_idea = { 
 				idea = PRU_economic_santions_i
@@ -467,7 +833,7 @@ country_event = {
     }
 
     option = { ##It is the right of Peruvians
-        name = peru.20.a.2 
+        name = peru.20.b 
     }
 }
 
@@ -481,7 +847,7 @@ country_event = {
 	is_triggered_only = yes 
 
     option = { #We will continue with our work
-        name = peru.21.a.1 
+        name = peru.21.a 
     }
 }
 
@@ -495,7 +861,7 @@ country_event = {
 	is_triggered_only = yes 
 
     option = { #We will continue with our work
-        name = peru.22.a.1 
+        name = peru.22.a 
     }
 }
 
@@ -509,7 +875,7 @@ country_event = {
 	is_triggered_only = yes 
 
     option = { #We will continue with our work
-        name = peru.23.a.1 
+        name = peru.23.a 
     }
 }
 
@@ -523,12 +889,25 @@ country_event = {
 	is_triggered_only = yes 
 
     option = { #The Aprista party should be banned
-        name = peru.24.a.1 
+        name = peru.24.a 
+
         add_ideas = PRU_oppresed_apristas
+		custom_effect_tooltip = PRU_unlock_exclu_apra
+		       PRU= { 
+			   set_country_flag = PRU_apra_exclu
+		       }
+        
     }
      option = { #We have no other option than to work together with the Apristas
-        name = peru.24.a.2 
+        name = peru.24.b 
+
         add_ideas = PRU_friend_aprac
+        custom_effect_tooltip = PRU_apra_loyalty_our_status_text
+		set_variable = { PRU_apra_loyalty = -1 }
+		PRU= { 
+			set_country_flag = PRU_apra_be_friend
+			}
+		PRU_partidos_update_update_effect = yes
     }
 }
 
@@ -542,7 +921,7 @@ country_event = {
 	 trigger = {
        
         original_tag = PRU 
-        date > 1939.5.1
+        date > 1939.3.1
         has_civil_war = no 
         exists = yes 
         PRU = {    
@@ -556,69 +935,62 @@ country_event = {
           }
     }
 	mean_time_to_happen = {
-		days = 10
+		days = 60				#1939 can get a better timer
 	}
 	
     option = { #Prado Ugarteche
-        name = peru.27.a.2 
+        name = peru.27.b 
          ai_chance = {
-                factor = 1
-                modifier = {
-                    factor = 100
-                            is_historical_focus_on = yes                   
-                }
-            }
-    set_politics = {
+			base = 1
+			modifier = {
+				factor = 100
+						is_historical_focus_on = yes                   
+			}
+        }
+    	set_politics = {
 			ruling_party = democratic
 		}
 		add_stability = 0.01
 		add_popularity = { ideology = democratic popularity = 0.08 }
-        hidden_effect = {
-            
-        }
     }
    option = { #Jose Quesada Larrea
-        name = peru.27.a.1 
-         ai_chance = {
-                factor = 1
-            }
-         add_popularity = { ideology = neutrality popularity = 0.1 }
+        name = peru.27.a 
+		ai_chance = {
+			base = 1
+		}
+        add_popularity = { ideology = neutrality popularity = 0.1 }
 		set_politics = {
 			ruling_party = neutrality
 		}
         set_party_name = { ideology = neutrality long_name = "Frente Patriotico" name = "FP" }
         add_country_leader_role = {
-                character = PRU_jose_quesada
-                promote_leader = yes
-                country_leader = {
-                    ideology = despotism
-                    expire = "1945.1.1.12"
-                    traits = {
-                       staunch_constitutionalist  nationalist_symbol
-                    }
-                }
-            }
+			character = PRU_jose_quesada
+			promote_leader = yes
+			country_leader = {
+				ideology = despotism
+				expire = "1945.1.1.12"
+				traits = {
+					staunch_constitutionalist  nationalist_symbol
+				}
+			}
+		}
         retire_character = PRU_gobierno_provicional
 		retire_character = PRU_oscar_benavides
-        hidden_effect = {
-           
-        }
-       
     }
 } 
 
 
 #election of 1945
 country_event = {
-	id= peru.25
-	title = peru.25.t
-	desc= peru.25.d
+	id= peru.65
+	title = peru.65.t
+	desc= peru.65.d
 	picture =GFX_report_event_PRU_elections_1936
     fire_only_once = yes
 	 trigger = {
-        
+       
         original_tag = PRU 
-        date > 1945.5.1
+        date > 1945.3.1
         has_civil_war = no 
         exists = yes 
         PRU = {    
@@ -631,63 +1003,63 @@ country_event = {
             }
           }
     }
-	mean_time_to_happen = {
-		days = 10
-	}
-	option = { #Bustamante y rivero
-        name = peru.25.a.1
+	
+    option = { #Jose Bustamante y Rivero
+        name = peru.27.b 
          ai_chance = {
-                factor = 1
-                modifier = {
-                    factor = 100
-                            is_historical_focus_on = yes                   
-                }
-            }
-        retire_character = PRU_manuel_prado_ugarteche
-        retire_character = PRU_luis_eguiguren
-        set_politics = {
+			base = 1
+			modifier = {
+				factor = 100
+						is_historical_focus_on = yes                   
+			}
+        }
+    	 set_politics = {
 			ruling_party = democratic
 		}
-       	set_party_name = { ideology = democratic long_name = "Frente Democratico Nacional" name = "FDN" }
 		add_country_leader_role = {
 			character = PRU_bustamante_y_rivero_presidente
 			promote_leader = yes
 			country_leader = {
-				ideology = conservatism
-				expire = "1965.1.1.1"
+				ideology = centrism_democratic
+				expire = "1943.1.1.12"
 				traits = {
-                   conservative_grandee
+					democratic_socialist 
 				}
 			}
 		}
+		add_stability = 0.01
+		set_party_name = {
+			ideology = democratic
+			long_name = PRU_democratic_party_long_6
+			name = PRU_democratic_party_6
+		}
+		add_popularity = { ideology = democratic popularity = 0.08 }
     }
-    option = { #Ureta
-        name = peru.25.a.2 
-         ai_chance = {
-                factor = 1
-            }
-        retire_character = PRU_manuel_villaran
-        retire_character = PRU_oscar_benavides
-        set_politics = {
+   option = { #Eloy Ureta
+        name = peru.27.a 
+		ai_chance = {
+			base = 1
+		}
+        add_popularity = { ideology = neutrality popularity = 0.1 }
+		set_politics = {
 			ruling_party = neutrality
 		}
         set_party_name = { ideology = neutrality long_name = "Frente Patriotico" name = "FP" }
-		add_country_leader_role = {
+        add_country_leader_role = {
 			character = PRU_eloy_ureta_montehermoso
 			promote_leader = yes
 			country_leader = {
 				ideology = despotism
-				expire = "1965.1.1.1"
+				expire = "1945.1.1.12"
 				traits = {
-                   army_connections r56_trait_opposed_to_communism
+					staunch_constitutionalist  PRU_peruvian_marshal
 				}
 			}
 		}
+        retire_character = PRU_gobierno_provicional
+		retire_character = PRU_oscar_benavides
     }
-
 }
-
-
 
 #Revolucion Restauradora
 country_event = {
@@ -697,28 +1069,20 @@ country_event = {
 	picture =GFX_report_event_PRU_de_gobierno_palace
     fire_only_once = yes
 	 trigger = {
-        original_tag = PRU 
-        
-        date > 1948.9.1
+        original_tag = PRU
+        date > 1947.9.1
         has_civil_war = no 
         exists = yes 
         PRU = {    
-            has_country_flag =PRU_election_1945
-           has_government = democratic
-          }
+			has_country_flag = PRU_election_1945
+			has_government = democratic
+		}
     }
 	mean_time_to_happen = {
-		days = 10
+		days = 365				#1947 event...	
 	}
 	option = { #viva el peru 
-        name = peru.26.a.1
-         ai_chance = {
-                factor = 1
-                modifier = {
-                    factor = 100
-                            is_historical_focus_on = yes                   
-                }
-            }
+        name = peru.26.a
         retire_character = PRU_manuel_villaran
         retire_character = PRU_oscar_benavides
         set_politics = {
@@ -743,7 +1107,7 @@ country_event = {
    
 	is_triggered_only = yes 
 	option = { #we must prepare for the communist horde
-        name = peru.19.a.1 
+        name = peru.19.a 
     }
 }
 
@@ -756,7 +1120,7 @@ country_event = {
    
 	is_triggered_only = yes 
 	option = { #A great victory for our politicians
-        name = peru.12.a.1 
+        name = peru.12.a 
     }
 }
 
@@ -769,7 +1133,7 @@ country_event = {
    
 	is_triggered_only = yes 
 	option = { #The corrupt government of the leader allowed this
-        name = peru.13.a.1 
+        name = peru.13.a 
     }
 }
 
@@ -782,7 +1146,7 @@ country_event = {
    
 	is_triggered_only = yes 
 	option = { #A great victory for our politicians
-        name = peru.14.a.1 
+        name = peru.14.a 
     }
 }
 
@@ -797,7 +1161,7 @@ country_event = {
    
 	is_triggered_only = yes 
 	option = { #The corrupt government of the leader allowed this
-        name = peru.15.a.1 
+        name = peru.15.a 
     }
 }
 
@@ -810,7 +1174,7 @@ country_event = {
    
 	is_triggered_only = yes 
 	option = { #Haya de la Torre
-        name = peru.16.a.1 
+        name = peru.16.a 
         set_politics = {
 			ruling_party = communism
 		}
@@ -818,25 +1182,20 @@ country_event = {
 			ideology = communism
 			long_name = PRU_communism_party_long_1
 			name = PRU_communism_party_1
-		  }
+		}
 		retire_character = PRU_eudocio_revines_perez
 		promote_character = PRU_haya_torre
+		
         add_popularity = { ideology = communism popularity = 0.15 }
 		add_stability = 0.05
-        hidden_effect = {
-           
-        }
     }
     option = { #Ravines
-        name = peru.16.a.2 
+        name = peru.16.b 
         set_politics = {
 			ruling_party = communism
 		}
         add_popularity = { ideology = communism popularity = 0.15 }
 		add_stability = 0.05
-        hidden_effect = {
-
-        }
     }
 }
 
@@ -849,33 +1208,32 @@ country_event = {
    
 	is_triggered_only = yes 
 	option = { #Eloy Ureta
-        name = peru.17.a.1 
+	    name = peru.17.a 
         set_politics = {
-			ruling_party = Fascism
+			ruling_party = fascism
 		}
 		retire_character = PRU_luis_alberto_flores
 		add_country_leader_role = {
-                character = PRU_eloy_ureta_montehermoso
-                promote_leader = yes
-                country_leader = {
-                    ideology = falangism
-                    expire = "1965.1.1.1"
-                    traits = {
-                       army_connections r56_trait_opposed_to_communism
-                    }
-                }
-            }
-         add_popularity = {
-            ideology = fascism
-            popularity = 0.05
-         }
-        add_stability = 0.10
-        hidden_effect = {
-            
+
+            character = PRU_eloy_ureta_montehermoso
+			promote_leader = yes
+			country_leader = {
+				ideology = falangism
+				expire = "1965.1.1.1"
+				traits = {
+					PRU_peruvian_marshal r56_trait_opposed_to_communism
+				}
+			}
+
         }
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+        add_stability = 0.10
     }
     option = { #Alberto Flores
-        name = peru.17.a.2 
+         name = peru.17.b 
         set_politics = {
 			ruling_party = Fascism
 		}
@@ -884,9 +1242,7 @@ country_event = {
 			popularity = 0.1
 		}
 		add_war_support = 0.10
-        hidden_effect = {
-           
-        }
+
     }
 }
 
@@ -899,27 +1255,27 @@ country_event = {
    
 	is_triggered_only = yes 
 	option = { #Ernesto Montagne
-        name = peru.18.a.1 
+        name = peru.18.a 
         set_party_name = {
 			ideology = neutrality
 			long_name = PRU_neutrality_party_long_1
 			name = PRU_neutrality_party_1
-		  }
-		  retire_character = PRU_oscar_benavides
-		  promote_character = PRU_ernesto_montagne_markholz
-        hidden_effect = {
+		}
+		retire_character = PRU_oscar_benavides
+		promote_character = PRU_ernesto_montagne_markholz
+		hidden_effect = {
             set_country_flag = PRU_chose_montagne
         }
     }
     option = { #Ricardo Perez Godoy
-        name = peru.18.a.2 
+        name = peru.18.b 
         set_party_name = {
 			ideology = neutrality
 			long_name = PRU_neutrality_party_long_1
 			name = PRU_neutrality_party_1
-		  }
-		  retire_character = PRU_oscar_benavides
-		  promote_character = PRU_velasco_alvarado
+		}
+		retire_character = PRU_oscar_benavides
+		promote_character = PRU_velasco_alvarado
         hidden_effect = {
             set_country_flag = PRU_chose_velasco
         }
@@ -934,113 +1290,107 @@ country_event = {
 	picture =GFX_report_event_PRU_elections_1936
    
 	is_triggered_only = yes 
-	option = { #conservative coalition victory
-        name = peru.1.a.1 
+	option = { #frente de derecha
+        name = peru.2.a 
         set_politics = {
 			ruling_party = democratic
 		}
+		add_country_leader_role = {
+			character = PRU_jorge_prado_ugarteche
+			promote_leader = yes
+			country_leader = {
+				ideology = conservatism
+				expire = "1943.1.1.12"
+				traits = {
+					ARG_conservative_traditionalist captain_of_industry
+				}
+			}
+		}
 		add_stability = 0.01
+		set_party_name = {
+			ideology = democratic
+			long_name = PRU_democratic_party_long_5
+			name = PRU_democratic_party_5
+		}
 		add_popularity = { ideology = democratic popularity = 0.08 }
         effect_tooltip = {
             complete_national_focus  = PRU_conservative_coalition
         }
-        hidden_effect = {
-            
-        }
     }
     option = { #victory of the social democrats
-        name = peru.2.a.1 
+        name = peru.2.b 
         add_popularity = { ideology = democratic popularity = 0.08 }
 		set_politics = {
 			ruling_party = democratic
 		}
-         add_country_leader_role = {
-                character = PRU_luis_eguiguren
-                promote_leader = yes
-                country_leader = {
-                    ideology = socialism
-                    expire = "1943.1.1.12"
-                    traits = {
-                       democratic_socialist captain_of_industry
-                    }
-                }
-            }
+		add_country_leader_role = {
+			character = PRU_luis_eguiguren
+			promote_leader = yes
+			country_leader = {
+				ideology = socialism
+				expire = "1943.1.1.12"
+				traits = {
+					democratic_socialist captain_of_industry
+				}
+			}
+		}
 		set_party_name = {
 			ideology = democratic
 			long_name = PRU_democratic_party_long_1
 			name = PRU_democratic_party_1
-		  }
+		}
 		retire_character = PRU_manuel_prado_ugarteche
-
-
-
         effect_tooltip = {
             complete_national_focus  = PRU_social_democratic_coalition
         }
-
-        hidden_effect = {
-            
-        }
     }
      option = { #victory of Accion Republicana
-        name = peru.3.a.1 
+        name = peru.2.c
         add_popularity = { ideology = neutrality popularity = 0.1 }
 		set_politics = {
 			ruling_party = neutrality
 		}
         add_country_leader_role = {
-                character = PRU_manuel_villaran
-                promote_leader = yes
-                country_leader = {
-                    ideology = despotism
-                    expire = "1943.1.1.12"
-                    traits = {
-                       staunch_constitutionalist the_gentleman_president
-                    }
-                }
-            }
+			character = PRU_manuel_villaran
+			promote_leader = yes
+			country_leader = {
+				ideology = oligarchism
+				expire = "1943.1.1.12"
+				traits = {
+					staunch_constitutionalist the_gentleman_president
+				}
+			}
+		}
 		set_party_name = {
 			ideology = neutrality
 			long_name = PRU_democratic_party_long_3
 			name = PRU_democratic_party_3
-		  }
+		}
 		retire_character = PRU_oscar_benavides
-        effect_tooltip = {
-            complete_national_focus  = PRU_Alianza_Accion_Republicana
-        }
-        hidden_effect = {
-           
-        }
     }
      option = { #victory of Frente Patriotico
-        name = peru.4.a.12 
+        name = peru.2.dw
         add_popularity = { ideology = communism popularity = 0.1 }
 		set_politics = {
 			ruling_party = communism
 		}
         add_country_leader_role = {
-                character = PRU_arturo_peralta
-                promote_leader = yes
-                country_leader = {
-                    ideology = leninism
-                    expire = "1943.1.1.12"
-                    traits = {
-                      permanent_revolutionary protector_of_the_campesinos
-                    }
-                }
-            }
+			character = PRU_arturo_peralta
+			promote_leader = yes
+			country_leader = {
+				ideology = democratic_socialism
+				expire = "1943.1.1.12"
+				traits = {
+					permanent_revolutionary protector_of_the_campesinos
+				}
+			}
+		}
 		set_party_name = {
 			ideology = communism
 			long_name = PRU_democratic_party_long_4
 			name = PRU_democratic_party_4
-		  }
+		}
 		retire_character =PRU_eudocio_revines_perez
-        effect_tooltip = {
-            complete_national_focus = PRU_frente_patriotico
-        }
-        hidden_effect = {
-            
-        }
     }
 }
 
@@ -1054,41 +1404,40 @@ country_event = {
 	is_triggered_only = yes 
     immediate = {
         ECU = {
-		division_template = { 
-			name = "Reserva" 
-			division_names_group = SPAN_INF_02 
-			is_locked = yes 
-			regiments = { 
-				infantry = { x = 0 y = 0 }  
-				infantry = { x = 0 y = 1 } 
-				infantry = { x = 0 y = 2 } 
-				infantry = { x = 0 y = 3 } 
+			division_template = { 
+				name = "Reserva" 
+				division_names_group = SPAN_INF_02 
+				is_locked = yes 
+				regiments = { 
+					infantry = { x = 0 y = 0 }  
+					infantry = { x = 0 y = 1 } 
+					infantry = { x = 0 y = 2 } 
+					infantry = { x = 0 y = 3 } 
+				}
 			}
-		}
-       }
-       
+       	}
 	}
      option = { # 3 more years with Benavides
-        name = peru.3.a.2 
-          ai_chance = {
-                factor = 1
-                modifier = {
-                    factor = 100
-                            is_historical_focus_on = yes                   
-                }
-            }
-         hidden_effect = {
+        name = peru.3.b 
+        ai_chance = {
+			base = 1
+			modifier = {
+				factor = 100
+						is_historical_focus_on = yes                   
+			}
+		}
+        hidden_effect = {
             set_country_flag = PRU_election_1939
             set_country_flag = PRU_election_1945
             set_country_flag = PRU_benavides_democracy
         }
-         add_stability = -0.05
+        add_stability = -0.05
     }
     option = { # use war to unite all Peruvians
-        name = peru.2.a.2 
-          ai_chance = {
-                factor = 1
-            }
+        name = peru.2.bpw 
+		ai_chance = {
+			base = 1
+		}
         custom_effect_tooltip = to_war
         declare_war_on = {
             type = take_state_focus
@@ -1113,9 +1462,9 @@ country_event = {
         }
     }
      option = { # The revolution will save Peru
-        name = peru.3.a.3 
+        name = peru.3.c 
           ai_chance = {
-                factor = 1
+			base = 1
             }
        start_civil_war = {
 			ruling_party = communism
@@ -1125,24 +1474,23 @@ country_event = {
 		hidden_effect = {
             set_country_flag = PRU_cancellation_of_elections
             division_template = { 
-			name = "Milicias" 
-			division_names_group = SPAN_INF_02 
-			is_locked = yes 
-			regiments = { 
-				infantry = { x = 0 y = 0 }  
-				infantry = { x = 0 y = 1 } 
-				infantry = { x = 0 y = 2 } 
-				infantry = { x = 0 y = 3 } 
+				name = "Milicias" 
+				division_names_group = SPAN_INF_02 
+				is_locked = no
+				regiments = { 
+					infantry = { x = 0 y = 0 }  
+					infantry = { x = 0 y = 1 } 
+					infantry = { x = 0 y = 2 } 
+					infantry = { x = 0 y = 3 } 
+				}
 			}
-		}
-        news_event = { id =r56.news_event.2012 hours = 6 }
-        every_controlled_state = {
-			create_unit = {
-				division = "name = \"Milicias Communistas\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
-				owner = ROOT
+			news_event = { id =r56.news_event.2012 hours = 6 }
+			every_controlled_state = {
+				create_unit = {
+					division = "name = \"Milicias Communistas\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
 			}
-		
-            }
 			if = {
 				limit = {
 					has_war_with = ECU 
@@ -1156,15 +1504,15 @@ country_event = {
 					has_government = neutrality
 				}
                 every_controlled_state = {
-				create_unit = {
-					division = "name = \"Milicias leales\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
-					owner = PREV
-				}
-                create_unit = {
-					division = "name = \"Milicias leales\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
-					owner = PREV
-				}
-            }
+					create_unit = {
+						division = "name = \"Milicias leales\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Milicias leales\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+						owner = PREV
+					}
+            	}
 			}
 		}
     }
@@ -1178,7 +1526,7 @@ country_event = {
 	picture =GFX_report_event_PRU_benavides_funeral
 	is_triggered_only = yes 
 	option = { #Una lastima...
-        name = peru.4.a.1 
+        name = peru.4.a 
     }
 }
 
@@ -1192,39 +1540,38 @@ country_event = {
     is_triggered_only = yes 
    
 	option = { #Never
-        name = peru.5.a.1
-      
-            PRU= { 
-                declare_war_on  = {
-                    type = take_state_focus
-                    target = ECU
-                }
-                country_event = { id =peru.13 hours = 4 }
-            }
-            
-        
-        ECU = { add_war_support =0.05
-           
-             }
-             PRU= { 
-                set_country_flag = PRU_to_war
-              }
+        name = peru.5.a
+		PRU= { 
+			declare_war_on  = {
+				type = take_state_focus
+				target = ECU
+			}
+			country_event = { id =peru.13 hours = 4 }
+		}
+        ECU = {
+			add_war_support =0.05
+        }
+		PRU= { 
+		set_country_flag = PRU_to_war
+		}
     }
     option = { # Let's access the Peruvian demands
-        name = peru.5.a.2
-        ECU = { add_stability = 0.1
-             }
-             PRU= { 
-                transfer_state = 490
-                hidden_effect = {
-                    set_country_flag = PRU_to_war
-                }
-                country_event = { id =peru.12 hours = 4 }
-              }
-         }
+        name = peru.5.b
+        ECU = {
+			add_stability = 0.1
+        }
+		PRU= { 
+			transfer_state = 490
+			hidden_effect = {
+				set_country_flag = PRU_to_war
+			}
+			country_event = { id = peru.12 hours = 4 }
+		}
+    }
 }
 
 #1941 war
+
 country_event = {
 	id= peru.w
 	title = peru.w.t
@@ -1233,12 +1580,25 @@ country_event = {
     fire_only_once = yes
      trigger = {
         original_tag = PRU 
-
         date > 1941.7.5
         exists = yes 
-        ECU = {
-                 exists = yes
-            }
+        NOT = {
+				OR = {
+					owns_state = 490
+					any_country = {
+						AND = {
+							is_ally_with = ROOT
+							owns_state = 490
+						}
+					}
+					any_country = {
+						AND = {
+							is_subject_of = ROOT
+							owns_state = 490
+						}
+					}
+				}
+			}
     }
 	mean_time_to_happen = {
 		days = 10
@@ -1246,16 +1606,14 @@ country_event = {
     immediate = {
         if = {
             limit = {
-                AND = {
-                    PRU = {
-                        has_war = no
-                        is_in_faction = no	
-                    }
-                    ECU = {
-                        has_war = no
-                        is_in_faction = no	
-                    }
-                }
+				PRU = {
+					has_war = no
+					is_in_faction = no	
+				}
+				ECU = {
+					has_war = no
+					is_in_faction = no	
+				}
             }
              PRU = {
                 add_ideas = GEN_non_escalation_pact
@@ -1266,37 +1624,24 @@ country_event = {
         }
 		set_global_flag = r56_peru_ecuadorian_war_fired
 	}
-
-	option = { #Peruvians, to war!
-        name = peru.1.a.w 
-        ai_chance = {
-            factor = 90
+	option = { #war war war
+        name = peru.w.a
+		PRU= { 
+			declare_war_on  = {
+				type = take_state_focus
+				target = ECU
+			}
+			country_event = { id =peru.13 hours = 4 }
+		}
+        ECU = {
+			add_war_support =0.05
         }
-        declare_war_on = {
-            target = ECU
-            type = take_core_state
-            generator = { 490 }
-        }
-        
-        add_stability = -0.05
-        add_war_support = 0.05
-        hidden_effect = {
-           
-        }
-    }
-
-    option = { # It is the right of Ecuadorians
-        name = peru.2.a.w 
-		ai_chance = {
-            factor = 10
-        }
-        add_stability = -0.10
-        add_war_support = -0.10
-        hidden_effect = {
-            
-        }
+		PRU= { 
+		set_country_flag = PRU_to_war
+		}
     }
 }
+
 
 
 #the problem with ecuador
@@ -1323,21 +1668,25 @@ country_event = {
     }
 	option = { #refuse the border compromise in 1936
         ai_chance = {
-            factor = 1
+            base = 1
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes                   
+            }
         }
-        name = peru.6.a.1
+        name = peru.6.a
         add_war_support = 0.10
         ECU = { country_event = { id =peru.7 hours = 4 }}
         USA = { country_event = { id =peru.9 hours = 4 }}
-        hidden_effect = {
-            
-            
-        }
     }
     option = { # negotiate with Ecuador
-        name = peru.6.a.2
+        name = peru.6.b
         ai_chance = {
-            factor = 1
+            base = 1
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes                   
+            }
         }
            
         add_stability = 0.10
@@ -1349,34 +1698,27 @@ country_event = {
     }
      
 option = { # let's kill our enemies
-        name = peru.6.a.3
+        name = peru.6.c
         add_stability = -0.10
         ai_chance = {
-            factor = 1
+            base = 1
             modifier = {
                 factor = 100
                 is_historical_focus_on = yes                   
             }
         }
-        declare_war_on = {
-            target = ECU
-            type = take_core_state
-            generator = { 490 }
-        }
         hidden_effect = {
             set_global_flag = r56_peru_ecuadorian_war_fired
             if = {
                 limit = {
-                    AND = {
-                        PRU = {
-                            has_war = no
-                            is_in_faction = no	
-                        }
-                        ECU = {
-                            has_war = no
-                            is_in_faction = no	
-                        }
-                    }
+					PRU = {
+						has_war = no
+						is_in_faction = no	
+					}
+					ECU = {
+						has_war = no
+						is_in_faction = no	
+					}
                 }
                 PRU = {
                     add_ideas = GEN_non_escalation_pact
@@ -1396,6 +1738,11 @@ option = { # let's kill our enemies
 			}
             set_country_flag = PRU_to_war
         }
+		declare_war_on = {
+            target = ECU
+            type = take_core_state
+            generator = { 490 }
+        }
     }
 }
 
@@ -1409,7 +1756,7 @@ country_event = {
     is_triggered_only = yes 
    
 	option = { #one more example that you can't trust Peruvians
-        name = peru.7.a.1
+        name = peru.7.a
         ECU = { 
             add_war_support =0.2
         }
@@ -1427,12 +1774,12 @@ country_event = {
     is_triggered_only = yes 
    
 	option = { #Let's apply an economic sanction
-        name = peru.9.a.1
+        name = peru.9.a
         add_political_power = -25
         ai_chance = {
-            factor = 33
+            base = 33
         }
-        FROM = {
+        PRU = {
             add_timed_idea = { 
 				idea = PRU_economic_santions_i
 				days = 720
@@ -1441,7 +1788,7 @@ country_event = {
         }
     }
     option = { #It is the right of Peruvians
-    name = peru.9.a.2
+    name = peru.9.b
     trigger = {
         ECU = {
             is_ai = yes
@@ -1449,7 +1796,7 @@ country_event = {
     }
     add_political_power = -25
     ai_chance = {
-        factor = 33
+        base = 33
     }
     PRU = { 
         transfer_state = 490
@@ -1460,18 +1807,6 @@ country_event = {
       }
     }
 
-    option = { #We have to worry about bigger things to worry about then this
-    name = peru.9.a.3
-    ai_chance = {
-        factor = 33
-    }
-    PRU= { 
-        hidden_effect = {
-            set_country_flag = PRU_to_war
-        }
-        country_event = { id = peru.w hours = 4 }
-      }
-    }
 }
 
 #event if player fails to capture Ecuador 
@@ -1487,7 +1822,7 @@ country_event = {
 		division_template = { 
 			name = "Milicias" 
 			division_names_group = SPAN_INF_02 
-			is_locked = yes 
+			is_locked = no 
 			regiments = { 
 				infantry = { x = 0 y = 0 }  
 				infantry = { x = 0 y = 1 } 
@@ -1498,15 +1833,26 @@ country_event = {
 	}
 
 	option = { #control Benavides 
-    name = peru.8.a.1
+    name = peru.8.a
 		start_civil_war = {
-			ruling_party = ROOT 
 			ideology = communism
 			size = 0.4
 		}
 		hidden_effect = {
             add_ideas= PRU_fighting_for_the_future_of_peru
 			every_controlled_state = {
+				create_unit = {
+					division = "name = \"Milicias leales\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Milicias leales\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Milicias leales\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
 				create_unit = {
 					division = "name = \"Milicias leales\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
 					owner = ROOT
@@ -1520,10 +1866,6 @@ country_event = {
 					has_government = communism
 				}
 				every_controlled_state = {
-					create_unit = {
-						division = "name = \"Milicias Communistas\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
-						owner = PREV
-					}
 					create_unit = {
 						division = "name = \"Milicias Communistas\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
 						owner = PREV
@@ -1543,7 +1885,7 @@ country_event = {
 	}
 
 	option = { #support the revolution 
-    name = peru.8.a.2
+    name = peru.8.b
 		start_civil_war = {
 			ruling_party = communism
 			ideology = ROOT 
@@ -1552,6 +1894,10 @@ country_event = {
 		hidden_effect = {
         news_event = { id = r56.news_event.2012 hours = 6 }
         every_controlled_state = {
+			create_unit = {
+				division = "name = \"Milicias Communistas\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+				owner = ROOT
+			}
 			create_unit = {
 				division = "name = \"Milicias Communistas\" division_template = \"Milicias\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
 				owner = ROOT

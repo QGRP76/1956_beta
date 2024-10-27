@@ -4,8 +4,9 @@
 
 mountaineer_generic = {
 	blocked_for = {
+		ROM
 		CHI
-		PRC 
+		PRC
 		GXC
 		YUN
 		SHX
@@ -21,6 +22,7 @@ mountaineer_generic = {
 		ITA
 		AOI
 		ETH
+		SOV
 	}
 	roles = { mountaineer }
 	upgrade_prio = {
@@ -201,6 +203,7 @@ mountaineer_generic = {
 
 		allowed_types = {
 			mountaineers
+			artillery_brigade
 			engineer
 			artillery
 			anti_tank

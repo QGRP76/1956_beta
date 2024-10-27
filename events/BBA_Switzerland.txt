@@ -1075,10 +1075,8 @@ country_event = { #Petition of the 200
 		if = {
 			limit = {
 				NOT = {
-					OR = {
-						SWI_has_fascist_council_president = yes 
-						SWI_has_fascist_councilor = yes 
-					}
+					SWI_has_fascist_council_president = yes 
+					SWI_has_fascist_councilor = yes 
 				}
 			}
 			add_political_power = -150
@@ -1729,8 +1727,8 @@ country_event = {
 		}
 		if = {
 			limit = { NOT = { has_country_flag = SWI_elected_centralized_president } }
+			country_event = { id = BBA_SWI_annual_election.00 months = 12 }				#was outside of the loop
 		}
-		country_event = { id = BBA_SWI_annual_election.00 months = 12 }
 	}
 }
 
@@ -2477,7 +2475,7 @@ country_event = { #Other country REJECTED trade agreement
 	}
 }
 
-country_event = { #SWI offers gold trade to country 
+country_event = { #SWI or LIE offers gold trade to country 
     id = BBA_switzerland_trade.8
     title = BBA_switzerland_trade.8.t
     desc = BBA_switzerland_trade.8.desc
@@ -2487,10 +2485,29 @@ country_event = { #SWI offers gold trade to country
 
 	immediate = {
 		hidden_effect = {
-			set_country_flag = {
-				flag = SWI_waiting_for_answer_timeout
-				days = 50
-				value = 1
+			if = {
+				limit = {
+					FROM = {
+						original_tag = SWI
+					}
+				}
+				set_country_flag = {
+					flag = SWI_waiting_for_answer_timeout
+					days = 50
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						original_tag = LIE
+					}
+				}
+				set_country_flag = {
+					flag = LIE_waiting_for_answer_timeout
+					days = 50
+					value = 1
+				}
 			}
 		}
 	}
@@ -2509,10 +2526,6 @@ country_event = { #SWI offers gold trade to country
 				}
 				is_historical_focus_on = yes 
 			}
-			modifier = {
-				factor = 2 
-				SWI_country_is_happy = yes
-			}
 		}
 		hidden_effect = {
 			FROM = {
@@ -2522,8 +2535,23 @@ country_event = { #SWI offers gold trade to country
 				}
 			}
 		}
-		effect_tooltip = {
-			SWI_increase_gold_trade = yes 
+		if = {
+			limit = {
+				FROM = {
+					original_tag = SWI
+				}
+			}
+			effect_tooltip = {
+				SWI_increase_gold_trade = yes
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					original_tag = LIE
+				}
+			}
+			add_ideas = LIE_gold_trade_with_liechtenstein
 		}
 	}
 
@@ -2534,10 +2562,29 @@ country_event = { #SWI offers gold trade to country
 		}
 
 		hidden_effect = {
-			set_country_flag = {
-				flag = SWI_rejected_investment
-				days = 240
-				value = 0
+			if = {
+				limit = {
+					FROM = {
+						original_tag = SWI
+					}
+				}
+				set_country_flag = {
+					flag = SWI_rejected_investment
+					days = 240
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						original_tag = LIE
+					}
+				}
+				set_country_flag = {
+					flag = LIE_rejected_investment
+					days = 240
+					value = 0
+				}
 			}
 		}
 		FROM = { 
@@ -2549,7 +2596,7 @@ country_event = { #SWI offers gold trade to country
 	}
 }
 
-country_event = { #For SWI - Gold Trade accepted 
+country_event = { #For SWI & LIE - Gold Trade accepted 
     id = BBA_switzerland_trade.9
     title = BBA_switzerland_trade.9.t
     desc = BBA_switzerland_trade.9.desc
@@ -2562,8 +2609,25 @@ country_event = { #For SWI - Gold Trade accepted
 		ai_chance = {
 			base = 10 
 		}
-		FROM = {
-			SWI_increase_gold_trade = yes 		
+		if = {
+			limit = {
+				original_tag = SWI
+			}
+			FROM = {
+				SWI_increase_gold_trade = yes 
+			}
+		}
+		if = {
+			limit = {
+				original_tag = LIE
+			}
+			FROM = {
+				effect_tooltip = {
+					LIE_update_gold_trade_modifiers = yes
+				}
+				set_country_flag = LIE_gold_trading_partner		
+			}
+			LIE_update_gold_trade_modifiers_for_ourselves = yes
 		}
 
 	}
@@ -2981,7 +3045,6 @@ country_event = { #Event to notify SWI that they won the state lottery and they'
 							is_in_faction_with = FROM
 							is_faction_leader = no
 						}
-						check_variable = {THIS = var:SWI.SWI_biggest_fascist} #if Germany occupies Anchluss
 
 					}
 
@@ -3538,6 +3601,20 @@ country_event = { #Sending request for The Rest of Austria
 			modifier = {
 				factor = 2 
 				is_historical_focus_on = no  
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = communism
+					has_country_leader = {
+						character = AUS_josef_leopold
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = AUS_arthur_seyss_inquart
+						ruling_only = yes
+					}
+				}
 			}
 		}
 		FROM = {

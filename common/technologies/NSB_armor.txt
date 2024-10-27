@@ -1,7 +1,7 @@
 technologies = {
 
 
-	@1918 = 0
+	@1930 = 0
 	@1934 = 2
 	@1935 = 3
 	@1936 = 4
@@ -22,34 +22,36 @@ technologies = {
 
 		enable_equipments = {
 			light_tank_chassis_0
-			medium_tank_chassis_0
-			heavy_tank_chassis_0
 			light_tank_destroyer_chassis_0
-			medium_tank_destroyer_chassis_0
-			heavy_tank_destroyer_chassis_0
 			light_tank_artillery_chassis_0
-			medium_tank_artillery_chassis_0
-			heavy_tank_artillery_chassis_0
 			light_tank_aa_chassis_0
+			medium_tank_chassis_0
+			medium_tank_destroyer_chassis_0
+			medium_tank_artillery_chassis_0
 			medium_tank_aa_chassis_0
+			heavy_tank_chassis_0
+			heavy_tank_destroyer_chassis_0
+			heavy_tank_artillery_chassis_0
 			heavy_tank_aa_chassis_0
 		}
 		enable_equipment_modules = {
+			# suspensions
 			tank_torsion_bar_suspension
-			tank_riveted_armor
-			tank_gasoline_engine
-			tank_diesel_engine
-			tank_petrol_electric_engine
-			tank_cast_armor
 			tank_christie_suspension
 			tank_bogie_suspension
 			tank_interleaved_suspension
+			# engines
+			tank_petrol_electric_engine
+			tank_gasoline_engine
+			tank_diesel_engine
+			# turrets
 			tank_light_one_man_tank_turret
 			tank_light_two_man_tank_turret
 			tank_light_three_man_tank_turret
 			tank_light_fixed_superstructure_turret
-			tank_front_plate_fixed_superstructure_turret
-			tank_platform_mount_turret
+			r56_tank_front_plate_fixed_superstructure_turret
+			r56_tank_light_tankette_superstructure_turret
+			r56_tank_platform_mount_turret
 			tank_medium_one_man_tank_turret
 			tank_medium_two_man_tank_turret
 			tank_medium_three_man_tank_turret
@@ -57,20 +59,24 @@ technologies = {
 			tank_heavy_two_man_tank_turret
 			tank_heavy_three_man_tank_turret
 			tank_heavy_fixed_superstructure_turret
-			tank_super_heavy_four_man_tank_turret
-			tank_super_heavy_three_man_tank_turret
-			tank_modern_tank_turret
+			# armor
+			tank_riveted_armor
+			tank_cast_armor
+			# extra modules
 			sloped_armor
+			r56_tank_hull_lmg
 			extra_ammo_storage
 			wet_ammo_storage
 			smoke_launchers
 			expanded_fuel_tank
 		}
+
 		enable_subunits = {
 			light_armor
 			medium_armor
 			heavy_armor
 		}
+		
 		on_research_complete_limit = {
 			NOT = {	has_template_containing_unit = light_armor }
 			NOT = {	has_template_containing_unit = heavy_armor }
@@ -113,7 +119,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1918
+		start_year = 1930
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 2 y = 0 }
@@ -249,11 +255,11 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1936
+		start_year = 1937
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -4 y = 4 }
+			position = { x = -4 y = @1936 }
 		}
 
 		ai_will_do = {
@@ -442,6 +448,12 @@ technologies = {
 			position = { x = -4 y = 8 }
 		}
 
+		path = {
+			leads_to_tech = modern_light_tank_chassis
+			research_cost_coeff = 1
+		}
+
+
 		ai_will_do = {
 			factor = 0.5
 			modifier = {
@@ -470,6 +482,62 @@ technologies = {
 			cat_light_armor
 		}
 	}
+
+	modern_light_tank_chassis = { #R56 - Chaffee
+
+		enable_equipments = {
+			light_tank_chassis_4
+			light_tank_destroyer_chassis_4
+			light_tank_artillery_chassis_4
+			light_tank_aa_chassis_4
+		}
+
+		research_cost = 2
+		start_year = 1944
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -4 y = @1944 }
+		}
+
+		path = {
+			leads_to_tech = oscillating_turret_tech
+			research_cost_coeff = 1
+		}
+
+
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				country_is_major_minor_nation = yes
+				add = 75
+			}
+			modifier = {
+				is_major = no
+				factor = 2
+			}
+			modifier = {
+				factor = 1.1
+				date > "1942.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1943.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1944.1.1"
+			}
+		}
+
+		categories = {
+			armor
+			cat_light_armor
+		}
+	}
+
 
 	basic_medium_tank_chassis = { #Panzer III
 
@@ -539,6 +607,14 @@ technologies = {
 					num_of_military_factories < 50
 				}
 				date > "1937.9.1"
+			}
+			modifier = {
+				country_is_major_nation = yes
+				add = 100
+			}
+			modifier = {
+				country_is_major_minor_nation = yes
+				add = 75
 			}
 			modifier = {
 				tag = SOV
@@ -613,6 +689,14 @@ technologies = {
 				}
 			}
 			modifier = {
+				country_is_major_nation = yes
+				add = 100
+			}	
+			modifier = {
+				country_is_major_minor_nation = yes
+				add = 75
+			}		
+			modifier = {
 				date < "1940.1.1"
 				factor = 0.3
 			}
@@ -680,6 +764,14 @@ technologies = {
 			factor = 1
 
 			modifier = {
+				country_is_major_nation = yes
+				add = 100
+			}
+			modifier = {
+				country_is_major_minor_nation = yes
+				add = 75
+			}
+			modifier = {
 				factor = 1.2
 				date > "1944.1.1"
 			}
@@ -708,6 +800,9 @@ technologies = {
 			modern_tank_destroyer_chassis_1
 			modern_tank_artillery_chassis_1
 			modern_tank_aa_chassis_1
+		}
+		enable_equipment_modules = {
+			tank_modern_tank_turret
 		}
 		enable_subunits = {
 			modern_armor
@@ -755,9 +850,9 @@ technologies = {
 
 		enable_equipments = {
 			modern_tank_chassis_2
-			modern_tank_destroyer_chassis_1
-			modern_tank_artillery_chassis_1
-			modern_tank_aa_chassis_1
+			modern_tank_destroyer_chassis_2
+			modern_tank_artillery_chassis_2
+			modern_tank_aa_chassis_2
 		}
 		enable_subunits = {
 			modern_armor
@@ -997,11 +1092,14 @@ technologies = {
 		}
 
 		enable_subunits = {
-			super_heavy_armor
+			super_heavy_armor_support
 		}
 
 		enable_equipment_modules = {
+			tank_super_heavy_four_man_tank_turret
+			tank_super_heavy_three_man_tank_turret
 			tank_super_heavy_cannon
+			r56_tank_coaxial_support_cannon
 		}
 
 		research_cost = 2.5
@@ -1074,6 +1172,10 @@ technologies = {
 		categories = {
 			armor
 			armor_variant_tech
+			mio_cat_tech_all_armor_and_modules
+			mio_cat_tech_light_armor_and_modules
+			mio_cat_tech_medium_armor_and_modules
+			mio_cat_tech_heavy_armor_and_modules		
 		}
 	}
 
@@ -1130,6 +1232,10 @@ technologies = {
 		categories = {
 			armor
 			armor_variant_tech
+			mio_cat_tech_all_armor_and_modules
+			mio_cat_tech_light_armor_and_modules
+			mio_cat_tech_medium_armor_and_modules
+			mio_cat_tech_heavy_armor_and_modules		
 		}
 	}
 
@@ -1184,6 +1290,10 @@ technologies = {
 		categories = {
 			armor
 			armor_variant_tech
+			mio_cat_tech_all_armor_and_modules
+			mio_cat_tech_light_armor_and_modules
+			mio_cat_tech_medium_armor_and_modules
+			mio_cat_tech_heavy_armor_and_modules		
 		}
 	}
 
@@ -1236,6 +1346,11 @@ technologies = {
 
 		categories = {
 			armor
+			armor_variant_tech
+			mio_cat_tech_all_armor_and_modules
+			mio_cat_tech_light_armor_and_modules
+			mio_cat_tech_medium_armor_and_modules
+			mio_cat_tech_heavy_armor_and_modules				
 		}
 	}
 
@@ -1283,6 +1398,11 @@ technologies = {
 
 		categories = {
 			armor
+			armor_variant_tech
+			mio_cat_tech_all_armor_and_modules
+			mio_cat_tech_light_armor_and_modules
+			mio_cat_tech_medium_armor_and_modules
+			mio_cat_tech_heavy_armor_and_modules			
 		}
 	}
 
@@ -1335,11 +1455,18 @@ technologies = {
 		categories = {
 			armor
 			armor_variant_tech
+			mio_cat_tech_all_armor_and_modules
+			mio_cat_tech_light_armor_and_modules
+			mio_cat_tech_medium_armor_and_modules
+			mio_cat_tech_heavy_armor_and_modules
 		}
 	}
 
 	engine_tech_2 = {
 
+		enable_equipment_modules = {
+			r56_tank_supercharger
+		}
 
 		path = {
 			leads_to_tech = engine_tech_3
@@ -1389,6 +1516,10 @@ technologies = {
 		categories = {
 			armor
 			armor_variant_tech
+			mio_cat_tech_all_armor_and_modules
+			mio_cat_tech_light_armor_and_modules
+			mio_cat_tech_medium_armor_and_modules
+			mio_cat_tech_heavy_armor_and_modules
 		}
 	}
 
@@ -1441,6 +1572,10 @@ technologies = {
 		categories = {
 			armor
 			armor_variant_tech
+			mio_cat_tech_all_armor_and_modules
+			mio_cat_tech_light_armor_and_modules
+			mio_cat_tech_medium_armor_and_modules
+			mio_cat_tech_heavy_armor_and_modules
 		}
 	}
 
@@ -1492,6 +1627,10 @@ technologies = {
 		categories = {
 			armor
 			armor_variant_tech
+			mio_cat_tech_all_armor_and_modules
+			mio_cat_tech_light_armor_and_modules
+			mio_cat_tech_medium_armor_and_modules
+			mio_cat_tech_heavy_armor_and_modules
 		}
 	}
 
@@ -1538,6 +1677,88 @@ technologies = {
 		categories = {
 			armor
 			armor_variant_tech
+			mio_cat_tech_all_armor_and_modules
+			mio_cat_tech_light_armor_and_modules
+			mio_cat_tech_medium_armor_and_modules
+			mio_cat_tech_heavy_armor_and_modules
+		}
+	}
+
+	oscillating_turret_tech = {
+
+		research_cost = 1
+		start_year = 1950
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -4 y = @1950 }
+		}
+		enable_equipment_modules = {
+			r56_tank_light_oscillating_turret
+		}
+		on_research_complete = {
+			custom_effect_tooltip = oscillating_turret_unlock_tt
+		}
+		show_effect_as_desc = yes
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1939.1.1"
+			}
+		}
+
+		categories = {
+			armor
+			armor_variant_tech
+			cat_light_armor
+			mio_cat_tech_all_armor_and_modules
+			mio_cat_tech_light_armor_and_modules
+			mio_cat_tech_medium_armor_and_modules
+			mio_cat_tech_heavy_armor_and_modules
+		}
+	}
+
+	NOR_rikstanken_tech = {	#AAT
+
+		allow = { always = no } #Only obtained through Rikstanken Event
+
+		enable_equipment_modules = {
+			NOR_rikstanken_turret
+			NOR_tank_rikstanken_armor
+		}
+
+		on_research_complete = {
+		
+		}
+
+		show_effect_as_desc = no
+
+		research_cost = 1
+		start_year = 1936
+
+
+		categories = {
+			armor
 		}
 	}
 }

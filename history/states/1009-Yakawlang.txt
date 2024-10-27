@@ -2,12 +2,10 @@
 state={
 	id=1009
 	name="STATE_1009"
-	manpower = 502397
+	manpower = 739524
 	
 	state_category = pastoral
 	
-	resources={
-	}
 	history={
 		owner = AFG
 		buildings = {
@@ -17,6 +15,7 @@ state={
 			7916 1
 		}
 		add_core_of = AFG
+		add_core_of = HAZ
 	}
 
 	provinces={

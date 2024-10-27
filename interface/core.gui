@@ -130,7 +130,8 @@ guiTypes = {
 			borderSize = {x = 12 y = 12}	
 			maxValue =1
 			minValue =0
-			stepSize =0.01
+			stepSize = 0.01
+			scroll_speed = 40
 			startValue = 0
 			horizontal = 0
 
@@ -206,6 +207,8 @@ guiTypes = {
 			position = { x=0 y =120}	
 		}
 	}
+
+	### Extended Scrollbar Types ###
 
 	extendedScrollbarType = {
 		name = "right_vertical_sliderno_bg"
@@ -519,7 +522,7 @@ guiTypes = {
 			position = { x= 0 y = 0 }
 			font = "hoi_20b"
 			borderSize = {x = 0 y = 0}
-			text = " "
+			text = ""
 			maxWidth = 200
 			maxHeight = 32
 			fixedsize = yes

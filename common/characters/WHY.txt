@@ -7,7 +7,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=moderatism
+			ideology = moderatism
 			expire="5183.5.1"
 			id=-1
 			traits = {
@@ -229,6 +229,31 @@ characters={
 			defense_skill = 5
 			maneuvering_skill = 5
 			coordination_skill = 4
+			legacy_id=-1
+		}
+	}
+	
+	###Lootbox Alfie
+	WHY_great_alfie = {
+		name = "The Great Alfie"
+		portraits={
+			army={
+				large="gfx/leaders/WHY/r56w_portrait_WHY_alfie.dds"
+			}
+		}
+		field_marshal={
+			traits = {
+				trickster
+				inflexible_strategist
+				irregulars_officer
+				logistics_wizard
+				skeletons_blessing
+			}
+			skill=5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill= 5
+			logistics_skill= 5
 			legacy_id=-1
 		}
 	}

@@ -95,6 +95,7 @@ characters={
 		name="Hosni al-Arabi"
 		portraits={
 			civilian={
+				#large="gfx/leaders/r56_generic/r56_portrait_generic_middle_east_4.dds"
 				large="gfx/leaders/EGY/r56_portrait_EGY_Hosni_al-Arabi.dds"
 			}
 		}
@@ -108,107 +109,49 @@ characters={
 		}
 	}
 	EGY_stewart_symes = {
-		instance = {
-			allowed = {
-				has_dlc = "Together for Victory"
-			}
-			name="Stewart Symes"
-			portraits={
-				civilian={
-					large="gfx/leaders/EGY/r56_portrait_EGY_Stewart_Symes.dds"
-					small="GFX_idea_EGY_stewart_symes"
-				}
-			}
-			advisor={
-				slot = political_advisor
-				idea_token = EGY_stewart_symes
-				allowed = {
-					original_tag = EGY
-				}
-				available = {
-					is_subject_of = ENG
-					NOT = {
-						has_country_leader = {
-							character = EGY_stewart_symes
-							ruling_only = yes
-						}
-					}
-				}
-				traits = {
-					imperial_land_owner_tfv
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-			}
-			field_marshal = {
-				traits = { politically_connected infantry_officer caring_leader }
-				skill = 3
-				attack_skill = 2
-				defense_skill = 1
-				planning_skill = 4
-				logistics_skill = 2
-				legacy_id = 6991
-				visible = {
-					has_completed_focus = EGY_storm_abdeen_palace
-					has_country_leader = {
-						character = EGY_stewart_symes
-						ruling_only = yes
-					}
-				}
+		name="Stewart Symes"
+		portraits={
+			civilian={
+				large="gfx/leaders/EGY/r56_portrait_EGY_Stewart_Symes.dds"
+				small="GFX_idea_EGY_stewart_symes"
 			}
 		}
-		instance = {
+		advisor={
+			slot = political_advisor
+			idea_token = EGY_stewart_symes
 			allowed = {
+				original_tag = EGY
+			}
+			available = {
+				is_subject_of = ENG
 				NOT = {
-					has_dlc = "Together for Victory"
-				}
-			}
-			name="Stewart Symes"
-			portraits={
-				civilian={
-					large="gfx/leaders/EGY/r56_portrait_EGY_Stewart_Symes.dds"
-					small="GFX_idea_EGY_stewart_symes"
-				}
-			}
-			advisor={
-				slot = political_advisor
-				idea_token = EGY_stewart_symes
-				allowed = {
-					original_tag = EGY
-				}
-				available = {
-					is_subject_of = ENG
-					NOT = {
-						has_country_leader = {
-							character = EGY_stewart_symes
-							ruling_only = yes
-						}
-					}
-				}
-				traits = {
-					imperial_land_owner
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-			}
-			field_marshal = {
-				traits = { politically_connected infantry_officer caring_leader }
-				skill = 3
-				attack_skill = 2
-				defense_skill = 1
-				planning_skill = 4
-				logistics_skill = 2
-				legacy_id = 6991
-				visible = {
-					has_completed_focus = EGY_storm_abdeen_palace
 					has_country_leader = {
 						character = EGY_stewart_symes
 						ruling_only = yes
 					}
+				}
+			}
+			traits = {
+				imperial_land_owner
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		field_marshal = {
+			traits = { politically_connected infantry_officer caring_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 2
+			legacy_id = 6991
+			visible = {
+				has_completed_focus = EGY_storm_abdeen_palace
+				has_country_leader = {
+					character = EGY_stewart_symes
+					ruling_only = yes
 				}
 			}
 		}
@@ -278,51 +221,24 @@ characters={
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 3
-			legacy_id=6981
 		}
 	}
 	EGY_hussein_sirri_amer = { # Aristocrat
-		instance = {
-			allowed = {
-				has_dlc = "Waking the Tiger"
-			}
-			name="Hussein Sirri Amer"
-			portraits={
-				army={
-					large="gfx/leaders/Arabia/portrait_arabia_generic_land_7.dds"
-					small="GFX_idea_arabia_generic_land_7"
-				}
-			}
-			field_marshal={
-				traits = { EGY_aristocrat infantry_officer }
-				skill = 1
-				attack_skill = 2
-				defense_skill = 1
-				planning_skill = 1
-				logistics_skill = 1
-				legacy_id=6993
+		name="Hussein Sirri Amer"
+		portraits={
+			army={
+				large="gfx/leaders/Arabia/portrait_arabia_generic_land_7.dds"
+				small="GFX_idea_arabia_generic_land_7"
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Waking the Tiger" }
-			}
-			name="Hussein Sirri Amer"
-			portraits={
-				army={
-					large="gfx/leaders/SAU/Portrait_Arabia_Generic_land_2.dds"
-					small="GFX_idea_JOR_generic_land_2"
-				}
-			}
-			field_marshal={
-				traits = { EGY_aristocrat infantry_officer }
-				skill = 1
-				attack_skill = 2
-				defense_skill = 1
-				planning_skill = 1
-				logistics_skill = 1
-				legacy_id=6993
-			}
+		field_marshal={
+			traits = { EGY_aristocrat infantry_officer }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id=6993
 		}
 	}
 	EGY_mohamed_naguib = {
@@ -519,7 +435,7 @@ characters={
 		}
 		advisor={
 			cost = 100
-			slot = high_command
+			slot = army_chief
 			idea_token = EGY_ibrahim_abboud
 			ledger = army
 			allowed = {
@@ -947,26 +863,7 @@ characters={
 				has_completed_focus = EGY_support_womens_suffrage
 			}
 			traits = {
-				feminist_figure
-			}
-		}
-	}
-	EGY_aly_maher_pasha = {
-		name="Aly Maher Pasha"
-		portraits={
-			civilian={
-				large="gfx/leaders/EGY/r56_portrait_EGY_Aly_Maher_Pasha.dds"
-				small="GFX_idea_EGY_aly_maher_pasha"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = EGY_aly_maher_pasha
-			allowed = {
-				original_tag = EGY
-			}
-			traits = {
-				POL_Foreign_Trade_Advocate
+				womens_figurehead
 			}
 		}
 	}
@@ -1009,6 +906,25 @@ characters={
 			legacy_id=6988
 			visible = {
 				has_government = fascism
+			}
+		}
+	}
+	EGY_aly_maher_pasha = {
+		name="Aly Maher Pasha"
+		portraits={
+			civilian={
+				large="gfx/leaders/EGY/r56_portrait_EGY_Aly_Maher_Pasha.dds"
+				small="GFX_idea_EGY_aly_maher_pasha"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = EGY_aly_maher_pasha
+			allowed = {
+				original_tag = EGY
+			}
+			traits = {
+				POL_Foreign_Trade_Advocate
 			}
 		}
 	}
@@ -1068,6 +984,44 @@ characters={
 			traits = {
 				financial_expert
 			}
+		}
+	}
+	EGY_abd_al_rahman_al_mahdi ={
+		name="Abd al-Rahman al-Mahdi"
+		portraits={
+			civilian={
+				small="GFX_idea_SUD_abd_mahdi"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = EGY_abd_al_rahman_al_mahdi
+			allowed = {
+				original_tag = EGY
+			}
+			visible = {
+				NOT = {
+					country_exists = SUD
+				}
+			}
+			available = {
+				NOT = {
+					country_exists = SUD
+				}
+				any_owned_state = {
+					is_core_of = SUD
+					is_core_of = EGY
+				}
+			}
+			traits = {
+				EGY_sudanese_nationalist_figure
+			}
+		}
+		country_leader={
+			ideology = moderate_islamism
+			traits = { religious_figure }
+			expire="1965.1.1"
+			id=-1
 		}
 	}
 	EGY_zakaria_mohieddin = {

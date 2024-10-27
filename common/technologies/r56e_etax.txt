@@ -47,7 +47,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1918
 		
@@ -61,10 +61,10 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 20
 			
 			modifier = {
-				factor = 5
+				factor = 20
 				is_major = yes
 			}
 		}
@@ -93,14 +93,14 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
+		army_org_factor = 0.05
+		army_leader_cost_factor = -0.05
 
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1936
 
-		category_all_infantry = {
-			max_organisation = 5
-		}
+		
 		
 		folder = {
 			name = etax_folder
@@ -108,18 +108,27 @@ technologies = {
 		}
 			
 		categories = {
-			land_doctrine			
+			land_doctrine
+            infantry_tech			
 			cat_mobile_warfare
 			cat_mass_assault
 			cat_grand_battle_plan
 			cat_superior_firepower
+			
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+			
 			modifier = {
-				add = 20
-				has_war = yes
+				factor = 0
+				is_major = yes
+				date < 1940.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1940.1.2
 			}
 		}
 	}
@@ -140,7 +149,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1936
 		
@@ -173,20 +182,31 @@ technologies = {
 			
 		categories = {
 			naval_doctrine
+            naval_equipment
 			cat_fleet_in_being
 			cat_trade_interdiction
 			cat_base_strike
 		}
 
 		ai_will_do = {
-			factor = 5
-			modifier = {
-				add = 20
-				has_war = yes
-			}
+			factor = 1
+			
 			modifier = {
 				factor = 0
-				has_navy_size = { size < 25 }
+				is_major = yes
+				date < 1940.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1940.1.2
+			}
+			modifier = {
+				OR = {
+					original_tag = SOV
+					original_tag = GER
+				}
+				factor = 0
 			}
 		}
 	}
@@ -207,7 +227,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1936
 		
@@ -220,17 +240,24 @@ technologies = {
 			
 		categories = {
 			air_doctrine
+           air_equipment
 			cat_strategic_destruction
 			cat_battlefield_support
 			cat_operational_integrity
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
 			
 			modifier = {
-				add = 20
-				has_war = yes
+				factor = 0
+				is_major = yes
+				date < 1940.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1940.1.2
 			}
 		}
 	}
@@ -246,12 +273,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1938
 		
 		category_army = {
-			soft_attack = 0.06
+			soft_attack = 0.05
 		}
 		
 		#max_planning = 0.05
@@ -262,7 +289,8 @@ technologies = {
 		}
 			
 		categories = {
-			land_doctrine			
+			land_doctrine
+            infantry_tech			
 			cat_mobile_warfare
 			cat_mass_assault
 			cat_grand_battle_plan
@@ -270,9 +298,25 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+			
 			modifier = {
-				add = 100
+				factor = 5
+				date > "1938.1.1"
+			}
+			
+			modifier = {
+				factor = 6
+				date > "1939.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1940.1.1"
+			}
+
+			modifier = {
+				add = 1
 				has_war = yes
 			}
 		}
@@ -280,7 +324,7 @@ technologies = {
 	
 	etax_army_firepower_2 = {
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1941
 		
@@ -290,13 +334,14 @@ technologies = {
 		}
 		
 		category_army = {
-			hard_attack = 0.06
+			hard_attack = 0.05
 		}
 		
 		#max_planning = 0.05
 			
 		categories = {
-			land_doctrine			
+			land_doctrine
+            infantry_tech			
 			cat_mobile_warfare
 			cat_mass_assault
 			cat_grand_battle_plan
@@ -304,9 +349,25 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+
 			modifier = {
-				add = 100
+				factor = 6
+				date > "1941.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1942.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1943.1.1"
+			}
+
+			modifier = {
+				add = 1
 				has_war = yes
 			}
 		}
@@ -321,12 +382,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1938
 		
 		category_army = { 
-			defense = 0.06
+			defense = 0.05
 		}
 		
 		folder = {
@@ -335,7 +396,8 @@ technologies = {
 		}
 			
 		categories = {
-			land_doctrine			
+			land_doctrine
+            infantry_tech			
 			cat_mobile_warfare
 			cat_mass_assault
 			cat_grand_battle_plan
@@ -343,9 +405,25 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+
 			modifier = {
-				add = 20
+				factor = 6
+				date > "1938.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1939.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1940.1.1"
+			}
+
+			modifier = {
+				add = 1
 				has_war = yes
 			}
 		}
@@ -353,7 +431,7 @@ technologies = {
 	
 	etax_army_defense_2 = {
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1941
 		
@@ -362,10 +440,11 @@ technologies = {
 			position = { x = 2 y = 8 }
 		}
 
-		max_dig_in = 10
+		max_dig_in_factor = 0.1
 					
 		categories = {
-			land_doctrine			
+			land_doctrine
+            infantry_tech			
 			cat_mobile_warfare
 			cat_mass_assault
 			cat_grand_battle_plan
@@ -373,9 +452,25 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+
 			modifier = {
-				add = 20
+				factor = 6
+				date > "1941.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1942.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1943.1.1"
+			}
+
+			modifier = {
+				add = 1
 				has_war = yes
 			}
 		}
@@ -392,7 +487,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1938
 		
@@ -409,17 +504,43 @@ technologies = {
 			
 		categories = {
 			naval_doctrine
+           naval_equipment
 			cat_fleet_in_being
 			cat_trade_interdiction
 			cat_base_strike
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
 			
 			modifier = {
-				add = 20
-				has_war = yes
+				factor = 1
+				has_navy_size = { size < 25 }
+			}
+
+			modifier = {
+				factor = 6
+				AND = {
+					date > "1938.1.1"
+					has_navy_size = { size < 25 }
+				}
+				
+			}
+			
+			modifier = {
+				factor = 7
+				AND = {
+					date > "1939.1.1"
+					has_navy_size = { size < 25 }
+				}
+			}
+			
+			modifier = {
+				factor = 8
+				AND = {
+					date > "1940.1.1"
+					has_navy_size = { size < 25 }
+				}
 			}
 		}
 	}
@@ -431,7 +552,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1941
 		
@@ -447,17 +568,43 @@ technologies = {
 			
 		categories = {
 			naval_doctrine
+           naval_equipment
 			cat_fleet_in_being
 			cat_trade_interdiction
 			cat_base_strike
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
 			
 			modifier = {
-				add = 20
-				has_war = yes
+				factor = 1
+				has_navy_size = { size < 25 }
+			}
+
+			modifier = {
+				factor = 6
+				AND = {
+					date > "1941.1.1"
+					has_navy_size = { size < 25 }
+				}
+				
+			}
+			
+			modifier = {
+				factor = 7
+				AND = {
+					date > "1942.1.1"
+					has_navy_size = { size < 25 }
+				}
+			}
+			
+			modifier = {
+				factor = 8
+				AND = {
+					date > "1943.1.1"
+					has_navy_size = { size < 25 }
+				}
 			}
 		}
 	}
@@ -471,7 +618,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1938
 		
@@ -486,17 +633,45 @@ technologies = {
 			
 		categories = {
 			naval_doctrine
+           naval_equipment
 			cat_fleet_in_being
 			cat_trade_interdiction
 			cat_base_strike
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 0
+
 			modifier = {
-				add = 20
-				has_war = yes
+				factor = 1
+				has_navy_size = { size < 25 }
 			}
+
+			modifier = {
+				factor = 6
+				AND = {
+					date > "1938.1.1"
+					has_navy_size = { size < 25 }
+				}
+				
+			}
+			
+			modifier = {
+				factor = 7
+				AND = {
+					date > "1939.1.1"
+					has_navy_size = { size < 25 }
+				}
+			}
+			
+			modifier = {
+				factor = 8
+				AND = {
+					date > "1940.1.1"
+					has_navy_size = { size < 25 }
+				}
+			}
+
 		}
 	}
 	
@@ -507,7 +682,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1941
 		
@@ -522,17 +697,43 @@ technologies = {
 			
 		categories = {
 			naval_doctrine
+           naval_equipment
 			cat_fleet_in_being
 			cat_trade_interdiction
 			cat_base_strike
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 0
 			
 			modifier = {
-				add = 20
-				has_war = yes
+				factor = 1
+				has_navy_size = { size < 25 }
+			}
+
+			modifier = {
+				factor = 6
+				AND = {
+					date > "1941.1.1"
+					has_navy_size = { size < 25 }
+				}
+				
+			}
+			
+			modifier = {
+				factor = 7
+				AND = {
+					date > "1942.1.1"
+					has_navy_size = { size < 25 }
+				}
+			}
+			
+			modifier = {
+				factor = 8
+				AND = {
+					date > "1943.1.1"
+					has_navy_size = { size < 25 }
+				}
 			}
 		}
 	}
@@ -548,7 +749,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1938
 		
@@ -561,16 +762,38 @@ technologies = {
 			
 		categories = {
 			air_doctrine
+            air_equipment
 			cat_strategic_destruction
 			cat_battlefield_support
 			cat_operational_integrity
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+
 			modifier = {
-				add = 20
-				has_war = yes
+				factor = 6
+				AND = {
+					date > "1938.1.1"
+					is_major = yes
+				}
+				
+			}
+			
+			modifier = {
+				factor = 7
+				AND = {
+					date > "1939.1.1"
+					is_major = yes
+				}
+			}
+			
+			modifier = {
+				factor = 8
+				AND = {
+					date > "1940.1.1"
+					is_major = yes
+				}
 			}
 		}
 	}
@@ -582,7 +805,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1941
 			
@@ -597,16 +820,38 @@ technologies = {
 			
 		categories = {
 			air_doctrine
+           air_equipment
 			cat_strategic_destruction
 			cat_battlefield_support
 			cat_operational_integrity
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+			
 			modifier = {
-				add = 20
-				has_war = yes
+				factor = 6
+				AND = {
+					date > "1941.1.1"
+					is_major = yes
+				}
+				
+			}
+
+			modifier = {
+				factor = 7
+				AND = {
+					date > "1942.1.1"
+					is_major = yes
+				}
+			}
+			
+			modifier = {
+				factor = 8
+				AND = {
+					date > "1943.1.1"
+					is_major = yes
+				}
 			}
 		}
 	}
@@ -620,7 +865,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1938
 		
@@ -634,16 +879,39 @@ technologies = {
 			
 		categories = {
 			air_doctrine
+           air_equipment
 			cat_strategic_destruction
 			cat_battlefield_support
 			cat_operational_integrity
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+			
+
 			modifier = {
-				add = 20
-				has_war = yes
+				factor = 6
+				AND = {
+					date > "1938.1.1"
+					is_major = yes
+				}
+				
+			}
+
+			modifier = {
+				factor = 7
+				AND = {
+					date > "1939.1.1"
+					is_major = yes
+				}
+			}
+			
+			modifier = {
+				factor = 8
+				AND = {
+					date > "1940.1.1"
+					is_major = yes
+				}
 			}
 		}
 	}
@@ -655,7 +923,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1941
 		
@@ -677,16 +945,37 @@ technologies = {
 			
 		categories = {
 			air_doctrine
+           air_equipment
 			cat_strategic_destruction
 			cat_battlefield_support
 			cat_operational_integrity
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+
 			modifier = {
-				add = 20
-				has_war = yes
+				factor = 6
+				AND = {
+					date > "1941.1.1"
+					is_major = yes
+				}
+			}
+
+			modifier = {
+				factor = 7
+				AND = {
+					date > "1942.1.1"
+					is_major = yes
+				}
+			}
+			
+			modifier = {
+				factor = 8
+				AND = {
+					date > "1943.1.1"
+					is_major = yes
+				}
 			}
 		}
 	}
@@ -705,12 +994,13 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1936
 		
-		global_building_slots_factor = 0.10
-		
+		production_factory_efficiency_gain_factor = 0.05
+		production_lack_of_resource_penalty_factor = -0.05
+
 		folder = {
 			name = etax_folder
 			position = { x = -6 y = 2 }
@@ -718,13 +1008,21 @@ technologies = {
 			
 		categories = {
 			industry
+			construction_tech
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+			
 			modifier = {
-				add = 20
-				has_war = yes
+				factor = 0
+				is_major = yes
+				date < 1940.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1940.1.2
 			}
 		}
 	}
@@ -744,6 +1042,7 @@ technologies = {
 		start_year = 1938
 		
 		line_change_production_efficiency_factor = 0.1
+		industry_free_repair_factor = 0.1
 		
 		folder = {
 			name = etax_folder
@@ -755,10 +1054,21 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 70
+			factor = 1
+
 			modifier = {
-				add = 20
-				has_war = yes
+				factor = 6
+				date > "1938.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1939.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1940.1.1"
 			}
 		}
 	}
@@ -785,11 +1095,21 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 1
 			
 			modifier = {
-				add = 20
-				has_war = yes
+				factor = 6
+				date > "1940.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1941.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1942.1.1"
 			}
 		}
 	}
@@ -809,7 +1129,7 @@ technologies = {
 		research_cost = 3.0
 		start_year = 1941
 		
-		production_lack_of_resource_penalty_factor = -0.05
+		global_building_slots_factor = 0.2
 		
 		folder = {
 			name = etax_folder
@@ -821,11 +1141,21 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 30
+			factor = 1
 			
 			modifier = {
-				add = 20
-				has_war = yes
+				factor = 6
+				date > "1941.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1942.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1943.1.1"
 			}
 		}
 	}
@@ -841,11 +1171,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes
+		doctrine = no
 		research_cost = 3.0
 		start_year = 1938
 				
-		consumer_goods_factor = -0.025
+		consumer_goods_factor = -0.1
+		conversion_cost_civ_to_mil_factor = -0.1
 		
 		folder = {
 			name = etax_folder
@@ -857,10 +1188,21 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 200
+			factor = 2
+			
 			modifier = {
-				add = 20
-				has_war = yes
+				factor = 6
+				date > "1938.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1939.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1940.1.1"
 			}
 		}
 	}
@@ -875,7 +1217,7 @@ technologies = {
 		research_cost = 3.0
 		start_year = 1940
 		
-		production_factory_efficiency_gain_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.10
 		
 		folder = {
 			name = etax_folder
@@ -887,11 +1229,21 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
 			
 			modifier = {
-				add = 20
-				has_war = yes
+				factor = 6
+				date > "1940.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1941.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1942.1.1"
 			}
 		}
 	}
@@ -908,11 +1260,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1941
 		
-		production_speed_buildings_factor = 0.075
+		production_speed_buildings_factor = 0.05
+		industry_repair_factor = 0.05
 		
 		folder = {
 			name = etax_folder
@@ -924,10 +1277,22 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+			
+			
 			modifier = {
-				add = 20
-				has_war = yes
+				factor = 6
+				date > "1941.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1942.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1943.1.1"
 			}
 		}
 	}
@@ -950,13 +1315,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1936
 		
-		category_all_infantry = {
-			default_morale = 0.025
-		}
+		army_morale_factor = 0.02
 		
 		folder = {
 			name = etax_folder
@@ -964,18 +1327,23 @@ technologies = {
 		}
 			
 		categories = {
-			land_doctrine			
-			cat_mobile_warfare
-			cat_mass_assault
-			cat_grand_battle_plan
-			cat_superior_firepower
+
+            infantry_tech			
+
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+			
 			modifier = {
-				add = 200
-				has_war = yes
+				factor = 0
+				is_major = yes
+				date < 1940.1.1
+			}
+			modifier = {
+				factor = 2
+				is_major = yes
+				date > 1940.1.2
 			}
 		}
 	}
@@ -991,16 +1359,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1938
 		
 		category_army = {
-			breakthrough = 0.075
-		}
-		category_all_armor = {
-			fuel_consumption_factor = 0.05
-			supply_consumption_factor= 0.05
+			breakthrough = 0.05
 		}
 		
 		folder = {
@@ -1009,40 +1373,48 @@ technologies = {
 		}
 			
 		categories = {
-			land_doctrine			
-			cat_mobile_warfare
-			cat_mass_assault
-			cat_grand_battle_plan
-			cat_superior_firepower
+            infantry_tech			
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+
 			modifier = {
-				add = 70
+				factor = 6
+				date > "1938.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1939.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1940.1.1"
+			}
+
+			modifier = {
+				add = 1
 				has_war = yes
 			}
 		}
 	}
 
 	etax_purity = {
-	
-		
 		
 		path = {
 			leads_to_tech = etax_great_leap 
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1940
 		
-		category_all_infantry = {
-			max_organisation = 5
-
-		}
-		training_time_army_factor = 0.075
+		
+		army_org_factor = 0.05
+		training_time_army_factor = 0.05
 		
 		folder = {
 			name = etax_folder
@@ -1050,7 +1422,8 @@ technologies = {
 		}
 			
 		categories = {
-			land_doctrine			
+			land_doctrine
+            infantry_tech			
 			cat_mobile_warfare
 			cat_mass_assault
 			cat_grand_battle_plan
@@ -1058,9 +1431,25 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+
 			modifier = {
-				add = 20
+				factor = 6
+				date > "1940.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1941.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1942.1.1"
+			}
+
+			modifier = {
+				add = 1
 				has_war = yes
 			}
 		}
@@ -1093,10 +1482,25 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+
+			modifier = {
+				factor = 6
+				date > "1941.1.1"
+			}
 			
 			modifier = {
-				add = 50
+				factor = 7
+				date > "1942.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1943.1.1"
+			}
+			
+			modifier = {
+				add = 1
 				has_war = yes
 			}
 		}
@@ -1116,7 +1520,8 @@ technologies = {
 		research_cost = 3.0
 		start_year = 1938
 		
-		supply_consumption_factor= -0.10
+		supply_consumption_factor= -0.05
+		truck_attrition_factor = -0.05
 		
 		
 		
@@ -1126,7 +1531,8 @@ technologies = {
 		}
 			
 		categories = {
-			land_doctrine			
+			land_doctrine
+            infantry_tech			
 			cat_mobile_warfare
 			cat_mass_assault
 			cat_grand_battle_plan
@@ -1149,12 +1555,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1940
 		
-		attrition = -0.10
-		land_reinforce_rate = 0.015
+		attrition = -0.05
+		supply_combat_penalties_on_core_factor = -0.05
 		
 		folder = {
 			name = etax_folder
@@ -1162,18 +1568,28 @@ technologies = {
 		}
 			
 		categories = {
-			land_doctrine			
-			cat_mobile_warfare
-			cat_mass_assault
-			cat_grand_battle_plan
-			cat_superior_firepower
+            infantry_tech	
 		}
 
 		ai_will_do = {
-			factor = 40
 			
 			modifier = {
-				add = 20
+				factor = 6
+				date > "1940.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1941.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1942.1.1"
+			}
+
+			modifier = {
+				add = 1
 				has_war = yes
 			}
 		}
@@ -1205,10 +1621,25 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 60
+			factor = 1
+
+			modifier = {
+				factor = 6
+				date > "1941.1.1"
+			}
 			
 			modifier = {
-				add = 20
+				factor = 7
+				date > "1942.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1943.1.1"
+			}
+
+			modifier = {
+				add = 1
 				has_war = yes
 			}
 		}
@@ -1231,8 +1662,8 @@ technologies = {
 		research_cost = 3.0
 		start_year = 1942
 		
-		production_speed_buildings_factor = 0.05
-		local_resources_factor = 0.05
+		local_resources_factor = 0.1
+		industry_air_damage_factor = -0.1
 		
 		folder = {
 			name = etax_folder
@@ -1244,9 +1675,25 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 40
+			factor = 1
+
 			modifier = {
-				add = 20
+				factor = 6
+				date > "1942.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1943.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1944.1.1"
+			}
+
+			modifier = {
+				add = 1
 				has_war = yes
 			}
 		}
@@ -1265,7 +1712,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes
+		doctrine = no
 		research_cost = 3.0
 		start_year = 1942
 		
@@ -1288,17 +1735,30 @@ technologies = {
 		}
 			
 		categories = {
-			land_doctrine			
-			cat_mobile_warfare
-			cat_mass_assault
-			cat_grand_battle_plan
-			cat_superior_firepower
+            infantry_tech			
+			industry
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+
 			modifier = {
-				add = 20
+				factor = 6
+				date > "1942.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1943.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1944.1.1"
+			}
+
+			modifier = {
+				add = 1
 				has_war = yes
 			}
 		}
@@ -1320,15 +1780,31 @@ technologies = {
 			
 		categories = {
 			industry
+			construction_tech
 		}
 		
 		industrial_capacity_factory = 0.10
 
 		ai_will_do = {
-			factor = 20
+			factor = 1
 			
 			modifier = {
-				add = 20
+				factor = 6
+				date > "1943.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1944.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1945.1.1"
+			}
+
+			modifier = {
+				add = 1
 				has_war = yes
 			}
 			
@@ -1366,9 +1842,25 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 70
+			factor = 1
+
 			modifier = {
-				add = 200
+				factor = 6
+				date > "1943.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1944.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1945.1.1"
+			}
+
+			modifier = {
+				add = 1
 				has_war = yes
 			}
 		}
@@ -1380,7 +1872,7 @@ technologies = {
 		
 		xor = { etax_super_soldiers }
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1943
 		
@@ -1396,9 +1888,25 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 60
+			factor = 1
+			
 			modifier = {
-				add = 20
+				factor = 6
+				date > "1943.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1944.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1945.1.1"
+			}
+
+			modifier = {
+				add = 1
 				has_war = yes
 			}
 		}
@@ -1408,11 +1916,11 @@ technologies = {
 		
 		xor = { etax_the_bomb }
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1943
 		
-		army_speed_factor = 0.07
+		army_speed_factor = 0.05
 		
 		folder = {
 			name = etax_folder
@@ -1420,7 +1928,8 @@ technologies = {
 		}
 			
 		categories = {
-			land_doctrine			
+			land_doctrine
+            infantry_tech			
 			cat_mobile_warfare
 			cat_mass_assault
 			cat_grand_battle_plan
@@ -1429,9 +1938,25 @@ technologies = {
 		
 
 		ai_will_do = {
-			factor = 60
+			factor = 1
+			
 			modifier = {
-				add = 20
+				factor = 6
+				date > "1943.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1944.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1945.1.1"
+			}
+
+			modifier = {
+				add = 1
 				has_war = yes
 			}
 		}
@@ -1441,7 +1966,7 @@ technologies = {
 
 	etax_moonshot = {
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1943
 		
@@ -1461,15 +1986,32 @@ technologies = {
 			
 		categories = {
 			air_doctrine
+           air_equipment
 			cat_strategic_destruction
 			cat_battlefield_support
 			cat_operational_integrity
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+
 			modifier = {
-				add = 20
+				factor = 6
+				date > "1943.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1944.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1945.1.1"
+			}
+
+			modifier = {
+				add = 1
 				has_war = yes
 			}
 		}
@@ -1477,7 +2019,7 @@ technologies = {
 	
 	etax_seashot = {
 		
-		doctrine = yes	
+		doctrine = no	
 		research_cost = 3.0
 		start_year = 1943
 		
@@ -1498,15 +2040,32 @@ technologies = {
 			
 		categories = {
 			naval_doctrine
+           naval_equipment
 			cat_fleet_in_being
 			cat_trade_interdiction
 			cat_base_strike
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+			
 			modifier = {
-				add = 20
+				factor = 6
+				date > "1943.1.1"
+			}
+			
+			modifier = {
+				factor = 7
+				date > "1944.1.1"
+			}
+			
+			modifier = {
+				factor = 8
+				date > "1945.1.1"
+			}
+
+			modifier = {
+				add = 1
 				has_war = yes
 			}
 		}

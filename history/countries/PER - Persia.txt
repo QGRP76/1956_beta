@@ -36,7 +36,7 @@ recruit_character = PER_ahmad_amirahmadi
 recruit_character = PER_feridum_jam
 recruit_character = PER_Mohammad_Hosayn_Ayrom
 recruit_character = PER_Ahmad_Khan_Nakhjavan
-recruit_character = PER_Azizollah_Zarghami
+#recruit_character = PER_Azizollah_Zarghami	#does not appear as unit leader (at start at least), also duplicate with later entry
 recruit_character = PER_Fazlollah_Zahedi
 recruit_character = PER_haj_ali_razmara
 recruit_character = PER_assadollah_hosseinpour
@@ -48,7 +48,7 @@ recruit_character = PER_Ahmad_Khosravani
 recruit_character = PER_Mohammad_Nakhjavan
 recruit_character = PER_Mahmoud_Afshartous
 recruit_character = PER_Mir_Mohammad_Mohanna
-
+recruit_character = PER_azizollah_zarghami
 # recruit civilian advisors #
 
 recruit_character = PER_Hassan_Taqizadeh
@@ -61,6 +61,8 @@ recruit_character = PER_Mohsen_Sadr
 recruit_character = PER_Mohammad_Tadayyon
 
 add_offsite_building = { type = industrial_complex level = 1 } #oil payment
+
+country_event = { id = r56_persia.1 days = 3086 }		#Mohammed Shah dies of natural causes-> son succeeds
 
 if = {
 	limit = {
@@ -87,6 +89,7 @@ set_technology = {
 if = {
 	limit = {
 		has_dlc = "La Resistance"
+		PER = { is_ai = no }
 	}
 	set_technology = {
 		armored_car1 = 1

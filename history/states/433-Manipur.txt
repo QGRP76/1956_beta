@@ -5,10 +5,9 @@ state={
 	manpower = 11786000
 	
 	state_category = town
-	
-	
-	resources={
-		tungsten=1 # was: 42 moved to Burma like the rest
+
+	resources = {
+		tungsten = 1
 	}
 
 	history={

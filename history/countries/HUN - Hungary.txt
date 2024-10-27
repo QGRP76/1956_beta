@@ -59,19 +59,24 @@ if = {
 if = {
 	limit = {
 		has_dlc = "La Resistance"
+		HUN = { is_ai = no }
 	}
 	set_technology = {
 		armored_car1 = 1
 	}
 }
+add_ideas = {
+	disarmed_nation
+}
+if = {
+	limit = { has_dlc = "Arms Against Tyranny" }
+	add_ideas = { HUN_treaty_of_triannon_aat }
+}
 if = {
 	limit = {
-		has_dlc = "Death or Dishonor"
+		NOT = { has_dlc = "Arms Against Tyranny" }
 	}
-	add_ideas = {
-		disarmed_nation
-		HUN_treaty_of_triannon
-	}
+	add_ideas = { HUN_treaty_of_triannon }
 }
 
 set_politics = {
@@ -135,6 +140,7 @@ recruit_character = HUN_john_von_neumann
 
 recruit_character = HUN_mate_zalka # communist guy you can get if you turn communist quickly enough.
 recruit_character = HUN_ferenc_munnich
+recruit_character = HUN_gyorgy_lukacs
 if = {
 	limit = {
 		has_dlc = "La Resistance"

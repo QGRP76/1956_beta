@@ -106,10 +106,8 @@
 			}
 			else_if = {
 				limit = {
-					AND = {
-				 		NOT = { has_idea = SWI_rearmaming_idea }
-						NOT = { has_idea = SWI_war_bonds }
-					}
+					NOT = { has_idea = SWI_rearmaming_idea }
+					NOT = { has_idea = SWI_war_bonds }
 				}
 				add_ideas = { SWI_war_bonds } 
 			}
@@ -540,7 +538,7 @@
 
 	focus = {
 		id = SWI_liechtenstein_defence_plan
-		icon = GFX_goal_generic_befriend_liechtenstein
+		icon = GFX_goal_LIE_swiss_cooperation
 		prerequisite = { focus = SWI_promote_guisan focus = SWI_frontier_defense_plan }
 		x = 1
 		y = 1
@@ -590,11 +588,68 @@
 				}
 			}
 		}
-		search_filters = {}
 
 		completion_reward = {
 			LIE = {
 				country_event = { id = liechtenstein.2 hours = 6 }
+			}
+		}
+	}
+
+	focus = {
+		id = SWI_support_the_liechtensteiner_army
+		icon = GFX_goal_generic_befriend_liechtenstein
+		prerequisite = { focus = SWI_liechtenstein_defence_plan }
+		x = 0
+		y = 1
+		relative_position_id = SWI_liechtenstein_defence_plan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.2 
+				SWI_someone_is_about_to_be_angry = yes 
+			}
+		}
+
+		available = {
+			is_subject = no
+			LIE = {
+				has_army_manpower = { size > 1000 }
+				custom_trigger_tooltip = {
+					tooltip = LIE_agreed_to_cooperation
+					has_global_flag = LIE_SWI_cooperation
+					LIE = {
+						has_government = democratic
+					}
+				}
+			}
+			NOT = {
+				has_war_with = LIE
+			}
+		}
+		search_filters = {FOCUS_FILTER_MILITARY_EQUIPMENT}
+
+		completion_reward = {
+			LIE = {
+				add_opinion_modifier = { target = SWI modifier = RAJ_Weapon_Shipments }
+				add_equipment_to_stockpile = {
+					producer = SWI
+					type = infantry_equipment
+					amount = 2000
+				}
+				add_equipment_to_stockpile = {
+					producer = SWI
+					type = artillery_equipment
+					amount = 250
+				}
+				add_equipment_to_stockpile = {
+					producer = SWI
+					type = motorized_equipment
+					amount = 15
+				}
 			}
 		}
 	}
@@ -1350,7 +1405,7 @@
 			add_manpower = 30000 
 			add_tech_bonus = {
 				name = SWI_expanded_military_support
-				bonus = 2.0
+				bonus = 1
 				uses = 3
 				category = support_tech
 			}
@@ -1406,7 +1461,6 @@
 				category = hospital_tech
 			}
 			add_ideas = { SWI_spirit_of_saint_bernard_idea }
-			show_ideas_tooltip = SWI_saint_bernard_idea_desc
 			hidden_effect = {
 				set_technology = { 
 					SWI_saint_bernard_tech = 1
@@ -1560,7 +1614,7 @@
 					anti_tank_brigade = { x = 1 y = 2 }
 				}
 				support = {
-					anti_tank = { x = 0 }			
+					anti_tank = { x = 0 y = 0 }			
 				}
 			}
 			3 = {
@@ -1732,10 +1786,10 @@
 							include_locked = yes 
 						}
 					}
-					add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex 
-						level = 3
+						level = 2
 						instant_build = yes 
 					}
 				}
@@ -1749,10 +1803,10 @@
 							include_locked = yes 
 						}
 					}
-					add_extra_state_shared_building_slots = 2 
+					add_extra_state_shared_building_slots = 1 
 					add_building_construction = {
 						type = industrial_complex 
-						level = 2
+						level = 1
 						instant_build = yes 
 					}
 				}
@@ -1805,10 +1859,10 @@
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory 
-						level = 3 
+						level = 1
 						instant_build = yes
 					} 
 				}
@@ -1879,21 +1933,6 @@
 						all_provinces = yes
 						limit_to_border_country = GER
 					}
-				}
-				if = {
-					limit = { 
-						free_building_slots = {
-							building = arms_factory 
-							size > 1
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory 
-						level = 2 
-						instant_build = yes
-					} 
 				}
 			}		
 			SWI_add_suspicious_prep_opinion = yes 		
@@ -2000,7 +2039,10 @@
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER } 
 
 		completion_reward = {
-			add_ideas = { SWI_banned_foreign_nazi_propaganda_idea }
+			swap_ideas = { 
+				remove_idea = SWI_foreign_fascist_propaganda
+				add_idea = SWI_banned_foreign_nazi_propaganda_idea 
+			}
 			if = {
 				limit = {
 					SWI_is_historical_ai = no
@@ -2169,6 +2211,7 @@
 					}
 					create_intelligence_agency = {
 						icon = "GFX_intelligence_agency_logo_SWI_swi_buero_ha" 
+						name = "Bueno Ha"
 					}
 				}
 				add_ideas = { SWI_buero_ha_idea }
@@ -2358,7 +2401,8 @@
 						has_intelligence_agency = no 
 					}
 					create_intelligence_agency = {
-						icon = "GFX_intelligence_agency_logo_federal_police_intelligence" 
+						icon = "GFX_intelligence_agency_logo_federal_police_intelligence"
+						name = "Federal Police Intelligence"
 					}
 				}
 
@@ -5779,15 +5823,6 @@
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-			if = {
-				limit = {
-					FRA = {
-						exists = yes 
-						has_government = democratic 
-					}
-
-				}
-			}
 			unlock_decision_tooltip = { decision = SWI_case_west_decision show_effect_tooltip = yes}
 			FRA = {
 				add_opinion_modifier = {
@@ -6478,11 +6513,11 @@
 							include_locked = yes 
 						}
 					}
-				}
-				add_building_construction = {
-					type = arms_factory 
-					level = 3 
-					instant_build = yes 
+					add_building_construction = {
+						type = arms_factory 
+						level = 3 
+						instant_build = yes 
+					}
 				}
 			}
 			swap_ideas = {
@@ -6599,7 +6634,7 @@
 			add_tech_bonus = {
 				name = SWI_tank_development
 				bonus = 0.75
-				uses = 3 
+				uses = 2
 				category = armor
 			}
 		}
@@ -6674,7 +6709,7 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = SWI_artillery
-				bonus = 0.75
+				ahead_reduction = 0.5
 				uses = 3
 				category = artillery
 			}
@@ -6737,8 +6772,8 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = SWI_swiss_heavy_planes
-				bonus = 2.0
-				uses = 2 
+				bonus = 1
+				uses = 1
 				category = heavy_air	
 			}
 			add_equipment_to_stockpile = { 
@@ -6774,8 +6809,8 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = SWI_air_research
-				bonus = 2.0
-				uses = 3
+				bonus = 1
+				uses = 2
 				category = air_equipment
 			}
 		}
