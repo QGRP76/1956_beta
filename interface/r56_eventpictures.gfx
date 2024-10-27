@@ -4431,6 +4431,7 @@ spriteTypes = {
 	}
 
 ###------> MNC <><> <><> <><> <><> <><>
+
 	spriteType = {
 		name = "GFX_report_event_mnc_monaco"
 		texturefile = "gfx/event_pictures/MNC/GFX_report_event_mnc_monaco.dds"
@@ -4447,12 +4448,14 @@ spriteTypes = {
 		name = "GFX_report_event_mnc_monaco_resists"
 		texturefile = "gfx/event_pictures/MNC/GFX_report_event_mnc_monaco_resists.dds"
 	}
-}
 
 ###------> MEN <><> <><> <><> <><> <><>
+
 	spriteType = {
 		name = "GFX_report_event_r56_suiyuan"
 		texturefile = "gfx/event_pictures/MEN/report_event_r56_suiyuan.dds"
 	}
+
+}
 
 #####---------------------------------------------------------------------> End

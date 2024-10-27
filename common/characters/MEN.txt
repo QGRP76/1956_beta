@@ -1,6 +1,6 @@
 characters={
 	MEN_prince_demchugdongrub={
-		name="Prince Demchugdongrub"
+		name="Demchugdongrub"
 		portraits={
 			army={
 				large="GFX_portrait_men_demchugdongrub"
@@ -19,8 +19,6 @@ characters={
 			id=-1
 		}		
 	}
-
-
 	MEN_nima_ordsor={
 		name="Nima-odsor"
 		portraits={
@@ -41,9 +39,6 @@ characters={
 			id=-1
 		}		
 	}
-
-
-
 	MEN_Ulanhu={
 		name="Ulanhu"
 		portraits={
@@ -60,8 +55,6 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
-
-
 		corps_commander = {
 			traits = {
 				trickster 
@@ -74,13 +67,7 @@ characters={
 			logistics_skill = 3
 			legacy_id = -1
 		}
-				
 	}
-
-
-
-
-
 	MEN_Serengdongrub={
 		name="Serengdongrub"
 		portraits={
@@ -96,11 +83,7 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
-				
 	}
-
-
-
 	MEN_navy_chief={#random?
 		name="Admiral in Chief"
 		portraits={
@@ -131,20 +114,18 @@ characters={
 	}	
 	MEN_li_shouxin={
 		advisor={
-			
-			
 			slot = army_chief
 			idea_token = MEN_li_shouxin
 			allowed = {
-					original_tag = MEN
-				}
-				traits = {
-					army_chief_offensive_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+				original_tag = MEN
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 		field_marshal = {
 			traits = { cavalry_officer organizer }
@@ -164,21 +145,19 @@ characters={
 	}
 	MEN_wang_ying={
 		advisor={
-			
-			
 			slot = high_command
 			idea_token = MEN_wang_ying
 			ledger = army
-				allowed = {
-					original_tag = MEN
-				}
-				traits = {
-					army_cavalry_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+			allowed = {
+				original_tag = MEN
+			}
+			traits = {
+				army_cavalry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 		corps_commander = {
 			traits = { cavalry_officer }
@@ -224,16 +203,16 @@ characters={
 			slot = high_command
 			idea_token = MEN_hesehn_tiemei
 			ledger = army
-				allowed = {
-					original_tag = MEN
-				}
-				traits = {
-					army_logistics_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+			allowed = {
+				original_tag = MEN
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 	MEN_guan_xingde={
@@ -247,15 +226,15 @@ characters={
 			slot = army_chief
 			idea_token = MEN_guan_xingde
 			allowed = {
-					original_tag = MEN
-				}
-				traits = {
-					army_chief_morale_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+				original_tag = MEN
+			}
+			traits = {
+				army_chief_morale_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 	MEN_kyoiji_tomonaga={
@@ -269,16 +248,16 @@ characters={
 			slot = high_command
 			idea_token = MEN_kyoiji_tomonaga
 			ledger = army
-				allowed = {
-					original_tag = MEN
-				}
-				traits = {
-					army_infantry_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+			allowed = {
+				original_tag = MEN
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 	MEN_deng_linge={
@@ -290,19 +269,16 @@ characters={
 		}
 		advisor={
 			cost = 100
-			
 			slot = theorist
 			idea_token = MEN_deng_linge
 			ledger = air
-				allowed = {
-					original_tag = MEN
-				}
-				
-				traits = {
-					air_warfare_theorist
-				}
+			allowed = {
+				original_tag = MEN
+			}
+			traits = {
+				air_warfare_theorist
+			}
 		}
-		
 	}
 	MEN_hung_zhehuang={
 		name=MEN_hung_zhehuang
@@ -313,23 +289,19 @@ characters={
 		}
 		advisor={
 			cost = 100
-			
 			slot = theorist
 			idea_token = MEN_hung_zhehuang
 			ledger = army
-				allowed = {
-					original_tag = MEN
-				}
-				
-				traits = {
-					military_theorist
-				}
+			allowed = {
+				original_tag = MEN
+			}
+			traits = {
+				military_theorist
+			}
 		}
 	}
 	MEN_nakajima_kesago={
 		advisor={
-			
-			
 			slot = air_chief
 			idea_token = MEN_nakajima_kesago
 			allowed = {
@@ -338,10 +310,10 @@ characters={
 			traits = {
 				air_chief_ground_support_2
 			}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 		name="Nakajima Kesago"
 		portraits={

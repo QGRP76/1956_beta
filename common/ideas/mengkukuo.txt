@@ -1,6 +1,7 @@
 ideas = {
 
 	country = {	
+
         MEN_Autonomous_Province = {
 			
             allowed = {
@@ -26,8 +27,6 @@ ideas = {
 			}
         }
 
-
-
         MEN_Autonomous_Province_1 = {
 			name = MEN_Autonomous_Province
             allowed = {
@@ -47,7 +46,6 @@ ideas = {
 				autonomy_gain = 0.75
 			}
         }
-
 
 		MEN_Autonomous_Province_2 = {
 			name = MEN_Autonomous_Province
@@ -69,7 +67,6 @@ ideas = {
 			}
         }
 
-
 		MEN_Autonomous_Province_3 = {
 			name = MEN_Autonomous_Province
             allowed = {
@@ -90,8 +87,6 @@ ideas = {
 				autonomy_gain = 5.0
 			}
         }
-
-
 
         MEN_mongol_raids = {
             allowed = {
@@ -118,8 +113,6 @@ ideas = {
 			}
         }
 
-
-
         MEN_increasing_jap_influence = {
             allowed = {
 				original_tag = MEN
@@ -134,18 +127,14 @@ ideas = {
 			picture = generic_intel_bonus
 			
 			modifier = {
-			fascism_drift = 0.05
-            fascism_acceptance = 10
-
+				fascism_drift = 0.05
+				fascism_acceptance = 10
 			}
         }
 
-
-
-
 		MEN_weakened_jap_influence = {
             allowed = {
-			original_tag = MEN
+				original_tag = MEN
 			}
 
 			allowed_civil_war = {
@@ -157,8 +146,7 @@ ideas = {
 			picture = generic_intel_bonus
 			
 			modifier = {
-            fascism_acceptance = 10
-
+           	 	fascism_acceptance = 10
 			}
         }
 
@@ -178,15 +166,12 @@ ideas = {
 			modifier = {
 				fascism_acceptance = 25
 				monthly_population = 0.15
-
-
 			}
         }
 
-
 		MEN_military_orgs_banned = {
             allowed = {
-			original_tag = MEN
+				original_tag = MEN
 			}
 
 			allowed_civil_war = {
@@ -198,13 +183,10 @@ ideas = {
 			picture = ast_volunteer_defence_corps
 			
 			modifier = {
-            mobilization_speed = -0.01
-			conscription_factor = -0.1
-			
+           	 	mobilization_speed = -0.01
+				conscription_factor = -0.1
 			}
         }
-
-
 
 		MEN_the_three_principles = {
 			removal_cost = -1
@@ -219,16 +201,11 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				stability_factor = 0.1
 				consumer_goods_factor = -0.05
 			}
 		}
-
-
-
 
 		MEN_the_three_principles_1 = {
 			removal_cost = -1
@@ -243,17 +220,12 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				stability_factor = 0.1
 				consumer_goods_factor = -0.05
 				democratic_drift = 0.1
 			}
 		}
-
-
-
 
 		MEN_the_three_principles_2 = {
 			removal_cost = -1
@@ -268,16 +240,12 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				stability_factor = 0.15
 				consumer_goods_factor = -0.05
 				political_power_factor = 0.05
 			}
 		}
-
-
 
 		MEN_the_new_life_movement = {
 			removal_cost = -1
@@ -292,17 +260,12 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				stability_factor = -0.05
 				production_factory_efficiency_gain_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
 			}
 		}
-
-
-
 
 		MEN_the_new_life_movement_1 = {
 			removal_cost = -1
@@ -317,15 +280,12 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				political_power_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
 			}
 		}
-
 
 		MEN_the_new_life_movement_2 = {
 			removal_cost = -1
@@ -340,8 +300,6 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				stability_factor = -0.05
 				production_factory_efficiency_gain_factor = 0.05
@@ -351,8 +309,6 @@ ideas = {
 				industrial_capacity_factory = 0.05
 			}
 		}
-
-
 
 		MEN_the_new_life_movement_3 = {
 			removal_cost = -1
@@ -367,8 +323,6 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				political_power_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.05
@@ -378,9 +332,6 @@ ideas = {
 				industrial_capacity_factory = 0.05
 			}
 		}
-
-
-
 
 		MEN_the_new_life_movement_4 = {
 			removal_cost = -1
@@ -395,8 +346,6 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				political_power_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.05
@@ -409,8 +358,6 @@ ideas = {
 				production_speed_infrastructure_factor = 0.1 
 			}
 		}
-
-
 
 		MEN_the_new_life_movement_5 = {
 			removal_cost = -1
@@ -425,8 +372,6 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				political_power_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.05
@@ -438,10 +383,6 @@ ideas = {
 				production_speed_infrastructure_factor = 0.1 
 			}
 		}
-
-
-
-
 
 		MEN_invite_western_scholars = {
 			removal_cost = -1
@@ -456,14 +397,10 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				research_speed_factor = 0.05
 			}
 		}
-
-
 
 		MEN_tax_reform = {
 			removal_cost = -1
@@ -478,14 +415,10 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				consumer_goods_factor = -0.05
 			}
 		}
-
-
 
 		MEN_invited_civllian_companys = {
 			removal_cost = -1
@@ -500,13 +433,10 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				production_speed_industrial_complex_factor = 0.1
 			}
 		}
-
 
 		MEN_constitutional_government = {
 			removal_cost = -1
@@ -521,13 +451,10 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				stability_factor = 0.25
 			}
 		}
-
 
 		MEN_the_golden_decade = {
 			removal_cost = -1
@@ -542,13 +469,10 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				production_speed_industrial_complex_factor = 0.1
 			}
 		}
-
 
 		MEN_payment_for_suiyuan = {
 			removal_cost = -1
@@ -562,8 +486,6 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			
-			
 			
 			modifier = {
 				consumer_goods_factor = -0.05
@@ -583,15 +505,10 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				consumer_goods_factor = 0.05
 			}
 		}
-
-
-
 
 		MEN_chinese_triumph = {
 			removal_cost = -1
@@ -606,16 +523,12 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				political_power_factor = 0.15 
 				stability_factor = 0.1
 				war_support_factor = 0.1
 			}
 		}
-
-
 
 		MEN_increased_presence_at_the_international = {
 			removal_cost = -1
@@ -630,14 +543,10 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				communism_drift = 0.1
 			}
 		}
-
-
 
 		MEN_communist_partitan_millitas = {
 			removal_cost = -1
@@ -652,18 +561,12 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				communism_drift = 0.05
 				conscription = 0.02
 				resistance_damage_to_garrison_on_our_occupied_states = 0.1
 			}
 		}
-
-
-
-
 
 		MEN_limited_nobility_power = {
 			removal_cost = -1
@@ -680,17 +583,10 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				political_power_factor = -0.25
 			}
 		}
-
-
-
-
-
 
 		MEN_chinese_communism = {
 			removal_cost = -1
@@ -705,16 +601,12 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				communism_drift = 0.1
 				conscription = 0.02
 				autonomy_gain = 2.5
 			}
 		}
-
-
 
 		MEN_chinese_communism_2 = {
 			removal_cost = -1
@@ -729,16 +621,11 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				communism_drift = 0.1
 				conscription = 0.05
 			}
 		}
-
-
-
 
 		MEN_a_communist_beacon_in_china = {
 			removal_cost = -1
@@ -753,17 +640,11 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				consumer_goods_factor = -0.05
 				political_power_factor = 0.1
 			}
 		}
-
-
-
-
 
 		MEN_funds_for_chinese_communists = {
 			removal_cost = -1
@@ -778,15 +659,10 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				consumer_goods_factor = 0.05
 			}
 		}
-
-
-
 
 		MEN_the_great_inner_mongol_army = {
 			removal_cost = -1
@@ -801,17 +677,12 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_speed_factor = 0.1
 			}
 		}
-
-
-
 
 		MEN_increased_cooperation_with_the_united_front = {
 			removal_cost = -1
@@ -826,17 +697,12 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			targeted_modifier = {
-            tag = JAP
-            attack_bonus_against = 0.05
-            defense_bonus_against = 0.05
+            	tag = JAP
+            	attack_bonus_against = 0.05
+            	defense_bonus_against = 0.05
             }
 		}
-
-
-
 
 		MEN_assist_in_the_great_patriotic_war = {
 			removal_cost = -1
@@ -850,17 +716,13 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			
-			
-			
+
 			targeted_modifier = {
-            tag = GER
-            attack_bonus_against = 0.10
-            defense_bonus_against = 0.05
+				tag = GER
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.05
             }
 		}
-
-
 
 		MEN_anti_japanese_stratagems = {
 			removal_cost = -1
@@ -876,15 +738,12 @@ ideas = {
 			}
 			
 			
-			
 			targeted_modifier = {
-            tag = JAP
-            attack_bonus_against = 0.20
-            defense_bonus_against = 0.20
+				tag = JAP
+				attack_bonus_against = 0.20
+				defense_bonus_against = 0.20
             }
 		}
-
-
 
 		MEN_end_the_century_of_humiliation = {
 			removal_cost = -1
@@ -899,31 +758,26 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			targeted_modifier = {
-            tag = JAP
-            attack_bonus_against = 0.15
-            defense_bonus_against = 0.15
+				tag = JAP
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
             }
 
 			targeted_modifier = {
-            tag = MAN
-            attack_bonus_against = 0.15
-            defense_bonus_against = 0.15
+				tag = MAN
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
             }
 		}
-
-
-
 		
         MEN_mon_mil_gov_made = {
             allowed = {
-			always = yes 
+				always = yes 
 			}
 
 			allowed_civil_war = {
-			always = yes 
+				always = yes 
 			}
 			
 			removal_cost = -1
@@ -937,16 +791,13 @@ ideas = {
 			}
         }
 
-
-
-
 		MEN_Chairman_Yondonwangchug = {
             allowed = {
-			always = yes 
+				always = yes 
 			}
 
 			allowed_civil_war = {
-			always = yes 
+				always = yes 
 			}
 			
 			removal_cost = -1
@@ -954,48 +805,32 @@ ideas = {
 			picture = MEX_politicised_army
 			
 			modifier = {
-			 
-			 stability_factor = 0.1
-			 fascism_acceptance = 25
-			 neutrality_acceptance = 25
-			 neutrality_drift = 0.02
+				stability_factor = 0.1
+				fascism_acceptance = 25
+				neutrality_acceptance = 25
+				neutrality_drift = 0.02
 			}
         }
 
-
-
-
-
-		
-
-
-
-
-
 		MEN_strike_our_old_oppressers = {
             allowed = {
-			always = yes 
+				always = yes 
 			}
 
 			allowed_civil_war = {
-			always = yes 
+				always = yes 
 			}
 			
 			removal_cost = -1
 
 			picture = jap_intervene_in_china
-			
-			
 			 
 			targeted_modifier = {
-            tag = CHI
-            attack_bonus_against = 0.1
-            defense_bonus_against = 0.1
+				tag = CHI
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
             }
 		}
-
-
-
 
 		MEN_rebuilding_our_army = {
 			allowed = {
@@ -1016,13 +851,7 @@ ideas = {
 				special_forces_cap = 0.1
 				industrial_capacity_factory = 0.2
 			}
-		
-			
-		
 		}
-
-
-
 
 		MEN_an_independent_army = {
 			allowed = {
@@ -1044,10 +873,6 @@ ideas = {
 			}
 		}
 
-
-
-
-
 		MEN_continue_the_ways_of_old = {
 			allowed = {
 				always = yes 
@@ -1065,12 +890,7 @@ ideas = {
 				cavalry_attack_factor = 0.1
 				cavalry_defence_factor = 0.05
 			}
-		
-			
-		
 		}
-
-
 
 		MEN_horses_of_steel = {
 			allowed = {
@@ -1089,13 +909,7 @@ ideas = {
 				army_armor_attack_factor = 0.1
 				army_armor_speed_factor = 0.025
 			}
-			
-			
-		
 		}
-
-
-
 
 		MEN_every_man_a_rifle = {
 			allowed = {
@@ -1115,13 +929,7 @@ ideas = {
 					build_cost_ic = -0.15 instant = yes
 				}
 			}
-		
-			
-		
 		}
-
-
-
 
 		men_every_man_a_truck = {
 			allowed = {
@@ -1140,15 +948,8 @@ ideas = {
 				motorized_equipment = {
 					build_cost_ic = -0.1 instant = yes
 				}
-			}	
-		
+			}
 		}
-
-
-
-
-
-
 
 		MEN_Embrasing_Our_Heritage = {
 			allowed = {
@@ -1171,7 +972,6 @@ ideas = {
 			}
 		}
 
-
 		MEN_the_bank_of_mengjiang = {
 			removal_cost = -1
 			
@@ -1184,8 +984,6 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			
-			
 			
 			modifier = {
 				consumer_goods_factor = 0.05
@@ -1207,8 +1005,6 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				consumer_goods_factor = 0.1
 				production_speed_industrial_complex_factor = 0.15
@@ -1217,8 +1013,6 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.05 
 			}
 		}
-
-
 
 		MEN_the_bank_of_mengjiang_3 = {
 			removal_cost = -1
@@ -1233,8 +1027,6 @@ ideas = {
 				always = yes
 			}
 			
-			
-			
 			modifier = {
 				consumer_goods_factor = 0.125
 				production_speed_industrial_complex_factor = 0.15
@@ -1244,7 +1036,7 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 		}
-	
+
 	}
 
 }

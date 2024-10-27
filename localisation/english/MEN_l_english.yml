@@ -593,3 +593,8 @@
  MEN_close_our_borders_with_japan:0 "Close Our Borders With [JAP.GetNonIdeologyName]"
  MEN_ban_military_orgs:0 "Ban Military Organizations"
  MEN_ban_fascist_views:0 "Ban Fascist Political Views"
+
+ ################## Miscellaneous ##################
+ spirit_of_genghis:0 "Spirit of Genghis"
+
+ autonomous_state:0 "Autonomous State"

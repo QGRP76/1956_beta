@@ -602,16 +602,15 @@
  MEK_neutrality_party:0 "Haus	Mecklenburg-Schwerin"
 
  #MEN
- MEN_mongal_council_long:0 "Mongol Local Autonomy Political Affairs Committee"
- MEN_mongal_council:0 "Pailingmiao Council"
- MEN_communism_party:0 "DMAQN"
- MEN_communism_party_long:0 "Dotoyadu Mongyol-un Arad-un Qubisqal-un Nam"
- MEN_fascism_party:0 "MRC"
- MEN_fascism_party_long:0 "Mongol Revival Committee"
-
- #fictious
- MEN_democratic_party:0 "DPIM"
- MEN_democratic_party_long:0 "Democratic Party of Inner Mongolia"
+ 
+ MEN_communism_party:0 "ÖMAKN"
+ MEN_communism_party_long:0 "Övör Mongolyn Ardyn Khuvsgalt Nam"
+ MEN_fascism_party:0 "ÖMAK"
+ MEN_fascism_party_long:0 "Övör Mongolyn Autonomit Khödölgön"
+ MEN_democratic_party:0 "ÖMAN-K"
+ MEN_democratic_party_long:0 "Övör Mongolyn Ardchilsan Nam - Kuomintang"
+ MEN_neutrality_party:0 "Bailingmiao Council"
+ MEN_neutrality_party_long:0 "Bailingmiao Council"
 
  #MNC
  MNC_neutrality_party:0 "Maison de Grimaldi"

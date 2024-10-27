@@ -1,9 +1,6 @@
 ﻿capital = 611
 
-oob = "MEN_1936"
-
-
-					
+oob = "MEN_1936"	
 
 recruit_character = MEN_prince_demchugdongrub
 recruit_character = MEN_nima_ordsor
@@ -41,28 +38,18 @@ set_technology = {
 	etax_doctrine = 1
 	camo = 1
 	
-	
 	infantry_weapons = 1
 	
 }
 set_country_flag = started_out_as_landlocked
+
 CHI = {
-	if = {
-		limit = {
-			has_dlc = "Together for Victory"
-		}
-		set_autonomy = {
-			target = MEN
-			autonomous_state = satellite
-			freedom_level = 0.4
-		}
-		else = {
-			puppet = MEN
-		}
+	set_autonomy = {
+		target = MEN
+		autonomy_state = autonomous_state
+		freedom_level = 0.85
 	}
 }
-
-set_cosmetic_tag = MongalCouncilCtag
 
 set_politics = {
 	ruling_party = neutrality
