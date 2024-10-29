@@ -162,7 +162,7 @@ characters = {
 	POR_jose_manuel_sarmento_de_beires = {
 		advisor = {
 			cost = 100
-			slot = theorist
+			slot = air_chief
 			idea_token = POR_jose_manuel_sarmento_de_beires
 			ledger = air
 			allowed = { original_tag = POR }
@@ -176,7 +176,7 @@ characters = {
 				else = { has_completed_focus = POR_hold_fair_elections }
 			}
 			name = "POR_jose_manuel_sarmento_de_beires"
-			traits = { air_warfare_theorist }
+			traits = { air_chief_all_weather_2 }
 		}
 		name = POR_jose_manuel_sarmento_de_beires
 		portraits = {
@@ -440,7 +440,7 @@ characters = {
 			slot = navy_chief
 			idea_token = POR_jaime_afreixo
 			allowed = { original_tag = POR }
-			traits = { navy_chief_decisive_battle_2 }
+			traits = { navy_chief_old_guard }
 			cost = 100
 			ai_will_do = { base = 1 }
 		}
@@ -455,8 +455,8 @@ characters = {
 			slot = navy_chief
 			idea_token = POR_americo_tomas
 			allowed = { original_tag = POR }
-			traits = { navy_screen_2 }
-			cost = 200
+			traits = { navy_chief_decisive_battle_2 }
+			cost = 100
 			ai_will_do = { base = 1 }
 		}
 		name = POR_americo_tomas
@@ -1118,7 +1118,7 @@ characters = {
 			ledger = navy
 			allowed = { original_tag = POR }
 			traits = { navy_fleet_logistics_2 }
-			cost = 200
+			cost = 100
 			ai_will_do = { base = 1 }
 		}
 		navy_leader = {
@@ -1188,7 +1188,7 @@ characters = {
 			ledger = navy
 			allowed = { original_tag = POR }
 			traits = { navy_screen_2 }
-			cost = 200
+			cost = 100
 			ai_will_do = { base = 1.000 }
 		}
 		navy_leader = {
