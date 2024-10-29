@@ -2662,3 +2662,97 @@ country_event = {
 		name = portugal.57.a
 	}
 }
+country_event = {	#Portuguese General Election
+	id = portugal.58
+	title = portugal.58.t
+	desc = portugal.58.d
+	is_triggered_only = yes
+	picture = GFX_report_event_generic_peaceful_annexation
+	option = {		#José Norton de Matos
+		name = portugal.58.a
+		set_politics = { 
+			ruling_party = democratic 
+			elections_allowed = yes
+			election_frequency = 48
+		}
+		custom_effect_tooltip = CHL_skip_one_line_tt
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		custom_effect_tooltip = CHL_skip_one_line_tt
+		add_country_leader_role = {
+			character = POR_jose_norton_de_matos
+			country_leader = {
+				ideology = liberalism
+				traits = { 
+					popular_figurehead2
+					retired_officer 
+				}
+				expire = "1965.1.1"
+			}
+			promote_leader = yes
+		}
+	}
+	option = { 		#José Domingues dos Santos
+		name = portugal.58.b
+		set_politics = { 
+			ruling_party = democratic 
+			elections_allowed = yes
+			election_frequency = 48
+		}
+		custom_effect_tooltip = CHL_skip_one_line_tt
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.1
+		}
+		custom_effect_tooltip = CHL_skip_one_line_tt
+		add_country_leader_role = {
+			character = POR_jose_domingues_dos_santos
+			country_leader = {
+				ideology = socialism
+				traits = { resolute_social_democrat }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes
+		}
+		
+	}
+	option = {		#Bento António Gonçalves
+		name = portugal.58.c
+		set_politics = { 
+			ruling_party = communism
+			elections_allowed = yes
+			election_frequency = 48
+		}
+		custom_effect_tooltip = CHL_skip_one_line_tt
+		add_popularity = {
+			ideology = communism
+			popularity = 0.1
+		}
+		custom_effect_tooltip = CHL_skip_one_line_tt
+		if = {
+			limit = { has_country_flag = POR_end_the_popular_front_flag }
+			add_country_leader_role = {
+				character = POR_bento_goncalves
+				country_leader = {
+					ideology = marxism
+					traits = { man_of_the_nation }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes
+			}
+		}
+		else = {
+			add_country_leader_role = {
+				character = POR_bento_goncalves
+				country_leader = {
+					ideology = democratic_socialism
+					traits = { man_of_the_nation }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes
+			}
+		}
+	}
+}

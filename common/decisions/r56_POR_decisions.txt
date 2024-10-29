@@ -313,7 +313,7 @@ POR_the_path_to_economic_progress = {
 	}
 
 	POR_subsidize_rolling_stock_production = {
-		icon = ger_mefo_bills
+		icon = railroads
 		fire_only_once = no
 		cost = 40
 		ai_will_do = { base = 50 }
@@ -363,34 +363,15 @@ POR_the_path_to_economic_progress = {
 				has_completed_focus = POR_assistance_for_the_countryside
 			}
 		}
-		days_remove = 135
-		modifier = { consumer_goods_factor = 0.15 }
+		days_remove = 140
+		modifier = { consumer_goods_factor = 0.2 }
 		remove_effect = {
-			add_political_power = 55
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 			add_popularity = {
 				ideology = ROOT
-				popularity = 0.02
+				popularity = 0.03
 			}
-		}
-	}
-
-	POR_invest_in_public_education = {
-		icon = GFX_decision_generic_book
-		fire_only_once = no
-		cost = 50
-		ai_will_do = { base = 25 }
-		visible = {
-			OR = {
-				has_completed_focus = POR_restore_the_social_state
-				has_completed_focus = POR_eradicate_rural_illiteracy	
-				has_completed_focus = POR_plan_for_popular_education
-			} 
-		}
-		days_remove = 150
-		modifier = {
-			research_speed_factor = 0.05
-			stability_weekly = 0.001
 		}
 	}
 
@@ -515,6 +496,25 @@ POR_the_path_to_economic_progress = {
 					popularity = 0.02
 				}
 			}
+		}
+	}
+
+	POR_invest_in_public_education = {
+		icon = GFX_decision_generic_book
+		fire_only_once = no
+		cost = 60
+		ai_will_do = { base = 25 }
+		visible = {
+			OR = {
+				has_completed_focus = POR_restore_the_social_state
+				has_completed_focus = POR_eradicate_rural_illiteracy	
+				has_completed_focus = POR_plan_for_popular_education
+			} 
+		}
+		days_remove = 150
+		modifier = {
+			research_speed_factor = 0.06
+			stability_weekly = 0.001
 		}
 	}
 
@@ -938,12 +938,9 @@ POR_securing_the_revolution = {
 				ideology = democratic
 				popularity = -0.06
 			}
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			custom_effect_tooltip = POR_end_the_popular_front_tt
+			set_country_flag = POR_end_the_popular_front_flag
 		}	
-		ai_will_do = { 
-			base = 100 		#Give an AI factor for their focus path
-		}
+		ai_will_do = { base = 100 }
 	}
 
 	POR_end_the_polticial_trials = {

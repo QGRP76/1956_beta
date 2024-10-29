@@ -234,6 +234,7 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.001
 				neutrality_drift = -0.01
+				democratic_drift = 0.01
 				weekly_casualties_war_support = 0.001
 			}
 		}
@@ -246,6 +247,7 @@ ideas = {
 				political_power_gain = 0.15
 				stability_factor = 0.05
 				neutrality_drift = -0.01
+				democratic_drift = 0.01
 				weekly_casualties_war_support = 0.001
 			}
 		}

@@ -1582,7 +1582,7 @@ focus_tree = {
 		id = POR_never_another_la_lys
 		prerequisite = { focus = POR_import_foreign_machinery }
 		icon = GFX_goal_r56_CAN_industry
-		cost = 8
+		cost = 5
 		ai_will_do = { base = 15 }
 		x = -2
 		y = 2
@@ -1595,21 +1595,12 @@ focus_tree = {
 			if = {
 				limit = { has_war_support < 0.3 }
 				set_war_support = 0.3
-				custom_effect_tooltip = CHL_skip_one_line_tt
 			}
+			else = { add_war_support = 0.05 }
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			if = {
 				limit = { has_idea = civilian_economy }
 				add_ideas = partial_economic_mobilisation
-				custom_effect_tooltip = CHL_skip_one_line_tt
-				random_owned_controlled_state = {
-					prioritize = { 112 }
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
 			}
 			else_if = {
 				limit = { has_idea = low_economic_mobilisation }
@@ -1617,15 +1608,6 @@ focus_tree = {
 				custom_effect_tooltip = CHL_skip_one_line_tt
 				random_owned_controlled_state = {
 					prioritize = { 112 }
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
-				random_owned_controlled_state = {
-					prioritize = { 180 }
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
@@ -1644,15 +1626,6 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-				random_owned_controlled_state = {
-					prioritize = { 180 }
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1666,10 +1639,26 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POR_never_another_la_lys
-		available = { 
-			always = no
-		}
+		available = { has_tech = assembly_line_production }
 		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 112 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 180 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -1992,14 +1981,11 @@ focus_tree = {
 			add_political_power = 25
 			unlock_decision_tooltip = POR_support_the_spanish_nationalists_r56
 			custom_effect_tooltip = CHL_skip_one_line_tt
-			if = {
-				limit = { has_dlc = "La Resistance" }
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip = POR_duarte_jose_pacheco
-				custom_effect_tooltip = CHL_skip_one_line_tt
-				custom_effect_tooltip = available_chief_of_army
-				show_ideas_tooltip = POR_julio_botelho_moniz
-			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = POR_duarte_jose_pacheco
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = POR_julio_botelho_moniz
 			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
@@ -2145,12 +2131,9 @@ focus_tree = {
 				ideology = neutrality
 				popularity = 0.03
 			}	
-			if = {
-				limit = { has_dlc = "La Resistance" }
-				custom_effect_tooltip = CHL_skip_one_line_tt
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip = POR_joao_de_azevedo_coutinho
-			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = POR_joao_de_azevedo_coutinho
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			unlock_decision_tooltip = POR_embrace_pluricontinentalism
 			unlock_decision_tooltip = POR_seek_concordat_with_the_holy_see
@@ -2544,6 +2527,18 @@ focus_tree = {
 			add_political_power = 45
 			custom_effect_tooltip = POR_unite_against_salazar_tt
 			mark_focus_tree_layout_dirty = yes
+			hidden_effect = {
+				set_party_name = {
+					ideology = communism
+					long_name = POR_communism2_party_long
+					name = POR_communism2_party
+				}
+				set_party_name = {
+					ideology = democratic
+					long_name = POR_communism2_party_long
+					name = POR_communism2_party
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL   }
 	}
@@ -2735,12 +2730,9 @@ focus_tree = {
 			custom_effect_tooltip = POR_towards_a_prosperous_proletariat_tt
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			add_ideas = POR_the_question_of_nationalization_idea
-			if = {
-				limit = { has_dlc = "La Resistance" }
-				custom_effect_tooltip = CHL_skip_one_line_tt
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip = POR_bento_de_jesus_caraca
-			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = POR_bento_de_jesus_caraca
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -2813,7 +2805,7 @@ focus_tree = {
 		id = POR_prepare_for_a_war_of_annihilation
 		prerequisite = { focus = POR_exasperate_the_industrialization }
 		icon = GFX_goal_generic_dictatorship_of_proletariat
-		cost = 8
+		cost = 5
 		ai_will_do = { base = 25 }
 		x = 0
 		y = 1
@@ -2875,12 +2867,11 @@ focus_tree = {
 				ideology = democratic
 				popularity = 0.02
 			}
-			if = {
-				limit = { has_dlc = "La Resistance" }
-				custom_effect_tooltip = CHL_skip_one_line_tt
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip = POR_jaime_cortesao
-			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = POR_francisco_da_cunha_leal
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			show_ideas_tooltip = POR_jaime_cortesao
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -2910,12 +2901,8 @@ focus_tree = {
 				add_political_power = 40
 				add_stability = 0.03
 			}
-			if = {
-				limit = { has_dlc = "La Resistance" }
-				custom_effect_tooltip = CHL_skip_one_line_tt
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip = POR_maria_lamas
-			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = POR_maria_lamas
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			custom_effect_tooltip = POR_advance_the_cause_for_equality_tt
 			unlock_decision_tooltip = POR_grant_womens_suffrage
@@ -2959,7 +2946,6 @@ focus_tree = {
 			NOT = { has_completed_focus = POR_curb_political_militias }
 		}
 		completion_reward = {
-	
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL   }
 	}
@@ -3099,15 +3085,10 @@ focus_tree = {
 				remove_idea = POR_divided_revolution
 				add_idea = POR_portugals_road_to_democracy
 			}
-			custom_effect_tooltip = POR_restore_civil_liberties_tt
-			custom_effect_tooltip = CHL_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
-			if = {
-				limit = { has_dlc = "La Resistance" }
-				show_ideas_tooltip = POR_francisco_da_cunha_leal
-				custom_effect_tooltip = CHL_skip_one_line_tt
-			}
 			show_ideas_tooltip = POR_augusto_de_vasconcelos
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = POR_restore_civil_liberties_tt
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}
@@ -3124,6 +3105,15 @@ focus_tree = {
 			NOT = { has_completed_focus = POR_empower_socialist_organizations }
 		}
 		completion_reward = {
+			add_political_power = 75
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}
@@ -3151,12 +3141,9 @@ focus_tree = {
 					add_idea = POR_reactionary_resistance2
 				}
 			}
-			if = {
-				limit = { has_dlc = "La Resistance" }
-				custom_effect_tooltip = CHL_skip_one_line_tt
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip = POR_manuel_goncalves_cerejeira
-			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = POR_manuel_goncalves_cerejeira
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}
@@ -3183,14 +3170,27 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = POR_portugals_road_to_democracy
 				add_idea = POR_hold_fair_elections_idea
+				custom_effect_tooltip = CHL_skip_one_line_tt
 			}
 			if = {
-				limit = { has_dlc = "La Resistance" }
-				custom_effect_tooltip = CHL_skip_one_line_tt
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip = POR_jaime_cortesao
+				limit = { has_country_flag = POR_end_the_popular_front_flag }
+				set_party_name = {
+					ideology = communism
+					long_name = POR_communism_party_long
+					name = POR_communism_party
+				}
+				set_party_name = {
+					ideology = democratic
+					long_name = POR_democratic_party_long
+					name = POR_democratic_party
+				}
 				custom_effect_tooltip = CHL_skip_one_line_tt
 			}
+			country_event = portugal.58
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = POR_jaime_cortesao
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = POR_jose_manuel_sarmento_de_beires
 		}
@@ -3253,15 +3253,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_unity_and_reconciliation
 		completion_reward = {
-			if = {
-				limit = { has_dlc = "La Resistance" }
-				custom_effect_tooltip = CHL_skip_one_line_tt
-				custom_effect_tooltip = available_chief_of_army
-				show_ideas_tooltip = POR_julio_botelho_moniz
-				custom_effect_tooltip = CHL_skip_one_line_tt
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip = POR_joao_de_azevedo_coutinho
-			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = POR_joao_de_azevedo_coutinho
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = POR_julio_botelho_moniz
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}
@@ -3275,11 +3271,8 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_unity_and_reconciliation
 		completion_reward = {
-			if = {
-				limit = { has_dlc = "La Resistance" }
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip = POR_duarte_jose_pacheco
-			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = POR_duarte_jose_pacheco
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}
@@ -3530,7 +3523,7 @@ focus_tree = {
 		id = POR_revanchist_rearmament
 		prerequisite = { focus = POR_end_the_austerity_measures }
 		icon = GFX_goal_generic_factories_green
-		cost = 8
+		cost = 5
 		x = 2
 		y = 1
 		relative_position_id = POR_end_the_austerity_measures
@@ -3663,12 +3656,9 @@ focus_tree = {
 			    long_name = POR_monarchy_party_long
 			    name = POR_monarchy_party
 			}
-			if = {
-				limit = { has_dlc = "La Resistance" }
-				custom_effect_tooltip = CHL_skip_one_line_tt
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip = POR_joao_de_azevedo_coutinho
-			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = POR_joao_de_azevedo_coutinho
 			hidden_effect = {
 				create_country_leader = {		#This guy should probably go in the character file so we can promote instead, not high priority, maybe to-do.
 					name = "Dom Duarte Nuno"

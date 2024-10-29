@@ -295,7 +295,6 @@
  POR_supporting_the_spanish_republic:0 "Supporting the Spanish Republic"
 
  POR_end_the_popular_front:0 "End the Popular Front"
- POR_end_the_popular_front_tt:0 "Upon completion of §YHold Fair Elections§!, ideology will be changed to §YDemocracy§! if it has sufficient support"
  POR_grant_womens_suffrage:0 "Grant Women's Suffrage"
  POR_create_a_constitutional_judiciary:0 "Create a Constitutional Judiciary"
  POR_loosen_censorship_policies:0 "Loosen Censorship Policies"
@@ -390,6 +389,7 @@
  POR_heavy_handed_central_planning:0 "Heavy-Handed Central Planning"
  POR_looming_economic_disaster:0 "Looming Economic Disaster"
  POR_the_path_to_economic_progress:0 "The Path to Economic Progress"
+ POR_the_path_to_economic_progress_desc:0 "Public works projects are a wise investment in the nation that will feed a growing Portugal for years to come. Extending and forming new public works projects would likely bode well for our economy, and show that we are a stabilizing force for the nation as a whole."
  POR_sell_off_seized_assets:0 "Sell Off Seized Assets"
  POR_support_private_collectives:0 "Support Private Collectives"
  POR_land_redistribution:0 "Land Redistribution"
@@ -428,6 +428,11 @@
  POR_hold_fair_elections_desc:0 ""
  POR_has_completed_decision_create_a_constitutional_judiciary_tt:0 "Has completed decision §YCreate a Constitutional Judiciary§!"
  POR_has_completed_decision_loosen_censorship_policies_tt:0 "Has completed decision §YLoosen Censorship Policies§!"
+ portugal.58.t:0 "The [GetYear] Portuguese General Election"
+ portugal.58.d:0 "After suffering through over a decade of dictatorship, and many more of political chaos and uncertainty, there is no doubt: the time to bring true freedom to Portugal's people is today. The question is theirs to answer: who shall be elected to lead our people?"
+ portugal.58.a:0 "Matos's unwavering commitment to the nation will lead Portugal to modernity!"
+ portugal.58.b:0 "Santos will reach across the aisle to forge a brighter tomorrow!"
+ portugal.58.c:0 "Gonçalves's red-tinted democracy shall lead the Portuguese proletariat forward!"
 
  POR_return_to_civil_meritocracy:0 "Return to Civil Meritocracy"
  POR_return_to_civil_meritocracy_desc:0 ""

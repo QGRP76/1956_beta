@@ -7,14 +7,14 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology=despotism
+			ideology = despotism
 			traits = { conservative_nationalist_lar r56_trait_opposed_to_communism }
 			expire = "1965.1.1"
 			id = -1
 		}
 	}
 
-	POR_antonio_resende={
+	POR_antonio_resende = {
 		name = "Antonio Resende"
 		portraits = {
 			civilian = {
@@ -22,8 +22,21 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology=socialism
+			ideology = democratic_socialism
 			traits = {  }
+			expire = "1965.1.1"
+			id = -1
+		}		
+	}
+
+	POR_jose_domingues_dos_santos = {
+		name = "José Domingues dos Santos"
+		portraits = {
+			civilian = { large = "gfx/leaders/POR/r56_portrait_POR_Jose_Domingues_dos_Santos.dds" }
+		}
+		country_leader = {
+			ideology = socialism
+			traits = { resolute_social_democrat }
 			expire = "1965.1.1"
 			id = -1
 		}		
@@ -32,12 +45,10 @@ characters = {
 	POR_bento_goncalves = {
 		name = POR_bento_goncalves
 		portraits = {
-			civilian = {
-				large = "gfx/leaders/POR/r56_portrait_POR_Bento_Goncalves.dds" #"gfx/leaders/POR/portrait_por_bento_goncalves.dds"
-			}
+			civilian = { large = "gfx/leaders/POR/r56_portrait_POR_Bento_Goncalves.dds" }
 		}
 		country_leader = {
-			ideology=marxism
+			ideology = marxism
 			traits = { veteran_communist }
 			expire = "1965.1.1"
 			id = -1
@@ -67,7 +78,7 @@ characters = {
 		name = POR_jose_vicente_de_freitas
 		portraits = {
 			army = {
-				large = "gfx/leaders/POR/r56_portrait_POR_Jose_Vicente_de_Freitas.dds" #"GFX_portrait_por_jose_vicente_de_freitas"
+				large = "gfx/leaders/POR/r56_portrait_POR_Jose_Vicente_de_Freitas.dds" 	#"GFX_portrait_por_jose_vicente_de_freitas"
 				small = "gfx/interface/ideas/idea_POR_jose_vicente_de_freitas.dds"
 			}
 		}
@@ -77,7 +88,6 @@ characters = {
 					has_completed_focus = POR_storm_the_national_assembly
 					has_government = democratic
 				}
-				
 			}
 			traits = { old_guard homeland_connoisseur }
 			skill = 3
@@ -147,67 +157,27 @@ characters = {
 	}
 
 	POR_jose_manuel_sarmento_de_beires = {
-		instance = {
-			allowed = {
-				has_dlc = "La Resistance"
-			}
-			advisor = {
-				cost = 100
-				slot = theorist
-				idea_token = POR_jose_manuel_sarmento_de_beires
-				ledger = air
-				allowed = {
-					original_tag = POR
-					has_dlc = "La Resistance"
-				}
-				available = {
-					if = {
-						limit = {
-							has_global_flag = por_lar_focus_tree
-						}
-						has_completed_focus = POR_allow_free_elections
+		advisor = {
+			cost = 100
+			slot = theorist
+			idea_token = POR_jose_manuel_sarmento_de_beires
+			ledger = air
+			allowed = { original_tag = POR }
+			available = {
+				if = {
+					limit = {
+						has_global_flag = por_lar_focus_tree
 					}
-					else = { has_completed_focus = POR_hold_fair_elections }
+					has_completed_focus = POR_allow_free_elections
 				}
-				name = "POR_jose_manuel_sarmento_de_beires"
-				
-				traits = {
-					air_warfare_theorist
-				}
+				else = { has_completed_focus = POR_hold_fair_elections }
 			}
-			name = POR_jose_manuel_sarmento_de_beires
-			portraits = {
-				army = {
-					small = "GFX_idea_generic_air_europe_2"
-				}
-			}
+			name = "POR_jose_manuel_sarmento_de_beires"
+			traits = { air_warfare_theorist }
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
-			}
-			advisor = {
-				cost = 100
-				slot = theorist
-				idea_token = POR_jose_manuel_sarmento_de_beires
-				allowed = {
-					original_tag = POR
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-				}
-				available = { has_completed_focus = POR_hold_fair_elections }
-				ledger = air
-				traits = {
-					air_warfare_theorist
-				}
-			}
-			name = POR_jose_manuel_sarmento_de_beires
-			portraits = {
-				army = {
-					small = "GFX_idea_generic_air_europe_2"
-				}
-			}
+		name = POR_jose_manuel_sarmento_de_beires
+		portraits = {
+			army = { small = "GFX_idea_generic_air_europe_2" }
 		}
 	}
 
@@ -215,10 +185,7 @@ characters = {
 		advisor = {
 			slot = army_chief
 			idea_token = POR_julio_botelho_moniz
-			allowed = {
-				original_tag = POR
-				has_dlc = "La Resistance"
-			}
+			allowed = { original_tag = POR }
 			available = {
 				if = {
 					limit = { has_global_flag = por_lar_focus_tree }
@@ -229,22 +196,15 @@ characters = {
 						has_completed_focus = POR_continue_salazars_policies
 						has_completed_focus = POR_rehabilitate_the_armed_forces
 					}
-					
 				}
 			}
-			traits = {
-				army_chief_reform_2
-			}
+			traits = { army_chief_reform_2 }
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
+			ai_will_do = { base = 1 }
 		}
 		name = POR_julio_botelho_moniz
 		portraits = {
-			army = {
-				small = "GFX_idea_generic_army_europe_5"
-			}
+			army = { small = "GFX_idea_generic_army_europe_5" }
 		}
 	}
 
@@ -252,22 +212,14 @@ characters = {
 		advisor = {
 			slot = air_chief
 			idea_token = POR_humberto_delgado
-			allowed = {
-				original_tag = POR
-			}
-			traits = {
-				air_chief_ground_support_2
-			}
+			allowed = { original_tag = POR }
+			traits = { air_chief_ground_support_2 }
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
+			ai_will_do = { base = 1 }
 		}
 		name = POR_humberto_delgado
 		portraits = {
-			army = {
-				small = "GFX_idea_generic_air_europe_1"
-			}
+			army = { small = "GFX_idea_generic_air_europe_1" }
 		}
 	}
 
@@ -275,22 +227,14 @@ characters = {
 		advisor = {
 			slot = army_chief
 			idea_token = POR_humberto_carmona
-			allowed = {
-				original_tag = POR
-			}
-			traits = {
-				army_chief_drill_2
-			}
+			allowed = { original_tag = POR }
+			traits = { army_chief_drill_2 }
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
+			ai_will_do = { base = 1 }
 		}
 		name = POR_humberto_carmona
 		portraits = {
-			army = {
-				small = "GFX_idea_generic_BEL_generic_land_1"
-			}
+			army = { small = "GFX_idea_generic_BEL_generic_land_1" }
 		}
 	}
 
@@ -298,30 +242,20 @@ characters = {
 		advisor = {
 			slot = army_chief
 			idea_token = POR_vieira_da_rocha
-			allowed = {
-				original_tag = POR
-			}
-			traits = {
-				army_chief_offensive_2
-			}
+			allowed = { original_tag = POR }
+			traits = { army_chief_offensive_2 }
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
+			ai_will_do = { base = 1 }
 		}
 		name = POR_vieira_da_rocha
 		portraits = {
-			army = {
-				small = "GFX_idea_ITA_generic_land_2"
-			}
+			army = { small = "GFX_idea_ITA_generic_land_2" }
 		}
 	}
 
 	POR_rolao_preto = {
 		instance = {
-			allowed = {
-				has_dlc = "La Resistance"
-			}
+			allowed = { has_dlc = "La Resistance" }
 			advisor = {
 				slot = army_chief
 				idea_token = POR_rolao_preto
@@ -332,32 +266,24 @@ characters = {
 				visible = { has_global_flag = por_lar_focus_tree }
 				available = {
 					NOT = {
-						or = {
+						OR = {
 							has_completed_focus = POR_popular_front
 							has_completed_focus = POR_strengthen_the_regime
 						}
 					}
 				}
-				traits = {
-					army_chief_morale_2
-				}
+				traits = { army_chief_morale_2 }
 				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+				ai_will_do = { factor = 1.000 }
 			}
 
 			name = POR_rolao_preto
 			portraits = {
-				civilian = {
-					large = "gfx/leaders/POR/portrait_por_francisco_de_barcelos_oliveira_preto.dds"
-				}
-				army = {
-					small = "GFX_idea_POR_rolao_preto"
-				}
+				civilian = { large = "gfx/leaders/POR/portrait_por_francisco_de_barcelos_oliveira_preto.dds" }
+				army = { small = "GFX_idea_POR_rolao_preto" }
 			}
 			country_leader = {
-				ideology=fascism_ideology
+				ideology = fascism_ideology
 				traits = { fascist_militia_leader }
 				expire = "1965.1.1"
 				id = -1
@@ -386,15 +312,11 @@ characters = {
 			#}
 			name = POR_rolao_preto
 			portraits = {
-				civilian = {
-					large = "gfx/leaders/POR/portrait_por_francisco_de_barcelos_oliveira_preto.dds"
-				}
-				army = {
-					small = "GFX_idea_generic_army_europe_1"
-				}
+				civilian = { large = "gfx/leaders/POR/portrait_por_francisco_de_barcelos_oliveira_preto.dds" }
+				army = { small = "GFX_idea_generic_army_europe_1" }
 			}
 			country_leader = {
-				ideology=fascism_ideology
+				ideology = fascism_ideology
 				traits = { fascist_militia_leader }
 				expire = "1965.1.1"
 				id = -1
@@ -406,61 +328,37 @@ characters = {
 		advisor = {
 			slot = high_command
 			idea_token = POR_francisco_craveiro_lopes
-			allowed = {
-				original_tag = POR
-			}
-			traits = {
-				air_air_combat_training_2
-			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "La Resistance"
-					}
-					NOT = {
-						has_idea = POR_francisco_craveiro_lopes2
-					}
-				}
+			allowed = { original_tag = POR }
+			traits = { air_air_combat_training_2 }
+			available = {	
 				if = {
 					limit = { has_global_flag = por_lar_focus_tree }
 					has_completed_focus = POR_colonial_army
 				}
+				NOT = { has_idea = POR_francisco_craveiro_lopes2 }
 			}
 			cost = 100
 			ledger = army
-			ai_will_do = {
-				factor = 1.000
-			}
+			ai_will_do = { base = 1 }
 		}
 		advisor = {
 			slot = political_advisor
 			idea_token = POR_francisco_craveiro_lopes2
-			allowed = {
-				original_tag = POR
-				has_dlc = "La Resistance"
-			}
+			allowed = { original_tag = POR }
 			available = {
 				if = {
 					limit = { has_global_flag = por_lar_focus_tree }
 					has_completed_focus = POR_colonial_army
 				}
-				NOT = {
-					has_idea = POR_francisco_craveiro_lopes
-				}				
+				NOT = { has_idea = POR_francisco_craveiro_lopes }				
 			}
 			name = POR_francisco_craveiro_lopes 
-			traits = {
-				quartermaster_general 
-			}
+			traits = { quartermaster_general }
 		}
 		name = POR_francisco_craveiro_lopes
 		portraits = {
-			army = {
-				small = "GFX_idea_generic_air_europe_2"
-			}
-			civilian = {
-				small = "GFX_idea_generic_political_advisor_europe_3"
-			}
+			army = { small = "GFX_idea_generic_air_europe_2" }
+			civilian = { small = "GFX_idea_generic_political_advisor_europe_3" }
 		}
 	}
 
@@ -469,33 +367,22 @@ characters = {
 			slot = high_command
 			idea_token = POR_antonio_oscar_carmona
 			ledger = army
-			allowed = {
-				original_tag = POR
-			}
-			traits = {
-				army_logistics_2
-			}
+			allowed = { original_tag = POR }
+			traits = { army_logistics_2 }
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
+			ai_will_do = { base = 1 }
 		}
 		name = POR_antonio_oscar_carmona
 		portraits = {
-			army = {
-				small = "GFX_idea_generic_army_europe_6"
-			}
+			army = { small = "GFX_idea_generic_army_europe_6" }
 		}
 	}
 
 	POR_jose_norton_de_matos = {
 		instance = {
-			allowed = {
-				has_dlc = "La Resistance"
-			}
+			allowed = { has_dlc = "La Resistance" }
 			advisor = {
-			cost = 100
-			
+				cost = 100
 				slot = theorist
 				idea_token = POR_jose_norton_de_matos
 				ledger = army
@@ -503,23 +390,19 @@ characters = {
 					original_tag = POR
 					has_dlc = "La Resistance"
 				}
-				
-				traits = {
-					military_theorist
-				}
+				traits = { military_theorist }
 			}
 			name = POR_jose_norton_de_matos
 			portraits = {
-				civilian = {
-					large = "gfx/leaders/POR/portrait_por_jose_norton_de_matos.dds"
-				}
-				army = {
-					small = "GFX_idea_por_jose_norton_de_matos"
-				}
+				civilian = { large = "gfx/leaders/POR/portrait_por_jose_norton_de_matos.dds" }
+				army = { small = "GFX_idea_por_jose_norton_de_matos" }
 			}
 			country_leader = {
-				ideology=liberalism
-				traits = { democratic_reformer }
+				ideology = liberalism
+				traits = { 
+					popular_figurehead2
+					retired_officer 
+				}
 				expire = "1965.1.1"
 				id = -1
 			}
@@ -534,26 +417,22 @@ characters = {
 				idea_token = POR_jose_norton_de_matos
 				allowed = {
 					original_tag = POR
-					NOT = {
-						has_dlc = "La Resistance"
-					}
+					NOT = { has_dlc = "La Resistance" }
 				}
 				ledger = army
-				traits = {
-					military_theorist
-				}
+				traits = { military_theorist }
 			}
 			name = POR_jose_norton_de_matos
 			portraits = {
-				civilian = {
-					large = "gfx/leaders/POR/portrait_por_jose_norton_de_matos.dds"
-				}
-				army = {
-					small = "GFX_idea_generic_army_europe_1"
-				}
+				civilian = { large = "gfx/leaders/POR/portrait_por_jose_norton_de_matos.dds" }
+				army = { small = "GFX_idea_generic_army_europe_1" }
 			}
 			country_leader = {
-				ideology=liberalism
+				ideology = liberalism
+				traits = { 
+					popular_figurehead2
+					retired_officer 
+				}
 				expire = "1965.1.1"
 				id = -1
 			}
@@ -565,47 +444,29 @@ characters = {
 			slot = high_command
 			idea_token = POR_manuel_quintao_meireles
 			ledger = navy
-			allowed = {
-				original_tag = POR
-			}
+			allowed = { original_tag = POR }
 			available = {
-				NOT = {
-					has_idea = POR_manuel_quintao_meireles2
-				}
+				NOT = { has_idea = POR_manuel_quintao_meireles2 }
 			}
-			traits = {
-				navy_submarine_3
-			}
+			traits = { navy_submarine_3 }
 			cost = 200
-			ai_will_do = {
-				factor = 1.000
-			}
+			ai_will_do = { base = 1 }
 		}
 		advisor = {
 			slot = navy_chief
 			idea_token = POR_manuel_quintao_meireles2
 			ledger = navy
-			allowed = {
-				original_tag = POR
-			}
+			allowed = { original_tag = POR }
 			available = {
-				NOT = {
-					has_idea = POR_manuel_quintao_meireles
-				}
+				NOT = { has_idea = POR_manuel_quintao_meireles }
 			}
-			traits = {
-				navy_chief_commerce_raiding_3
-			}
+			traits = { navy_chief_commerce_raiding_3 }
 			cost = 200
-			ai_will_do = {
-				factor = 1.000
-			}
+			ai_will_do = { base = 1 }
 		}		
 		name = POR_manuel_quintao_meireles
 		portraits = {
-			army = {
-				small = "GFX_idea_POR_manuel_quintao_meireles"
-			}
+			army = { small = "GFX_idea_POR_manuel_quintao_meireles" }
 		}
 	}
 
@@ -613,22 +474,14 @@ characters = {
 		advisor = {
 			slot = navy_chief
 			idea_token = POR_jaime_afreixo
-			allowed = {
-				original_tag = POR
-			}
-			traits = {
-				navy_chief_decisive_battle_2
-			}
+			allowed = { original_tag = POR }
+			traits = { navy_chief_decisive_battle_2 }
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
+			ai_will_do = { base = 1 }
 		}
 		name = POR_jaime_afreixo
 		portraits = {
-			army = {
-				small = "GFX_idea_POR_jaime_afreixo"
-			}
+			army = { small = "GFX_idea_POR_jaime_afreixo" }
 		}
 	}
 
@@ -636,22 +489,14 @@ characters = {
 		advisor = {
 			slot = navy_chief
 			idea_token = POR_americo_tomas
-			allowed = {
-				original_tag = POR
-			}
-			traits = {
-				navy_chief_maneuver_2
-			}
+			allowed = { original_tag = POR }
+			traits = { navy_chief_maneuver_2 }
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
+			ai_will_do = { base = 1 }
 		}
 		name = POR_americo_tomas
 		portraits = {
-			army = {
-				small = "GFX_idea_POR_americo_thomaz"
-			}
+			army = { small = "GFX_idea_POR_americo_thomaz" }
 		}
 	}
 
@@ -659,21 +504,13 @@ characters = {
 		advisor = {
 			slot = army_chief
 			idea_token = POR_domingos_oliveira
-			allowed = {
-				original_tag = POR
-			}
-			traits = {
-				army_chief_old_guard
-			}
-			ai_will_do = {
-				factor = 1.000
-			}
+			allowed = { original_tag = POR }
+			traits = { army_chief_old_guard }
+			ai_will_do = { base = 1 }
 		}
 		name = POR_domingos_oliveira
 		portraits = {
-			army = {
-				small = "GFX_idea_generic_army_europe_3"
-			}
+			army = { small = "GFX_idea_generic_army_europe_3" }
 		}
 	}
 
@@ -681,30 +518,20 @@ characters = {
 		advisor = {
 			slot = air_chief
 			idea_token = POR_manuel_gouveia
-			allowed = {
-				original_tag = POR
-			}
-			traits = {
-				air_chief_reform_3
-			}
+			allowed = { original_tag = POR }
+			traits = { air_chief_reform_3 }
 			cost = 200
-			ai_will_do = {
-				factor = 1.000
-			}
+			ai_will_do = { base = 1 }
 		}
 		name = POR_manuel_gouveia
 		portraits = {
-			army = {
-				small = "GFX_idea_generic_air_europe_3"
-			}
+			army = { small = "GFX_idea_generic_air_europe_3" }
 		}
 	}
 
 	POR_manuel_ortins_torres_de_bettencourt = {
 		instance = {
-			allowed = {
-				has_dlc = "La Resistance"
-			}
+			allowed = { has_dlc = "La Resistance" }
 			advisor = {
 				cost = 100
 				slot = theorist
@@ -714,16 +541,11 @@ characters = {
 					original_tag = POR
 					has_dlc = "La Resistance"
 				}
-				
-				traits = {
-					naval_theorist
-				}
+				traits = { naval_theorist }
 			}
 			name = POR_manuel_ortins_torres_de_bettencourt
 			portraits = {
-				army = {
-					small = "GFX_idea_POR_manuel_ortins_de_bettencourt"
-				}
+				army = { small = "GFX_idea_POR_manuel_ortins_de_bettencourt" }
 			}
 		}
 		instance = {
@@ -736,21 +558,14 @@ characters = {
 				idea_token = POR_manuel_ortins_torres_de_bettencourt
 				allowed = {
 					original_tag = POR
-					NOT = {
-						has_dlc = "La Resistance"
-					}
+					NOT = { has_dlc = "La Resistance" }
 				}
-				
 				ledger = navy
-				traits = {
-					naval_theorist
-				}
+				traits = { naval_theorist }
 			}
 			name = POR_manuel_ortins_torres_de_bettencourt
 			portraits = {
-				army = {
-					small = "GFX_idea_generic_navy_europe_3"
-				}
+				army = { small = "GFX_idea_generic_navy_europe_3" }
 			}
 		}
 	}
@@ -760,16 +575,10 @@ characters = {
 			slot = high_command
 			idea_token = POR_jose_filipe_de_barros_rodrigues
 			ledger = army
-			allowed = {
-				original_tag = POR
-			}
-			traits = {
-				army_artillery_2
-			}
+			allowed = { original_tag = POR }
+			traits = { army_artillery_2 }
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
+			ai_will_do = { base = 1 }
 		}
 		field_marshal = {
 			traits = { artillerist skilled_staffer }
@@ -793,22 +602,14 @@ characters = {
 		advisor = {
 			slot = army_chief
 			idea_token = POR_lobato_guerra
-			allowed = {
-				original_tag = POR
-			}
-			traits = {
-				army_chief_defensive_2
-			}
+			allowed = { original_tag = POR }
+			traits = { army_chief_defensive_2 }
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
+			ai_will_do = { base = 1 }
 		}
 		name = POR_lobato_guerra
 		portraits = {
-			army = {
-				small = "GFX_idea_generic_army_europe_4"
-			}
+			army = { small = "GFX_idea_generic_army_europe_4" }
 		}
 	}
 
@@ -838,33 +639,11 @@ characters = {
 #			}
 #		}
 #	}
-
-	POR_jaime_cortesao_r56 = {
-		advisor = {
-			slot = political_advisor
-			idea_token = POR_jaime_cortesao_r56
-			allowed = {
-				original_tag = POR
-				NOT = { has_dlc = "La Resistance" }
-			}
-			available = { has_completed_focus = POR_pave_the_path_to_progress }
-			traits = { compassionate_gentleman }
-		}
-		name = POR_jaime_cortesao
-		portraits = {
-			army = {
-				small = "GFX_idea_generic_political_advisor_europe_3"
-			}
-		}
-	}
 	POR_jaime_cortesao = {
 		advisor = {
 			slot = political_advisor
 			idea_token = POR_jaime_cortesao
-			allowed = {
-				original_tag = POR
-				has_dlc = "La Resistance"
-			}
+			allowed = { original_tag = POR }
 			available = {
 				if = {
 					limit = { has_global_flag = por_lar_focus_tree }
@@ -877,9 +656,7 @@ characters = {
 		}
 		name = POR_jaime_cortesao
 		portraits = {
-			army = {
-				small = "GFX_idea_generic_political_advisor_europe_4"
-			}
+			army = { small = "GFX_idea_generic_political_advisor_europe_4" }
 		}
 	}
 
@@ -904,19 +681,13 @@ characters = {
 				}
 			}
 			do_effect = {
-				NOT = {
-					has_government = communism 
-				}
+				NOT = { has_government = communism }
 			}
-			traits = {
-				communist_revolutionary 
-			}
+			traits = { communist_revolutionary }
 		}
 		name = POR_alvaro_cunhal
 		portraits = {
-			army = {
-				small = "GFX_idea_POR_alvaro_cunhal"
-			}
+			army = { small = "GFX_idea_POR_alvaro_cunhal" }
 		}
 	}
 
@@ -947,10 +718,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = POR_francisco_da_cunha_leal
-			allowed = {
-				original_tag = POR
-				has_dlc = "La Resistance"
-			}
+			allowed = { original_tag = POR }
 			available = {
 				if = {
 					limit = { has_global_flag = por_lar_focus_tree }
@@ -959,22 +727,14 @@ characters = {
 						has_completed_focus = POR_allow_free_elections 
 					}
 				}
-				else = {
-					has_completed_focus = POR_restore_civil_liberties
-				}
+				else = { has_completed_focus = POR_pave_the_path_to_progress }
 			}
-			traits = {
-				silent_workhorse 
-			}
-			ai_will_do = {
-				factor = 1.000
-			}
+			traits = { silent_workhorse }
+			ai_will_do = { base = 1 }
 		}
 		name = POR_francisco_da_cunha_leal
 		portraits = {
-			army = {
-				small = "GFX_idea_generic_political_advisor_europe_5"
-			}
+			army = { small = "GFX_idea_generic_political_advisor_europe_5" }
 		}
 	}
 
@@ -982,10 +742,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = POR_bento_de_jesus_caraca
-			allowed = {
-				original_tag = POR
-				has_dlc = "La Resistance"
-			}
+			allowed = { original_tag = POR }
 			available = {
 				if = {
 					limit = { has_global_flag = por_lar_focus_tree }
@@ -993,18 +750,12 @@ characters = {
 				}
 				else = { has_completed_focus = POR_towards_a_prosperous_proletariat }
 			}
-			traits = {
-				financial_expert 
-			}
-			ai_will_do = {
-				factor = 1.000
-			}
+			traits = { financial_expert }
+			ai_will_do = { base = 1 }
 		}
 		name = POR_bento_de_jesus_caraca
 		portraits = {
-			army = {
-				small = "GFX_idea_generic_political_advisor_europe_4"
-			}
+			army = { small = "GFX_idea_generic_political_advisor_europe_4" }
 		}
 	}
 
@@ -1012,10 +763,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = POR_alberto_monsaraz
-			allowed = {
-				original_tag = POR
-				has_dlc = "La Resistance"
-			}
+			allowed = { original_tag = POR }
 			available = {
 				if = {
 					limit = { has_global_flag = por_lar_focus_tree }
@@ -1023,36 +771,25 @@ characters = {
 				}
 				else = { has_completed_focus = POR_integrate_the_blueshirts }
 			}
-			traits = {
-				national_integralist 
-			}
-			ai_will_do = {
-				factor = 10000.000
-			}
+			traits = { national_integralist }
+			ai_will_do = { base = 1000 }
 		}
 		name = POR_alberto_monsaraz
 		portraits = {
-			army = {
-				small = "GFX_idea_generic_political_advisor_europe_6"
-			}
+			army = { small = "GFX_idea_generic_political_advisor_europe_6" }
 		}
 	}
 
 	POR_maria_lamas = {
 		name = POR_maria_lamas
 		portraits = {
-			army = {
-				small = "GFX_idea_generic_political_advisor_female_europe"
-			}
+			army = { small = "GFX_idea_generic_political_advisor_female_europe" }
 		}
 		gender = female
 		advisor = {
 			slot = political_advisor
 			idea_token = POR_maria_lamas
-			allowed = {
-				original_tag = POR
-				has_dlc = "La Resistance"
-			}
+			allowed = { original_tag = POR }
 			available = {
 				if = {
 					limit = { has_global_flag = por_lar_focus_tree }
@@ -1061,12 +798,8 @@ characters = {
 				else = { has_completed_focus = POR_advance_the_cause_for_equality }
 				NOT = { has_idea = r56i_laws_gender_patriarchy } 
 			}
-			traits = {
-				liberal_journalist 
-			}
-			ai_will_do = {
-				factor = 1.000
-			}
+			traits = { liberal_journalist }
+			ai_will_do = { base = 1 }
 		}
 	}
 
@@ -1074,10 +807,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = POR_joao_de_azevedo_coutinho
-			allowed = {
-				original_tag = POR
-				has_dlc = "La Resistance"
-			}
+			allowed = { original_tag = POR }
 			available = {
 				if = {
 					limit = { has_global_flag = por_lar_focus_tree }
@@ -1095,18 +825,12 @@ characters = {
 				}
 				
 			}
-			traits = {
-				fortification_engineer 
-			}
-			ai_will_do = {
-				factor = 1.000
-			}
+			traits = { fortification_engineer }
+			ai_will_do = { base = 1 }
 		}
 		name = POR_joao_de_azevedo_coutinho
 		portraits = {
-			army = {
-				small = "GFX_idea_generic_army_europe_1"
-			}
+			army = { small = "GFX_idea_generic_army_europe_1" }
 		}
 	}
 
@@ -1114,10 +838,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = POR_duarte_jose_pacheco
-			allowed = {
-				original_tag = POR
-				has_dlc = "La Resistance"
-			}
+			allowed = { original_tag = POR }
 			available = {
 				if = {
 					limit = { has_focus_tree = r56_portuguese_focus }
@@ -1129,44 +850,19 @@ characters = {
 				}
 			}
 			traits = { captain_of_industry }
-			ai_will_do = {
-				factor = 1.000
-			}
+			ai_will_do = { base = 1 }
 		}
 		name = POR_duarte_jose_pacheco
 		portraits = {
-			army = {
-				small = "GFX_idea_generic_political_advisor_europe_2"
-			}
+			army = { small = "GFX_idea_generic_political_advisor_europe_2" }
 		}
 	}
 
-	POR_augusto_de_vasconcelos_r56 = {
+	POR_augusto_de_vasconcelos = {
 		advisor = {
 			slot = political_advisor
 			idea_token = POR_augusto_de_vasconcelos
-			allowed = {
-				original_tag = POR
-				NOT = { has_dlc = "La Resistance" }
-			}
-			available = { has_completed_focus = POR_restore_civil_liberties }
-			traits = { democratic_reformer }
-		}
-		name = POR_augusto_de_vasconcelos
-		portraits = {
-			army = {
-				small = "GFX_idea_generic_political_advisor_europe_1"
-			}
-		}
-	}
-	POR_augusto_de_vasconcelos={
-		advisor = {
-			slot = political_advisor
-			idea_token = POR_augusto_de_vasconcelos
-			allowed = {
-				original_tag = POR
-				has_dlc = "La Resistance"
-			}
+			allowed = { original_tag = POR }
 			available = {
 				if = {
 					limit = { has_focus_tree = r56_portuguese_focus }
@@ -1175,20 +871,14 @@ characters = {
 			}
 			traits = { democratic_reformer }
 			do_effect = {
-				NOT = {
-					has_government = democratic 
-				}
+				NOT = { has_government = democratic }
 			}
 			name = POR_augusto_de_vasconcelos 
-			ai_will_do = {
-				factor = 0.000
-			}
+			ai_will_do = { base = 0 }
 		}
 		name = POR_augusto_de_vasconcelos
 		portraits = {
-			army = {
-				small = "GFX_idea_por_augusto_de_vasconcelos"
-			}
+			army = { small = "GFX_idea_por_augusto_de_vasconcelos" }
 		}
 	}
 
@@ -1196,10 +886,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = POR_manuel_goncalves_cerejeira
-			allowed = {
-				original_tag = POR
-				has_dlc = "La Resistance"
-			}
+			allowed = { original_tag = POR }
 			available = {
 				if = {
 					limit = { has_global_flag = por_lar_focus_tree }
@@ -1212,18 +899,12 @@ characters = {
 					} 
 				}
 			}
-			traits = {
-				appeaser 
-			}
-			ai_will_do = {
-				factor = 1.000
-			}
+			traits = { appeaser }
+			ai_will_do = { base = 1 }
 		}
 		name = POR_manuel_goncalves_cerejeira
 		portraits = {
-			army = {
-				small = "GFX_idea_generic_political_advisor_europe_6"
-			}
+			army = { small = "GFX_idea_generic_political_advisor_europe_6" }
 		}
 	}
 
@@ -1231,10 +912,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = POR_jose_adriano_pequito_rebelo
-			allowed = {
-				original_tag = POR
-				has_dlc = "La Resistance"
-			}
+			allowed = { original_tag = POR }
 			available = {
 				if = {
 					limit = { has_global_flag = por_lar_focus_tree }
@@ -1244,21 +922,12 @@ characters = {
 					NOT = { has_completed_focus = POR_unite_against_salazar }
 				}
 			}
-			visible={
-				has_global_flag = por_lar_focus_tree
-			}
-			traits = {
-				financial_expert 
-			}
-			ai_will_do = {
-				factor = 1.000
-			}
+			traits = { financial_expert }
+			ai_will_do = { base = 1 }
 		}
 		name = POR_jose_adriano_pequito_rebelo
-		portraits = {
-			army = {
-				small = "GFX_idea_generic_fascist_demagogue_western_european_2d"
-			}
+		portraits = { 
+			army = { small = "GFX_idea_generic_fascist_demagogue_western_european_2d" } 
 		}
 	}
 
@@ -1276,21 +945,13 @@ characters = {
 					has_completed_focus = POR_a_royal_wedding 
 				}
 			}
-			visible={
-				has_global_flag = por_lar_focus_tree
-			}
-			traits = {
-				traditionalist_theorist 
-			}
-			ai_will_do = {
-				factor = 1.000
-			}
+			visible = { has_global_flag = por_lar_focus_tree }
+			traits = { traditionalist_theorist }
+			ai_will_do = { base = 1 }
 		}
 		name = POR_joao_francisco_de_barbosa_azevedo
 		portraits = {
-			army = {
-				small = "GFX_idea_generic_political_advisor_europe_3"
-			}
+			army = { small = "GFX_idea_generic_political_advisor_europe_3" }
 		}
 	}
 
@@ -1298,65 +959,42 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = POR_alfredo_da_silva
-			allowed = {
-				original_tag = POR
-				has_dlc = "La Resistance"
-			}
-			traits = {
-				technocrat 
-			}
-			ai_will_do = {
-				factor = 1.000
-			}
+			allowed = { original_tag = POR }
+			traits = { technocrat }
+			ai_will_do = { base = 1 }
 		}
 		name = POR_alfredo_da_silva
 		portraits = {
-			army = {
-				small = "GFX_idea_generic_political_advisor_europe_1"
-			}
+			army = { small = "GFX_idea_generic_political_advisor_europe_1" }
 		}
 	}
 
 	POR_jose_hipolito_raposo = {
 		instance = {
 			allowed = {
-				NOT = {
-					has_dlc = "La Resistance"
-				}
+				NOT = { has_dlc = "La Resistance" }
 			}
 			advisor = {
 				slot = political_advisor
 				idea_token = POR_jose_hipolito_raposo
 				allowed = {
 					original_tag = POR
-					NOT = {
-						has_dlc = "La Resistance"
-					}
+					NOT = { has_dlc = "La Resistance" }
 				}
 				available = { has_government = fascism }
-				traits = {
-					fascist_demagogue 
-				}
+				traits = { fascist_demagogue }
 				do_effect = {
-					NOT = {
-						has_government = fascism 
-					}
+					NOT = { has_government = fascism }
 				}
-				ai_will_do = {
-					factor = 0.000
-				}
+				ai_will_do = { base = 0 }
 			}
 			name = POR_jose_hipolito_raposo
 			portraits = {
-				army = {
-					small = "GFX_idea_generic_fascist_demagogue_western_european_2d"
-				}
+				army = { small = "GFX_idea_generic_fascist_demagogue_western_european_2d" }
 			}
 		}
 		instance = {
-			allowed = {
-				has_dlc = "La Resistance"
-			}
+			allowed = { has_dlc = "La Resistance" }
 			advisor = {
 				slot = political_advisor
 				idea_token = POR_jose_hipolito_raposo
@@ -1372,23 +1010,15 @@ characters = {
 					}
 					else = { has_government = fascism }
 				}
-				traits = {
-					fascist_demagogue 
-				}
+				traits = { fascist_demagogue }
 				do_effect = {
-					NOT = {
-						has_government = fascism 
-					}
+					NOT = { has_government = fascism }
 				}
-				ai_will_do = {
-					factor = 0.000
-				}
+				ai_will_do = { base = 0 }
 			}
 			name = POR_jose_hipolito_raposo
 			portraits = {
-				army = {
-					small = "GFX_idea_por_jose_hipolito_raposo"
-				}
+				army = { small = "GFX_idea_por_jose_hipolito_raposo" }
 			}
 		}
 	}
@@ -1397,9 +1027,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = POR_fernando_dos_santos_costa
-			allowed = {
-				original_tag = POR
-			}
+			allowed = { original_tag = POR }
 			available = {
 				if = {
 					limit = {
@@ -1408,21 +1036,17 @@ characters = {
 					NOT = { has_completed_focus = POR_popular_front }
 				}
 				else = {
-					NOT = { has_government = communism }
+					NOT = { has_completed_focus = POR_unite_against_salazar }
 				}								
 			}
-			traits = {
-				war_industrialist 
-			}
+			traits = { war_industrialist }
 		}
 		name = POR_fernando_dos_santos_costa
 		portraits = {
-			army = {
-				small = "GFX_idea_generic_political_advisor_europe_2"
-			}
+			army = { small = "GFX_idea_generic_political_advisor_europe_2" }
 		}
 	}
-	POR_afonso_de_almeida_fernandes={ #r56
+	POR_afonso_de_almeida_fernandes = { #r56
 		name = "Afonso de Almeida Fernandes"
 		portraits = {
 			army = {
@@ -1480,12 +1104,8 @@ characters = {
 			slot = high_command
 			idea_token = POR_anibal_de_passos_e_sousa
 			ledger = army
-			allowed = {
-				original_tag = POR
-			}
-			traits = {
-				army_infantry_2
-			}
+			allowed = { original_tag = POR }
+			traits = { army_infantry_2 }
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
@@ -1513,19 +1133,10 @@ characters = {
 			slot = high_command
 			idea_token = POR_alfredo_botelho_de_sousa
 			ledger = navy
-			allowed = {
-				original_tag = POR
-			}
-			available = {
-
-			}
-			traits = {
-				navy_screen_2
-			}
+			allowed = { original_tag = POR }
+			traits = { navy_screen_2 }
 			cost = 200
-			ai_will_do = {
-				factor = 1.000
-			}
+			ai_will_do = { base = 1 }
 		}
 	}
 	POR_luis_magalhaes_correia={ #r56
@@ -1540,19 +1151,10 @@ characters = {
 			slot = high_command
 			idea_token = POR_luis_magalhaes_correia
 			ledger = navy
-			allowed = {
-				original_tag = POR
-			}
-			available = {
-
-			}
-			traits = {
-				navy_fleet_logistics_2
-			}
+			allowed = { original_tag = POR }
+			traits = { navy_fleet_logistics_2 }
 			cost = 200
-			ai_will_do = {
-				factor = 1.000
-			}
+			ai_will_do = { base = 1 }
 		}
 		navy_leader = {
 			traits = { bold gentlemanly }
@@ -1569,16 +1171,10 @@ characters = {
 			slot = high_command
 			idea_token = POR_fernando_augusto_borges
 			ledger = army
-			allowed = {
-				original_tag = POR
-			}
-			traits = {
-				army_regrouping_2
-			}
+			allowed = { original_tag = POR }
+			traits = { army_regrouping_2 }
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
+			ai_will_do = { base = 1 }
 		}
 		corps_commander = {
 			traits = { harsh_leader lucky }
