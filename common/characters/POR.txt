@@ -127,7 +127,10 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { cavalry_officer }
+			traits = { 
+				cavalry_officer
+				trait_engineer 
+			}
 			skill = 3
 			attack_skill = 4
 			defense_skill = 2
@@ -256,27 +259,6 @@ characters = {
 	POR_rolao_preto = {
 		instance = {
 			allowed = { has_dlc = "La Resistance" }
-			advisor = {
-				slot = army_chief
-				idea_token = POR_rolao_preto
-				allowed = {
-					original_tag = POR
-					has_dlc = "La Resistance"
-				}
-				visible = { has_global_flag = por_lar_focus_tree }
-				available = {
-					NOT = {
-						OR = {
-							has_completed_focus = POR_popular_front
-							has_completed_focus = POR_strengthen_the_regime
-						}
-					}
-				}
-				traits = { army_chief_morale_2 }
-				cost = 100
-				ai_will_do = { factor = 1.000 }
-			}
-
 			name = POR_rolao_preto
 			portraits = {
 				civilian = { large = "gfx/leaders/POR/portrait_por_francisco_de_barcelos_oliveira_preto.dds" }
@@ -293,23 +275,6 @@ characters = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
-			#advisor = {
-				#slot = army_chief
-				#idea_token = POR_rolao_preto
-				#allowed = {
-						#original_tag = POR
-						#NOT = {
-							#has_dlc = "La Resistance"
-						#}
-					#}
-					#traits = {
-						#army_chief_morale_2
-					#}
-				#cost = 100
-					#ai_will_do = {
-						#factor = 1.000
-					#}
-			#}
 			name = POR_rolao_preto
 			portraits = {
 				civilian = { large = "gfx/leaders/POR/portrait_por_francisco_de_barcelos_oliveira_preto.dds" }
@@ -490,8 +455,8 @@ characters = {
 			slot = navy_chief
 			idea_token = POR_americo_tomas
 			allowed = { original_tag = POR }
-			traits = { navy_chief_maneuver_2 }
-			cost = 100
+			traits = { navy_screen_2 }
+			cost = 200
 			ai_will_do = { base = 1 }
 		}
 		name = POR_americo_tomas
@@ -1083,7 +1048,7 @@ characters = {
 		}
 	}
 	
-	POR_anibal_de_passos_e_sousa={ #r56
+	POR_anibal_de_passos_e_sousa = { #r56
 		name = "Aníbal de Passos e Sousa"
 		portraits = {
 			army = {
@@ -1105,14 +1070,13 @@ characters = {
 			idea_token = POR_anibal_de_passos_e_sousa
 			ledger = army
 			allowed = { original_tag = POR }
-			traits = { army_infantry_2 }
+			traits = { army_commando_2 }
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
+			ai_will_do = { base = 1 }
 		}		
 	}
-	POR_alfredo_botelho_de_sousa={ #r56
+
+	POR_alfredo_botelho_de_sousa = { #r56
 		name = "Alfredo Botelho de Sousa"
 		portraits = {
 			army = {
@@ -1124,22 +1088,23 @@ characters = {
 			traits = { superior_tactician naval_lineage navy_career_officer }
 			skill = 2
 			attack_skill = 1
-			defense_skill = 2
-			maneuvering_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 2
 			coordination_skill = 2
 			legacy_id = -1
 		}
 		advisor = {
-			slot = high_command
+			slot = navy_chief
 			idea_token = POR_alfredo_botelho_de_sousa
 			ledger = navy
 			allowed = { original_tag = POR }
-			traits = { navy_screen_2 }
-			cost = 200
+			traits = { navy_chief_reform_2 }
+			cost = 100
 			ai_will_do = { base = 1 }
 		}
 	}
-	POR_luis_magalhaes_correia={ #r56
+
+	POR_luis_magalhaes_correia = { #r56
 		name = "Luís Magalhães Correia"
 		portraits = {
 			army = {
@@ -1166,6 +1131,7 @@ characters = {
 			legacy_id = -1
 		}
 	}
+
 	POR_fernando_augusto_borges = {
 		advisor = {
 			slot = high_command
@@ -1192,5 +1158,182 @@ characters = {
 				small = "GFX_idea_ENG_generic_land_5"
 			}
 		}
+	}
+	
+	POR_antonio_de_sousa_maya = {
+		name = "António de Sousa Maya"
+		portraits={
+			army = { small=GFX_idea_generic_air_europe_2 }
+		}
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = POR_antonio_de_sousa_maya
+			ledger = air
+			traits = { air_warfare_theorist }
+		}
+	}
+
+	POR_antonio_de_macedo_ramalho_ortigao = { #r56
+		name = "António de Macedo Ramalho Ortigão"
+		portraits = {
+			army = {
+				large = "GFX_Portrait_Europe_Generic_navy_new_1"
+				small = "GFX_Portrait_Europe_Generic_navy_2_small"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = POR_antonio_de_macedo_ramalho_ortigao
+			ledger = navy
+			allowed = { original_tag = POR }
+			traits = { navy_screen_2 }
+			cost = 200
+			ai_will_do = { base = 1.000 }
+		}
+		navy_leader = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 2
+			legacy_id = -1
+		}
+	}
+
+	POR_antonio_garcia_de_sousa_ventura = {
+		advisor = {
+			slot = navy_chief
+			idea_token = POR_americo_tomas
+			allowed = { original_tag = POR }
+			traits = { navy_chief_maneuver_1 }
+			cost = 50
+			ai_will_do = { base = 1 }
+		}
+		name = "António Garcia de Sousa Ventura"
+		portraits = {
+			army = { small = "GFX_Portrait_Europe_Generic_navy_2_small" }
+		}
+	}
+
+	POR_casimiro_sousa_de_victor_telles = {
+		advisor = {
+			slot = high_command
+			idea_token = POR_casimiro_sousa_de_victor_telles
+			ledger = army
+			allowed = { original_tag = POR }
+			traits = { army_infantry_2 }
+			cost = 100
+			ai_will_do = { base = 1 }
+		}
+		corps_commander = {
+			traits = { infantry_officer career_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id = -1
+		}		
+		name = "Casimiro Sousa de Victor Telles"
+		portraits = {
+			army = {
+				large = "GFX_Portrait_Europe_Generic_land_new_1"
+				small = "GFX_idea_generic_army_europe_2"
+			}
+		}
 	}	
+
+	POR_joao_jose_soares_zilhao = {
+		corps_commander = {
+			skill = 2
+			traits = { artillerist }
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = POR_joao_jose_soares_zilhao
+			ledger = army
+			allowed = { original_tag = POR }
+			traits = { fort_organization_2 }
+			cost = 100
+			ai_will_do = { base = 1 }
+		}
+		name = "João José Soares Zilhão"
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_army_europe_5"
+				large = "GFX_Portrait_Europe_Generic_land_new_9"
+			}
+		}
+	}
+
+	POR_afonso_julio_de_cerqueira = {
+		advisor = {
+			slot = high_command
+			idea_token = POR_afonso_julio_de_cerqueira
+			ledger = army
+			allowed = { original_tag = POR }
+			traits = { air_naval_strike_2 }
+			cost = 100
+			ai_will_do = { base = 1 }
+		}
+		name = "Afonso Júlio de Cerqueira"
+		portraits = {
+			army = { small = "GFX_idea_generic_army_europe_2" }
+		}
+	}
+
+	POR_jose_pedro_pinheiro_correia = {
+		advisor = {
+			slot = high_command
+			idea_token = POR_jose_pedro_pinheiro_correia
+			ledger = air
+			allowed = { original_tag = POR }
+			traits = {  air_tactical_bombing_2 }
+			cost = 100
+			ai_will_do = { base = 1 }
+		}
+		name = "José Pedro Pinheiro Correia"
+		portraits = {
+			army = { small = "GFX_idea_generic_air_europe_3" }
+		}
+	}
+
+	POR_francisco_bernardo_do_canto = {
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
+		}		
+		name = "Francisco Bernardo do Canto"
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_army_europe_4"
+				large = "GFX_Portrait_Europe_Generic_land_new_8"
+			}
+		}
+	}
+
+	POR_tasso_de_miranda_cabral = {
+		advisor = {
+			slot = army_chief
+			idea_token = POR_tasso_de_miranda_cabral
+			allowed = { original_tag = POR }
+			traits = { army_chief_organizational_2 }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
+		name = "Tasso de Miranda Cabral"
+		portraits = {
+			army = { small = "GFX_idea_generic_army_europe_3" }
+		}
+	}
 }
