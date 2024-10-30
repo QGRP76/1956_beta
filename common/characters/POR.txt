@@ -546,7 +546,10 @@ characters = {
 			ai_will_do = { base = 1 }
 		}
 		field_marshal = {
-			traits = { artillerist skilled_staffer }
+			traits = { 
+				artillerist 
+				skilled_staffer 
+			}
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
@@ -564,6 +567,7 @@ characters = {
 	}
 
 	POR_lobato_guerra = {
+		name = "José Augusto Lobato Guerra"
 		advisor = {
 			slot = army_chief
 			idea_token = POR_lobato_guerra
@@ -572,9 +576,20 @@ characters = {
 			cost = 100
 			ai_will_do = { base = 1 }
 		}
-		name = POR_lobato_guerra
+		field_marshal = {
+			traits = { old_guard }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1 
+			legacy_id = 1
+		}
 		portraits = {
-			army = { small = "GFX_idea_generic_army_europe_4" }
+			army = { 
+				small = "GFX_idea_generic_army_europe_4"
+				large = "GFX_Portrait_Europe_Generic_land_new_4" 
+			}
 		}
 	}
 
