@@ -3435,7 +3435,7 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		infantry = {
-			default_morale = 0.30
+			default_morale = 0.2
 		}
 		land_reinforce_rate = 0.05
 
@@ -3532,7 +3532,7 @@ technologies = {
 			combat_width = -0.4
 		}
 
-		land_reinforce_rate = 0.15
+		land_reinforce_rate = 0.05
 
 		path = {
 			leads_to_tech = guerilla_warfare
