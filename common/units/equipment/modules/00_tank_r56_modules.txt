@@ -340,6 +340,7 @@ equipment_modules = {
 
 		multiply_stats = {
 			soft_attack = 0.025
+			hard_attack = 0.025
 		}
 		xp_cost = 1
 	}
@@ -356,8 +357,8 @@ equipment_modules = {
 		}
 
 		multiply_stats = {
-			soft_attack = 0.025
-			hard_attack = 0.02
+			soft_attack = 0.06
+			hard_attack = 0.03
 		}
 		xp_cost = 1
 	}
@@ -367,7 +368,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			soft_attack = 1
+			soft_attack = 2
 			recon = 0.6
 		}
 
@@ -382,6 +383,10 @@ equipment_modules = {
 			hard_attack = 2
 			ap_attack = 1
 			reliability = -0.02
+		}
+
+		multiply_stats = {
+			hard_attack = 0.03
 		}
 		
 		xp_cost = 1
