@@ -603,14 +603,14 @@
 
  #MEN
  
- MEN_communism_party:0 "ÖMAKN"
- MEN_communism_party_long:0 "Övör Mongolyn Ardyn Khuvsgalt Nam"
+ MEN_communism_party:0 "DMAKN"
+ MEN_communism_party_long:0 "Dotood Mongolyn Ardyn Khuvsgalyn Nam"
  MEN_fascism_party:0 "ÖMAK"
  MEN_fascism_party_long:0 "Övör Mongolyn Autonomit Khödölgön"
  MEN_democratic_party:0 "ÖMAN-K"
  MEN_democratic_party_long:0 "Övör Mongolyn Ardchilsan Nam - Kuomintang"
- MEN_neutrality_party:0 "Bailingmiao Council"
- MEN_neutrality_party_long:0 "Bailingmiao Council"
+ MEN_neutrality_party:0 "Young Mongols"
+ MEN_neutrality_party_long:0 "Young Mongols"
 
  #MNC
  MNC_neutrality_party:0 "Maison de Grimaldi"

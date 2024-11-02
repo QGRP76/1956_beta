@@ -3,12 +3,13 @@
 oob = "MEN_1936"	
 
 recruit_character = MEN_prince_demchugdongrub
-recruit_character = MEN_nima_ordsor
-recruit_character = MEN_Serengdongrub
-recruit_character = MEN_Ulanhu
-recruit_character = MEN_navy_chief
+recruit_character = MEN_jodbajab
+recruit_character = MEN_nima_odsor
+recruit_character = MEN_serengdongrub
+recruit_character = MEN_ulanhu
 recruit_character = MEN_li_shouxin
 recruit_character = MEN_wang_ying
+recruit_character = MEN_ryukichi_tanaka
 recruit_character = MEN_altanochir
 recruit_character = MEN_hesehn_tiemei
 recruit_character = MEN_guan_xingde
@@ -21,17 +22,27 @@ recruit_character = MEN_nalan_kang_an
 recruit_character = MEN_songgotu_zhanshan
 recruit_character = MEN_megata_toshiro
 
+activate_advisor = MEN_nima_odsor
+activate_advisor = MEN_jodbajab
+activate_advisor = MEN_serengdongrub
 
 set_war_support = 0.1
 set_stability = 0.5
 set_research_slots = 2
 
-
 add_ideas = {
-	MEN_Autonomous_Province
+	limited_exports
 	MEN_mongol_raids
-	MEN_increasing_jap_influence
+	MEN_kwantungs_invisible_hand
 }
+
+add_timed_idea = {
+	idea = MEN_the_long_winter
+	days = 91
+}
+
+add_ideas = MEN_disorganized_military
+
 set_technology = {
 
 	# Extended Technologies
@@ -39,17 +50,30 @@ set_technology = {
 	camo = 1
 	
 	infantry_weapons = 1
+	gw_artillery = 1
+	tech_trucks = 1
 	
 }
-set_country_flag = started_out_as_landlocked
 
-CHI = {
-	set_autonomy = {
-		target = MEN
-		autonomy_state = autonomous_state
-		freedom_level = 0.85
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+	else = {
+		set_technology = {
+			gwtank_chassis = 1
+		}
 	}
 }
+
+set_country_flag = started_out_as_landlocked
+
+set_cosmetic_tag = MEN_CHI_AUT
+
+give_military_access = JAP
 
 set_politics = {
 	ruling_party = neutrality
@@ -57,7 +81,10 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
+
 set_popularities = {
-	fascism = 35
-	neutrality = 65
+	fascism = 20
+	neutrality = 64
+	democratic = 12
+	communism = 4
 }

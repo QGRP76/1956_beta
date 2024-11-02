@@ -1,51 +1,47 @@
-MEN_internal_power_struggle = {
+political_actions = {
 
-	MEN_fading_central_loyality = {
-		icon = fading_kmt_loyality
+	MEN_the_zhangbei_meeting = {
+
+		icon = GFX_decision_generic_political_discourse
+
 		allowed = {
-			original_tag = MEN 
+			original_tag = MEN
 		}
 
 		available = {
-			OR = {
-				is_subject_of = JAP 
-				NOT = { is_subject_of = CHI }
-				custom_trigger_tooltip = {
-					tooltip = reaffirmed_loyality_to_chi_tt
-					has_country_flag = reaffirmed_loyality_to_chi_flag
-				}
-		    }
-		}
-
-		activation = { 
-			always = yes 
-		}
-
-		is_good = no
-		days_mission_timeout = 365
-		fire_only_once = yes
-		priority = 20
-
-
-		timeout_effect = {
-			add_stability = -0.2
-			CHI = {
-					set_autonomy = {
-    					target = MEN
-    					autonomy_state = autonomy_free
-					}
+			hidden_trigger = {
+				always = no
 			}
 		}
 
-		complete_effect = { 
-			add_stability = 0.2
-			add_political_power = 200
+		activation = { 
+			date < 1936.1.2
+		}
+
+		is_good = no
+
+		days_mission_timeout = 22
+
+		fire_only_once = yes
+
+		priority = 20
+
+		timeout_effect = {
+			country_event = {
+				id = men.10 hours = 12
+			}
+			custom_effect_tooltip = if_they_accept_newline_tt
+			effect_tooltip = {
+				add_political_power = -35
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.05
+				}
+				add_stability = -0.10
+				custom_effect_tooltip = MEN_prevent_destabilization
+			}
 		}
 	}
-
-
-
-
 
 	MEN_japanese_pressure = {
 		icon = oppression
@@ -343,7 +339,4 @@ MEN_internal_power_struggle = {
 		 	 
 		}
 	}
-
-
-
-
+}

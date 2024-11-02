@@ -1,5 +1,5 @@
 ﻿l_english:
- Mengkukuo_focus:0 "Mengukou National Focus"
+ Mengkukuo_focus:0 "Mengkukuo National Focus"
  #characters
  MEN_li_shouxin:0 "Li Shouxin"
  MEN_altanochir:0 "Altanochir"
@@ -14,199 +14,267 @@
  MEN_yonimitsu_kasahara:0 "Yonimitsu Kasahara"
  MEN_altanochir:0 "Altanochir"
 
- ################################ FOCUSES #################################3
- ######## OLD
- MEN_jap:0 "Collaborate with the [JAP.GetAdjective]"
- MEN_jap_desc:0 "Collaboration with the [JAP.GetAdjective] may be the best choice right now. The central government is weak. Though if we do this we may lose support of our government in our western lands."
+ ##### ARMY #####
 
- MEN_goverment:0 "Strengthen the Committee"
- MEN_goverment_desc:0 "We must strengthen the government if we are to rule effectively"
-
- MEN_own:0 "Go it alone"
- MEN_own_desc:0 "The [JAP.GetAdjective] and the central government have many issues. It's best if we try to make it on our own."
+ MEN_an_independent_army:0 "The Inner Mongolian Army"
+ MEN_an_independent_army_desc:0 "A state needs it own army and we are not the exception to this, even if we are weak we need to defend ourselfs!"
+ MEN_rebuilding_our_army:0 "Rebuilding Our Army"
+ MEN_continue_the_ways_of_old:0 "Legacy of the Eight Banners"
+ MEN_continue_the_ways_of_old_desc:0 "The Ways of old hasnt failed us yet, cavalry combat in the stepps of Mongolia is effective yet simple solution to warfare"
+ MEN_horses_of_steel:0 "Horses of Steel"
+ MEN_horses_of_steel_desc:0 "Times are changing and so should our styles of warfare, the tank is a so called horse of steel."
+ MEN_every_man_a_rifle:0 "Study New Weaponry"
+ MEN_every_man_a_rifle_desc:0 "We have had equipment shortages for years, we need to adopt a policy of every man a rifle."
+ MEN_forces_for_the_south:0 "Request Japanese Military Aid"
+ MEN_forces_for_the_south_desc:0 "The south of our nation is very mountainous, units made to fight in this terrian should be developed."
+ MEN_japanese_military_advisors:0 "Cooperate with the Kwantung"
+ MEN_japanese_military_advisors_desc:0 ""
+ MEN_breed_strong_horses:0 "Breed Strong Horses"
+ MEN_breed_strong_horses_desc:0 ""
+ MEN_train_the_officers:0 "Train the Officers"
+ MEN_train_the_officers_desc:0 ""
+ MEN_modernize_our_artillery:0 "Modernize Our Artillery"
+ MEN_modernize_our_artillery_desc:0 ""
+ MEN_masters_of_the_steppe:0 "Masters of the Steppe"
+ MEN_masters_of_the_steppe_desc:0 ""
  
- MEN_accept_chinese_suzerainty:0 "Accept [CHI.GetAdjective] Suzerainty"
- MEN_accept_chinese_suzerainty_desc:0 "Allying [JAP.getName] will alienate [CHI.GetAdjective] officials and will fuel the guerilla activities of the communist bandits raiding our defenseless state. Securing [CHI.GetAdjective] rule might be reluctant to some of the country nationalists yet it is the only thing we can afford under current circumstances."
- ########
- MEN_strengthen_ties_with_japan:0 "Strengthen Ties With [JAP.GetNonIdeologyName]"
- MEN_strengthen_ties_with_japan_desc:0 "With [JAP.GetAdjective] influence growing in our nation its only logical we take the next step"
+ MEN_embrace_horses_of_steel:0 "Adapt to the Modern Battlefield"
+ MEN_embrace_horses_of_steel_desc:0 ""
+ MEN_understanding_blitzkreig_doctine:0 "Achtung, Kavallerie?"
+ MEN_understanding_blitzkreig_doctine_desc:0 "To use our new tanks effectively we need to study the ways of Blitzkreig"
+ MEN_every_man_a_truck:0 "The Modern Mongol Steed"
+ MEN_every_man_a_truck_desc:0 "Motorization of the army is essential to armored warfare, this creates the need for a policy such as every man a truck."
+ MEN_motorization_of_the_army:0 "Motorize the Army"
+ MEN_motorization_of_the_army_desc:0 "Bringing Motorization to our nation needs to be the first step to motorizing our army."
+ MEN_establish_tank_workshops:0 "Establish Tank Workshops"
+ MEN_establish_tank_workshops_desc:0 ""
+ MEN_acquire_japanese_designs:0 "Acquire Japanese Designs"
+
+ MEN_reorganize_the_command_chain:0 "Reorganize the Army Command Chain"
+ MEN_reorganize_the_command_chain_desc:0 ""
+ MEN_integrate_the_grand_han_righteous_army:0 "Integrate the Grand Han Righteous Army"
+ MEN_integrate_the_grand_han_righteous_army_desc:0 ""
+ MEN_open_the_kalgan_military_academy:0 "Open the [MEN.Capital.GetCapitalVictoryPointName] Military Academy"
+
+ ##### FASCIST - JAPANESE PATH #####
+
+ MEN_strengthen_ties_with_japan:0 "The State-Founding Conference"
+ MEN_strengthen_ties_with_japan_desc:0 ""
+
+ MEN_the_state_founding_conference:0 "Establish the Military Government"
+
+ MEN_eradicate_communist_resistance:0 "Eradicate Communist Resistance"
+
+ MEN_sign_the_mutual_assistance_agreement:0 "Sign the Mutual Assistance Agreement"
+
+ MEN_prepare_the_western_front:0 "Prepare the Western Front"
+
+ MEN_deal_with_the_bayannur_princes:0 "Compromise with the Bayannur Princes"
+
+ MEN_strengthen_our_buddhist_identity:0 "Strengthen Our Buddhist Identity"
+
+ MEN_servants_of_the_empire:0 "Servants of the Empire"
+
+ MEN_covert_chinese_cooperation:0 "Covert Chinese Cooperation"
+
+ MEN_eyes_behind_enemy_lines:0 "Eyes Behind Enemy Lines"
+
+ MEN_join_the_anti_japanese_struggle:0 "Join the Anti-Japanese Struggle"
+
+ MEN_liberation_or_death:0 "Liberation or Death!"
+
+ MEN_sabotage_the_kwantung:0 "Sabotage the Kwantung"
+
+ MEN_loyalty_to_the_kwantung:0 "Loyalty to the Kwantung"
+
+ MEN_promote_harmony_of_the_five_races:0 "Promote Harmony of the Five Races"
 
  MEN_seak_independence:0 "Seek Independence"
  MEN_seak_independence_desc:0 "For far too long the region of Inner Mongolia has been concurred. No Longer! Our own nation needs to be established on our own will!"
 
  MEN_submit_to_the_central_goverment:0 "Submit to the Central Goverment"
 
- MEN_the_mongol_military_government:0 "The Mongol Military government"
- MEN_the_mongol_military_government_desc:0 "The Mongol Political Committee has failed us, we and the young princes must establish a military government under Prince Dem"
- MEN_finalize_our_allience_with_jap:0 "Finalize the [JAP.GetAdjective] Alliance"
- MEN_finalize_our_allience_with_jap_desc:0 "[JAP.GetNonIdeologyName] is clearly the better of the two evils in [CHI.GetNonIdeologyName]. Finalizing an alliance with them is key to our success as a state."
+ MEN_the_spirit_of_genghis:0 "The Spirit of Genghis"
+ MEN_the_spirit_of_genghis_desc:0 ""
+
+ MEN_realize_the_zenrin_kyokai:0 "Utilize the Zenrin Kyōkai"
+ MEN_realize_the_zenrin_kyokai_desc:0 ""
+
  MEN_put_an_end_to_the_raids:0 "The Suiyuan Campaign"
  MEN_put_an_end_to_the_raids_desc:0 "The province of Suiyuan is clearly within our rule as it was in the days of old!, with military aid we can complete this goal"
+
  MEN_accept_vassalization:0 "Accept Vassalization"
  MEN_accept_vassalization_desc:0 "[JAP.GetAdjective] backed young princes have completely dominated our politics, to their agenda we must give up our autonomy for the greater good of our people"
+
  MEN_assign_chairmen:0 "Assign Chairman Yondonwangchug"
  MEN_assign_chairmen_desc:0 "Chairman Yondonwangchug a [JAP.GetAdjective] loyal nobel loved by the people, his assignment is one step closer to Mongol home rule."
- MEN_help_strike_our_old_oppressers:0 "Help Strike Our Old Oppressers"
+
+ MEN_help_strike_our_old_oppressers:0 "Drive Out the Chinese"
  MEN_help_strike_our_old_oppressers_desc:0 "China has oppressed for far too long! Joining [JAP.GetNonIdeologyName]'s fight against this menice is essential."
- MEN_an_independent_army:0 "An Independent Army"
- MEN_an_independent_army_desc:0 "A state needs it own army and we are not the exception to this, even if we are weak we need to defend ourselfs!"
- MEN_rebuilding_our_army:0 "Rebuilding Our Army"
- MEN_continue_the_ways_of_old:0 "Continue the Ways of Old"
- MEN_continue_the_ways_of_old_desc:0 "The Ways of old hasnt failed us yet, cavalry combat in the stepps of Mongolia is effective yet simple solution to warfare"
- MEN_horses_of_steel:0 "Horses of Steel"
- MEN_horses_of_steel_desc:0 "Times are changing and so should our styles of warfare, the tank is a so called horse of steel."
- MEN_every_man_a_rifle:0 "Every Man a Rifle"
- MEN_every_man_a_rifle_desc:0 "We have had equipment shortages for years, we need to adopt a policy of every man a rifle."
- MEN_forces_for_the_south:0 "Forces for the South"
- MEN_forces_for_the_south_desc:0 "The south of our nation is very mountainous, units made to fight in this terrian should be developed."
- MEN_artillery_modernization:0 "Artillery Modernization"
- MEN_artillery_modernization_desc:0 "Artillery is essential to warfare, getting the latest and greatest in this tech should be a priority."
- MEN_every_man_a_rifle:0 "Every Man a Rifle"
- MEN_increase_public_education:0 "Increase Public Education"
- MEN_increase_public_education_desc:0 "Public Education is lacking, our people need to be educated to invent new ways of warfare."
- MEN_Embrasing_Our_Heritage:0 "Embracing Our Heritage"
- MEN_understanding_blitzkreig_doctine:0 "Understanding Blitzkreig Doctine"
- MEN_understanding_blitzkreig_doctine_desc:0 "To use our new tanks effectively we need to study the ways of Blitzkreig"
- MEN_every_man_a_truck:0 "The Modern Mongol Steed"
- MEN_every_man_a_truck_desc:0 "Motorization of the army is essential to armored warfare, this creates the need for a policy such as every man a truck."
- MEN_motorization_of_the_army:0 "Motorization of the Army"
- MEN_motorization_of_the_army_desc:0 "Bringing Motorization to our nation needs to be the first step to motorizing our army."
- MEN_open_military_schools:0 "Open Military Schools"
- MEN_open_military_schools_desc:0 "Training our officers and engineers could greatly improve our military skill and effectivness."
- MEN_the_new_mongol_horde:0 "The New Mongol Horde"
- MEN_the_new_mongol_horde_desc:0 "For Years the name Mongol brought fear to the world! This needs to be once again!"
- MEN_claim_northern_shanxi:0 "Claim Northern Shanxi"
- MEN_claim_northern_shanxi_desc:0 "Northern Shanxi was part of the Inner Mongol region for years it is rightfully within our sphere of infulence!"
- MEN_propse_the_formation_of_mengjiang:0 "Propose the Formation of Menjiang"
+
+ MEN_propse_the_formation_of_mengjiang:0 "Proclaim the State of Menjiang"
  MEN_propse_the_formation_of_mengjiang_desc:0 "Menjiang or Mongol Border Land is the concept of all of Inner Mongolia united under [JAP.GetAdjective] rule."
- MEN_appeal_for_greater_autonomy:0 "Appeal for Greater Autonomy"
- MEN_appeal_for_greater_autonomy_desc:0 "With the losses in our recent wars, our state deserves more autonomy from japan!"
- MEN_claim_the_greater_inner_mongol_area:0 "Claim the Greater Inner Mongol Area"
- MEN_claim_the_greater_inner_mongol_area_desc:0 "The idea of a united Innner Mongolia must be fulfilled! The first step to this is claiming the entire region"
- MEN_accept_absorption_into_the_reformed_government:0 "Absorption Into the Reformed Government"
- MEN_accept_absorption_into_the_reformed_government_desc:0 "With the defeat of [CHI.GetNonIdeologyName] and the formation of the Reformed government of Nationalist [CHI.GetNonIdeologyName] we should accept rights and absorption into a united [CHI.GetAdjective] state"
- MEN_petition_nima-odsor_to_stay_in_shangbei:0 "Petition Nima-Odsor to Stay in Shangbei"
+
+ MEN_reunite_our_people:0 "Reunite Our People"
+
+ MEN_request_mongol_territories:0 "Request Mongol Territories"
+
+ MEN_our_place_under_the_red_sun:0 "Our Place Under the Red Sun"
+
+ ##### DEMOCRATIC PATH #####
+
+ MEN_petition_nima-odsor_to_stay_in_shangbei:0 "Aftermath of the Kälgän Incident"
  MEN_petition_nima-odsor_to_stay_in_shangbei_desc:0 "With our [JAP.GetAdjective] dominated politics any movement for anything otherwise might be supressed, to protect anti [JAP.GetAdjective] movements we shouldnt let Nima-Odsor out of our protection."
- MEN_root_out_japanese_loyality:0 "Root Out [JAP.GetAdjective] Loyality"
+
+ MEN_consolidate_national_rule:0 "Consolidate National Rule"
+
+ MEN_compromise_with_nanjing:0 "Compromise With [CHI.Capital.GetCapitalVictoryPointName]"
+ 
+ MEN_root_out_japanese_loyality:0 "Combat the Kwantung's Influence"
  MEN_root_out_japanese_loyality_desc:0 "[JAP.GetAdjective] loyality is still very strong in Inner Mongolia to secure our current goverment [JAP.GetAdjective] collaborators must be found and ruled out."
- MEN_no_country_for_fascist_sympathisers:0 "No Country for Fascist Sympathisers"
+ MEN_no_country_for_fascist_sympathisers:0 "No Place for Traitors"
  MEN_no_country_for_fascist_sympathisers_desc:0 "Any Fascist Sympathiser deserves no less then death! This includes the traitor of Prince Demchugdongrub"
- MEN_reform_rather_then_change:0 "Rather Reform then Change"
+ MEN_reform_rather_then_change:0 "Persuade the Prince"
  MEN_reform_rather_then_change_desc:0 "Rapid Change may further destablize our state more then it already is, reform is a better way to ensure loyality to the central government"
- MEN_the_three_principles:0 "The Three Principles"
- MEN_the_three_principles_desc:0 "The Three Principles of The People includes the principle of democracy, the principle of nationalism and the livelihood of the people, these are essential to our way of life."
+
+ MEN_reform_the_mongolian_council:0 "Reform the Mongolian Council"
+
+ MEN_reinvite_the_chinese_military:0 "Reinvite the Chinese Military"
+
+ MEN_tear_up_the_qin_doihara_agreement:0 "Tear Up the Qin-Doihara Agreement"
+
  MEN_anti_japanese_stratagems:0 "Anti-[JAP.GetAdjective] Stratagems"
  MEN_anti_japanese_stratagems_desc:0 "The [JAP.GetAdjective] are our natural enemy! To help us from being subjected we need to develop war plans against the enemy."
- MEN_cut_ties_with_japan:0 "Cut All Ties With [JAP.GetNonIdeologyName]"
- MEN_cut_ties_with_japan_desc:0 "[JAP.GetNonIdeologyName] has influenced us for far too long. We need to cut all contact to the menace to the east."
- MEN_the_principle_of_democracy:0 "The Principle Of Democracy"
+
+ MEN_the_principle_of_democracy:0 "United Against the Red Sun!"
  MEN_the_principle_of_democracy_desc:0 "The Principle Of Democracy strives for the people to have a say in the affiars of our nation."
- MEN_the_principle_of_nationalism:0 "The Principle Of Nationalism"
+
+ MEN_the_principle_of_nationalism:0 "Inner Mongolia's Dawn"
  MEN_the_principle_of_nationalism_desc:0 "The [CHI.GetAdjective] Nation is under threat of annihilation by the imperialist powers. To reverse the trajectory of such decline, [CHI.GetNonIdeologyName] needs to become nationally independent both externally and internally."
- MEN_embrase_the_new_life_movement:0 "Embrase The New Life Movement"
- MEN_embrase_the_new_life_movement_desc:0 "The New Life Movement or a life guided by the four virtues of the people, this style of life needs to be achived to allow our nation to prosper under imperalist powers"
- MEN_the_eastern_beacon_of_christanity:0 "The Eastern Beacon Of Christianity"
- MEN_the_eastern_beacon_of_christanity_desc:0 "Christianity is required for reaching spirtual englightenment for our peoples and restoring the life style of a great [CHI.GetNonIdeologyName]."
- MEN_the_revival_of_the_spirit:0 "The Revival Of the Spirit"
+
+ MEN_request_suiyuan_and_ordos:0 "Demand Mongol Territories"
+
+ MEN_down_with_the_colonizer:0 "Down with the Colonizer!"
+
+ MEN_fortify_the_capital:0 "Fortify the Capital"
+
+ MEN_work_with_the_communists:0 "Work with the Communists"
+
+ MEN_subdue_the_communist_threat:0 "Subdue the Communist Threat"
+
+ MEN_embrace_the_new_life_movement:0 "Embrace the New Life Movement"
+ MEN_embrace_the_new_life_movement_desc:0 "The New Life Movement or a life guided by the four virtues of the people, this style of life needs to be achived to allow our nation to prosper under imperalist powers"
+
+ MEN_promote_confucian_principles:0 "Promote Confucian Principles"
+
+ MEN_the_revival_of_the_spirit:0 "Bolster National Patriotism"
  MEN_the_revival_of_the_spirit_desc:0 "Along with Christianity teachings of Confucianism is required to revive the spirit of the people"
- MEN_clean_the_cities:0 "Clean The Cities"
+
+ MEN_clean_the_cities:0 "To Follow One's Heart"
  MEN_clean_the_cities_desc:0 "The Cities and our people are dirty they need to be cleaned for the movement to succeed."
- MEN_finalize_the_movement:0 "Finalize The Movement"
- MEN_finalize_the_movement_desc:0 "With all of our reforms passed all we need to do is finalize the movement and our citzens will be living a new life, a greater [CHI.GetAdjective] life!"
- MEN_invite_the_civillian_government:0 "Invite the Civillian government"
- MEN_invite_the_civillian_government_desc:0 "To follow the Principle Of Democracy we need to invite a government lead by the people."
- MEN_transition_into_the_third_phase:0 "The Third Phase of Revolution"
+
+ MEN_request_chinese_investment:0 "Request Chinese Investment"
+ MEN_request_chinese_investment_desc:0 "To follow the Principle Of Democracy we need to invite a government lead by the people."
+
+ MEN_transition_into_the_third_phase:0 "End the Dang Guo System"
  MEN_transition_into_the_third_phase_desc:0 "The third phase of revolution calls for a three branches government under the people, a transition into this is required for stability of a nation."
- MEN_invite_western_scholars:0 "Invite Western Scholars"
+
+ MEN_invite_western_scholars:0 "Sino-Mongolian Tech Exchange"
  MEN_invite_western_scholars_desc:0 "Western Scholars have experience that we dont have, inviting them can be very benifical for our nations."
- MEN_land_reform:0 "Land Reform"
- MEN_land_reform_desc:0 "Most of the lands here are very rural and under populated we need to start a campaign to solve some of these issues"
- MEN_tax_reform:0 "Tax Reform"
- MEN_tax_reform_desc:0 "Our tax system is still based on the rule of old this needs to be changed to be a full democratic nation."
- MEN_invite_civillian_companys:0 "Invite Civillian Companys"
- MEN_invite_civillian_companys_desc:0 "Civillian Contractors can help in ways that the government cannot, allowing them to work with us can give all types of benefits."
- MEN_encourage_anti_colonalism:0 "Encourage Anti Colonalism"
- MEN_encourage_anti_colonalism_desc:0 "Colonalism is evil by all means and we need to try to prevent it by any means possible including our own situation."
- MEN_rural_reform:0 "Rural Reform"
- MEN_rural_reform_desc:0 "Finalizing our movement we started with the land reform will continue to allow our people to prosper!"
- MEN_finalize_the_constitutional_government:0 "Finalize Constitutional Government"
- MEN_finalize_the_constitutional_government_desc:0 "Finally we can sign a constitution to protect the rights of man and the people."
- MEN_influence_our_overlord:0 "Influence Our Overlord"
- MEN_influence_our_overlord_desc:0 "While we have became a democratic state our overlord has not and that needs to change! The people deserve rights everywhere!"
- MEN_recognise_prc:0 "Recognise Communist [CHI.GetNonIdeologyName]"
- MEN_recognise_prc_desc:0 "The peoples struggle in Commuinist [CHI.GetNonIdeologyName] needs to be shown light too no matter the cost to our peoples"
- MEN_finalize_the_political_tutelage:0 "Finalize the Political Tutelage"
- MEN_finalize_the_political_tutelage_desc:0 "The Political Tuteglage of [CHI.GetNonIdeologyName] is the 2nd Stage Of The Revolution, and by far the most sucessful stage, it is common sense to continue it."
- MEN_total_isolation_from_the_west:0 "Total Isolation from the West"
- MEN_total_isolation_from_the_west_desc:0 "The west has done nothing but fail and use [CHI.GetNonIdeologyName], we have no need for them."
- MEN_close_off_the_golden_decade:0 "Close Off the Golden Decade"
- MEN_close_off_the_golden_decade_desc:0 "The Last 10 Years has been known as the Golden Decade for the Kuomintang, We should end it with further growth!
- MEN_end_the_century_of_humiliation:0 "End the Century of Humiliation"
- MEN_end_the_century_of_humiliation_desc:0 "The last century has let [CHI.GetNonIdeologyName] be free game for imperial powers, earning it the name The Century of Humiliation, this needs to change [CHI.GetNonIdeologyName] will take no more!"
- MEN_fortify_the_front:0 "Fortify the Front"
- MEN_fortify_the_front_desc:0 "The Front with [JAP.GetNonIdeologyName] and its puppet states is very tense, a series of fortifcations will help in the case of the inevitable."
- MEN_suiyuan_for_compensation:0 "Suiyuan for Compensation"
- MEN_suiyuan_for_compensation_desc:0 "Suiyuan is our rightful claim, and with the [CHI.GetAdjective] United Front providing untold cooperation now if any is the time to use this war as an opportunity."
- MEN_reclaim_our_lost_lands:0 "Reclaim Our Lost Lands"
- MEN_reclaim_our_lost_lands_desc:0 "With war raging to the east, and [JAP.GetNonIdeologyName]'s' loss bound to happen we should take this chance to reclaim the rest of the Mongol Border Region!"
- MEN_propose_mongol_unification:0 "Propose Mongol Unification"
- MEN_propose_mongol_unification_desc:0 "Mongol unification has always been on peoples minds since there was more then one mongol state, and with the KMT support we can finally propose the agenda to our neighbor."
+
+ MEN_steer_the_industry:0 "Steer the Industry"
+ MEN_steer_the_industry_desc:0 ""
+
+ MEN_request_mongol_territories_dem:0 "Request Mongol Territories"
+ MEN_request_mongol_territories_dem_desc:0 ""
+
+ MEN_nationalism_democracy_welfare:0 "Nationalism, Democracy, Welfare"
+ MEN_nationalism_democracy_welfare_desc:0 ""
+
  MEN_end_the_humiliation:0 "End the Humiliation"
  MEN_end_the_humiliation_desc:0 "After over 100 years [CHI.GetNonIdeologyName] has shined yet again, with [JAP.GetNonIdeologyName]'s failure to control [CHI.GetNonIdeologyName] its safe to say that the Century of Humiliation is over and now we are entering a Golden Century for [CHI.GetNonIdeologyName]!"
+
  MEN_greater_mongolian_reunification:0 "Greater Mongolian Reunification"
  MEN_greater_mongolian_reunification_desc:0 "With the Greater Mongol Border Lands finally under our control we can fully intergrate them into the realm and declare A New Mongol State, A Greater Mongol State."
- MEN_increase_our_presence_at_the_3rd_international:0 "Increase Our Presence At the 3rd International"
- MEN_increase_our_presence_at_the_3rd_international_desc:0 "Our current presence in the communist world is laughable we need to increase our diplomatic presence at the 3rd international to gain attention."
- MEN_form_the_communist_partitan_millitas:0 "Form the Communist Partitan Millitas"
- MEN_form_the_communist_partitan_millitas_desc:0 "It has been made clear by our communist neighbors to the east that partitans are the best way to spark revolution and keep the flames going!"
- MEN_invite_ulanhu_from_mongolia:0 "Invite Ulanhu From Mongolia"
+
+ ##### COMMUNIST PATH #####
+
+ MEN_radicalize_the_peasants:0 "Radicalize the Peasants"
+ 
+ MEN_reach_out_to_the_soviets:0 "Approach the Soviets"
+
+ MEN_contact_the_communists:0 "Contact the Communists"
+
+ MEN_establish_peasant_militias:0 "Establish the Mengqi Security Corps"
+ MEN_establish_peasant_militias_desc:0 "It has been made clear by our communist neighbors to the east that partitans are the best way to spark revolution and keep the flames going!"
+
+ MEN_the_second_bailingmiao_uprising:0 "The Second Bailingmiao Uprising"
+
+ MEN_invite_ulanhu_from_mongolia:0 "Toe the Comintern Line"
  MEN_invite_ulanhu_from_mongolia_desc:0 "Ulanhu is a notorious anti-kmt communist currently in Mongolia, we should invite him to our nation to spark change against our overlords."
- MEN_increase_serengdongrubs_influence:0 "Increase Serengdongrubs Influence"
- MEN_increase_serengdongrubs_influence_desc:0 "Serengdongrub a pro government communist is a way to spark change within our government without causing chaos."
- MEN_invite_ulanhu_to_the_government:0 "Add Ulanhu to the government"
- MEN_invite_ulanhu_to_the_government_desc:0 "With Ulanhu home inviting him to a secret government job is the clear way to go for our people."
- MEN_ask_the_mongolians_for_aid:0 "Ask the Mogolians for Aid"
 
- MEN_ask_the_soviets_for_aid_in_our_cause:0 "Seek Soviet Aid"
+ MEN_favour_the_cooperationists:0 "Favour the Cooperationists"
 
- MEN_strike_the_bourgeoisie_opressors:0 "Strike the Bourgeoisie Opressors"
- MEN_strike_the_bourgeoisie_opressors_desc:0 "The time has come, the spark is lit and we need to gas the fire, revolt against our opressors, for the good of many, for the good of our people!!"
- MEN_assist_prc:0 "Assist [PRC.GetAdjective] Communists"
- MEN_assist_prc_desc:0 "The fellow revolutionaries in [CHI.GetNonIdeologyName] need our help, who are we to deny them that."
+ MEN_request_soviet_industrial_aid:0 "Request [SOV.GetAdjective] Industrial Aid"
+ 
+ MEN_stamp_out_fascist_sympathies:0 "Stamp Out Fascist Sympathies"
+
+ MEN_soviet_mongol_military_cooperation:0 "Soviet-Mongol Military Cooperation"
+
+ MEN_join_the_comintern:0 "Join the Comintern"
+
+ MEN_loyalty_to_the_maoists:0 "Loyalty to the Maoists"
+
  MEN_joint_invasion_of_shx:0 "Joint Invasion of [SHX.GetName]"
- MEN_joint_invasion_of_shx_desc:0 "A Joint Invasion of [SHX.GetName] is beneficial both to us and to our soon to be neighbors to the east, its clear we need to divide them." #Poland Moment
- MEN_puppet_shx:0 "Subjugate the [SHX.GetName]"
- MEN_puppet_shx_desc:0 "The [SHX.GetName] is a clear roadblock in the way of true communism we need to offer a better option to their suffering people."
- MEN_honor_our_agreements:0 "Honor our Agreements"
- MEN_honor_our_agreements_desc:0 "As a good ally does it is time to honor our agreement with [PRC.GetName] and allow them to occupy Shanxi"
- MEN_cut_our_ties:0 "Cut Our Ties"
- MEN_cut_our_ties_desc:0 "The false revolutionaries in the west have been used and now its time to cut ties with those fake communists. Good riddece."
- MEN_fund_communists_in_kmt:0 "Fund Communists in the [CHI.GetName]"
- MEN_fund_communists_in_kmt_desc:0 "Funding Communist Cells in [CHI.GetNonIdeologyName] to liberate our fellow [CHI.GetAdjective] is key to our grand plan."
- MEN_a_secound_nanchang_uprising:0 "A Second Nanchang Uprising"
- MEN_a_secound_nanchang_uprising_desc:0 "After the strides made in The First Nanchang Uprisings and with the communist cells soring in numbers its time to plan a second uprising for our people."
- MEN_chi_reunifcation:0 "[CHI.GetAdjective] Reunifcation"
- MEN_chi_reunifcation_desc:0 "At last with a communist state both to our south and to our west [CHI.GetAdjective] Reunifcation needs to be a top agenda."
- MEN_unite_with_the_peoples_republic:0 "Unite With [PRC.GetName]"
- MEN_unite_with_the_peoples_republic_desc:0 "The move with the dream of a united communist [CHI.GetNonIdeologyName] merging our administration with the united [CHI.GetAdjective] state is necessary."
+ 
+ MEN_propose_mongol_unification:0 "Propose Mongol Unification"
+
+ MEN_behead_the_cornered_fox:0 "Behead the Cornered Fox"
+
+ MEN_fund_communists_in_kmt:0 "Infiltrate the Kuomintang Ranks"
+
+ MEN_focus_on_the_greater_threat:0 "Focus on the Greater Threat"
+
+ MEN_down_with_the_generalissimo:0 "Down with the Generalissimo"
+
+ MEN_integration_into_the_prc:0 "Integration into the PRC"
+
  MEN_form_the_inner_mongolia_autonomous_region:0 "Form the I.M.A.R"
- MEN_form_the_inner_mongolia_autonomous_region_desc:0 "The Inner Mongolia Autonomous Region, the proposed idea to make a special adminstative region under a unifed [CHI.GetNonIdeologyName] while still keeping a united Inner Mongolia. "
- MEN_claim_the_greater_outer_mongolian_area:0 "Claim the Greater Outer Mongolian Area"
- MEN_claim_the_greater_outer_mongolian_area_desc:0 "With the IMAR established the rest of the Outer Mongolian Region is rightfully ours for the taking."
- MEN_ask_the_prc_to_return_our_lands:0 "Demand Return Of Our Rightful Lands"
- MEN_ask_the_prc_to_return_our_lands_desc:0 "The Peoples Republic controls some of the lands promised the the agreement, it is clear we need to use force to get them to us."
+
+ MEN_claim_the_greater_outer_mongolian_area:0 "Claim the Outer Mongolian Lands"
+
+ MEN_ask_the_prc_to_return_our_lands:0 "Demand Outer Mongolian Lands"
+
  MEN_reclaim_our_lands:0 "Take Them By Force"
- MEN_reclaim_our_lands_desc:0 "Anti [CHI.GetAdjective] Sepertists still control the Inner Mongol Region and this isnt right, it needs to change!"
- MEN_proclaim_ourselfs_the_new_peoples_republic:0 "Proclaim Ourselfs The New Peoples Republic"
- MEN_proclaim_ourselfs_the_new_peoples_republic_desc:0 "With the downfall of the fake communists in [CHI.GetNonIdeologyName], we should fight under a new banner, the banner of the New Peoples Republic."
- MEN_chinese_communism:0 "[CHI.GetAdjective] Communism"
- MEN_chinese_communism_desc:0 "It is clear that radical communism does not work, with the failings of mao and the failed nachang uprising, a more moderate approach must be found without upsetting the kuomintang."
- MEN_nationalize_key_industry:0 "Nationalize Key Industry"
- MEN_nationalize_key_industry_desc:0 "While our state does not have much for industry, nationalizing what little we do have will help the economic state of our nation."
- MEN_limit_the_power_of_nobility:0 "Limit the Power of Nobility"
- MEN_limit_the_power_of_nobility_desc:0 "Princes and other forms of nobility have always had extensive power in the Mongolia region, this needs to change for the good of the people regardless of the impact it may have."
- MEN_allow_union_control:0 "Formalize Union Control"
- MEN_allow_union_control_desc:0 "After the reforms past over the last few months prince rule of the nation is simply a formality, we should formalize control of the nation by the people."
+
+ MEN_liberate_the_tuvans:0 "Liberate the Tuvans"
+
+ MEN_promote_chinese_unity:0 "Promote Chinese Unity"
+
+ MEN_prioritize_the_eastern_threat:0 "Prioritize the Eastern Threat"
+
+ MEN_pivot_to_the_west:0 "Pivot to the West"
+
+ MEN_fortify_the_east:0 "Fortify the Eastern Plains"
+
+ MEN_fortify_the_south:0 "Fortify the Southern Hills"
+
+ MEN_swallow_the_rising_sun:0 "Swallow the Rising Sun"
+
+ MEN_soviet_mongol_mutual_assistance:0 "Soviet-Mongol Mutual Assistance"
+
+ MEN_cooperate_with_china:0 "Cooperate with [CHI.Capital.GetCapitalVictoryPointName]"
+
+ MEN_nationalize_key_industry:0 "Nationalize Key Industries"
+
+ MEN_integrate_the_chinese_into_the_army:0 "Integrate the Chinese into the Army"
+
+ MEN_join_the_united_front:0 "Join the United Front"
+
+ MEN_beacon_of_resistance:0 "Beacon of Resistance"
+
+ MEN_the_honour_of_death:0 "The Honour of Death"
+
  MEN_open_the_chahar_peoples_university:0 "Open the [612.GetName] Peoples University"
  MEN_open_the_chahar_peoples_university_desc:0 "While public education is extremely limited by opening a tution free university for the people we can not only just educate our people we can spark some of the brightest minds of a generation."
  MEN_expand_the_funding:0 "Expand the Funding"
@@ -224,9 +292,7 @@
  MEN_industral_land_reform:0 "Industral Land Reform"
  MEN_industral_land_reform_desc:0 "Inner Mongolia is increadably rural and not suited for industral development, small land reform can allow further industry to be developed."
  MEN_the_fate_of_prince_dem:0 "The Fate of the Princes"
- MEN_the_fate_of_prince_dem_desc:0 "With the recent change in policy it is clear that the princes should not be the elite anymore but what should the fate of them be?"
- MEN_ban_travel_from_japan:0 "Ban Travel From [JAP.GetNonIdeologyName]"
- MEN_ban_travel_from_japan_desc:0 "[JAP.GetNonIdeologyName] is clearly trying to influence our politics and with the murder of Nima Orsor by suspected [JAP.GetAdjective] terroists, it is clear allowing travel from [JAP.GetNonIdeologyName] is just more harm then good."
+ MEN_the_fate_of_prince_dem_desc:0 "With the recent change in policy it is clear that the princes should not be the elite anymore but what should the fate of them be?"terroists, it is clear allowing travel from [JAP.GetNonIdeologyName] is just more harm then good."
  MEN_seek_dominionship:0 "Seek Dominionship"
  MEN_seek_dominionship_desc:0 "The current autonomy of our people is clearly unacceptable but full independence from the kuomintang would be a costly mistake, a proposal of dominionship to the weak central government should be more then acceptable."
  MEN_pursue_full_independence:0 "Pursue Full Independence"
@@ -257,8 +323,8 @@
  MEN_purge_the_young_princes_desc:0 "The Young Princes of Mongolia or the vocal fascist nobility are very opposed to anything but a militristic state, their infulence on our system is too great its clear they need to go, to arms for our prince!"
  MEN_cut_ties_with_china:0 "Cut Ties With [CHI.GetNonIdeologyName]"
  MEN_cut_ties_with_china_desc:0 "The kuomintang is weak and can barely control our politics anymore, a simple cut of diplomatic ties should get the message across to them."
- MEN_embrase_our_mongol_past:0 "Embrase Our Mongol Past"
- MEN_embrase_our_mongol_past_desc:0 "The Mongol Empire was the height of Mongol dominance why should we not become the empire of greats and restore the former glory of the khanate."
+ MEN_embrace_our_mongol_past:0 "embrace Our Mongol Past"
+ MEN_embrace_our_mongol_past_desc:0 "The Mongol Empire was the height of Mongol dominance why should we not become the empire of greats and restore the former glory of the khanate."
  MEN_our_new_khan:0 "Our New Khan"
  MEN_our_new_khan_desc:0 "With most of the nobility gone it is clear who should be the new khan of Mongolia, prince demchugdongrub is our choice for khan!"
  MEN_the_reclaimation_war:0 "The Reclaimation War"
@@ -267,8 +333,7 @@
  MEN_the_war_of_diplomacy_desc:0 "While the Mongols before us were not very good at diplomacy to say the very least, but we are now in a modern age, diplomacy for the suiyuan territories can be achived."
  MEN_strike_the_false_state:0 "Strike the False State"
  MEN_strike_the_false_state_desc:0 "The false state calling themselfs Mongolia is merely a soviet puppet state, liberation of the Mongol people and the empire must be achived no matter the cost."
- MEN_swallow_the_rising_sun:0 "Swallow the Rising Sun"
- MEN_swallow_the_rising_sun_desc:0 "Our old rivals of Japan have risen again and control rightful Mongolian lands, it is time to strike them down and this time there is no devine wind to save them from us!"
+
  MEN_look_south:0 "Look to the South"
  MEN_look_south_desc:0 "To our south is a weak government going weaker everyday, if any this is the time to attack to show suppremcy for Mongolia"
  MEN_look_north:0 "Look North"
@@ -290,7 +355,7 @@
  MEN_coup_d_etat:0 "Coup D'état"
  MEN_coup_d_etat_desc:0 "Now that power has been granted to the Young Princes we can excute our plan of rooting out the Chinese loyalists, Mongol or not."
  MEN_warlord_just_not_in_name:0 "A Warlord Not Just in Name"
- MEN_warlord_just_not_in_name_desc:0 "While our warlord ways are far into the past we can embrase our roots and declare a Free Mongol State."
+ MEN_warlord_just_not_in_name_desc:0 "While our warlord ways are far into the past we can embrace our roots and declare a Free Mongol State."
  MEN_ally_the_germans:0 "Ally the [GER.GetAdjective]s"
  MEN_ally_the_germans_desc:0 "The [GER.GetAdjective]s are the best example of starting from a defeated nation to growing to an empire, perhaps with the German [CHI.GetNonIdeologyName] policy changing we can ally with them."
  MEN_ally_the_japanese:0 "Ally the [JAP.GetAdjective]"
@@ -299,75 +364,57 @@
  MEN_border_raids_desc:0 "Border Raids are the best way to restore Mongol lands without forcing a total war apon Asia."
  MEN_form_mengjiang_free:0 "Propose the Formation of Mengjiang"
  MEN_form_mengjiang_free_desc:0 "Menjiang or Mongol Border Land is the concept of all of Inner Mongolia united under [JAP.GetAdjective] rule."
- MEN_establish_the_bank_of_mengjiang:0 "Establish the Bank of Mengjiang"
+
+ ### INDUSTRY ###
+
+ MEN_establish_the_bank_of_mengjiang:0 "Integrate the South Chahar Bank"
  MEN_establish_the_bank_of_mengjiang_desc:0 "Every functioning economy needs a functioning currency, establishing a national bank will help with this."
- MEN_expand_civilian_industry:0 "Expand Civilian Industry"
- MEN_expand_civilian_industry_desc:0 "Inner Mongolian industry is very poor to non existent, expansion should inprove our economic system."
- MEN_open_chahar_gun_factorys:0 "Open [612.GetName] Factorys"
- MEN_open_chahar_gun_factorys_desc:0 "Opening an arsonal in the region of [612.GetName] should allow for further expansion of the military."
- MEN_a_mongol_industral_boom:0 "A Mongol Industral Boom"
- MEN_a_mongol_industral_boom_desc:0 "With the recent expansions in the industry, its safe to assume were having a industral boom."
- MEN_pavement_effort:0 "A Pavement Effort"
- MEN_pavement_effort_desc:0 "If we make an effort to replace dirt roads with paved ones it can help with moving across the nation."
- MEN_open_public_schools:0 "Open Public Schools"
- MEN_open_public_schools_desc:0 "Our public education is serverly lacking, by funding public schools we can help to increase the literacy rate."
- MEN_further_research_grants:0 "Further Research Grants"
- MEN_further_research_grants_desc:0 "Providing grants to our schools can allow us to grow bright minds in our nation"
- MEN_open_japanese_subsidised_steel_plants:0 "Open [JAP.GetAdjective] Subsidised Steel Plants"
- MEN_open_japanese_subsidised_steel_plants_desc:0 "With [JAP.GetAdjective] investors ready to help our mineral extraction we can finally reopen old steel mines and open new ones as well."
- MEN_japanese_backed_coal_plants:0 "Open [JAP.GetAdjective] Backed Coal Plants"
+
+ MEN_fuel_for_the_war_machine:0 "Fuel for the War Machine"
+ MEN_fuel_for_the_war_machine_desc:0 "With [JAP.GetAdjective] investors ready to help our mineral extraction we can finally reopen old steel mines and open new ones as well."
+ MEN_japanese_backed_coal_plants:0 "Intensify Coal Extraction"
  MEN_japanese_backed_coal_plants_desc:0 "[JAP.GetNonIdeologyName] is very intrested in the discovered coal depots in our nation, with their investment we can open extraction plants."
- MEN_open_suiyuan_mining_facilitys:0 "Open [621.GetName] Mining Facilitys"
+ MEN_open_suiyuan_mining_facilitys:0 "Bolster the Steel Industry"
  MEN_open_suiyuan_mining_facilitys_desc:0 "[621.GetName] is very resouce rich, with [JAP.GetAdjective] aid we can extract some of those resources."
- MEN_challenge_showa_steelworks:0 "Challenge Showa Steelworks"
- MEN_challenge_showa_steelworks_desc:0 "Showa steelworks is the largest steel production facility in [CHI.GetNonIdeologyName] we can hope to challange that with [JAP.GetAdjective] help."
- MEN_self_funded_iron_mines:0 "Self Funded Iron Mines"
- MEN_self_funded_iron_mines_desc:0 "Opening iron mines with no investors may not be as effective as with aid but this way no nation can take them from us."
- MEN_trade_focus:0 "Trade Focus"
+ MEN_establish_the_daimo_koshi:0 "Establish the Dai-Mō Kōshi"
+ MEN_establish_the_daimo_koshi_desc:0 "Showa steelworks is the largest steel production facility in [CHI.GetNonIdeologyName] we can hope to challange that with [JAP.GetAdjective] help."
+ MEN_improve_regional_infastructure:0 "Improve Regional Infrastructure"
+ MEN_improve_regional_infastructure_desc:0 ""
+ MEN_prioritize_industrialization:0 "Prioritize Industrialization"
+ MEN_prioritize_industrialization_desc:0 "Opening iron mines with no investors may not be as effective as with aid but this way no nation can take them from us."
+ MEN_trade_focus:0 "Monopolize our Trade"
  MEN_trade_focus_desc:0 "By focusing on trade our economy can improve quite a bit."
  MEN_mongol_industral_investment:0 "Mongol Industral Investment"
  MEN_mongol_industral_investment_desc:0 "With further investment in our industral toolings we can grow our domestic industry greatly"
- MEN_suiyuan_industry:0 "Suiyuan Industry"
+ MEN_from_steppes_into_factories:0 "From Steppes into Factories"
+ MEN_from_steppes_into_factories_desc:0 ""
+ MEN_expand_chahar_arms_workshops:0 "Expand Chahar Arms Workshops"
+ MEN_expand_chahar_arms_workshops_desc:0 ""
+ MEN_industrialization_achieved:0 "Industrialization Achieved"
+ MEN_industrialization_achieved_desc:0 ""
+
+ MEN_open_public_schools:0 "Open the Chahar Youth Academy"
+ MEN_open_public_schools_desc:0 "Our rural education is serverly lacking, by funding rural schools we can help to increase the literacy rate."
+ MEN_further_research_grants:0 "Further Research Grants"
+ MEN_further_research_grants_desc:0 "Providing grants to our schools can allow us to grow bright minds in our nation"
+ MEN_exploit_suiyuan:0 "Utilize Suiyuan's Resources"
+ MEN_suiyuan_industry:0 "Integrate Suiyuan Workshops"
  MEN_suiyuan_industry_desc:0 "By restoring the industral parts of suiyuan we can pupose it for state gain."
- MEN_found_an_independent_air_force:0 "Found An Independent Air Force"
- MEN_found_an_independent_air_force_desc:0 "Founding an independent air force is the first step to building air dominince over the enemy"
- MEN_fighter_focus:0 "Fighter Focus"
- MEN_fighter_focus_desc:0 "Lighter airframes like fighters are very effective for mass production and air superiority."
- MEN_bomber_focus:0 "Bomber Focus"
- MEN_bomber_focus_desc:0 "Mass production of bombers is helpful against enemys with smaller airforces"
- MEN_build_our_first_air_base:0 "Build Our First Air Base"
- MEN_build_our_first_air_base_desc:0 "Without a proper air base we cannot operate any aircraft so it is key we build one."
- MEN_convert_fighter_models:0 "Convert Fighter Models"
- MEN_convert_fighter_models_desc:0 "Converting fighter models into fighter-bombers we can save research and production."
- MEN_strategic_anti_air_placements:0 "Strategic Anti Air placements"
- MEN_strategic_anti_air_placements_desc:0 "By placing strategic anti air in our cities we can limit enemy air power."
- MEN_strategic_bombing_effort:0 "Strategic Bombing Effort"
- MEN_strategic_bombing_effort_desc:0 "Larger Bombers used to target strategic locations like supply lines and factories."
- MEN_close_air_support_specialitys:0 "Close Air Support Speciality"
- MEN_close_air_support_specialitys_desc:0 "By specializing in ground attack we can rely less on troop skill, and more on air ground power."
- MEN_the_great_mongol_navy:0 "The Great Mongol Navy"
- MEN_the_great_mongol_navy_desc:0 "Now that we control a coastline we can establish the Royal Mongolian Navy"
- MEN_build_ships_as_great_as_the_khan:0 "Build Ships As Great As The Khan"
- MEN_build_ships_as_great_as_the_khan_desc:0 "We must build large ships as great as the greatest khan!"
- MEN_underwater_cavalry:0 "Underwater Cavalry"
- MEN_underwater_cavalry_desc:0 "Submarines are just like cavalry, both fast and quick striking."
- MEN_snorkels_for_our_troops:0 "Snorkels For Our Troops"
- MEN_snorkels_for_our_troops_desc:0 "Adding Snorkels to our submarines can help improve stealth and time they can stay under the water."
- MEN_sub_doctine_modernization:0 "Submarine Doctrine Modernization"
- MEN_sub_doctine_modernization_desc:0 "By modernizing our submarine doctrine we can help to improve the effectiveness of our entire fleet."
- MEN_for_the_peoples_struggle:0 "For The Peoples Struggle"
- MEN_for_the_peoples_struggle_desc:0 "For the people. For the revoultion."
- MEN_a_ship_that_would_make_the_khan_proud:0 "A Ship That Would Make The Khan Proud"
- MEN_a_ship_that_would_make_the_khan_proud_desc:0 "For the khan see thee and aprove"
+
  ################# EVENTS ############################
- 
+
+ men.10.t:0 "The Zhangbei Meeting"
+ men.10.d:0 "As fear rises amongst the elites, and the Japanese slowly encroach, key figures from the Mongolian Autonomous Political Committee and the Kuomintang, Nima-odsor, Ünenbayan, Serengdongrub, and Demchugdongrub, have gathered in Zhangbei to meet with the influential Jodbajab. Tensions were high as they reviewed recent developments in northern Chahar Province. Manchurian troops, under the command of Li Shouxin, had crossed into the six counties demilitarized by the Chin-Doihara Agreement, unsettling the fragile peace in the region.\n\nJodbajab revealed his response: a deployment of cavalry police to protect Chahar's vulnerable northern borders. However, as the Japanese press ever further into northern China and Manchukuo in order to expand their influence, a sense of growing uncertainty pervaded the meeting. Each leader knew that this latest breach could signal the start of something far larger, potentially drawing the region's factions and powers into an inescapable clash...\n\nAs the meeting is brought to an end, all the respective representatives prepare to leave, however, it is unclear what awaits them as they might never come back."
+ men.10.a:0 "Conclude the meeting, tomorrow is another day."
+ men.10.b:0 "The meeting is unexpectedly prolonged..."
+
+ men.11.t:0 "Nima-Odsor Assassinated"
+ men.11.d:0 "Tragedy has struck the fragile clique within Inner Mongolia: Nima-odsor, a pro-Kuomintang nationalist, and one of the key figures advocating for Mongolian autonomy and opposition to the Japanese, has been assassinated. Eyewitness reports suggest that the Japanese orchestrated this brutal act, aiming to weaken the region's leadership and disrupt any unified resistance to their expanding influence. Nima-odsor's death sends a wave of shock and fear across the movement. Allies wonder who might be targeted next, while others question if the dream of an independent and unified Mongolia is slipping away. In these uncertain times, many face a stark choice: either strengthen their resolve and push back against foreign interference or risk becoming tools of a foreign empire."
+ men.11.a:0 "Don't fly too close to the red sun..."
+
  men.22.t:0 "[MEN.GetName] Established"
  men.22.d:0 "The [MEN.GetName] has been established by Demchugdongrub with the help of the [JAP.GetAdjective]. They have also break away from our control. Traitors!"
  men.22.a:0 "Such a betrayal will not go unpunished."
-
- men.11.t:0 "[FROM.GetName] joins us!"
- men.11.d:0 "Demchugdongrub has agreed to the establishment of the [MEN.GetName] and [MEN.GetLeader] has been appointed as the chairman. They are now loyal to us and has broken away from the [CHI.GetRulingParty]."
- men.11.a:0 "This will weaken the [CHI.GetRulingParty] greatly!"
 
  men.23.t:0 "[MEN.GetName] proposes the formation of Mengjiang"
  men.23.d:0 "[FROM.GetLeader] has proposed the estanlishment of The mengjiang United Autonomous government with some of our newly occupied lands in [CHI.GetNonIdeologyName]."
@@ -456,11 +503,11 @@
 
  MEN_Mini_Game_Unlock_chi_tt:0 "§YUnlocks decisions to reduce internal loyality to [JAP.GetNonIdeologyName]§!."
 
- MEN_nima_ordsor_kill_tt:0 "§YTaking this focus will prevent Nima Ordsor From being assassinated.§!"
+ MEN_nima_odsor_kill_tt:0 "§YTaking this focus will prevent Nima Ordsor From being assassinated.§!"
 
  MEN_nimaordsor_not_dead_tt:0 "Nima Ordsor has not been assassinated."
 
- MEN_nima_ordsor_dies_tt:0 "§RNima Ordsor Dies§!"
+ MEN_nima_odsor_dies_tt:0 "§RNima Ordsor Dies§!"
 
  MEN_new_life_tt:0 "§RSuch rapid changes in our ideals will prevent us from fully embracing the New Life Movement.§!"
 
@@ -491,11 +538,25 @@
 
  ############## IDEAS #############################
 
+ MEN_kwantungs_invisible_hand:0 "Kwantung's Invisible Hand"
+ MEN_kwantungs_invisible_hand_desc:0 "The Kwantung's influence weaves through every facet of our military and governance, binding us to Japan's strategic designs. Through advisors and covert control, the Kwantung seeks to transform our nation into a puppet state, ensuring its forces, economy, and leadership align with Japanese interests. The military hierarchy is compromised, with Japanese officers directing from the shadows, while local leaders are maneuvered into roles that serve Japan's expansionist ambitions in East Asia. Despite our country's autonomy on paper, the Kwantung's grip remains firm, an unseen force dictating its path forward."
+
  MEN_mongol_raids:0 "Mongol Raids"
+ MEN_mongol_raids_desc:0 "Our lands are plagued by hundreds, if not thousands of Mongol bandits, launching swift raids on our borders, disrupting trade, and testing our strength at every turn. These marauding groups, remnants of a long-lost empire, have left settlements defenseless and undermined local stability. To secure our future, we must address the relentless incursions that threaten to destabilize our nation, terrorize our people and weaken our authority."
+
+ MEN_disorganized_military:0 "Disorganized Military"
+ MEN_disorganized_military_desc:0 "Our forces, though numerous, lack the discipline and cohesion necessary for effective warfare. Poor training, disunity among commanders, and a shortage of proper equipment have led to a chaotic command structure that struggles to maintain order in battle. Until we can impose discipline and streamline our operations, our military will remain a blunt instrument, vulnerable to collapse in the face of determined opposition."
+
+ MEN_the_long_winter:0 "The Long Winter"
+ MEN_the_long_winter_desc:0 "The winter of 1936 has been unlike any other, a season of merciless cold, with temperatures plummeting below -30°C for nearly three relentless months, making our people struggle desperately to survive; livestock starve while pastures are left barren, fields lay buried under unyielding snow, and transportation has all but come to a full stop. For those unprepared, survival has become nearly impossible, greatly destabilizing our political and economical tranquility, making people increasingly more anxious about the future... As we face widespread hardship, a clear path to recovery must be found, even if it means seeking aid from foreign powers to rebuild and endure."
+
+ MEN_fuel_for_the_war_machine_idea:0 "Fuel for the War Machine"
+ MEN_fuel_for_the_war_machine_idea_desc:0 "Our resources should be the backbone of Japan's ambitions in East Asia, with our lands converted into vast extraction sites to feed their insatiable war economy. Minerals, metals, and agricultural yields are siphoned off, leaving little for our own development. As our people labor to fulfill Japanese quotas, our economy grows ever more dependent on their demands, locking us into a cycle of servitude."
+
+ MEN_rapid_industrialization:0 "Rapid Industrialization"
+ MEN_rapid_industrialization_desc:0 "Under the pressure of foreign powers and in a bid to modernize our economy, our nation has embarked on an ambitious program of rapid industrial expansion. New factories and infrastructure projects spring up overnight, as our limited resources are directed towards swift growth. While this industrial boom strains our people and resources, it promises to transform our country from a backwater into a vital contributor to regional production."
 
  MEN_increasing_jap_influence:0 "Increasing [JAP.GetAdjective] Influence"
-
- MEN_Autonomous_Province:0 "Autonomous Province"
 
  MEN_mon_mil_gov_made:0 "Mongol Military Goverment"
 
@@ -503,13 +564,25 @@
 
  MEN_strike_our_old_oppressers:0 "Strike Our Old Oppressers"
 
- MEN_an_independent_army:0 "An Independent Army"
+ MEN_an_independent_army:0 "The Inner Mongolian Army"
 
- MEN_rebuilding_the_disaster_of_suiyan:0 "Rebuilding the Disaster of Suiyan"
+ MEN_rebuilding_the_disaster_of_suiyan:0 "Lessons of the Suiyuan Campaign"
 
- MEN_continue_the_ways_of_old:0 "Continue the Ways of Old"
+ MEN_continue_the_ways_of_old:0 "Legacy of the Eight Banners"
 
- MEN_embrase_horses_of_steel:0 "Horses of Steel"
+ MEN_embrace_horses_of_steel:0 "Horses of Steel"
+
+ MEN_japanese_advisors_idea:0 "Kwantung Military Advisors"
+
+ MEN_strong_horse_breeds:0 "Strong Horse Breeds"
+
+ MEN_masters_of_the_steppe_idea:0 "Masters of the Steppe"
+
+ MEN_modernized_equipment_production:0 "Modernized Equipment Production"
+
+ MEN_japanese_tank_designs:0 "Japanese Armor Designs"
+
+ MEN_Embrasing_Our_Heritage:0 "Embracing Our Heritage"
 
  MEN_weakened_jap_influence:0 "Weakened [JAP.GetAdjective] Influence"
 
@@ -535,8 +608,6 @@
 
  MEN_the_new_life_movement_5:0 "The New Life Movement"
 
- MEN_invite_western_scholars:0 "Invited Western Scholars"
-
  MEN_tax_reform:0 "Tax Reform"
 
  MEN_invited_civllian_companys:0 "Invited Civillian Companys"
@@ -559,11 +630,7 @@
 
  MEN_funds_for_chinese_communists:0 "Funds For [CHI.GetAdjective] Communists"
 
- MEN_chinese_communism:0 "[CHI.GetAdjective] Communism"
-
  MEN_limited_nobility_power:0 "Limited Nobility"
-
- MEN_chinese_communism_2:0 "[CHI.GetAdjective] Communism"
 
  MEN_a_communist_beacon_in_china:0 "A New Communist Beacon In China"
 
@@ -573,17 +640,16 @@
 
  MEN_the_great_inner_mongol_army:0 "The Great Inner Mongol Army"
 
- MEN_the_bank_of_mengjiang:0 "The Bank of mengjiang"
+ MEN_the_bank_of_mengjiang:0 "South Chahar Bank"
 
  MEN_the_bank_of_mengjiang_2:0 "The Bank of mengjiang"
 
  MEN_the_bank_of_mengjiang_3:0 "The Bank of mengjiang"
 
  MEN_limited_jap_influence:0 "Limited [JAP.GetAdjective] Influence"
+
  ################## Decisions ######################
 
- MEN_Internal_Power_Struggle:0 "Internal Power Struggle"
- MEN_fading_central_loyality:0 "Fading Kuomintang Loyality"
  MEN_the_suiyuan_campaign:0 "The Suiyuan Campaign"
  MEN_esablish_the_mongol_military_government:0 "Esablish the Mongol Military Goverment"
  MEN_further_distance_ourself_from_chi:0 "Further Distance Ourself From the Central government"
@@ -594,7 +660,25 @@
  MEN_ban_military_orgs:0 "Ban Military Organizations"
  MEN_ban_fascist_views:0 "Ban Fascist Political Views"
 
- ################## Miscellaneous ##################
- spirit_of_genghis:0 "Spirit of Genghis"
+ MEN_the_zhangbei_meeting:0 "The Zhangbei Meeting"
 
- autonomous_state:0 "Autonomous State"
+ ################## Miscellaneous ##################
+
+ MEN_spirit_of_genghis:0 "Spirit of Genghis"
+ MEN_anti_japanese_nationalist:0 "Anti-Japanese Nationalist"
+ MEN_militant_communist:0 "Militant Communist"
+ MEN_seasoned_politician:0 "Seasoned Politician"
+ MEN_guerilla_fighter:0 "Guerilla Fighter"
+ MEN_khan:0 "A New Khan"
+ MEN_khan_of_khans:0 "The Khan Of Khans"
+ MEN_fascist_sympathies:0 "Fascist Sympathiser"
+ MEN_fascist_sympathies_desc:0 "§LThis man has openly expressed support for fascist elements, either through his actions or words.§!"
+
+ MEN_rapid_industrialization_timer_tt:0 "[?MEN_rapid_industrialization_timer:days_left|Y0]"
+ MEN_remove_industrialization:0 "Will be §Rpermanently removed§! in §Y[GetMenIndustrializationTimer]§! days if no §Yindustrial focus§! is §Ystarted§!"
+ MEN_prevent_destabilization:0 "Will §Yprevent§! the §YJapanese§! from further §Rdestabillizing§! our §Ygovernment§!."
+ MEN_nima_odsor_assassinated:0 "§YNima-odsor§! has been §Yassassinated§!."
+ MEN_remove_mongol_raids:0 "Will be §Rremoved§! once we §Yachieve 3 victories or stalemates§! against §YMongolian raiders§! or §YMongolia§! has §Yopinion§! of us over or equal to §Y60§!."
+ MEN_masters_of_the_steppe_tt:0 "Enables §HSteppe Warfare§!:\n    §HCavalry§!:\n        §HPlains§!:\n            Attack: §G+10%§!\n            Movement: §G+10%§!\n        §HHills§!:\n            Attack: §G+5%§!\n            Movement: §G+5%§!"
+ MEN_create_han_army:0 "Create §Y2 Dà Hàn Zhìyuàn Lü§! divisions in §Y[THIS.GetName]§!."
+ MEN_suiyuan_ended:0 "The §YSuiyuan Campaign§! has ended."

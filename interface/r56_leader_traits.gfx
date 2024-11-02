@@ -179,5 +179,11 @@ spriteTypes = {
 		name = "GFX_trait_AUS_nazi_loyalties"
 		texturefile = "gfx/interface/traits/personal/trait_fascist_sympathizer.dds"
 	}
+
+###--->  MEN <><> <><> <><>
+	spriteType = {
+		name = "GFX_trait_MEN_fascist_sympathies"
+		texturefile = "gfx/interface/traits/personal/trait_fascist_sympathizer.dds"
+	}
 }
 	

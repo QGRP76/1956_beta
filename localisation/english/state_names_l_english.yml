@@ -1912,10 +1912,10 @@
  STATE_610:0 "Rehe"
  STATE_610_RENAMING:0 "[610.controller.GetStateName_610]"
 
- STATE_611:0 "South Chahar"
+ STATE_611:0 "Chahar"
  STATE_611_RENAMING:0 "[611.controller.GetStateName_611]"
 
- STATE_612:0 "Chahar"
+ STATE_612:0 "Shiliin Gol"
  STATE_612_RENAMING:0 "[612.controller.GetStateName_612]"
 
  STATE_613:2 "Shanghai"
@@ -2352,7 +2352,7 @@
  STATE_745:0 "Dalian"
  STATE_745_RENAMING:0 "[745.controller.GetStateName_745]"
 
- STATE_746:0 "Ordos"
+ STATE_746:0 "Yikezhao"
  STATE_746_RENAMING:0 "[746.controller.GetStateName_746]"
 
  STATE_747:0 "Dali"

@@ -9935,6 +9935,42 @@ spriteType = {
 		name = "GFX_goal_INS_democracy"
 		textureFile = "gfx/interface/goals/ins/r56_goal_INS_democracy.dds"
 	}
+
+	###------> MEN <><> <><> <><> <><> <><>
+
+	spriteType = {
+		name = "GFX_goal_MEN_rather_reform_then_change"
+		textureFile = "gfx/interface/goals/men/r56_goal_MEN_rather_refrom_then_change.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MEN_elite_horsemen"
+		textureFile = "gfx/interface/goals/men/r56_goal_MEN_elite_horsemen.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MEN_spirit_of_genghis"
+		textureFile = "gfx/interface/goals/men/r56_goal_MEN_spirit_of_genghis.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MEN_flag_waving"
+		textureFile = "gfx/interface/goals/men/r56_goal_MEN_flag_waving.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MEN_combat_kwantung_influence"
+		textureFile = "gfx/interface/goals/men/r56_goal_MEN_combat_kwantung_influence.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MEN_eliminate_the_prince"
+		textureFile = "gfx/interface/goals/men/r56_goal_MEN_eliminate_the_prince.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MEN_soldier_flag"
+		textureFile = "gfx/interface/goals/men/r56_goal_MEN_soldier_flag.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_MEN_attack_japan"
+		texturefile = "gfx/interface/goals/focus_AST_war_japan.dds"
+	}
+	
 }
 
 

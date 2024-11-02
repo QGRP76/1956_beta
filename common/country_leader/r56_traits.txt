@@ -166,43 +166,6 @@ leader_traits = {
 		ai_get_ally_desire_factor = -25
 	}
 
-	MEN_guerilla_fighter = {
-		random = no 
-		conscription_factor = 0.05
-		mobilization_speed = 0.05
-		resistance_damage_to_garrison = -0.05
-		army_core_defence_factor = 0.05
-		army_core_attack_factor = 0.05
-	}
-
-	MEN_khan = {
-		random = no 
-		justify_war_goal_time = -0.25
-		army_defence_factor = 0.05
-		army_attack_factor = 0.05
-		stability_factor = -0.15
-	}
-
-	MEN_khan_of_khans = {
-		random = no 
-		justify_war_goal_time = -0.25
-		army_defence_factor = 0.05
-		army_attack_factor = 0.05
-		compliance_gain = 0.025
-		war_support_factor = 0.1
-		stability_factor = -0.15
-
-	}
-
-	MEN_Chinese_communist = {
-		random = no 
-		production_factory_efficiency_gain_factor = 0.05
-		repair_speed_arms_factory_factor = 0.05
-		repair_speed_industrial_complex_factor = 0.05
-		production_speed_industrial_complex_factor = 0.05
-	}
-
-
 	voluntaryism = {
 		random = no
 
@@ -3272,7 +3235,87 @@ leader_traits = {
 		industrial_capacity_factory = 0.15
 	}
 
+###------> MEN <><> <><> <><> <><> <><>
+
+	MEN_spirit_of_genghis = {
+		random = no
+		cavalry_attack_factor = 0.05
+		unit_cavalry_design_cost_factor = -0.25
+		equipment_bonus = {
+			small_plane_naval_bomber_airframe = {
+				air_range = 0.1 
+				naval_strike_attack = 0.1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MEN_guerilla_fighter = {
+		random = no 
+		conscription_factor = 0.05
+		mobilization_speed = 0.05
+		resistance_damage_to_garrison = -0.05
+		army_core_defence_factor = 0.05
+		army_core_attack_factor = 0.05
+	}
+
+	MEN_khan = {
+		random = no 
+		justify_war_goal_time = -0.25
+		army_defence_factor = 0.05
+		army_attack_factor = 0.05
+		stability_factor = -0.15
+	}
+
+	MEN_khan_of_khans = {
+		random = no 
+		justify_war_goal_time = -0.25
+		army_defence_factor = 0.05
+		army_attack_factor = 0.05
+		compliance_gain = 0.025
+		war_support_factor = 0.1
+		stability_factor = -0.15
+
+	}
+
+	MEN_anti_japanese_nationalist = {
+		sprite = 13
+		random = no
+
+		war_support_factor = 0.05
+		political_power_factor = -0.10
+		defensive_war_stability_factor = 0.10
+		democratic_drift = 0.03
+	}
+
+	MEN_seasoned_politician = {
+		sprite = 13
+		random = no
+
+		neutrality_drift = 0.03
+		political_advisor_cost_factor = -0.25
+		political_power_factor = 0.05
+		stability_factor = 0.05
+	}
+
+	MEN_militant_communist = {
+		random = no
+		sprite = 13
+
+		war_support_factor = 0.05
+		conscription_factor = 0.05
+		stability_factor = -0.05
+		communism_drift = 0.03
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 ###------> MEX <><> <><> <><> <><> <><>
+
 	state_energy = {
 		random = no
 	}

@@ -1,4 +1,16 @@
 defined_text = {
+	name = GetMenIndustrializationTimer
+	text = {
+		trigger = {
+			has_country_flag = MEN_rapid_industrialization_timer
+		}
+		localization_key = MEN_rapid_industrialization_timer_tt
+	}	
+	text = {
+		localization_key = "120"
+	}	
+}
+defined_text = {
 	name = GetAmanullahVisitCairo
 	text = {
 		trigger = {

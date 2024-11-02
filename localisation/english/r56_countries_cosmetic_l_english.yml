@@ -2976,12 +2976,12 @@
  PHI_USA_neutrality_subject_DEF:0 "the Commonwealth of the Philippines"
 
  #MEN
- MEN_fascism:0 "United Mongolian Politcal Committee"
- MEN_fascism_DEF:0 "the United Mongolian Politcal Committee"
+ MEN_fascism:0 "Khanate of Inner Mongolia"
+ MEN_fascism_DEF:0 "the Khanate of Inner Mongolia"
  MEN_democratic:0 "Republic of Inner Mongolia"
  MEN_democratic_DEF:0 "the Republic of Inner Mongolia"
- MEN_neutrality:0 "Mongolian Autonomous Political Council"
- MEN_neutrality_def:0 "the Mongolian Autonomous Political Council"
+ MEN_neutrality:0 "State of Inner Mongolia"
+ MEN_neutrality_def:0 "the State of Inner Mongolia"
  MEN_communism:0 "People's Republic of Inner Mongolia"
  MEN_communism_DEF:0 "the People's Republic of Inner Mongolia"
  MEN_ADJ:0 "Inner Mongolian"
@@ -3008,6 +3008,17 @@
  # MEN_CHI_Puppet_tag_ADJ:0 "Yuan"
  # MEN_Mongol_state:0 "Inner Mongol State"
  # MEN_Mongol_state_DEF:0 "The Inner Mongol State"
+
+ #MEN_CHI_AUT
+ 
+ MEN_CHI_AUT_fascism:0 "United Mongolian Politcal Committee"
+ MEN_CHI_AUT_fascism_DEF:0 "the United Mongolian Politcal Committee"
+ MEN_CHI_AUT_democratic:0 "Republic of Inner Mongolia"
+ MEN_CHI_AUT_democratic_DEF:0 "the Republic of Inner Mongolia"
+ MEN_CHI_AUT_neutrality:0 "Mongolian Autonomous Political Committee"
+ MEN_CHI_AUT_neutrality_def:0 "the Mongolian Autonomous Political Committee"
+ MEN_CHI_AUT_communism:0 "People's Republic of Inner Mongolia"
+ MEN_CHI_AUT_communism_DEF:0 "the People's Republic of Inner Mongolia"
 
  #MON
  MON_SOV_REPUBLIC_communism:0 "Mongolian Soviet Socialist Republic"

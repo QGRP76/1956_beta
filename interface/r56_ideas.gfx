@@ -3030,5 +3030,20 @@ spriteType = {
 		texturefile = "gfx/interface/ideas/mnc/r56_MNC_idea_Rainier_III.dds"
 	}
 
+###------> MEN <><> <><> <><> <><> <><>
+
+	spriteType = {
+		name = "GFX_idea_MEN_mongol_raids"
+		texturefile = "gfx/interface/ideas/men/r56_idea_MEN_mongol_raids.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MEN_kwantungs_invisible_hand"
+		texturefile = "gfx/interface/ideas/men/r56_idea_MEN_kwantungs_invisible_hand.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MEN_the_long_winter"
+		texturefile = "gfx/interface/ideas/men/r56_idea_MEN_the_long_winter.dds"
+	}
+
 }
 #####---------------------------------------------------------------------> End

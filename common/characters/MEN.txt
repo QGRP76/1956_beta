@@ -8,38 +8,68 @@ characters={
 		}
 		country_leader={
 			ideology= fascism_ideology
-			traits={ spirit_of_genghis }
+			traits={ MEN_spirit_of_genghis subservient_ultranationalist r56_trait_opposed_to_communism }
 			expire="1965.1.1"
 			id=-1
 		}
 		country_leader={
 			ideology= oligarchism
-			traits={ spirit_of_genghis }
+			traits={ MEN_spirit_of_genghis subservient_ultranationalist r56_trait_opposed_to_communism }
 			expire="1965.1.1"
 			id=-1
 		}		
 	}
-	MEN_nima_ordsor={
+	MEN_nima_odsor={
 		name="Nima-odsor"
 		portraits={
 			civilian={
-				large="GFX_Portrait_Asia_Generic_2"
+				large="gfx/leaders/Asia/portrait_asia_generic_land_8.dds"
+				small="gfx/interface/ideas/MEN/advisors/r56_idea_MEN_advisor_nima_odsor.dds"
+			}
+			army = {
+				small="gfx/interface/ideas/MEN/advisors/r56_idea_MEN_advisor_nima_odsor_army.dds"
+			}
+		}
+		advisor = {
+			cost = 150
+			available = {
+				NOT = {
+					has_country_flag = MEN_nima_odsor_assassinated
+				}
+				NOT = {
+					has_government = communism
+					has_government = fascism
+					has_war_with = CHI
+				}
+			}
+			can_be_fired = no
+			slot = political_advisor
+			ledger = civilian
+			idea_token = MEN_nima_odsor
+			allowed = {
+				original_tag = MEN
+			}
+			traits = {
+				MEN_anti_japanese_nationalist
+			}
+			ai_will_do = {
+				factor = 10
 			}
 		}
 		country_leader={
 			ideology=the_peoples_tutelage
-			traits={ army_connections }
+			traits={ MEN_anti_japanese_nationalist army_connections }
 			expire="1965.1.1.1"
 			id=-1
 		}
 		country_leader={	
 			ideology=socialism
-			traits={ gentle_scholar }
+			traits={ MEN_anti_japanese_nationalist gentle_scholar }
 			expire="1965.1.1.1"
 			id=-1
 		}		
 	}
-	MEN_Ulanhu={
+	MEN_ulanhu={
 		name="Ulanhu"
 		portraits={
 			civilian={
@@ -66,112 +96,310 @@ characters={
 			planning_skill = 1
 			logistics_skill = 3
 			legacy_id = -1
+			visible = {
+				always = no # Change later
+			}
 		}
 	}
-	MEN_Serengdongrub={
+	MEN_serengdongrub={
 		name="Serengdongrub"
 		portraits={
 			civilian={
-				large="GFX_r56_portrait_MEN_serengdongrub"
+				large="gfx/leaders/MEN/r56_portrait_MEN_Serengdongrub.dds"
+				small="gfx/interface/ideas/MEN/advisors/r56_idea_MEN_advisor_serengdongrub.dds"
+			}
+			army = {
+				small="gfx/interface/ideas/MEN/advisors/r56_idea_MEN_advisor_serengdongrub_army.dds" 
 			}
 		}
 		country_leader={
 			ideology=marxism
 			traits={ 
-				MEN_Chinese_communist 
+				MEN_militant_communist 
 			}
 			expire="1965.1.1.1"
 			id=-1
 		}
-	}
-	MEN_navy_chief={#random?
-		name="Admiral in Chief"
-		portraits={
-			army={
-				small="GFX_idea_generic_navy_asia_1"
+		advisor = {
+			cost = 150
+			available = {
+				NOT = {
+					has_government = fascism
+					has_war_with = CHI
+				}
 			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = MEN_navy_chief
+			can_be_fired = no
+			slot = political_advisor
+			ledger = civilian
+			idea_token = MEN_serengdongrub
 			allowed = {
 				original_tag = MEN
 			}
 			traits = {
-				navy_chief_maneuver_1
+				MEN_militant_communist
 			}
-			cost = 100
 			ai_will_do = {
-				factor = 0.000
-				modifier = {
-					add = 6
-					has_navy_size = {
-						size > 0
-					}
+				factor = 10
+			}
+		}
+	}
+	MEN_jodbajab={
+		name="Jodbajab"
+		portraits={
+			civilian={
+				large="gfx/leaders/MEN/r56_portrait_MEN_Yondonwangchug.dds"
+				small="gfx/interface/ideas/MEN/advisors/r56_idea_MEN_advisor_jodbajab.dds"
+			}
+			army = {
+				large="gfx/leaders/MEN/r56_portrait_MEN_Yondonwangchug_army.dds"
+				small="gfx/interface/ideas/MEN/advisors/r56_idea_MEN_advisor_jodbajab_army.dds" 
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={ 
+				MEN_seasoned_politician r56_trait_opposed_to_communism  
+			}
+			expire="1965.1.1.1"
+			id=-1
+		}
+		corps_commander = {
+			traits = { politically_connected old_guard trait_reckless }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+			visible = {
+				NOT = {
+					has_government = communism
 				}
 			}
 		}
-	}	
-	MEN_li_shouxin={
-		advisor={
-			slot = army_chief
-			idea_token = MEN_li_shouxin
+		advisor = {
+			cost = 150
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			can_be_fired = no
+			slot = political_advisor
+			ledger = civilian
+			idea_token = MEN_jodbajab
 			allowed = {
 				original_tag = MEN
 			}
 			traits = {
-				army_chief_offensive_2
+				MEN_seasoned_politician
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = MEN_jodbajab_army
+			ledger = army
+			available = {
+				MEN_jodbajab = {
+					is_hired_as_advisor = yes
+				}
+				has_completed_focus = MEN_continue_the_ways_of_old
 			}
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
+			traits = {
+				army_regrouping_2
 			}
 		}
-		field_marshal = {
-			traits = { cavalry_officer organizer }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 3
+		advisor = {
+			slot = army_chief
+			idea_token = MEN_jodbajab_army_chief
+			ledger = army
+			available = {
+				MEN_jodbajab = {
+					is_hired_as_advisor = yes
+				}
+				has_completed_focus = MEN_continue_the_ways_of_old
+			}
+			cost = 100
+			traits = {
+				army_chief_defensive_2
+			}
 		}
+	}
+	MEN_ryukichi_tanaka={
+		name="Ryūkichi Tanaka"
+		portraits={
+			army = {
+				small="gfx/interface/ideas/MEN/advisors/r56_idea_MEN_advisor_ryukichi_tanaka_army.dds" 
+				large="gfx/leaders/Asia/portrait_asia_generic_land_14.dds"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected artillerist career_officer }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			visible = {
+				has_completed_focus = MEN_japanese_military_advisors
+				OR = {
+					is_subject_of = JAP
+					is_ally_with = JAP
+				}
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = MEN_ryukichi_tanaka
+			ledger = army
+			available = {
+				has_completed_focus = MEN_japanese_military_advisors
+				OR = {
+					is_subject_of = JAP
+					is_ally_with = JAP
+				}
+			}
+			cost = 100
+			traits = {
+				army_artillery_2
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = MEN_ryukichi_tanaka_chief
+			ledger = army
+			available = {
+				has_completed_focus = MEN_japanese_military_advisors
+				OR = {
+					is_subject_of = JAP
+					is_ally_with = JAP
+				}
+			}
+			cost = 100
+			traits = {
+				army_chief_planning_2
+			}
+		}
+	}
+	MEN_li_shouxin={
 		name="Li Shouxin"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_asia_3"
+				small="gfx/interface/ideas/MEN/advisors/r56_idea_MEN_advisor_li_shouxin_army.dds" 
 				large="gfx/leaders/MEN/r56_portrait_MEN_Li_Shouxin.dds"
+			}
+		}
+		field_marshal = {
+			traits = { MEN_fascist_sympathies cavalry_expert organizer brilliant_strategist }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 1
+			visible = {
+				NOT = {
+					has_war_with = JAP
+					has_government = communism
+					has_government = democratic
+				}
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = MEN_li_shouxin
+			ledger = army
+			available = {
+				NOT = {
+					has_war_with = JAP
+					has_government = communism
+					has_government = democratic
+				}
+			}
+			cost = 100
+			traits = {
+				army_cavalry_2
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = MEN_li_shouxin_chief
+			ledger = army
+			available = {
+				has_completed_focus = MEN_japanese_military_advisors
+				NOT = {
+					has_war_with = JAP
+					has_government = communism
+					has_government = democratic
+				}
+			}
+			cost = 100
+			traits = {
+				army_chief_offensive_2
 			}
 		}
 	}
 	MEN_wang_ying={
-		advisor={
-			slot = high_command
-			idea_token = MEN_wang_ying
-			ledger = army
-			allowed = {
-				original_tag = MEN
-			}
-			traits = {
-				army_cavalry_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
+		name="Wang Ying"
+		portraits={
+			army={
+				small="gfx/interface/ideas/MEN/advisors/r56_idea_MEN_advisor_wang_ying_army.dds" 
+				large="gfx/leaders/MEN/r56_portrait_MEN_Wang_Ying.dds"
 			}
 		}
 		corps_commander = {
-			traits = { cavalry_officer }
+			traits = { MEN_fascist_sympathies trait_cautious infantry_officer trickster }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 1
 			planning_skill = 2
 			logistics_skill = 2
+			visible = {
+				NOT = {
+					has_war_with = JAP
+					has_government = communism
+					has_government = democratic
+				}
+			}
 		}
-		name="Wang Ying"
-		portraits={
-			army={
-				small="GFX_idea_generic_army_asia_2"
-				large="gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+		advisor={
+			slot = high_command
+			idea_token = MEN_wang_ying
+			ledger = army
+			available = {
+				NOT = {
+					has_war_with = JAP
+					has_government = communism
+					has_government = democratic
+				}
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = MEN_wang_ying_chief
+			ledger = army
+			available = {
+				NOT = {
+					has_war_with = JAP
+					has_government = communism
+					has_government = democratic
+				}
+			}
+			traits = {
+				army_chief_organizational_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
 	}	
@@ -179,17 +407,39 @@ characters={
 		name=MEN_altanochir
 		portraits={
 			army={
-				small="GFX_idea_generic_army_asia_1"
-				large="gfx/leaders/Asia/Portrait_Asia_Generic_land_4.dds"
+				small="gfx/interface/ideas/MEN/advisors/r56_idea_MEN_advisor_altanochir_army.dds" 
+				large="gfx/leaders/Asia/portrait_asia_generic_land_10.dds"
 			}
 		}
 		corps_commander = {
-			traits = { cavalry_officer }
+			traits = { politically_connected old_guard }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
+			visible = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = MEN_altanochir
+			ledger = army
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}		
 	MEN_hesehn_tiemei={

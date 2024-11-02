@@ -82,7 +82,7 @@ propaganda_efforts = {
 		cancel_if_not_visible = yes
 		
 		remove_effect = {
-			add_country_leader_trait = spirit_of_genghis
+			add_country_leader_trait = MEN_spirit_of_genghis
 		}
 		
 		ai_will_do = {

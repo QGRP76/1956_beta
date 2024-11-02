@@ -681,6 +681,7 @@ leader_traits = {
 			factor = 0
 		}
 	}
+
 	EGY_brotherhood_sympathiser = {
 
 		type = all
@@ -717,7 +718,8 @@ leader_traits = {
 		}
 	}
 
-	
+	# AUS
+
 	AUS_nazi_loyalties = {
 		
 		type = all
@@ -727,5 +729,17 @@ leader_traits = {
 			factor = 0
 		}
 	}
-}
 
+	# MEN
+
+	MEN_fascist_sympathies = {
+		
+		type = all
+		trait_type = personality_trait
+
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+
+}
