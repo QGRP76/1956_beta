@@ -446,6 +446,7 @@ POR_the_path_to_economic_progress = {
 		cost = 60
 		ai_will_do = { base = 50 }
 		visible = { has_completed_focus = POR_towards_a_prosperous_proletariat }
+		available = { has_government = communism }
 		days_remove = 125
 		modifier = {
 			stability_weekly = 0.002
@@ -557,6 +558,7 @@ POR_the_path_to_economic_progress = {
 				has_completed_focus = POR_heavy_handed_development
 			} 
 		}
+		available = { has_government = communism }
 		days_remove = 120
 		remove_effect = {
 			if = {

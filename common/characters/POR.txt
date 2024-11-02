@@ -29,19 +29,6 @@ characters = {
 		}		
 	}
 
-	POR_jose_domingues_dos_santos = {
-		name = "José Domingues dos Santos"
-		portraits = {
-			civilian = { large = "gfx/leaders/POR/r56_portrait_POR_Jose_Domingues_dos_Santos.dds" }
-		}
-		country_leader = {
-			ideology = socialism
-			traits = { resolute_social_democrat }
-			expire = "1965.1.1"
-			id = -1
-		}		
-	}
-
 	POR_bento_goncalves = {
 		name = POR_bento_goncalves
 		portraits = {

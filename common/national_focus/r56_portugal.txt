@@ -3152,13 +3152,6 @@ focus_tree = {
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			custom_effect_tooltip = available_chief_of_airforce
 			show_ideas_tooltip = POR_jose_manuel_sarmento_de_beires
-			hidden_effect = {
-				set_politics = { 
-					ruling_party = democratic 
-					elections_allowed = yes
-					election_frequency = 48
-				}
-			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}

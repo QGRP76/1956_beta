@@ -2707,16 +2707,13 @@ country_event = {	#Portuguese General Election
 			popularity = 0.1
 		}
 		custom_effect_tooltip = CHL_skip_one_line_tt
-		add_country_leader_role = {
-			character = POR_jose_domingues_dos_santos
-			promote_leader = yes
-			country_leader = {
-				ideology = socialism
-				traits = { resolute_social_democrat }
-				expire = "1965.1.1"
-			}
+		create_country_leader = {		#I cannot get putting this guy in the character file and then promoting to work. It always just assigns the previous democratic leader. 
+			name = "José Domingues dos Santos"
+			picture = "gfx/leaders/POR/r56_portrait_POR_Jose_Domingues_dos_Santos.dds"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = { resolute_social_democrat }
 		}
-		
 	}
 	option = {		#Bento António Gonçalves
 		name = portugal.58.c
@@ -2726,32 +2723,13 @@ country_event = {	#Portuguese General Election
 			election_frequency = 48
 		}
 		custom_effect_tooltip = CHL_skip_one_line_tt
-		add_popularity = {
-			ideology = communism
-			popularity = 0.1
-		}
-		custom_effect_tooltip = CHL_skip_one_line_tt
-		if = {
-			limit = { has_country_flag = POR_end_the_popular_front_flag }
-			add_country_leader_role = {
-				character = POR_bento_goncalves
-				promote_leader = yes
-				country_leader = {
-					ideology = marxism
-					traits = { man_of_the_nation }
-					expire = "1965.1.1"
-				}
-			}
-		}
-		else = {
-			add_country_leader_role = {
-				character = POR_bento_goncalves
-				promote_leader = yes
-				country_leader = {
-					ideology = democratic_socialism
-					traits = { man_of_the_nation }
-					expire = "1965.1.1"
-				}
+		add_country_leader_role = {
+			character = POR_bento_goncalves
+			promote_leader = yes
+			country_leader = {
+				ideology = democratic_socialism
+				traits = { man_of_the_nation }
+				expire = "1965.1.1"
 			}
 		}
 	}
