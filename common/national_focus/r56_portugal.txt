@@ -1151,7 +1151,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_exasperate_the_education_expansion
+		id = POR_support_educational_expansion
 		prerequisite = { focus = POR_continue_the_public_works_r56 }
 		icon = GFX_focus_research
 		cost = 8
@@ -2667,7 +2667,7 @@ focus_tree = {
 			add_stability = 0.03
 			add_popularity = {
 				ideology = communism
-				popularity = 0.04
+				popularity = 0.03
 			}
 			if = {
 				limit = { has_dlc = "La Resistance" }
@@ -2687,8 +2687,6 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = POR_consolidate_the_revolution
-		available = {
-		}
 		completion_reward = {
 			if = {
 				limit = {
@@ -2726,7 +2724,7 @@ focus_tree = {
 		relative_position_id = POR_consolidate_the_revolution
 		available = { has_completed_focus = POR_continue_the_public_works_r56 }
 		completion_reward = {
-			add_political_power = 35
+			add_political_power = 25
 			custom_effect_tooltip = POR_towards_a_prosperous_proletariat_tt
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			add_ideas = POR_the_question_of_nationalization_idea
@@ -2858,7 +2856,7 @@ focus_tree = {
 		relative_position_id = POR_storm_the_national_assembly
 		available = { has_civil_war = no }
 		completion_reward = {
-			add_political_power = 40
+			add_political_power = 35
 			add_popularity = {
 				ideology = communism
 				popularity = 0.02
@@ -2885,22 +2883,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_pave_the_path_to_progress
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_idea = r56i_laws_gender_limited
-						has_idea = r56i_laws_gender_equality
-					}
-				}
-				add_stability = 0.02
-				custom_effect_tooltip = EFFECT_CHANGE_LAW_r56i_gender_social
-				show_ideas_tooltip = r56i_laws_gender_equality
-				hidden_effect = { add_ideas = r56i_laws_gender_equality }
-			}
-			else = {
-				add_political_power = 40
-				add_stability = 0.03
-			}
+			add_political_power = 50
+			set_rule = { can_generate_female_aces = yes }
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = POR_maria_lamas
 			custom_effect_tooltip = CHL_skip_one_line_tt
@@ -2927,8 +2912,24 @@ focus_tree = {
 				remove_idea = POR_divided_revolution
 				add_idea = POR_shatter_reactionary_dissent_idea
 			}
+			unlock_decision_tooltip = POR_end_the_popular_front
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = POR_continue_the_iberian_social_revolution
+		prerequisite = { focus = POR_shatter_reactionary_dissent }
+		icon = GFX_focus_BRA_state_atheism
+		cost = 6
+		x = -1
+		y = 1
+		relative_position_id = POR_shatter_reactionary_dissent
+		completion_reward = {
+			add_political_power = 75
+			unlock_decision_tooltip = POR_appropriate_church_riches
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}
 
 	focus = {
@@ -2946,7 +2947,9 @@ focus_tree = {
 			NOT = { has_completed_focus = POR_curb_political_militias }
 		}
 		completion_reward = {
-			add_political_power = 35
+			set_country_flag = POR_arm_anti_fascist_militias_flag
+			unlock_decision_tooltip = POR_arm_anti_fascist_militias
+			unlock_decision_tooltip = POR_tap_aligned_laborer_organizations
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -2956,10 +2959,42 @@ focus_tree = {
 		prerequisite = { focus = POR_shatter_reactionary_dissent }
 		icon = GFX_focus_SOV_the_last_purge
 		cost = 10
-		x = -1
-		y = 1
+		x = 0
+		y = 2
 		relative_position_id = POR_shatter_reactionary_dissent
-		available = {  communism > 0.6 }
+		completion_reward = {
+			add_political_power = 90
+			set_rule = { can_create_factions = yes }
+			set_rule = { can_send_volunteers = yes }
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = POR_defang_the_liberals2_tt
+			hidden_effect = {
+				add_popularity = {
+					ideology = democratic
+					popularity = -1
+				}
+				set_temp_variable = {
+					var = suspend_the_constitution_var
+					value = party_popularity@democratic
+				}
+				multiply_temp_variable = {
+					var = suspend_the_constitution_var
+					value = -0.5
+				}
+			}
+			add_stability = suspend_the_constitution_var
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+	}
+
+	focus = {
+		id = POR_towards_an_iberian_red_army
+		prerequisite = { focus = POR_defang_the_liberals }
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = POR_defang_the_liberals
 		completion_reward = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
@@ -2969,31 +3004,13 @@ focus_tree = {
 		id = POR_western_europes_red_bulwark
 		prerequisite = { focus = POR_defang_the_liberals }
 		mutually_exclusive = { focus = POR_diplomatic_pragmatism }
-		icon = GFX_postive_heroism
+		icon = GFX_goal_communist_latin_america
 		cost = 2.2
 		x = -1
-		y = 1
+		y = 2
 		relative_position_id = POR_defang_the_liberals
 		completion_reward = {
 			add_war_support = 0.1
-			set_rule = { can_create_factions = yes }
-			set_rule = {can_send_volunteers = yes }
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL  }
-	}
-
-	focus = {
-		id = POR_continue_the_social_revolution
-		prerequisite = { 
-			focus = POR_western_europes_red_bulwark
-			focus = POR_diplomatic_pragmatism 
-		}
-		icon = GFX_focus_BRA_state_atheism
-		cost = 6
-		x = 0
-		y = 1
-		relative_position_id = POR_western_europes_red_bulwark
-		completion_reward = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}
@@ -3005,69 +3022,14 @@ focus_tree = {
 		icon = GFX_focus_focus_fra_fascist_threat
 		cost = 2.2
 		x = 1
-		y = 1
+		y = 2
 		relative_position_id = POR_defang_the_liberals
 		completion_reward = {
 			add_war_support = 0.05
-			set_rule = { can_send_volunteers = yes }
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			unlock_decision_tooltip = POR_join_the_global_fight_against_fascism
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
-	}
-
-	focus = {
-		id = POR_towards_an_iberian_red_army
-		prerequisite = { 
-			focus = POR_western_europes_red_bulwark 
-			focus = POR_diplomatic_pragmatism
-		}
-		icon = GFX_focus_SOV_builder_of_the_red_army
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = POR_diplomatic_pragmatism
-		completion_reward = {
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL  }
-	}
-
-	focus = {
-		id = POR_crusade_against_colonialism
-		prerequisite = { focus = POR_western_europes_red_bulwark }
-		mutually_exclusive = { focus = POR_destroy_europes_fascist_threat }
-		icon = GFX_goal_communist_latin_america
-		cost = 2.2
-		x = -1
-		y = 2
-		relative_position_id = POR_western_europes_red_bulwark
-		completion_reward = {
-			add_war_support = 0.05
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			unlock_decision_tooltip = POR_join_the_global_fight_against_fascism
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = POR_destroy_europes_fascist_threat
-		prerequisite = {
-			focus = POR_western_europes_red_bulwark 
-			focus = POR_diplomatic_pragmatism 
-		}
-		mutually_exclusive = { focus = POR_crusade_against_colonialism }
-		icon = GFX_focus_generic_anti_fascist_diplomacy
-		cost = 2.2
-		x = 1
-		y = 2
-		relative_position_id = POR_diplomatic_pragmatism
-		completion_reward = {
-			add_war_support = 0.05
-			set_rule = { can_send_volunteers = yes }
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			unlock_decision_tooltip = POR_join_the_global_fight_against_fascism
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3105,18 +3067,14 @@ focus_tree = {
 		available = {
 			NOT = { has_completed_focus = POR_empower_socialist_organizations }
 		}
-		completion_reward = {
-			add_political_power = 75
+		completion_reward = { 
+			add_stability = 0.03
 			add_popularity = {
 				ideology = communism
-				popularity = -0.1
-			}
-			add_popularity = {
-				ideology = fascism
-				popularity = -0.05
-			}
+				popularity = 0.05
+			} 
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL  }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3194,8 +3152,15 @@ focus_tree = {
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			custom_effect_tooltip = available_chief_of_airforce
 			show_ideas_tooltip = POR_jose_manuel_sarmento_de_beires
+			hidden_effect = {
+				set_politics = { 
+					ruling_party = democratic 
+					elections_allowed = yes
+					election_frequency = 48
+				}
+			}
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL  }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3207,7 +3172,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_hold_fair_elections
 		completion_reward = {
-			add_war_support = 0.05
 			set_rule = { can_send_volunteers = yes }
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			unlock_decision_tooltip = POR_contain_the_bolshevik_menace
@@ -3224,8 +3188,13 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = POR_hold_fair_elections
+		available = {
+			OR = { 
+				has_completed_focus = POR_curb_political_militias
+				has_completed_focus = POR_empower_socialist_organizations
+			}
+		}
 		completion_reward = {
-			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}
@@ -3239,8 +3208,22 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_hold_fair_elections
 		completion_reward = {
+			if = {
+				limit = { has_idea = POR_reactionary_resistance2 }
+				remove_ideas = POR_reactionary_resistance2
+				add_timed_idea = {
+					idea = POR_reactionary_resistance3
+					days = 365
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = POR_reactionary_resistance
+					add_idea = POR_reactionary_resistance2
+				}
+			}
 			custom_effect_tooltip = CHL_skip_one_line_tt
-			unlock_decision_tooltip = POR_end_the_polticial_trials
+			unlock_decision_tooltip = POR_end_the_politicial_trials
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}
@@ -3254,6 +3237,8 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_unity_and_reconciliation
 		completion_reward = {
+			add_war_support = 0.05
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = POR_joao_de_azevedo_coutinho
 			custom_effect_tooltip = CHL_skip_one_line_tt

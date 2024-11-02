@@ -245,9 +245,24 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.15
+				stability_weekly = -0.001
 				stability_factor = 0.05
-				neutrality_drift = -0.01
 				democratic_drift = 0.01
+				neutrality_drift = -0.01
+				weekly_casualties_war_support = 0.001
+			}
+		}
+
+		POR_end_the_political_trials_idea = {
+			name = POR_portugals_road_to_democracy
+			picture = worker_cluture
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.05
+				democratic_drift = 0.01
+				neutrality_drift = -0.01
+				fascism_drift = -0.01
 				weekly_casualties_war_support = 0.001
 			}
 		}

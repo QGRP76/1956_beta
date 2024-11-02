@@ -2683,6 +2683,7 @@ country_event = {	#Portuguese General Election
 		custom_effect_tooltip = CHL_skip_one_line_tt
 		add_country_leader_role = {
 			character = POR_jose_norton_de_matos
+			promote_leader = yes
 			country_leader = {
 				ideology = liberalism
 				traits = { 
@@ -2691,7 +2692,6 @@ country_event = {	#Portuguese General Election
 				}
 				expire = "1965.1.1"
 			}
-			promote_leader = yes
 		}
 	}
 	option = { 		#José Domingues dos Santos
@@ -2709,12 +2709,12 @@ country_event = {	#Portuguese General Election
 		custom_effect_tooltip = CHL_skip_one_line_tt
 		add_country_leader_role = {
 			character = POR_jose_domingues_dos_santos
+			promote_leader = yes
 			country_leader = {
 				ideology = socialism
 				traits = { resolute_social_democrat }
 				expire = "1965.1.1"
 			}
-			promote_leader = yes
 		}
 		
 	}
@@ -2735,23 +2735,23 @@ country_event = {	#Portuguese General Election
 			limit = { has_country_flag = POR_end_the_popular_front_flag }
 			add_country_leader_role = {
 				character = POR_bento_goncalves
+				promote_leader = yes
 				country_leader = {
 					ideology = marxism
 					traits = { man_of_the_nation }
 					expire = "1965.1.1"
 				}
-				promote_leader = yes
 			}
 		}
 		else = {
 			add_country_leader_role = {
 				character = POR_bento_goncalves
+				promote_leader = yes
 				country_leader = {
 					ideology = democratic_socialism
 					traits = { man_of_the_nation }
 					expire = "1965.1.1"
 				}
-				promote_leader = yes
 			}
 		}
 	}

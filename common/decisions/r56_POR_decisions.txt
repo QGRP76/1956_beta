@@ -903,12 +903,7 @@ POR_securing_the_revolution = {
 			country_exists = SPR
 			SPR_scw_in_progress = yes
 		}
-		complete_effect = {	
-			add_relation_rule_override = {
-                target = SPR
-                can_send_volunteers = yes 
-            }
-			custom_effect_tooltip = CHL_skip_one_line_tt
+		complete_effect = {
 			add_ideas = POR_supporting_the_spanish_republic
 			set_country_flag = POR_supports_SPD_flag
 			add_ai_strategy = {
@@ -924,48 +919,104 @@ POR_securing_the_revolution = {
 		icon = generic_speech
 		fire_only_once = yes
 		visible = { 
-			has_completed_focus = POR_restore_civil_liberties
-			NOT = { has_completed_focus = POR_hold_fair_elections } 
+			OR = {
+				has_completed_focus = POR_restore_civil_liberties
+				has_completed_focus = POR_shatter_reactionary_dissent
+			}
+			NOT = { 
+				has_completed_focus = POR_hold_fair_elections
+				has_completed_focus = POR_defang_the_liberals 
+			} 
 		}
 		complete_effect = {
-			add_political_power = 50
-			add_stability = 0.02
-			add_popularity = {
-				ideology = communism
-				popularity = -0.1
-			}
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.06
-			}
 			set_country_flag = POR_end_the_popular_front_flag
+			if = {
+				limit = { has_completed_focus = POR_restore_civil_liberties }
+				add_political_power = 35
+				add_stability = 0.02
+				add_popularity = {
+					ideology = communism
+					popularity = -0.1
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = -0.06
+				}
+			}
+			else = {
+				add_political_power = 75
+				add_stability = -0.02
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.1
+				}
+			}
 		}	
 		ai_will_do = { base = 100 }
 	}
 
-	POR_end_the_polticial_trials = {
-		cost = 40
-		icon = generic_arrest
-		fire_only_once = yes
-		ai_will_do = { base = 400 }
-		visible = { has_completed_focus = POR_unity_and_reconciliation }
-		complete_effect = {
-			if = {
-				limit = { has_idea = POR_reactionary_resistance2 }
-				remove_ideas = POR_reactionary_resistance2
-				custom_effect_tooltip = CHL_skip_one_line_tt
-				add_timed_idea = {
-					idea = POR_reactionary_resistance3
-					days = 365
-				}
+	POR_tap_aligned_laborer_organizations = {
+		icon = eng_trade_unions_demand
+		fire_only_once = no
+		days_re_enable = 210
+		visible = { has_completed_focus = POR_empower_socialist_organizations }
+		days_remove = 30
+		remove_effect = {
+			add_political_power = 20
+			add_popularity = {
+				ideology = communism
+				popularity = -0.03
 			}
-			else = {
-				swap_ideas = {
-					remove_idea = POR_reactionary_resistance
-					add_idea = POR_reactionary_resistance2
-				}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.02
+			}
+		}	
+		ai_will_do = { base = 1000 }
+	}
+
+	POR_arm_anti_fascist_militias = {
+		icon = generic_prepare_civil_war
+		fire_only_once = no
+		days_re_enable = 180
+		visible = { has_country_flag = POR_arm_anti_fascist_militias_flag }
+		days_remove = 30
+		remove_effect = {
+			add_political_power = 35
+			add_stability = -0.02
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.04
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.03
 			}
 		}
+		ai_will_do = { base = 1 }
+	}
+
+	POR_appropriate_church_riches = {
+		icon = generic_scorched_earth
+		fire_only_once = no
+		days_re_enable = 360
+		visible = { has_completed_focus = POR_continue_the_iberian_social_revolution }
+		days_remove = 120
+		complete_effect = { 
+			add_stability = -0.03 
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+		}
+		modifier = { production_speed_buildings_factor = 0.1 }
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		ai_will_do = { base = 1 }
 	}
 
 	POR_create_a_constitutional_judiciary = {
@@ -980,7 +1031,7 @@ POR_securing_the_revolution = {
 			fascism_drift = -0.01
 		}
 		remove_effect = { set_country_flag = POR_create_a_constitutional_judiciary_flag }	
-		ai_will_do = { base = 500 }
+		ai_will_do = { base = 100 }
 	}
 
 	POR_loosen_censorship_policies = {
@@ -998,7 +1049,7 @@ POR_securing_the_revolution = {
 			add_stability = 0.05
 			set_country_flag = POR_loosen_censorship_policies_flag 
 		}	
-		ai_will_do = { base = 500 }
+		ai_will_do = { base = 200 }
 	}
 
 	POR_grant_womens_suffrage = {
@@ -1019,6 +1070,25 @@ POR_securing_the_revolution = {
 			}
 		}
 		ai_will_do = { base = 200 }
+	}
+
+	POR_end_the_politicial_trials = {
+		cost = 75
+		icon = generic_scales
+		fire_only_once = yes
+		ai_will_do = { base = 400 }
+		visible = { has_completed_focus = POR_unity_and_reconciliation }
+		complete_effect = {
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.1
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			swap_ideas = {
+				remove_idea = POR_hold_fair_elections_idea
+				add_idea = POR_end_the_political_trials_idea
+			}
+		}
 	}
 }
 
