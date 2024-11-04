@@ -354,8 +354,8 @@ characters={
 		}
 		corps_commander={
 			traits={ career_officer trait_cautious infantry_officer trickster }
-			skill=3
-			attack_skill=2
+			skill=4
+			attack_skill=3
 			defense_skill=2
 			planning_skill=4
 			logistics_skill=2
