@@ -1,41 +1,6 @@
 ideas = {
 
-	country = {	
-
-		MEN_kwantungs_invisible_hand = {
-			
-            allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal_cost = -1
-
-			picture = MEN_kwantungs_invisible_hand
-			
-			modifier = {
-				offensive_war_stability_factor = 0.05
-				conscription = 0.01
-				stability_factor = -0.15
-				political_power_factor = -0.10
-				fascism_drift = 0.03
-				cat_grand_battle_plan_cost_factor = -0.05
-				experience_gain_army_factor = 0.10
-			}
-
-			targeted_modifier = {
-				tag = JAP
-				attack_bonus_against = -0.15
-				defense_bonus_against = -0.15
-			}
-
-			# cancel = {
-			# 	is_subject_of = JAP 
-			# }
-        }
+	country = {
 
 		MEN_mongol_raids = {
 
@@ -76,6 +41,557 @@ ideas = {
 			}
         }
 
+		MEN_kwantungs_invisible_hand = {
+			
+            allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				NOT = {
+					OR = {
+						is_neighbor_of = JAP
+						JAP = {
+							any_allied_country = {
+								is_neighbor_of = MEN
+							}
+						}
+					}
+				}
+				JAP = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+				NOT = {
+					AND = {
+						is_ally_with = JAP
+						has_war_with = JAP
+					}
+				}
+				JAP = {
+					has_civil_war = yes
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = MEN_kwantungs_invisible_hand
+			
+			modifier = {
+				offensive_war_stability_factor = 0.05
+				conscription = 0.01
+				stability_factor = -0.15
+				political_power_factor = -0.10
+				fascism_drift = 0.03
+				cat_grand_battle_plan_cost_factor = -0.05
+				experience_gain_army_factor = 0.10
+			}
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = -0.15
+				defense_bonus_against = -0.15
+			}
+        }
+
+		##### DEMOCRATIC KWANTUNG SPIRITS #####
+
+		MEN_kwantungs_invisible_hand_democratic = {
+
+			name = MEN_kwantungs_invisible_hand
+			
+            allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				NOT = {
+					OR = {
+						is_neighbor_of = JAP
+						JAP = {
+							any_allied_country = {
+								is_neighbor_of = MEN
+							}
+						}
+					}
+				}
+				JAP = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+				NOT = {
+					AND = {
+						is_ally_with = JAP
+						has_war_with = JAP
+					}
+				}
+				JAP = {
+					has_civil_war = yes
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = MEN_kwantungs_invisible_hand
+			
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.10
+				fascism_drift = 0.01
+				experience_gain_army_factor = 0.10
+			}
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = -0.10
+				defense_bonus_against = -0.10
+			}
+        }
+
+		##### FASCIST KWANTUNG SPIRITS #####
+
+		MEN_kwantungs_invisible_hand_fascist = {
+
+			name = MEN_kwantungs_invisible_hand
+			
+            allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				NOT = {
+					OR = {
+						is_neighbor_of = JAP
+						JAP = {
+							any_allied_country = {
+								is_neighbor_of = MEN
+							}
+						}
+					}
+				}
+				JAP = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+				NOT = {
+					AND = {
+						is_ally_with = JAP
+						has_war_with = JAP
+					}
+				}
+				JAP = {
+					has_civil_war = yes
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = MEN_kwantungs_invisible_hand
+			
+			modifier = {
+				offensive_war_stability_factor = 0.05
+				conscription = 0.01
+				stability_factor = -0.10
+				political_power_factor = -0.10
+				fascism_drift = 0.05
+				cat_grand_battle_plan_cost_factor = -0.05
+				experience_gain_army_factor = 0.10
+				drift_defence_factor = 0.10
+			}
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = -0.15
+				defense_bonus_against = -0.15
+			}
+        }
+
+		##### SERVANTS KWANTUNG SPIRITS #####
+
+		MEN_kwantungs_invisible_hand_servants = {
+
+			name = MEN_kwantungs_invisible_hand
+			
+            allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				NOT = {
+					OR = {
+						is_neighbor_of = JAP
+						JAP = {
+							any_allied_country = {
+								is_neighbor_of = MEN
+							}
+						}
+					}
+				}
+				JAP = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+				NOT = {
+					AND = {
+						is_ally_with = JAP
+						has_war_with = JAP
+					}
+				}
+				JAP = {
+					has_civil_war = yes
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = MEN_kwantungs_invisible_hand
+			
+			modifier = {
+				offensive_war_stability_factor = 0.10
+				conscription = 0.02
+				stability_factor = -0.05
+				political_power_factor = -0.15
+				fascism_drift = 0.05
+				cat_grand_battle_plan_cost_factor = -0.05
+				experience_gain_army_factor = 0.10
+				drift_defence_factor = 0.15
+			}
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = -0.15
+				defense_bonus_against = -0.15
+			}
+        }
+
+		MEN_kwantungs_invisible_hand_servants_2 = {
+
+			name = MEN_kwantungs_invisible_hand
+			
+            allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				NOT = {
+					OR = {
+						is_neighbor_of = JAP
+						JAP = {
+							any_allied_country = {
+								is_neighbor_of = MEN
+							}
+						}
+					}
+				}
+				JAP = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+				NOT = {
+					AND = {
+						is_ally_with = JAP
+						has_war_with = JAP
+					}
+				}
+				JAP = {
+					has_civil_war = yes
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = MEN_kwantungs_invisible_hand
+			
+			modifier = {
+				autonomy_gain = -0.5
+				offensive_war_stability_factor = 0.15
+				conscription_factor = 0.05
+				conscription = 0.02
+				political_power_factor = -0.25
+				fascism_drift = 0.10
+				cat_grand_battle_plan_cost_factor = -0.05
+				experience_gain_army_factor = 0.10
+				drift_defence_factor = 0.15
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = -0.25
+				defense_bonus_against = -0.25
+			}
+        }
+
+		##### GENGHIS KWANTUNG SPIRITS #####
+
+		MEN_kwantungs_invisible_hand_genghis = {
+
+			name = MEN_kwantungs_invisible_hand
+			
+            allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				NOT = {
+					OR = {
+						is_neighbor_of = JAP
+						JAP = {
+							any_allied_country = {
+								is_neighbor_of = MEN
+							}
+						}
+					}
+				}
+				JAP = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+				NOT = {
+					AND = {
+						is_ally_with = JAP
+						has_war_with = JAP
+					}
+				}
+				JAP = {
+					has_civil_war = yes
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = MEN_kwantungs_invisible_hand
+			
+			modifier = {
+				conscription = 0.01
+				stability_factor = -0.05
+				fascism_drift = 0.03
+				cat_grand_battle_plan_cost_factor = -0.05
+				experience_gain_army_factor = 0.10
+				drift_defence_factor = 0.10
+			}
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = -0.10
+				defense_bonus_against = -0.10
+			}
+        }
+
+		MEN_kwantungs_invisible_hand_genghis_2 = {
+
+			name = MEN_kwantungs_invisible_hand
+			
+            allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				NOT = {
+					OR = {
+						is_neighbor_of = JAP
+						JAP = {
+							any_allied_country = {
+								is_neighbor_of = MEN
+							}
+						}
+					}
+				}
+				JAP = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+				NOT = {
+					AND = {
+						is_ally_with = JAP
+						has_war_with = JAP
+					}
+				}
+				JAP = {
+					has_civil_war = yes
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = MEN_kwantungs_invisible_hand
+			
+			modifier = {
+				conscription = 0.01
+				stability_factor = -0.05
+				experience_gain_army_factor = 0.05
+				fascism_drift = 0.01
+				drift_defence_factor = 0.05
+				war_support_factor = 0.05
+				defensive_war_stability_factor = 0.05
+			}
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = -0.10
+				defense_bonus_against = -0.10
+			}
+        }
+
+		MEN_kwantungs_invisible_hand_genghis_3 = {
+
+			name = MEN_kwantungs_invisible_hand
+			
+            allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				NOT = {
+					OR = {
+						is_neighbor_of = JAP
+						JAP = {
+							any_allied_country = {
+								is_neighbor_of = MEN
+							}
+						}
+					}
+				}
+				JAP = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+				NOT = {
+					AND = {
+						is_ally_with = JAP
+						has_war_with = JAP
+					}
+				}
+				JAP = {
+					has_civil_war = yes
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = MEN_kwantungs_invisible_hand
+			
+			modifier = {
+				conscription = 0.01
+				experience_gain_army_factor = 0.05
+				neutrality_drift = 0.01
+				drift_defence_factor = 0.15
+				war_support_factor = 0.10
+				defensive_war_stability_factor = 0.10
+			}
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = -0.05
+				defense_bonus_against = -0.05
+			}
+        }
+
+		MEN_kwantungs_invisible_hand_genghis_4 = {
+
+			name = MEN_kwantungs_invisible_hand
+			
+            allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				NOT = {
+					OR = {
+						is_neighbor_of = JAP
+						JAP = {
+							any_allied_country = {
+								is_neighbor_of = MEN
+							}
+						}
+					}
+				}
+				JAP = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+				NOT = {
+					AND = {
+						is_ally_with = JAP
+						has_war_with = JAP
+					}
+				}
+				JAP = {
+					has_civil_war = yes
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = MEN_kwantungs_invisible_hand
+			
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				conscription = 0.01
+				experience_gain_army_factor = 0.05
+				neutrality_drift = 0.03
+				drift_defence_factor = 0.15
+				war_support_factor = 0.15
+				defensive_war_stability_factor = 0.10
+			}
+        }
+
 		MEN_the_long_winter = {
 
             allowed = {
@@ -102,95 +618,233 @@ ideas = {
 			}
 
 			on_remove = {
-				
+				MEN = {
+					add_timed_idea = {
+						idea = MEN_aftermath_of_the_long_winter
+						days = 180
+					}
+					country_event = { id = men.13 hours = 12 }
+				}
 			}
         }
 
-        MEN_Autonomous_Province = {
-			
+		MEN_aftermath_of_the_long_winter = {
+
             allowed = {
-				is_subject_of = CHI 
+				always = no
 			}
 
 			allowed_civil_war = {
-				is_subject_of = CHI 
+				always = yes
 			}
 			
 			removal_cost = -1
 
-			picture = generic_king_handled
+			picture = AFG_economy_in_ruins
 			
 			modifier = {
-				political_power_factor = -0.1
-				stability_factor = -0.10
-				autonomy_gain = 0.5
-			}
-
-			cancel = {
-				is_subject_of = JAP 
+				production_speed_buildings_factor = -0.10
+				industrial_capacity_factory = -0.10
+				stability_factor = -0.05
+				stability_weekly = -0.001
+				war_support_factor = -0.05
+				monthly_population = -0.20
+				conscription_factor = -0.15
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.15
+				production_factory_efficiency_gain_factor = -0.10
 			}
         }
 
-        MEN_Autonomous_Province_1 = {
-			name = MEN_Autonomous_Province
+		MEN_aftermath_of_the_long_winter_zenrin = {
+
+			name = MEN_aftermath_of_the_long_winter
+
             allowed = {
-				is_subject_of = CHI 
+				always = no
 			}
 
 			allowed_civil_war = {
-				is_subject_of = CHI 
+				always = yes
 			}
 			
 			removal_cost = -1
 
-			picture = generic_king_handled
+			picture = AFG_economy_in_ruins
 			
 			modifier = {
-				stability_factor = -0.10
-				autonomy_gain = 0.75
+				production_speed_buildings_factor = -0.05
+				industrial_capacity_factory = -0.10
+				war_support_factor = -0.10
+				monthly_population = -0.20
+				conscription_factor = -0.15
+				political_power_factor = -0.15
+				consumer_goods_factor = 0.15
+				production_factory_efficiency_gain_factor = -0.05
 			}
         }
 
-		MEN_Autonomous_Province_2 = {
-			name = MEN_Autonomous_Province
+		MEN_growing_revolutionary_sentiment = {
+
             allowed = {
-				is_subject_of = CHI 
+				always = no
 			}
 
 			allowed_civil_war = {
-				is_subject_of = CHI 
+				always = yes
 			}
 			
 			removal_cost = -1
 
-			picture = generic_king_handled
+			picture = POL_the_peasants_strike
 			
 			modifier = {
-				stability_factor = -0.10
-				autonomy_gain = 1.5
+				communism_drift = 0.10
+				stability_weekly = -0.001
+				stability_factor = -0.05
+				political_power_factor = -0.10
+				drift_defence_factor = -0.25
 			}
         }
 
-		MEN_Autonomous_Province_3 = {
-			name = MEN_Autonomous_Province
-            allowed = {
-				is_subject_of = CHI 
+		##### OTHER SPIRITS #####
+
+		MEN_empowered_buddhists = {
+
+			allowed = {
+				always = no
 			}
 
 			allowed_civil_war = {
-				is_subject_of = CHI 
+				always = yes
 			}
-			
+
 			removal_cost = -1
 
-			picture = generic_king_handled
-			
+			picture = TIB_monasteries_elated
+
 			modifier = {
-				political_power_factor = -0.1
-				stability_factor = -0.10
-				autonomy_gain = 5.0
+				neutrality_drift = 0.03
+				political_power_factor = -0.10
+				consumer_goods_factor = -0.15
+				stability_factor = 0.05
 			}
-        }
+		}
+
+		MEN_anti_japanese_intelligence = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_coup
+
+			modifier = {
+				intel_network_gain_factor = 0.10
+				intel_from_operatives_factor = 0.05
+				army_intel_to_others = -10
+				operative_slot = 1
+			}
+		}
+
+		MEN_anti_japanese_intelligence_china = {
+
+			name = MEN_anti_japanese_intelligence
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_japanese_conflict
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+
+		MEN_caught_off_guard = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_japanese_conflict
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.10
+			}
+		}
+
+		MEN_liberateion_or_death_idea = {
+
+			name = MEN_liberation_or_death
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = SWE_neither_death_nor_dishonor
+
+			modifier = {
+				conscription = 0.01
+				war_support_factor = 0.10
+				mobilization_speed = 0.15
+				mobilization_laws_cost_factor = -0.25
+				army_speed_factor = 0.05
+				army_core_defence_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+
+		MEN_harmony_of_the_five_races = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_MAN_sufficient_army
+
+			modifier = {
+				conscription_factor = 0.10
+				stability_factor = 0.05
+				political_power_factor = 0.10
+				compliance_growth = 0.05
+			}
+		}
 
         MEN_increasing_jap_influence = {
             allowed = {

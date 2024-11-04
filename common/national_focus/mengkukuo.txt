@@ -40,10 +40,6 @@ focus_tree = {
 		available = {
 			
 		}
-
-		mutually_exclusive = { 
-			focus = MEN_rebuilding_the_disaster_of_suiyan 
-		}
 		
 		x = 6
 		y = 0
@@ -2169,6 +2165,8 @@ focus_tree = {
 		}
 	}
 
+	##### POLITICAL PATHS #####
+
 	focus = {
 		id = MEN_strengthen_ties_with_japan
 
@@ -2186,14 +2184,48 @@ focus_tree = {
 			has_country_flag = MEN_nima_odsor_assassinated
 		}
 	
-		cost = 5
+		cost = 8
 
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
-			add_political_power = 50 
-			custom_effect_tooltip = MEN_Mini_Game_Unlock_Jap_tt
+			add_political_power = 25
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.10
+			}
+			add_stability = 0.05
+			every_state = {
+				limit = {
+					OR = {
+						state = 621
+						state = 746
+					}
+				}
+				add_claim_by = ROOT
+			}
+			if = {
+				limit = {
+					MON = {
+						exists = yes
+						NOT = {
+							is_ally_with = ROOT
+							has_war_with = ROOT
+						}
+					}
+				}
+				MON = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = medium_decrease
+					}
+				}
+				add_opinion_modifier = {
+					target = MON
+					modifier = medium_decrease
+				}
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
@@ -2212,20 +2244,36 @@ focus_tree = {
 		x = 52
 		y = 0
 	 	available = {
-			custom_trigger_tooltip = {
-				tooltip = MEN_nimaordsor_not_dead_tt
-				NOT = {has_country_flag = MEN_nima_odsor_dead_yes_flag}
-			}
+			has_country_flag = MEN_nima_odsor_not_assassinated
 		}
 		
-		cost = 1
+		cost = 8
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-			add_political_power = 50 
-			custom_effect_tooltip = MEN_nima_odsor_kill_tt
+			add_war_support = 0.10
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_stability = 0.05
+			if = {
+				limit = {
+					JAP = {
+						exists = yes
+						NOT = {
+							is_ally_with = ROOT
+							has_war_with = ROOT
+						}
+					}
+				}
+				add_opinion_modifier = {
+					target = JAP
+					modifier = medium_decrease
+				}
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
@@ -2243,17 +2291,27 @@ focus_tree = {
 		}
 		x = 71
 		y = 0
+		available = {
+			has_idea = MEN_the_long_winter
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 		
-		cost = 5
+		cost = 8
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-			add_political_power = 50
+			add_war_support = 0.05
 			add_popularity = {
 				ideology = communism
-				popularity = 0.075
+				popularity = 0.10
+			}
+			add_timed_idea = {
+				idea = MEN_growing_revolutionary_sentiment
+				days = 365
 			}
 		}
 
@@ -2269,11 +2327,11 @@ focus_tree = {
 		icon = GFX_focus_CZE_german_puppet
 
 		available = {
-			
+			is_subject = no
 		}
 		
 		bypass = {
-			
+			is_subject_of = JAP
 		}
 		
 		prerequisite = { 
@@ -2289,9 +2347,54 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			JAP = {
-				add_to_faction = MEN
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
 			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+			if = {
+				limit = {
+					JAP = {
+						exists = yes
+						is_subject = no
+						NOT = {
+							has_war_with = ROOT
+						}
+					}
+				}
+				if = {
+					limit = {
+						JAP = {
+							is_faction_leader = yes
+						}
+					}
+					JAP = {
+						add_to_faction = ROOT
+					}
+				}
+				JAP = {
+					set_autonomy = {
+						target = ROOT
+						autonomy_state = autonomy_wtt_imperial_protectorate
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+			}
+			custom_effect_tooltip = r56_newline
+			if = {
+				limit = {
+					has_idea = MEN_kwantungs_invisible_hand
+				}
+				swap_ideas = {
+					remove_idea = MEN_kwantungs_invisible_hand
+					add_idea = MEN_kwantungs_invisible_hand_fascist
+				}
+			}
+			set_cosmetic_tag = MEN_MIL_GOV
 		}
 
 		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL}
@@ -2304,17 +2407,13 @@ focus_tree = {
 		icon = GFX_goal_attack_communists
 
 		available = {
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = MEN_has_made_mil_gov_tt
-					has_cosmetic_tag = MEN_mongol_mil_gov
-				}
-
-				hidden_trigger = {
-					is_ai = yes 
-					date > 1937.1.1
-				}
+			NOT = {
+				has_government = communism
 			}
+		}
+
+		bypass = {
+			has_government = communism
 		}
 		
 		prerequisite = { 
@@ -2326,16 +2425,20 @@ focus_tree = {
 	
 		relative_position_id = MEN_the_state_founding_conference
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
-			add_ideas = MEN_mon_mil_gov_made
-			set_rule = {
-				can_use_kamikaze_pilots = yes
+			add_political_power = 35
+			add_stability = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = -0.10
 			}
+			custom_effect_tooltip = r56_newline
+			deactivate_advisor = MEN_serengdongrub
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL  FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_STABILITY}
@@ -2348,27 +2451,12 @@ focus_tree = {
 		icon = GFX_focus_chi_collaboration_with_the_japanese
 
 		available = {
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = MEN_has_made_mil_gov_tt
-					has_cosmetic_tag = MEN_mongol_mil_gov
-				}
-
-				hidden_trigger = {
-					is_ai = yes 
-					date > 1937.1.1
-				}
-			}
-			NOT = { is_subject_of = CHI }
-			JAP = {
-				is_faction_leader = yes
-			}
+			is_ally_with = JAP
 		}
-		
+
 		bypass = {
-			OR = {
-				is_in_faction_with = JAP 
-				NOT = { country_exists = JAP }
+			NOT = {
+				is_ally_with = JAP
 			}
 		}
 		
@@ -2379,18 +2467,25 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
-			JAP = {
-				add_to_faction = MEN
+			add_political_power = 75
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			swap_ideas = {
+				remove_idea = MEN_aftermath_of_the_long_winter
+				add_idea = MEN_aftermath_of_the_long_winter_zenrin
+				add_days = -60
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL}
+		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL }
 
 	}
 
@@ -2400,28 +2495,8 @@ focus_tree = {
 		icon = GFX_goal_MAN_economic_coherence
 
 		available = {
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = MEN_has_made_mil_gov_tt
-					has_cosmetic_tag = MEN_mongol_mil_gov
-				}
-
-				hidden_trigger = {
-					is_ai = yes 
-					date > 1937.1.1
-				}
-			}
-			NOT = { is_subject_of = CHI }
-			JAP = {
-				is_faction_leader = yes
-			}
-		}
-		
-		bypass = {
-			OR = {
-				is_in_faction_with = JAP 
-				NOT = { country_exists = JAP }
-			}
+			is_ally_with = JAP
+			is_ally_with = MAN
 		}
 		
 		prerequisite = { 
@@ -2431,14 +2506,66 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
-			JAP = {
-				add_to_faction = MEN
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = BRA_industry_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+				category = electronics
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = MAN
+						tag = JAP
+					}
+				}
+				ROOT = {
+					add_opinion_modifier = {
+						target = PREV
+						modifier = large_increase
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
+				}
 			}
 		}
 
@@ -2452,14 +2579,18 @@ focus_tree = {
 		icon = GFX_goal_generic_position_armies
 
 		available = {
-			is_in_faction_with = JAP
+			controls_state = 611
+			is_ally_with = JAP
 		}
 
 		bypass = {
-			NOT = {country_exists = MON }
+			NOT = {
+				OR = {
+					controls_state = 611
+					is_ally_with = JAP
+				}
+			}
 		}
-		
-		will_lead_to_war_with = SHX 
 		
 		prerequisite = { 
 			focus = MEN_eradicate_communist_resistance
@@ -2469,21 +2600,49 @@ focus_tree = {
 		x = 1
 		y = 1
 		
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1000
 		}
 		completion_reward = {
-			IF = {
-				Limit = {
-					NOT = {country_exists = SHX}
+			random_owned_controlled_state = {
+				prioritize = { 611 }
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
 				}
 			}
-			else = { activate_mission = MEN_the_suiyuan_campaign } 
-			621 = {
-				add_core_of = ROOT
-			}	
+			random_owned_controlled_state = {
+				prioritize = { 612 }
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
@@ -2496,11 +2655,25 @@ focus_tree = {
 		icon = GFX_focus_generic_provoke_border_clashes
 
 		available = {
-			is_in_faction_with = JAP
+			any_country = {
+				controls_state = 621
+				owns_state = 621
+				NOT = {
+					has_war_with = ROOT
+					is_ally_with = ROOT
+				}
+			}
 		}
 
 		bypass = {
-			NOT = {country_exists = MON }
+			any_country = {
+				controls_state = 621
+				owns_state = 621
+				OR = {
+					has_war_with = ROOT
+					is_ally_with = ROOT
+				}
+			}
 		}
 		
 		will_lead_to_war_with = SHX 
@@ -2512,26 +2685,61 @@ focus_tree = {
 		x = 0
 		y = 1
 		
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1000
 		}
 		completion_reward = {
-			IF = {
-			
-				Limit = {
-					NOT = {country_exists = SHX}
+			add_war_support = 0.05
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 611
+					num_provinces = 3
+					on_win = himalaya_tibet.45
+					on_lose = himalaya_tibet.46
+					on_cancel = himalaya_tibet.44
+				}
+				defender = {
+					state = 621
+					num_provinces = 3
+					on_win = himalaya_tibet.42
+					on_lose = himalaya_tibet.43
+					on_cancel = himalaya_tibet.44
 				}
 			}
-			else = {activate_mission = MEN_the_suiyuan_campaign} 
-			#create_wargoal = { 
-				#type = take_claimed_state
-				#target = SHX 
-			#}
-			621 = {
-				add_core_of = ROOT
-			}	
+			custom_effect_tooltip = MEN_effects_if_border_conflict_is_won
+			effect_tooltip = {
+				transfer_state = 621
+				add_state_core = 621
+				complete_national_focus = MEN_rebuilding_the_disaster_of_suiyan
+				effect_tooltip = {
+					army_experience = 25
+					add_doctrine_cost_reduction = {
+						cost_reduction = 0.5
+						uses = 2
+						category = land_doctrine
+					}
+					swap_ideas = {
+						remove_idea = MEN_disorganized_military
+						add_idea = MEN_disorganized_military_2
+					}
+				}
+			}
+			custom_effect_tooltip = MEN_effects_if_border_conflict_is_lost
+			effect_tooltip = {
+				army_experience = 15
+				unlock_national_focus = MEN_rebuilding_the_disaster_of_suiyan
+			}
+			hidden_effect = {
+				set_border_war_data = {
+					attacker = 611
+					defender = 621
+					defender_modifier = 0.15
+					combat_width = 80
+				}
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
@@ -2544,16 +2752,9 @@ focus_tree = {
 		icon = GFX_goal_MEN_spirit_of_genghis
 
 		available = {
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = MEN_has_made_mil_gov_tt
-					has_cosmetic_tag = MEN_mongol_mil_gov
-				}
-
-				hidden_trigger = {
-					is_ai = yes 
-					date > 1937.1.1
-				}
+			has_country_leader = {
+				character = MEN_prince_demchugdongrub
+				ruling_only = yes
 			}
 		}
 		
@@ -2576,10 +2777,11 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			add_ideas = MEN_mon_mil_gov_made
 			set_rule = {
 				can_use_kamikaze_pilots = yes
 			}
+			add_war_support = 0.05
+			add_country_leader_trait = MEN_spirit_of_genghis
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL  FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_STABILITY }
@@ -2592,18 +2794,17 @@ focus_tree = {
 		icon = GFX_focus_jap_showa_restoration
 
 		available = {
-			is_in_faction_with = JAP
+			is_ally_with = JAP
 		}
-
-		bypass = {
-			NOT = {country_exists = MON }
-		}
-		
-		will_lead_to_war_with = SHX 
 		
 		prerequisite = { 
 			focus = MEN_put_an_end_to_the_raids
 		}
+
+		mutually_exclusive = {
+			focus = MEN_the_spirit_of_genghis
+		}
+
 		relative_position_id = MEN_put_an_end_to_the_raids
 		x = 2
 		y = 1
@@ -2614,20 +2815,18 @@ focus_tree = {
 			factor = 1000
 		}
 		completion_reward = {
-			IF = {
-			
-				Limit = {
-					NOT = {country_exists = SHX}
-				}
+			add_autonomy_score = {
+				value = -100
 			}
-			else = {activate_mission = MEN_the_suiyuan_campaign} 
-			#create_wargoal = { 
-				#type = take_claimed_state
-				#target = SHX 
-			#}
-			621 = {
-				add_core_of = ROOT
-			}	
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.05
+			}
+			custom_effect_tooltip = r56_newline
+			swap_ideas = {
+				remove_idea = MEN_kwantungs_invisible_hand_fascist
+				add_idea = MEN_kwantungs_invisible_hand_servants
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
@@ -2640,8 +2839,13 @@ focus_tree = {
 		icon = GFX_goal_generic_dangerous_deal
 
 		available = {
-			NOT = {is_subject_of = CHI}
-			is_in_faction_with = JAP 
+			NOT = {
+				has_government = communism
+			}
+		}
+
+		bypass = {
+			has_government = communism
 		}
 		
 		prerequisite = { focus = MEN_the_spirit_of_genghis }
@@ -2656,16 +2860,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			JAP = {
-				country_event = MEN.11
-				puppet = MEN 
-				set_autonomy = {
-					target = MEN 
-					autonomy_state = autonomy_wtt_imperial_protectorate
-				}
+			add_political_power = 35
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.10
 			}
-			hidden_effect = {
-				set_cosmetic_tag = MEN_mongol_mil_gov
+			custom_effect_tooltip = r56_newline
+			swap_ideas = {
+				remove_idea = MEN_kwantungs_invisible_hand_fascist
+				add_idea = MEN_kwantungs_invisible_hand_genghis
 			}
 		}
 	}
@@ -2680,20 +2883,6 @@ focus_tree = {
 			controls_state = 612
 			controls_state = 621
 			controls_state = 746
-			hidden_trigger = {
-				611 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				612 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				621 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				746 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-			}
 		}
 		prerequisite = { 
 			focus = MEN_the_spirit_of_genghis focus = MEN_servants_of_the_empire
@@ -2708,9 +2897,31 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			JAP = {
-				country_event = MEN.23
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.10
 			}
+			add_stability = 0.05
+			every_state = {
+				limit = {
+					NOT = {
+						is_core_of = ROOT
+					}
+					OR = {
+						state = 611
+						state = 612
+						state = 621
+						state = 746
+					}
+				}
+				add_core_of = ROOT
+			}
+			add_state_claim = 616
+			hidden_effect = {
+				drop_cosmetic_tag = yes
+			}
+			custom_effect_tooltip = r56_newline
+			set_cosmetic_tag = MEN_MGA
 		}
 	}
 
@@ -2720,8 +2931,13 @@ focus_tree = {
 		icon = GFX_goal_monastries_in_uproar
 
 		available = {
-			NOT = {is_subject_of = CHI}
-			is_in_faction_with = JAP 
+			NOT = {
+				has_government = communism
+			}
+		}
+
+		bypass = {
+			has_government = communism
 		}
 		
 		prerequisite = { focus = MEN_deal_with_the_bayannur_princes focus = MEN_the_principle_of_nationalism }
@@ -2729,24 +2945,18 @@ focus_tree = {
 		x = -2
 		y = 1
 		
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 100
 		}
 
 		completion_reward = {
-			JAP = {
-				country_event = MEN.11
-				puppet = MEN 
-				set_autonomy = {
-					target = MEN 
-					autonomy_state = autonomy_wtt_imperial_protectorate
-				}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
 			}
-			hidden_effect = {
-				set_cosmetic_tag = MEN_mongol_mil_gov
-			}
+			add_ideas = MEN_empowered_buddhists
 		}
 	}
 
@@ -2756,8 +2966,7 @@ focus_tree = {
 		icon = GFX_goal_MAN_beyond_baikal
 
 		available = {
-			NOT = {is_subject_of = CHI}
-			is_in_faction_with = JAP 
+			is_ally_with = JAP
 		}
 		
 		prerequisite = { focus = MEN_servants_of_the_empire }
@@ -2772,17 +2981,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			JAP = {
-				country_event = MEN.11
-				puppet = MEN 
-				set_autonomy = {
-					target = MEN 
-					autonomy_state = autonomy_wtt_imperial_protectorate
-				}
+			add_political_power = -35
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.10
 			}
-			hidden_effect = {
-				set_cosmetic_tag = MEN_mongol_mil_gov
-			}
+			add_ideas = MEN_harmony_of_the_five_races
 		}
 	}
 
@@ -2792,8 +2996,7 @@ focus_tree = {
 		icon = GFX_goal_JAP_army_expansion
 
 		available = {
-			NOT = {is_subject_of = CHI}
-			is_in_faction_with = JAP 
+			is_ally_with = JAP
 		}
 		
 		prerequisite = { focus = MEN_servants_of_the_empire }
@@ -2808,16 +3011,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			JAP = {
-				country_event = MEN.11
-				puppet = MEN 
-				set_autonomy = {
-					target = MEN 
-					autonomy_state = autonomy_wtt_imperial_protectorate
-				}
-			}
-			hidden_effect = {
-				set_cosmetic_tag = MEN_mongol_mil_gov
+			add_political_power = -50
+			swap_ideas = {
+				remove_idea = MEN_kwantungs_invisible_hand_servants
+				add_idea = MEN_kwantungs_invisible_hand_servants_2
 			}
 		}
 	}
@@ -2828,8 +3025,14 @@ focus_tree = {
 		icon = GFX_focus_chi_cooperation_with_the_nationalists
 
 		available = {
-			NOT = {is_subject_of = CHI}
-			is_in_faction_with = JAP 
+			is_ally_with = JAP
+			JAP = { # Should work
+				has_war_with = event_target:WTT_current_china_leader
+			}
+		}
+
+		bypass = {
+
 		}
 		
 		prerequisite = { focus = MEN_deal_with_the_bayannur_princes }
@@ -2844,16 +3047,24 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			JAP = {
-				country_event = MEN.11
-				puppet = MEN 
-				set_autonomy = {
-					target = MEN 
-					autonomy_state = autonomy_wtt_imperial_protectorate
-				}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
 			}
-			hidden_effect = {
-				set_cosmetic_tag = MEN_mongol_mil_gov
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = event_target:WTT_current_china_leader
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 50
+				producer = event_target:WTT_current_china_leader
+			}
+			custom_effect_tooltip = r56_newline
+			swap_ideas = {
+				remove_idea = MEN_kwantungs_invisible_hand_genghis
+				add_idea = MEN_kwantungs_invisible_hand_genghis_2
 			}
 		}
 	}
@@ -2864,8 +3075,10 @@ focus_tree = {
 		icon = GFX_goal_generic_seize_stockpiles
 
 		available = {
-			NOT = {is_subject_of = CHI}
-			is_in_faction_with = JAP 
+			is_ally_with = JAP
+			JAP = { # Should work
+				has_war_with = event_target:WTT_current_china_leader
+			}
 		}
 		
 		prerequisite = { focus = MEN_covert_chinese_cooperation }
@@ -2880,16 +3093,117 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			JAP = {
-				country_event = MEN.11
-				puppet = MEN 
-				set_autonomy = {
-					target = MEN 
-					autonomy_state = autonomy_wtt_imperial_protectorate
+			if = {
+				limit = {
+					any_state = {
+						OR = {
+							is_controlled_by = MAN
+							is_controlled_by = JAP
+						}
+						OR = {
+							is_core_of = ROOT
+							is_core_of = MON
+						}
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_controlled_by = MAN
+							is_controlled_by = JAP
+						}
+						OR = {
+							is_core_of = ROOT
+							is_core_of = MON
+						}
+					}
+					add_resistance = 10
+					add_compliance = -5
+					damage_building = {
+						type = infrastructure
+						damage = 1
+					}
+					if = {
+						limit = {
+							non_damaged_building_level = {
+								building = air_base
+								level > 1
+							}
+						}
+						damage_building = {
+							type = air_base
+							damage = 2
+						}
+					}
+					if = {
+						limit = {
+							non_damaged_building_level = {
+								building = rail_way
+								level > 0
+							}
+						}
+						damage_building = {
+							type = rail_way
+							damage = 2
+						}
+					}
 				}
 			}
-			hidden_effect = {
-				set_cosmetic_tag = MEN_mongol_mil_gov
+			else = { # Tooltip
+				effect_tooltip = {
+					custom_effect_tooltip = MEN_every_mongol_state
+					every_state = {
+						limit = {
+							OR = {
+								is_core_of = ROOT
+								is_core_of = MON
+							}
+						}
+						add_resistance = 10
+						add_compliance = -5
+						damage_building = {
+							type = infrastructure
+							damage = 1
+						}
+						damage_building = {
+							type = air_base
+							damage = 2
+						}
+						damage_building = {
+							type = rail_way
+							damage = 2
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = r56_newline
+			JAP = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -3000
+					producer = JAP
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = -300
+					producer = JAP
+				}
+			}
+			custom_effect_tooltip = r56_newline
+			if = {
+				limit = {
+					has_idea = MEN_kwantungs_invisible_hand_genghis_2
+				}
+				swap_ideas = {
+					remove_idea = MEN_kwantungs_invisible_hand_genghis_2
+					add_idea = MEN_kwantungs_invisible_hand_genghis_3
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = MEN_kwantungs_invisible_hand_genghis_3
+					add_idea = MEN_kwantungs_invisible_hand_genghis_4
+				}
 			}
 		}
 	}
@@ -2900,8 +3214,10 @@ focus_tree = {
 		icon = GFX_goal_generic_espionage
 
 		available = {
-			NOT = {is_subject_of = CHI}
-			is_in_faction_with = JAP 
+			is_ally_with = JAP
+			JAP = { # Should work
+				has_war_with = event_target:WTT_current_china_leader
+			}
 		}
 		
 		prerequisite = { focus = MEN_covert_chinese_cooperation }
@@ -2916,16 +3232,28 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			JAP = {
-				country_event = MEN.11
-				puppet = MEN 
-				set_autonomy = {
-					target = MEN 
-					autonomy_state = autonomy_wtt_imperial_protectorate
+			add_ideas = MEN_anti_japanese_intelligence
+			custom_effect_tooltip = r56_newline
+			event_target:WTT_current_china_leader = {
+				add_timed_idea = {
+					idea = MEN_anti_japanese_intelligence_china
 				}
 			}
-			hidden_effect = {
-				set_cosmetic_tag = MEN_mongol_mil_gov
+			custom_effect_tooltip = r56_newline
+			if = {
+				limit = {
+					has_idea = MEN_kwantungs_invisible_hand_genghis_3
+				}
+				swap_ideas = {
+					remove_idea = MEN_kwantungs_invisible_hand_genghis_3
+					add_idea = MEN_kwantungs_invisible_hand_genghis_4
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = MEN_kwantungs_invisible_hand_genghis_2
+					add_idea = MEN_kwantungs_invisible_hand_genghis_3
+				}
 			}
 		}
 	}
@@ -2936,8 +3264,10 @@ focus_tree = {
 		icon = GFX_focus_jap_strike_south
 
 		available = {
-			NOT = {is_subject_of = CHI}
-			is_in_faction_with = JAP 
+			is_ally_with = JAP
+			JAP = { # Should work
+				has_war_with = event_target:WTT_current_china_leader
+			}
 		}
 		
 		prerequisite = { focus = MEN_eyes_behind_enemy_lines focus = MEN_sabotage_the_kwantung }
@@ -2952,16 +3282,62 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			JAP = {
-				country_event = MEN.11
-				puppet = MEN 
-				set_autonomy = {
-					target = MEN 
-					autonomy_state = autonomy_wtt_imperial_protectorate
+			add_war_support = 0.05
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			if = {
+				limit = {
+					is_in_faction = yes
+				}
+				leave_faction = yes
+			}
+			if = {
+				limit = {
+					is_subject_of = JAP
+				}
+				JAP = {
+					end_puppet = ROOT
 				}
 			}
-			hidden_effect = {
-				set_cosmetic_tag = MEN_mongol_mil_gov
+			if = {
+				limit = {
+					event_target:WTT_current_china_leader = {
+						is_faction_leader = yes
+					}
+				}
+				event_target:WTT_current_china_leader = {
+					add_to_faction = ROOT
+				}
+			}
+			else_if = {
+				limit = { 
+					event_target:WTT_current_china_leader = {
+						is_in_faction = yes
+					}
+				}
+				event_target:WTT_current_china_leader = {
+					faction_leader = {
+						add_to_faction = ROOT
+					}
+				}
+			}
+			if = {
+				limit = {
+					event_target:WTT_current_china_leader = {
+						has_war_with = JAP
+					}
+				}
+				add_to_war = {
+					targeted_alliance = event_target:WTT_current_china_leader
+					enemy = JAP
+					hostility_reason = asked_to_join
+				}
+			}
+			add_timed_idea = {
+				idea = MEN_caught_off_guard
+				days = 90
 			}
 		}
 	}
@@ -2972,8 +3348,7 @@ focus_tree = {
 		icon = GFX_focus_ITA_liberation_or_death
 
 		available = {
-			NOT = {is_subject_of = CHI}
-			is_in_faction_with = JAP 
+			has_war_with = JAP
 		}
 		
 		prerequisite = { focus = MEN_join_the_anti_japanese_struggle }
@@ -2988,16 +3363,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			JAP = {
-				country_event = MEN.11
-				puppet = MEN 
-				set_autonomy = {
-					target = MEN 
-					autonomy_state = autonomy_wtt_imperial_protectorate
-				}
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.05
 			}
-			hidden_effect = {
-				set_cosmetic_tag = MEN_mongol_mil_gov
+			add_timed_idea = {
+				idea = MEN_liberateion_or_death_idea
+				days = 365
 			}
 		}
 	}
@@ -3037,9 +3409,8 @@ focus_tree = {
 		icon = GFX_focus_generic_attack_mongolia
 
 		available = {
-			JAP = {
-				has_war_with = CHI 
-			}
+			is_ally_with = JAP
+			is_neighbor_of = MON
 		}
 		
 		prerequisite = { 
@@ -3048,7 +3419,6 @@ focus_tree = {
 		relative_position_id = MEN_loyalty_to_the_kwantung
 		x = -1
 		y = 1
-	
 		
 		cost = 10
 
@@ -3138,9 +3508,26 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = -0.02
-			add_political_power = 25
-			custom_effect_tooltip = MEN_Mini_Game_Unlock_chi_tt
+			add_political_power = 35
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.10
+			}
+			add_stability = -0.05
+			custom_effect_tooltip = r56_newline
+			swap_ideas = {
+				remove_idea = MEN_kwantungs_invisible_hand
+				add_idea = MEN_kwantungs_invisible_hand_democratic
+			}
+			add_manpower = -5000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			effect_tooltip = {
+				retire_character = MEN_li_shouxin
+				retire_character = MEN_wang_ying
+			}
 		}
 	}
 
@@ -3164,9 +3551,55 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = -0.02
-			add_political_power = 25
-			custom_effect_tooltip = MEN_Mini_Game_Unlock_chi_tt
+			add_political_power = 35
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.10
+			}
+			add_stability = 0.05
+			division_template = {
+				name = "Měngqì Ānbao Túan"
+				regiments = {
+					infantry = { x = 0 y = 0 }	
+					infantry = { x = 0 y = 1 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+				}
+			}	
+			if = {
+				limit = {
+					SHX = {
+						OR = {
+							exists = no
+							is_ai = yes
+						}
+					}
+				}
+				every_possible_country = {
+					limit = { has_character = SHX_fu_zuoyi }
+					random_character = {
+						limit = { is_character = SHX_fu_zuoyi }
+						set_nationality = MEN
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 611 }
+				limit = {
+					is_core_of = ROOT
+				}
+				custom_effect_tooltip = MEN_create_security_army 
+				hidden_effect = {
+					create_unit = {
+						division = "name = \"1. Měngqì Ānbao Túan\" division_template = \"Měngqì Ānbao Túan\" start_experience_factor = 0.10 start_equipment_factor = 0.85 start_manpower_factor = 0.75"
+						owner = ROOT
+						count = 1
+						prioritize_location = 4612
+					}
+				}
+			}
 		}
 	}
 
@@ -3841,10 +4274,7 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = MEN_Autonomous_Province
-				add_idea = MEN_Autonomous_Province_2
-			}
+
 		}
 	}
 

@@ -43,6 +43,13 @@ add_timed_idea = {
 
 add_ideas = MEN_disorganized_military
 
+MON = {
+	add_opinion_modifier = {
+		target = MEN
+		modifier = political_rivalry
+	}
+}
+
 set_technology = {
 
 	# Extended Technologies

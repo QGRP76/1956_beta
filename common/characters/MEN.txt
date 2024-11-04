@@ -8,13 +8,13 @@ characters={
 		}
 		country_leader={
 			ideology= fascism_ideology
-			traits={ MEN_spirit_of_genghis subservient_ultranationalist r56_trait_opposed_to_communism }
+			traits={ subservient_ultranationalist r56_trait_opposed_to_communism }
 			expire="1965.1.1"
 			id=-1
 		}
 		country_leader={
 			ideology= oligarchism
-			traits={ MEN_spirit_of_genghis subservient_ultranationalist r56_trait_opposed_to_communism }
+			traits={ subservient_ultranationalist r56_trait_opposed_to_communism }
 			expire="1965.1.1"
 			id=-1
 		}		
@@ -305,6 +305,12 @@ characters={
 					has_government = communism
 					has_government = democratic
 				}
+				AND = {
+					tag = MEN
+					NOT = {
+						has_completed_focus = MEN_root_out_japanese_loyality
+					}
+				}
 			}
 		}
 		advisor = {
@@ -316,6 +322,7 @@ characters={
 					has_war_with = JAP
 					has_government = communism
 					has_government = democratic
+					has_completed_focus = MEN_root_out_japanese_loyality
 				}
 			}
 			cost = 100
@@ -328,11 +335,11 @@ characters={
 			idea_token = MEN_li_shouxin_chief
 			ledger = army
 			available = {
-				has_completed_focus = MEN_japanese_military_advisors
 				NOT = {
 					has_war_with = JAP
 					has_government = communism
 					has_government = democratic
+					has_completed_focus = MEN_root_out_japanese_loyality
 				}
 			}
 			cost = 100
@@ -362,6 +369,12 @@ characters={
 					has_government = communism
 					has_government = democratic
 				}
+				AND = {
+					tag = MEN
+					NOT = {
+						has_completed_focus = MEN_root_out_japanese_loyality
+					}
+				}
 			}
 		}
 		advisor={
@@ -373,6 +386,7 @@ characters={
 					has_war_with = JAP
 					has_government = communism
 					has_government = democratic
+					has_completed_focus = MEN_root_out_japanese_loyality
 				}
 			}
 			traits = {
@@ -392,6 +406,7 @@ characters={
 					has_war_with = JAP
 					has_government = communism
 					has_government = democratic
+					has_completed_focus = MEN_root_out_japanese_loyality
 				}
 			}
 			traits = {

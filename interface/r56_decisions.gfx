@@ -810,4 +810,11 @@ spriteTypes = {
 		name = "GFX_decision_cat_SAU_oil"
 		texturefile = "gfx/interface/decisions/decision_cat_SAU_oil.dds"
 	}
+
+###---> MEN <><> <><> <><>
+	spriteType = {
+		name = "GFX_decision_cat_MEN_decisions"
+		texturefile = "gfx/interface/decisions/decision_cat_MEN_decisions.dds"
+	}
+
 }

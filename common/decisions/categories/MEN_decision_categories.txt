@@ -1,33 +1,11 @@
-MEN_Internal_Power_Struggle = {
-	allowed = {
-		original_tag = MEN
-		
-	}
-
-	visible = {
-		is_subject_of = CHI
-		
-	}
-
-	priority = 15
-}
-
-
-MEN_forgin_aid = {
-	allowed = {
-		original_tag = MEN
-		
-	}
-
-	visible = {
-		always = yes 
-		#or = {
-			#has_completed_focus = men_ask_the_soviets_for_aid_in_our_cause
-			#has_completed_focus = men_ask_the_mongolians_for_aid
-		#}
-		
-	}
+MEN_inner_mongolian_gambit = {
+	icon = border_conflicts
 
 	priority = 10
-}
 
+	picture = GFX_decision_cat_MEN_decisions
+
+	visible = {
+		tag = MEN
+	}
+}

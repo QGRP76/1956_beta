@@ -1,4 +1,4 @@
-political_actions = {
+MEN_inner_mongolian_gambit = {
 
 	MEN_the_zhangbei_meeting = {
 
@@ -30,313 +30,105 @@ political_actions = {
 			country_event = {
 				id = men.10 hours = 12
 			}
-			custom_effect_tooltip = if_they_accept_newline_tt
+			custom_effect_tooltip = MEN_possible_event_effects
 			effect_tooltip = {
-				add_political_power = -35
-				add_popularity = {
-					ideology = neutrality
-					popularity = -0.05
+				if = {
+					limit = {
+						OR = {
+							has_country_flag = MEN_japanese_gambit
+							date < 1936.1.10
+						}
+					}
+					add_political_power = 15
+					add_stability = 0.03
+					custom_effect_tooltip = MEN_unforseen_consequences
+					hidden_effect = {
+						country_event = { id = men.12 hours = 12 }
+					}
+					custom_effect_tooltip = r56_newline
+					custom_effect_tooltip = MEN_alternative_event_effects
+					effect_tooltip = {
+						add_political_power = -35
+						add_popularity = {
+							ideology = neutrality
+							popularity = -0.05
+						}
+						add_stability = -0.10
+						custom_effect_tooltip = MEN_prevent_destabilization
+						hidden_effect = {
+							country_event = { id = men.11 hours = 12 }
+						}
+					}
 				}
-				add_stability = -0.10
-				custom_effect_tooltip = MEN_prevent_destabilization
+				else = {
+					effect_tooltip = {
+						add_popularity = {
+							ideology = neutrality
+							popularity = 0.05
+						}
+						add_stability = 0.10
+						unlock_national_focus = MEN_petition_nima-odsor_to_stay_in_shangbei
+					}
+				}
 			}
 		}
 	}
 
-	MEN_japanese_pressure = {
-		icon = oppression
-		allowed = {
-			original_tag = MEN 
+	MEN_imminent_japanese_invasion = {
+
+		icon = GFX_decision_oppression
+
+		activation = {
+			always = no
 		}
 
-		available = {
-			OR = {
-				is_subject_of = JAP 
-				is_in_faction_with = JAP 
-				custom_trigger_tooltip = {
-					tooltip = MEN_inforce_our_freedom_tt
-					has_country_flag = MEN_inforce_our_freedom_flag
+		priority = 50
+
+		days_mission_timeout = 420
+
+		available = {  
+      		OR = {
+				has_completed_focus = MEN_compromise_with_nanjing
+				has_completed_focus = MEN_the_state_founding_conference
+				has_completed_focus = MEN_the_second_bailingmiao_uprising
+			}
+  		}	
+
+		allowed = {
+			always = no
+		}
+
+		visible = {
+			tag = MEN
+		}
+
+		cancel_trigger = {
+			JAP = {
+				OR = {
+					has_capitulated = yes
+					has_civil_war = yes
+					exists = no
+					is_subject = yes
+					AND = {
+						NOT = {
+							is_neighbor_of = ROOT
+						}
+						any_allied_country = {
+							NOT = {
+								is_neighbor_of = ROOT
+							}
+						}
+					}
 				}
 			}
-		}
-
-		activation = { 
-			has_completed_focus = MEN_the_mongol_military_government
 		}
 
 		is_good = no
-		days_mission_timeout = 600
-		fire_only_once = yes
-		priority = 20
-
 
 		timeout_effect = {
-			JAP = {
-				create_wargoal = {
-				type = puppet_wargoal_focus
-				target = ROOT
-				}
+			SOV = {
+				country_event = afghanistan.54
 			}
-		}
-
-		complete_effect = { 
-		
-		}
-	}
-
-
-	MEN_esablish_the_mongol_military_government = {
-    	icon = generic_army_support
-		fire_only_once = yes
-		available = {
-			compare_autonomy_state > autonomy_puppet
-			fascism > 0.4
-		}
-
-		cost = 100
-		
-		visible = {
-			has_completed_focus = MEN_strengthen_ties_with_japan 	
-		}
-        complete_effect = {
-			set_cosmetic_tag = MEN_mongol_mil_gov
-			set_politics = {
-				ruling_party = fascism
-				elections_allowed = no
-			}
-
-
-			end_puppet = CHI
-
-			hidden_effect = {
-				activate_mission = MEN_japanese_pressure
-			}
-		}
-		
-	}
-
-
-
-    MEN_further_distance_ourself_from_chi= {
-    	icon = generic_independence
-		available = {
-			has_war = no
-		}
-
-		cost = 50
-		
-		visible = {
-			has_completed_focus = MEN_strengthen_ties_with_japan 
-		
-			
-		}
-        complete_effect = {
-			add_days_mission_timeout = {
-				mission = MEN_fading_central_loyality
-				days = -100
-			}
-			add_autonomy_score = {
-				value = 250
-			}
-			swap_ideas = {
-				remove_idea = MEN_Autonomous_Province
-				add_idea = MEN_Autonomous_Province_1
-			}
-		}
-	}
-
-
-
-
-
-	MEN_recognize_japanese_claims_in_asia = {
-    	icon = jap_conquer_china
-		available = {
-			has_war = no
-		}
-
-		cost = 25
-		
-		visible = {
-			has_completed_focus = MEN_strengthen_ties_with_japan 
-			
-		}
-		fire_only_once = yes
-        complete_effect = {
-			add_days_mission_timeout = {
-				mission = MEN_fading_central_loyality
-				days = -50
-			}
-			add_autonomy_score = {
-				value = 150
-			}
-		}
-	}
-
-
-
-
-	MEN_reaffirm_loyality_to_the_central_government = {
-    	icon = generic_political_discourse
-		available = {
-			fascism < 0.05
-			has_war = no
-		}
-
-		cost = 100
-		fire_only_once = yes
-		
-		visible = {
-			has_completed_focus = MEN_root_out_japanese_loyality
-		}
-        complete_effect = {
-			add_political_power = 50
-			set_country_flag = reaffirmed_loyality_to_chi_flag
-			add_autonomy_score = {
-				value = -100
-			}
-		}
-	}
-
-
-
-
-	MEN_close_our_borders_with_japan = {
-    	icon = generic_decision
-		available = {
-			NOT = {is_in_faction_with = JAP}
-			has_war = no
-		}
-
-		cost = 50
-		fire_only_once = yes
-		
-		visible = {
-			has_completed_focus = MEN_root_out_japanese_loyality
-			
-		}
-        complete_effect = {
-			add_popularity = {
-				ideology = fascism
-				popularity = -0.1
-			}
-			swap_ideas = {
-				remove_idea = MEN_increasing_jap_influence
-				add_idea = MEN_weakened_jap_influence
-			}
-		}
-	}
-
-
-
-
-	MEN_ban_military_orgs = {
-    	icon = generic_prepare_civil_war
-		available = {
-			has_war = no
-		}
-
-		cost = 75
-		fire_only_once = yes
-		
-		visible = {
-			has_completed_focus = MEN_root_out_japanese_loyality
-			
-		}
-        complete_effect = {
-			add_popularity = {
-				ideology = fascism
-				popularity = -0.25
-			}
-			add_ideas = MEN_military_orgs_banned
-		}
-	}
-
-	MEN_ban_fascist_views = {
-    	icon = oppression
-		available = {
-			has_war = no
-		}
-
-		cost = 100
-		fire_only_once = yes
-		
-		visible = {
-			has_completed_focus = MEN_root_out_japanese_loyality	
-		}
-		
-        complete_effect = {
-			set_temp_variable = {
-						var = ban_ideology_var
-						value = party_popularity@fascism
-					}
-					multiply_temp_variable = {
-						var = ban_ideology_var
-						value = -1
-					}
-					add_popularity = {
-						ideology = fascism
-						popularity = ban_ideology_var
-					}
-					multiply_temp_variable = {
-						var = ban_ideology_var
-						value = 0.66
-					}
-			add_stability = ban_ideology_var
-		}
- 	}
-    
-
-	MEN_the_suiyuan_campaign = {
-		allowed = {
-			original_tag = MEN 
-		}
-
-		available = {
-			OR = {
-				has_war_with = SHX
-				has_border_war_with = SHX
-			}
-		}
-
-		activation = { 
-			has_completed_focus = MEN_put_an_end_to_the_raids
-			not = {
-				has_country_flag = men_suiyuan_started
-			}
-		}
-		fire_only_once = yes
-
-		is_good = yes 
-		days_mission_timeout = 20
-		
-		priority = 20
-
-
-		timeout_effect = {
-			set_country_flag = men_suiyuan_started
-			start_border_war = {
-				change_state_after_war = no
-				attacker = {
-					state = 611
-					num_provinces = 1
-					on_win = men.38
-					on_lose = men.39
-					on_cancel = men.40
-				}
-				
-				defender = {
-					state = 621
-					num_provinces = 1
-					on_win = men.41
-					on_lose = men.42
-					on_cancel = men.43
-				}
-			}
-		} 
-
-		complete_effect = { 
-		 	 
 		}
 	}
 }

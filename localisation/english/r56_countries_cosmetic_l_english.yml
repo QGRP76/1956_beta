@@ -1809,13 +1809,7 @@
  MAN_marshal_of_china:0 "League of Chinese Provinces"
  MAN_marshal_of_china_DEF:0 "the League of Chinese Provinces"
  MAN_empire_of_china:0 "Empire of China"
- MAn_empire_of_china_DEF:0 "the Empire of China"
-
-
- #MAG
- MAGmen_fascism:0 "Mongol United Autonomous Government"
- MAGmen_fascism_DEF:0 "the Mongol United Autonomous Government"
- MAGmen_fascism_ADJ:0 "Autonomous Mongol"
+ MAN_empire_of_china_DEF:0 "the Empire of China"
 
  #MEX
  #British Puppet
@@ -1864,10 +1858,6 @@
  
  MEX_SOCIALISTS_communism:0 "United Mexican States"
  MEX_SOCIALISTS_communism_DEF:0 "the United Mexican States"
-
- #MMGmen
- MMGmen_fascism:0 "Mongol Military Government"
- MMGmen_fascism_DEF:0 "the Mongol Military Government"
 
  #MPL
  MPL_free_fascism:0 "Levantine State"
@@ -2990,27 +2980,7 @@
  MEN_democratic_ADJ:0 "Inner Mongolian"
  MEN_communism_ADJ:0 "Inner Mongolian"
 
- # MEN_mongol_mil_gov:0 "Mongol Military Government"
- # MEN_mongol_mil_gov_DEF:0 "The Mongol Military Government"
- # MEN_united_auto_gov:0 "Mongol United Autonomous Government"
- # MEN_united_auto_gov_DEF:0 "The Mongol United Autonomous Government"
- # MEN_Menj_form:0 "Mengjiang United Autonomous Government"
- # MEN_Menj_form:0 "The Mengjiang United Autonomous Government"
- # Men_mongol_unify:0 "United Mongolian Politcal Committee"
- # Men_mongol_unify_DEF:0 "The United Mongolian Politcal Committee"
- # MEN_inner_mongolian_pr_good_color_tag:0 "Inner Mongolian Peoples Republic"
- # MEN_inner_mongolian_pr_good_color_tag_DEF:0 "The Inner Mongolian Peoples Republic"
- # MEN_yuan:0 "Mongol Khanate"
- # MEN_yuan_DEF:0 "The Mongol Khanate"
- # MEN_yuan_ADJ:0 "Mongol"
- # MEN_CHI_Puppet_tag:0 "Yuan Protectorite"
- # MEN_CHI_Puppet_tag_DEF:0 "the Yuan Protectorite"
- # MEN_CHI_Puppet_tag_ADJ:0 "Yuan"
- # MEN_Mongol_state:0 "Inner Mongol State"
- # MEN_Mongol_state_DEF:0 "The Inner Mongol State"
-
  #MEN_CHI_AUT
- 
  MEN_CHI_AUT_fascism:0 "United Mongolian Politcal Committee"
  MEN_CHI_AUT_fascism_DEF:0 "the United Mongolian Politcal Committee"
  MEN_CHI_AUT_democratic:0 "Republic of Inner Mongolia"
@@ -3019,6 +2989,48 @@
  MEN_CHI_AUT_neutrality_def:0 "the Mongolian Autonomous Political Committee"
  MEN_CHI_AUT_communism:0 "People's Republic of Inner Mongolia"
  MEN_CHI_AUT_communism_DEF:0 "the People's Republic of Inner Mongolia"
+
+ #MEN_MIL_GOV
+ MEN_MIL_GOV_fascism:0 "Mongol Military Government"
+ MEN_MIL_GOV_fascism_DEF:0 "the Mongol Military Government"
+ MEN_MIL_GOV_democratic:0 "Mongol Military Government"
+ MEN_MIL_GOV_democratic_DEF:0 "the Mongol Military Government"
+ MEN_MIL_GOV_neutrality:0 "Mongol Military Government"
+ MEN_MIL_GOV_neutrality_def:0 "the Mongol Military Government"
+ MEN_MIL_GOV_communism:0 "Mongol Military Government"
+ MEN_MIL_GOV_communism_DEF:0 "the Mongol Military Government"
+
+ #MEN_MGA
+ MEN_MGA_fascism:0 "State of Mengjiang"
+ MEN_MGA_fascism_DEF:0 "the State of Mengjiang"
+ MEN_MGA_democratic:0 "Republic of Mengjiang"
+ MEN_MGA_democratic_DEF:0 "the Republic of Mengjiang"
+ MEN_MGA_neutrality:0 "State of Mengjiang"
+ MEN_MGA_neutrality_def:0 "the State of Mengjiang"
+ MEN_MGA_communism:0 "People's Republic of Mengjiang"
+ MEN_MGA_communism_DEF:0 "the People's Republic of Mengjiang"
+
+ #MEN_JAP
+ MEN_JAP_fascism_autonomy_integrated_puppet:0 "State of Mengjiang"
+ MEN_JAP_fascism_autonomy_integrated_puppet_DEF:0 "the State of Mengjiang"
+ MEN_JAP_fascism_autonomy_puppet:0 "State of Mengjiang"
+ MEN_JAP_fascism_autonomy_puppet_DEF:0 "the State of Mengjiang"
+ MEN_JAP_fascism_autonomy_colony:0 "State of Mengjiang"
+ MEN_JAP_fascism_autonomy_colony_DEF:0 "the State of Mengjiang"
+ MEN_JAP_fascism_autonomy_dominion:0 "State of Mengjiang"
+ MEN_JAP_fascism_autonomy_dominion_DEF:0 "the State of Mengjiang"
+ MEN_JAP_fascism_autonomy_reichskommissariat:0 "State of Mengjiang"
+ MEN_JAP_fascism_autonomy_reichskommissariat_DEF:0 "the State of Mengjiang"
+ MEN_JAP_fascism_autonomy_reichsprotectorate:0 "State of Mengjiang"
+ MEN_JAP_fascism_autonomy_reichsprotectorate_DEF:0 "the State of Mengjiang"
+ MEN_JAP_fascism_autonomy_satellite:0 "State of Mengjiang"
+ MEN_JAP_fascism_autonomy_satellite_DEF:0 "the State of Mengjiang"
+ MEN_JAP_fascism_autonomy_wtt_imperial_protectorate:0 "State of Mengjiang"
+ MEN_JAP_fascism_autonomy_wtt_imperial_protectorate_DEF:0 "the State of Mengjiang"
+ MEN_JAP_fascism_autonomy_wtt_imperial_associate:0 "State of Mengjiang"
+ MEN_JAP_fascism_autonomy_wtt_imperial_associate_DEF:0 "the State of Mengjiang"
+ MEN_JAP_fascism_autonomy_wtt_imperial_subject:0 "State of Mengjiang"
+ MEN_JAP_fascism_autonomy_wtt_imperial_subject_DEF:0 "the State of Mengjiang"
 
  #MON
  MON_SOV_REPUBLIC_communism:0 "Mongolian Soviet Socialist Republic"

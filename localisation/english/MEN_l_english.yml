@@ -1,6 +1,8 @@
 ﻿l_english:
  Mengkukuo_focus:0 "Mengkukuo National Focus"
- #characters
+
+ ################### CHARACTERS ###################
+
  MEN_li_shouxin:0 "Li Shouxin"
  MEN_altanochir:0 "Altanochir"
  MEN_hikojiro_muratani:0 "Hikojiro Muratani"
@@ -14,7 +16,7 @@
  MEN_yonimitsu_kasahara:0 "Yonimitsu Kasahara"
  MEN_altanochir:0 "Altanochir"
 
- ##### ARMY #####
+ ################### ARMY ###################
 
  MEN_an_independent_army:0 "The Inner Mongolian Army"
  MEN_an_independent_army_desc:0 "A state needs it own army and we are not the exception to this, even if we are weak we need to defend ourselfs!"
@@ -56,7 +58,7 @@
  MEN_integrate_the_grand_han_righteous_army_desc:0 ""
  MEN_open_the_kalgan_military_academy:0 "Open the [MEN.Capital.GetCapitalVictoryPointName] Military Academy"
 
- ##### FASCIST - JAPANESE PATH #####
+ ################### FASCIST - JAPANESE PATH ###################
 
  MEN_strengthen_ties_with_japan:0 "The State-Founding Conference"
  MEN_strengthen_ties_with_japan_desc:0 ""
@@ -121,7 +123,7 @@
 
  MEN_our_place_under_the_red_sun:0 "Our Place Under the Red Sun"
 
- ##### DEMOCRATIC PATH #####
+ ################### DEMOCRATIC PATH ###################
 
  MEN_petition_nima-odsor_to_stay_in_shangbei:0 "Aftermath of the Kälgän Incident"
  MEN_petition_nima-odsor_to_stay_in_shangbei_desc:0 "With our [JAP.GetAdjective] dominated politics any movement for anything otherwise might be supressed, to protect anti [JAP.GetAdjective] movements we shouldnt let Nima-Odsor out of our protection."
@@ -197,7 +199,7 @@
  MEN_greater_mongolian_reunification:0 "Greater Mongolian Reunification"
  MEN_greater_mongolian_reunification_desc:0 "With the Greater Mongol Border Lands finally under our control we can fully intergrate them into the realm and declare A New Mongol State, A Greater Mongol State."
 
- ##### COMMUNIST PATH #####
+ ################### COMMUNIST PATH ###################
 
  MEN_radicalize_the_peasants:0 "Radicalize the Peasants"
  
@@ -275,97 +277,7 @@
 
  MEN_the_honour_of_death:0 "The Honour of Death"
 
- MEN_open_the_chahar_peoples_university:0 "Open the [612.GetName] Peoples University"
- MEN_open_the_chahar_peoples_university_desc:0 "While public education is extremely limited by opening a tution free university for the people we can not only just educate our people we can spark some of the brightest minds of a generation."
- MEN_expand_the_funding:0 "Expand the Funding"
- MEN_expand_the_funding_desc:0 "Further Expansion of funding for the peoples university can allow for even more educated people and even more bright scientists to join our nation."
- MEN_inner_mongolian_unification:0 "Inner Mongolian Unification"
- MEN_inner_mongolian_unification_desc:0 "Inner Mongolian unification has finally been achieved with this new change in our nation we need to change our economic and poltical stance too."
- MEN_connecting_our_cities:0 "Connecting Our Cities"
- MEN_connecting_our_cities_desc:0 "Funding infrastructure in our cities will allow Inner mongolia to be connected like never before."
- MEN_goverment_reshuffle:0 "government Reshuffle"
- MEN_goverment_reshuffle_desc:0 "Removing less.. loyal parts of our government can allow for further internal stability and prosperity."
- MEN_defend_the_new_union:0 "Defend the New Union"
- MEN_defend_the_new_union_desc:0 "With our new Inner Mongolian Union united it comes with people who wish to rip apart our union by force, we must prevent this with every drop of blood our nation can lose!"
- MEN_increase_our_mining_operations:0 "Increase Our Mining Operations"
- MEN_increase_our_mining_operations_desc:0 "Our nations mining capabilities are weak and laughable, with the strategic development of mines we can change this for the better."
- MEN_industral_land_reform:0 "Industral Land Reform"
- MEN_industral_land_reform_desc:0 "Inner Mongolia is increadably rural and not suited for industral development, small land reform can allow further industry to be developed."
- MEN_the_fate_of_prince_dem:0 "The Fate of the Princes"
- MEN_the_fate_of_prince_dem_desc:0 "With the recent change in policy it is clear that the princes should not be the elite anymore but what should the fate of them be?"terroists, it is clear allowing travel from [JAP.GetNonIdeologyName] is just more harm then good."
- MEN_seek_dominionship:0 "Seek Dominionship"
- MEN_seek_dominionship_desc:0 "The current autonomy of our people is clearly unacceptable but full independence from the kuomintang would be a costly mistake, a proposal of dominionship to the weak central government should be more then acceptable."
- MEN_pursue_full_independence:0 "Pursue Full Independence"
- MEN_pursue_full_independence_desc:0 "For far too long our people have been opressed and subjectated by the [CHI.GetAdjective] it is time for an independent mongol state whatever the cost may be."
- MEN_a_new_communist_beacon_in_china:0 "[CHI.GetNonIdeologyName]'s New Communist Beacon"
- MEN_a_new_communist_beacon_in_china_desc:0 "With the weak state of the [CHI.GetAdjective] Communist Party we can clearly and confidently declare our state the new communist beacon in [CHI.GetNonIdeologyName]."
- MEN_cooperation_with_the_united_front:0 "Cooperation With the United Front"
- MEN_cooperation_with_the_united_front_desc:0 "[JAP.GetNonIdeologyName] is the clear enemy of the people and its obvious that we are their next enemy so cooperation with the [CHI.GetAdjective] United Front is a no brainer for our people."
- MEN_ally_with_the_motherland:0 "Ally With the Motherland"
- MEN_ally_with_the_motherland_desc:0 "The Soviet Union is a much better ally then cooperating with our former oppressors and should pave the way for mongolian unification."
- MEN_reclaim_the_suiyuan_corridor:0 "Reclaim the Suiyuan Corridor"
- MEN_reclaim_the_suiyuan_corridor_desc:0 "The Suiyuan Corridor has been ours for decades before it was wrongfully taken from us, concuring it is a must for liberation for Mongols everywhere."
- MEN_assist_in_the_great_patriotic_war:0 "Assist in the Great Patriotic War"
- MEN_assist_in_the_great_patriotic_war_desc:0 "Our ally is under attack from imperalists! we must scramble to help the motherland for the good of communism!"
- MEN_the_great_inner_mongol_army:0 "The Great Inner Mongol Army"
- MEN_the_great_inner_mongol_army_desc:0 "With war raging in the east we need to rase a Great Inner Mongol Army to protect the Soviets from outside imperalists."
- MEN_mongol_unification_commie:0 "Mongolian Unification?"
- MEN_mongol_unification_commie_desc:0 "With ties growing stronger to Mongolia Proper every day, now is the best time to propose an Union of Mongol peoples to our northern neighbors."
- MEN_strengthen_royal_privleges:0 "Strengthen Royal Privleges"
- MEN_strengthen_royal_privleges_desc:0 "With the semi-republicanism forced onto our people by the kuomintang it is time we reverse that and allow only people with the god given right to rule our nation."
- MEN_an_independent_warlord_state:0 "An Independent Warlord State"
- MEN_an_independent_warlord_state_desc:0 "[CHI.GetNonIdeologyName] is fractured by warlords and revoultion alike and with the kuomintang becoming weaker by the day now is our time to become another warlord state."
- MEN_dismantle_the_committee:0 "Dismantle the Committee"
- MEN_dismantle_the_committee_desc:0 "The politcal committee is one of the road blocks on our way to becoming our former great nation, it must be dismantled at once for the sake of the people."
- MEN_educate_the_lower_classes:0 "Educate the Lower Classes"
- MEN_educate_the_lower_classes_desc:0 "Most of the lower classes in Mongolia cannot read or write, educating them about our cause is a great way to gain influence from a large population."
- MEN_purge_the_young_princes:0 "Purge the Young Princes"
- MEN_purge_the_young_princes_desc:0 "The Young Princes of Mongolia or the vocal fascist nobility are very opposed to anything but a militristic state, their infulence on our system is too great its clear they need to go, to arms for our prince!"
- MEN_cut_ties_with_china:0 "Cut Ties With [CHI.GetNonIdeologyName]"
- MEN_cut_ties_with_china_desc:0 "The kuomintang is weak and can barely control our politics anymore, a simple cut of diplomatic ties should get the message across to them."
- MEN_embrace_our_mongol_past:0 "embrace Our Mongol Past"
- MEN_embrace_our_mongol_past_desc:0 "The Mongol Empire was the height of Mongol dominance why should we not become the empire of greats and restore the former glory of the khanate."
- MEN_our_new_khan:0 "Our New Khan"
- MEN_our_new_khan_desc:0 "With most of the nobility gone it is clear who should be the new khan of Mongolia, prince demchugdongrub is our choice for khan!"
- MEN_the_reclaimation_war:0 "The Reclaimation War"
- MEN_the_reclaimation_war_desc:0 "The Suiyan territories was wrongfully stripped from us and its time to take revenge against the warlords to our west."
- MEN_the_war_of_diplomacy:0 "The War of Diplomacy"
- MEN_the_war_of_diplomacy_desc:0 "While the Mongols before us were not very good at diplomacy to say the very least, but we are now in a modern age, diplomacy for the suiyuan territories can be achived."
- MEN_strike_the_false_state:0 "Strike the False State"
- MEN_strike_the_false_state_desc:0 "The false state calling themselfs Mongolia is merely a soviet puppet state, liberation of the Mongol people and the empire must be achived no matter the cost."
-
- MEN_look_south:0 "Look to the South"
- MEN_look_south_desc:0 "To our south is a weak government going weaker everyday, if any this is the time to attack to show suppremcy for Mongolia"
- MEN_look_north:0 "Look North"
- MEN_look_north_desc:0 "To our north is a fake state quote on quote for the people, no matter they control Mongol territories and this is unacceptable."
- MEN_restore_the_yuan_protectorite:0 "Restore the Yuan Protectorite"
- MEN_restore_the_yuan_protectorite_desc:0 "With the conquest of [CHI.GetNonIdeologyName] completed self government, and establishing an Yuan Protrectorite is the best way to ensure loyality."
- MEN_a_khan_of_khans:0 "A Khan of Khans"
- MEN_a_khan_of_khans_desc:0 "With the massive conquests made during Khan Demchugdongrubs rule it is obvious the khan should crown himself the title of Khagan "
- MEN_lay_claim_to_the_greater_empire:0 "Lay Claim to the Greater Empire"
- MEN_lay_claim_to_the_greater_empire_desc:0 "This world is for those who are born to conquer it, Not for those who dream that are able to conquer it, even if they're right" #-Fernando Pessoa
- MEN_controlled_young_prince_rule:0 "Controlled Young Prince Rule."
- MEN_controlled_young_prince_rule_desc:0 "While the Young Princes are extremeists in our government, if we allow them some controlled rule we can establish a stable government."
- MEN_limited_cooperation_with_japan:0 "Limited Cooperation With Japan"
- MEN_limited_cooperation_with_japan_desc:0 "For better or for worse Japan is in partial control of our politics, limited cooperation with them should let some pressure off our nation."
- MEN_a_modern_mongol_state:0 "A Modern Mongol State"
- MEN_a_modern_mongol_state_desc:0 "While it is clear that the ways of empire is outdated, a modernized Mongol state is a way to keep up with the rapidly changing world."
- MEN_discredit_chinese_rule:0 "Discredit Chinese Rule"
- MEN_discredit_chinese_rule_desc:0 "The Chinese occupation of our nation is unfair and unjust it needs to be clear that our people know the truth."
- MEN_coup_d_etat:0 "Coup D'état"
- MEN_coup_d_etat_desc:0 "Now that power has been granted to the Young Princes we can excute our plan of rooting out the Chinese loyalists, Mongol or not."
- MEN_warlord_just_not_in_name:0 "A Warlord Not Just in Name"
- MEN_warlord_just_not_in_name_desc:0 "While our warlord ways are far into the past we can embrace our roots and declare a Free Mongol State."
- MEN_ally_the_germans:0 "Ally the [GER.GetAdjective]s"
- MEN_ally_the_germans_desc:0 "The [GER.GetAdjective]s are the best example of starting from a defeated nation to growing to an empire, perhaps with the German [CHI.GetNonIdeologyName] policy changing we can ally with them."
- MEN_ally_the_japanese:0 "Ally the [JAP.GetAdjective]"
- MEN_ally_the_japanese_desc:0 "The [JAP.GetAdjective] have a mutual hate for our enemys the Chinese, as well as they have major control over our politics, maybe an allience where we still keep soverngity is viable."
- MEN_border_raids:0 "Border Raids"
- MEN_border_raids_desc:0 "Border Raids are the best way to restore Mongol lands without forcing a total war apon Asia."
- MEN_form_mengjiang_free:0 "Propose the Formation of Mengjiang"
- MEN_form_mengjiang_free_desc:0 "Menjiang or Mongol Border Land is the concept of all of Inner Mongolia united under [JAP.GetAdjective] rule."
-
- ### INDUSTRY ###
+ ################### INDUSTRY ###################
 
  MEN_establish_the_bank_of_mengjiang:0 "Integrate the South Chahar Bank"
  MEN_establish_the_bank_of_mengjiang_desc:0 "Every functioning economy needs a functioning currency, establishing a national bank will help with this."
@@ -401,16 +313,38 @@
  MEN_suiyuan_industry:0 "Integrate Suiyuan Workshops"
  MEN_suiyuan_industry_desc:0 "By restoring the industral parts of suiyuan we can pupose it for state gain."
 
- ################# EVENTS ############################
+ ################### EVENTS ###################
 
  men.10.t:0 "The Zhangbei Meeting"
- men.10.d:0 "As fear rises amongst the elites, and the Japanese slowly encroach, key figures from the Mongolian Autonomous Political Committee and the Kuomintang, Nima-odsor, Ünenbayan, Serengdongrub, and Demchugdongrub, have gathered in Zhangbei to meet with the influential Jodbajab. Tensions were high as they reviewed recent developments in northern Chahar Province. Manchurian troops, under the command of Li Shouxin, had crossed into the six counties demilitarized by the Chin-Doihara Agreement, unsettling the fragile peace in the region.\n\nJodbajab revealed his response: a deployment of cavalry police to protect Chahar's vulnerable northern borders. However, as the Japanese press ever further into northern China and Manchukuo in order to expand their influence, a sense of growing uncertainty pervaded the meeting. Each leader knew that this latest breach could signal the start of something far larger, potentially drawing the region's factions and powers into an inescapable clash...\n\nAs the meeting is brought to an end, all the respective representatives prepare to leave, however, it is unclear what awaits them as they might never come back."
+ men.10.d:0 "As fear rises amongst the elites, and the Japanese slowly encroach, key figures from the Mongolian Autonomous Political Committee and the Kuomintang, Nima-odsor, Ünenbayan, Serengdongrub, and Demchugdongrub, have gathered in Zhangbei to meet with the influential Jodbajab. Tensions were high as they reviewed recent developments in northern Chahar Province. Manchurian troops, under the command of Li Shouxin, had crossed into the six counties demilitarized by the Qin-Doihara Agreement, unsettling the fragile peace in the region.\n\nJodbajab revealed his response: a deployment of cavalry police to protect Chahar's vulnerable northern borders. However, as the Japanese press ever further into northern China and Manchukuo in order to expand their influence, a sense of growing uncertainty pervaded the meeting. Each leader knew that this latest breach could signal the start of something far larger, potentially drawing the region's factions and powers into an inescapable clash...\n\nAs the meeting is brought to an end, all the respective representatives prepare to leave, however, it is unclear what awaits them as they might never come back."
  men.10.a:0 "Conclude the meeting, tomorrow is another day."
- men.10.b:0 "The meeting is unexpectedly prolonged..."
+ men.10.b:0 "Stay vigilant, the enemy lurks in the shadows..."
 
  men.11.t:0 "Nima-Odsor Assassinated"
  men.11.d:0 "Tragedy has struck the fragile clique within Inner Mongolia: Nima-odsor, a pro-Kuomintang nationalist, and one of the key figures advocating for Mongolian autonomy and opposition to the Japanese, has been assassinated. Eyewitness reports suggest that the Japanese orchestrated this brutal act, aiming to weaken the region's leadership and disrupt any unified resistance to their expanding influence. Nima-odsor's death sends a wave of shock and fear across the movement. Allies wonder who might be targeted next, while others question if the dream of an independent and unified Mongolia is slipping away. In these uncertain times, many face a stark choice: either strengthen their resolve and push back against foreign interference or risk becoming tools of a foreign empire."
  men.11.a:0 "Don't fly too close to the red sun..."
+
+ men.12.t:0 "The Kälgän Incident"
+ men.12.d:0 "As the Zhangbei meeting concluded, Nima-odsor set off on his return journey to Kälgän to resume his governmental duties. At 8:45 AM, he boarded a bus bound for Kälgän, accompanied by two guards from the Local Security Corps. However, the journey was abruptly interrupted when two Japanese officers halted the bus and demanded entry. Within mere seconds, a gunfight erupted between the Mongolian guards and the Japanese officers. One of the Mongolian guards managed to injure one of the Japanese, forcing them to retreat and flee the scene. Rumours have already arisen that this may have been an attempt on Nima-odsor's life, a fierce patriot and anti-Japanese provocateur, fortunately, he left the scene unscathed."
+ men.12.a:0 "An unexpected turn of events..."
+
+ men.13.t:0 "Aftermath of the Long Winter"
+ men.13.d:0 "The winter of 1936 was a season of unprecedented suffering, a relentless siege of ice and snow that brought Inner Mongolia and our people to their knees. For nearly three months, temperatures plummeted below -30°C, bringing daily life to a standstill. Our people, already burdened with hardships, found themselves facing starvation as livestock perished, pastures left barren. Many villages isolated by thick snowdrifts remain cut off from vital resources, and our nation's economy trembles on the brink of collapse.\n\nAs the frost begins to thaw, the toll of this ordeal has become evident. Entire communities have become destabilized, our leaders' authority has weakened, and our people grow fearful of what lies ahead. Many now call for a clear and decisive recovery plan to ensure their survival through the coming months. Some urge that we turn inward, bolstering our own resources and workforce, while others believe we must seek aid from foreign powers to secure a future. Yet, all agree on one thing: if Inner Mongolia is to endure, we must act swiftly to rebuild our fractured nation!"
+ men.13.a:0 "We shall weather this storm, together!"
+
+ men.14.t:0 "The Inner Mongolian Gambit"
+ men.14.d:0 "As the Kwantung Army tightens its grip on northern China, unease stirs among Inner Mongolian elites. Key figures from the Mongolian Autonomous Political Committee, the Kuomintang, and local leaders Nima-odsor, Ünenbayan, Serengdongrub, and Prince Demchugdongrub are set to be gathered in Zhangbei in no less than two weeks to confer with the influential Jodbajab on their future steps. The recent incursion of Manchurian troops under Li Shouxin into the demilitarized counties of Chahar Province, in violation of the Qin-Doihara Agreement, has shattered the already fragile peace in the region.\n\nAmong the voices of dissent, Nima-odsor, a prominent Mongolian nationalist and close ally of Chiang Kai-shek, has emerged as a leading opponent to Japanese interests in Inner Mongolia. Nima-odsor's influence is growing, stirring anti-Japanese sentiment that could derail our plans. The Kwantung Army has devised a covert operation to silence him, and all that remains is a final order to proceed.\n\nWill we take decisive action to secure Japan's control over Inner Mongolia, or will we allow Nima-odsor to rally his supporters and deepen the rift between the Mongolian elites and our forces?"
+ men.14.a:0 "Antagonizing the Emperor, a very foolish move!"
+ men.14.b:0 "Japan's interests lie elsewhere..."
+
+ men.15.t:0 "Nima-Odsor Assassinated"
+ men.15.d:0 "Nima-odsor, a pro-Kuomintang Mongolian nationalist, and one of the key figures advocating for Mongolian autonomy and opposition to the Japanese, has been successfuly assassinated. It has been reported to the Kwantung high command that two soldiers stopped and boarded a bus in which Nima-odsor was travelling, hoping to return to Kälgän and resume his duties there, and shot him twice. Nima-odsor's death sends a wave of shock and fear across the region, which is exactly the effect that was anticipated by the Kwantung. The Inner Mongolian elites now wonder who might be targeted next, while others question if the dream of an independent and unified Mongolia is slipping away. Perhaps they will finally realize that only unsworn loyalty to [JAP.Capital.GetCapitalVictoryPointName] is the only way they will get to keep their heads..."
+ men.15.a:0 "Don't fly too close to the red sun..."
+
+ men.16.t:0 "The Kälgän Incident"
+ men.16.d:0 "As the Zhangbei meeting concluded, Nima-odsor set off on his return journey to Kälgän to resume his governmental duties. At 8:45 AM, he boarded a bus bound for Kälgän, accompanied by two guards from the Local Security Corps. However, the journey was abruptly interrupted when two Japanese officers, ordered to assasinate Nima-odsor by the Kwantung, halted the bus and demanded entry. Within mere seconds, a gunfight erupted between the Mongolian guards and the Japanese officers. One of the Mongolian guards managed to injure one of the Japanese, forcing them to retreat and flee the scene. Rumours have already arisen regarding our involvment in what was most likel an attempt on Nima-odsor's life, a fierce patriot and anti-Japanese provocateur. Unfortunately, he left the scene unscathed."
+ men.16.a:0 "God damn those incomptent bastards!"
+ men.16.b:0 "We tried it the easy way, now it's' time for the hard way..."
 
  men.22.t:0 "[MEN.GetName] Established"
  men.22.d:0 "The [MEN.GetName] has been established by Demchugdongrub with the help of the [JAP.GetAdjective]. They have also break away from our control. Traitors!"
@@ -491,52 +425,15 @@
  men.40.t:0 "No Clear Victor at Suiyuan"
  men.40.desc:0 "With Battles Going Both Ways, Both Our and [SHX.GetName] Forces Have Retreated and No Clear Victor Can be Decided"
  men.40.a:0 "Troubling."
- ################# TOOLTIPS ###########################
 
- MEN_Mini_Game_Unlock_Jap_tt:0 "§YUnlocks Decisions to Strangthin Our Ties With [JAP.GetNonIdeologyName]§!"
- reaffirmed_loyality_to_chi_tt:0 "Has Reaffirmed Loyality to the Central Goverment"
- MEN_inforce_our_freedom_tt:0 "Has Inforced Our Independence"
+ ################### DECISIONS ###################
 
- MEN_has_made_mil_gov_tt:0 "Has Formed the Mongol Military government"
+ MEN_inner_mongolian_gambit:0 "Inner Mongolian Gambit"
+ MEN_inner_mongolian_gambit_desc:0 "With the Kwantung Army steadily expanding its hold over northern China, and the Chinese government too weak to resist Japan's growing influence, Inner Mongolia stands isolated and defenseless, a ripe opportunity awaiting those bold enough to seize it. Our lands possess various valuable resources desired by the Japanese, and our strategic location would provide for a critical foothold against the Chinese. However, for now, our future remains uncertain...."
 
- has_formed_inner_mongolia_tt:0 "§YHas Claimed the Great Inner Mongol Area§!"
+ MEN_imminent_japanese_invasion:0 "Imminent Japanese Invasion"
 
- MEN_Mini_Game_Unlock_chi_tt:0 "§YUnlocks decisions to reduce internal loyality to [JAP.GetNonIdeologyName]§!."
-
- MEN_nima_odsor_kill_tt:0 "§YTaking this focus will prevent Nima Ordsor From being assassinated.§!"
-
- MEN_nimaordsor_not_dead_tt:0 "Nima Ordsor has not been assassinated."
-
- MEN_nima_odsor_dies_tt:0 "§RNima Ordsor Dies§!"
-
- MEN_new_life_tt:0 "§RSuch rapid changes in our ideals will prevent us from fully embracing the New Life Movement.§!"
-
- MEN_new_life_democratic_tt:0 "Has Not Reformed Our government Towards a Constitutional government."
-
- MEN_hostile_western_tt:0 "Gains §RHostile Status§! With Any Nation That Has Colonized [CHI.GetNonIdeologyName]."
-
- MEN_has_united_mongolia_tt:0 "§YHas Reunified Mongolia§!"
-
- MEN_ulanhu_returned_tt:0 "§Y Ulanhu Has Returned From Mongolia§!"
-
- has_formed_inner_mongolia_autonomous_tt:0 "§Y[PRC.GetNameDefCap]§! has agreed to form the autonomous region."
- 
- MEN_chinese_hostile_tt:0 "§R [CHI.GetNonIdeologyName] May React Hostile To This Action§!"
-
- MEN_jap_investment_tt:0 "§RIf You Ask For Investments Too Often Your Autonomy Will Be Greatly Inpacted§!"
-
- MEN_Ulanhu_BB_tt:0 "Will Gain A Super Heavy Batttle Ship At 99% Completion"
-
- MEN_prince_demchugdongrub_carrier:0 "Will Gain An Aircraft Carrier At 99% Completion"
-
- has_formed_greater_mongol_khanite_tt:0 "§YHas Reformed The Greater Mongol Khanite§!"
-
-
-
- 
-
-
- ############## IDEAS #############################
+ ################### IDEAS ###################
 
  MEN_kwantungs_invisible_hand:0 "Kwantung's Invisible Hand"
  MEN_kwantungs_invisible_hand_desc:0 "The Kwantung's influence weaves through every facet of our military and governance, binding us to Japan's strategic designs. Through advisors and covert control, the Kwantung seeks to transform our nation into a puppet state, ensuring its forces, economy, and leadership align with Japanese interests. The military hierarchy is compromised, with Japanese officers directing from the shadows, while local leaders are maneuvered into roles that serve Japan's expansionist ambitions in East Asia. Despite our country's autonomy on paper, the Kwantung's grip remains firm, an unseen force dictating its path forward."
@@ -550,19 +447,13 @@
  MEN_the_long_winter:0 "The Long Winter"
  MEN_the_long_winter_desc:0 "The winter of 1936 has been unlike any other, a season of merciless cold, with temperatures plummeting below -30°C for nearly three relentless months, making our people struggle desperately to survive; livestock starve while pastures are left barren, fields lay buried under unyielding snow, and transportation has all but come to a full stop. For those unprepared, survival has become nearly impossible, greatly destabilizing our political and economical tranquility, making people increasingly more anxious about the future... As we face widespread hardship, a clear path to recovery must be found, even if it means seeking aid from foreign powers to rebuild and endure."
 
+ MEN_aftermath_of_the_long_winter:0 "Aftermath of the Long Winter"
+
  MEN_fuel_for_the_war_machine_idea:0 "Fuel for the War Machine"
  MEN_fuel_for_the_war_machine_idea_desc:0 "Our resources should be the backbone of Japan's ambitions in East Asia, with our lands converted into vast extraction sites to feed their insatiable war economy. Minerals, metals, and agricultural yields are siphoned off, leaving little for our own development. As our people labor to fulfill Japanese quotas, our economy grows ever more dependent on their demands, locking us into a cycle of servitude."
 
  MEN_rapid_industrialization:0 "Rapid Industrialization"
  MEN_rapid_industrialization_desc:0 "Under the pressure of foreign powers and in a bid to modernize our economy, our nation has embarked on an ambitious program of rapid industrial expansion. New factories and infrastructure projects spring up overnight, as our limited resources are directed towards swift growth. While this industrial boom strains our people and resources, it promises to transform our country from a backwater into a vital contributor to regional production."
-
- MEN_increasing_jap_influence:0 "Increasing [JAP.GetAdjective] Influence"
-
- MEN_mon_mil_gov_made:0 "Mongol Military Goverment"
-
- MEN_Chairman_Yondonwangchug:0 "Chairman Yondonwangchug"
-
- MEN_strike_our_old_oppressers:0 "Strike Our Old Oppressers"
 
  MEN_an_independent_army:0 "The Inner Mongolian Army"
 
@@ -582,73 +473,17 @@
 
  MEN_japanese_tank_designs:0 "Japanese Armor Designs"
 
- MEN_Embrasing_Our_Heritage:0 "Embracing Our Heritage"
+ MEN_growing_revolutionary_sentiment:0 "Growing Revolutionary Sentiment"
 
- MEN_weakened_jap_influence:0 "Weakened [JAP.GetAdjective] Influence"
+ MEN_empowered_buddhists:0 "Empowered Buddhist Identity"
 
- MEN_military_orgs_banned:0 "Military Organizations Banned"
+ MEN_anti_japanese_intelligence:0 "Anti-Japanese Intelligence"
 
- MEN_anti_japanese_stratagems:0 "Anti-[JAP.GetAdjective] Stratagems"
+ MEN_caught_off_guard:0 "Surprise Attack"
 
- MEN_the_three_principles:0 "The Three Principles"
+ MEN_harmony_of_the_five_races:0 "Harmony of the Five Races"
 
- MEN_the_three_principles_1:0 "The Three Principles"
-
- MEN_the_three_principles_2:0 "The Three Principles"
-
- MEN_the_new_life_movement:0 "The New Life Movement"
-
- MEN_the_new_life_movement_1:0 "The New Life Movement"
-
- MEN_the_new_life_movement_2:0 "The New Life Movement"
-  
- MEN_the_new_life_movement_3:0 "The New Life Movement"
-
- MEN_the_new_life_movement_4:0 "The New Life Movement"
-
- MEN_the_new_life_movement_5:0 "The New Life Movement"
-
- MEN_tax_reform:0 "Tax Reform"
-
- MEN_invited_civllian_companys:0 "Invited Civillian Companys"
-
- MEN_constitutional_government:0 "Constitutional government"
-
- MEN_the_golden_decade:0 "The Golden Decade"
-
- MEN_end_the_century_of_humiliation:0 "End the Century of Humiliation"
-
- MEN_chinese_triumph:0 "[CHI.GetAdjective] Triumph"
-
- MEN_payment_for_suiyuan_men:0 "Payment for Suiyuan"
-
- MEN_payment_for_suiyuan:0 "Payment for Suiyuan"
-
- MEN_increased_presence_at_the_international:0 "Increased Presence At the 3rd International"
-
- MEN_communist_partitan_millitas:0 "Communist Partitan Millitas"
-
- MEN_funds_for_chinese_communists:0 "Funds For [CHI.GetAdjective] Communists"
-
- MEN_limited_nobility_power:0 "Limited Nobility"
-
- MEN_a_communist_beacon_in_china:0 "A New Communist Beacon In China"
-
- MEN_increased_cooperation_with_the_united_front:0 "Increased Cooperation With the United Front"
-
- MEN_assist_in_the_great_patriotic_war:0 "Assisting In the Great Patriotic War"
-
- MEN_the_great_inner_mongol_army:0 "The Great Inner Mongol Army"
-
- MEN_the_bank_of_mengjiang:0 "South Chahar Bank"
-
- MEN_the_bank_of_mengjiang_2:0 "The Bank of mengjiang"
-
- MEN_the_bank_of_mengjiang_3:0 "The Bank of mengjiang"
-
- MEN_limited_jap_influence:0 "Limited [JAP.GetAdjective] Influence"
-
- ################## Decisions ######################
+ ################### DECISIONS ###################
 
  MEN_the_suiyuan_campaign:0 "The Suiyuan Campaign"
  MEN_esablish_the_mongol_military_government:0 "Esablish the Mongol Military Goverment"
@@ -662,7 +497,7 @@
 
  MEN_the_zhangbei_meeting:0 "The Zhangbei Meeting"
 
- ################## Miscellaneous ##################
+ ################### MISCELLANEOUS ###################
 
  MEN_spirit_of_genghis:0 "Spirit of Genghis"
  MEN_anti_japanese_nationalist:0 "Anti-Japanese Nationalist"
@@ -676,9 +511,21 @@
 
  MEN_rapid_industrialization_timer_tt:0 "[?MEN_rapid_industrialization_timer:days_left|Y0]"
  MEN_remove_industrialization:0 "Will be §Rpermanently removed§! in §Y[GetMenIndustrializationTimer]§! days if no §Yindustrial focus§! is §Ystarted§!"
+ MEN_unforseen_consequences:0 "This might §Ylead§! to §Runfroseen consequences§!."
  MEN_prevent_destabilization:0 "Will §Yprevent§! the §YJapanese§! from further §Rdestabillizing§! our §Ygovernment§!."
  MEN_nima_odsor_assassinated:0 "§YNima-odsor§! has been §Yassassinated§!."
+ MEN_nima_odsor_not_assassinated:0 "§YNima-odsor's§! assassination has been §Yfoiled§!."
  MEN_remove_mongol_raids:0 "Will be §Rremoved§! once we §Yachieve 3 victories or stalemates§! against §YMongolian raiders§! or §YMongolia§! has §Yopinion§! of us over or equal to §Y60§!."
  MEN_masters_of_the_steppe_tt:0 "Enables §HSteppe Warfare§!:\n    §HCavalry§!:\n        §HPlains§!:\n            Attack: §G+10%§!\n            Movement: §G+10%§!\n        §HHills§!:\n            Attack: §G+5%§!\n            Movement: §G+5%§!"
  MEN_create_han_army:0 "Create §Y2 Dà Hàn Zhìyuàn Lü§! divisions in §Y[THIS.GetName]§!."
  MEN_suiyuan_ended:0 "The §YSuiyuan Campaign§! has ended."
+ MEN_effects_if_border_conflict_is_won:0 "\n§YEffects if border war is won:§!"
+ MEN_effects_if_border_conflict_is_lost:0 "§YEffects if border war is lost:§!"
+ MEN_every_mongol_state:0 "§YEvery Mongol core state controlled by the Japanese or Manchurians:§!"
+ MEN_create_security_army:0 "Create a §YMěngqì Ānbao Túan§! division in §Y[THIS.GetName]§!."
+ MEN_effect_nima_odsor_assassination:0 "We will §Yattempt§! to §Rassassinate§! §YNima-odsor§!."
+ MEN_effects_if_assassination_successful:0 "§YEffects if the assassination is successful:§!"
+ MEN_effects_if_assassination_unsuccessful:0 "§YEffects if the assassination is unsuccessful:§!"
+ MEN_possible_event_effects:0 "Possible Reward(s) from §YEvent§!:"
+ MEN_alternative_event_effects:0 "Alternative Reward(s) from §YEvent§!:"
+ MEN_invasion_countdown_start:0 "We will §Ybegin preparations§! for an §Rinvasion§! of §YInner Mongolia§!."

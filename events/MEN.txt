@@ -1,7 +1,7 @@
 ﻿
 add_namespace = men
 
-country_event = {
+country_event = { # The Zhangbei Meeting
 	id = men.10
 	title = men.10.t
 	desc = men.10.d
@@ -14,12 +14,34 @@ country_event = {
 	
 	option = {
 		name = men.10.a
-		add_political_power = 15
-		add_stability = 0.03
+		if = {
+			limit = {
+				has_country_flag = MEN_japanese_gambit
+			}
+			add_political_power = 15
+			add_stability = 0.03
+			custom_effect_tooltip = MEN_unforseen_consequences
+			hidden_effect = {
+				country_event = { id = men.12 hours = 12 }
+			}
+		}
+		else = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_stability = 0.10
+			effect_tooltip = {
+				unlock_national_focus = MEN_petition_nima-odsor_to_stay_in_shangbei
+			}
+		}
 	}
 
 	option = {
 		name = men.10.b
+		trigger = {
+			has_country_flag = MEN_japanese_gambit
+		}
 		add_political_power = -35
 		add_popularity = {
 			ideology = neutrality
@@ -27,10 +49,13 @@ country_event = {
 		}
 		add_stability = -0.10
 		custom_effect_tooltip = MEN_prevent_destabilization
+		hidden_effect = {
+			country_event = { id = men.11 hours = 12 }
+		}
 	}
 }
 
-country_event = {
+country_event = { # Nima-odsor Assassinated
 	id = men.11
 	title = men.11.t
 	desc = men.11.d
@@ -51,11 +76,255 @@ country_event = {
 			ideology = democratic
 			popularity = -0.10
 		}
-		retire_character = MEN_nima_odsor
+
 		effect_tooltip = {
 			unlock_national_focus = MEN_strengthen_ties_with_japan
 		}
+		custom_effect_tooltip = r56_newline
+		retire_character = MEN_nima_odsor
+		effect_tooltip = {
+			deactivate_advisor = MEN_nima_odsor
+		}
 		set_country_flag = MEN_nima_odsor_assassinated
+	}
+}
+
+country_event = { # Nima-odsor Incident
+	id = men.12
+	title = men.12.t
+	desc = men.12.d
+	
+	picture = GFX_report_event_generic_destroyed_vehicles
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = men.12.a
+		add_war_support = 0.05
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		add_stability = -0.05
+		effect_tooltip = {
+			unlock_national_focus = MEN_petition_nima-odsor_to_stay_in_shangbei
+		}
+		add_opinion_modifier = {
+			target = JAP
+			modifier = small_decrease
+		}
+		set_country_flag = MEN_nima_odsor_not_assassinated
+	}
+}
+
+country_event = { # The Long Winter
+	id = men.13
+	title = men.13.t
+	desc = men.13.d
+	
+	picture = GFX_report_event_generic_destroyed_vehicles
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = men.13.a
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = MEN_the_long_winter
+				add_idea = MEN_aftermath_of_the_long_winter
+			}
+		}
+	}
+}
+
+country_event = { # Assassination Event for Japan
+	id = men.14
+	title = men.14.t
+	desc = men.14.d
+	
+	picture = GFX_report_event_japanese_transport_soldiers
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = men.14.a
+		custom_effect_tooltip = MEN_effect_nima_odsor_assassination
+		custom_effect_tooltip = r56_newline
+		custom_effect_tooltip = MEN_effects_if_assassination_successful
+		effect_tooltip = {
+			add_war_support = 0.03
+		}
+		MEN = {
+			effect_tooltip = {
+				add_stability = -0.10
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.05
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = -0.10
+				}
+		
+				effect_tooltip = {
+					unlock_national_focus = MEN_strengthen_ties_with_japan
+				}
+				custom_effect_tooltip = r56_newline
+				retire_character = MEN_nima_odsor
+				effect_tooltip = {
+					deactivate_advisor = MEN_nima_odsor
+				}
+			}
+		}
+		custom_effect_tooltip = r56_newline
+		custom_effect_tooltip = MEN_effects_if_assassination_unsuccessful
+		effect_tooltip = {
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.01
+			}
+		}
+		MEN = {
+			effect_tooltip = {
+				add_war_support = 0.05
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+				add_stability = -0.05
+				effect_tooltip = {
+					unlock_national_focus = MEN_petition_nima-odsor_to_stay_in_shangbei
+				}
+				add_opinion_modifier = {
+					target = JAP
+					modifier = small_decrease
+				}
+			}
+		}
+		MEN = {
+			set_country_flag = MEN_japanese_gambit
+		}
+	}
+
+	option = {
+		name = men.14.b
+		add_political_power = 5
+		MEN = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_stability = 0.10
+			effect_tooltip = {
+				unlock_national_focus = MEN_petition_nima-odsor_to_stay_in_shangbei
+			}
+		}
+	}
+}
+
+country_event = { # Successful Assassination Event for Japan
+	id = men.15
+	title = men.15.t
+	desc = men.15.d
+	
+	picture = GFX_report_event_generic_destroyed_vehicles
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = men.15.a
+		add_war_support = 0.03
+		MEN = {
+			effect_tooltip = {
+				add_stability = -0.10
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.05
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = -0.10
+				}
+		
+				effect_tooltip = {
+					unlock_national_focus = MEN_strengthen_ties_with_japan
+				}
+				custom_effect_tooltip = r56_newline
+				retire_character = MEN_nima_odsor
+				effect_tooltip = {
+					deactivate_advisor = MEN_nima_odsor
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Unsuccessful Assassination Event for Japan
+	id = men.16
+	title = men.16.t
+	desc = men.16.d
+	
+	picture = GFX_report_event_japanese_soldiers_01
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = men.16.a
+		add_popularity = {
+			ideology = ROOT
+			popularity = -0.01
+		}
+		MEN = {
+			effect_tooltip = {
+				add_war_support = 0.05
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+				add_stability = -0.05
+				effect_tooltip = {
+					unlock_national_focus = MEN_petition_nima-odsor_to_stay_in_shangbei
+				}
+				add_opinion_modifier = {
+					target = JAP
+					modifier = small_decrease
+				}
+			}
+		}
+	}
+
+	option = {
+		name = men.16.b
+		add_popularity = {
+			ideology = ROOT
+			popularity = 0.01
+		}
+		add_war_support = 0.03
+		custom_effect_tooltip = MEN_invasion_countdown_start
+		custom_effect_tooltip = r56_newline
+		MEN = {
+			effect_tooltip = {
+				activate_mission = MEN_imminent_japanese_invasion
+				add_war_support = 0.05
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+				add_stability = -0.05
+				effect_tooltip = {
+					unlock_national_focus = MEN_petition_nima-odsor_to_stay_in_shangbei
+				}
+				add_opinion_modifier = {
+					target = JAP
+					modifier = small_decrease
+				}
+			}
+		}
 	}
 }
 
