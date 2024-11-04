@@ -2449,7 +2449,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ politically_connected }
+			traits={ old_guard politically_connected }
 			skill=3
 			attack_skill=2
 			defense_skill=3
