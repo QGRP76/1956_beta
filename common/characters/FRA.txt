@@ -562,7 +562,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ trait_cautious }
+			traits={ politically_connected }
 			skill=2
 			attack_skill=2
 			defense_skill=3
@@ -584,11 +584,11 @@ characters={
 		}
 		corps_commander={
 			traits={ trait_cautious }
-			skill=3
-			attack_skill=3
+			skill=2
+			attack_skill=1
 			defense_skill=2
-			planning_skill=2
-			logistics_skill=3
+			planning_skill=3
+			logistics_skill=2
 			legacy_id=1
 		}
 	}
@@ -605,11 +605,11 @@ characters={
 		}
 		corps_commander={
 			traits={ trait_cautious }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=2
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=1
 			legacy_id=1
 		}
 	}
@@ -2448,8 +2448,8 @@ characters={
 				large="gfx/leaders/FRA/r56_portrait_FRA_Victor_Henri_Schweisguth.dds"
 			}
 		}
-		field_marshal={
-			traits={ politically_connected defensive_doctrine }
+		corps_commander={
+			traits={ politically_connected }
 			skill=3
 			attack_skill=2
 			defense_skill=3
