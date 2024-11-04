@@ -1599,7 +1599,8 @@ characters={
 		name=HOL_hugo_lawick
 		portraits={
 			army={
-				large="GFX_idea_generic_army_europe_6"
+				large="GFX_Portrait_Europe_Generic_land_new_4"
+				small="GFX_idea_generic_army_europe_6"
 			}
 		}		
 		advisor={
