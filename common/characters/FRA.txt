@@ -454,7 +454,7 @@ characters={
 		}
 		advisor={
 			slot = high_command
-			idea_token = FRA_louis_bourguignon
+			idea_token = louis_bourguignon
 			ledger = army
 			allowed = {
 				original_tag = FRA
@@ -785,7 +785,7 @@ characters={
 		}
 		advisor={
 			slot = high_command
-			idea_token = FRA_georges_robert
+			idea_token = georges_robert
 			ledger = navy
 			allowed = {
 				original_tag = FRA
