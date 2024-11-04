@@ -625,8 +625,8 @@ characters={
 		name="Jules Le Bigot"
 		portraits={
 			army={
-				large="GFX_Portrait_France_KR_Generic_navy_1"
-				small="GFX_Portrait_France_KR_Generic_navy_1_small"
+				large="GFX_Portrait_France_KR_Generic_navy_3"
+				small="GFX_Portrait_France_KR_Generic_navy_3_small"
 			}
 		}
 		navy_leader={
@@ -636,6 +636,77 @@ characters={
 			defense_skill=1
 			maneuvering_skill=2
 			coordination_skill=2
+			legacy_id=-1
+		}
+	}
+
+	FRA_georges_robert={
+		name="Georges Robert"
+		portraits={
+			army={
+				large="GFX_Portrait_France_KR_Generic_navy_1"
+				small="GFX_Portrait_France_KR_Generic_navy_1_small"
+			}
+		}
+		navy_leader={
+			traits={  }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			maneuvering_skill=3
+			coordination_skill=2
+			legacy_id=-1
+		}
+		advisor={
+			slot = high_command
+			idea_token = FRA_georges_robert
+			ledger = navy
+			allowed = {
+				original_tag = FRA
+			}
+			
+			traits = { navy_fleet_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	FRA_henri_blehaut={
+		name="Henri Bléhaut"
+		portraits={
+			army={
+				large="GFX_Portrait_France_KR_Generic_navy_2"
+				small="GFX_Portrait_France_KR_Generic_navy_2_small"
+			}
+		}
+		navy_leader={
+			traits={  }
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			maneuvering_skill=1
+			coordination_skill=2
+			legacy_id=-1
+		}
+	}
+
+	FRA_mercel_gensoul={
+		name="Marcel Gensoul"
+		portraits={
+			army={
+				large="GFX_Portrait_Europe_Generic_navy_new_1"
+				small="GFX_Portrait_France_KR_Generic_navy_3_small"
+			}
+		}
+		navy_leader={
+			traits={  }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			maneuvering_skill=2
+			coordination_skill=3
 			legacy_id=-1
 		}
 	}
