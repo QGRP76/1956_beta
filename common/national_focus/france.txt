@@ -10334,6 +10334,16 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			add_corps_commander_role={
+				character = FRA_andre_gaston_pretelat
+				traits={ inflexible_strategist infantry_leader }
+				skill=3
+				attack_skill=2
+				defense_skill=3
+				planning_skill=2
+				logistics_skill=3
+				legacy_id=-1
+			}
 			add_war_support = 0.05
 			remove_ideas = FRA_victors_of_wwi
 			add_doctrine_cost_reduction = {

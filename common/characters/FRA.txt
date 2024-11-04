@@ -488,7 +488,7 @@ characters={
 			legacy_id=813
 		}
 	}
-	FRA_ander_gaston_pretelat={
+	FRA_andre_gaston_pretelat={
 		name="André-Gaston Pretelat"
 		portraits={
 			army={
@@ -497,36 +497,6 @@ characters={
 			army={
 				large="GFX_Portrait_France_KR_Generic_land_2"
 			}
-		}
-		corps_commander={
-			traits={ old_guard trait_cautious }
-			skill=3
-			attack_skill=2
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=1
-		}
-	}
-
-	FRA_pierre_hering={
-		name="Pierre Héring"
-		portraits={
-			army={
-				small="GFX_Portrait_France_KR_Generic_land_1_small"
-			}
-			army={
-				large="GFX_Portrait_France_KR_Generic_land_1"
-			}
-		}
-		corps_commander={
-			traits={ old_guard trait_cautious }
-			skill=3
-			attack_skill=2
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=1
-			legacy_id=1
 		}
 	}
 
@@ -547,70 +517,7 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=1
-		}
-	}
-
-	FRA_marcel_garchery={
-		name="Marcel Garchery"
-		portraits={
-			army={
-				small="GFX_Portrait_France_KR_Generic_land_3_small"
-			}
-			army={
-				large="GFX_Portrait_France_KR_Generic_land_3"
-			}
-		}
-		corps_commander={
-			traits={ old_guard politically_connected }
-			skill=2
-			attack_skill=2
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=1
-			legacy_id=1
-		}
-	}
-
-	FRA_edouard_requin={
-		name="Édouard Réquin"
-		portraits={
-			army={
-				small="GFX_Portrait_France_KR_Generic_land_4_small"
-			}
-			army={
-				large="GFX_Portrait_France_KR_Generic_land_4"
-			}
-		}
-		corps_commander={
-			traits={ old_guard trait_cautious }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=1
-		}
-	}
-
-	FRA_emile_laure={
-		name="Émile Laure"
-		portraits={
-			army={
-				small="GFX_Portrait_France_KR_Generic_land_4_small"
-			}
-			army={
-				large="gfx/leaders/FRA/Portrait_France_Generic_land_1.dds"
-			}
-		}
-		corps_commander={
-			traits={ old_guard trait_cautious }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=1
-			legacy_id=1
+			legacy_id=-1
 		}
 	}
 
@@ -746,27 +653,7 @@ characters={
 		}
 	}
 
-
-	FRA_jules_le_bigot={
-		name="Jules Le Bigot"
-		portraits={
-			army={
-				large="GFX_Portrait_France_KR_Generic_navy_3"
-				small="GFX_Portrait_France_KR_Generic_navy_3_small"
-			}
-		}
-		navy_leader={
-			traits={  }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			maneuvering_skill=2
-			coordination_skill=2
-			legacy_id=-1
-		}
-	}
-
-	FRA_georges_robert={
+	FRA_georges_robert={#had command over the French fleet in the Caribbean and distanced himself from Vichy but never joined Free France, resigning instead.
 		name="Georges Robert"
 		portraits={
 			army={
@@ -775,13 +662,18 @@ characters={
 			}
 		}
 		navy_leader={
-			traits={  }
+			traits={ aviation_enthusiast }
 			skill=3
 			attack_skill=3
 			defense_skill=2
 			maneuvering_skill=3
 			coordination_skill=2
 			legacy_id=-1
+			visible = {
+                NOT = {
+					has_country_flag = become_vichy
+                }
+			}
 		}
 		advisor={
 			slot = high_command
@@ -796,6 +688,11 @@ characters={
 			ai_will_do = {
 				factor = 1
 			}
+			available = {
+                NOT = {
+					has_country_flag = become_vichy
+                }
+			}
 		}
 	}
 
@@ -808,32 +705,18 @@ characters={
 			}
 		}
 		navy_leader={
-			traits={  }
+			traits={ fleet_protector }
 			skill=2
 			attack_skill=1
 			defense_skill=3
 			maneuvering_skill=1
 			coordination_skill=2
 			legacy_id=-1
-		}
-	}
-
-	FRA_mercel_gensoul={
-		name="Marcel Gensoul"
-		portraits={
-			army={
-				large="GFX_Portrait_Europe_Generic_navy_new_1"
-				small="GFX_Portrait_France_KR_Generic_navy_3_small"
+			visible = {
+                NOT = {
+					has_country_flag = become_vichy
+                }
 			}
-		}
-		navy_leader={
-			traits={  }
-			skill=3
-			attack_skill=2
-			defense_skill=3
-			maneuvering_skill=2
-			coordination_skill=3
-			legacy_id=-1
 		}
 	}
 
@@ -846,14 +729,14 @@ characters={
 			}
 		}
 		advisor={
-			slot = high_command
+			slot = navy_chief
 			idea_token = jean_de_laborde
 			ledger = navy
 			allowed = {
 				original_tag = FRA
 			}
 			traits = {
-				navy_capital_ship_1
+				navy_chief_naval_aviation_1
 			}
 			cost =  50
 			ai_will_do = {
@@ -2503,24 +2386,34 @@ characters={
 		}
 	}
 
-	FRA_marcel_gensoul={
+	FRA_marcel_gensoul={#commanded the French fleet at Mers El-Kebir he refused the British demands, got his fleet sank and then never commanded a fleet again. add more complex options if we do have a version of the battle in the game
 		name = "Marcel Gensoul"
 		portraits={
 			civilian={
+				large="GFX_Portrait_Europe_Generic_navy_new_1"
 				small=GFX_idea_FRA_generic_navy_3
 			}
 		}
 		advisor={
-			slot = navy_chief
+			slot = high_command
 			idea_token = marcel_gensoul
 			allowed = {
 				original_tag = FRA
 			}
 			
-			traits = { navy_chief_naval_aviation_1 }
+			traits = { navy_capital_ship_1 }
 			cost =  50
 			ai_will_do = {
 				factor = 1
+			}
+			navy_leader={
+				traits={ austic_personality gunnery_expert }
+				skill=3
+				attack_skill=2
+				defense_skill=3
+				maneuvering_skill=2
+				coordination_skill=3
+				legacy_id=-1
 			}
 		}
 	}
