@@ -152,6 +152,7 @@ recruit_character = FRA_eugene_bridoux
 recruit_character = FRA_marie_pierre_koenig
 recruit_character = FRA_alphonse_juin				#starts empty, gains command role through event
 recruit_character = FRA_jean_de_lattre_de_tassigny	#starts empty, gains command role through event
+recruit_character = FRA_jules_le_bigot
 
 set_research_slots = 4
 set_stability = 0.5

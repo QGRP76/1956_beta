@@ -619,6 +619,27 @@ characters={
 			legacy_id=-1
 		}
 	}
+
+
+	FRA_jules_le_bigot={
+		name="Jules Le Bigot"
+		portraits={
+			army={
+				large="GFX_Portrait_France_KR_Generic_navy_1"
+				small="GFX_Portrait_France_KR_Generic_navy_1_small"
+			}
+		}
+		navy_leader={
+			traits={  }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=-1
+		}
+	}
+
 	FRA_jean_de_laborde={
 		name=FRA_jean_de_laborde
 		portraits={
@@ -692,20 +713,6 @@ characters={
 			}
 		}
 		advisor={
-			slot = high_command
-			idea_token = emile_muselier
-			ledger = navy
-			allowed = {
-				original_tag = FRA
-			}
-			
-			traits = { navy_fleet_logistics_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		advisor={
 			slot = navy_chief
 			idea_token = emile_muselier
 			ledger = navy
@@ -723,8 +730,8 @@ characters={
 			traits={ gentlemanly aviation_enthusiast }
 			skill=2
 			attack_skill=2
-			defense_skill=1
-			maneuvering_skill=1
+			defense_skill=2
+			maneuvering_skill=2
 			coordination_skill=1
 			legacy_id=-1
 		}
