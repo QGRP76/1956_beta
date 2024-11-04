@@ -445,16 +445,16 @@ characters={
 		}
 	}
 
-	FRA_frederic_gaston={
-		name = "Frederic Gaston"
+	FRA_louis_bourguignon={
+		name = "Louis Bourguignon"
 		portraits={
 			civilian={
-				small="GFX_idea_generic_army_south_america_4"
+				small="GFX_Portrait_France_KR_Generic_land_5_small"
 			}
 		}
 		advisor={
 			slot = high_command
-			idea_token = frederic_gaston
+			idea_token = FRA_louis_bourguignon
 			ledger = army
 			allowed = {
 				original_tag = FRA
@@ -488,6 +488,132 @@ characters={
 			legacy_id=813
 		}
 	}
+	FRA_ander_gaston_pretelat={
+		name="André-Gaston Pretelat"
+		portraits={
+			army={
+				small="GFX_Portrait_France_KR_Generic_land_2_small"
+			}
+			army={
+				large="GFX_Portrait_France_KR_Generic_land_2"
+			}
+		}
+		corps_commander={
+			traits={ trait_cautious }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=1
+		}
+	}
+
+	FRA_pierre_hering={
+		name="Pierre Héring"
+		portraits={
+			army={
+				small="GFX_Portrait_France_KR_Generic_land_1_small"
+			}
+			army={
+				large="GFX_Portrait_France_KR_Generic_land_1"
+			}
+		}
+		corps_commander={
+			traits={ trait_cautious }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=1
+			legacy_id=1
+		}
+	}
+
+	FRA_robert_touchon={
+		name="Robert Touchon"
+		portraits={
+			army={
+				small="GFX_Portrait_France_KR_Generic_land_5_small"
+			}
+			army={
+				large="GFX_Portrait_France_KR_Generic_land_5"
+			}
+		}
+		corps_commander={
+			traits={ trait_mountaineer }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=1
+		}
+	}
+
+	FRA_marcel_garchery={
+		name="Marcel Garchery"
+		portraits={
+			army={
+				small="GFX_Portrait_France_KR_Generic_land_3_small"
+			}
+			army={
+				large="GFX_Portrait_France_KR_Generic_land_3"
+			}
+		}
+		corps_commander={
+			traits={ trait_cautious }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=1
+		}
+	}
+
+	FRA_edouard_requin={
+		name="Édouard Réquin"
+		portraits={
+			army={
+				small="GFX_Portrait_France_KR_Generic_land_4_small"
+			}
+			army={
+				large="GFX_Portrait_France_KR_Generic_land_4"
+			}
+		}
+		corps_commander={
+			traits={ trait_cautious }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=1
+		}
+	}
+
+	FRA_emile_laure={
+		name="Émile Laure"
+		portraits={
+			army={
+				small="GFX_Portrait_France_KR_Generic_land_4_small"
+			}
+			army={
+				large="Portrait_France_Generic_land_1.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_cautious }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=1
+		}
+	}
+
 	FRA_jeanmarie_charles_abrial={
 		name="Jean-Marie Charles Abrial"
 		portraits={
@@ -516,10 +642,10 @@ characters={
 		navy_leader={
 			traits={ chief_engineer superior_tactician }
 			skill=4
-			attack_skill=3
-			defense_skill=4
+			attack_skill=2
+			defense_skill=3
 			maneuvering_skill=4
-			coordination_skill=3
+			coordination_skill=2
 			legacy_id=-1
 		}
 	}
