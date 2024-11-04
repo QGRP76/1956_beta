@@ -600,7 +600,7 @@ characters={
 				small="GFX_Portrait_France_KR_Generic_land_4_small"
 			}
 			army={
-				large="Portrait_France_Generic_land_1.dds"
+				large="gfx/leaders/FRA/Portrait_France_Generic_land_1.dds"
 			}
 		}
 		corps_commander={
