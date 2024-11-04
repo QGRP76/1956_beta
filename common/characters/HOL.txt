@@ -1612,6 +1612,15 @@ characters={
 			}
 			traits = { military_theorist }
 		}
+		corps_commander={
+			traits={ cavalry_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
 	}
 	HOL_mattheus_de_bruyne={	#marine commando
 		name=HOL_mattheus_de_bruyne
