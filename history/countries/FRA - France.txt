@@ -1436,6 +1436,10 @@ if = {
 		days = 525
 		random_days = 15
 	}
+	country_event = {	#china proposes north indochina trade
+		id = cold_war.9
+		days = 30
+	}
 
 	set_country_flag = free_france	#unlock Free France advisors
 

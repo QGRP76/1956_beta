@@ -261,62 +261,6 @@ country_event = {
     }
 }
 
-country_event = {   #china ultimatum to France
-    id = cold_war.9
-    picture = GFX_report_event_generic_conference
-	title = cold_war.9.t
-	desc = cold_war.9.d
-    fire_only_once = yes
-    
-    trigger = {
-        original_tag = FRA
-        NOT = {
-            CHI = {
-                has_war_with = ROOT
-            }
-        }
-        OR = {
-            num_divisions_in_states = {
-                count > 2
-                states = { 286 741 927 }
-            }
-            VIN = {
-                has_capitulated = yes
-            }
-        }
-    }
-
-    option = {
-        name = cold_war.9.a
-        FRI = {
-            transfer_state = 670
-            transfer_state = 671
-            transfer_state = 924
-            transfer_state = 928
-        }
-        CHI = {
-            transfer_state = 728
-        }
-        hidden_effect = {
-            country_event = {
-                id = cold_war.10
-                hours = 36
-            }
-        }
-    }
-
-    option = {
-        ai_chance = { base = 0 }
-        name = cold_war.9.b
-        create_wargoal = {
-            type = take_state_focus
-            target = CHI
-            generator = { 670 671 924 928 }
-            expire = 700
-        }
-    }
-}
-
 country_event = {   #Laos uprising
     id = cold_war.10
     picture = GFX_report_event_generic_conference
