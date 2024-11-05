@@ -2723,6 +2723,11 @@ country_event = {	#Portuguese General Election
 			election_frequency = 48
 		}
 		custom_effect_tooltip = CHL_skip_one_line_tt
+		add_popularity = {
+			ideology = communism
+			popularity = 0.15
+		}
+		custom_effect_tooltip = CHL_skip_one_line_tt
 		add_country_leader_role = {
 			character = POR_bento_goncalves
 			promote_leader = yes

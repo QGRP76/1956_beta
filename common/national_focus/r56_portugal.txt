@@ -3097,6 +3097,7 @@ focus_tree = {
 			else = {
 				swap_ideas = {
 					remove_idea = POR_reactionary_resistance
+					custom_effect_tooltip = CHL_skip_one_line_tt
 					add_idea = POR_reactionary_resistance2
 				}
 			}
@@ -3181,12 +3182,6 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = POR_hold_fair_elections
-		available = {
-			OR = { 
-				has_completed_focus = POR_curb_political_militias
-				has_completed_focus = POR_empower_socialist_organizations
-			}
-		}
 		completion_reward = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
@@ -3212,6 +3207,7 @@ focus_tree = {
 			else = {
 				swap_ideas = {
 					remove_idea = POR_reactionary_resistance
+					custom_effect_tooltip = CHL_skip_one_line_tt
 					add_idea = POR_reactionary_resistance2
 				}
 			}
