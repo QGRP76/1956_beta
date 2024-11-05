@@ -1523,7 +1523,13 @@ country_event = {   #china ultimatum to France
                 transfer_state = 728
                 every_owned_state = {
                     limit = {
-                        has_state_flag = r56_postwar_chi_liberated_state
+                        OR = {
+                            has_state_flag = r56_postwar_chi_liberated_state
+                            AND = {
+                                is_core_of = FRI
+                                has_start_date > 1945.1.1
+                            }
+                        }
                     }
                     transfer_state_to = FRI
                     hidden_effect = {
