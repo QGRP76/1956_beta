@@ -156,6 +156,7 @@ recruit_character = FRA_georges_robert
 recruit_character = FRA_andre_gaston_pretelat
 recruit_character = FRA_henri_blehaut
 recruit_character = FRA_robert_touchon
+recruit_character = FRA_edouard_requin
 
 
 set_research_slots = 4

@@ -530,6 +530,27 @@ characters={
 		}
 	}
 
+	FRA_edouard_requin={
+		name="Édouard Réquin"
+		portraits={
+			army={
+				small="GFX_Portrait_France_KR_Generic_land_4_small"
+			}
+			army={
+				large="GFX_Portrait_France_KR_Generic_land_4"
+			}
+		}
+		corps_commander={
+			traits={ old_guard trait_cautious }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=1
+		}
+	}
+	
 	FRA_jeanmarie_charles_abrial={
 		name="Jean-Marie Charles Abrial"
 		portraits={
