@@ -2952,7 +2952,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ }
+			traits={ desert_fox }
 			skill=3
 			attack_skill = 3
 			defense_skill = 3
