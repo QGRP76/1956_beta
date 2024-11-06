@@ -158,6 +158,8 @@ recruit_character = FRA_henri_blehaut
 recruit_character = FRA_robert_touchon
 recruit_character = FRA_edouard_requin
 recruit_character = FRA_aubert_frere
+recruit_character = FRA_victor_bourret
+recruit_character = FRA_robert_altmeyer
 
 
 set_research_slots = 4

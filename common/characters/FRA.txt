@@ -574,6 +574,48 @@ characters={
 		}
 	}
 	
+	FRA_victor_bourret={
+		name="Victor Bourret"
+		portraits={
+			army={
+				small="GFX_Portrait_France_KR_Generic_land_2_small"
+			}
+			army={
+				large="gfx/leaders/FRA/r56_portrait_FRA_Victor_Bourret.dds"
+			}
+		}
+		corps_commander={
+			traits={ old_guard infantry_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=1
+		}
+	}
+
+	FRA_robert_altmeyer={
+		name="Robert Altmeyer"
+		portraits={
+			army={
+				small="GFX_Portrait_France_KR_Generic_land_3_small"
+			}
+			army={
+				large="gfx/leaders/FRA/r56_portrait_FRA_Robert_Altmeyer.dds"
+			}
+		}
+		corps_commander={
+			traits={ old_guard cavalry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=1
+		}
+	}
+	
 	FRA_jeanmarie_charles_abrial={
 		name="Jean-Marie Charles Abrial"
 		portraits={
