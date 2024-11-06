@@ -552,6 +552,27 @@ characters={
 			legacy_id=1
 		}
 	}
+
+	FRA_aubert_frere={
+		name="Aubert Frère"
+		portraits={
+			army={
+				small="GFX_Portrait_France_KR_Generic_land_3_small"
+			}
+			army={
+				large="GFX_Portrait_France_KR_Generic_land_3"
+			}
+		}
+		corps_commander={
+			traits={ old_guard }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=1
+		}
+	}
 	
 	FRA_jeanmarie_charles_abrial={
 		name="Jean-Marie Charles Abrial"
