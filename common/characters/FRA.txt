@@ -515,7 +515,7 @@ characters={
 		name="Robert Touchon"
 		portraits={
 			army={
-				small="GFX_Portrait_France_KR_Generic_land_5_small"
+				small="gfx/leaders/FRA/r56_portrait_FRA_Robert_Touchon.dds"
 			}
 			army={
 				large="GFX_Portrait_France_KR_Generic_land_5"
