@@ -564,7 +564,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ old_guard }
+			traits={ old_guard homeland_connoisseur }
 			skill=2
 			attack_skill=2
 			defense_skill=2
@@ -715,7 +715,7 @@ characters={
 			}
 		}
 		navy_leader={
-			traits={ aviation_enthusiast }
+			traits={ aviation_enthusiast navy_career_officer }
 			skill=3
 			attack_skill=3
 			defense_skill=2
