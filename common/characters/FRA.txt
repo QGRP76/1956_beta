@@ -2426,6 +2426,15 @@ characters={
 				small=GFX_idea_FRA_generic_navy_3
 			}
 		}
+		navy_leader={
+			traits={ caustic_personality gunnery_expert }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			maneuvering_skill=2
+			coordination_skill=3
+			legacy_id=0
+		}
 		advisor={
 			slot = high_command
 			idea_token = marcel_gensoul
@@ -2437,15 +2446,6 @@ characters={
 			cost =  50
 			ai_will_do = {
 				factor = 1
-			}
-			navy_leader={
-				traits={ austic_personality gunnery_expert }
-				skill=3
-				attack_skill=2
-				defense_skill=3
-				maneuvering_skill=2
-				coordination_skill=3
-				legacy_id=-1
 			}
 		}
 	}
