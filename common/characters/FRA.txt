@@ -560,7 +560,7 @@ characters={
 				small="GFX_Portrait_France_KR_Generic_land_3_small"
 			}
 			army={
-				large="GFX_Portrait_France_KR_Generic_land_3"
+				large="gfx/leaders/FRA/r56_portrait_FRA_Aubert_Frere.dds"
 			}
 		}
 		corps_commander={
