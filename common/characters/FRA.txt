@@ -2422,7 +2422,7 @@ characters={
 		name = "Marcel Gensoul"
 		portraits={
 			civilian={
-				large="GFX_Portrait_Europe_Generic_navy_new_1"
+				large="GFX_Portrait_France_KR_Generic_navy_3"
 				small=GFX_idea_FRA_generic_navy_3
 			}
 		}
