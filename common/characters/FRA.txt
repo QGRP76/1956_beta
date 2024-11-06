@@ -497,15 +497,6 @@ characters={
 			army={
 				large="GFX_Portrait_France_KR_Generic_land_2"
 			}
-			corps_commander={
-				traits={ inflexible_strategist infantry_officer }
-				skill=3
-				attack_skill=3
-				defense_skill=3
-				planning_skill=2
-				logistics_skill=3
-				legacy_id=-1
-			}
 		}
 	}
 
