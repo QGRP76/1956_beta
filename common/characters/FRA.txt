@@ -3011,6 +3011,7 @@ characters={
 			logistics_skill = 1
 			legacy_id=0
 			visible = {
+				has_country_flag = free_france
 				if = {			#Free French Empire
 					limit = {
 						has_completed_focus = FRA_appeal_to_the_french_nation
