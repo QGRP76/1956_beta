@@ -918,7 +918,7 @@ POR_securing_the_revolution = {
 	}
 
 	POR_end_the_popular_front = {
-		icon = generic_speech
+		icon = GFX_decision_eng_propaganda_campaigns
 		fire_only_once = yes
 		visible = { 
 			OR = {
@@ -1081,23 +1081,120 @@ POR_securing_the_revolution = {
 		ai_will_do = { base = 200 }
 	}
 
-	POR_end_the_politicial_trials = {
+	POR_end_the_political_trials = {
 		cost = 75
-		icon = generic_scales
+		icon = generic_speech
 		fire_only_once = yes
 		ai_will_do = { base = 400 }
 		visible = { has_completed_focus = POR_unity_and_reconciliation }
 		complete_effect = {
 			add_popularity = {
-				ideology = ROOT
-				popularity = -0.1
+				ideology = communism
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
 			}
 			custom_effect_tooltip = CHL_skip_one_line_tt
-			swap_ideas = {
-				remove_idea = POR_hold_fair_elections_idea
-				add_idea = POR_end_the_political_trials_idea
+			if = {
+				limit = { has_idea = POR_reactionary_resistance2 }
+				swap_ideas = {
+					remove_idea = POR_reactionary_resistance2
+					add_idea = POR_reactionary_resistance3
+				}
+			}
+			else_if = {
+				limit = { has_idea = POR_reactionary_resistance3 }
+				remove_ideas = POR_reactionary_resistance3
+				custom_effect_tooltip = CHL_skip_one_line_tt
+				add_timed_idea = {
+					idea = POR_reactionary_resistance4
+					days = 365
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = POR_reactionary_resistance
+					add_idea = POR_reactionary_resistance2
+				}
 			}
 		}
+	}
+
+	POR_foment_peace_with_the_church = {
+		cost = 90
+		icon = generic_scales
+		fire_only_once = yes
+		ai_will_do = { base = 200 }
+		visible = { has_completed_focus = POR_unity_and_reconciliation }
+		complete_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			if = {
+				limit = { has_idea = POR_reactionary_resistance2 }
+				swap_ideas = {
+					remove_idea = POR_reactionary_resistance2
+					add_idea = POR_reactionary_resistance3
+				}
+			}
+			else_if = {
+				limit = { has_idea = POR_reactionary_resistance3 }
+				remove_ideas = POR_reactionary_resistance3
+				custom_effect_tooltip = CHL_skip_one_line_tt
+				add_timed_idea = {
+					idea = POR_reactionary_resistance4
+					days = 365
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = POR_reactionary_resistance
+					add_idea = POR_reactionary_resistance2
+				}
+			}
+			set_country_flag = POR_foment_peace_with_the_church_flag
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = POR_manuel_goncalves_cerejeira
+		}
+	}
+
+	POR_crack_down_on_leftist_anti_democrats = {
+		icon = generic_scales
+		fire_only_once = yes
+		visible = { 
+			has_completed_focus =  POR_pivot_the_nation_forward
+			NOT = { has_government = communism }
+		}
+		complete_effect = {
+			set_country_flag = POR_end_the_popular_front_flag
+			if = {
+				limit = { has_completed_focus = POR_restore_civil_liberties }
+				add_political_power = 35
+				add_stability = 0.02
+				add_popularity = {
+					ideology = communism
+					popularity = -0.1
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = -0.06
+				}
+			}
+			else = {
+				add_political_power = 75
+				add_stability = -0.02
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.1
+				}
+			}
+		}	
+		ai_will_do = { base = 100 }
 	}
 }
 

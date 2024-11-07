@@ -193,6 +193,22 @@ ideas = {
 			}
 		}
 
+		POR_reactionary_resistance4 = {
+			name = POR_reactionary_resistance
+			picture = chi_war_of_resistance2
+			allowed_civil_war = { 
+				OR = {
+					has_government = communism
+					has_government = democratic
+				} 
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = -0.05
+			}
+		}
+
 		POR_divided_revolution = {
 			picture = ARG_no_gods_no_masters
 			allowed = { original_tag = POR }
@@ -234,7 +250,6 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.001
 				neutrality_drift = -0.01
-				democratic_drift = 0.01
 				weekly_casualties_war_support = 0.001
 			}
 		}
@@ -247,22 +262,31 @@ ideas = {
 				political_power_gain = 0.15
 				stability_weekly = -0.001
 				stability_factor = 0.05
-				democratic_drift = 0.01
 				neutrality_drift = -0.01
 				weekly_casualties_war_support = 0.001
 			}
 		}
 
-		POR_end_the_political_trials_idea = {
-			name = POR_portugals_road_to_democracy
+		POR_western_europes_model_democracy = {
 			picture = worker_cluture
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.15
 				stability_factor = 0.05
-				democratic_drift = 0.01
+				democratic_drift = 0.02
 				neutrality_drift = -0.01
-				fascism_drift = -0.01
+				weekly_casualties_war_support = 0.001
+			}
+		}
+
+		POR_red_tinted_democracy = {
+			picture = worker_cluture
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.05
+				communism_drift = 0.02
+				neutrality_drift = -0.01
 				weekly_casualties_war_support = 0.001
 			}
 		}

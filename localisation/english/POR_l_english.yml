@@ -256,7 +256,7 @@
  POR_call_for_general_strike:0 "Call for General Strike"
 
  POR_seek_international_support:0 "Seek International Support"
- POR_seek_international_support_desc:0 "We are not alone in our grievances against Salazar and his regime. We must do all that is necessary to align other interests to our side!"
+ POR_seek_international_support_desc:0 "We are not alone in our grievances against Salazar and his regime. We must do all that is necessary to align foreign interests to our side!"
  POR_seek_international_support_tt:0 "Unlocks §YSeek International Support§! Decisions"
  POR_join_forces_with_the_spanish_popular_front:0 "Join Forces With the Spanish Popular Front"
  POR_join_forces_with_the_spanish_popular_front_desc:0 "Spanish society is consuming itself through the horrors of civil conflict, and we have an opportunity to intervene. The republic is the rightful, legitimate government of Spain, and we shall give them the help they need to turn the tide of battle!"
@@ -418,7 +418,8 @@
 
  POR_foment_peace_with_the_church:0 "Foment Peace With the Church"
  POR_foment_peace_with_the_church_desc:0 "Relations between the Catholic Church and Portuguese republican governments have rarely been productive. There is no better time than now to take steps to resolve our differences, and let the individual decide what role religion shall have in their life."
- POR_peace_between_church_and_state:0 "Peace Between Church and State"
+ POR_foment_peace_with_the_church_requirement_tt:0 "Has completed Decision §YFoment Peace With the Church§!"
+ 
 
  POR_curb_political_militias:0 "Curb Political Militas"
  POR_curb_political_militias_desc:0 ""
@@ -435,15 +436,19 @@
 
  POR_return_to_civil_meritocracy:0 "Return to Civil Meritocracy"
  POR_return_to_civil_meritocracy_desc:0 ""
+ POR_western_europes_model_democracy:0 "Western Europe's Model Democracy!"
+ POR_red_tinted_democracy:0 "Red-Tinted Democracy"
 
  POR_reform_the_junta_institutions:0 "Reform the Junta Institutions"
  POR_reform_the_junta_institutions_desc:0 ""
 
+ POR_pivot_the_nation_forward:0 "Pivot the Nation Forward!"
+ POR_crack_down_on_leftist_anti_democrats:0 "Crack Down on Leftist Anti-Democrats"
+
  POR_unity_and_reconciliation:0 "Unity and Reconciliation"
  POR_unity_and_reconciliation_desc:0 ""
- POR_end_the_politicial_trials:0 "End the Political Trials"
+ POR_end_the_political_trials:0 "End the Political Trials"
  
-
  POR_rehabilitate_the_armed_forces:0 "Rehabilitate the Armed Forces"
  POR_rehabilitate_the_armed_forces_desc:0 ""
 

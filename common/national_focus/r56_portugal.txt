@@ -312,7 +312,7 @@ focus_tree = {
 			focus = POR_focus_on_submarine_production 
 			focus = POR_restore_our_high_seas_presence
 		}
-		icon = GFX_goal_generic_admirality
+		icon = GFX_goal_POR_coa_navy
 		cost = 10
 		ai_will_do = { base = 3 }
 		x = 1
@@ -1020,7 +1020,7 @@ focus_tree = {
 			focus = POR_import_foreign_bombers
 			focus = POR_study_british_fighters
 		}
-		icon = GFX_goal_generic_air_doctrine
+		icon = GFX_focus_usa_escort_fighters
 		cost = 8
 		ai_will_do = { base = 5 }
 		x = 1
@@ -1113,7 +1113,7 @@ focus_tree = {
 			focus = POR_air_land_battle
 			focus = POR_modernize_the_fighter_arsenal
 		}
-		icon = GFX_focus_usa_escort_fighters
+		icon = GFX_goal_POR_coa_air_force
 		cost = 10
 		ai_will_do = { base = 5 }
 		x = 1
@@ -2546,7 +2546,7 @@ focus_tree = {
 	focus = {
 		id = POR_seek_international_support
 		prerequisite = { focus = POR_unite_against_salazar }
-		icon = GFX_focus_BRA_reach_out_to_military_dem
+		icon = GFX_goal_mexico_united_mexican_unions
 		cost = 6
 		x = 2
 		y = 1
@@ -2927,6 +2927,11 @@ focus_tree = {
 		relative_position_id = POR_shatter_reactionary_dissent
 		completion_reward = {
 			add_political_power = 75
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			unlock_decision_tooltip = POR_appropriate_church_riches
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
@@ -2947,6 +2952,9 @@ focus_tree = {
 			NOT = { has_completed_focus = POR_curb_political_militias }
 		}
 		completion_reward = {
+			add_political_power = 25
+			add_war_support = 0.03
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			set_country_flag = POR_arm_anti_fascist_militias_flag
 			unlock_decision_tooltip = POR_arm_anti_fascist_militias
 			unlock_decision_tooltip = POR_tap_aligned_laborer_organizations
@@ -2958,7 +2966,7 @@ focus_tree = {
 		id = POR_defang_the_liberals
 		prerequisite = { focus = POR_shatter_reactionary_dissent }
 		icon = GFX_focus_SOV_the_last_purge
-		cost = 10
+		cost = 8
 		x = 0
 		y = 2
 		relative_position_id = POR_shatter_reactionary_dissent
@@ -3035,7 +3043,7 @@ focus_tree = {
 	focus = {
 		id = POR_restore_civil_liberties
 		prerequisite = { focus = POR_pave_the_path_to_progress }
-		icon = GFX_goal_generic_trial
+		icon = GFX_goal_generic_multipartism
 		cost = 8
 		x = 1
 		y = 1
@@ -3068,42 +3076,24 @@ focus_tree = {
 			NOT = { has_completed_focus = POR_empower_socialist_organizations }
 		}
 		completion_reward = { 
+			add_political_power = 25
 			add_stability = 0.03
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			} 
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
-		id = POR_foment_peace_with_the_church
+		id = POR_unity_and_reconciliation
 		prerequisite = { focus = POR_restore_civil_liberties }
-		icon = GFX_goal_generic_friendship_with_church
-		cost = 8
-		x = 1
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		cost = 6
+		x =  1
 		y = 1
 		relative_position_id = POR_restore_civil_liberties
 		completion_reward = {
-			if = {
-				limit = { has_idea = POR_reactionary_resistance2 }
-				remove_ideas = POR_reactionary_resistance2
-				add_timed_idea = {
-					idea = POR_reactionary_resistance3
-					days = 365
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = POR_reactionary_resistance
-					custom_effect_tooltip = CHL_skip_one_line_tt
-					add_idea = POR_reactionary_resistance2
-				}
-			}
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = POR_manuel_goncalves_cerejeira
+			add_stability = 0.03
+			unlock_decision_tooltip = POR_foment_peace_with_the_church
+			unlock_decision_tooltip = POR_end_the_political_trials
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}
@@ -3112,7 +3102,7 @@ focus_tree = {
 		id = POR_hold_fair_elections
 		prerequisite = { focus = POR_restore_civil_liberties }
 		icon = GFX_goal_generic_election
-		cost = 10
+		cost = 8
 		x = 0
 		y = 2
 		relative_position_id = POR_restore_civil_liberties
@@ -3130,7 +3120,6 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = POR_portugals_road_to_democracy
 				add_idea = POR_hold_fair_elections_idea
-				custom_effect_tooltip = CHL_skip_one_line_tt
 			}
 			if = {
 				limit = { has_country_flag = POR_end_the_popular_front_flag }
@@ -3175,57 +3164,15 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_reform_the_junta_institutions
+		id = POR_rehabilitate_the_armed_forces
 		prerequisite = { focus = POR_hold_fair_elections }
-		icon = GFX_goal_FRA_reynaud_economic_reforms
+		icon = GFX_focus_generic_military_mission
 		cost = 8
 		x = 2
 		y = 1
 		relative_position_id = POR_hold_fair_elections
 		completion_reward = {
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL  }
-	}
-
-	focus = {
-		id = POR_unity_and_reconciliation
-		prerequisite = { focus = POR_hold_fair_elections }
-		icon = GFX_goal_generic_defence
-		cost = 6
-		x = 0
-		y = 1
-		relative_position_id = POR_hold_fair_elections
-		completion_reward = {
-			if = {
-				limit = { has_idea = POR_reactionary_resistance2 }
-				remove_ideas = POR_reactionary_resistance2
-				add_timed_idea = {
-					idea = POR_reactionary_resistance3
-					days = 365
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = POR_reactionary_resistance
-					custom_effect_tooltip = CHL_skip_one_line_tt
-					add_idea = POR_reactionary_resistance2
-				}
-			}
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			unlock_decision_tooltip = POR_end_the_politicial_trials
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL  }
-	}
-
-	focus = {
-		id = POR_rehabilitate_the_armed_forces
-		prerequisite = { focus = POR_unity_and_reconciliation }
-		icon = GFX_focus_generic_military_mission
-		cost = 8
-		x = -1
-		y = 1
-		relative_position_id = POR_unity_and_reconciliation
-		completion_reward = {
+			add_political_power = 25
 			add_war_support = 0.05
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
@@ -3238,14 +3185,56 @@ focus_tree = {
 	}
 
 	focus = {
+		id = POR_reform_the_junta_institutions
+		prerequisite = { focus = POR_hold_fair_elections }
+		icon = GFX_goal_generic_trial
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = POR_hold_fair_elections
+		completion_reward = {
+			add_political_power = 75
+			unlock_decision_tooltip = POR_crack_down_on_leftist_anti_democrats
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+	}
+
+	focus = {
+		id = POR_pivot_the_nation_forward
+		prerequisite = { focus = POR_reform_the_junta_institutions }
+		icon = GFX_goal_generic_democracy
+		cost = 8
+		x = -1
+		y = 1
+		relative_position_id = POR_reform_the_junta_institutions
+		completion_reward = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+	}
+
+	focus = {
 		id = POR_return_to_civil_meritocracy
-		prerequisite = { focus = POR_unity_and_reconciliation }
+		prerequisite = { focus = POR_reform_the_junta_institutions }
 		icon = GFX_focus_generic_court
 		cost = 8
 		x = 1
 		y = 1
-		relative_position_id = POR_unity_and_reconciliation
+		relative_position_id = POR_reform_the_junta_institutions
 		completion_reward = {
+			if = {
+				limit = { has_government = communism }
+				swap_ideas = {
+					remove_idea = POR_hold_fair_elections_idea
+					add_idea = POR_red_tinted_democracy
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = POR_hold_fair_elections_idea
+					add_idea = POR_western_europes_model_democracy
+				}
+			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = POR_duarte_jose_pacheco
 		}
