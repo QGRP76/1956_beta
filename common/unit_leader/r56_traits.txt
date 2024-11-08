@@ -726,5 +726,17 @@ leader_traits = {
 			factor = 0
 		}
 	}
+
+	# ARM
+
+	ARM_anti_communist_sympathizer = {
+		
+		type = all
+		trait_type = personality_trait
+
+		new_commander_weight = {
+			factor = 0
+		}
+	}
 }
 

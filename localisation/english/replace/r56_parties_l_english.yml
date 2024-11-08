@@ -174,6 +174,16 @@
  ARG_neutrality_party:0 "Concordancia"
  ARG_neutrality_party_long:0 "Concordancia"
 
+ #ARM
+ ARM_democratic_party:0 "HHD"
+ ARM_democratic_party_long:0 "Hay Heghap'okh'akan Dashnakts'ut'yun"
+ ARM_fascism_party:0 "HL"
+ ARM_fascism_party_long:0 "Haykakan Legion"
+ ARM_communism_party:0 "HKK"
+ ARM_communism_party_long:0 "Hayastani Kom'unistakan Kusakts'ut'yun"
+ ARM_neutrality_party:0 "House of Bagratuni"
+ ARM_neutrality_party_long:0 "House of Bagratuni"
+
  #AST
  AST_neutrality_party:0 "Office of the Governor-General"
  AST_neutrality_party_long:0 "Office of the Governor-General"

@@ -2597,6 +2597,18 @@ spriteTypes = {
 		name = "GFX_goal_ARM_ayf"
 		texturefile = "gfx/interface/goals/arm/r56_goal_ARM_ayf.dds"
 	}
+	SpriteType = {
+		name = "GFX_goal_ARM_preserve_our_nation"
+		texturefile = "gfx/interface/goals/arm/r56_goal_ARM_preserve_our_nation.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_ARM_resettle_trabzon"
+		texturefile = "gfx/interface/goals/arm/r56_goal_ARM_resettle_trabzon.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_ARM_resettle_van"
+		texturefile = "gfx/interface/goals/arm/r56_goal_ARM_resettle_van.dds"
+	}
 
 
 ###------> AUS <><> <><> <><> <><> <><>

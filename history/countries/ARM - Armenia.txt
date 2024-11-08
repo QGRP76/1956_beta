@@ -1,20 +1,15 @@
 ﻿capital = 230 #Yerevan, Armenia
 
-add_ideas = {
-	TIB_mountainous_people
-}
-
-set_war_support = 0.4
-set_stability = 0.50 
+set_war_support = 0.35
+set_stability = 0.50
 set_research_slots = 3
 
 # Starting tech
-set_technology = {
+set_technology = { #same as Soviets
 
 	# Extended Technologies
 	etax_doctrine = 1
 	camo = 1
-		
 	
 	infantry_weapons = 1
 	infantry_weapons1 = 1
@@ -27,8 +22,11 @@ set_technology = {
 	motorised_infantry = 1
 	paratroopers = 1
 	gw_artillery = 1
+	TIB_mountainous_people_tech = 1
+
 }
-if = {	#same as Soviets
+
+if = { #same as Soviets
 	limit = { has_dlc = "By Blood Alone" }
 		set_technology = {
 			iw_small_airframe = 1
@@ -54,24 +52,20 @@ if = {	#same as Soviets
 		}
 	}
 }
+
 if = {
 	limit = {
 		NOT = { has_dlc = "No Step Back" }
 	}
-	set_technology = { #vanilla keeps the old system, nsb afghanistan will no longer produce some of the most advanced tanks in the world
+	set_technology = { #same as Soviets
 		gwtank = 1
 		basic_light_tank = 1
 	}
-}
-
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	set_technology = { 
-		gwtank_chassis = 1
-		basic_light_tank_chassis = 1
-		
+	else = {
+		set_technology = { #same as Soviets
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+		}
 	}
 }
 
@@ -79,23 +73,31 @@ set_politics = {
 	ruling_party = democratic
 	election_frequency = 48
 	elections_allowed = yes
+	last_election = 1934.6.22
 }
+
 set_popularities = {
-	democratic = 30
-	fascism = 34
-	communism = 36
+	neutrality = 4
+	democratic = 36
+	fascism = 6
+	communism = 54
+}
+
+add_ideas = {
+	ARM_fading_national_identity
+	ARM_dashnak_hunchak_split
+	TIB_mountainous_people
 }
 
 recruit_character = ARM_grigor_harutyunyan
 recruit_character = ARM_hovhannes_kajaznuni
-recruit_character = ARM_jaques_bagratuni
+recruit_character = ARM_yakov_bagratuni
 recruit_character = ARM_ruben_ter_minasian
 recruit_character = ARM_drastamat_kanayan
 recruit_character = ARM_nubar_gulbenkian
 recruit_character = ARM_george_mardikian
 recruit_character = ARM_alexander_khastisian
 recruit_character = ARM_simon_vratsian
-recruit_character = ARM_rouben_ter_minassian
 recruit_character = ARM_ruben_darbinyan
 recruit_character = ARM_khoren_I
 recruit_character = ARM_gevorg_VI
@@ -103,7 +105,7 @@ recruit_character = ARM_abraham_giulchandanian
 recruit_character = ARM_movses_silikyan
 recruit_character = ARM_christopher_araratyan
 recruit_character = ARM_migran_petrosian
-recruit_character = ARM_aleksandr_hatisian
+# recruit_character = ARM_aleksandr_hatisian
 recruit_character = ARM_grigor_saaruni
 recruit_character = ARM_anastas_mikoyan
 recruit_character = ARM_aram_piruzyan
@@ -126,39 +128,3 @@ recruit_character = ARM_hovhannes_ter_isahakyan
 recruit_character = ARM_hovhannes_bagramyan
 recruit_character = ARM_vladimir_saakian
 recruit_character = ARM_abraham_alikhanov
-
-
-# characters will need to be added for these
-
-#create_country_leader = {
-	#name = "Drastamat Kanayan"
-	#desc = ""
-	#picture = "gfx/leaders/ARM/r56_portrait_ARM_Drastamat_Kanayan.dds"
-	#expire = "1953.3.1"
-	#ideology = fascism_ideology
-	#traits = {
-		
-	#}
-#}
-
-#create_country_leader = {
-	#name = "Hovhannes Kajaznuni"
-	#desc = ""
-	#picture = "gfx/leaders/ARM/r56_portrait_ARM_Hovhannes_Kajaznuni.dds"
-	#expire = "1953.3.1"
-	#ideology = conservatism
-	#traits = {
-		
-	#}
-#}
-
-#create_country_leader = { #37 to 53, the predecessors were purged
-	#name = "Grigor Harutyunyan"
-	#desc = ""
-	#picture = "gfx/leaders/ARM/r56_portrait_ARM_Grigory_Arutinov.dds"
-	#expire = "1953.3.1"
-	#ideology = stalinism
-	#traits = {
-		
-	#}
-#}

@@ -1,5 +1,154 @@
 ideas = {
 	country = {
+		ARM_fading_national_identity = {
+			picture = SWE_neither_death_nor_dishonor
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}			
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = -0.15
+				conscription_factor = -0.25
+				mobilization_laws_cost_factor = 0.25
+				drift_defence_factor = -0.15
+			}
+		}
+		# Communist Identity
+		ARM_fading_national_identity_communist = {
+			name = ARM_fading_national_identity
+			picture = SWE_neither_death_nor_dishonor
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}			
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.15
+				conscription_factor = -0.20
+				mobilization_laws_cost_factor = 0.10
+				drift_defence_factor = -0.05
+				communism_drift = 0.03
+			}
+		}
+		ARM_fading_national_identity_communist_2 = {
+			name = ARM_fading_national_identity
+			picture = SWE_neither_death_nor_dishonor
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}			
+			modifier = {
+				war_support_factor = -0.05
+				conscription_factor = -0.10
+				communism_drift = 0.05
+				mobilization_speed = 0.15
+			}
+		}
+		# Democratic Identity
+		ARM_fading_national_identity_democratic = {
+			picture = SWE_neither_death_nor_dishonor
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = democratic
+			}			
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.15
+				conscription_factor = -0.15
+				drift_defence_factor = -0.10
+				democratic_drift = 0.03
+			}
+		}
+		ARM_fading_national_identity_democratic_2 = {
+			name = ARM_fading_national_identity_democratic
+			picture = SWE_neither_death_nor_dishonor
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = democratic
+			}			
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				conscription_factor = -0.10
+				conscription = 0.01
+				consumer_goods_factor = 0.05
+				drift_defence_factor = -0.05
+				democratic_drift = 0.05
+			}
+		}
+		ARM_fading_national_identity_democratic_3 = {
+			picture = generic_morale_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = democratic
+			}			
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.15
+				conscription_factor = -0.15
+				drift_defence_factor = -0.10
+				democratic_drift = 0.03
+			}
+		}
+		# Royalist Identity
+		ARM_fading_national_identity_royalist = {
+			picture = SWE_neither_death_nor_dishonor
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality
+			}			
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				conscription_factor = -0.10
+				drift_defence_factor = -0.05
+				neutrality_drift = 0.03
+			}
+		}
+		ARM_dashnak_hunchak_split = {
+			picture = EST_democratic_opposition
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = -0.15
+				political_advisor_cost_factor = 0.25
+				political_power_factor = -0.15
+			}
+		}
+		ARM_dashnak_hunchak_split_2 = {
+			name = ARM_dashnak_hunchak_split
+			picture = EST_democratic_opposition
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}			
+			modifier = {
+				stability_factor = -0.10
+				political_advisor_cost_factor = 0.10
+				political_power_factor = -0.05
+			}
+		}
 		ARM_party_involvement_idea = {
 			picture = generic_deal_with_the_devil
 			allowed = {
@@ -14,7 +163,7 @@ ideas = {
 				 mobilization_laws_cost_factor = -0.25
 				 foreign_subversive_activites = -0.50 
 			}
-		}	
+		}
 		ARM_protect_the_revolution_idea = {
 			picture = generic_communist_army
 			allowed = {
@@ -267,16 +416,6 @@ ideas = {
 				resistance_damage_to_garrison = -0.25
 				foreign_subversive_activites = -0.2
 			}
-		}
-		ARM_armenian_youth_federation_idea = {
-			picture = generic_infantry_bonus
-			allowed_civil_war = {
-				has_government = democratic
-			}			
-			modifier = {
-				conscription = 0.01 			
-			}
-			#research_bonus = { land_doctrine = 0.02 } #didnt convert because low amount
 		}
 		ARM_cherish_what_we_have_idea = {
 			picture = generic_pp_unity_bonus

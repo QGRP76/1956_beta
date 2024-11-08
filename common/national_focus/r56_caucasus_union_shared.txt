@@ -26,7 +26,7 @@
 		x = 60
 		y = 0
 		offset = {
-			x = -19
+			x = 8
 			y = 0
 			trigger = {
 				tag = ARM

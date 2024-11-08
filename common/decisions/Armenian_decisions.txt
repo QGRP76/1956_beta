@@ -1,5 +1,4 @@
 Armenian_question_category = {
-
 	ARM_form_armenian_national_council = {
 
 		icon = generic_nationalism
@@ -158,7 +157,6 @@ Armenian_question_category = {
 #				subtract_from_variable = { var = SS_anger value = 5}
 #				SS_resolve_effects_wehrmacht = yes
 #			}
-
 			random_owned_controlled_state = {
 				create_unit = {
 					division = "name = \"Armenian Legion\" division_template = \"Armenian Volunteers\" start_experience_factor = 1.0 start_equipment_factor = 0.01"
@@ -166,7 +164,6 @@ Armenian_question_category = {
 				}
 			}
 			set_country_flag = armenian_legion
-
 		}
 	}
 	ARM_establish_national_armenian_government = {
@@ -263,7 +260,6 @@ Armenian_question_category = {
 				ROOT = {
 					puppet = ARM
 				}
-
 				set_global_flag = armenian_national_council_fascist
 			}
 			else_if = {
@@ -322,7 +318,7 @@ Armenian_question_category = {
 						neutrality = 60
 					}
 					complete_national_focus = ARM_return_from_exile
-					ROOT = {give_guarantee = ARM}
+					ROOT = { give_guarantee = ARM }
 				}
 				set_global_flag = armenian_national_council_neutral
 			}
@@ -333,7 +329,6 @@ Armenian_question_category = {
 				hidden_effect = {
 					ARM = {
 						transfer_state = 230
-
 						set_politics = {
 							ruling_party = neutrality
 							elections_allowed = no
@@ -347,7 +342,7 @@ Armenian_question_category = {
 					}
 					complete_national_focus = ARM_return_from_exile
 				}
-				ROOT = {give_guarantee = ARM }
+				ROOT = { give_guarantee = ARM }
 				set_global_flag = armenian_national_council_neutral
 			}
 			#there may be a mistake here to test
@@ -359,7 +354,6 @@ Armenian_question_category = {
 				hidden_effect = {
 					ARM = {
 						transfer_state = 230
-
 						set_politics = {
 							ruling_party = democratic
 							elections_allowed = no
@@ -374,9 +368,8 @@ Armenian_question_category = {
 				}
 				ARM = {
 					start_civil_war = { ideology = democratic size = 1 }
-					ROOT = {give_guarantee = ARM}
+					ROOT = { give_guarantee = ARM }
 				}
-
 				set_global_flag = armenian_national_council_democratic
 			}
 			else_if = {
@@ -390,75 +383,11 @@ Armenian_question_category = {
 					complete_national_focus = ARM_return_from_exile
 				}
 				ROOT = {give_guarantee = ARM}
-
 				set_global_flag = armenian_national_council_democratic
 			}
 			ARM = {
 				add_opinion_modifier = { target = ROOT modifier = ARM_liberators }
 			}
-
-		}
-	}
-}
-armenian_monarchism_category = {
-	ARM_crown_the_claimant = { #
-
-		icon = generic_civil_support
-
-		available = {
-			neutrality > 0.5
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		allowed = {
-			tag = ARM
-		}
-
-		cost = 100
-
-		visible = {
-			has_completed_focus = ARM_the_last_claimant
-			NOT = {
-				has_government = neutrality
-			}
-		}
-
-		complete_effect = {
-			set_politics = { ruling_party = neutrality elections_allowed = yes }
-		}
-	}
-	ARM_suspend_the_electoral_process = { #
-
-		icon = generic_civil_support
-
-		available = {
-			neutrality > 0.70
-		}
-
-		ai_will_do = {
-			factor = 0.5
-		}
-
-		allowed = {
-			tag = ARM
-		}
-
-		fire_only_once = yes
-
-		cost = 100
-
-		visible = {
-			has_completed_focus = ARM_the_last_claimant
-			has_government = neutrality
-			has_elections = yes
-		}
-
-		complete_effect = {
-			set_politics = { ruling_party = neutrality elections_allowed = no }
-			add_stability = -0.1
 		}
 	}
 }
@@ -499,55 +428,9 @@ armenian_army_category = {
 						}
 					}
 				}
-				set_country_flag = ARM_exiles_no_conspiracy
+				set_country_flag = ARM_exiles_no_conspiracy # Movses
 			}
-			if = {
-				limit = {
-					SOV = {
-						NOT = {
-							focus_progress = {
-								focus = SOV_the_military_conspiracy
-								progress > 0
-							}
-						}
-					}
-					has_government = democratic
-				}
-				set_country_flag = ARM_exiles_democratic
-				hidden_effect = {
-					add_corps_commander_role = {
-						character = ARM_jaques_bagratuni
-						traits = { politically_connected trickster }
-						skill = 2
-						attack_skill = 1
-						defense_skill = 2
-						planning_skill = 1
-						logistics_skill = 3
-					}
-				}
-			}
-			if = {
-				limit = {
-					SOV = {
-						focus_progress = {
-							focus = SOV_the_military_conspiracy
-							progress > 0
-						}
-					}				
-					has_government = neutrality
-				}
-				hidden_effect = {
-					add_field_marshal_role = {
-						character = ARM_jaques_bagratuni
-						traits = { politically_connected trickster defensive_doctrine }
-						skill = 2
-						attack_skill = 1
-						defense_skill = 2
-						planning_skill = 1
-						logistics_skill = 3
-					}
-				}
-			}
+			set_country_flag = ARM_exiles_democratic
 		}
 	}
 	ARM_ultra_nationalist_generals = {

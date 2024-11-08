@@ -3469,6 +3469,13 @@
 				tag = WLS
 			}
 		}
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				tag = ARM
+			}
+		}
 		cost = 10
 
 		available_if_capitulated = yes
