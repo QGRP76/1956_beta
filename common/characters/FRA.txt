@@ -595,8 +595,8 @@ characters={
 		}
 	}
 
-	FRA_robert_altmeyer={
-		name="Robert Altmeyer"
+	FRA_robert_altmayer={
+		name="Robert Altmayer"
 		portraits={
 			army={
 				small="GFX_Portrait_France_KR_Generic_land_3_small"
