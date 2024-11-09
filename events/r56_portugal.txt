@@ -2465,8 +2465,10 @@ country_event = {	#Addressing the Spanish Situation
 			has_country_flag = POR_join_forces_with_the_spanish_popular_front_flag
 			41 = {
 				owner = { 
-					has_completed_focus = SPR_maintain_the_second_republic 
-					has_completed_focus = SPR_the_anti_fascist_workers_revolution
+					OR = {
+						has_completed_focus = SPR_maintain_the_second_republic 
+						has_completed_focus = SPR_the_anti_fascist_workers_revolution
+					}
 				}
 			}
 		}
@@ -2496,11 +2498,16 @@ country_event = {	#Addressing the Spanish Situation
 	option = {
 		name = portugal.51.b	#We should work to expand the friendship we've already built!
 		trigger = {
-			has_country_flag = POR_supports_SPD_flag
+			OR = {
+				has_country_flag = POR_supports_SPD_flag
+				has_country_flag = POR_join_forces_with_the_spanish_popular_front_flag
+			}
 			41 = {
 				owner = { 
-					has_completed_focus = SPR_maintain_the_second_republic 
-					has_completed_focus = SPR_the_anti_fascist_workers_revolution
+					OR = {
+						has_completed_focus = SPR_maintain_the_second_republic 
+						has_completed_focus = SPR_the_anti_fascist_workers_revolution
+					}
 				}
 			}
 		}

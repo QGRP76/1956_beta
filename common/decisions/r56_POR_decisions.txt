@@ -661,6 +661,9 @@ POR_together_against_salazar = {
 			SOV = { 
 				country_event = { id = portugal.46 } 
 			}
+			custom_effect_tooltip = if_they_accept_tt
+			add_ideas = POR_NKVD_activity
+			custom_effect_tooltip = POR_request_soviet_assistance_tt
 		}
 	}
 
@@ -870,7 +873,6 @@ POR_securing_the_revolution = {
 		}			
 		ai_will_do = { base = 90 }
 	}
-
 	POR_align_with_moscow = {
 		icon = generic_form_nation
 		fire_only_once = yes	

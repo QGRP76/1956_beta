@@ -2710,6 +2710,11 @@ focus_tree = {
 			}
 			else = { add_political_power = 50 }
 			custom_effect_tooltip = CHL_skip_one_line_tt
+			if = {
+				limit = { has_idea = POR_NKVD_activity }
+				remove_ideas = POR_NKVD_activity
+				custom_effect_tooltip = CHL_skip_one_line_tt
+			}
 			add_ideas = POR_general_directorate_of_securty_idea
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2722,7 +2727,7 @@ focus_tree = {
 			focus = POR_pave_the_path_to_progress
 		}
 		icon = GFX_social_welfare
-		cost = 10
+		cost = 8
 		x = 3
 		y = 1
 		relative_position_id = POR_consolidate_the_revolution
@@ -2827,8 +2832,8 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_towards_a_prosperous_proletariat
 		completion_reward = {
-			add_political_power = 35
-			add_stability = 0.02
+			add_political_power = 40
+			add_stability = 0.03
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			unlock_decision_tooltip = POR_maternalistic_welfare
 			unlock_decision_tooltip	= POR_invest_in_public_education 
@@ -2839,13 +2844,34 @@ focus_tree = {
 		id = POR_end_the_educational_abyss
 		prerequisite = { focus = POR_restore_the_social_state }
 		icon = GFX_focus_generic_socialist_science
-		cost = 8
+		cost = 10
 		x = 0
 		y = 1
 		relative_position_id = POR_restore_the_social_state
 		completion_reward = {
-			add_stability = 0.04 
 			add_research_slot = 1 
+			if = {
+				limit = { has_idea = POR_reactionary_resistance2 }
+				swap_ideas = {
+					remove_idea = POR_reactionary_resistance2
+					add_idea = POR_reactionary_resistance3
+				}
+			}
+			else_if = {
+				limit = { has_idea = POR_reactionary_resistance3 }
+				remove_ideas = POR_reactionary_resistance3
+				custom_effect_tooltip = CHL_skip_one_line_tt
+				add_timed_idea = {
+					idea = POR_reactionary_resistance4
+					days = 365
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = POR_reactionary_resistance
+					add_idea = POR_reactionary_resistance2
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL   FOCUS_FILTER_RESEARCH }
 	}
@@ -2948,7 +2974,7 @@ focus_tree = {
 			focus = POR_general_directorate_of_security 
 		}
 		icon = GFX_goal_generic_revolutionary_guards
-		cost = 6
+		cost = 7
 		x = 1
 		y = 1
 		relative_position_id = POR_shatter_reactionary_dissent
@@ -2956,8 +2982,32 @@ focus_tree = {
 			NOT = { has_completed_focus = POR_curb_political_militias }
 		}
 		completion_reward = {
-			add_political_power = 30
+			add_political_power = 35
+			add_stability = -0.05
 			add_war_support = 0.03
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			if = {
+				limit = { has_idea = POR_reactionary_resistance2 }
+				swap_ideas = {
+					remove_idea = POR_reactionary_resistance2
+					add_idea = POR_reactionary_resistance3
+				}
+			}
+			else_if = {
+				limit = { has_idea = POR_reactionary_resistance3 }
+				remove_ideas = POR_reactionary_resistance3
+				custom_effect_tooltip = CHL_skip_one_line_tt
+				add_timed_idea = {
+					idea = POR_reactionary_resistance4
+					days = 365
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = POR_reactionary_resistance
+					add_idea = POR_reactionary_resistance2
+				}
+			}
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			set_country_flag = POR_arm_anti_fascist_militias_flag
 			unlock_decision_tooltip = POR_arm_anti_fascist_militias
@@ -3072,7 +3122,7 @@ focus_tree = {
 		id = POR_curb_political_militias
 		prerequisite = { focus = POR_restore_civil_liberties }
 		icon = GFX_goal_generic_martial_law
-		cost = 6
+		cost = 7
 		x = -1
 		y = 1
 		relative_position_id = POR_restore_civil_liberties
@@ -3080,8 +3130,34 @@ focus_tree = {
 			NOT = { has_completed_focus = POR_empower_socialist_organizations }
 		}
 		completion_reward = { 
-			add_political_power = 30
-			add_stability = 0.03
+			add_political_power = 35
+			add_popularity = {
+				ideology = communism
+				popularity = -0.03
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			if = {
+				limit = { has_idea = POR_reactionary_resistance2 }
+				swap_ideas = {
+					remove_idea = POR_reactionary_resistance2
+					add_idea = POR_reactionary_resistance3
+				}
+			}
+			else_if = {
+				limit = { has_idea = POR_reactionary_resistance3 }
+				remove_ideas = POR_reactionary_resistance3
+				custom_effect_tooltip = CHL_skip_one_line_tt
+				add_timed_idea = {
+					idea = POR_reactionary_resistance4
+					days = 365
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = POR_reactionary_resistance
+					add_idea = POR_reactionary_resistance2
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -3095,7 +3171,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_restore_civil_liberties
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 45
 			unlock_decision_tooltip = POR_call_for_reconciliation
 			unlock_decision_tooltip = POR_foment_peace_with_the_church
 		}
