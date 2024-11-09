@@ -1494,6 +1494,24 @@ country_event = {
 			add_ideas = POR_reactionary_resistance
 			add_ideas = POR_divided_revolution
 			if = {
+				limit = {
+					GER = { has_opinion_modifier = fascism_leanings_good }
+				}
+				remove_opinion_modifier = {
+					target = GER
+					modifier = fascism_leanings_good
+				}
+			}
+			if = {
+				limit = {
+					ITA = { has_opinion_modifier = fascism_leanings_good }
+				}
+				remove_opinion_modifier = {
+					target = ITA
+					modifier = fascism_leanings_good
+				}
+			}
+			if = {
 				limit = { has_completed_focus = POR_ally_anti_colonial_resistance }
 				if = {
 					limit = { 
@@ -1502,22 +1520,10 @@ country_event = {
 						controls_state = 540
 						controls_state = 796
 					}
-					891 = {
-						set_compliance = 21
-						set_resistance = 57
-					}
-					892 = {
-						set_compliance = 23
-						set_resistance = 48
-					}
-					540 = {
-						set_compliance = 24
-						set_resistance = 45
-					}
-					796 = {
-						set_compliance = 24
-						set_resistance = 41
-					}
+					891 = { set_resistance = 22 }
+					892 = { set_resistance = 21 }
+					540 = { set_resistance = 18 }
+					796 = { set_resistance = 10 }
 				}
 				if = {
 					limit = { 
@@ -1525,39 +1531,21 @@ country_event = {
 						controls_state = 896
 						controls_state = 544
 					}
-					897 = {
-						set_compliance = 20
-						set_resistance = 57
-					}
-					896 = {
-						set_compliance = 22
-						set_resistance = 45
-					}
-					544 = {
-						set_compliance = 22
-						set_resistance = 45
-					}
+					897 = { set_resistance = 22 }
+					896 = { set_resistance = 18 }
+					544 = { set_resistance = 19 }
 				}
 				if = {
 					limit = { controls_state = 705 }
-					705 = {
-						set_compliance = 21
-						set_resistance = 57
-					}
+					705 = { set_resistance = 22 }
 				}
 				if = {
 					limit = { controls_state = 296 }
-					296 = {
-						set_compliance = 22
-						set_resistance = 53
-					}
+					296 = { set_resistance = 21 }
 				}
 				if = {
 					limit = { controls_state = 702 }
-					702 = {
-						set_compliance = 27
-						set_resistance = 43
-					}
+					702 = { set_resistance = 19 }
 				}
 			}
 		}
@@ -2110,7 +2098,10 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = portugal.46.a
-		POR = { add_ideas = POR_NKVD_activity }
+		POR = { 
+			add_ideas = POR_NKVD_activity
+			country_event = turkey.16
+		}
 		add_ai_strategy = {
 			type = send_volunteers_desire
 			id = "POR"
@@ -2126,6 +2117,7 @@ country_event = {
 	}
 	option = {
 		name = portugal.46.b
+		POR = { country_event = turkey.17 }
 		ai_chance = { base = 10 }
 	}
 }

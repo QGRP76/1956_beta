@@ -787,6 +787,7 @@ POR_securing_the_revolution = {
 		}
 	}
 	POR_come_to_britains_aid_dem = {
+		name = POR_come_to_britains_aid
 		icon = generic_nationalism
 		fire_only_once = yes
 		visible = {
