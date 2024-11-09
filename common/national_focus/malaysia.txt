@@ -1693,7 +1693,7 @@ focus_tree = {
 		icon = GFX_goal_continuous_research
 		x = 0
 		y = 2
-		cost = 0
+		cost = 5
 		relative_position_id = MAL_fighting_for_the_commonwealth
 		prerequisite = { focus = MAL_fighting_for_the_commonwealth }
 
@@ -1708,10 +1708,24 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		
+			add_tech_bonus = {
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+			add_tech_bonus = {
+				bonus = 1.0
+				ahead_reduction = 1
+				uses = 1
+				category = bc_tech
+			}
+			add_to_tech_sharing_group = commonwealth_research
+			
 		}
 
-		search_filters = { FOCUS_FILTER_ }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	
 	focus = {
@@ -1735,10 +1749,28 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		
+			if = {
+				limit = {
+					has_idea = MAL_colonial_administration
+				}
+				swap_ideas = {
+					remove_idea = MAL_colonial_administration
+					add_idea = MAL_colonial_administration_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = MAL_colonial_administration
+				}
+				swap_ideas = {
+					remove_idea = MAL_colonial_administration_2
+					add_idea = MAL_colonial_administration_3
+				}
+			}
+			
 		}
 
-		search_filters = { FOCUS_FILTER_ }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 	
 	focus = {
