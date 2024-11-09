@@ -709,6 +709,16 @@
  NIC_fascism_party:0 "PLN-F"
  NIC_fascism_party_long:0 "Partido Liberal Nacionalista - Fascistas"
 
+ #NIR
+ NIR_neutrality_party:0 "UUP"
+ NIR_neutrality_party_long:0 "Ulster Unionist Party"
+ NIR_democratic_party:0 "PN"
+ NIR_democratic_party_long:0 "An Páirtí Náisiúnach"
+ NIR_communism_party:0 "PCÉ"
+ NIR_communism_party_long:0 "Páirtí Cumannach na hÉireann"
+ NIR_fascism_party:0 "ÓÉ"
+ NIR_fascism_party_long:0 "Óglaigh na hÉireann"
+
  #NRU
  NRU_democratic_party:0 "Council of Chiefs"
  NRU_neutrality_party:0 "The Nauruan Monarchy"
@@ -844,10 +854,14 @@
  SCA_neutrality_party_long:0 "Nordisk Råd"
 
  #SCO
- SCO_neutrality_party:0 "Unionist Party"
- SCO_neutrality_party_long:0 "Unionist Party"
- SCO_communist_party:0 "CPS"
- SCO_communist_party_long:0 "Communist Party of Scotland"
+ SCO_fascism_party:0 "SDFP"
+ SCO_fascism_party_long:0 "Scottish Democratic Fascist Party"
+ SCO_neutrality_party:0 "UP - NLP - NLO - NG"
+ SCO_neutrality_party_long:0 "Unionist Party - National Liberal Party - National Labour Organisation - National Government"
+ SCO_democratic_party:0 "SNP - SLP - LP"
+ SCO_democratic_party_long:0 "Scottish National Party - Scottish Liberal Party - Labour Party"
+ SCO_communism_party:0 "CPS - ILP"
+ SCO_communism_party_long:0 "Communist Party of Scotland - Independent Labour Party"
 
  #SHL
  SHL_neutrality_party:0 "Haus Oldenburg"
@@ -1065,6 +1079,16 @@
  WLL_coalition_conservative_socialist_party_long:0 "Parti Social Chrétien - Parti Socialiste"
  WLL_fascism_party:0 "Rex"
  WLL_fascism_party_long:0 "Parti Rexiste"
+
+ #WLS
+ WLS_neutrality_party:0 "PCC"
+ WLS_neutrality_party_long:0 "Plaid Ceidwadwyr Cymreig"
+ WLS_communism_party:0 "PSC"
+ WLS_communism_party_long:0 "Plaid Sosialaidd Cymru"
+ WLS_democratic_party:0 "PGC"
+ WLS_democratic_party_long:0 "Plaid Genedlaethol Cymru"
+ WLS_fascism_party:0 "PAC" # made up
+ WLS_fascism_party_long:0 "Plaid Annibyniaeth Cymru" # made up
 
  #WUR
  WUR_neutrality_party:0 "Haus Württemberg"

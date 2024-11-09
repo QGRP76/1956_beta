@@ -32,6 +32,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			random_owned_controlled_state = {
+				prioritize = { 230 }
 				limit = {
 					free_building_slots = {
 						building = industrial_complex
@@ -244,33 +245,44 @@ focus_tree = {
 
 		completion_reward = {
 			random_owned_controlled_state = {
+				prioritize = { 230 }
 				limit = {
 					free_building_slots = {
 						building = arms_factory
-						size > 0
+						size > 1
 						include_locked = yes
 					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 230 }
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:generic_infantry_equipment_organization = {
+					add_mio_size = 1
+					add_mio_funds = 500
 				}
 			}
 		}
@@ -296,26 +308,12 @@ focus_tree = {
 
 		completion_reward = {
 			random_owned_controlled_state = {
+				prioritize = { 230 }
 				limit = {
 					free_building_slots = {
 						building = arms_factory
-						size > 0
+						size > 1
 						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -325,6 +323,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			add_ideas = SLO_military_production
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -348,26 +347,12 @@ focus_tree = {
 
 		completion_reward = {
 			random_owned_controlled_state = {
+				prioritize = { 230 }
 				limit = {
 					free_building_slots = {
 						building = arms_factory
-						size > 0
+						size > 1
 						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -375,6 +360,22 @@ focus_tree = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				ahead_reduction = 0.5
+				uses = 1
+				category = artillery
+			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:generic_artillery_organization = {
+					add_mio_size = 1
+					add_mio_funds = 500
 				}
 			}
 		}
@@ -401,13 +402,41 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			230 = {
-				add_extra_state_shared_building_slots = 2
+			random_owned_controlled_state = {
+				prioritize = { 230 }
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = industrial_complex
-					level = 2
+					type = infrastructure
+					level = 1
 					instant_build = yes
 				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 230 }
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_timed_idea = {
+				idea = RAJ_Railway_Expansion_Act
+				days = 365
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -430,12 +459,24 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			230 = {
-				add_extra_state_shared_building_slots = 2
+			random_owned_controlled_state = {
+				prioritize = { 230 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
+				}
+				add_dynamic_modifier = {
+					modifier = r56_AFG_hydroelectric_power
+					days = 365
 				}
 			}
 		}
@@ -461,13 +502,44 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			230 = {
-				add_extra_state_shared_building_slots = 2
+			random_owned_controlled_state = {
+				prioritize = { 230 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 230 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = construction_tech_bonus
+				bonus = 0.5
+				ahead_reduction = 0.5
+				uses = 1
+				category = construction_tech
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -480,19 +552,42 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 10
-
 		
  		ai_will_do = {
  			factor = 6
 		}
 		completion_reward = {
-			230 = {
-                add_extra_state_shared_building_slots = 1
-                add_building_construction = {
-                    type = synthetic_refinery
-                    level = 1
-                    instant_build = yes
-                }
+			random_owned_controlled_state = {
+				prioritize = { 230 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 230 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
 			}
 			add_tech_bonus = {
 				name = GER_coal_liquidization
@@ -505,11 +600,32 @@ focus_tree = {
 	}
 	focus = {
 		id = ARM_industrial_advancements
-		icon = GFX_focus_research2
+		icon = GFX_goal_generic_education
 		prerequisite = { focus = ARM_expand_ararat_cement }
 		relative_position_id = ARM_plan_the_kajaran_mine
 		x = -1
 		y = 1
+		cost = 10
+ 		ai_will_do = {
+ 			factor = 50
+		}
+
+		available = {
+			amount_research_slots < 5
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = ARM_expand_the_yerevan_university
+		icon = GFX_focus_research2
+		prerequisite = { focus = ARM_industrial_advancements }
+		relative_position_id = ARM_industrial_advancements
+		x = 0
+		y = 2
 		cost = 10
  		ai_will_do = {
  			factor = 50
@@ -542,6 +658,13 @@ focus_tree = {
         	   resource = rubber
         	   amount = 2
         	}
+			add_tech_bonus = {
+				name = GER_coal_liquidization
+				bonus = 0.5
+				ahead_reduction = 0.5
+				uses = 1
+				category = synth_resources
+			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RUBBER }
 	}
@@ -552,17 +675,48 @@ focus_tree = {
 		relative_position_id = ARM_support_chemical_factories
 		x = -1
 		y = 1
-		cost = 10
+		cost = 8
+
+		available = {
+			controls_state = 230
+		}
 		
  		ai_will_do = {
  			factor = 4
 		}
 		completion_reward = {
-        	modify_building_resources = {
-        	   building = synthetic_refinery
-        	   resource = rubber
-        	   amount = 2
-        	}
+        	random_owned_controlled_state = {
+				prioritize = { 230 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 230 }
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RUBBER }
 	}
@@ -648,9 +802,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = ARM_party_involvement_idea
+			swap_ideas = {
+				add_idea = ARM_fading_national_identity_communist_2
+				remove_idea = ARM_fading_national_identity_communist
+			}
 		}
-		search_filters = {  FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = ARM_purge_the_trotskyist_dashnaks
@@ -681,9 +838,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = ARM_party_involvement_idea
+			add_popularity = {
+				ideology = communism
+				popularity = 0.10
+			}
+			add_stability = -0.05
+			remove_ideas = ARM_dashnak_hunchak_split
 		}
-		search_filters = {  FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = ARM_utilize_the_nkvd
@@ -714,7 +876,22 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = ARM_state_atheism_idea
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+					NOT = {
+						has_intelligence_agency = yes
+					}
+				}
+				create_intelligence_agency = yes
+			}
+			add_ideas = SOV_nkvd_nsb
+			add_tech_bonus = {
+				name = mp_tech_bonus_name
+				bonus = 1
+				uses = 1
+				category = military_police_tech
+			}			
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -749,6 +926,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_political_power = 75
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+			add_stability = -0.05
 			add_ideas = ARM_state_atheism_idea
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -783,9 +966,23 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_political_power = -25
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
 			add_stability = 0.05
-			show_ideas_tooltip = ARM_khoren_I
-			show_ideas_tooltip = ARM_gevorg_VI
+			if = {
+				limit = {
+					has_country_flag = ARM_catholicos_khoren_has_died
+				}
+				custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip = ARM_gevorg_VI
+			}
+			else = {
+				custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip = ARM_khoren_I
+			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -818,9 +1015,25 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = ARM_state_atheism_idea
+			random_owned_controlled_state = {
+				prioritize = { 230 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = ARM_armenian_workers_union_idea
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 	focus = {
 		id = ARM_mobilize_the_workers
@@ -851,6 +1064,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_war_support = 0.05
 			add_ideas = ARM_workers_propaganda_idea
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -868,38 +1086,6 @@ focus_tree = {
  			factor = 6
 		}
 		
-		OR = {
-			is_subject = no
-			has_government = communism
-			if = {
-				limit = {
-					is_subject = yes
-				}
-				OVERLORD = {
-					has_government = communism
-				}
-			}
-		}
-
-		completion_reward = {
-			add_ideas = ARM_beat_production_quotas_idea
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	focus = {
-		id = ARM_build_the_kovkas_line
-		icon = GFX_goal_generic_mountain_fortification
-		prerequisite = { focus = ARM_ambitious_production_quotas }
-		prerequisite = { focus = ARM_fund_the_armenian_workers_union }
-		relative_position_id = ARM_fund_the_armenian_workers_union
-		x = 1
-		y = 1
-		cost = 10
-
- 		ai_will_do = {
- 			factor = 5
-		}
-
 		available = {
 			OR = {
 				is_subject = no
@@ -916,9 +1102,104 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = ARM_protect_the_revolution_idea
+			random_owned_controlled_state = {
+				prioritize = { 230 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 230 }
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = r56_ROM_nationalized_industry_civ
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT FOCUS_FILTER_MANPOWER }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = ARM_build_the_kovkas_line
+		icon = GFX_goal_generic_mountain_fortification
+		prerequisite = { focus = ARM_ambitious_production_quotas }
+		prerequisite = { focus = ARM_fund_the_armenian_workers_union }
+		relative_position_id = ARM_fund_the_armenian_workers_union
+		x = 1
+		y = 1
+		cost = 8
+
+ 		ai_will_do = {
+ 			factor = 5
+		}
+
+		available = {
+			230 = {
+				is_fully_controlled_by = ROOT
+			}
+			OR = {
+				is_subject = no
+				has_government = communism
+				if = {
+					limit = {
+						is_subject = yes
+					}
+					OVERLORD = {
+						has_government = communism
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 230 }
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 12320
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 3564
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 12441
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 12380
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT }
 	}
 	focus = {
 		id = ARM_join_the_comintern
@@ -937,6 +1218,22 @@ focus_tree = {
 		}
 
 		available = {
+			is_subject = no
+			is_in_faction = no
+			OR = {
+				SOV = {
+					NOT = { has_war_with = ROOT }
+					has_government = communism
+					has_capitulated = no
+					is_faction_leader = yes
+				}
+				any_other_country = {
+					is_major = yes
+					has_government = communism
+					is_faction_leader = yes
+					NOT = { has_war_with = ROOT }
+				}
+			}
 			OR = {
 				is_subject = no
 				has_government = communism
@@ -951,8 +1248,39 @@ focus_tree = {
 			}
 		}
 
+		bypass = {
+			OR = {
+				is_subject = yes
+				is_in_faction_with = SOV
+			}
+		}
+
 		completion_reward = {
-			add_ideas = ARM_protect_the_revolution_idea
+			if = {
+				limit = {
+					SOV = {
+						has_government = communism
+						is_faction_leader = yes
+						has_capitulated = no
+						NOT = { has_war_with = ROOT }
+					}
+					NOT = {
+						any_other_country = {
+							is_in_faction_with = SOV
+							has_war_with = ROOT
+						}
+					}
+				}
+				SOV = {
+					country_event = generic.2
+				}
+			}
+			else = {
+				get_best_alliance_match_communism_effect = yes
+				var:best_leader = {
+					country_event = generic.2
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_ALLIANCE }
 	}
@@ -973,6 +1301,20 @@ focus_tree = {
 		}
 
 		available = {
+			is_subject = no
+			is_in_faction = no
+			any_country = {
+				OR = {
+					tag = GEO
+					tag = AZR
+					tag = ABK
+				}
+				NOT = { 
+					has_war_with = ROOT
+					is_subject = yes
+					is_in_faction = yes
+				}
+			}
 			OR = {
 				is_subject = no
 				has_government = communism
@@ -988,7 +1330,23 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = ARM_protect_the_revolution_idea
+			add_war_support = 0.05
+			create_faction = "Transcaucasian Confederation"
+			every_other_country = {
+				limit = {
+					OR = {
+						tag = GEO
+						tag = AZR
+						tag = ABK
+					}
+					NOT = { 
+						has_war_with = ROOT
+						is_subject = yes
+						is_in_faction = yes
+					}
+				}
+				country_event = { id = generic.5 hours = 6 }
+			}
 		}
 		search_filters = { FOCUS_FILTER_ALLIANCE }
 	}
@@ -1006,6 +1364,7 @@ focus_tree = {
 		}
 
 		available = {
+			is_in_faction_with = SOV
 			OR = {
 				is_subject = no
 				has_government = communism
@@ -1021,7 +1380,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = ARM_protect_the_revolution_idea
+			add_to_tech_sharing_group = comintern_research
+            add_tech_bonus = {
+                name = infantry_weapons_bonus
+                bonus = 0.5
+                uses = 1
+				ahead_reduction = 0.5
+                category = infantry_weapons
+                category = artillery
+				category = electronics
+            }
 		}
 		search_filters = { FOCUS_FILTER_ALLIANCE }
 	}
@@ -1054,6 +1422,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
 			add_ideas = ARM_protect_the_revolution_idea
 		}
 		search_filters = { FOCUS_FILTER_ALLIANCE }
@@ -1120,6 +1492,7 @@ focus_tree = {
 		}
 
 		available = {
+			controls_state = 230
 			OR = {
 				is_subject = no
 				has_government = neutrality
@@ -1134,8 +1507,15 @@ focus_tree = {
 			}
 		}
 
+		bypass = {
+			NOT = {
+				controls_state = 230
+			}
+		}
+
 		completion_reward = {
-			add_stability = 0.1
+			add_stability = 0.05
+			add_ideas = ARM_armenian_immigration
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -1172,7 +1552,26 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.1
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_stability = 0.05
+			if = {
+				limit = {
+					has_country_flag = ARM_catholicos_khoren_has_died
+				}
+				custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip = ARM_gevorg_VI
+			}
+			else = {
+				custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip = ARM_khoren_I
+			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -1190,26 +1589,38 @@ focus_tree = {
 		}
 
 		available = {
+			controls_state = 230
 			OR = {
 				is_subject = no
-				NOT = {
-					has_government = communism
-				}
+				has_government = neutrality
 				if = {
 					limit = {
 						is_subject = yes
 					}
 					OVERLORD = {
-						NOT = {
-							has_government = communism
-						}
+						has_government = neutrality
 					}
 				}
 			}
 		}
 
+		bypass = {
+			NOT = {
+				controls_state = 230
+			}
+		}
+
 		completion_reward = {
+			army_experience = 15
 			add_stability = 0.1
+			add_tech_bonus = {
+				name = mp_tech_bonus_name
+				bonus = 0.5
+				uses = 1
+				ahead_reduction = 0.5
+				category = industry
+				category = electronics
+			}	
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -1497,9 +1908,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			add_popularity = { ideology = fascism popularity = 0.10 }
-			add_ideas = nationalism
+			add_political_power = 50
+			add_war_support = 0.05
+			swap_ideas = {
+				remove_idea = ARM_fading_national_identity
+				add_idea = ARM_fading_national_identity_right
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -1546,7 +1960,7 @@ focus_tree = {
 			add_political_power = 35
 			add_popularity = { ideology = neutrality popularity = 0.10 }
 			swap_ideas = {
-				remove_idea = ARM_fading_national_identity
+				remove_idea = ARM_fading_national_identity_right
 				add_idea = ARM_fading_national_identity_royalist
 			}
 		}
@@ -1585,8 +1999,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			army_experience = 15
+			add_popularity = { ideology = neutrality popularity = 0.05 }
 			division_template = {
-				name = "Armenian Royal Guard"				# Armenian royal guards
+				name = "Dranik Gund"
 				division_names_group = ARM_INF_01
 				priority = 2
 				regiments = {
@@ -1606,12 +2022,25 @@ focus_tree = {
 					engineer = { x = 0 y = 2 }
 				}
 			}
-			custom_effect_tooltip = ARM_royal_guards_tt
-			hidden_effect = {
-			load_oob = "ARM_royal_guard"
+			random_owned_controlled_state = {
+				limit = {
+					state = 230
+					is_core_of = ROOT
+				}
+				custom_effect_tooltip = ARM_royal_guards_tt
+				hidden_effect = {
+					create_unit = {
+						division = "name = \"Dranik Gund\" division_template = \"Dranik Gund\" start_experience_factor = 0.3 start_equipment_factor = 1.0" 
+						owner = ROOT
+						prioritize_location = 12320
+					}
+					create_unit = {
+						division = "name = \"Dranik Gund\" division_template = \"Dranik Gund\" start_experience_factor = 0.3 start_equipment_factor = 1.0" 
+						owner = ROOT
+						prioritize_location = 12441
+					}
+				}
 			}
-			army_experience = 5
-			add_popularity = {ideology = neutrality popularity = 0.05}
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
 	}
@@ -1654,7 +2083,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = military_youth_focus
+			add_political_power = 35
+			add_popularity = { ideology = fascism popularity = 0.10 }
+			swap_ideas = {
+				remove_idea = ARM_fading_national_identity_right
+				add_idea = ARM_fading_national_identity_fascist
+			}
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
 	}
@@ -1691,7 +2125,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = military_youth_focus
+			add_manpower = 20000
+			add_ideas = COL_militarism_idea
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
 	}
@@ -1731,7 +2166,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = ARM_repression_apparatus_idea
+			swap_ideas = {
+				remove_idea = ARM_dashnak_hunchak_split
+				add_idea = ARM_repression_apparatus_idea
+			}
 			add_tech_bonus = {
 				name = mp_tech_bonus_name
 				bonus = 1
@@ -1739,7 +2177,7 @@ focus_tree = {
 				category = military_police_tech
 			}			
 		}
-		search_filters = {  FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
 		id = ARM_faith_resilience_heritage
@@ -1754,10 +2192,31 @@ focus_tree = {
  			factor = 8
 		}
 
+		available = {
+			OR = {
+				is_subject = no
+				has_government = neutrality
+				has_government = fascism
+				if = {
+					limit = {
+						is_subject = yes
+					}
+					OVERLORD = {
+						OR = {
+							has_government = neutrality
+							has_government = fascism
+						}
+					}
+				}
+			}
+		}
+
 		completion_reward = {
-			add_state_claim = 800
-			add_state_claim = 354
-			add_ideas = militarism_focus
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.10
+			}
+			add_ideas = ARM_faith_resilience_heritage_idea
 		}
 	}
 	focus = {
@@ -1773,10 +2232,60 @@ focus_tree = {
  			factor = 8
 		}
 
+		available = {
+			is_in_faction = no
+			is_subject = no
+			any_other_country = {
+				is_major = yes
+				has_government = fascism
+				is_faction_leader = yes
+				NOT = { has_war_with = ROOT }
+			}
+			OR = {
+				is_subject = no
+				has_government = neutrality
+				has_government = fascism
+				if = {
+					limit = {
+						is_subject = yes
+					}
+					OVERLORD = {
+						OR = {
+							has_government = neutrality
+							has_government = fascism
+						}
+					}
+				}
+			}
+		}
+
 		completion_reward = {
-			add_state_claim = 800
-			add_state_claim = 354
-			add_ideas = militarism_focus
+			if = {
+				limit = {
+					GER = {
+						has_government = fascism
+						is_faction_leader = yes
+						has_capitulated = no
+						NOT = { has_war_with = ROOT }
+						exists = yes
+					}
+					NOT = {
+						any_other_country = {
+							is_in_faction_with = GER
+							has_war_with = ROOT
+						}
+					}
+				}
+				GER = {
+					country_event = generic.2
+				}
+			}
+			else = {
+				get_best_alliance_match_fascism_effect = yes
+				var:best_leader = {
+					country_event = generic.2
+				}
+			}
 		}
 	}
 	focus = {
@@ -1787,16 +2296,35 @@ focus_tree = {
 		relative_position_id = ARM_royal_guards
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
  		ai_will_do = {
  			factor = 8
 		}
 
+		available = {
+			OR = {
+				is_subject = no
+				has_government = neutrality
+				has_government = fascism
+				if = {
+					limit = {
+						is_subject = yes
+					}
+					OVERLORD = {
+						OR = {
+							has_government = neutrality
+							has_government = fascism
+						}
+					}
+				}
+			}
+		}
+
 		completion_reward = {
 			add_state_claim = 800
 			add_state_claim = 354
-			add_ideas = militarism_focus
+			add_war_support = 0.05
 		}
 	}
 	focus = {
@@ -1809,36 +2337,64 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			r56_script_i_am_sane = yes
-			TUR = {
-				r56_script_target_is_sane = yes
-			}
+			is_subject = no
 			has_army_manpower = {
-				size > 99999
-			}			
+				size > 59999
+			}
+			OR = {
+				any_neighbor_country = {
+					TAG = TUR
+					NOT = {
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						has_war_with = ROOT
+					}
+				}
+				any_other_country = {
+					is_ally_with = ROOT
+					any_neighbor_country = {
+						TAG = TUR
+						NOT = {
+							is_in_faction_with = ROOT
+							is_subject_of = ROOT
+							has_war_with = ROOT
+						}
+					}
+				}		
+			}
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+				if = {
+					limit = {
+						is_subject = yes
+					}
+					OVERLORD = {
+						OR = {
+							has_government = neutrality
+							has_government = fascism
+						}
+					}
+				}
+			}
 		}
 
 		ai_will_do = {
  			factor = 5
 		}
 
+		will_lead_to_war_with = TUR
+
 		completion_reward = {
-			random_country = {
-				limit = {
-					OR = {
-						owns_state = 352
-						owns_state = 353
-						owns_state = 354
-					}
-				}
-				ARM = {
-					create_wargoal = {
-						type = take_state_focus
-						target = PREV
-						expire = 0
-						generator = { 352 353 354 }
-					}
-				}
+			create_wargoal = {
+				type = take_state_focus
+				target = TUR
+				expire = 0
+				generator = { 800 354 }
+			}
+			add_timed_idea = {
+				idea = ARM_operation_nemesis_idea
+				days = 180
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -1859,13 +2415,22 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			r56_script_i_am_sane = yes
-			TUR = {
-				r56_script_target_is_sane = yes
-			}
-			has_army_manpower = {
-				size > 99999
-			}			
+			is_subject = no
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+				if = {
+					limit = {
+						is_subject = yes
+					}
+					OVERLORD = {
+						OR = {
+							has_government = neutrality
+							has_government = fascism
+						}
+					}
+				}
+			}	
 		}
 
 		ai_will_do = {
@@ -1873,23 +2438,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			random_country = {
-				limit = {
-					OR = {
-						owns_state = 352
-						owns_state = 353
-						owns_state = 354
-					}
-				}
-				ARM = {
-					create_wargoal = {
-						type = take_state_focus
-						target = PREV
-						expire = 0
-						generator = { 352 353 354 }
-					}
-				}
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.10
 			}
+			add_war_support = 0.05
+			add_ideas = QBC_expansionist_ideology
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
@@ -1903,13 +2457,45 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			r56_script_i_am_sane = yes
-			TUR = {
-				r56_script_target_is_sane = yes
-			}
+			is_subject = no
 			has_army_manpower = {
-				size > 99999
-			}			
+				size > 79999
+			}
+			OR = {
+				any_neighbor_country = {
+					controls_state = 231
+					owns_state = 231
+					NOT = {
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						has_war_with = ROOT
+					}
+				}
+				any_other_country = {
+					is_ally_with = ROOT
+					any_neighbor_country = {
+						controls_state = 231
+						owns_state = 231
+						NOT = {
+							is_in_faction_with = ROOT
+							is_subject_of = ROOT
+							has_war_with = ROOT
+						}
+					}
+				}		
+			}	
+		}
+
+		bypass = {
+			any_neighbor_country = {
+				controls_state = 231
+				owns_state = 231
+				OR = {
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					has_war_with = ROOT
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -1917,22 +2503,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			random_country = {
-				limit = {
-					OR = {
-						owns_state = 352
-						owns_state = 353
-						owns_state = 354
-					}
-				}
-				ARM = {
-					create_wargoal = {
-						type = take_state_focus
-						target = PREV
-						expire = 0
-						generator = { 352 353 354 }
-					}
-				}
+			create_wargoal = {
+				type = take_state_focus
+				target = 231.owner
+				generator = { 231 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -1947,13 +2521,45 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			r56_script_i_am_sane = yes
-			TUR = {
-				r56_script_target_is_sane = yes
-			}
+			is_subject = no
 			has_army_manpower = {
-				size > 99999
-			}			
+				size > 79999
+			}
+			OR = {
+				any_neighbor_country = {
+					controls_state = 229
+					owns_state = 229
+					NOT = {
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						has_war_with = ROOT
+					}
+				}
+				any_other_country = {
+					is_ally_with = ROOT
+					any_neighbor_country = {
+						controls_state = 231
+						owns_state = 231
+						NOT = {
+							is_in_faction_with = ROOT
+							is_subject_of = ROOT
+							has_war_with = ROOT
+						}
+					}
+				}		
+			}	
+		}
+
+		bypass = {
+			any_neighbor_country = {
+				controls_state = 229
+				owns_state = 229
+				OR = {
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					has_war_with = ROOT
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -1961,22 +2567,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			random_country = {
-				limit = {
-					OR = {
-						owns_state = 352
-						owns_state = 353
-						owns_state = 354
-					}
-				}
-				ARM = {
-					create_wargoal = {
-						type = take_state_focus
-						target = PREV
-						expire = 0
-						generator = { 352 353 354 }
-					}
-				}
+			create_wargoal = {
+				type = take_state_focus
+				target = 229.owner
+				generator = { 229 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -1991,13 +2585,15 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			r56_script_i_am_sane = yes
-			TUR = {
-				r56_script_target_is_sane = yes
+			is_subject = no
+			SOV = {
+				exists = yes
+				has_capitulated = no
+				NOT = {
+					has_war_with = ROOT
+					is_in_faction_with = ROOT
+				}
 			}
-			has_army_manpower = {
-				size > 99999
-			}			
 		}
 
 		ai_will_do = {
@@ -2005,22 +2601,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			random_country = {
-				limit = {
-					OR = {
-						owns_state = 352
-						owns_state = 353
-						owns_state = 354
-					}
-				}
-				ARM = {
-					create_wargoal = {
-						type = take_state_focus
-						target = PREV
-						expire = 0
-						generator = { 352 353 354 }
-					}
-				}
+			create_wargoal = {
+				target = SOV
+				type = puppet_wargoal_focus
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -2042,13 +2625,22 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			r56_script_i_am_sane = yes
-			TUR = {
-				r56_script_target_is_sane = yes
-			}
-			has_army_manpower = {
-				size > 99999
-			}			
+			is_subject = no
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+				if = {
+					limit = {
+						is_subject = yes
+					}
+					OVERLORD = {
+						OR = {
+							has_government = neutrality
+							has_government = fascism
+						}
+					}
+				}
+			}		
 		}
 
 		ai_will_do = {
@@ -2056,28 +2648,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			random_country = {
-				limit = {
-					OR = {
-						owns_state = 352
-						owns_state = 353
-						owns_state = 354
-					}
-				}
-				ARM = {
-					create_wargoal = {
-						type = take_state_focus
-						target = PREV
-						expire = 0
-						generator = { 352 353 354 }
-					}
-				}
+			swap_ideas = {
+				remove_idea = ARM_faith_resilience_heritage_idea
+				add_idea = ARM_the_10th_crusade_idea
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 	focus = {
-		id = ARM_reclaim_antiochia
+		id = ARM_reclaim_antiochia # TODO
 		icon = GFX_focus_generic_attack_syria
 		prerequisite = { focus = ARM_the_10th_crusade }
 		relative_position_id = ARM_the_10th_crusade
@@ -2086,13 +2665,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			r56_script_i_am_sane = yes
-			TUR = {
-				r56_script_target_is_sane = yes
-			}
-			has_army_manpower = {
-				size > 99999
-			}			
+				
 		}
 
 		ai_will_do = {
@@ -2100,28 +2673,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			random_country = {
-				limit = {
-					OR = {
-						owns_state = 352
-						owns_state = 353
-						owns_state = 354
-					}
-				}
-				ARM = {
-					create_wargoal = {
-						type = take_state_focus
-						target = PREV
-						expire = 0
-						generator = { 352 353 354 }
-					}
-				}
-			}
+			
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 	focus = {
-		id = ARM_recapture_the_holy_land
+		id = ARM_recapture_the_holy_land # TODO
 		icon = GFX_focus_ETH_the_one_true_heir_of_solomon
 		prerequisite = { focus = ARM_the_10th_crusade }
 		relative_position_id = ARM_the_10th_crusade
@@ -2130,13 +2687,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			r56_script_i_am_sane = yes
-			TUR = {
-				r56_script_target_is_sane = yes
-			}
-			has_army_manpower = {
-				size > 99999
-			}			
+				
 		}
 
 		ai_will_do = {
@@ -2144,28 +2695,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			random_country = {
-				limit = {
-					OR = {
-						owns_state = 352
-						owns_state = 353
-						owns_state = 354
-					}
-				}
-				ARM = {
-					create_wargoal = {
-						type = take_state_focus
-						target = PREV
-						expire = 0
-						generator = { 352 353 354 }
-					}
-				}
-			}
+			
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 	focus = {
-		id = ARM_defenders_of_jersualem_servants_of_god
+		id = ARM_defenders_of_jersualem_servants_of_god # TODO
 		icon = GFX_focus_mex_restore_the_army_of_christ
 		prerequisite = { focus = ARM_reclaim_antiochia focus = ARM_recapture_the_holy_land }
 		relative_position_id = ARM_reclaim_antiochia
@@ -2174,13 +2709,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			r56_script_i_am_sane = yes
-			TUR = {
-				r56_script_target_is_sane = yes
-			}
-			has_army_manpower = {
-				size > 99999
-			}			
+					
 		}
 
 		ai_will_do = {
@@ -2188,23 +2717,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			random_country = {
-				limit = {
-					OR = {
-						owns_state = 352
-						owns_state = 353
-						owns_state = 354
-					}
-				}
-				ARM = {
-					create_wargoal = {
-						type = take_state_focus
-						target = PREV
-						expire = 0
-						generator = { 352 353 354 }
-					}
-				}
-			}
+			
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
@@ -2248,7 +2761,7 @@ focus_tree = {
 			add_war_support = 0.1
 			add_ideas = ARM_war_propaganda_idea
 		}
-		search_filters = {  FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 	}
 	focus = {
 		id = ARM_resettle_van
@@ -2264,6 +2777,8 @@ focus_tree = {
 		}
 
 		available = {
+			controls_state = 230
+			controls_state = 800
 			OR = {
 				is_subject = no
 				NOT = {
@@ -2283,10 +2798,35 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_war_support = 0.1
-			add_ideas = ARM_war_propaganda_idea
+			add_stability = -0.05
+			add_war_support = 0.05
+			add_state_core = 800
+			random_controlled_state = {
+				prioritize = { 230 }
+				add_manpower = -91372
+			}
+			random_state = {
+				limit = {
+					is_core_of = KUR
+					any_neighbor_state = {
+						state = 800
+					}
+				}
+				add_manpower = 91372
+			}
+			if = {
+				limit = {
+					country_exists = KUR
+				}
+				KUR = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = large_decrease
+					}
+				}
+			}
 		}
-		search_filters = {  FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
 	}
 	focus = {
 		id = ARM_resettle_trabzon
@@ -2302,6 +2842,8 @@ focus_tree = {
 		}
 
 		available = {
+			controls_state = 230
+			controls_state = 354
 			OR = {
 				is_subject = no
 				NOT = {
@@ -2321,10 +2863,35 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_war_support = 0.1
-			add_ideas = ARM_war_propaganda_idea
+			add_stability = -0.10
+			add_war_support = 0.05
+			add_state_core = 354
+			random_controlled_state = {
+				prioritize = { 230 }
+				add_manpower = -257782
+			}
+			random_state = {
+				limit = {
+					is_core_of = TUR
+					any_neighbor_state = {
+						state = 230
+					}
+				}
+				add_manpower = 257782
+			}
+			if = {
+				limit = {
+					country_exists = TUR
+				}
+				TUR = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = large_decrease
+					}
+				}
+			}
 		}
-		search_filters = {  FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
 	}
 	focus = {
 		id = ARM_nakhchivan_population_exchange
@@ -2340,6 +2907,8 @@ focus_tree = {
 		}
 
 		available = {
+			controls_state = 230
+			controls_state = 1044
 			OR = {
 				is_subject = no
 				NOT = {
@@ -2359,10 +2928,35 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_war_support = 0.1
-			add_ideas = ARM_war_propaganda_idea
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_state_core = 1044
+			random_controlled_state = {
+				prioritize = { 230 }
+				add_manpower = -31674
+			}
+			random_state = {
+				limit = {
+					is_core_of = PER
+					any_neighbor_state = {
+						state = 1044
+					}
+				}
+				add_manpower = 31674
+			}
+			if = {
+				limit = {
+					country_exists = AZR
+				}
+				AZR = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = large_decrease
+					}
+				}
+			}
 		}
-		search_filters = {  FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	# PRESERVATION TREE #
@@ -2439,7 +3033,11 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-			add_research_slot = 1
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_ideas = ARM_diaspora_funding
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -2476,13 +3074,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			army_experience = 25
+			add_manpower = 15000
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 			if = {
 				limit = {
 					FRA = {
 						has_country_flag = armenia_liberator
 					}
 				}
-				add_manpower = 50000
 				every_army_leader = {
 					add_defense = 1
 				}
@@ -2494,8 +3099,7 @@ focus_tree = {
 						has_country_flag = armenia_liberator
 					}
 				}
-				add_manpower = 10000
-				army_experience = 40
+				add_war_support = 0.05
 				create_corps_commander = {
 					name = "Haig Shekerjian"
 					portrait_path = "gfx/leaders/USA/Portrait_USA_Generic_land_4.dds"
@@ -2513,8 +3117,6 @@ focus_tree = {
 						has_country_flag = armenia_liberator
 					}
 				}
-				add_manpower = 15000
-				army_experience = 5
 				add_tech_bonus = {
 					name = infantry_weapons_bonus
 					bonus = 1
@@ -2528,24 +3130,8 @@ focus_tree = {
 					category = recon_tech
 				}
 			}
-			else_if = {
-				limit = {
-					NOT = {
-						original_tag = ENG
-						original_tag = FRA
-						original_tag = USA
-					}
-					has_country_flag = armenia_liberator
-				}
-				add_manpower = 3000
-				army_experience = 5
-				add_doctrine_cost_reduction = {
-					name = land_doc_bonus
-					cost_reduction = 0.5
-					uses = 1
-					category = land_doctrine
-				}
-			}
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = ARM_misak_torlakian
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 	}
@@ -2582,6 +3168,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			army_experience = 15
 			add_ideas = deterrence
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2618,78 +3205,25 @@ focus_tree = {
  			factor = 3
 		}
 		completion_reward = {
-            230 = {
-                add_building_construction = {
-                    type = bunker
-                    level = 2
-                    province = 12320
-                    instant_build = yes
-                    }
-                add_building_construction = {
-                    type = bunker
-                    level = 1
-                    province = 3564
-                    instant_build = yes
+			random_owned_controlled_state = {
+				prioritize = { 230 }
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 12320
 				}
-                add_building_construction = {
-                    type = bunker
-                    level = 1
-                    province = 4660
-                    instant_build = yes
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 3564
 				}
-                add_building_construction = {
-                    type = bunker
-                    level = 1
-                    province = 6642
-                    instant_build = yes
-				}
-                add_building_construction = {
-                    type = bunker
-                    level = 1
-                    province = 6997
-                    instant_build = yes
-				}
-                add_building_construction = {
-                    type = bunker
-                    level = 1
-                    province = 11708
-                    instant_build = yes
-				}
-                add_building_construction = {
-                    type = bunker
-                    level = 1
-                    province = 12380
-                    instant_build = yes
-				}
-                add_building_construction = {
-                    type = bunker
-                    level = 1
-                    province = 12441
-                    instant_build = yes
-				}
-                add_building_construction = {
-                    type = bunker
-                    level = 1
-                    province = 12450
-                    instant_build = yes
-				}
-                add_building_construction = {
-                    type = bunker
-                    level = 1
-                    province = 13123
-                    instant_build = yes
-				}
-                add_building_construction = {
-                    type = bunker
-                    level = 1
-                    province = 9715
-                    instant_build = yes
-				}
-                add_building_construction = {
-                    type = bunker
-                    level = 1
-                    province = 1467
-                    instant_build = yes
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 12441
 				}
 			}
 		}
@@ -2729,11 +3263,37 @@ focus_tree = {
 		}
 
 		completion_reward = {
-            230 = {
+			random_owned_controlled_state = {
+				prioritize = { 230 }
 				add_building_construction = {
-					type = anti_air_building
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 12380
+				}
+				add_building_construction = {
+					type = bunker
 					level = 2
 					instant_build = yes
+					province = 11708
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 12450
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 6642
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 4660
 				}
 			}
 		}
@@ -2753,7 +3313,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_full_control_of_state = 230
+			controls_state = 230
 			OR = {
 				is_subject = no
 				NOT = {
@@ -2773,10 +3333,31 @@ focus_tree = {
 		}
 
 		completion_reward = {
-            230 = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = anti_air_building
+						size > 0
+						include_locked = yes
+					}
+				}
 				add_building_construction = {
 					type = anti_air_building
-					level = 2
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = anti_air_building
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -2795,7 +3376,7 @@ focus_tree = {
  			factor = 2
 		}
 		available = {
-			has_full_control_of_state = 230
+			controls_state = 230
 			OR = {
 				is_subject = no
 				NOT = {
@@ -2815,6 +3396,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_stability = 0.05
 			add_ideas = ARM_cherish_what_we_have_idea
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2862,6 +3444,10 @@ focus_tree = {
 					modifier = medium_increase
 				}
 			}
+			add_opinion_modifier = {
+				target = TUR
+				modifier = medium_increase
+			}
 		}
 	}
 	focus = {
@@ -2904,8 +3490,12 @@ focus_tree = {
 			PER = {
 				add_opinion_modifier = {
 					target = ROOT
-					modifier = large_increase
+					modifier = medium_increase
 				}
+			}
+			add_opinion_modifier = {
+				target = PER
+				modifier = medium_increase
 			}
 		}
 	}

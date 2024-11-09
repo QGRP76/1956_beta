@@ -1628,6 +1628,16 @@
 				tag = KAZ
 			}
 		}
+		offset = {
+			x = -6
+			y = 0
+			trigger = {
+				OR = {
+					has_focus_tree = scotland_focus
+					has_focus_tree = r56_celtic_focus
+				}
+			}
+		}
 		cost = 10
 		available = {
 			num_of_controlled_states > 1
@@ -4235,6 +4245,13 @@
 					has_focus_tree = monaco_focus
 					has_focus_tree = san_marino_focus
 				}
+			}
+		}
+		offset = {
+			x = -6
+			y = 0
+			trigger = {
+				has_focus_tree = r56_celtic_focus
 			}
 		}
 		ai_will_do = {

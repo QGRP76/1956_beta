@@ -323,10 +323,10 @@
  ABC_establish_a_general_staff_idea:0 "General Staff"
  ABC_establish_a_general_staff_idea_desc:0 ""
 
- ABC_establish_a_general_staff_idea_1:0 "General Staff"
+ ABC_establish_a_general_staff_idea_1:0 "Thorough Military Plans"
  ABC_establish_a_general_staff_idea_1_desc:0 ""
 
- ABC_establish_a_general_staff_idea_2:0 "General Staff"
+ ABC_establish_a_general_staff_idea_2:0 "Quick Plan Improvisation"
  ABC_establish_a_general_staff_idea_2_desc:0 ""
 
  ABC_establish_a_military_academy_idea:0 "Military Academy"
@@ -417,10 +417,10 @@
 
  ########################## Events ##########################
 
- abc.1.t:0 "The Philosophy Of The General Staff"
- abc.1.desc:0 "Now that we're in the process of establishing a General Staff. What should be our philosophy when we make battle plans?"
- abc.1.a:0 "Take Our Time With Them"
- abc.1.b:0 "Develop Our Plans Quickly"
+ abc.1.t:0 "The Doctrine of The General Staff"
+ abc.1.desc:0 "Now that we're in the process of establishing a General Staff, there lie two choices ahead of us. Either we choose to plan and prepare for future wars, which, while taking quite a bit longer than its alternative, will provide us with a tremendous advantage in the chaos of war. Otherwise, we shall practice quick and swift planning on-the-spot, and improve our military's improvisation capabilities, thus making our responses and reactions to the enemy much quicker and decisive. The question is, which of these befits the [ROOT.GetAdjective] Army best?"
+ abc.1.a:0 "Our military plans must be well thought out, no matter the time cost."
+ abc.1.b:0 "Response to the enemy must be swift, in order to negate any disasterous outcomes!"
 
 
  ####--Technology Bonuses--####                #Apparently they are not showing up, which is a shame (hoped to show them if one looks at tech bonus before researching) #Fantom

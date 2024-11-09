@@ -45,10 +45,9 @@ ideas = {
 				always = yes
 			}			
 			modifier = {
-				war_support_factor = -0.05
-				conscription_factor = -0.10
+				war_support_factor = -0.10
+				conscription_factor = -0.15
 				communism_drift = 0.05
-				mobilization_speed = 0.15
 			}
 		}
 		# Democratic Identity
@@ -103,8 +102,8 @@ ideas = {
 				democratic_drift = 0.03
 			}
 		}
-		# Royalist Identity
-		ARM_fading_national_identity_royalist = {
+		# Right-Side Identity
+		ARM_fading_national_identity_right = {
 			picture = SWE_neither_death_nor_dishonor
 			allowed = {
 				always = no
@@ -117,7 +116,38 @@ ideas = {
 				war_support_factor = -0.10
 				conscription_factor = -0.10
 				drift_defence_factor = -0.05
+				fascism_drift = 0.01
+				neutrality_drift = 0.01
+			}
+		}
+		# Royalist Identity
+		ARM_fading_national_identity_royalist = {
+			picture = HUN_hungarian_monarchy_fascism
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality
+			}			
+			modifier = {
+				conscription = 0.01
+				drift_defence_factor = 0.10
 				neutrality_drift = 0.03
+			}
+		}
+		# Fascist Identity
+		ARM_fading_national_identity_fascist = {
+			picture = generic_fascism_drift_2
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}			
+			modifier = {
+				conscription = 0.01
+				drift_defence_factor = 0.10
+				fascism_drift = 0.03
 			}
 		}
 		ARM_dashnak_hunchak_split = {
@@ -149,68 +179,61 @@ ideas = {
 				political_power_factor = -0.05
 			}
 		}
-		ARM_party_involvement_idea = {
-			picture = generic_deal_with_the_devil
-			allowed = {
-				tag = ARM
-				has_government = communism
-			}
-			allowed_civil_war = {
-				has_government = communism
-			}			
-			modifier = {
-				 economy_cost_factor = -0.25 
-				 mobilization_laws_cost_factor = -0.25
-				 foreign_subversive_activites = -0.50 
-			}
-		}
+
+		# COMMUNIST IDEAS #
+
 		ARM_protect_the_revolution_idea = {
 			picture = generic_communist_army
 			allowed = {
-				tag = ARM
-				has_government = communism
+				original_tag = ARM
 			}
 			allowed_civil_war = {
 				has_government = communism
 			}			
 			modifier = {
-				conscription = 0.02 
-				army_core_defence_factor = 0.05
-				land_reinforce_rate = 0.02 
+				conscription = 0.01 
+				army_core_defence_factor = 0.10
+				army_core_attack_factor = 0.10
+				land_reinforce_rate = 0.05
+				war_support_factor = 0.15
 			}
 		}
 		ARM_workers_propaganda_idea = {
 			picture = trotskyite_plot_purged
 			allowed = {
-				tag = ARM
-				has_government = communism
+				original_tag = ARM
 			}
 			allowed_civil_war = {
 				has_government = communism
 			}			
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.1 
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.05
+				recruitable_population_factor = 0.10
+				mobilization_speed = 0.15
+				mobilization_laws_cost_factor = -0.25
 			}
 		}
-		ARM_beat_production_quotas_idea = {
+		ARM_armenian_workers_union_idea = {
 			picture = generic_production_bonus
 			allowed = {
-				tag = ARM
-				has_government = communism
+				original_tag = ARM
 			}
 			allowed_civil_war = {
 				has_government = communism
 			}			
 			modifier = {
-				production_factory_max_efficiency_factor = 0.1
-				line_change_production_efficiency_factor = 0.05
+				political_power_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = 0.10
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = 0.10
 			}
 		}
 		ARM_state_atheism_idea = {
 			picture = home_of_the_revolution
 			allowed = {
-				tag = ARM
-				has_government = communism
+				original_tag = ARM
 			}
 			allowed_civil_war = {
 				has_government = communism
@@ -222,10 +245,12 @@ ideas = {
 				research_speed_factor = 0.05 
 			}
 		}
+
+		# ECO IDEAS #
 		ARM_gold_extraction_idea = {
 			picture = HOL_reliance_on_the_gold_standard
 			allowed = {
-				tag = ARM
+				original_tag = ARM
 			}
 			modifier = {
 				consumer_goods_factor = -0.15
@@ -234,7 +259,7 @@ ideas = {
 		ARM_mass_tank_production_idea = {
 			picture = generic_acquire_tanks
 			allowed = {
-				tag = ARM
+				original_tag = ARM
 			}
 			equipment_bonus = {
 				light_tank_chassis = {
@@ -251,7 +276,7 @@ ideas = {
 		ARM_rifle_production_idea = {
 			picture = ast_volunteer_defence_corps
 			allowed = {
-				tag = ARM
+				original_tag = ARM
 			}
 			equipment_bonus = {
 				infantry_equipment = {
@@ -262,7 +287,7 @@ ideas = {
 		ARM_infantry_anti_tank_tactics_idea = {
 			picture = BEL_tank_destroyers_expertise
 			allowed = {
-				tag = ARM
+				original_tag = ARM
 			}
 			equipment_bonus = {
 				infantry_equipment = {
@@ -273,7 +298,7 @@ ideas = {
 		ARM_artillery_production_idea = {
 			picture = generic_artillery_regiments
 			allowed = {
-				tag = ARM
+				original_tag = ARM
 			}
 			equipment_bonus = {
 				artillery_equipment = {
@@ -281,67 +306,160 @@ ideas = {
 				}					
 			}							
 		}
-		ARM_liberator_military_mission = {
-			picture = generic_infantry_bonus
+
+		# LEFT SIDE IDEAS #
+
+		ARM_armenian_immigration = {
+			picture = prc_low_popular_support3
 			
 			allowed = {
-
+				original_tag = ARM
 			}
 
 			allowed_civil_war = {
-
+				NOT = {
+					has_government = communism
+				}
 			}
 
 			removal_cost = -1
-			#research_bonus = { land_doctrine = 0.02 } #didnt convert because low amount
+			 
 			modifier = {
-				land_reinforce_rate = 0.01
-				army_org_Factor = 0.05
+				monthly_population = 0.75
+				weekly_manpower = 100
+				consumer_goods_factor = -0.05
+				communism_drift = -0.01
+			}
+		}
+		ARM_faith_resilience_heritage_idea = {
+			picture = YUG_orthodox_church_support
+			
+			allowed = {
+				original_tag = ARM
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+			 
+			modifier = {
+				political_power_factor = -0.05
+				consumer_goods_factor = -0.05
+				communism_drift = -0.01
+				war_support_factor = 0.10
+				resistance_growth_on_our_occupied_states = 0.10
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		ARM_operation_nemesis_idea = {
+			picture = tur_funkplan
+			
+			allowed = {
+				original_tag = ARM
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+			 
+			modifier = {
+				mobilization_speed = 0.25
+				mobilization_laws_cost_factor = -0.25
+			}
+
+			targeted_modifier = {
+				tag = TUR
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.10
+			}
+		}
+		ARM_the_10th_crusade_idea = {
+			picture = YUG_orthodox_church_support
+			
+			allowed = {
+				original_tag = ARM
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+			 
+			modifier = {
+				political_power_factor = -0.15
+				consumer_goods_factor = -0.15
+				communism_drift = -0.03
+				war_support_factor = 0.20
+				mobilization_speed = 0.15
+				conscription = 0.01
+				resistance_growth_on_our_occupied_states = 0.10
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
 			}
 		}
 		ARM_organized_institutions = {
 			picture = generic_political_support
 			
 			allowed = {
-
+				original_tag = ARM
 			}
 
 			allowed_civil_war = {
-
+				NOT = {
+					has_government = communism
+				}
 			}
 
 			removal_cost = -1
 			 
 			modifier = {
-				 trade_laws_cost_factor = -0.25 
-				 political_advisor_cost_factor = -0.33
-				 foreign_subversive_activites = -0.25				
+				trade_laws_cost_factor = -0.25 
+				political_advisor_cost_factor = -0.33
+				foreign_subversive_activites = -0.25
 			}
 		}
 		ARM_war_propaganda_idea = {
 			picture = ast_volunteer_defence_corps
 			
 			allowed = {
-
+				original_tag = ARM
 			}
 
 			allowed_civil_war = {
-
+				NOT = {
+					has_government = communism
+				}
 			}
 
 			removal_cost = -1
 			 
 			modifier = {
-				 high_command_cost_factor = -0.25 
-				 mobilization_laws_cost_factor = -0.25
-				 foreign_subversive_activites = -0.33 				
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				political_power_factor = -0.05
+				mobilization_laws_cost_factor = -0.25
+				foreign_subversive_activites = -0.25				
 			}
 		}
 		ARM_royalism = {
 			picture = HUN_hungarian_monarchy
 			
 			allowed = {
-
+				original_tag = ARM
 			}
 
 			allowed_civil_war = {
@@ -358,35 +476,9 @@ ideas = {
 			removal_cost = -1
 			 
 			modifier = {
-				 neutrality_drift = 0.1				
+				neutrality_drift = 0.1				
 			}
 		}
-		ARM_rebirth_of_the_republic = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = democratic
-			}
-
-			cancel = {
-				OR = {
-					is_subject = yes
-					is_puppet = yes
-				}
-			}
-
-			removal_cost = -1
-
-			picture = generic_democratic_drift_bonus
-
-			
-			modifier = {
-				democratic_drift = 0.1
-			}
-		}	
 		ARM_repression_apparatus_idea = {
 			
 			allowed = {
@@ -394,27 +486,21 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_government = fascism
-			}
-
-			cancel = {
 				OR = {
-					is_subject = yes
-					is_puppet = yes
+					has_government = neutrality
+					has_government = fascism
 				}
 			}
 
 			removal_cost = -1
 
 			picture = generic_secret_police
-
 			
 			modifier = {
-				neutrality_drift = -0.01
-				democratic_drift = -0.01
-				communism_drift = -0.02
-				resistance_damage_to_garrison = -0.25
-				foreign_subversive_activites = -0.2
+				democratic_drift = -0.03
+				communism_drift = -0.03
+				resistance_damage_to_garrison = -0.15
+				foreign_subversive_activites = -0.10
 			}
 		}
 		ARM_cherish_what_we_have_idea = {
@@ -428,6 +514,19 @@ ideas = {
 				local_resources_factor = 0.10
 			}
 		}				
+		ARM_diaspora_funding = {
+			picture = tur_balkan_central_bank_wealthy_greece
+			allowed_civil_war = {
+				has_government = democratic
+			}			
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_industrial_complex_factor = 0.05
+				industrial_capacity_factory = 0.05
+				political_power_factor = -0.10
+				research_speed_factor = 0.05
+			}
+		}	
 	}
 	
 	materiel_manufacturer = {
@@ -439,7 +538,7 @@ ideas = {
 			picture = generic_motorized_equipment_manufacturer_2
 			
 			allowed = {
-					original_tag = ARM
+				original_tag = ARM
 			}	
 			available = {
 				has_completed_focus = ARM_motorization		

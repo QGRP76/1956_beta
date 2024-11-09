@@ -56,8 +56,7 @@
 
 		completion_reward = {
 			army_experience = 5
-
-			if = {
+			if = { # Tooltip Only
 				limit = {
 					NOT = {
 						has_country_flag = ABC_establish_a_general_staff_a
@@ -72,16 +71,14 @@
 				}
 				add_ideas = ABC_establish_a_general_staff_idea_1
 			}
-
 			if = {
 				limit = {
 					has_country_flag = ABC_establish_a_general_staff_b
 				}
 				add_ideas = ABC_establish_a_general_staff_idea_2
 			}
-
 			hidden_effect = {
-					set_country_flag = ABC_i_am_generic_army		
+				set_country_flag = ABC_i_am_generic_army		
 			}
 		}
 	}

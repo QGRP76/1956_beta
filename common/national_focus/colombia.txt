@@ -1451,7 +1451,7 @@
 		relative_position_id = COL_axis_leanings_focus
 		available = {
 			is_in_faction = no
-			is_puppet = no
+			is_subject = no
 			any_other_country = {
 				is_major = yes
 				has_government = fascism
@@ -2383,22 +2383,24 @@
 			has_army_manpower = {
 				size > 199999
 			}
-			any_neighbor_country = {
-				TAG = BOL
-				NOT = {
-					is_in_faction_with = ROOT
-					is_subject_of = ROOT
-					has_war_with = ROOT
-				}
-			}
-			any_other_country = {
-				is_ally_with = ROOT
+			OR = {
 				any_neighbor_country = {
 					TAG = BOL
 					NOT = {
 						is_in_faction_with = ROOT
 						is_subject_of = ROOT
 						has_war_with = ROOT
+					}
+				}
+				any_other_country = {
+					is_ally_with = ROOT
+					any_neighbor_country = {
+						TAG = BOL
+						NOT = {
+							is_in_faction_with = ROOT
+							is_subject_of = ROOT
+							has_war_with = ROOT
+						}
 					}
 				}
 			}
@@ -2430,7 +2432,6 @@
 				generator = { 302 487 1077 }
 			}
 			add_ideas = PRU_tupac_amaru
-
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
 	}
