@@ -3102,13 +3102,13 @@ focus_tree = {
 				add_war_support = 0.05
 				create_corps_commander = {
 					name = "Haig Shekerjian"
-					portrait_path = "gfx/leaders/USA/Portrait_USA_Generic_land_4.dds"
-					traits = { trait_cautious organizer}
+					portrait_path = "gfx/leaders/Europe/portrait_europe_generic_land_12.dds"
+					traits = { trait_cautious organizer }
 					skill = 2
 					attack_skill = 2
 					defense_skill = 1
-					planning_skill = 1
-					logistics_skill = 3
+					planning_skill = 2
+					logistics_skill = 2
 				}
 			}
 			else_if = {
