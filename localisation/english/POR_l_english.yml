@@ -437,7 +437,7 @@
 
  POR_return_to_civil_meritocracy:0 "Return to Civil Meritocracy"
  POR_return_to_civil_meritocracy_desc:0 ""
- POR_western_europes_model_democracy:0 "Western Europe's Model Democracy!"
+ POR_western_europes_model_democracy:0 "Western Europe's Model Democracy"
  POR_red_tinted_democracy:0 "Red-Tinted Democracy"
 
  POR_reform_the_junta_institutions:0 "Reform the Junta Institutions"
@@ -457,10 +457,6 @@
 
  POR_accomodate_europes_balance_of_power:0 "Accomodate Europe's Balance of Power"
  POR_accomodate_europes_balance_of_power_desc:0 ""
- POR_accomodate_europes_balance_of_power_tt:0 "The §Y[SOV.GetName]§!, and anyone allied to them will be §Rembargoed§! by us."
- POR_join_the_global_fight_against_fascism:0 "Take the Fight to Europe's Fascists"
- POR_join_the_global_fight_against_fascism_tt:0 "Every §8Fascist§! nation will be §Rembargoed§! by us."
- POR_contain_the_bolshevik_menace:0 "Contain the Bolshevik Menace"
 
  #Political - Historical (Maintain Salazar's Dictatorship)
  POR_continue_salazars_policies:0 "Continue Salazar's Policies"

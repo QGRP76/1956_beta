@@ -2693,14 +2693,14 @@ focus_tree = {
 					has_dlc = "La Resistance"
 					NOT = { has_intelligence_agency = yes }
 				}
-				add_political_power = 20
+				add_political_power = 25
 				create_intelligence_agency = { name = "Direção-Geral de Segurança" }
 			}
 			else_if = {
 				limit = {
 					NOT = { has_dlc = "La Resistance" }
 				}
-				add_political_power = 20
+				add_political_power = 25
 				add_tech_bonus = {
 					bonus = 1.0
 					uses = 2
@@ -2727,13 +2727,13 @@ focus_tree = {
 			focus = POR_pave_the_path_to_progress
 		}
 		icon = GFX_social_welfare
-		cost = 8
+		cost = 6
 		x = 3
 		y = 1
 		relative_position_id = POR_consolidate_the_revolution
 		available = { has_completed_focus = POR_continue_the_public_works_r56 }
 		completion_reward = {
-			add_political_power = 35
+			add_political_power = 40
 			custom_effect_tooltip = POR_towards_a_prosperous_proletariat_tt
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			add_ideas = POR_the_question_of_nationalization_idea
@@ -2934,7 +2934,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_consolidate_the_revolution
 		available = {
-			NOT = { has_completed_focus = POR_restore_civil_liberties }
+			always = no
 		}
 		completion_reward = {
 			add_stability = -0.1
@@ -3236,9 +3236,9 @@ focus_tree = {
 		relative_position_id = POR_hold_fair_elections
 		completion_reward = {
 			set_rule = { can_send_volunteers = yes }
+			set_rule = { can_create_factions = yes }
 			custom_effect_tooltip = CHL_skip_one_line_tt
-			unlock_decision_tooltip = POR_contain_the_bolshevik_menace
-			unlock_decision_tooltip = POR_join_the_global_fight_against_fascism
+			unlock_decision_tooltip = POR_join_the_allies_decision
 		}
 		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL }
 	}

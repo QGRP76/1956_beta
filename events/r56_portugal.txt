@@ -1503,20 +1503,20 @@ country_event = {
 						controls_state = 796
 					}
 					891 = {
-						set_compliance = 16
-						set_resistance = 60
+						set_compliance = 21
+						set_resistance = 57
 					}
 					892 = {
-						set_compliance = 19
-						set_resistance = 52
+						set_compliance = 23
+						set_resistance = 48
 					}
 					540 = {
-						set_compliance = 20
-						set_resistance = 47
+						set_compliance = 24
+						set_resistance = 45
 					}
 					796 = {
-						set_compliance = 21
-						set_resistance = 45
+						set_compliance = 24
+						set_resistance = 41
 					}
 				}
 				if = {
@@ -1526,37 +1526,37 @@ country_event = {
 						controls_state = 544
 					}
 					897 = {
-						set_compliance = 16
-						set_resistance = 60
+						set_compliance = 20
+						set_resistance = 57
 					}
 					896 = {
-						set_compliance = 19
-						set_resistance = 48
+						set_compliance = 22
+						set_resistance = 45
 					}
 					544 = {
-						set_compliance = 18
-						set_resistance = 46
+						set_compliance = 22
+						set_resistance = 45
 					}
 				}
 				if = {
 					limit = { controls_state = 705 }
 					705 = {
-						set_compliance = 16
-						set_resistance = 65
+						set_compliance = 21
+						set_resistance = 57
 					}
 				}
 				if = {
 					limit = { controls_state = 296 }
 					296 = {
-						set_compliance = 18
-						set_resistance = 57
+						set_compliance = 22
+						set_resistance = 53
 					}
 				}
 				if = {
 					limit = { controls_state = 702 }
 					702 = {
-						set_compliance = 23
-						set_resistance = 49
+						set_compliance = 27
+						set_resistance = 43
 					}
 				}
 			}
@@ -1564,6 +1564,9 @@ country_event = {
 	}
 	option = {
 		name = portugal.45.a
+		add_war_support = 0.05
+		add_manpower = 20000
+		custom_effect_tooltip = CHL_skip_one_line_tt
 		if = {
 			limit = { neutrality > 0.56 }
 			start_civil_war = {
@@ -2111,7 +2114,7 @@ country_event = {
 		add_ai_strategy = {
 			type = send_volunteers_desire
 			id = "POR"
-			value = 250
+			value = 1000
 		}
 		ai_chance = { 
 			base = 0

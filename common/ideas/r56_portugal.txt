@@ -24,7 +24,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				stability_weekly = -0.003
-				political_power_factor = -0.4
+				political_power_factor = -0.35
 				communism_drift = 0.02
 				democratic_drift = 0.01
 			}
@@ -53,7 +53,7 @@ ideas = {
 
 		#ARMY
 		POR_studying_the_spanish_civil_war = {
-			picture = SPA_maquis
+			picture = generic_war_preparation
 			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = { experience_gain_army = 0.1 }
@@ -80,7 +80,7 @@ ideas = {
 		}
 
 		POR_rejuvenating_the_land_forces = {
-			picture = generic_navy_bonus
+			picture = mex_callistas
 			allowed = { original_tag = POR }
 			allowed_civil_war = { original_tag = POR }
 			removal_cost = -1
@@ -101,8 +101,7 @@ ideas = {
 			cancel = { has_global_flag = scw_over }
 			removal_cost = -1
 			rule = { can_send_volunteers = yes }
-			targeted_modifier = {
-				tag = SPA
+			modifier = {
 				send_volunteer_divisions_required = -1
 				send_volunteers_tension = -1
 				send_volunteer_size = 2
@@ -116,8 +115,7 @@ ideas = {
 			cancel = { has_global_flag = scw_over }
 			removal_cost = -1
 			rule = { can_send_volunteers = yes }
-			targeted_modifier = {
-				tag = SPR
+			modifier = {
 				send_volunteer_divisions_required = -1
 				send_volunteers_tension = -1
 				send_volunteer_size = 2
@@ -153,7 +151,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_factor = -0.4
+				political_power_factor = -0.35
 				stability_factor = -0.1
 				neutrality_drift = 0.02
 				fascism_drift = 0.01
@@ -163,12 +161,6 @@ ideas = {
 		POR_reactionary_resistance2 = {
 			name = POR_reactionary_resistance
 			picture = chi_war_of_resistance2
-			allowed_civil_war = { 
-				OR = {
-					has_government = communism
-					has_government = democratic
-				} 
-			}
 			removal_cost = -1
 			modifier = {
 				political_power_factor = -0.3
@@ -180,15 +172,9 @@ ideas = {
 		POR_reactionary_resistance3 = {
 			name = POR_reactionary_resistance
 			picture = chi_war_of_resistance2
-			allowed_civil_war = { 
-				OR = {
-					has_government = communism
-					has_government = democratic
-				} 
-			}
 			removal_cost = -1
 			modifier = {
-				political_power_factor = -0.2
+				political_power_factor = -0.25
 				stability_factor = -0.05
 				neutrality_drift = 0.01
 			}
@@ -197,15 +183,9 @@ ideas = {
 		POR_reactionary_resistance4 = {
 			name = POR_reactionary_resistance
 			picture = chi_war_of_resistance2
-			allowed_civil_war = { 
-				OR = {
-					has_government = communism
-					has_government = democratic
-				} 
-			}
 			removal_cost = -1
 			modifier = {
-				political_power_factor = -0.15
+				political_power_factor = -0.2
 				stability_factor = -0.05
 			}
 		}
@@ -263,20 +243,7 @@ ideas = {
 				political_power_gain = 0.1
 				stability_factor = 0.05
 				neutrality_drift = -0.01
-				political_advisor_cost_factor = -0.25
-				weekly_casualties_war_support = 0.001
-			}
-		}
-
-		POR_hold_fair_elections_idea2 = {
-			name = POR_portugals_road_to_democracy
-			picture = worker_cluture
-			removal_cost = -1
-			modifier = {
-				political_power_gain = 0.1
-				stability_factor = 0.1
-				neutrality_drift = -0.02
-				political_advisor_cost_factor = -0.25
+				political_advisor_cost_factor = -0.2
 				weekly_casualties_war_support = 0.001
 			}
 		}
@@ -290,21 +257,6 @@ ideas = {
 				stability_factor = 0.05
 				democratic_drift = 0.02
 				neutrality_drift = -0.01
-				political_advisor_cost_factor = -0.25
-				weekly_casualties_war_support = 0.001
-			}
-		}
-
-		POR_western_europes_model_democracy2 = {
-			name = POR_portugals_road_to_democracy
-			picture = worker_cluture
-			removal_cost = -1
-			modifier = {
-				stability_weekly = 0.001
-				political_power_gain = 0.15
-				stability_factor = 0.1
-				democratic_drift = 0.02
-				neutrality_drift = -0.02
 				political_advisor_cost_factor = -0.25
 				weekly_casualties_war_support = 0.001
 			}
@@ -367,8 +319,7 @@ ideas = {
 			picture = generic_production_bonus
 			removal_cost = -1
 			modifier = {
-				production_speed_buildings_factor = 0.05
-				consumer_goods_factor = -0.075
+				production_speed_buildings_factor = 0.075
 				production_factory_efficiency_gain_factor = 0.1
 			}
 		}
@@ -378,8 +329,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				stability_weekly = -0.002
-				production_speed_buildings_factor = 0.075
-				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.12
 			}
 		}
@@ -389,8 +339,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				stability_weekly = -0.005
-				production_speed_buildings_factor = 0.08
-				consumer_goods_factor = -0.12
+				production_speed_buildings_factor = 0.125
 				production_factory_efficiency_gain_factor = 0.14
 			}
 		}																																
