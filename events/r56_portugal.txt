@@ -2250,7 +2250,7 @@ country_event = {
 	option = {
 		name = portugal.47.b	#Perhaps some autonomy would suffice?
 		ai_chance = { base = 0 }
-		set_country_flag = POR_released_colonies_flag
+		set_country_flag = POR_colonial_autonomy_flag
 		mark_focus_tree_layout_dirty = yes
 		if = {
 			limit = { has_completed_focus = POR_ally_anti_colonial_resistance }

@@ -2693,12 +2693,14 @@ focus_tree = {
 					has_dlc = "La Resistance"
 					NOT = { has_intelligence_agency = yes }
 				}
+				add_political_power = 20
 				create_intelligence_agency = { name = "Direção-Geral de Segurança" }
 			}
 			else_if = {
 				limit = {
 					NOT = { has_dlc = "La Resistance" }
 				}
+				add_political_power = 20
 				add_tech_bonus = {
 					bonus = 1.0
 					uses = 2
@@ -2706,7 +2708,7 @@ focus_tree = {
 					category = computing_tech
 				}
 			}
-			else = { add_political_power = 40 }
+			else = { add_political_power = 50 }
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			add_ideas = POR_general_directorate_of_securty_idea
 		}
@@ -2715,8 +2717,10 @@ focus_tree = {
 
 	focus = {
 		id = POR_towards_a_prosperous_proletariat
-		prerequisite = { focus = POR_consolidate_the_revolution }
-		prerequisite = { focus = POR_pave_the_path_to_progress }
+		prerequisite = { 
+			focus = POR_consolidate_the_revolution 
+			focus = POR_pave_the_path_to_progress
+		}
 		icon = GFX_social_welfare
 		cost = 10
 		x = 3
@@ -2724,7 +2728,7 @@ focus_tree = {
 		relative_position_id = POR_consolidate_the_revolution
 		available = { has_completed_focus = POR_continue_the_public_works_r56 }
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 35
 			custom_effect_tooltip = POR_towards_a_prosperous_proletariat_tt
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			add_ideas = POR_the_question_of_nationalization_idea
@@ -2856,7 +2860,7 @@ focus_tree = {
 		relative_position_id = POR_storm_the_national_assembly
 		available = { has_civil_war = no }
 		completion_reward = {
-			add_political_power = 35
+			add_political_power = 40
 			add_popularity = {
 				ideology = communism
 				popularity = 0.02
@@ -2952,7 +2956,7 @@ focus_tree = {
 			NOT = { has_completed_focus = POR_curb_political_militias }
 		}
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 30
 			add_war_support = 0.03
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			set_country_flag = POR_arm_anti_fascist_militias_flag
@@ -3076,7 +3080,7 @@ focus_tree = {
 			NOT = { has_completed_focus = POR_empower_socialist_organizations }
 		}
 		completion_reward = { 
-			add_political_power = 25
+			add_political_power = 30
 			add_stability = 0.03
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3091,9 +3095,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_restore_civil_liberties
 		completion_reward = {
-			add_stability = 0.03
+			add_political_power = 25
+			unlock_decision_tooltip = POR_call_for_reconciliation
 			unlock_decision_tooltip = POR_foment_peace_with_the_church
-			unlock_decision_tooltip = POR_end_the_political_trials
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}
@@ -3108,8 +3112,8 @@ focus_tree = {
 		relative_position_id = POR_restore_civil_liberties
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = POR_has_completed_decision_create_a_constitutional_judiciary_tt
-				has_country_flag = POR_create_a_constitutional_judiciary_flag
+				tooltip = POR_has_completed_decision_end_the_political_trials_tt
+				has_country_flag = POR_end_the_political_trials_flag
 			}
 			custom_trigger_tooltip = {
 				tooltip = POR_has_completed_decision_loosen_censorship_policies_tt
@@ -3174,6 +3178,11 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 25
 			add_war_support = 0.05
+			if = {
+				limit = { has_government = democratic }
+				custom_effect_tooltip = CHL_skip_one_line_tt
+				unlock_decision_tooltip = POR_crack_down_on_leftist_anti_democrats
+			}
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = POR_joao_de_azevedo_coutinho
@@ -3194,7 +3203,10 @@ focus_tree = {
 		relative_position_id = POR_hold_fair_elections
 		completion_reward = {
 			add_political_power = 75
-			unlock_decision_tooltip = POR_crack_down_on_leftist_anti_democrats
+			unlock_decision_tooltip = POR_create_a_constitutional_judiciary
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = POR_duarte_jose_pacheco
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}
@@ -3204,11 +3216,12 @@ focus_tree = {
 		prerequisite = { focus = POR_reform_the_junta_institutions }
 		icon = GFX_goal_generic_democracy
 		cost = 8
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = POR_reform_the_junta_institutions
 		completion_reward = {
-			
+			add_political_power = 75
+			unlock_decision_tooltip = POR_a_new_status_for_the_colonies
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}
@@ -3218,7 +3231,7 @@ focus_tree = {
 		prerequisite = { focus = POR_reform_the_junta_institutions }
 		icon = GFX_focus_generic_court
 		cost = 8
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = POR_reform_the_junta_institutions
 		completion_reward = {
@@ -3235,8 +3248,6 @@ focus_tree = {
 					add_idea = POR_western_europes_model_democracy
 				}
 			}
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = POR_duarte_jose_pacheco
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}

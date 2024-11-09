@@ -528,8 +528,8 @@ characters = {
 			idea_token = POR_jose_filipe_de_barros_rodrigues
 			ledger = army
 			allowed = { original_tag = POR }
-			traits = { army_artillery_2 }
-			cost = 100
+			traits = { army_artillery_1 }
+			cost = 50
 			ai_will_do = { base = 1 }
 		}
 		field_marshal = {
@@ -811,7 +811,7 @@ characters = {
 					limit = { has_focus_tree = r56_portuguese_focus }
 					OR = {
 						has_completed_focus = POR_continue_salazars_policies
-						has_completed_focus = POR_return_to_civil_meritocracy
+						has_completed_focus = POR_reform_the_junta_institutions
 						has_completed_focus = POR_united_against_the_bolshevik_threat
 					} 
 				}

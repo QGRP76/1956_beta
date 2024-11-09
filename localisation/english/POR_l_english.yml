@@ -426,7 +426,7 @@
 
  POR_hold_fair_elections:0 "Hold Fair Elections"
  POR_hold_fair_elections_desc:0 ""
- POR_has_completed_decision_create_a_constitutional_judiciary_tt:0 "Has completed Decision §YCreate a Constitutional Judiciary§!"
+ POR_has_completed_decision_end_the_political_trials_tt:0 "Has completed Decision §YEnd the Political Trials§!"
  POR_has_completed_decision_loosen_censorship_policies_tt:0 "Has completed Decision §YLoosen Censorship Policies§!"
  portugal.58.t:0 "The [GetYear] Portuguese General Election"
  portugal.58.d:0 "After suffering through over a decade of dictatorship, and many more of political chaos and uncertainty, there is no doubt: the time to bring true freedom to Portugal's people is today. Major candidates running for Prime Minister include:\n\nJosé Norton de Matos, former Minister of War and High Commissioner of Angola. He is a political moderate who would prioritize political liberalism and the rule of law, while largely abandoning socialistic economic policies.\n\nJosé Domingues dos Santos, former Prime Minister during the First Republic years, also having served many other prominent positions in republican governments. Similar to Norton de Matos, he would likely seek to strengthen democratic institutions, while also commiting to a strong social state and labor reform, albeit with an abandonment of forced nationalization, and some of the other radical economic policies.\n\nBento António Gonçalves, who has demonstrated a newly found willingness to accept democratic principles. There is little doubt that his economic policies would largely continue, but the status of political balance, and the speed of his socialist transition bring some uncertainty.\n\nThe question is to the people of Portugal to answer. Who shall lead us through these uncertain times?"
@@ -443,14 +443,16 @@
  POR_reform_the_junta_institutions_desc:0 ""
 
  POR_pivot_the_nation_forward:0 "Pivot the Nation Forward!"
- POR_crack_down_on_leftist_anti_democrats:0 "Crack Down on Leftist Anti-Democrats"
+ POR_a_new_status_for_the_colonies:0 "A New Status For the Colonies"
 
  POR_unity_and_reconciliation:0 "Unity and Reconciliation"
  POR_unity_and_reconciliation_desc:0 ""
  POR_end_the_political_trials:0 "End the Political Trials"
+ POR_call_for_reconciliation:0 "Call for Reconciliation"
  
  POR_rehabilitate_the_armed_forces:0 "Rehabilitate the Armed Forces"
  POR_rehabilitate_the_armed_forces_desc:0 ""
+ POR_crack_down_on_leftist_anti_democrats:0 "Crack Down on Leftist Anti-Democrats"
 
  POR_accomodate_europes_balance_of_power:0 "Accomodate Europe's Balance of Power"
  POR_accomodate_europes_balance_of_power_desc:0 ""
