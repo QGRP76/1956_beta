@@ -3088,8 +3088,6 @@ focus_tree = {
 		relative_position_id = POR_defang_the_liberals
 		completion_reward = {
 			add_war_support = 0.05
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			unlock_decision_tooltip = POR_join_the_global_fight_against_fascism
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}
@@ -3238,7 +3236,7 @@ focus_tree = {
 			set_rule = { can_send_volunteers = yes }
 			set_rule = { can_create_factions = yes }
 			custom_effect_tooltip = CHL_skip_one_line_tt
-			unlock_decision_tooltip = POR_join_the_allies_decision
+			unlock_decision_tooltip = POR_come_to_britains_aid_dem
 		}
 		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL }
 	}
