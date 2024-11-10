@@ -1520,10 +1520,10 @@ country_event = {
 						controls_state = 540
 						controls_state = 796
 					}
-					891 = { set_resistance = 22 }
-					892 = { set_resistance = 21 }
-					540 = { set_resistance = 18 }
-					796 = { set_resistance = 10 }
+					891 = { add_resistance = 15 }
+					892 = { add_resistance = 14 }
+					540 = { add_resistance = 11 }
+					796 = { add_resistance = 5 }
 				}
 				if = {
 					limit = { 
@@ -1531,21 +1531,21 @@ country_event = {
 						controls_state = 896
 						controls_state = 544
 					}
-					897 = { set_resistance = 22 }
-					896 = { set_resistance = 18 }
-					544 = { set_resistance = 19 }
+					897 = { add_resistance = 14 }
+					896 = { add_resistance = 10 }
+					544 = { add_resistance = 11 }
 				}
 				if = {
 					limit = { controls_state = 705 }
-					705 = { set_resistance = 22 }
+					705 = { add_resistance = 15 }
 				}
 				if = {
 					limit = { controls_state = 296 }
-					296 = { set_resistance = 21 }
+					296 = { add_resistance = 14 }
 				}
 				if = {
 					limit = { controls_state = 702 }
-					702 = { set_resistance = 19 }
+					702 = { add_resistance = 12 }
 				}
 			}
 		}

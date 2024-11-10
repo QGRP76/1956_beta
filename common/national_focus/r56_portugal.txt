@@ -2524,7 +2524,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_political_power = 45
+			add_political_power = 50
 			custom_effect_tooltip = POR_unite_against_salazar_tt
 			mark_focus_tree_layout_dirty = yes
 			hidden_effect = {
@@ -2651,7 +2651,7 @@ focus_tree = {
 			has_global_flag = scw_over 
 		}
 		completion_reward = { country_event = portugal.51 }
-		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL   }
+		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2664,10 +2664,10 @@ focus_tree = {
 		relative_position_id = POR_storm_the_national_assembly
 		available = { has_civil_war = no }
 		completion_reward = {
-			add_stability = 0.03
+			add_stability = 0.04
 			add_popularity = {
 				ideology = communism
-				popularity = 0.03
+				popularity = 0.04
 			}
 			if = {
 				limit = { has_dlc = "La Resistance" }
@@ -2708,7 +2708,7 @@ focus_tree = {
 					category = computing_tech
 				}
 			}
-			else = { add_political_power = 50 }
+			else = { add_political_power = 60 }
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			if = {
 				limit = { has_idea = POR_NKVD_activity }
@@ -2832,8 +2832,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_towards_a_prosperous_proletariat
 		completion_reward = {
-			add_political_power = 40
-			add_stability = 0.03
+			add_political_power = 75
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			unlock_decision_tooltip = POR_maternalistic_welfare
 			unlock_decision_tooltip	= POR_invest_in_public_education 
@@ -2886,7 +2889,7 @@ focus_tree = {
 		relative_position_id = POR_storm_the_national_assembly
 		available = { has_civil_war = no }
 		completion_reward = {
-			add_political_power = 40
+			add_political_power = 45
 			add_popularity = {
 				ideology = communism
 				popularity = 0.02
@@ -3258,7 +3261,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_hold_fair_elections
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 30
 			add_war_support = 0.05
 			if = {
 				limit = { has_government = democratic }

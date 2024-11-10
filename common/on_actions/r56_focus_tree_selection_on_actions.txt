@@ -668,37 +668,23 @@ on_actions = {
 					add_ideas = POR_unstable_republic
 				}
 			}
-			else = { set_global_flag = POR_R56_focus_tree }
-
-			if = {
-				limit = { has_dlc = "La Resistance" }
-				POR = {
-					add_opinion_modifier = {
-						target = ENG
-						modifier  = POR_anglo_portuguese_alliance
-					}
-					ENG = {
-						add_opinion_modifier = {
-							target = POR
-							modifier  = POR_anglo_portuguese_alliance
-						}
-					}
-					GER = {
-						add_opinion_modifier = {
-							target = POR
-							modifier = fascism_leanings_good
-						}
-					}
-					ITA = {
-						add_opinion_modifier = {
-							target = POR
-							modifier = fascism_leanings_good
-						}
-					}
-				}
+			else = { 
+				set_global_flag = POR_R56_focus_tree
+				892 = { set_compliance = 55 } 
+				540 = { set_compliance = 55 } 
+				891 = { set_compliance = 35 }
+				796 = { set_compliance = 42 }
+				544 = { set_compliance = 42 }
+				896 = { set_compliance = 37 }
+				897 = { set_compliance = 37 }
+				296 = { set_compliance = 30 }
+				702 = { set_compliance = 30 }
+				705 = { set_compliance = 45 }
+				321 = { set_compliance = 45 }
+				729 = { set_compliance = 40 }
+				721 = { set_compliance = 35 }
 			}
-
-			
+		
 			### Iceland [ICE] [AAT]
 			if = {
 				limit = {

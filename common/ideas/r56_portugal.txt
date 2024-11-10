@@ -230,6 +230,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				stability_weekly = -0.001
+				political_power_gain = 0.05
 				neutrality_drift = -0.01
 				weekly_casualties_war_support = 0.001
 			}

@@ -13,13 +13,38 @@ if = {
 set_war_support = 0.15
 set_stability = 0.6 
 set_convoys = 50
-set_research_slots = 3	#can get 4th relatively easily
+set_research_slots = 3
 add_ideas = {
 	POR_lackluster_armed_forces
 	POR_disgruntled_republicans
 	POR_austerity_measures
 	limited_exports
 }
+
+add_opinion_modifier = {
+	target = ENG
+	modifier  = POR_anglo_portuguese_alliance
+}
+ENG = {
+	add_opinion_modifier = {
+		target = POR
+		modifier  = POR_anglo_portuguese_alliance
+	}
+}
+GER = {
+	add_opinion_modifier = {
+		target = POR
+		modifier = fascism_leanings_good
+	}
+}
+ITA = {
+	add_opinion_modifier = {
+		target = POR
+		modifier = fascism_leanings_good
+	}
+}
+
+
 set_technology = {
 	# Extended Technologies
 	etax_doctrine = 1
