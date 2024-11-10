@@ -2455,14 +2455,19 @@ country_event = {	#Addressing the Spanish Situation
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = portugal.51.a	#Through war, we have demonstrated our incredible resolve. Pan-Iberian unity is our way forward!
+		name = portugal.51.a	#Together, we've displayed incredible resolve! Pan-Iberian unity is our path forward!
 		trigger = {
 			has_country_flag = POR_join_forces_with_the_spanish_popular_front_flag
 			41 = {
 				owner = { 
 					OR = {
-						has_completed_focus = SPR_maintain_the_second_republic 
-						has_completed_focus = SPR_the_anti_fascist_workers_revolution
+						tag = SPR
+						tag = SPD
+						tag = SPC
+					}
+					OR = {
+						has_government = communism
+						has_government = democratic
 					}
 				}
 			}
@@ -2470,16 +2475,20 @@ country_event = {	#Addressing the Spanish Situation
 		every_country = {
 			limit = {
 				OR = {
+					tag = SPR
 					tag = SPD
-					tag = GLC
-					tag = NAV
-					tag = CAT
-					tag = ADU
+					tag = SPC
+				}
+				OR = {
+					has_government = communism
+					has_government = democratic
 				}
 				NOT = { has_war_with = ROOT }
-				NOT = { is_subject_of = ROOT }
 			}
-			country_event = { id = lar_portugal_iberian_workers_united.2 hours = 6 }
+			country_event = { 
+				id = lar_portugal_iberian_workers_united.2 
+				hours = 6 
+			}
 		}
 		hidden_effect = {
 			every_state = {

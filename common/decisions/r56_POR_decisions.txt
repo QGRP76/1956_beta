@@ -315,11 +315,11 @@ POR_the_path_to_economic_progress = {
 	POR_subsidize_rolling_stock_production = {
 		icon = railroads
 		fire_only_once = no
-		days_re_enable = 240
+		days_re_enable = 405
 		cost = 40
 		ai_will_do = { base = 50 }
 		visible = { has_completed_focus = POR_support_an_industrial_expansion }
-		days_remove = 120
+		days_remove = 135
 		modifier = {
 			production_speed_buildings_factor = 0.1
 			industry_repair_factor = 0.15
@@ -354,7 +354,7 @@ POR_the_path_to_economic_progress = {
 	POR_subsidize_rural_farming = {
 		icon = ger_mefo_bills
 		fire_only_once = no
-		days_re_enable = 280
+		days_re_enable = 400
 		cost = 50
 		ai_will_do = { base = 25 }
 		visible = { 
@@ -364,11 +364,38 @@ POR_the_path_to_economic_progress = {
 				has_completed_focus = POR_assistance_for_the_countryside
 			}
 		}
-		days_remove = 140
+		days_remove = 200
 		modifier = { consumer_goods_factor = 0.2 }
 		remove_effect = {
-			add_political_power = 60
-			add_stability = 0.03
+			add_political_power = 75
+			add_stability = 0.04
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.03
+			}
+		}
+	}
+
+	POR_maternalistic_welfare = {
+		icon = GFX_decision_generic_welfare
+		fire_only_once = no
+		days_re_enable = 360
+		cost = 50
+		ai_will_do = { base = 50 }
+		visible = {
+			OR = {
+				has_completed_focus = POR_reforge_the_social_state 
+				has_completed_focus = POR_restore_the_social_state
+				has_completed_focus = POR_seek_urban_working_class_support
+			} 
+		}
+		days_remove = 180
+		modifier = {
+			civilian_factory_use = 1
+			stability_weekly = 0.003
+			monthly_population = 0.25
+		}
+		remove_effect = {
 			add_popularity = {
 				ideology = ROOT
 				popularity = 0.03
@@ -387,8 +414,8 @@ POR_the_path_to_economic_progress = {
 				has_completed_focus = POR_expand_support_for_fascist_trade_unions
 			}
 		}
-		days_remove = 105
-		days_re_enable = 210
+		days_remove = 120
+		days_re_enable = 360
 		modifier = {
 			political_power_gain = -0.15
 			consumer_goods_factor = -0.1
@@ -450,7 +477,7 @@ POR_the_path_to_economic_progress = {
 		available = { has_government = communism }
 		days_remove = 125
 		modifier = {
-			stability_weekly = 0.002
+			stability_weekly = 0.003
 			civilian_factory_use = 1
 			political_power_factor = -0.1
 		}
@@ -504,7 +531,8 @@ POR_the_path_to_economic_progress = {
 	POR_invest_in_public_education = {
 		icon = GFX_decision_generic_book
 		fire_only_once = no
-		cost = 60
+		days_re_enable = 350
+		cost = 75
 		ai_will_do = { base = 25 }
 		visible = {
 			OR = {
@@ -513,37 +541,10 @@ POR_the_path_to_economic_progress = {
 				has_completed_focus = POR_plan_for_popular_education
 			} 
 		}
-		days_remove = 150
+		days_remove = 175
 		modifier = {
 			research_speed_factor = 0.06
-			stability_weekly = 0.001
-		}
-	}
-
-	POR_maternalistic_welfare = {
-		icon = GFX_decision_generic_welfare
-		fire_only_once = no
-		days_re_enable = 275
-		cost = 60
-		ai_will_do = { base = 50 }
-		visible = {
-			OR = {
-				has_completed_focus = POR_reforge_the_social_state 
-				has_completed_focus = POR_restore_the_social_state
-				has_completed_focus = POR_seek_urban_working_class_support
-			} 
-		}
-		days_remove = 180
-		modifier = {
-			civilian_factory_use = 1
 			stability_weekly = 0.002
-			monthly_population = 0.2
-		}
-		remove_effect = {
-			add_popularity = {
-				ideology = ROOT
-				popularity = 0.02
-			}
 		}
 	}
 
@@ -630,7 +631,7 @@ POR_the_path_to_economic_progress = {
 		cost = 80
 		ai_will_do = { base = 50 }
 		visible = { has_completed_focus = POR_modernize_the_countryside }
-		days_remove = 140
+		days_remove = 180
 		modifier = { production_factory_efficiency_gain_factor = 0.15 }
 		remove_effect = {
 			random_owned_state = {
@@ -773,6 +774,13 @@ POR_securing_the_revolution = {
 		icon = GFX_decision_generic_operation 
 		activation = { 
 			has_war = no
+			OR = {
+				controls_state = 540
+				controls_state = 544
+				controls_state = 296
+				controls_state = 721
+				controls_state = 729
+			} 
 			NOT = { has_completed_focus = POR_the_question_of_our_colonies }
 		}
 		available = { has_completed_focus = POR_the_question_of_our_colonies }
