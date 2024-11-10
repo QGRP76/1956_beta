@@ -509,6 +509,134 @@ MAL_the_malayan_military_decisions = {
 	}
 }
 
+MAL_reintegrate_singapore = {
+	MAL_integrate_singapore = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = MAL
+		}
+
+		available = {
+			controls_state = 336
+			336 = {
+				compliance > 50
+			}			
+		}
+		
+		fire_only_once = yes
+		cost = 50
+
+		complete_effect = {				
+			336 = {
+				add_core_of = MAL
+			}							
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	
+	MAL_grant_voting_rights_to_singapore = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = MAL
+		}
+
+		available = {
+			controls_state = 336
+			336 = {
+				NOT = { is_core_of = MAL }
+			}		
+		}
+		
+		fire_only_once = yes
+		cost = 50
+
+		complete_effect = {				
+			336 = {
+				add_compliance = 15
+			}			
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	
+	MAL_improve_living_conditions = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = MAL
+		}
+
+		available = {
+			controls_state = 336
+			336 = {
+				NOT = { is_core_of = MAL }
+			}		
+		}
+		
+		fire_only_once = yes
+		days_remove = 90
+		cost = 50
+		
+		complete_effect = {
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {				
+			336 = {
+				add_compliance = 15
+			}			
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	
+	MAL_suppress_independence_movements = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = MAL
+		}
+
+		available = {
+			controls_state = 336
+			336 = {
+				NOT = { is_core_of = MAL }
+			}		
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		cost = 50
+		
+		complete_effect = {
+			stability_factor = -0.2
+		}
+
+		remove_effect = {				
+			336 = {
+				add_compliance = 15
+			}			
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+}
+
 mal_independence_decisions = {
 	mal_declare_independence = {
 		icon = generic_independence

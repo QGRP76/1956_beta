@@ -1733,7 +1733,7 @@ focus_tree = {
 		icon = GFX_focus_generic_support_the_left_right
 		x = 2
 		y = 1
-		cost = 0
+		cost = 5
 		relative_position_id = MAL_the_new_malaysian_economy
 		prerequisite = { focus = MAL_the_new_malaysian_economy }
 		mutually_exclusive = { focus = MAL_the_british_pearl_of_the_east }
@@ -1778,7 +1778,7 @@ focus_tree = {
 		icon = GFX_focus_usa_focus_on_europe
 		x = 3
 		y = 1
-		cost = 0
+		cost = 5
 		relative_position_id = MAL_nationalize_natural_resources
 		prerequisite = { focus = MAL_nationalize_natural_resources }
 		
@@ -1793,7 +1793,22 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		
+			add_opinion_modifier = {
+				target = ENG
+				modifier = anti_capitalist_diplomacy_capitalists
+			}
+			add_opinion_modifier = {
+				target = FRA
+				modifier = anti_capitalist_diplomacy_capitalists
+			}
+			add_opinion_modifier = {
+				target = USA
+				modifier = anti_capitalist_diplomacy_capitalists
+			}
+			add_popularity = {
+				ideology = MAL
+				popularity = 0.2
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1830,7 +1845,7 @@ focus_tree = {
 		icon = GFX_goal_generic_position_armies
 		x = -1
 		y = 1
-		cost = 0
+		cost = 5
 		relative_position_id = MAL_brunei_oil_exploitation
 		prerequisite = { focus = MAL_brunei_oil_exploitation }
 
@@ -1865,7 +1880,7 @@ focus_tree = {
 		icon = GFX_focus_generic_concessions
 		x = 0
 		y = 1
-		cost = 0
+		cost = 5
 		relative_position_id = MAL_nationalize_natural_resources
 		prerequisite = { focus = MAL_nationalize_natural_resources }
 		mutually_exclusive = { focus = MAL_anti_western_policy }
@@ -1881,10 +1896,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		
+			add_political_power = -150
+			ENG = { 
+				country_event = { id = malaya.4 hours = 5 } 
+			}
+			custom_effect_tooltip = MAL_compensation_tt
+			# communist effects as well, but add in the future
 		}
 
-		search_filters = { FOCUS_FILTER_ }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 	
 	focus = {
@@ -1918,7 +1938,7 @@ focus_tree = {
 		icon = GFX_focus_RAJ_indian_gurkhas
 		x = 0
 		y = 1
-		cost = 0
+		cost = 5
 		relative_position_id = MAL_american_military_involvement
 		prerequisite = { focus = MAL_american_military_involvement }
 
@@ -1933,10 +1953,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		
+			add_ideas = MAL_malay_international_volunteers_idea
 		}
 
-		search_filters = { FOCUS_FILTER_ }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	
 	focus = {
@@ -1970,7 +1990,7 @@ focus_tree = {
 		icon = GFX_focus_AST_never_gallipoli
 		x = -1
 		y = 1
-		cost = 0
+		cost = 5
 		relative_position_id = MAL_anti_western_policy
 		prerequisite = { focus = MAL_anti_western_policy }
 		mutually_exclusive = { focus = MAL_collaboration_with_the_japanese }
@@ -1986,7 +2006,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		
+			add_opinion_modifier = {
+				target = JAP
+				modifier = anti_fascist_diplomacy_fascists
+			}
+			add_opinion_modifier = {
+				target = CHI
+				modifier = anti_capitalist_diplomacy_capitalists
+			}
+			add_opinion_modifier = {
+				target = HOL
+				modifier = anti_capitalist_diplomacy_capitalists
+			}
+			add_political_power = 50
+			add_war_support = 0.05
 		}
 
 		search_filters = { FOCUS_FILTER_ }
@@ -2250,7 +2283,7 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		x = -5
 		y = 1
-		cost = 0
+		cost = 5
 		relative_position_id = MAL_reorganizing_the_colony
 		prerequisite = { focus = MAL_reorganizing_the_colony }
 		mutually_exclusive = { focus = MAL_reinforce_ketuanan_Malaya }
@@ -2266,10 +2299,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		
+			add_ideas = MAL_civic_malaysian_nationalism_idea
+			add_stability = -0.05
 		}
 
-		search_filters = { FOCUS_FILTER_ }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	
 	focus = {
@@ -2292,7 +2326,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+			swap_ideas = {
+				remove_idea = MAL_divide_and_rule_policy
+				add_idea = MAL_divide_and_rule_policy_2
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_ }
@@ -2341,14 +2382,14 @@ focus_tree = {
 		icon = GFX_focus_generic_self_management
 		x = 0
 		y = 1
-		cost = 0
+		cost = 5
 		relative_position_id = MAL_civil_service_reform
 		prerequisite = { focus = MAL_civil_service_reform }
 
 		available_if_capitulated = yes
 
 		available = {
-		
+			democratic > 0.45
 		}
 
 		ai_will_do = {
@@ -2356,10 +2397,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		
+			set_politics = {
+				ruling_party = democratic
+			}
+			add_autonomy_ratio = 0.5
 		}
 
-		search_filters = { FOCUS_FILTER_ }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	
 	focus = {
@@ -2382,7 +2426,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		
+			swap_ideas = {
+				remove_idea = MAL_divide_and_rule_policy
+				add_idea = MAL_divide_and_rule_policy_alternative
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_ }

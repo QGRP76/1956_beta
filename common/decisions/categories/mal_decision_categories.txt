@@ -42,6 +42,22 @@ MAL_the_malayan_economy_decisions = {
 	visible = {
 		OR = {
 			has_completed_focus = MAL_renegotiate_foreign_investments
+			has_completed_focus = MAL_oil_reserves_for_pacific_war
+		}
+	}
+}
+
+MAL_reintegrate_singapore = {
+	priority = 13
+
+	allowed = {
+		original_tag = MAL
+	}
+
+	visible = {
+		controls_state = 336
+		336 = {
+			NOT = { is_core_of = MAL }
 		}
 	}
 }

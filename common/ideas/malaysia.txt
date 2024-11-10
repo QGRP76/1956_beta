@@ -84,6 +84,48 @@ ideas = { # things to fix from 16.10.24: fix the icons of some focuses like pro_
 			}
 		}
 		
+		MAL_divide_and_rule_policy_2 = { # may just cahnge this to unfederated states
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = saf_history_of_segregation
+			
+			modifier = {
+				political_power_cost = 0.15
+				production_factory_efficiency_gain_factor = -0.05
+				# -10% max factories in states
+			}
+		}
+		
+		MAL_divide_and_rule_policy_alternative = { # may just cahnge this to unfederated states
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = saf_history_of_segregation
+			
+			modifier = {
+				stability_factor = -0.2
+				communism_drift = -0.005
+				# -10% max factories in states
+			}
+		}
+		
 		MAL_cheap_chinese_laborers = {
 
 			allowed = {
@@ -584,6 +626,46 @@ ideas = { # things to fix from 16.10.24: fix the icons of some focuses like pro_
 			
 			modifier = {
 				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		
+		MAL_malay_international_volunteers_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = EST_exploit_the_banks
+			
+			modifier = {
+				send_volunteer_divisions_required = -1
+				send_volunteer_size = 5
+				send_volunteers_tension = -1
+			}
+		}
+		
+		MAL_civic_malaysian_nationalism_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = EST_exploit_the_banks
+			
+			modifier = {
+				democratic_drift = 0.0015
 			}
 		}
 	 	

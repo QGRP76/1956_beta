@@ -194,6 +194,88 @@ country_event = { # communist guerillas?
 	}
 }
 
+country_event = { # UK gets a choice to cede Singapore
+	id = malaysia.4
+	title = malaysia.4.t
+	desc = malaysia.4.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = { # yes
+		name = malaysia.4.a
+		ai_chance = {
+			base = 50
+			modifier = { 
+				factor = 100
+				MAL = {
+					is_ai = no
+				}
+			}
+		}
+		
+		ENG = {
+			add_political_power = 50
+		}
+		
+		MAL = { 
+			country_event = { id = malaya.5 hours = 5 } 
+		}
+	}
+	
+	option = { # no
+		name = malaysia.4.b
+		ai_chance = {
+			base = 50
+			modifier = { 
+				factor = 0
+				MAL = {
+					is_ai = no
+				}
+			}
+		}
+		
+		MAL = { 
+			country_event = { id = malaya.6 hours = 5 } 
+		}
+	}
+}
+
+country_event = { # britain gave singapore
+	id = malaysia.5
+	title = malaysia.5.t
+	desc = malaysia.5.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = malaysia.5.a
+		ai_chance = { factor = 100 }
+		
+		MAL = { 
+			transfer_state = 336 
+		}
+	}
+}
+
+country_event = { # britain said no to giving singapore
+	id = malaysia.6
+	title = malaysia.6.t
+	desc = malaysia.6.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = malaysia.6.a
+		ai_chance = { factor = 100 }
+		
+		add_political_power = 200
+		add_war_support = 0.05
+	}
+}
+
 
 
 # the unfederated state
