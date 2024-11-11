@@ -3895,6 +3895,10 @@ spriteTypes = {
 		name = "GFX_goal_COS_Navy"
 		texturefile = "gfx/interface/goals/cos/COS_Navy.dds"
 	}
+	SpriteType = {
+		name = "GFX_goal_COS_democracy"
+		texturefile = "gfx/interface/goals/cos/COS_democracy.dds"
+	}
 
 ###------> CSA <><> <><> <><> <><> <><>
 	SpriteType = {

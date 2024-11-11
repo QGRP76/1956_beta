@@ -41,7 +41,7 @@
 			}
 		}
 		offset = {
-			x = 13
+			x = 15
 			y = 0
 			trigger = {
 				has_focus_tree = r56_costa_rica_focus

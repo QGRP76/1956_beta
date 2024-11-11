@@ -13,7 +13,9 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		unlock_national_focus = URG_1938_elections
+		hidden_effect = {
+			unlock_national_focus = URG_1938_elections
+		}
 	}
 
 	fire_only_once = yes

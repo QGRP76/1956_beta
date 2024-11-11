@@ -1492,7 +1492,7 @@
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_ALLIANCE }
 	}
 	
 	focus = { 
@@ -1588,7 +1588,6 @@
 		cost = 3
 		bypass = {
 			is_in_faction_with = SOV
-			has_government = communism
 		}
 
 		ai_will_do = {
@@ -1921,17 +1920,22 @@
 		prerequisite = { focus = COL_why_we_fight }
 		relative_position_id = COL_why_we_fight
 
-		available = { 
-			has_government = democratic
+		available = {
 			is_subject = no
 			is_in_faction = no
-			ENG = {
+			any_other_country = {
+				is_major = yes
 				has_government = democratic
 				is_faction_leader = yes
+				has_capitulated = no
+				NOT = { has_war_with = ROOT }
 				NOT = {
-					has_war_with = ROOT
-				}
-			}
+					any_other_country = {
+						is_in_faction_with = PREV
+						has_war_with = ROOT
+					}
+				}						
+			}	
 		}
 
 		continue_if_invalid = yes

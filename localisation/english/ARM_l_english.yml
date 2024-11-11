@@ -42,6 +42,8 @@
  ARM_movses_silikyan:0 "Movses Silikyan"
  ARM_christopher_araratyan:0 "Christopher Araratyan"
  ARM_migran_petrosian:0 "Migran Petrosyan"
+ ARM_ghukas_madoyan:0 "Ghukas Madoyan"
+ ARM_hmayak_babayan:0 "Hmayak Babayan"
 
  # TRAITS #
  ARM_anti_communist_sympathizer:0 "Anti-Communist Sympathizer"
@@ -116,7 +118,9 @@
 
  ARM_fading_national_identity_fascist:0 "Spirit of Aramazd"
 
- ARM_fading_national_identity_communist_2:0 "Socialist Armenian Identity"
+ ARM_fading_national_identity_communist:0 "Socialist Armenian Identity"
+
+ ARM_fading_national_identity_communist_2:0 "Revolutionary Armenian Identity"
 
  # Dashnak-Hunchak Split #
 
@@ -319,32 +323,19 @@
  ARM_royal_guards_tt:0 "Create §Y2 Dranik Gund§! elite divisions in §Y[THIS.GetName]§!"
 
  ARM_event.1.t:0 "The Death of the Catholicos Khoren I"
- ARM_event.1.desc:0 "While the God-fearing Armenians mourn their religious leader, the Catholicos, communists respecting the party line refuse to join those reactionaries who refused to see the light of progress."
- ARM_event.1.desc.2:0 "The entire Armenian people mourn the passing of the Catholicos Khoren, who tirelessly defended God and all the Armenians against the Bolshevik Tyranny. Many faithful have assembled for a mass in Yerevan's cathedral before the transportation of his body to the Cathedral of Etchmiadzin."
+ ARM_event.1.desc:0 "Today, Armenia mourns the passing of His Holiness Khoren I, the Catholicos of All Armenians, the spiritual leader of our ancient nation. Serving as a guiding light for the Armenian people during a turbulent era, Catholicos Khoren dedicated his life to the preservation of our faith, culture, and identity. His counsel and strong leadership provided the only consolation in times of uncertainty and disunity. He shall be remembered for his selfless devotion to his homeland and his people. Armenia has lost its shepherd, the nation prays for a successor that can honor and carry on his legacy!"
  ARM_event.1.a:0 "The loss of a holy man."
  ARM_event.1.b:0 "Insignificant."
- ARM_event.2.t:0 "[ARM.GetNameDefCap] Requests Fighters"
- ARM_event.2.desc:0 "Willing to create an air force of their own, the [ARM.GetAdjective] government asks us to send them some aircraft."
- ARM_event.2.a:0 "Send the planes."
- ARM_event.2.b:0 "We will send some later."
- ARM_event.2.c:0 "We can't afford to do this."
- ARM_event.3.t:0 "The Planes Have Arrived"
- ARM_event.3.desc:0 "The fighters promised by our liberators have been delivered."
- ARM_event.3.a:0 "Stupendous."
- ARM_event.4.t:0 "The Delivery of the Planes Has Been Delayed"
- ARM_event.4.desc:0 "The fighters promised by our liberators have been delivered."
- ARM_event.4.a:0 "Stupendous."
- ARM_event.5.t:0 "Our Allies Have Refused to Help Us!"
- ARM_event.5.desc:0 "Our humble request made to our liberators to give us a few planes has been denied."
- ARM_event.5.a:0 "Disappointing."
- ARM_event.6.t:0 "The Fighters Have Finally Arrived!"
- ARM_event.6.desc:0 "Even if the delivery has been delayed, the fighters promised have finally have been delivered."
- ARM_event.6.a:0 "Excellent!"
- ARM_event.7.t:0 "The [ARM.GetAdjective] Volunteers Want to Go Home!"
- ARM_event.7.desc:0 "The volunteer units have been formed to fight [SOV.GetNameDef] and free Armenia. With the defeat of the [SOV.GetAdjective] state, these volunteers feel that their mission has been accomplished, and they want to be sent home."
- ARM_event.7.a:0 "Convince them to stay a little longer."
- ARM_event.7.b:0 "Disband their unit."
- ARM_event.8.t:0 "The Volunteers Are Coming Home!"
- ARM_event.8.desc:0 "After heroic fighting to ensure the liberation of our fatherland from foreign oppression, the volunteers who answered the call to fight for [ARM.GetNameDef] have returned home. They paraded through the city center under the cheers of the crowd."
- ARM_event.8.a:0 "We have freed ourselves!"
 
+ ARM_event.2.t:0 "The [ARM.GetAdjective] Volunteers Want to Go Home!"
+ ARM_event.2.desc:0 "The volunteer units have been formed to fight [SOV.GetNameDef] and free Armenia. With the defeat of the [SOV.GetAdjective] state, these volunteers feel that their mission has been accomplished, and they want to be sent home."
+ ARM_event.2.a:0 "Convince them to stay a little longer."
+ ARM_event.2.b:0 "Disband their unit."
+
+ ARM_event.3.t:0 "The Volunteers Are Coming Home!"
+ ARM_event.3.desc:0 "After heroic fighting to ensure the liberation of our fatherland from foreign oppression, the volunteers who answered the call to fight for [ARM.GetNameDef] have returned home. They paraded through the city center under the cheers of the crowd."
+ ARM_event.3.a:0 "We have freed ourselves!"
+
+ ARM_event.4.t:0 "The Great Military Purge"
+ ARM_event.4.desc:0 "Iosif Stalin, leader of the Soviet Union, has recently ordered strikes and arrests on many politicans, military and general staff of the Bolshevik Party. Following that, the Armenians have not been spared either, as some Armenian officials, notably Movses Silikyan and Christopher Araratyan, who have fought for the Armenian Revolutionary Federation in the 1920s, have been arrested also, on charges of anti-revolutionary activity. They are currently awaiting their sententce, which will likely be death, judging by the other such cases..."
+ ARM_event.4.a:0 "We must be cautious, these are truly dangerous times..."

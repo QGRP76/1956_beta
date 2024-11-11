@@ -272,12 +272,12 @@ ideas = {
 			picture = generic_manpower_bonus
 			
 			modifier = {
-				research_speed_factor = 0.05
 				war_support_factor = 0.05
 				conscription = 0.01
 				production_speed_arms_factory_factor = 0.05
 				justify_war_goal_time = -0.15
 				mobilization_laws_cost_factor = -0.25
+				political_power_factor = -0.05
 			}
 		}
 

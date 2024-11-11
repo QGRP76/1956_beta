@@ -1438,7 +1438,7 @@
 	}
 	shared_focus = {
 		id = CEL_train_pilots
-		icon = GFX_goal_italy_further_pilots_training
+		icon = GFX_focus_SOV_flying_clubs
 		prerequisite = { focus = CEL_build_trainer_aircrafts focus = CEL_bimotor_aircrafts }
 		relative_position_id = CEL_build_trainer_aircrafts		
 		x = -1
@@ -1550,7 +1550,7 @@
 	}
 	shared_focus = {
 		id = CEL_train_mechanics
-		icon = GFX_goal_continuous_repairments
+		icon = GFX_focus_SOV_organize_wreckers
 		prerequisite = { focus = CEL_build_trainer_aircrafts focus = CEL_bimotor_aircrafts }
 		relative_position_id = CEL_build_trainer_aircrafts		
 		x = 3

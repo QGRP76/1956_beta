@@ -2975,7 +2975,7 @@ focus_tree = {
 
 	focus = {
 		id = URG_government_purges
-		icon = GFX_focus_SOV_the_last_purge
+		icon = GFX_focus_SWE_attack_landsorganisationen
 		cost = 10
 		prerequisite = {
 			focus = URG_communist_revolution

@@ -39,23 +39,3 @@ Armenian_question_category = {
 
 	picture = GFX_decision_cat_Armenian_question_category
 }
-armenian_army_category = { 
-	allowed = {
-
-	}
-	
-	visible = {
-		original_tag = ARM		
-	}
-	icon = military_operation
-}
-armenian_national_liberation_category = { 
-	allowed = {
-
-	}
-	
-	visible = {
-		original_tag = ARM		
-	}
-	picture = GFX_decision_cat_Armenian_question_category
-}

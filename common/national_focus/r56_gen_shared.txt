@@ -27,6 +27,26 @@
 				tag = DEN
 			}
 		}
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				OR = {
+					tag = BRM
+
+				}
+			}
+		}
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				OR = {
+					tag = COS
+					
+				}
+			}
+		}
 		cost = 5
 		available_if_capitulated = yes
 
@@ -1638,6 +1658,25 @@
 				}
 			}
 		}
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				OR = {
+					tag = BRM
+				}
+			}
+		}
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				OR = {
+					tag = COS
+					
+				}
+			}
+		}
 		cost = 10
 		available = {
 			num_of_controlled_states > 1
@@ -1866,6 +1905,13 @@
 			y = 0
 			trigger = {
 				tag = LIE
+			}
+		}
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				tag = BRM
 			}
 		}
 		cost = 8
@@ -3483,7 +3529,10 @@
 			x = 1
 			y = 0
 			trigger = {
-				tag = ARM
+				OR = {
+					tag = ARM
+					tag = COS
+				}
 			}
 		}
 		cost = 10
@@ -4252,6 +4301,13 @@
 			y = 0
 			trigger = {
 				has_focus_tree = r56_celtic_focus
+			}
+		}
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				tag = BRM
 			}
 		}
 		ai_will_do = {

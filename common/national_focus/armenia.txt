@@ -102,6 +102,7 @@ focus_tree = {
 
 		available = {
 			controls_state = 230
+			has_tech = excavation2
 		}
 
 		completion_reward = {
@@ -144,6 +145,7 @@ focus_tree = {
 
 		available = {
 			controls_state = 230
+			has_tech = excavation2
 		}
 
 		completion_reward = {
@@ -191,6 +193,7 @@ focus_tree = {
 
 		available = {
 			controls_state = 230
+			has_tech = excavation1
 		}
 
 		completion_reward = {
@@ -241,6 +244,7 @@ focus_tree = {
 		
 		available = {
 			controls_state = 230
+			has_tech = basic_machine_tools
 		}
 
 		completion_reward = {
@@ -343,6 +347,7 @@ focus_tree = {
 
 		available = {
 			controls_state = 230
+			has_tech = improved_machine_tools
 		}
 
 		completion_reward = {
@@ -496,9 +501,8 @@ focus_tree = {
 		}
 
 		available = {
-			230 = {
-				is_owned_and_controlled_by = ARM
-			}
+			controls_state = 230
+			has_tech = construction1
 		}
 
 		completion_reward = {
@@ -552,6 +556,11 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 10
+
+		available = {
+			controls_state = 230
+			has_tech = construction2
+		}
 		
  		ai_will_do = {
  			factor = 6
@@ -679,6 +688,7 @@ focus_tree = {
 
 		available = {
 			controls_state = 230
+			has_tech = construction3
 		}
 		
  		ai_will_do = {
@@ -721,716 +731,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RUBBER }
 	}
 
-	# COMMUNIST BRANCH #
-
-	focus = {
-		id = ARM_socialist_governmental_autonomy
-		icon = GFX_focus_SOV_the_supreme_soviet
-		relative_position_id = ARM_return_from_exile
-		mutually_exclusive = {
-			focus = ARM_return_from_exile
-		}
-		x = 12
-		y = 0
-		cost = 10
-
-		available = {
-			OR = {
-				is_subject = no
-				has_government = communism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						has_government = communism
-					}
-				}
-			}
-		}
-
- 		ai_will_do = {
- 			factor = 100
-	 		modifier = {
-				factor = 0.05
-				NOT = {
-					has_government = communism
-				}
-			}
-		}
-
-		completion_reward = {
-			add_political_power = 35
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
-			add_war_support = 0.05
-			swap_ideas = {
-				remove_idea = ARM_fading_national_identity
-				add_idea = ARM_fading_national_identity_communist
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
-	}
-	focus = {
-		id = ARM_party_involvement
-		icon = GFX_goal_generic_communist_pride
-		prerequisite = { focus = ARM_socialist_governmental_autonomy}
-		relative_position_id = ARM_socialist_governmental_autonomy
-		x = -1
-		y = 1
-		cost = 10
-
-		available = {
-			OR = {
-				is_subject = no
-				has_government = communism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						has_government = communism
-					}
-				}
-			}
-		}
-
- 		ai_will_do = {
- 			factor = 20
-		}
-
-		completion_reward = {
-			swap_ideas = {
-				add_idea = ARM_fading_national_identity_communist_2
-				remove_idea = ARM_fading_national_identity_communist
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	focus = {
-		id = ARM_purge_the_trotskyist_dashnaks
-		icon = GFX_focus_SOV_purge_trotskyists
-		prerequisite = { focus = ARM_socialist_governmental_autonomy}
-		relative_position_id = ARM_socialist_governmental_autonomy
-		x = 1
-		y = 1
-		cost = 10
-
-		available = {
-			OR = {
-				is_subject = no
-				has_government = communism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						has_government = communism
-					}
-				}
-			}
-		}
-
- 		ai_will_do = {
- 			factor = 20
-		}
-
-		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.10
-			}
-			add_stability = -0.05
-			remove_ideas = ARM_dashnak_hunchak_split
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	focus = {
-		id = ARM_utilize_the_nkvd
-		icon = GFX_goal_HON_nkvd_assistance
-		prerequisite = { focus = ARM_purge_the_trotskyist_dashnaks }
-		relative_position_id = ARM_purge_the_trotskyist_dashnaks
-		x = 1
-		y = 1
-		cost = 10
-
- 		ai_will_do = {
- 			factor = 3
-		}
-
-		available = {
-			OR = {
-				is_subject = no
-				has_government = communism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						has_government = communism
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-					NOT = {
-						has_intelligence_agency = yes
-					}
-				}
-				create_intelligence_agency = yes
-			}
-			add_ideas = SOV_nkvd_nsb
-			add_tech_bonus = {
-				name = mp_tech_bonus_name
-				bonus = 1
-				uses = 1
-				category = military_police_tech
-			}			
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-	focus = {
-		id = ARM_enforce_state_atheism
-		icon = GFX_focus_ARG_state_atheism
-		prerequisite = { focus = ARM_party_involvement }
-		prerequisite = { focus = ARM_purge_the_trotskyist_dashnaks }
-		mutually_exclusive = { focus = ARM_reopen_etchmiadzin_seminary }
-		relative_position_id = ARM_party_involvement
-		x = 1
-		y = 1
-		cost = 10
-
- 		ai_will_do = {
- 			factor = 3
-		}
-
-		available = {
-			OR = {
-				is_subject = no
-				has_government = communism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						has_government = communism
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_political_power = 75
-			add_popularity = {
-				ideology = communism
-				popularity = -0.05
-			}
-			add_stability = -0.05
-			add_ideas = ARM_state_atheism_idea
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-	focus = {
-		id = ARM_reopen_etchmiadzin_seminary
-		icon = GFX_focus_ARG_liberation_theology
-		prerequisite = { focus = ARM_party_involvement }
-		mutually_exclusive = { focus = ARM_enforce_state_atheism }
-		relative_position_id = ARM_party_involvement
-		x = -1
-		y = 1
-		cost = 10
-
- 		ai_will_do = {
- 			factor = 6
-		}
-
-		available = {
-			OR = {
-				is_subject = no
-				has_government = communism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						has_government = communism
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_political_power = -25
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
-			add_stability = 0.05
-			if = {
-				limit = {
-					has_country_flag = ARM_catholicos_khoren_has_died
-				}
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip = ARM_gevorg_VI
-			}
-			else = {
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip = ARM_khoren_I
-			}
-		}
-		search_filters = { FOCUS_FILTER_STABILITY }
-	}
-	focus = {
-		id = ARM_fund_the_armenian_workers_union
-		icon = GFX_social_welfare
-		prerequisite = { focus = ARM_enforce_state_atheism focus = ARM_reopen_etchmiadzin_seminary }
-		relative_position_id = ARM_enforce_state_atheism
-		x = -1
-		y = 1
-		cost = 10
-
- 		ai_will_do = {
- 			factor = 3
-		}
-
-		available = {
-			OR = {
-				is_subject = no
-				has_government = communism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						has_government = communism
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 230 }
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			add_ideas = ARM_armenian_workers_union_idea
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	focus = {
-		id = ARM_mobilize_the_workers
-		icon = GFX_focus_YUG_pan_slavic_congress
-		prerequisite = { focus = ARM_party_involvement}
-		relative_position_id = ARM_party_involvement
-		x = -2
-		y = 2
-		cost = 10
-
- 		ai_will_do = {
- 			factor = 4
-		}
-
-		available = {
-			OR = {
-				is_subject = no
-				has_government = communism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						has_government = communism
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
-			add_war_support = 0.05
-			add_ideas = ARM_workers_propaganda_idea
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	focus = {
-		id = ARM_ambitious_production_quotas
-		icon = GFX_goal_generic_communist_economy
-		prerequisite = { focus = ARM_purge_the_trotskyist_dashnaks }
-		relative_position_id = ARM_purge_the_trotskyist_dashnaks
-		x = 0
-		y = 2
-		cost = 10
-
- 		ai_will_do = {
- 			factor = 6
-		}
-		
-		available = {
-			OR = {
-				is_subject = no
-				has_government = communism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						has_government = communism
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 230 }
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 230 }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			add_ideas = r56_ROM_nationalized_industry_civ
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	focus = {
-		id = ARM_build_the_kovkas_line
-		icon = GFX_goal_generic_mountain_fortification
-		prerequisite = { focus = ARM_ambitious_production_quotas }
-		prerequisite = { focus = ARM_fund_the_armenian_workers_union }
-		relative_position_id = ARM_fund_the_armenian_workers_union
-		x = 1
-		y = 1
-		cost = 8
-
- 		ai_will_do = {
- 			factor = 5
-		}
-
-		available = {
-			230 = {
-				is_fully_controlled_by = ROOT
-			}
-			OR = {
-				is_subject = no
-				has_government = communism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						has_government = communism
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 230 }
-				add_building_construction = {
-					type = bunker
-					level = 2
-					instant_build = yes
-					province = 12320
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					instant_build = yes
-					province = 3564
-				}
-				add_building_construction = {
-					type = bunker
-					level = 2
-					instant_build = yes
-					province = 12441
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					instant_build = yes
-					province = 12380
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT }
-	}
-	focus = {
-		id = ARM_join_the_comintern
-		icon = GFX_focus_generic_join_comintern
-		prerequisite = { focus = ARM_build_the_kovkas_line }
-		relative_position_id = ARM_build_the_kovkas_line
-		mutually_exclusive = {
-			focus = ARM_the_transcaucasian_confederation
-		}
-		x = -1
-		y = 1
-		cost = 10
-
- 		ai_will_do = {
- 			factor = 5
-		}
-
-		available = {
-			is_subject = no
-			is_in_faction = no
-			OR = {
-				SOV = {
-					NOT = { has_war_with = ROOT }
-					has_government = communism
-					has_capitulated = no
-					is_faction_leader = yes
-				}
-				any_other_country = {
-					is_major = yes
-					has_government = communism
-					is_faction_leader = yes
-					NOT = { has_war_with = ROOT }
-				}
-			}
-			OR = {
-				is_subject = no
-				has_government = communism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						has_government = communism
-					}
-				}
-			}
-		}
-
-		bypass = {
-			OR = {
-				is_subject = yes
-				is_in_faction_with = SOV
-			}
-		}
-
-		completion_reward = {
-			if = {
-				limit = {
-					SOV = {
-						has_government = communism
-						is_faction_leader = yes
-						has_capitulated = no
-						NOT = { has_war_with = ROOT }
-					}
-					NOT = {
-						any_other_country = {
-							is_in_faction_with = SOV
-							has_war_with = ROOT
-						}
-					}
-				}
-				SOV = {
-					country_event = generic.2
-				}
-			}
-			else = {
-				get_best_alliance_match_communism_effect = yes
-				var:best_leader = {
-					country_event = generic.2
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_ALLIANCE }
-	}
-	focus = {
-		id = ARM_the_transcaucasian_confederation
-		icon = GFX_focus_prc_agrarian_socialism
-		prerequisite = { focus = ARM_build_the_kovkas_line }
-		relative_position_id = ARM_build_the_kovkas_line
-		mutually_exclusive = {
-			focus = ARM_join_the_comintern
-		}
-		x = 1
-		y = 1
-		cost = 10
-
- 		ai_will_do = {
- 			factor = 5
-		}
-
-		available = {
-			is_subject = no
-			is_in_faction = no
-			any_country = {
-				OR = {
-					tag = GEO
-					tag = AZR
-					tag = ABK
-				}
-				NOT = { 
-					has_war_with = ROOT
-					is_subject = yes
-					is_in_faction = yes
-				}
-			}
-			OR = {
-				is_subject = no
-				has_government = communism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						has_government = communism
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_war_support = 0.05
-			create_faction = "Transcaucasian Confederation"
-			every_other_country = {
-				limit = {
-					OR = {
-						tag = GEO
-						tag = AZR
-						tag = ABK
-					}
-					NOT = { 
-						has_war_with = ROOT
-						is_subject = yes
-						is_in_faction = yes
-					}
-				}
-				country_event = { id = generic.5 hours = 6 }
-			}
-		}
-		search_filters = { FOCUS_FILTER_ALLIANCE }
-	}
-	focus = {
-		id = ARM_armeno_soviet_research_program
-		icon = GFX_focus_generic_socialist_science
-		prerequisite = { focus = ARM_join_the_comintern }
-		relative_position_id = ARM_join_the_comintern
-		x = -1
-		y = 1
-		cost = 10
-
- 		ai_will_do = {
- 			factor = 5
-		}
-
-		available = {
-			is_in_faction_with = SOV
-			OR = {
-				is_subject = no
-				has_government = communism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						has_government = communism
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_to_tech_sharing_group = comintern_research
-            add_tech_bonus = {
-                name = infantry_weapons_bonus
-                bonus = 0.5
-                uses = 1
-				ahead_reduction = 0.5
-                category = infantry_weapons
-                category = artillery
-				category = electronics
-            }
-		}
-		search_filters = { FOCUS_FILTER_ALLIANCE }
-	}
-	focus = {
-		id = ARM_keepers_of_the_south
-		icon = GFX_focus_spr_torchbearers_of_tomorrow
-		prerequisite = { focus = ARM_join_the_comintern focus = ARM_the_transcaucasian_confederation }
-		relative_position_id = ARM_join_the_comintern
-		x = 1
-		y = 1
-		cost = 10
-
- 		ai_will_do = {
- 			factor = 5
-		}
-
-		available = {
-			OR = {
-				is_subject = no
-				has_government = communism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						has_government = communism
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
-			add_ideas = ARM_protect_the_revolution_idea
-		}
-		search_filters = { FOCUS_FILTER_ALLIANCE }
-	}
-
 	# NON-COMMUNIST PATH #
 
 	focus = {
@@ -1443,13 +743,17 @@ focus_tree = {
 		available = {
 			OR = {
 				is_subject = no
-				NOT = { has_government = communism }
+				NOT = {
+					has_government = communism
+				}
 				if = {
 					limit = {
 						is_subject = yes
 					}
 					OVERLORD = {
-						NOT = { has_government = communism }
+						NOT = {
+							has_government = communism
+						}
 					}
 				}
 			}
@@ -1495,21 +799,19 @@ focus_tree = {
 			controls_state = 230
 			OR = {
 				is_subject = no
-				has_government = neutrality
+				NOT = {
+					has_government = communism
+				}
 				if = {
 					limit = {
 						is_subject = yes
 					}
 					OVERLORD = {
-						has_government = neutrality
+						NOT = {
+							has_government = communism
+						}
 					}
 				}
-			}
-		}
-
-		bypass = {
-			NOT = {
-				controls_state = 230
 			}
 		}
 
@@ -1533,6 +835,7 @@ focus_tree = {
 		}
 
 		available = {
+			controls_state = 230
 			OR = {
 				is_subject = no
 				NOT = {
@@ -1592,13 +895,17 @@ focus_tree = {
 			controls_state = 230
 			OR = {
 				is_subject = no
-				has_government = neutrality
+				NOT = {
+					has_government = communism
+				}
 				if = {
 					limit = {
 						is_subject = yes
 					}
 					OVERLORD = {
-						has_government = neutrality
+						NOT = {
+							has_government = communism
+						}
 					}
 				}
 			}
@@ -1659,6 +966,19 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 35
 			add_popularity = { ideology = democratic popularity = 0.1 }
+			if = {
+				limit = {
+					NOT = {
+						has_government = democratic
+					}
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+					last_election = "1936.1.1"
+					election_frequency = 48
+				}
+			}
 			swap_ideas = {
 				remove_idea = ARM_fading_national_identity
 				add_idea = ARM_fading_national_identity_democratic
@@ -1676,18 +996,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			OR = {
-				is_subject = no
-				has_government = democratic
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						has_government = democratic
-					}
-				}
-			}
+			has_government = democratic
 		}
 
 		completion_reward = {
@@ -1711,18 +1020,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			OR = {
-				is_subject = no
-				has_government = democratic
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						has_government = democratic
-					}
-				}
-			}
+			has_government = democratic
 		}
 
 		completion_reward = {
@@ -1745,18 +1043,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			OR = {
-				is_subject = no
-				has_government = democratic
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						has_government = democratic
-					}
-				}
-			}
+			has_government = democratic
 		}
 
 		completion_reward = {
@@ -1779,16 +1066,21 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			has_government = democratic
 			is_subject = no
 			is_in_faction = no
-			ENG = {
+			any_other_country = {
+				is_major = yes
 				has_government = democratic
 				is_faction_leader = yes
+				has_capitulated = no
+				NOT = { has_war_with = ROOT }
 				NOT = {
-					has_war_with = ROOT
-				}
-			}
+					any_other_country = {
+						is_in_faction_with = PREV
+						has_war_with = ROOT
+					}
+				}						
+			}	
 		}
 
 		completion_reward = {
@@ -1959,6 +1251,10 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 35
 			add_popularity = { ideology = neutrality popularity = 0.10 }
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
 			swap_ideas = {
 				remove_idea = ARM_fading_national_identity_right
 				add_idea = ARM_fading_national_identity_royalist
@@ -1981,20 +1277,8 @@ focus_tree = {
 		
 		available = {
 			OR = {
-				is_subject = no
 				has_government = neutrality
 				has_government = fascism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						OR = {
-							has_government = neutrality
-							has_government = fascism
-						}
-					}
-				}
 			}
 		}
 
@@ -2085,6 +1369,10 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 35
 			add_popularity = { ideology = fascism popularity = 0.10 }
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
 			swap_ideas = {
 				remove_idea = ARM_fading_national_identity_right
 				add_idea = ARM_fading_national_identity_fascist
@@ -2107,20 +1395,8 @@ focus_tree = {
 
 		available = {
 			OR = {
-				is_subject = no
 				has_government = neutrality
 				has_government = fascism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						OR = {
-							has_government = neutrality
-							has_government = fascism
-						}
-					}
-				}
 			}
 		}
 
@@ -2148,20 +1424,8 @@ focus_tree = {
 
 		available = {
 			OR = {
-				is_subject = no
 				has_government = neutrality
 				has_government = fascism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						OR = {
-							has_government = neutrality
-							has_government = fascism
-						}
-					}
-				}
 			}
 		}
 
@@ -2194,20 +1458,8 @@ focus_tree = {
 
 		available = {
 			OR = {
-				is_subject = no
 				has_government = neutrality
 				has_government = fascism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						OR = {
-							has_government = neutrality
-							has_government = fascism
-						}
-					}
-				}
 			}
 		}
 
@@ -2235,27 +1487,15 @@ focus_tree = {
 		available = {
 			is_in_faction = no
 			is_subject = no
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
 			any_other_country = {
 				is_major = yes
 				has_government = fascism
 				is_faction_leader = yes
 				NOT = { has_war_with = ROOT }
-			}
-			OR = {
-				is_subject = no
-				has_government = neutrality
-				has_government = fascism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						OR = {
-							has_government = neutrality
-							has_government = fascism
-						}
-					}
-				}
 			}
 		}
 
@@ -2292,7 +1532,6 @@ focus_tree = {
 		id = ARM_the_wilsonian_promise
 		icon = GFX_goal_ARM_wilson
 		prerequisite = { focus =  ARM_royal_guards focus = ARM_hayk_youth }
-		mutually_exclusive = { focus = ARM_an_open_hand_to_turkey }
 		relative_position_id = ARM_royal_guards
 		x = 1
 		y = 1
@@ -2303,21 +1542,10 @@ focus_tree = {
 		}
 
 		available = {
+			is_subject = no
 			OR = {
-				is_subject = no
 				has_government = neutrality
 				has_government = fascism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						OR = {
-							has_government = neutrality
-							has_government = fascism
-						}
-					}
-				}
 			}
 		}
 
@@ -2342,6 +1570,10 @@ focus_tree = {
 				size > 59999
 			}
 			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+			OR = {
 				any_neighbor_country = {
 					TAG = TUR
 					NOT = {
@@ -2361,21 +1593,6 @@ focus_tree = {
 						}
 					}
 				}		
-			}
-			OR = {
-				has_government = neutrality
-				has_government = fascism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						OR = {
-							has_government = neutrality
-							has_government = fascism
-						}
-					}
-				}
 			}
 		}
 
@@ -2419,18 +1636,7 @@ focus_tree = {
 			OR = {
 				has_government = neutrality
 				has_government = fascism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						OR = {
-							has_government = neutrality
-							has_government = fascism
-						}
-					}
-				}
-			}	
+			}
 		}
 
 		ai_will_do = {
@@ -2454,12 +1660,16 @@ focus_tree = {
 		relative_position_id = ARM_dominate_the_caucasus
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			is_subject = no
 			has_army_manpower = {
 				size > 79999
+			}
+			OR = {
+				has_government = neutrality
+				has_government = fascism
 			}
 			OR = {
 				any_neighbor_country = {
@@ -2518,12 +1728,16 @@ focus_tree = {
 		relative_position_id = ARM_dominate_the_caucasus
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			is_subject = no
 			has_army_manpower = {
 				size > 79999
+			}
+			OR = {
+				has_government = neutrality
+				has_government = fascism
 			}
 			OR = {
 				any_neighbor_country = {
@@ -2582,10 +1796,14 @@ focus_tree = {
 		relative_position_id = ARM_vengeance_for_the_war_of_1918
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			is_subject = no
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
 			SOV = {
 				exists = yes
 				has_capitulated = no
@@ -2629,18 +1847,7 @@ focus_tree = {
 			OR = {
 				has_government = neutrality
 				has_government = fascism
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						OR = {
-							has_government = neutrality
-							has_government = fascism
-						}
-					}
-				}
-			}		
+			}
 		}
 
 		ai_will_do = {
@@ -2656,16 +1863,44 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 	focus = {
-		id = ARM_reclaim_antiochia # TODO
+		id = ARM_reclaim_antiochia
 		icon = GFX_focus_generic_attack_syria
 		prerequisite = { focus = ARM_the_10th_crusade }
 		relative_position_id = ARM_the_10th_crusade
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
-				
+			is_subject = no
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+			any_other_country = {
+				any_owned_state = {
+					OR = {
+						state = 680
+						state = 799
+						state = 677
+						state = 544
+						state = 792
+					}
+				}
+				NOT = {
+					has_war_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		bypass = {
+			controls_state = 680
+			controls_state = 799
+			controls_state = 677
+			controls_state = 554
+			controls_state = 553
 		}
 
 		ai_will_do = {
@@ -2673,21 +1908,79 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			every_other_country = {
+				limit = {
+					any_owned_state = {
+						OR = {
+							state = 680
+							state = 799
+							state = 677
+							state = 554
+							state = 553
+						}
+					}
+					NOT = {
+						has_war_with = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						target = PREV
+						type = take_state_focus
+						expire = 0
+					}
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 	focus = {
-		id = ARM_recapture_the_holy_land # TODO
+		id = ARM_recapture_the_holy_land
 		icon = GFX_focus_ETH_the_one_true_heir_of_solomon
 		prerequisite = { focus = ARM_the_10th_crusade }
 		relative_position_id = ARM_the_10th_crusade
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
-				
+			is_subject = no
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+			any_other_country = {
+				any_owned_state = {
+					OR = {
+						state = 1016
+						state = 1017
+						state = 949
+						state = 454
+						state = 966
+						state = 1022
+						state = 455
+						state = 1021
+					}
+				}
+				NOT = {
+					has_war_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		bypass = {
+			controls_state = 1016
+			controls_state = 1017
+			controls_state = 949
+			controls_state = 454
+			controls_state = 966
+			controls_state = 1022
+			controls_state = 455
+			controls_state = 1021
 		}
 
 		ai_will_do = {
@@ -2695,7 +1988,34 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			every_other_country = {
+				limit = {
+					any_owned_state = {
+						OR = {
+							state = 1016
+							state = 1017
+							state = 949
+							state = 454
+							state = 966
+							state = 1022
+							state = 455
+							state = 1021
+						}
+					}
+					NOT = {
+						has_war_with = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						target = PREV
+						type = take_state_focus
+						expire = 0
+					}
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
@@ -2709,7 +2029,11 @@ focus_tree = {
 		cost = 10
 
 		available = {
-					
+			is_subject = no
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
 		}
 
 		ai_will_do = {
@@ -2717,7 +2041,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.15
+			}
+			add_country_leader_trait = supreme_representative_of_god_on_earth
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
@@ -2739,21 +2067,8 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				is_subject = no
-				NOT = {
-					has_government = communism
-				}
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						NOT = {
-							has_government = communism
-						}
-					}
-				}
+			NOT = {
+				has_government = communism
 			}
 		}
 
@@ -2779,21 +2094,8 @@ focus_tree = {
 		available = {
 			controls_state = 230
 			controls_state = 800
-			OR = {
-				is_subject = no
-				NOT = {
-					has_government = communism
-				}
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						NOT = {
-							has_government = communism
-						}
-					}
-				}
+			NOT = {
+				has_government = communism
 			}
 		}
 
@@ -2844,21 +2146,8 @@ focus_tree = {
 		available = {
 			controls_state = 230
 			controls_state = 354
-			OR = {
-				is_subject = no
-				NOT = {
-					has_government = communism
-				}
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						NOT = {
-							has_government = communism
-						}
-					}
-				}
+			NOT = {
+				has_government = communism
 			}
 		}
 
@@ -2909,21 +2198,8 @@ focus_tree = {
 		available = {
 			controls_state = 230
 			controls_state = 1044
-			OR = {
-				is_subject = no
-				NOT = {
-					has_government = communism
-				}
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						NOT = {
-							has_government = communism
-						}
-					}
-				}
+			NOT = {
+				has_government = communism
 			}
 		}
 
@@ -2976,21 +2252,8 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				is_subject = no
-				NOT = {
-					has_government = communism
-				}
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						NOT = {
-							has_government = communism
-						}
-					}
-				}
+			NOT = {
+				has_government = communism
 			}
 		}
 
@@ -3014,21 +2277,8 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				is_subject = no
-				NOT = {
-					has_government = communism
-				}
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						NOT = {
-							has_government = communism
-						}
-					}
-				}
+			NOT = {
+				has_government = communism
 			}
 		}
 	
@@ -3055,21 +2305,8 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				is_subject = no
-				NOT = {
-					has_government = communism
-				}
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						NOT = {
-							has_government = communism
-						}
-					}
-				}
+			NOT = {
+				has_government = communism
 			}
 		}
 
@@ -3145,21 +2382,8 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			OR = {
-				is_subject = no
-				NOT = {
-					has_government = communism
-				}
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						NOT = {
-							has_government = communism
-						}
-					}
-				}
+			NOT = {
+				has_government = communism
 			}
 		}
 
@@ -3183,23 +2407,10 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			has_full_control_of_state = 230
-			OR = {
-				is_subject = no
-				NOT = {
-					has_government = communism
-				}
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						NOT = {
-							has_government = communism
-						}
-					}
-				}
+			NOT = {
+				has_government = communism
 			}
+			has_full_control_of_state = 230
 		}
  		ai_will_do = {
  			factor = 3
@@ -3243,23 +2454,10 @@ focus_tree = {
 		}
 
 		available = {
-			has_full_control_of_state = 230
-			OR = {
-				is_subject = no
-				NOT = {
-					has_government = communism
-				}
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						NOT = {
-							has_government = communism
-						}
-					}
-				}
+			NOT = {
+				has_government = communism
 			}
+			has_full_control_of_state = 230
 		}
 
 		completion_reward = {
@@ -3314,21 +2512,8 @@ focus_tree = {
 
 		available = {
 			controls_state = 230
-			OR = {
-				is_subject = no
-				NOT = {
-					has_government = communism
-				}
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						NOT = {
-							has_government = communism
-						}
-					}
-				}
+			NOT = {
+				has_government = communism
 			}
 		}
 
@@ -3377,21 +2562,8 @@ focus_tree = {
 		}
 		available = {
 			controls_state = 230
-			OR = {
-				is_subject = no
-				NOT = {
-					has_government = communism
-				}
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						NOT = {
-							has_government = communism
-						}
-					}
-				}
+			NOT = {
+				has_government = communism
 			}
 		}
 
@@ -3419,21 +2591,8 @@ focus_tree = {
 			NOT = {
 				has_war_with = TUR
 			}
-			OR = {
-				is_subject = no
-				NOT = {
-					has_government = communism
-				}
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						NOT = {
-							has_government = communism
-						}
-					}
-				}
+			NOT = {
+				has_government = communism
 			}
 		}
 
@@ -3468,21 +2627,8 @@ focus_tree = {
 			NOT = {
 				has_war_with = PER
 			}
-			OR = {
-				is_subject = no
-				NOT = {
-					has_government = communism
-				}
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						NOT = {
-							has_government = communism
-						}
-					}
-				}
+			NOT = {
+				has_government = communism
 			}
 		}
 
@@ -3498,5 +2644,576 @@ focus_tree = {
 				modifier = medium_increase
 			}
 		}
+	}
+
+	# COMMUNIST BRANCH #
+
+	focus = {
+		id = ARM_socialist_governmental_autonomy
+		icon = GFX_focus_SOV_the_supreme_soviet
+		relative_position_id = ARM_return_from_exile
+		mutually_exclusive = {
+			focus = ARM_return_from_exile
+		}
+		x = 12
+		y = 0
+		cost = 10
+
+		available = {
+			OR = {
+				is_subject = no
+				has_government = communism
+				if = {
+					limit = {
+						is_subject = yes
+					}
+					OVERLORD = {
+						has_government = communism
+					}
+				}
+			}
+		}
+
+ 		ai_will_do = {
+ 			factor = 100
+	 		modifier = {
+				factor = 0.05
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 35
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_war_support = 0.05
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			swap_ideas = {
+				remove_idea = ARM_fading_national_identity
+				add_idea = ARM_fading_national_identity_communist
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = ARM_party_involvement
+		icon = GFX_goal_generic_communist_pride
+		prerequisite = { focus = ARM_socialist_governmental_autonomy}
+		relative_position_id = ARM_socialist_governmental_autonomy
+		x = -1
+		y = 1
+		cost = 10
+
+		available = {
+			has_government = communism
+		}
+
+ 		ai_will_do = {
+ 			factor = 20
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = ARM_fading_national_identity_communist_2
+				remove_idea = ARM_fading_national_identity_communist
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = ARM_purge_the_trotskyist_dashnaks
+		icon = GFX_focus_SOV_purge_trotskyists
+		prerequisite = { focus = ARM_socialist_governmental_autonomy}
+		relative_position_id = ARM_socialist_governmental_autonomy
+		x = 1
+		y = 1
+		cost = 10
+
+		available = {
+			has_government = communism
+		}
+
+ 		ai_will_do = {
+ 			factor = 20
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.10
+			}
+			add_stability = -0.05
+			remove_ideas = ARM_dashnak_hunchak_split
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = ARM_utilize_the_nkvd
+		icon = GFX_goal_HON_nkvd_assistance
+		prerequisite = { focus = ARM_purge_the_trotskyist_dashnaks }
+		relative_position_id = ARM_purge_the_trotskyist_dashnaks
+		x = 1
+		y = 1
+		cost = 10
+
+ 		ai_will_do = {
+ 			factor = 3
+		}
+
+		available = {
+			has_government = communism
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+					NOT = {
+						has_intelligence_agency = yes
+					}
+				}
+				create_intelligence_agency = yes
+			}
+			add_ideas = SOV_nkvd_nsb
+			add_tech_bonus = {
+				name = mp_tech_bonus_name
+				bonus = 1
+				uses = 1
+				category = military_police_tech
+			}			
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = ARM_enforce_state_atheism
+		icon = GFX_focus_ARG_state_atheism
+		prerequisite = { focus = ARM_party_involvement }
+		prerequisite = { focus = ARM_purge_the_trotskyist_dashnaks }
+		mutually_exclusive = { focus = ARM_reopen_etchmiadzin_seminary }
+		relative_position_id = ARM_party_involvement
+		x = 1
+		y = 1
+		cost = 10
+
+ 		ai_will_do = {
+ 			factor = 3
+		}
+
+		available = {
+			has_government = communism
+		}
+
+		completion_reward = {
+			add_political_power = 75
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+			add_stability = -0.05
+			add_ideas = ARM_state_atheism_idea
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = ARM_reopen_etchmiadzin_seminary
+		icon = GFX_focus_ARG_liberation_theology
+		prerequisite = { focus = ARM_party_involvement }
+		mutually_exclusive = { focus = ARM_enforce_state_atheism }
+		relative_position_id = ARM_party_involvement
+		x = -1
+		y = 1
+		cost = 10
+
+ 		ai_will_do = {
+ 			factor = 6
+		}
+
+		available = {
+			has_government = communism
+		}
+
+		completion_reward = {
+			add_political_power = -25
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_stability = 0.05
+			if = {
+				limit = {
+					has_country_flag = ARM_catholicos_khoren_has_died
+				}
+				custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip = ARM_gevorg_VI
+			}
+			else = {
+				custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip = ARM_khoren_I
+			}
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = ARM_fund_the_armenian_workers_union
+		icon = GFX_social_welfare
+		prerequisite = { focus = ARM_enforce_state_atheism focus = ARM_reopen_etchmiadzin_seminary }
+		relative_position_id = ARM_enforce_state_atheism
+		x = -1
+		y = 1
+		cost = 10
+
+ 		ai_will_do = {
+ 			factor = 3
+		}
+
+		available = {
+			has_government = communism
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 230 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = ARM_armenian_workers_union_idea
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = ARM_mobilize_the_workers
+		icon = GFX_focus_YUG_pan_slavic_congress
+		prerequisite = { focus = ARM_party_involvement}
+		relative_position_id = ARM_party_involvement
+		x = -2
+		y = 2
+		cost = 10
+
+ 		ai_will_do = {
+ 			factor = 4
+		}
+
+		available = {
+			has_government = communism
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_war_support = 0.05
+			add_ideas = ARM_workers_propaganda_idea
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = ARM_ambitious_production_quotas
+		icon = GFX_goal_generic_communist_economy
+		prerequisite = { focus = ARM_purge_the_trotskyist_dashnaks }
+		relative_position_id = ARM_purge_the_trotskyist_dashnaks
+		x = 0
+		y = 2
+		cost = 10
+
+ 		ai_will_do = {
+ 			factor = 6
+		}
+		
+		available = {
+			has_government = communism
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 230 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 230 }
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = r56_ROM_nationalized_industry_civ
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = ARM_build_the_kovkas_line
+		icon = GFX_goal_generic_mountain_fortification
+		prerequisite = { focus = ARM_ambitious_production_quotas }
+		prerequisite = { focus = ARM_fund_the_armenian_workers_union }
+		relative_position_id = ARM_fund_the_armenian_workers_union
+		x = 1
+		y = 1
+		cost = 8
+
+ 		ai_will_do = {
+ 			factor = 5
+		}
+
+		available = {
+			has_government = communism
+			230 = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 230 }
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 12320
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 3564
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 12441
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 12380
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT }
+	}
+	focus = {
+		id = ARM_join_the_comintern
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = ARM_build_the_kovkas_line }
+		relative_position_id = ARM_build_the_kovkas_line
+		mutually_exclusive = {
+			focus = ARM_the_transcaucasian_confederation
+		}
+		x = -1
+		y = 1
+		cost = 10
+
+ 		ai_will_do = {
+ 			factor = 5
+		}
+
+		available = {
+			has_government = communism
+			is_subject = no
+			is_in_faction = no
+			OR = {
+				SOV = {
+					NOT = { has_war_with = ROOT }
+					has_government = communism
+					has_capitulated = no
+					is_faction_leader = yes
+				}
+				any_other_country = {
+					is_major = yes
+					has_government = communism
+					is_faction_leader = yes
+					NOT = { has_war_with = ROOT }
+				}
+			}
+		}
+
+		bypass = {
+			OR = {
+				is_subject = yes
+				is_in_faction_with = SOV
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					SOV = {
+						has_government = communism
+						is_faction_leader = yes
+						has_capitulated = no
+						NOT = { has_war_with = ROOT }
+					}
+					NOT = {
+						any_other_country = {
+							is_in_faction_with = SOV
+							has_war_with = ROOT
+						}
+					}
+				}
+				SOV = {
+					country_event = generic.2
+				}
+			}
+			else = {
+				get_best_alliance_match_communism_effect = yes
+				var:best_leader = {
+					country_event = generic.2
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ALLIANCE }
+	}
+	focus = {
+		id = ARM_the_transcaucasian_confederation
+		icon = GFX_focus_prc_agrarian_socialism
+		prerequisite = { focus = ARM_build_the_kovkas_line }
+		relative_position_id = ARM_build_the_kovkas_line
+		mutually_exclusive = {
+			focus = ARM_join_the_comintern
+		}
+		x = 1
+		y = 1
+		cost = 10
+
+ 		ai_will_do = {
+ 			factor = 5
+		}
+
+		available = {
+			has_government = communism
+			is_subject = no
+			is_in_faction = no
+			any_country = {
+				OR = {
+					tag = GEO
+					tag = AZR
+					tag = ABK
+				}
+				NOT = { 
+					has_war_with = ROOT
+					is_subject = yes
+					is_in_faction = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			create_faction = "Transcaucasian Confederation"
+			every_other_country = {
+				limit = {
+					OR = {
+						tag = GEO
+						tag = AZR
+						tag = ABK
+					}
+					NOT = { 
+						has_war_with = ROOT
+						is_subject = yes
+						is_in_faction = yes
+					}
+				}
+				country_event = { id = generic.5 hours = 6 }
+			}
+		}
+		search_filters = { FOCUS_FILTER_ALLIANCE }
+	}
+	focus = {
+		id = ARM_armeno_soviet_research_program
+		icon = GFX_focus_generic_socialist_science
+		prerequisite = { focus = ARM_join_the_comintern }
+		relative_position_id = ARM_join_the_comintern
+		x = -1
+		y = 1
+		cost = 10
+
+ 		ai_will_do = {
+ 			factor = 5
+		}
+
+		available = {
+			is_in_faction_with = SOV
+			has_government = communism
+		}
+
+		completion_reward = {
+			add_to_tech_sharing_group = comintern_research
+            add_tech_bonus = {
+                name = infantry_weapons_bonus
+                bonus = 0.5
+                uses = 1
+				ahead_reduction = 0.5
+                category = infantry_weapons
+                category = artillery
+				category = electronics
+            }
+		}
+		search_filters = { FOCUS_FILTER_ALLIANCE }
+	}
+	focus = {
+		id = ARM_keepers_of_the_south
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		prerequisite = { focus = ARM_join_the_comintern focus = ARM_the_transcaucasian_confederation }
+		relative_position_id = ARM_join_the_comintern
+		x = 1
+		y = 1
+		cost = 10
+
+ 		ai_will_do = {
+ 			factor = 5
+		}
+
+		available = {
+			has_government = communism
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_ideas = ARM_protect_the_revolution_idea
+		}
+		search_filters = { FOCUS_FILTER_ALLIANCE }
 	}
 }

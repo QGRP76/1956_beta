@@ -35,10 +35,10 @@ characters = {
 		name = ARM_yakov_bagratuni
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/ARM/r56_portrait_ARM_yakov_bagratuni.dds"
+				large = "gfx/leaders/ARM/r56_portrait_ARM_Jaques_Bagratuni.dds"
 			}
 			army = {
-				large = "gfx/leaders/ARM/r56_portrait_ARM_yakov_bagratuni.dds"
+				large = "gfx/leaders/ARM/r56_portrait_ARM_Jaques_Bagratuni.dds"
 				small = "GFX_idea_europe_generic_land_4"
 			}
 		}
@@ -150,15 +150,8 @@ characters = {
 			logistics_skill = 2
 			legacy_id = -1
 			visible = {
-				is_subject = no
-				OR = {
-					has_country_leader = {
-						character = ARM_drastamat_kanayan
-						ruling_only = yes
-					}
-					NOT = {
-						has_government = communism
-					}
+				NOT = {
+					has_government = communism
 				}
 			}
 		}
@@ -333,6 +326,7 @@ characters = {
 				original_tag = ARM
 			}
 			available = {
+				date < 1938.4.6
 				NOT = {
 					has_country_flag = ARM_catholicos_khoren_has_died
 				}
@@ -691,9 +685,7 @@ characters = {
 				original_tag = ARM
 			}
 			available = {
-				NOT = {
-					has_government = communism
-				}
+				# always = yes
 			}
 			traits = {
 				army_chief_morale_2
@@ -708,9 +700,7 @@ characters = {
 				original_tag = ARM
 			}
 			available = {
-				NOT = {
-					has_government = communism
-				}
+				# always = yes
 			}
 			traits = {
 				army_infantry_2
@@ -730,31 +720,6 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 1
 			legacy_id = -1
-			visible = {
-				OR = {
-					NOT = {
-						has_government = communism
-					}
-					if = {
-						limit = {
-							is_subject = yes
-						}
-						OVERLORD = {
-							OR = {
-								AND = {
-									tag = SOV
-									NOT = {
-										has_completed_focus = SOV_the_military_conspiracy
-									}
-								}
-								NOT = {
-									has_government = communism
-								}
-							}
-						}
-					}
-				}
-			}
 		}
 	}
 	ARM_christopher_araratyan = {
@@ -774,9 +739,7 @@ characters = {
 				original_tag = ARM
 			}
 			available = {
-				NOT = {
-					has_government = communism
-				}
+				# always = yes
 			}
 			traits = {
 				army_chief_offensive_2
@@ -791,9 +754,7 @@ characters = {
 				original_tag = ARM
 			}
 			available = {
-				NOT = {
-					has_government = communism
-				}
+				# always = yes
 			}
 			traits = {
 				army_artillery_2
@@ -813,31 +774,6 @@ characters = {
 			planning_skill = 3
 			logistics_skill = 1
 			legacy_id = -1
-			visible = {
-				OR = {
-					NOT = {
-						has_government = communism
-					}
-					if = {
-						limit = {
-							is_subject = yes
-						}
-						OVERLORD = {
-							OR = {
-								AND = {
-									tag = SOV
-									NOT = {
-										has_completed_focus = SOV_the_military_conspiracy
-									}
-								}
-								NOT = {
-									has_government = communism
-								}
-							}
-						}
-					}
-				}
-			}
 		}
 	}
 	ARM_hovhannes_bagramyan = {
@@ -959,31 +895,31 @@ characters = {
 			legacy_id = -1
 		}
 	}
-	ARM_anastas_mikoyan = {
-		#logistics defense board of the USSR, so a civilian but with military attributes
-		name = ARM_anastas_mikoyan
-		portraits = {
-			army = {
-				small = "gfx/interface/ideas/idea_europe_generic_land_17.dds"
-			}
-		}
-		advisor = {
-			slot = high_command
-			idea_token = ARM_anastas_mikoyan
-			allowed = {
-				original_tag = ARM
-			}
-			available = {
-				has_government = communism
-			}
-			traits = {
-				army_logistics_1
-			}
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
+	# ARM_anastas_mikoyan = { Replaced by another guy
+	# 	#logistics defense board of the USSR, so a civilian but with military attributes
+	# 	name = ARM_anastas_mikoyan
+	# 	portraits = {
+	# 		army = {
+	# 			small = "gfx/interface/ideas/idea_europe_generic_land_17.dds"
+	# 		}
+	# 	}
+	# 	advisor = {
+	# 		slot = high_command
+	# 		idea_token = ARM_anastas_mikoyan
+	# 		allowed = {
+	# 			original_tag = ARM
+	# 		}
+	# 		available = {
+	# 			has_government = communism
+	# 		}
+	# 		traits = {
+	# 			army_logistics_1
+	# 		}
+	# 		ai_will_do = {
+	# 			factor = 1
+	# 		}
+	# 	}
+	# }
 
 	# Legacy Characters #
 
@@ -1022,6 +958,7 @@ characters = {
 		name = ARM_wartan_sarkisian
 		portraits = {
 			army = {
+				large = "gfx/leaders/Europe/Portrait_europe_generic_land_6.dds"
 				small = "gfx/interface/ideas/idea_europe_generic_land_6.dds"
 			}
 		}
@@ -1034,20 +971,30 @@ characters = {
 				original_tag = ARM
 			}
 			visible = {
-				NOT = {
-					has_government = communism
-				}
+				has_government = fascism
 			}
 			available = {
-				NOT = {
-					has_government = communism
-				}
+				has_government = fascism
 			}
 			traits = {
 				army_infantry_1
 			}
 			ai_will_do = {
 				factor = 1
+			}
+		}
+		corps_commander = {
+			traits = {
+				trait_reckless politically_connected AUS_nazi_loyalties
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id = -1
+			visible = {
+				has_government = fascism
 			}
 		}
 	}
@@ -1152,6 +1099,81 @@ characters = {
 			}
 			ai_will_do = {
 				factor = 1
+			}
+		}
+	}
+	ARM_ghukas_madoyan = {
+		name = ARM_ghukas_madoyan
+		portraits = {
+			army = {
+				large = "gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+				small = "gfx/interface/ideas/idea_europe_generic_land_7.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ARM_ghukas_madoyan_army
+			allowed = {
+				original_tag = ARM
+			}
+			available = {
+				has_government = communism
+			}
+			traits = {
+				war_industry_specialist
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected harsh_leader trickster JAP_communist_sympathizer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+			legacy_id = -1
+			visible = {
+				has_government = communism
+			}
+		}
+	}
+	ARM_hmayak_babayan = {
+		name = ARM_hmayak_babayan
+		portraits = {
+			army = {
+				large = "gfx/leaders/Europe/portrait_europe_generic_land_19.dds"
+				small = "gfx/interface/ideas/idea_europe_generic_land_19.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ARM_hmayak_babayan_army
+			ledger = army
+			allowed = {
+				original_tag = ARM
+			}
+			available = {
+				has_government = communism
+			}
+			traits = {
+				army_logistics_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		corps_commander = {
+			traits = { organizer brilliant_strategist trait_mountaineer JAP_communist_sympathizer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 4
+			legacy_id = -1
+			visible = {
+				has_government = communism
 			}
 		}
 	}
