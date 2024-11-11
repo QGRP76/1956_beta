@@ -354,7 +354,7 @@ POR_the_path_to_economic_progress = {
 	POR_subsidize_rural_farming = {
 		icon = ger_mefo_bills
 		fire_only_once = no
-		days_re_enable = 400
+		days_re_enable = 350
 		cost = 50
 		ai_will_do = { base = 25 }
 		visible = { 
@@ -364,11 +364,11 @@ POR_the_path_to_economic_progress = {
 				has_completed_focus = POR_assistance_for_the_countryside
 			}
 		}
-		days_remove = 200
-		modifier = { consumer_goods_factor = 0.2 }
+		days_remove = 175
+		modifier = { consumer_goods_factor = 0.15 }
 		remove_effect = {
-			add_political_power = 75
-			add_stability = 0.04
+			add_political_power = 100
+			add_stability = 0.03
 			add_popularity = {
 				ideology = ROOT
 				popularity = 0.03

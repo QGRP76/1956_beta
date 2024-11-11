@@ -151,7 +151,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_cost = 0.6
+				political_power_factor = -0.3
 				stability_factor = -0.1
 				neutrality_drift = 0.02
 				fascism_drift = 0.01
@@ -161,9 +161,10 @@ ideas = {
 		POR_reactionary_resistance2 = {
 			name = POR_reactionary_resistance
 			picture = chi_war_of_resistance2
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
-				political_power_cost = 0.45
+				political_power_factor = -0.2
 				stability_factor = -0.075
 				neutrality_drift = 0.01
 			}
@@ -172,9 +173,10 @@ ideas = {
 		POR_reactionary_resistance3 = {
 			name = POR_reactionary_resistance
 			picture = chi_war_of_resistance2
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
-				political_power_cost = 0.3
+				political_power_factor = -0.1
 				stability_factor = -0.05
 				neutrality_drift = 0.01
 			}
@@ -183,9 +185,10 @@ ideas = {
 		POR_reactionary_resistance4 = {
 			name = POR_reactionary_resistance
 			picture = chi_war_of_resistance2
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
-				political_power_cost = 0.15
+				political_power_factor = -0.05
 				stability_factor = -0.05
 			}
 		}
@@ -227,6 +230,7 @@ ideas = {
 
 		POR_portugals_road_to_democracy = {
 			picture = worker_cluture
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
 				stability_weekly = -0.001
@@ -239,6 +243,7 @@ ideas = {
 		POR_hold_fair_elections_idea = {
 			name = POR_portugals_road_to_democracy
 			picture = worker_cluture
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.1
@@ -251,6 +256,7 @@ ideas = {
 
 		POR_western_europes_model_democracy = {
 			picture = worker_cluture
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
 				stability_weekly = 0.001
@@ -265,6 +271,7 @@ ideas = {
 
 		POR_red_tinted_democracy = {
 			picture = jap_the_unthinkable_option
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.2
@@ -280,6 +287,7 @@ ideas = {
 		POR_general_directorate_of_securty_idea = {
 			name = POR_general_directorate_of_security
 			picture = generic_spy_intel
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
 				drift_defence_factor = 0.25
@@ -291,9 +299,7 @@ ideas = {
 		POR_the_question_of_nationalization_idea = {
 			name = POR_the_question_of_nationalization
 			picture = generic_production_bonus
-			allowed_civil_war = { 
-				NOT = { has_government = neutrality } 
-			}
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = { 
 				political_power_factor = -0.05
@@ -303,9 +309,7 @@ ideas = {
 
 		POR_transitioning_to_a_mixed_economy = {
 			picture = generic_production_bonus
-			allowed_civil_war = { 
-				NOT = { has_government = neutrality } 
-			}
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
 				political_power_factor = -0.15
@@ -318,6 +322,7 @@ ideas = {
 
 		POR_slow_collectivization = {
 			picture = generic_production_bonus
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
 				production_speed_buildings_factor = 0.075
@@ -327,6 +332,7 @@ ideas = {
 
 		POR_heavy_handed_central_planning = {
 			picture = generic_production_bonus
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
 				stability_weekly = -0.002
@@ -337,6 +343,7 @@ ideas = {
 
 		POR_looming_economic_disaster = {
 			picture = generic_production_bonus
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
 				stability_weekly = -0.005
@@ -348,12 +355,14 @@ ideas = {
 		#Political - Historical/Authoritarian
 
 		POR_silencing_militant_revolutionaries = {
+			allowed = { original_tag = POR }
 			picture = generic_intel_bonus
 			removal_cost = -1
 			modifier = { stability_weekly = 0.001 }
 		}
 
 		POR_expanding_the_propaganda_ministry = {
+			allowed = { original_tag = POR }
 			picture = generic_spy_intel
 			removal_cost = -1
 			modifier = {
@@ -365,6 +374,7 @@ ideas = {
 		POR_austerity_measures2 = {
 			name = POR_austerity_measures
 			picture = generic_neutrality_drift_bonus
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.05
@@ -376,6 +386,7 @@ ideas = {
 		}
 
 		POR_wartime_interdependence = {
+			allowed = { original_tag = POR }
 			picture = generic_neutrality_drift_bonus
 			removal_cost = -1
 			modifier = {
@@ -387,6 +398,7 @@ ideas = {
 		POR_wartime_autarky_idea = {
 			name = POR_wartime_autarky
 			picture = generic_neutrality_drift_bonus
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
 				political_power_factor = 0.1
@@ -398,6 +410,7 @@ ideas = {
 		POR_plant_the_seeds_for_a_modest_social_state_idea = {
 			name = POR_disgruntled_republicans
 			picture = EST_democratic_opposition
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
 				stability_weekly = -0.001
@@ -409,6 +422,7 @@ ideas = {
 		POR_secretariat_of_national_information_idea = {
 			name = POR_disgruntled_republicans
 			picture = EST_democratic_opposition
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
 				political_power_factor = -0.4
@@ -420,6 +434,7 @@ ideas = {
 		POR_disgruntled_republicans2 = {
 			name = POR_disgruntled_republicans
 			picture = EST_democratic_opposition
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
 				political_power_factor = -0.3
@@ -430,6 +445,7 @@ ideas = {
 		POR_international_and_state_defense_force_idea = {
 			name = POR_international_and_state_defense_force
 			picture = generic_spy_intel
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
 				operative_slot = 1
@@ -486,6 +502,7 @@ ideas = {
 
 		POR_secret_police_crackdowns = {
 			picture = chi_war_of_resistance3
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
 				stability_factor = -0.05
@@ -497,6 +514,7 @@ ideas = {
 
 		POR_portugals_own_labor_charter = {
 			picture = generic_agrarian_reform
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.15
@@ -508,6 +526,7 @@ ideas = {
 		POR_portugals_own_labor_charter2 = {
 			name = POR_portugals_own_labor_charter
 			picture = generic_agrarian_reform
+			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.2
