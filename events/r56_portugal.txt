@@ -2447,7 +2447,7 @@ country_event = {
 	}
 }
 
-country_event = {	#Addressing the Spanish Situation
+country_event = {	#Addressing the New Spain
 	id = portugal.51
 	title = portugal.51.t
 	desc = portugal.51.desc
@@ -2458,16 +2458,38 @@ country_event = {	#Addressing the Spanish Situation
 		name = portugal.51.a	#Together, we've displayed incredible resolve! Pan-Iberian unity is our path forward!
 		trigger = {
 			has_country_flag = POR_join_forces_with_the_spanish_popular_front_flag
-			41 = {
-				owner = { 
+			OR = {
+				SPR = {
+					exists = yes
 					OR = {
-						tag = SPR
-						tag = SPD
-						tag = SPC
+						has_government = democratic
+						has_government = communism
 					}
 					OR = {
-						has_government = communism
+						is_subject = no
+						is_subject_of = POR
+					}
+				}
+				SPD = {
+					exists = yes
+					OR = {
 						has_government = democratic
+						has_government = communism
+					}
+					OR = {
+						is_subject = no
+						is_subject_of = POR
+					}
+				}
+				SPC = {
+					exists = yes
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+					OR = {
+						is_subject = no
+						is_subject_of = POR
 					}
 				}
 			}

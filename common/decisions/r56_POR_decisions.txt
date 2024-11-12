@@ -17,8 +17,8 @@ form_nation_mod_category = {
 	   	}
 		available = { controls_state = 171 }
 		complete_effect = {
-			add_political_power = 25
-			add_war_support = 0.02
+			add_political_power = 35
+			add_war_support = 0.03
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			add_state_claim = 171
 			unlock_decision_tooltip = POR_integrate_galicia
@@ -86,7 +86,7 @@ form_nation_mod_category = {
 			controls_state = 770 
 		}
 		complete_effect = {
-			add_political_power = 50
+			add_political_power = 75
 			add_war_support = 0.05
 			add_popularity = {
 				ideology = ROOT
@@ -706,8 +706,8 @@ POR_together_against_salazar = {
 			political_power_factor = 0.15
 			communism_drift = 0.02
 			democratic_drift = 0.02
-			production_speed_buildings_factor = -0.2
-			industrial_capacity_factory = -0.2
+			production_speed_buildings_factor = -0.25
+			industrial_capacity_factory = -0.25
 		}
 	}
 
@@ -718,7 +718,7 @@ POR_together_against_salazar = {
 		cost = 60
 		days_remove = 120
 		modifier = {
-			communism_drift = 0.04
+			communism_drift = 0.05
 			democratic_drift = 0.03
 			political_power_gain = -0.15
 		}
@@ -786,7 +786,7 @@ POR_securing_the_revolution = {
 		available = { has_completed_focus = POR_the_question_of_our_colonies }
 		cancel_if_not_visible = yes 
 		is_good = no
-		fire_only_once = yes                            
+		fire_only_once = no                            
 		selectable_mission = no  
 		days_mission_timeout = 240
 		timeout_effect = {

@@ -19,7 +19,6 @@ ideas = {
 		POR_disgruntled_republicans = {
 			picture = EST_democratic_opposition
 			allowed = { original_tag = POR }
-			allowed_civil_war = { has_government = neutrality }
 			cancel = { has_government = communism }
 			removal_cost = -1
 			modifier = {
@@ -124,6 +123,19 @@ ideas = {
 
 		#Political - Democratic/Communist
 
+		POR_unite_against_salazar_idea = {
+			name = POR_disgruntled_republicans
+			picture = EST_democratic_opposition
+			allowed = { original_tag = POR }
+			allowed_civil_war = { has_government = neutrality }
+			cancel = { has_government = communism }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.003
+				political_power_factor = -0.3
+			}
+		}
+
 		POR_NKVD_activity = {
 			picture = trotskyite_plot
 			allowed = { original_tag = POR }
@@ -207,6 +219,7 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.002
 				weekly_casualties_war_support = 0.001
+				war_stability_factor = 0.1
 			}
 		}
 
@@ -225,6 +238,7 @@ ideas = {
 			modifier = {
 				communism_drift = 0.01
 				weekly_casualties_war_support = 0.001
+				war_stability_factor = 0.1
 			}
 		}
 
@@ -237,6 +251,7 @@ ideas = {
 				political_power_gain = 0.05
 				neutrality_drift = -0.01
 				weekly_casualties_war_support = 0.001
+				war_stability_factor = 0.1
 			}
 		}
 
@@ -251,6 +266,7 @@ ideas = {
 				neutrality_drift = -0.01
 				political_advisor_cost_factor = -0.2
 				weekly_casualties_war_support = 0.001
+				war_stability_factor = 0.1
 			}
 		}
 
@@ -266,6 +282,7 @@ ideas = {
 				neutrality_drift = -0.01
 				political_advisor_cost_factor = -0.25
 				weekly_casualties_war_support = 0.001
+				war_stability_factor = 0.1
 			}
 		}
 
@@ -281,6 +298,7 @@ ideas = {
 				neutrality_drift = -0.01
 				political_advisor_cost_factor = -0.25
 				weekly_casualties_war_support = 0.001
+				war_stability_factor = 0.1
 			}
 		}
 
