@@ -12,7 +12,7 @@ SAU_DD_HISTORICAL = {
 	fallback_name = "Destroyer %d"					
 
 	unique = {											
-		"Al Riyadh" "Makkah" "Al Dammam" "Al Madinah" "Hofouf" "Abha" "Taif" "As-Siddiq" "Al-Farouq" "Abdul-Aziz"
+		"Al Riyadh" "Makkah" "Al Dammam" "Al Madinah" "Hofouf" "Abha" "Taif" "As-Siddiq" "al-Farouq" "Abdul-Aziz"
 		"Faisal" "Khalid" "Amr" "Tariq" "Ouqbah" "Abu Obaidah" "Al Jawf" "Shaqra" "Al Kharj" "Al Yamana"
 	}
 }

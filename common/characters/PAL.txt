@@ -46,7 +46,7 @@ characters={
 	}
 
 	PAL_zeid_bin_hussein = {
-		name="Zeid Bin Hussein"
+		name="Zeid ibn Hussein"
 		portraits={
 			civilian={
 				large= "gfx/leaders/PAL/r56_portrait_PAL_zeid_bin_hussein.dds"
@@ -64,7 +64,7 @@ characters={
 	
 
 	PAL_abdul_qadir_alhusseini = {
-		name="Abdul-Qadir Al Husseini"
+		name="Abdul-Qadir al-Husseini"
 		portraits={
 			army={
 				large = "gfx/leaders/PAL/r56_portrait_PAL_abd_al_qadir.dds"
@@ -103,7 +103,7 @@ characters={
 	}
 
 	PAL_amin_al_husseini= {
-		name="Amin Al-Husseini"
+		name="Amin al-Husseini"
 		portraits={
 			civilian={
 				large= "gfx/leaders/PAL/r56_portrait_PAL_Amin_al-Husseini.dds"
@@ -121,7 +121,7 @@ characters={
 	}
 
 	PAL_majlis_islami= {
-		name="Majlis Al-Shura Al-Filastini"
+		name="Majlis al-Shura al-Filastini"
 		portraits={
 			civilian={
 				large= "gfx/leaders/PAL/r56_portrait_PAL_Islamic_Council_of_Palestine.dds"
@@ -137,7 +137,7 @@ characters={
 		}
 	}
 	PAL_husam_aldin_jarallah= {
-		name="Husam Al-Din Jarallah"
+		name="Husam al-Din Jarallah"
 		portraits={
 			civilian={
 				large= "gfx/leaders/PAL/r56_portrait_PAL_hussam_aldin_jarallah.dds"
@@ -202,7 +202,7 @@ characters={
 	}
 
 	PAL_fawzi_al_qawuqji = {
-		name="Fawzi Al Qawuqji"
+		name="Fawzi al-Qawuqji"
 		portraits={
 			army={
 				large ="gfx/leaders/PAL/r56_portrait_PAL_fawzi_qawuqji.dds"
@@ -248,7 +248,7 @@ characters={
 	}
 
 	PAL_radwan_hilu= {
-		name="Radwan Al-Hilu"
+		name="Radwan al-Hilu"
 		portraits={
 			civilian={
 				large="gfx/leaders/kr_generic/Portrait_Arabia_Generic_new_2.dds" 
@@ -264,7 +264,7 @@ characters={
 		}
 	}
 	PAL_raghib_al_nashashbi = {
-		name= "Raghib Al-Nashashbi"
+		name= "Raghib al-Nashashbi"
 		portraits={
 			civilian ={
 				small = "GFX_idea_PAL_raghib_nashashbi" 
@@ -306,7 +306,7 @@ characters={
 	}
 
 	PAL_muhammad_nimr_al_hawari = {
-		name= "Muhammad Nimr Al-Hawari"
+		name= "Muhammad Nimr al-Hawari"
 		portraits={
 			army={
 				large ="gfx/leaders/kr_generic/Portrait_Arabia_Generic_land_new_6.dds"
@@ -344,7 +344,7 @@ characters={
 	}
 
 	PAL_abdulhalim_algolani = {
-		name= "Abdul-Halim Al-Golani"
+		name= "Abdul-Halim al-Golani"
 		portraits={
 			army={
 				large ="gfx/leaders/PAL/r56_portrait_PAL_abdulhalim_algolani.dds"
@@ -430,7 +430,7 @@ characters={
 
 
 	PAL_abdul_ghani_alkarmi = {
-		name= "Abdul-Ghani Al-Karmi"
+		name= "Abdul-Ghani al-Karmi"
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_arab_1"
@@ -469,7 +469,7 @@ characters={
 				factor = 4
 			}			
 		}
-		name = "Mohammad Daoud Al-Abbasi"
+		name = "Mohammad Daoud al-Abbasi"
 		portraits={
 			army={
 				small="GFX_idea_generic_navy_arab_2" #almost exact copy of him irl, which is why he is navy portrait
@@ -511,7 +511,7 @@ characters={
 	}
 
 	PAL_jamal_albrondee = {
-		name= "Jamal Al-Brondee"
+		name= "Jamal al-Brondee"
 		portraits={
 			army={
 				small="GFX_idea_generic_democratic_arab" 
@@ -533,7 +533,7 @@ characters={
 	}
 
 	PAL_nimr_al_khatib = {
-		name= "Nimr Al-Khatib"
+		name= "Nimr al-Khatib"
 		portraits={
 			army={
 				small= "GFX_idea_generic_fascist_demagogue_middle_eastern_2d" 

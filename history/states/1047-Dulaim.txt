@@ -2,17 +2,14 @@
 state={
 	id=1047
 	name="STATE_1047"
-	manpower = 56328
+	manpower = 245431
 	
-	state_category = rural
+	state_category = pastoral
 
 	history={
 		owner = IRQ
 		victory_points = {
 			3795 1
-		}
-		victory_points = {
-			12372 3
 		}
 		buildings = {
 			infrastructure = 1

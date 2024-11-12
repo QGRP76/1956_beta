@@ -871,7 +871,7 @@ country_event = {
 		}
 		set_party_name = {
 			ideology = democratic
-			long_name = "Jama'at Al Ahali - Socialists"
+			long_name = "Jama'at al-Ahali - Socialists"
 			name = "JA-S"
 		}
 		retire_character = IRQ_yasin_alhashimi
@@ -911,7 +911,7 @@ country_event = {
 		hidden_effect = {
 			set_party_name = {
 				ideology = democratic
-				long_name = "Jama'at Al Ahali - Socialists"
+				long_name = "Jama'at al-Ahali - Socialists"
 				name = "JA-S"
 			}
 			add_popularity = {
@@ -945,7 +945,7 @@ country_event = {
 		hidden_effect = {
 			set_party_name = {
 				ideology = democratic
-				long_name = "Jama'at Al Ahali - Liberals"
+				long_name = "Jama'at al-Ahali - Liberals"
 				name = "JA-L"
 			}
 			add_popularity = {
@@ -1314,8 +1314,8 @@ country_event = {
 		set_politics = {
 			ruling_party = neutrality
    		 	elections_allowed = no
-			long_name = "Al-Hāshimīyūn"
-    		name = "Al-Hāshimīyūn"
+			long_name = "al-Hāshimīyūn"
+    		name = "al-Hāshimīyūn"
 		}
 		retire_character = IRQ_council
 		promote_character = {
@@ -1346,8 +1346,8 @@ country_event = {
 		}
 		set_party_name = {
 			ideology = neutrality
-			long_name = "Al-Hāshimīyūn"
-    		name = "Al-Hāshimīyūn"
+			long_name = "al-Hāshimīyūn"
+    		name = "al-Hāshimīyūn"
 		}
 		promote_character = {
 			character = IRQ_ghazi_i
@@ -1356,6 +1356,8 @@ country_event = {
 		complete_national_focus = IRQ_continue_democratization
 	}
 }
+
+# ECONOMY EVENTS #
 
 country_event = { 
 	id = iraqeco.1
@@ -1366,22 +1368,17 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = iraqeco.2 days = 17 hours = 6
+			}
+		}
+	}
+
 	option = { 
 		name = iraqeco.1.a
-		set_country_flag = IRQ_Left_Libs_remain
-		country_event = {
-			id = iraqeco.2
-			days = 1
-		}
-		add_political_power = -50
-	}
-	option = { 
-		name = iraqeco.1.b
-		set_country_flag = IRQ_Left_Libs_leaves
-		country_event = {
-			id = iraqeco.2
-			days = 1
-		}
+		add_political_power = 15
 	}
 }
 country_event = { 
@@ -1392,25 +1389,35 @@ country_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = iraqeco.3 days = 17 hours = 6
+			}
+		}
+	}
+
 	option = { 
 		name = iraqeco.2.a
 		set_country_flag = IRQ_develop_south
-		country_event = {
-			id = iraqeco.3
-			days = 1
+		trigger = {
+			OR = {
+				controls_state = 1045
+				controls_state = 1046
+			}
 		}
-		
-		
 	}
+
 	option = { 
 		name = iraqeco.2.b
 		set_country_flag = IRQ_develop_north
-		country_event = {
-			id = iraqeco.3
-			days = 1
-		}
 		trigger = {
-			has_country_flag = IRQ_Left_Libs_leaves
+			OR = {
+				controls_state = 676
+				controls_state = 1048
+				controls_state = 1049
+			}
 		}
 	}
 }
@@ -1423,26 +1430,39 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	option = { 
-		name = iraqeco.3.a
-		set_country_flag = IRQ_agriculture_bill_approve
-		complete_national_focus = IRQ_reform_agriculture_laws
-		country_event = {
-			id = iraqeco.4
-			days = 1
-		}
-		trigger = {
-			has_country_flag = IRQ_Left_Libs_remain
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = iraqeco.4 days = 17 hours = 6
+			}
 		}
 	}
+
+	option = {
+		name = iraqeco.3.a
+		add_political_power = -35
+		effect_tooltip = {
+			unlock_national_focus = IRQ_reform_agriculture_laws
+		}
+		custom_effect_tooltip = AFG_constitution_question_end_tt
+		effect_tooltip = {
+			random_owned_controlled_state = {
+				prioritize = { 1046 }
+				increase_state_category = yes
+			}
+			random_owned_controlled_state = {
+				prioritize = { 1045 }
+				increase_state_category = yes
+			}
+			add_ideas = IRQ_agricultural_reforms_idea
+		}
+		set_country_flag = IRQ_agriculture_bill_approve
+	}
+
 	option = { 
 		name = iraqeco.3.b
-		country_event = {
-			id = iraqeco.4
-			days = 1
-		}
-		
-		
+		add_political_power = -15
+		add_stability = 0.03
 	}
 }
 country_event = { 
@@ -1456,6 +1476,14 @@ country_event = {
 
 	option = { 
 		name = iraqeco.4.a
+		effect_tooltip = {
+			complete_national_focus = IRQ_finalize_the_national_budget
+			add_political_power = 75
+			add_timed_idea = {
+				idea = IRQ_finalized_budget
+				days = 365
+			}
+		}
 		hidden_effect = {
 			set_country_flag = IRQ_budget_ends
 		}

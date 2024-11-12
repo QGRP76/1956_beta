@@ -449,8 +449,8 @@
  mandate_palestine.80.d:0 "After gaining our independence, the question of what to do with the many extremist militias in our country remains. Many people believe they should stay in their positions, while others believe they must be either exiled or resign and be put under close watch. Purging Jewish or Arabic leaders will definitely lower our support among them, but it could raise our support with minority and moderate communities."
  mandate_palestine.80.a:0 "We shall see what the outcome will be."
 
- mandate_palestine.81.t:0 "The Case of Fawzi Al-Qawuji"
- mandate_palestine.81.d:0 "Fawzi Al-Qawuji is the first to the stand. As leader of the Arab Salvation Army militia, he has shown extreme hostilities to Jewish and minority communities. Many call to exile him, while many say we cannot lose a valuable general such as him.\n\nIt is up to the jury to decide."
+ mandate_palestine.81.t:0 "The Case of Fawzi al-Qawuji"
+ mandate_palestine.81.d:0 "Fawzi al-Qawuji is the first to the stand. As leader of the Arab Salvation Army militia, he has shown extreme hostilities to Jewish and minority communities. Many call to exile him, while many say we cannot lose a valuable general such as him.\n\nIt is up to the jury to decide."
  mandate_palestine.81.a:0 "He must be exiled from our nation!"
  mandate_palestine.81.b:0 "Strip him of his military rank and put him under watch."
  mandate_palestine.81.c:0 "We cannot afford to lose a valuable general such as him."
@@ -556,8 +556,8 @@
  #mandate_palestine.150.d:0 "With our recent declaration of independence, many Arab countries in the Middle East have announced their support for us and have sent us industrial support for us to be able to content with the more industrialized Jewish areas."
  #mandate_palestine.150.a:0 "We welcome all support."
 
- mandate_palestine.150.t:0 "Provisional Airfield in Umm Al-Rashrash"
- mandate_palestine.150.d:0 "We have opened a provisional airbase in Umm Al-Rashrash in order for us to be able to field foreign purchased planes."
+ mandate_palestine.150.t:0 "Provisional Airfield in Umm al-Rashrash"
+ mandate_palestine.150.d:0 "We have opened a provisional airbase in Umm al-Rashrash in order for us to be able to field foreign purchased planes."
  mandate_palestine.150.a:0 "Great."
 
  mandate_palestine.151.t:0 "Moving the Capital"
@@ -577,7 +577,7 @@
  mandate_palestine.202.a:0 "But what happens to a dream deferred?"
 
  mandate_palestine.203.t:0 "The 1936 Arab Revolt"
- mandate_palestine.203.d:0 "One could have easily predicted that even under the control of the [MPL.OVERLORD.GetAdjective], the artificial mandate created in Palestine following the Great War would not last for long. Rising ethnic tensions following the Cement Incident in October 1935 have transformed into a full-blown mass labour strike with violent riots targeting Jewish civilians in certain regions.\n\nLed by Grand Mufti of Jerusalem Amin Al-Husseini, the revolters have demanded a total end to Jewish immigration to the region and the dismantling of the Yishuv's paramilitary organizations.\n\n[MPL.OVERLORD.GetAdjective] authorities have already begun to prepare for further escalation."
+ mandate_palestine.203.d:0 "One could have easily predicted that even under the control of the [MPL.OVERLORD.GetAdjective], the artificial mandate created in Palestine following the Great War would not last for long. Rising ethnic tensions following the Cement Incident in October 1935 have transformed into a full-blown mass labour strike with violent riots targeting Jewish civilians in certain regions.\n\nLed by Grand Mufti of Jerusalem Amin al-Husseini, the revolters have demanded a total end to Jewish immigration to the region and the dismantling of the Yishuv's paramilitary organizations.\n\n[MPL.OVERLORD.GetAdjective] authorities have already begun to prepare for further escalation."
  mandate_palestine.203.a:0 "Try to grab too much, end up with nothing."
 
 #  mandate_palestine.203.t:0 "[MPL.GetNameDefCap] Heads Towards Independence"
@@ -707,12 +707,12 @@
  mandate_palestine.505.d:0 "Following the recent attack at the Haifa Oil Refinery by the Irgun, hundreds of Arab workers stormed the refinery with metal rods, beating 39 Jewish workers to death and injuring 49 others. Police only arrived one hour after the massacre started, and were largely ineffective at dealing with the riots."
  mandate_palestine.505.a:0 "Although there is a secret that he would not tell many people,"
 
- mandate_palestine.506.t:0 "Carnage at Balad Al-Shaykh"
- mandate_palestine.506.d:0 "Following the chaos at the Haifa Oil Refinery, Haganah members have retaliated against the rioters by attacking their residence at Balad Al-Shaykh. A shootout erupted in the town, with Haganah forces fighting the local Arab militia. The amount of dead is suspected to be between 50 and 70, mostly adult males."
+ mandate_palestine.506.t:0 "Carnage at Balad al-Shaykh"
+ mandate_palestine.506.d:0 "Following the chaos at the Haifa Oil Refinery, Haganah members have retaliated against the rioters by attacking their residence at Balad al-Shaykh. A shootout erupted in the town, with Haganah forces fighting the local Arab militia. The amount of dead is suspected to be between 50 and 70, mostly adult males."
  mandate_palestine.506.a:0 "How he is in love with one of the girls."
 
- mandate_palestine.507.t:0 "Amin Al-Husayni Orders Blockade of Jerusalem"
- mandate_palestine.507.d:0 "In the first act of open warfare in this crisis, Mufti of Jerusalem, Amin Al-Husayni, has ordered a full blockade of the Jewish neighborhoods in Jerusalem. Haganah fighters have already tried to bring supplies in, but were attacked at the gates of Western Jerusalem.\n\nOur forces have lost control of Nablus and Ramallah."
+ mandate_palestine.507.t:0 "Amin al-Husayni Orders Blockade of Jerusalem"
+ mandate_palestine.507.d:0 "In the first act of open warfare in this crisis, Mufti of Jerusalem, Amin al-Husayni, has ordered a full blockade of the Jewish neighborhoods in Jerusalem. Haganah fighters have already tried to bring supplies in, but were attacked at the gates of Western Jerusalem.\n\nOur forces have lost control of Nablus and Ramallah."
  mandate_palestine.507.a:0 "So on a cold dark night, he confesses his love for her,"
 
  mandate_palestine.508.t:0 "Haganah Begins Mandatory Conscription"
@@ -1041,10 +1041,10 @@
  PAL_take_jerusalem_mission:0 "Take Jerusalem"
  PAL_take_jerusalem_mission_desc:0 "Jerusalem, the spiritual capital of our people, must be captured at all costs. Losing it would greatly damage the Israeli morale."
 
- ISR_take_rashrash_mission:0 "Take Umm Al-Rashrash"
+ ISR_take_rashrash_mission:0 "Take Umm al-Rashrash"
  ISR_take_rashrash_mission_desc:0 "Splitting the Arab forces in two would greatly improve our chances of victory. We must push southwards toward the coast and part their forces like Moses did the red sea."
- PAL_hold_rashrash_mission:0 "Hold Umm Al-Rashrash"
- PAL_hold_rashrash_mission_desc:0 "An Israeli capture of Umm Al-Rashrash would pave the way to split our forces in two. We must hold the line and make sure this doesn't happen."
+ PAL_hold_rashrash_mission:0 "Hold Umm al-Rashrash"
+ PAL_hold_rashrash_mission_desc:0 "An Israeli capture of Umm al-Rashrash would pave the way to split our forces in two. We must hold the line and make sure this doesn't happen."
 
 
  MPL_aliyah_category:0 "The Aliyah Crisis"
@@ -1148,21 +1148,21 @@
  RULE_OPTION_PAL_HASHEMITE:0 "£GFX_gamerules_PAL_hashemite  A Hashemite Monarch"
  RULE_OPTION_PAL_HASHEMITE_AI_DESC:0 "During the Independence War, Abdul-Qadir's plan will be chosen, but he will relenquish his reign to King Zeid of the Hashemite Dynasty."
  RULE_OPTION_PAL_NLL:0 "£GFX_gamerules_PAL_communism  A Great Homeland"
- RULE_OPTION_PAL_NLL_AI_DESC:0 "During the Independence War, Fawzi Al-Qawuqji's plan will be chosen, however after the war he will be couped by the communist Radwan Al-Hilu's National Liberation League, with the goal of establishing a Pan-Arabic state."
+ RULE_OPTION_PAL_NLL_AI_DESC:0 "During the Independence War, Fawzi al-Qawuqji's plan will be chosen, however after the war he will be couped by the communist Radwan al-Hilu's National Liberation League, with the goal of establishing a Pan-Arabic state."
  RULE_OPTION_PAL_NASHASHIBI:0 "£GFX_gamerules_PAL_democratic  Nashashibis Assume Responsibility"
- RULE_OPTION_PAL_NASHASHIBI_AI_DESC:0 "During the Independence War, Fawzi Al-Qawuqji's plan will be chosen, however after the war he will be couped by the Liberal Nashashibi family, who will establish a democratic state with Raghib Nashashibi as it's first leader."
+ RULE_OPTION_PAL_NASHASHIBI_AI_DESC:0 "During the Independence War, Fawzi al-Qawuqji's plan will be chosen, however after the war he will be couped by the Liberal Nashashibi family, who will establish a democratic state with Raghib Nashashibi as it's first leader."
  RULE_OPTION_PAL_SMC:0 "£GFX_gamerules_PAL_democratic  SMC Assumes Responsibility"
- RULE_OPTION_PAL_SMC_AI_DESC:0 "During the Independence War, Fawzi Al-Qawuqji's plan will be chosen, however after the war he will be couped by the democratic conservatives of the SMC, who will go onto establish an Islamic republic in Palestine."
- RULE_OPTION_PAL_ISLAM:0 "£GFX_gamerules_PAL_islam  Al-Muqaddas Takeover"
- RULE_OPTION_PAL_ISLAM_AI_DESC:0 "During the Independence War, Abdul-Qadir's plan will be chosen, howevever he will be couped by the Islamist forces. Elections for the chairmanship will be held, with radical Amin Al-Husseini coming out on top."
+ RULE_OPTION_PAL_SMC_AI_DESC:0 "During the Independence War, Fawzi al-Qawuqji's plan will be chosen, however after the war he will be couped by the democratic conservatives of the SMC, who will go onto establish an Islamic republic in Palestine."
+ RULE_OPTION_PAL_ISLAM:0 "£GFX_gamerules_PAL_islam  al-Muqaddas Takeover"
+ RULE_OPTION_PAL_ISLAM_AI_DESC:0 "During the Independence War, Abdul-Qadir's plan will be chosen, howevever he will be couped by the Islamist forces. Elections for the chairmanship will be held, with radical Amin al-Husseini coming out on top."
  RULE_OPTION_PAL_HUSSAM:0 "£GFX_gamerules_PAL_hussam  A Moderate Islamic State"
- RULE_OPTION_PAL_HUSSAM_AI_DESC:0 "During the Independence War, Abdul-Qadir's plan will be chosen, howevever he will be couped by the Islamist forces. Elections for the chairmanship will be held, with moderate Hussam Al-Din coming out on top."
+ RULE_OPTION_PAL_HUSSAM_AI_DESC:0 "During the Independence War, Abdul-Qadir's plan will be chosen, howevever he will be couped by the Islamist forces. Elections for the chairmanship will be held, with moderate Hussam al-Din coming out on top."
  RULE_OPTION_PAL_HASAN:0 "£GFX_gamerules_PAL_islam  Salama's Coup"
- RULE_OPTION_PAL_HASAN_AI_DESC:0 "During the Independence War, Abdul-Qadir's plan will be chosen, howevever he will be couped by the Islamist forces. Elections for the chairmanship will be held, with moderate Hussam Al-Din coming out on top. However, due to his moderate stance, he will be couped by fascist general Hasan Salama."
+ RULE_OPTION_PAL_HASAN_AI_DESC:0 "During the Independence War, Abdul-Qadir's plan will be chosen, howevever he will be couped by the Islamist forces. Elections for the chairmanship will be held, with moderate Hussam al-Din coming out on top. However, due to his moderate stance, he will be couped by fascist general Hasan Salama."
  RULE_OPTION_PAL_FAWZI:0 "£GFX_gamerules_PAL_golani  Fawzi's Coup"
- RULE_OPTION_PAL_FAWZI_AI_DESC:0 "During the Independence War, Fawzi Al-Qawuqji's plan will be chosen, and he will go on to crack down on civillian power in the government, preventing an opposition coup."
+ RULE_OPTION_PAL_FAWZI_AI_DESC:0 "During the Independence War, Fawzi al-Qawuqji's plan will be chosen, and he will go on to crack down on civillian power in the government, preventing an opposition coup."
  RULE_OPTION_PAL_GOLANI:0 "£GFX_gamerules_PAL_golani  Golani Runs for Power"
- RULE_OPTION_PAL_GOLANI_AI_DESC:0 "During the Independence War, Fawzi Al-Qawuqji's plan will be chosen, but he will lose power to Abdulhalim Al-Golani, who will coup him."
+ RULE_OPTION_PAL_GOLANI_AI_DESC:0 "During the Independence War, Fawzi al-Qawuqji's plan will be chosen, but he will lose power to Abdulhalim al-Golani, who will coup him."
 
 
 #Modifers

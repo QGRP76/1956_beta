@@ -405,7 +405,7 @@ MPL_jerusalem_conference_effect = {
 		}
 			
 		set_province_name = { id = 4088 name = "Bir As-Sab" }
-		set_province_name = { id = 1015 name = "Umm Al-Rashrash"}
+		set_province_name = { id = 1015 name = "Umm al-Rashrash"}
 		add_ideas = neutrality_idea
 	}
 	country_event = {

@@ -504,7 +504,7 @@ add_namespace = palestine
 			}
 			set_party_name = {
 				ideology = neutrality
-				long_name = "Hizb Al-Fakhr Al-Islami"
+				long_name = "Hizb al-Fakhr al-Islami"
 				name = "Islamic Nationalist Party"
 			}
 		}
@@ -1206,7 +1206,7 @@ add_namespace = palestine
 				}
 				set_province_name = {
 					id = 13443
-					name = "Al-Khalil"
+					name = "al-Khalil"
 				}
 			}
 			if = {
@@ -1227,7 +1227,7 @@ add_namespace = palestine
 					controls_state = 1017
 				}
 				set_province_name = { id = 4088 name = "Bir As-Sab" }
-				set_province_name = { id = 1015 name = "Umm Al-Rashrash"}
+				set_province_name = { id = 1015 name = "Umm al-Rashrash"}
 			}
 		}
 	}
@@ -1267,8 +1267,8 @@ add_namespace = palestine
 			}
 			set_party_name = {
 				ideology = neutrality
-				long_name = "Hizbul Islam Al-Muqaddas"
-				name = "Hizb Al-Islam"
+				long_name = "Hizbul Islam al-Muqaddas"
+				name = "Hizb al-Islam"
 			}
 			set_cosmetic_tag = PAL_husam_wholesome	
 			add_stability = 0.1

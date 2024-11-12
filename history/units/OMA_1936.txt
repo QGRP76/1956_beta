@@ -22,9 +22,9 @@ division_template = {
 }
 
 units = {
-	##### Al-Quwat ul-Musalhatu as-Sultan 'Uman #####
+	##### al-Quwat ul-Musalhatu as-Sultan 'Uman #####
 	division = {
-		#name = "Al-Quwat Al-Musalhatu al-Sultan"
+		#name = "al-Quwat al-Musalhatu al-Sultan"
 		division_name = {    # New syntax for compatibility with name lists
 			is_name_ordered = yes
 			name_order = 1

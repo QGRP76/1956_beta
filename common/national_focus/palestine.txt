@@ -187,7 +187,7 @@ focus_tree = {
 			custom_effect_tooltip = PAL_west_bank_tt
 			hidden_effect = {
 				division_template = {
-					name = "Jayshu Tahrir Al-Dhiffah"
+					name = "Jayshu Tahrir al-Dhiffah"
 					priority = 1	
 
 					regiments = {
@@ -201,7 +201,7 @@ focus_tree = {
 
 				966 = {
 					create_unit = {
-						division = "name = \"Quwatu Qadir\" division_template = \"Jayshu Tahrir Al-Dhiffah\" start_experience_factor = 0.05 start_equipment_factor = 1 start_manpower_factor = 1"
+						division = "name = \"Quwatu Qadir\" division_template = \"Jayshu Tahrir al-Dhiffah\" start_experience_factor = 0.05 start_equipment_factor = 1 start_manpower_factor = 1"
 						owner = ROOT
 						count = 3
 						allow_spawning_on_enemy_provs = yes
@@ -608,7 +608,7 @@ focus_tree = {
 			set_politics = {
 				ruling_party = fascism
 				elections_allowed = no
-				long_name = "Al Hizb Al Qawmi Al Filastini"
+				long_name = "al-Hizb al-Qawmi al-Filastini"
 				name = "Nationalist Party of Palestine"
 			}
 			promote_character = {
@@ -1349,7 +1349,7 @@ focus_tree = {
         completion_reward = {	
 			set_rule = { can_create_factions = yes }
 			set_rule = { can_join_factions = yes }
-			create_faction = "Al Khilafah Al Islamiyyah"
+			create_faction = "al-Khilafah al-Islamiyyah"
 		}																																																												
 	}
 	focus = {
@@ -2854,7 +2854,7 @@ focus_tree = {
 						has_tech = tech_recon
 					}
 					division_template = {
-						name = "Kataeb Al-Khariqa"
+						name = "Kataeb al-Khariqa"
 						priority = 2
 						regiments = {
 							infantry = { x = 0 y = 0 }
@@ -2876,7 +2876,7 @@ focus_tree = {
 					}
 					else = {
 						division_template = {
-							name = "Kataeb Al-Khariqa"
+							name = "Kataeb al-Khariqa"
 							priority = 2
 							regiments = {
 								infantry = { x = 0 y = 0 }
@@ -2901,7 +2901,7 @@ focus_tree = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 46 }
 					create_unit = {
-						division = "name = \"Kataeb Al-Khariqa\" division_template = \"Kataeb Al-Khariqa\" start_experience_factor = 1.0" 
+						division = "name = \"Kataeb al-Khariqa\" division_template = \"Kataeb al-Khariqa\" start_experience_factor = 1.0" 
 						owner = PAL
 					}
 				}
@@ -3676,10 +3676,10 @@ focus_tree = {
 			hidden_effect = {
 				if = {
 				limit = {
-					NOT = { has_template = "Al Nusuur Al Hamrah" }
+					NOT = { has_template = "al-Nusuur al-Hamrah" }
 				}
 				division_template = {
-					name = "Al Nusuur Al Hamrah"
+					name = "al-Nusuur al-Hamrah"
 					is_locked = no
 						regiments = {
 							militia = { x = 0 y = 0 }
@@ -3694,7 +3694,7 @@ focus_tree = {
 						
 				capital_scope = {
 					create_unit = {
-						division = "name = \"Nasr Ramallah\" division_template = \"Al Nusuur Al Hamrah\" start_experience_factor = 0.05 start_equipment_factor = 1 start_manpower_factor = 1"
+						division = "name = \"Nasr Ramallah\" division_template = \"al-Nusuur al-Hamrah\" start_experience_factor = 0.05 start_equipment_factor = 1 start_manpower_factor = 1"
 						owner = ROOT
 						count = 3
 						allow_spawning_on_enemy_provs = yes
@@ -4038,7 +4038,7 @@ focus_tree = {
 			add_stability = -0.1
 			hidden_effect = {
 				division_template = {
-						name = "Kataeb Al-Yahud"
+						name = "Kataeb al-Yahud"
 						priority = 1	
 		
 						regiments = {
@@ -4053,7 +4053,7 @@ focus_tree = {
 				
 				capital_scope = {
 					create_unit = {
-						division = "name = \"Kataeb Al-Yahud\" division_template = \"Kataeb Al-Yahud\" start_experience_factor = 0.05 start_equipment_factor = 1 start_manpower_factor = 1"
+						division = "name = \"Kataeb al-Yahud\" division_template = \"Kataeb al-Yahud\" start_experience_factor = 0.05 start_equipment_factor = 1 start_manpower_factor = 1"
 						owner = ROOT
 						count = 3
 					}
@@ -5003,7 +5003,7 @@ focus_tree = {
 			custom_effect_tooltip = PAL_al_aqsa_brigadiers_tt
 			hidden_effect = {
 				division_template = {
-					name = "Al-Aqsa Brigades"
+					name = "al-Aqsa Brigades"
 					is_locked = no
 					regiments = {
 						infantry = { x = 0 y = 0 }	
@@ -5027,7 +5027,7 @@ focus_tree = {
 					}
 					capital_scope = {
 						create_unit = {
-							division = "name = \"Al-Aqsa Brigade\" division_template = \"Al-Aqsa Brigades\" start_experience_factor = 0.05 start_equipment_factor = 1 start_manpower_factor = 1"
+							division = "name = \"al-Aqsa Brigade\" division_template = \"al-Aqsa Brigades\" start_experience_factor = 0.05 start_equipment_factor = 1 start_manpower_factor = 1"
 							owner = ROOT
 							count = 4
 						}
@@ -7373,7 +7373,7 @@ focus_tree = {
 			custom_effect_tooltip = PAL_restructure_southern_army_tt
 			hidden_effect = {
 				division_template = {
-					name = "Al-Jaysh Al-Janubi"
+					name = "al-Jaysh al-Janubi"
 					priority = 1	
 
 					regiments = {
@@ -7389,7 +7389,7 @@ focus_tree = {
 				
 				1017 = {
 					create_unit = {
-						division = "name = \"Al-Jaysh Al-Janubi\" division_template = \"Al-Jaysh Al-Janubi\" start_experience_factor = 0.05 start_equipment_factor = 2 start_manpower_factor = 1"
+						division = "name = \"al-Jaysh al-Janubi\" division_template = \"al-Jaysh al-Janubi\" start_experience_factor = 0.05 start_equipment_factor = 2 start_manpower_factor = 1"
 						owner = ROOT
 						count = 2
 						allow_spawning_on_enemy_provs = yes
@@ -8707,7 +8707,7 @@ focus_tree = {
 
 		completion_reward = { 
 			create_equipment_variant = {
-                name = "Al-Khawarizmi"
+                name = "al-Khawarizmi"
                 type = small_plane_airframe_1
               	parent_version = 0
        			modules = {
@@ -8721,7 +8721,7 @@ focus_tree = {
  			}
 			hidden_effect = {
 				PAL = {
-					add_equipment_to_stockpile = { type = small_plane_airframe_1 variant_name = "Al-Khawarizmi" amount = 50 }
+					add_equipment_to_stockpile = { type = small_plane_airframe_1 variant_name = "al-Khawarizmi" amount = 50 }
 				}
 			}
 	

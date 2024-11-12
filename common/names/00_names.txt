@@ -2395,7 +2395,7 @@ ABK = {
  }
 	}
 	surnames = { 
-		Iskandar Gogua Shinkuba Al-Kabir Bagapsh Orbay Pasha Lakoba Zhvaniya Krishtof Agniev Larionov Svanidze Akirtava Makarov Asribekov Srurua Amas Meladze Ladariya Agrba Bechvaya Baramiya Mgeladze Getiya Karchava Bgazhba Kobakhia Khintba Adeljba Khishba 
+		Iskandar Gogua Shinkuba al-Kabir Bagapsh Orbay Pasha Lakoba Zhvaniya Krishtof Agniev Larionov Svanidze Akirtava Makarov Asribekov Srurua Amas Meladze Ladariya Agrba Bechvaya Baramiya Mgeladze Getiya Karchava Bgazhba Kobakhia Khintba Adeljba Khishba 
 	}
 	callsigns = {  }
 }
@@ -3202,11 +3202,11 @@ ADU = {
 		}
 	}
 	surnames = { 
-		Abdullah Abdulrashid Ahmad Ahmed Ajam "Al-Amin" Alfarsi "Al-Ghazzawi" "Al-Hashim" Ali "Al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
+		Abdullah Abdulrashid Ahmad Ahmed Ajam "al-Amin" Alfarsi "al-Ghazzawi" "al-Hashim" Ali "al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
 		Saqqaf Sultan Tawfeek Tawfiq Zaman
 		#Morocco Specific
-		Aamara Abdelhadi Abouzeid Aflalo "ibn Al-Aftas" Alfasi "Abed Al-Jabri" Amhali Attar Balafej Basri Belhsen "Ben-Ami" Benhima Bensaidi "El Bidaoui" Bitton Bouabid Chami "Ali Cherif" Debbouze Elbaz Essaidi "Al-Fasi" 
-		Ferroukhi "El Ghazzali" Guinia Hakmoun "Al-Hassar" "ben David Hayyuj" Ibrahim Jay Kaghat Khayat Laabi Lahlou Laraki Maan "El Marikh" Mezouar "El Moutawakel" Noury "El Othmani" Pinto Reno Roukhe Skah Tamsamani  Tietjen 
+		Aamara Abdelhadi Abouzeid Aflalo "ibn al-Aftas" Alfasi "Abed al-Jabri" Amhali Attar Balafej Basri Belhsen "Ben-Ami" Benhima Bensaidi "El Bidaoui" Bitton Bouabid Chami "Ali Cherif" Debbouze Elbaz Essaidi "al-Fasi" 
+		Ferroukhi "El Ghazzali" Guinia Hakmoun "al-Hassar" "ben David Hayyuj" Ibrahim Jay Kaghat Khayat Laabi Lahlou Laraki Maan "El Marikh" Mezouar "El Moutawakel" Noury "El Othmani" Pinto Reno Roukhe Skah Tamsamani  Tietjen 
 		Youssoufi Zarra 
 	}
 	callsigns = { }
@@ -3376,7 +3376,7 @@ IRQ = {
 		}
 	}
 	surnames = { Muammar "al-Baghdadi" "al-Basri" "al-Ghazzawi" "al-Halabi" "al-Hamawi" "al-Himsi" 
-			"al-Mawsili" "al-Nablusi" "al-Qudsi" "al-Shami"  
+			"al-Mawsili" "al-Nablusi" "Al-Qudsi" "al-Shami"  
 			"ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali"
 			"ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid" 
 			"ibn Muhammad" "ibn Mustafa" "ibn Salim"   
@@ -3391,8 +3391,8 @@ IRQ = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "Al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat Al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -3417,7 +3417,7 @@ OMA = {
 		}
 	}
 	surnames = { "al-Baghdadi" "al-Basri" "al-Ghazzawi" "al-Halabi" "al-Hamawi" "al-Himsi" 
-			"al-Mawsili" "al-Nablusi" "al-Qudsi" "al-Shami"  
+			"al-Mawsili" "al-Nablusi" "Al-Qudsi" "al-Shami"  
 			"ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali"
 			"ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid" 
 			"ibn Muhammad" "ibn Mustafa" "ibn Salim"   
@@ -3432,8 +3432,8 @@ OMA = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "Al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat Al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -3503,8 +3503,8 @@ SAU = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "Al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat Al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -3572,8 +3572,8 @@ YEM = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "Al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat Al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -3611,8 +3611,8 @@ EGY = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "Al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat Al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -3651,8 +3651,8 @@ SYR = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "Al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat Al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -3736,8 +3736,8 @@ JOR = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "Al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat Al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -3747,7 +3747,7 @@ JOR = {
 KUW = {
 	male = {
 		names = {  
-			Aali "Abd Al-Latif"  Abdul "Abdul-Rahman" Abu Adnan Ahmed Ali Amir Ammar Ashfaq Ayuub Baqi Bassem Danyal Esmail Fadil Fareed Fawzi Gabir Ghufran Haider Hakeem Hamid Hanif Hatim Houssam Husain Ibrahim
+			Aali "Abd al-Latif"  Abdul "Abdul-Rahman" Abu Adnan Ahmed Ali Amir Ammar Ashfaq Ayuub Baqi Bassem Danyal Esmail Fadil Fareed Fawzi Gabir Ghufran Haider Hakeem Hamid Hanif Hatim Houssam Husain Ibrahim
 			Idris Imen Iskandar "Ismai'il" Jafar Jamal Jibril Karim Latif Mahometus Maqsud "Mikha'il" Mohammed Mostafa Murtada Nadeem Najm Navid Nur Omar Osama Qasim Rais Rashid Rayan Ruh Saif Salih Shad Shakir
 			Shukri Sulaiman Taj Tayyib Wafai Yakub Yuhanna Zahi Zawar Zulfaqar
 			#Kuwait Specific
@@ -3764,13 +3764,13 @@ KUW = {
 		}
 	}
 	surnames = { 
-		Abdullah Abdulrashid Ahmad Ahmed Ajam "Al-Amin" Alfarsi "Al-Ghazzawi" "Al-Hashim" Ali "Al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
+		Abdullah Abdulrashid Ahmad Ahmed Ajam "al-Amin" alfarsi "al-Ghazzawi" "al-Hashim" ali "al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
 		Saqqaf Sultan Tawfeek Tawfiq Zaman
 		#Kuwait Specific
-		Adees "Al-Adwani" Ajab "Al-Ajar" "Al-Ajmi" Ali Alqattar Alyan "Al-Anberi" "Al Awda" "Al Azmi" Bandar "Al-Baqsami" Behbehani "Al-Bloushi" "Al-Buloushi" "Al-Dakhil" "Al-Deehani" "Al-Dihani" "Al-Dousari" "El-Efasy" Ghareeb
-		"Al-Habashi" "Al Hadhood" "Al-Haji" "Al Hammad" "Al-Harb" "Al Huwaidi" Ibrahem Kamel "Al-Kharafi" "Al-Khatib" Khraibut "El Kuwaitia" "Al-Mathkour" Mohammed Mubarak "Al-Mubarak" "Al-Mudhaf" "Al Mutairi" "Al-Mutawa"
-		"Al-Nashi" "Al-Nashmi" "Al-Nasrallah" Neda "Al-Obeidi" "Al Rashidi" "Al-Razouki" "Al Refai" "Al Rowaished" "Al-Rubei" "Al-Sabah" "Al-Sadoun" "Al-Saleh" Shah "Al Shammari" "Al Shatty" "Al-Soula" "Al-Suwaidan" 
-		"Al-Tarabilsi" "Al-Watani" Yacob "Al-Yassin" "Al Zamel" "Al-Zinkawi"
+		Adees "al-Adwani" Ajab "al-Ajar" "al-Ajmi" ali alqattar alyan "al-Anberi" "al Awda" "al Azmi" Bandar "al-Baqsami" Behbehani "al-Bloushi" "al-Buloushi" "al-Dakhil" "al-Deehani" "al-Dihani" "al-Dousari" "El-Efasy" Ghareeb
+		"al-Habashi" "al Hadhood" "al-Haji" "al Hammad" "al-Harb" "al Huwaidi" Ibrahem Kamel "al-Kharafi" "al-Khatib" Khraibut "El Kuwaitia" "al-Mathkour" Mohammed Mubarak "al-Mubarak" "al-Mudhaf" "al Mutairi" "al-Mutawa"
+		"al-Nashi" "al-Nashmi" "al-Nasrallah" Neda "al-Obeidi" "al Rashidi" "al-Razouki" "al Refai" "al Rowaished" "al-Rubei" "al-Sabah" "al-Sadoun" "al-Saleh" Shah "al Shammari" "al Shatty" "al-Soula" "al-Suwaidan" 
+		"al-Tarabilsi" "al-Watani" Yacob "al-Yassin" "al Zamel" "al-Zinkawi"
 	}
 	callsigns = { }
 
@@ -3780,8 +3780,8 @@ KUW = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "Al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat Al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -3821,8 +3821,8 @@ PAL = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "Al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat Al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -3832,7 +3832,7 @@ PAL = {
 UAE = {
 	male = {
 		names = {  
-			Aali "Abd Al-Latif"  Abdul "Abdul-Rahman" Abu Adnan Ahmed Ali Amir Ammar Ashfaq Ayuub Baqi Bassem Danyal Esmail Fadil Fareed Fawzi Gabir George Ghufran Haider Hakeem Hamid Hanif Hatim Houssam Husain Ibrahim
+			Aali "Abd al-Latif"  Abdul "Abdul-Rahman" Abu Adnan Ahmed Ali Amir Ammar Ashfaq Ayuub Baqi Bassem Danyal Esmail Fadil Fareed Fawzi Gabir George Ghufran Haider Hakeem Hamid Hanif Hatim Houssam Husain Ibrahim
 			Idris Imen Iskandar "Ismai'il" Jafar Jamal Jibril Karim Latif Mahometus Maqsud "Mikha'il" Mohammed Mostafa Murtada Nadeem Najm Navid Nur Omar Osama Qasim Rais Rashid Rayan Ruh Saif Salih Shad Shakir
 			Shukri Sulaiman Taj Tayyib Wafai Yakub Yuhanna Zahi Zawar Zulfaqar
 			#Emirate Specific
@@ -3848,7 +3848,7 @@ UAE = {
 		}
 	}
 	surnames = { 
-		Abdullah Abdulrashid Ahmad Ahmed Ajam "Al-Amin" Alfarsi "Al-Ghazzawi" "Al-Hashim" Ali "Al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
+		Abdullah Abdulrashid Ahmad Ahmed Ajam "al-Amin" Alfarsi "al-Ghazzawi" "al-Hashim" Ali "al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
 		Saqqaf Sultan Tawfeek Tawfiq Zaman
 		#Emirate Specific
 		"Al Jassmi" "Al Maktoum" "ibn Majid" "Al Nahyan" "Al Nuaimi" "Al Qasim" "Al Qasimi" "Al Raes" Saleh "Al Sharqi" "Al Suwaidi" 
@@ -3861,8 +3861,8 @@ UAE = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "Al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat Al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -3872,7 +3872,7 @@ UAE = {
 QAT = {
 	male = {
 		names = {
-			Aali "Abd Al-Latif"  Abdul "Abdul-Rahman" Abu Adnan Ahmed Ali Amir Ammar Ashfaq Ayuub Baqi Bassem Danyal Esmail Fadil Fareed Fawzi Gabir Ghufran Haider Hakeem Hamid Hanif Hatim Houssam Husain Ibrahim
+			Aali "Abd al-Latif"  Abdul "Abdul-Rahman" Abu Adnan Ahmed Ali Amir Ammar Ashfaq Ayuub Baqi Bassem Danyal Esmail Fadil Fareed Fawzi Gabir Ghufran Haider Hakeem Hamid Hanif Hatim Houssam Husain Ibrahim
 			Idris Imen Iskandar "Ismai'il" Jafar Jamal Jibril Karim Latif Mahometus Maqsud "Mikha'il" Mohammed Mostafa Murtada Nadeem Najm Navid Nur Omar Osama Qasim Rais Rashid Rayan Ruh Saif Salih Shad Shakir
 			Shukri Sulaiman Taj Tayyib Wafai Yakub Yuhanna Zahi Zawar Zulfaqar
 			#Qatar Specific
@@ -3884,14 +3884,14 @@ QAT = {
 			Aaliyah Aisha Amaal Anisa Ayda Basma Djamila Farah Fatin Gamila Hadia Haifa Haniyah Hosni Ihab Israa Jathibiyya Khalida Latifa Maha Mona Nadia Nashwa Nimat Rabab Rana Rayhana Ruqayyah Sahar Samia Sarah
 			Shahrizad Shayma Suraya Uzma Yasmin Zahia Zakiya Zulekha
 			#Qatar Specific
-			"Al-Mayassa" Amna Nada 
+			"al-Mayassa" Amna Nada 
 		}
 	}
 	surnames = { 
-		Abdullah Abdulrashid Ahmad Ahmed Ajam "Al-Amin" Alfarsi "Al-Ghazzawi" "Al-Hashim" Ali "Al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
+		Abdullah Abdulrashid Ahmad Ahmed Ajam "al-Amin" Alfarsi "al-Ghazzawi" "al-Hashim" Ali "al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
 		Saqqaf Sultan Tawfeek Tawfiq Zaman
 		#Qatar Specific
-		"Al Ansari" "Al-Haidos" "Al Jaidah" "Al Kubaisi" Mubarak Muftah "Al-Nubi" "Al-Rahim" Sahid Saifeldin Sattar Shahenn "Al-Sulaiti" "Al Thani" "bin Thani" Warsama Zaidan Zeidan 
+		"al-Ansari" "al-Haidos" "al-Jaidah" "al-Kubaisi" Mubarak Muftah "al-Nubi" "al-Rahim" Sahid Saifeldin Sattar Shahenn "al-Sulaiti" "al-Thani" "ibn Thani" Warsama Zaidan Zeidan 
 	}
 	callsigns = { }
 
@@ -3901,8 +3901,8 @@ QAT = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "Al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat Al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -5368,7 +5368,7 @@ MAD = {
 ALG = {
 	male = {
 		names = { 
-			Aali "Abd Al-Latif"  Abdul "Abdul-Rahman" Abu Adnan Ahmed Ali Amir Ammar Ashfaq Ayuub Baqi Bassem Danyal Esmail Fadil Fareed Fawzi Gabir Ghufran Haider Hakeem Hamid Hanif Hatim Houssam Husain Ibrahim
+			Aali "Abd al-Latif"  Abdul "Abdul-Rahman" Abu Adnan Ahmed Ali Amir Ammar Ashfaq Ayuub Baqi Bassem Danyal Esmail Fadil Fareed Fawzi Gabir Ghufran Haider Hakeem Hamid Hanif Hatim Houssam Husain Ibrahim
 			Idris Imen Iskandar "Ismai'il" Jafar Jamal Jibril Karim Latif Mahometus Maqsud "Mikha'il" Mohammed Mostafa Murtada Nadeem Najm Navid Nur Omar Osama Qasim Rais Rashid Rayan Ruh Saif Salih Shad Shakir
 			Shukri Sulaiman Taj Tayyib Wafai Yakub Yuhanna Zahi Zawar Zulfaqar
 			#Algeria Specific
@@ -5384,7 +5384,7 @@ ALG = {
 		}
 	}
 	surnames = { 
-		Abdullah Abdulrashid Ahmad Ahmed Ajam "Al-Amin" Alfarsi "Al-Ghazzawi" "Al-Hashim" Ali "Al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
+		Abdullah Abdulrashid Ahmad Ahmed Ajam "al-Amin" Alfarsi "al-Ghazzawi" "al-Hashim" Ali "al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
 		Saqqaf Sultan Tawfeek Tawfiq Zaman
 		#Algeria Specific
 		Abbas Abeid Arkoun "Ben Bella" Bendjedid Bentaleb Bitat Bougherra Boumediene Bouteflika Brahimi Camus Chiellini Cixous Daoud Derrida Djebar Djebbour "El Djezairi" Fanon Feghouli Ghilas Khadra Mosteghanemi Sansal 
@@ -5397,7 +5397,7 @@ ALG = {
 MOR = {
 	male = {
 		names = {  
-			Aali "Abd Al-Latif"  Abdul "Abdul-Rahman" Abu Adnan Ahmed Ali Amir Ammar Ashfaq Ayuub Baqi Bassem Danyal Esmail Fadil Fareed Fawzi Gabir Ghufran Haider Hakeem Hamid Hanif Hatim Houssam Husain Ibrahim
+			Aali "Abd al-Latif"  Abdul "Abdul-Rahman" Abu Adnan Ahmed Ali Amir Ammar Ashfaq Ayuub Baqi Bassem Danyal Esmail Fadil Fareed Fawzi Gabir Ghufran Haider Hakeem Hamid Hanif Hatim Houssam Husain Ibrahim
 			Idris Imen Iskandar "Ismai'il" Jafar Jamal Jibril Karim Latif Mahometus Maqsud "Mikha'il" Mohammed Mostafa Murtada Nadeem Najm Navid Nur Omar Osama Qasim Rais Rashid Rayan Ruh Saif Salih Shad Shakir
 			Shukri Sulaiman Taj Tayyib Wafai Yakub Yuhanna Zahi Zawar Zulfaqar
 			#Morocco Specific
@@ -5415,11 +5415,11 @@ MOR = {
 		}
 	}
 	surnames = { 
-		Abdullah Abdulrashid Ahmad Ahmed Ajam "Al-Amin" Alfarsi "Al-Ghazzawi" "Al-Hashim" Ali "Al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
+		Abdullah Abdulrashid Ahmad Ahmed Ajam "al-Amin" Alfarsi "al-Ghazzawi" "al-Hashim" Ali "al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
 		Saqqaf Sultan Tawfeek Tawfiq Zaman
 		#Morocco Specific
-		Aamara Abdelhadi Abouzeid Aflalo "ibn Al-Aftas" Alfasi "Abed Al-Jabri" Amhali Attar Balafej Basri Belhsen "Ben-Ami" Benhima Bensaidi "El Bidaoui" Bitton Bouabid Chami "Ali Cherif" Debbouze Elbaz Essaidi "Al-Fasi" 
-		Ferroukhi "El Ghazzali" Guinia Hakmoun "Al-Hassar" "ben David Hayyuj" Ibrahim Jay Kaghat Khayat Laabi Lahlou Laraki Maan "El Marikh" Mezouar "El Moutawakel" Noury "El Othmani" Pinto Reno Roukhe Skah Tamsamani  Tietjen 
+		Aamara Abdelhadi Abouzeid Aflalo "ibn al-Aftas" Alfasi "Abed al-Jabri" Amhali Attar Balafej Basri Belhsen "Ben-Ami" Benhima Bensaidi "El Bidaoui" Bitton Bouabid Chami "Ali Cherif" Debbouze Elbaz Essaidi "al-Fasi" 
+		Ferroukhi "El Ghazzali" Guinia Hakmoun "al-Hassar" "ben David Hayyuj" Ibrahim Jay Kaghat Khayat Laabi Lahlou Laraki Maan "El Marikh" Mezouar "El Moutawakel" Noury "El Othmani" Pinto Reno Roukhe Skah Tamsamani  Tietjen 
 		Youssoufi Zarra 
 	}
 	callsigns = { }
@@ -5429,7 +5429,7 @@ MOR = {
 TUN = {
 	male = {
 		names = {  
-			Aali "Abd Al-Latif"  Abdul "Abdul-Rahman" Abu Adnan Ahmed Ali Amir Ammar Ashfaq Ayuub Baqi Bassem Danyal Esmail Fadil Fareed Fawzi Gabir George Ghufran Haider Hakeem Hamid Hanif Hatim Houssam Husain Ibrahim
+			Aali "Abd al-Latif"  Abdul "Abdul-Rahman" Abu Adnan Ahmed Ali Amir Ammar Ashfaq Ayuub Baqi Bassem Danyal Esmail Fadil Fareed Fawzi Gabir George Ghufran Haider Hakeem Hamid Hanif Hatim Houssam Husain Ibrahim
 			Idris Imen Iskandar "Ismai'il" Jafar Jamal Jibril Karim Latif Mahometus Maqsud "Mikha'il" Mohammed Mostafa Murtada Nadeem Najm Navid Nur Omar Osama Qasim Rais Rashid Rayan Ruh Saif Salih Shad Shakir
 			Shukri Sulaiman Taj Tayyib Wafai Yakub Yuhanna Zahi Zawar Zulfaqar
 			#Tunisia Specific
@@ -5446,10 +5446,10 @@ TUN = {
 		}
 	}
 	surnames = { 
-		Abdullah Abdulrashid Ahmad Ahmed Ajam "Al-Amin" Alfarsi "Al-Ghazzawi" "Al-Hashim" Ali "Al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
+		Abdullah Abdulrashid Ahmad Ahmed Ajam "al-Amin" Alfarsi "al-Ghazzawi" "al-Hashim" Ali "al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
 		Saqqaf Sultan Tawfeek Tawfiq Zaman
 		#Tunisia Specific
-		Achouri "Al-Amin" Alaia "Ben Ali" "Ben Ammar" Anani Aslan Ayari "Ben Azzabi" Baccouche "Balti-Ebondo" Belhedi Belkadhi Belkhodja Besbes Bhairi Blanco Bouallègue Boubakri Boughanmi Bouhageb Boujenah Bourguiba Brami Bramly 
+		Achouri "al-Amin" Alaia "Ben Ali" "Ben Ammar" Anani Aslan Ayari "Ben Azzabi" Baccouche "Balti-Ebondo" Belhedi Belkadhi Belkhodja Besbes Bhairi Blanco Bouallègue Boubakri Boughanmi Bouhageb Boujenah Bourguiba Brami Bramly 
 		Cardinale "Ben Chaabane" Chalandon "Ben Cherifia" Chebbi Chemmam Chenik Chermiti Dinguizli "ibn Abi Diyaf" Djellouli Ennachi Fadhel Haddad Haddaoui Hakimi Hamdouni Hergal Hmam Ikram Jaïdi "Ben Jafar" Jaziri Kechiche
 		Khaldun Khayachi Khayat Klibi Korbi Lakhal Lakhoua Limam Lounifi Luc Mareghni Mathlouthi Marzouki Mebazaa Meddeb Melliti Mellouli Mezien Mhedhebi "Ben Mrad" Nagga "Ben Nasser" Noureddine Ounaies Perez Rached Rajhi Rhimi 
 		Sadok Said Sarrai Sellami Sghaïer "Ben Sheikh" Soliman Sriti Taïeb Tej Thâalbi Touati Toumi Zitouni 
@@ -5470,7 +5470,7 @@ SUD = {
 		}
 	}
 	surnames = { 
-	    Abdullah Abubakr Akol AlKabli "Al-Azhari" "Al-Bashir" "Al-Mahdi" "Al-Mirghani" Alsharif Badawi BakrElmahdi Eltayeb Garang Ibrahim Ismail "El Kachief" Keir Khalifa "Matthews-Jouda" Minnawi "El Mubarak" Mustafa Nimeiry 
+	    Abdullah Abubakr Akol AlKabli "al-Azhari" "al-Bashir" "al-Mahdi" "al-Mirghani" Alsharif Badawi BakrElmahdi Eltayeb Garang Ibrahim Ismail "El Kachief" Keir Khalifa "Matthews-Jouda" Minnawi "El Mubarak" Mustafa Nimeiry 
 		Salman Salih Siddig Taban Wardi Abugo Agor Adut Alier Aliir Aligo Bol Bok "Bul Dau" Daw Deng Dut Garang Hassan Kenyi Lohalith Lokonyen Majok Maker Marial Mayardit "Manyang Juuk" Nhial Panyang Wek
 	}
 	callsigns = { }
@@ -5503,7 +5503,7 @@ ERI = {
 DJI = {
 	male = {
 		names = { 
-			Aali "Abd Al-Latif"  Abdul "Abdul-Rahman" Abu Adnan Ahmed Ali Amir Ammar Ashfaq Ayuub Baqi Bassem Danyal Esmail Fadil Fareed Fawzi Gabir Ghufran Haider Hakeem Hamid Hanif Hatim Houssam Husain Ibrahim
+			Aali "Abd al-Latif"  Abdul "Abdul-Rahman" Abu Adnan Ahmed Ali Amir Ammar Ashfaq Ayuub Baqi Bassem Danyal Esmail Fadil Fareed Fawzi Gabir Ghufran Haider Hakeem Hamid Hanif Hatim Houssam Husain Ibrahim
 			Idris Imen Iskandar "Ismai'il" Jafar Jamal Jibril Karim Latif Mahometus Maqsud "Mikha'il" Mohammed Mostafa Murtada Nadeem Najm Navid Nur Omar Osama Qasim Rais Rashid Rayan Ruh Saif Salih Shad Shakir
 			Shukri Sulaiman Taj Tayyib Wafai Yakub Yuhanna Zahi Zawar Zulfaqar
 			#Djibouti Specific
@@ -5519,7 +5519,7 @@ DJI = {
 		}
 	}
 	surnames = { 
-		Abdullah Abdulrashid Ahmad Ahmed Ajam "Al-Amin" Alfarsi "Al-Ghazzawi" "Al-Hashim" Ali "Al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
+		Abdullah Abdulrashid Ahmad Ahmed Ajam "al-Amin" Alfarsi "al-Ghazzawi" "al-Hashim" Ali "al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
 		Saqqaf Sultan Tawfeek Tawfiq Zaman
 		#Djibouti Specific
 		Aden Ahmed Ali "Ali-Abdoulkader" "Ali-Bourrale" Aptidon Awaleh Barreh Bouh Charmakeh Chehem Daher Daoud Dato Dileita Djamah Farah Feiruz Gala "Goumane-Roble" Guelleh Hachi Hamadou Hassan Iltireh Kamil Mahamoud Mohamed
@@ -5542,10 +5542,10 @@ SOM = {
 		}
 	}
 	surnames = { 
-		Aato Abade Abdi Abdillahi Abdulle Abdulmajid Abrar Abubakar Adan Addou Afrax "Al-Amawi" Ahmed Ali Allas Aptidon "Ar-Rida" Aweys Awl Bani "Al-Barawi" Barre Bile Daar Daud Diinle Dirie Duale Elmi Farah Farole Feiruz Galal 
-		Galaydh Ghalib Ghedi Haji "Haji-Faqi" Hashi Hassan Hersi Hirsi Hussein Ibrahim Ibrahim Ikar Irro Islam Ismail Issa Isse "Al-Jabarti" Jama Osman Jibrell Kahin Kassim "Al-Kawneyn" Kediye Kenadid Kusow Liibaan Maanta Madobe 
-		Mahamuud Malimey Moalim Mohallim Mohamed Muhammad Mukhtar Mumin Mursal Nalayeh Nur Omaar Omer Osman Osoble Qalanjo Qarshe "Al-Qutbi" Said Samatar Sharmarke Shermarke Shirdon Shire Siad Silanyo Sinimo Sufi Timacade Waberi 
-		Warfa Warsame "Al-Zayla'i"
+		Aato Abade Abdi Abdillahi Abdulle Abdulmajid Abrar Abubakar Adan Addou Afrax "al-Amawi" Ahmed Ali Allas Aptidon "Ar-Rida" Aweys Awl Bani "al-Barawi" Barre Bile Daar Daud Diinle Dirie Duale Elmi Farah Farole Feiruz Galal 
+		Galaydh Ghalib Ghedi Haji "Haji-Faqi" Hashi Hassan Hersi Hirsi Hussein Ibrahim Ibrahim Ikar Irro Islam Ismail Issa Isse "al-Jabarti" Jama Osman Jibrell Kahin Kassim "al-Kawneyn" Kediye Kenadid Kusow Liibaan Maanta Madobe 
+		Mahamuud Malimey Moalim Mohallim Mohamed Muhammad Mukhtar Mumin Mursal Nalayeh Nur Omaar Omer Osman Osoble Qalanjo Qarshe "al-Qutbi" Said Samatar Sharmarke Shermarke Shirdon Shire Siad Silanyo Sinimo Sufi Timacade Waberi 
+		Warfa Warsame "al-Zayla'i"
 	}
 	callsigns = { }
 }
@@ -5965,7 +5965,7 @@ MLI = {
 		}
 	}
 	surnames = {
-		Abouta "Al-Sahili" Aya Ba Bagayogo Bagayoko Bastide Bocoum Camara Cisse Coulibaly Dabo Damba Dembele Diabate Diagho Diakite Diallo Diarra Diawara Diop Doumbia Drame Fakoly "ibn Gao" Guindo "ag Hamani" "Al Kaburi" Keita
+		Abouta "al-Sahili" Aya Ba Bagayogo Bagayoko Bastide Bocoum Camara Cisse Coulibaly Dabo Damba Dembele Diabate Diagho Diakite Diallo Diarra Diawara Diop Doumbia Drame Fakoly "ibn Gao" Guindo "ag Hamani" "Al Kaburi" Keita
 		"Ba Konare" Konare Kone Kouyate Maiga "Maiga-Ba" Mariko "Al Massufi" "M'Bodji" Modja "N'Diaye" Niare Oiane Ouologuem Taleb Taya Teguedi Timbo Tolba Toure Tall Tamboura Tireira Tounkara Toure Traore "ibn Umar" Zabo
 	}
 	callsigns = { }
@@ -6038,7 +6038,7 @@ SEN = {
 		names = { 
 			Abdala Abdou Abdoulaye Aïyb Alioune Amadou Amath Assane Baaba Blaise Cheikh Demba DeSagana Didier Djibril Doudou "El Hadji" Guirane Habib Henri Idrissa Ismaël Ismaila Jimi Lamine Léopold Leyti Macky Mamadou Mansour 
 			Mbaye Mola Mor Morgaro Ndiss Nuru Ousmane Papa Papiss Patrice Paulin Seckou Thione Tony Umar Youssou
-			Birayamb Al-Buri Baka Birayma Mbanyi Lat Bakan-Tam Taanor Amado "Ali Buri" Mba Birawa Samba
+			Birayamb al-Buri Baka Birayma Mbanyi Lat Bakan-Tam Taanor Amado "Ali Buri" Mba Birawa Samba
 		}
 	}
 	female = {
@@ -6112,7 +6112,7 @@ MRT = {
 		}
 	}
 	surnames = {
-		Abba Abdallahi Abdi "Al-Shinqiti" "Abdel Aziz" Ba Bneijara "Ould Bneijara" "Ould Boubacar" "Ould Bouceif" "Ould Boulkheir" "Ould Daddah" Diagana Diallo Diombar Ebnou Fall Gaye Gueye Guidileye Guig "Ould Haidalla"
+		Abba Abdallahi Abdi "al-Shinqiti" "Abdel Aziz" Ba Bneijara "Ould Bneijara" "Ould Boubacar" "Ould Bouceif" "Ould Boulkheir" "Ould Daddah" Diagana Diallo Diombar Ebnou Fall Gaye Gueye Guidileye Guig "Ould Haidalla"
 		"Ould Hanenna" "Ould Harouna" Hedeid "Ben Hmeida" "Ould Hmeida" Hondo "Ould Kerim" "Ould Mohamed Khouna" "Ould Mohamed Laghdaf" "Ould Mohamed Lemine" "Ould Lemrabott" "Ould Louly" "Ould Maaouya" "dit Mbare" 
 		"Ould M'Bareck" Miske "El Moctar" Moctar "Ould Mogueye" "Ould Sidi Mohammed" "Ould Mohamedou" "Ould-Abdallah" Razqa "Ould Salek" Sall Sarr "Ould Sid'Ahmed" Sissako "Ould Ahmed Taleb" "Ould Sid'Ahmed Taya" "Ould Teguedi" 
 		Timbo "Ould Tolba" Toure "Ould Mohammed Vall" "Ould Ahmed El Waghef" "Ould Zeidane"
@@ -6148,7 +6148,7 @@ NMB = {
 WES = {
 	male = {
 		names = {  
-			Aali "Abd Al-Latif"  Abdul "Abdul-Rahman" Abu Adnan Ahmed Ali Amir Ammar Ashfaq Ayuub Baqi Bassem Danyal Esmail Fadil Fareed Fawzi Gabir Ghufran Haider Hakeem Hamid Hanif Hatim Houssam Husain Ibrahim
+			Aali "Abd al-Latif"  Abdul "Abdul-Rahman" Abu Adnan Ahmed Ali Amir Ammar Ashfaq Ayuub Baqi Bassem Danyal Esmail Fadil Fareed Fawzi Gabir Ghufran Haider Hakeem Hamid Hanif Hatim Houssam Husain Ibrahim
 			Idris Imen Iskandar "Ismai'il" Jafar Jamal Jibril Karim Latif Mahometus Maqsud "Mikha'il" Mohammed Mostafa Murtada Nadeem Najm Navid Nur Omar Osama Qasim Rais Rashid Rayan Ruh Saif Salih Shad Shakir
 			Shukri Sulaiman Taj Tayyib Wafai Yakub Yuhanna Zahi Zawar Zulfaqar
 			#Morocco Specific
@@ -6165,11 +6165,11 @@ WES = {
 		}
 	}
 	surnames = { 
-		Abdullah Abdulrashid Ahmad Ahmed Ajam "Al-Amin" Alfarsi "Al-Ghazzawi" "Al-Hashim" Ali "Al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
+		Abdullah Abdulrashid Ahmad Ahmed Ajam "al-Amin" Alfarsi "al-Ghazzawi" "al-Hashim" Ali "al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
 		Saqqaf Sultan Tawfeek Tawfiq Zaman
 		#Morocco Specific
-		Aamara Abdelhadi Abouzeid Aflalo "ibn Al-Aftas" Alfasi "Abed Al-Jabri" Amhali Attar Balafej Basri Belhsen "Ben-Ami" Benhima Bensaidi "El Bidaoui" Bitton Bouabid Chami "Ali Cherif" Debbouze Elbaz Essaidi "Al-Fasi" 
-		Ferroukhi "El Ghazzali" Guinia Hakmoun "Al-Hassar" "ben David Hayyuj" Ibrahim Jay Kaghat Khayat Laabi Lahlou Laraki Maan "El Marikh" Mezouar "El Moutawakel" Noury "El Othmani" Pinto Reno Roukhe Skah Tamsamani  Tietjen 
+		Aamara Abdelhadi Abouzeid Aflalo "ibn al-Aftas" Alfasi "Abed al-Jabri" Amhali Attar Balafej Basri Belhsen "Ben-Ami" Benhima Bensaidi "El Bidaoui" Bitton Bouabid Chami "Ali Cherif" Debbouze Elbaz Essaidi "al-Fasi" 
+		Ferroukhi "El Ghazzali" Guinia Hakmoun "al-Hassar" "ben David Hayyuj" Ibrahim Jay Kaghat Khayat Laabi Lahlou Laraki Maan "El Marikh" Mezouar "El Moutawakel" Noury "El Othmani" Pinto Reno Roukhe Skah Tamsamani  Tietjen 
 		Youssoufi Zarra 
 	}
 	callsigns = { }

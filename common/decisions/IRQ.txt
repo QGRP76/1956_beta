@@ -2953,7 +2953,7 @@ Iraqgui_scripted_gui_category = {
 		}
 
 		remove_effect = {
-			complete_national_focus = IRQ_renovate_ports_admin_building
+			complete_national_focus = IRQ_refurbish_the_basrah_shipyards
 		}
 		ai_will_do = {
 			factor = 10
@@ -3002,7 +3002,7 @@ Iraqgui_scripted_gui_category = {
 			factor = 10
 		}		
 	}
-	IRQ_renovate_karbala = {
+	IRQ_industrialize_karbala = {
 
 		icon = GFX_decision_faction_tur_traditionalist
 
@@ -3037,7 +3037,7 @@ Iraqgui_scripted_gui_category = {
 		}
 
 		remove_effect = {
-			complete_national_focus = IRQ_renovate_karbala
+			complete_national_focus = IRQ_industrialize_karbala
 		}
 		ai_will_do = {
 			factor = 10
@@ -3066,7 +3066,7 @@ Iraqgui_scripted_gui_category = {
 			} 
 		}
 		available = {
-			has_completed_focus = IRQ_parliament_Session
+			has_completed_focus = IRQ_finalize_the_national_budget
 		}
 
 		visible = {
@@ -3196,7 +3196,7 @@ Iraqgui_scripted_gui_category = {
 			} 
 		}
 		available = {
-			has_completed_focus = IRQ_expand_alumnium_extraction
+			has_completed_focus = IRQ_bolster_the_mosul_textile_industry
 			has_completed_focus = IRQ_modernize_ottoman_bank_of_mosul
 			has_completed_focus = IRQ_encourge_tourism
 		}

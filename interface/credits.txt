@@ -2316,7 +2316,7 @@ Johan Andersson
 
 #ADDITIONAL PROGRAMMING
 Jimmy Rönn
-Mohammed Al-Sader
+Mohammed al-Sader
 Olof Björk
 Martin Anward
 Richard Nyberg
@@ -2526,7 +2526,7 @@ Camilla Isaksson
 Henrik Hansson
 Jimmy Rönn
 Ilya Nikitin
-Mohammed Al-Sader
+Mohammed al-Sader
 Igor Aleksandrowicz
 Gwenael Tranvouez
 Johan Lerström

@@ -129,9 +129,9 @@
  ADU_neutrality_party:0 "HIW"
  ADU_neutrality_party_long:0 "Hizb al-Iiman Waltaqadum"
  ADU_communism_party:0 "HSA"
- ADU_communism_party_long:0 "Al-Hizb al-Shuyueiu al-Andalusiu"
+ ADU_communism_party_long:0 "al-Hizb al-Shuyueiu al-Andalusiu"
  ADU_democratic_party:0 "HI"
- ADU_democratic_party_long:0 "Al-Hizb al-Iislahiu"
+ ADU_democratic_party_long:0 "al-Hizb al-Iislahiu"
  ADU_fascism_party:0 "JAM"
  ADU_fascism_party_long:0 "Jamaeat al-Akhawan al-Muslimin"
 
@@ -531,9 +531,14 @@
  ICE_neutrality_party:0 "Sjálfstæðisflokkurinn"
 
  #IRQ
- #Fictious
- IRQ_democratic_party:0 "JA"
- IRQ_democratic_party_long:0 "Jama'at Al Ahali"
+ IRQ_democratic_party:0 "HIW"
+ IRQ_democratic_party_long:0 "Hizb al-Ikhā' al-Watanī"
+ IRQ_communism_party:0 "HSI"
+ IRQ_communism_party_long:0 "al-Hizb ash-Shiyū'ī al-'Irāqī"
+ IRQ_fascism_party:0 "MD"
+ IRQ_fascism_party_long:0 "al-Murabba' adh-Dhahabī"
+ IRQ_neutrality_party:0 "al-Hāshimīyūn"
+ IRQ_neutrality_party_long:0 "al-Hāshimīyūn"
 
  #JAP
  JAP_neutrality_party:0 "Daihon'ei"
@@ -576,10 +581,6 @@
  LUX_fascist_party_long:0 "Volksdeutsche Bewegung"
  LUX_neutrality_party:0 "D'Lëtzebuerger Haus"
  LUX_absolutists:0 "Absolutisten"
-
- #IRQ
- IRQ_neutrality_party:0 "Al-Hāshimīyūn"
- IRQ_neutrality_party_long:0 "Al-Hāshimīyūn"
 
  #IVO
  IVO_democratic_party:0 "PDCI-RDA"
@@ -627,11 +628,11 @@
  #MOR
  MOR_neutrality_party:0 "Sulālat al-'Alawiyyīn al-Fīlālīyn"
  MOR_democratic_party:0 "HI"
- MOR_democratic_party_long:0 "Ḥizb Al-Istiqlāl"
+ MOR_democratic_party_long:0 "Ḥizb al-Istiqlāl"
  MOR_communism_party:0 "HSM"
- MOR_communism_party_long:0 "Al-Hizb al-Shuyueiu al-Maghribiu"
+ MOR_communism_party_long:0 "al-Hizb al-Shuyueiu al-Maghribiu"
  MOR_fascism_party:0 "HFM"
- MOR_fascism_party_long:0 "Al-Hizb al-Fashiu al-Maghribiu"
+ MOR_fascism_party_long:0 "al-Hizb al-Fashiu al-Maghribiu"
 
  #MPL
  MPL_neutrality_party:0 "British Administration"
@@ -685,7 +686,7 @@
  OMA_neutrality_party:0 "Āl Bū-Sa'īd"
  OMA_democratic_party:0 "Majlis al-Shūra"
  OMA_communism_party:0 "JSTU"
- OMA_communism_party_long:0 "Al-Jabha aš-Ša'biyya li-Tahrīr 'Umān"
+ OMA_communism_party_long:0 "al-Jabha aš-Ša'biyya li-Tahrīr 'Umān"
  OMA_fascism_party:0 "Hizb al-Tarmim"
 
  #PAR
@@ -960,12 +961,12 @@
  SUD_neutrality_party_long:0 "Hizb al-Umma al-Qawmmy"
  SUD_democratic_party:0 "Ashiqqa"
  SUD_democratic_party_long:0 "Ashiqqa"
- SUD_communism_party:0 "Al-Hizb al-Shuyui al-Sudani"
- SUD_communism_party_long:0 "Al-Hizb al-Shuyui al-Sudani"
+ SUD_communism_party:0 "al-Hizb al-Shuyui al-Sudani"
+ SUD_communism_party_long:0 "al-Hizb al-Shuyui al-Sudani"
 
- #SSU
+ #SUD
  SUD_democratic_party:0 "SPLM"
- SUD_democratic_party_long:0 "Al-Ḥarakat ash-Shaʿbiyyat liTaḥrīr as-Sūdān"
+ SUD_democratic_party_long:0 "al-Harakat ash-Sha'biyyat liTahrīr as-Sūdān"
 
  SWA_neutrality_party:0 "Dlamini"
 
@@ -1041,11 +1042,11 @@
  YUT_neutrality_party:0 "Yue Clique"
 
  YEM_communism_party:0 "HIY"
- YEM_communism_party_long:0 "Al-Hizb al-Ishtiraki al-Yamani"
+ YEM_communism_party_long:0 "al-Hizb al-Ishtiraki al-Yamani"
  YEM_democratic_party:0 "HYH"
- YEM_democratic_party_long:0 "Al-Harakat al-Yamaniat al-Hura"
+ YEM_democratic_party_long:0 "al-Harakat al-Yamaniat al-Hura"
  YEM_fascism_party:0 "MZI"
- YEM_fascism_party_long:0 "Al-Mualin li-Zaydiiyn li'Iitalia"
+ YEM_fascism_party_long:0 "al-Mualin li-Zaydiiyn li'Iitalia"
 
  #ZAN
  ZAN_democratic_party:0 "Afro-Shirazi Party"

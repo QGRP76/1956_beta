@@ -2124,7 +2124,7 @@
  STATE_674:0 "Central Australia"
  STATE_674_RENAMING:0 "[674.controller.GetStateName_674]"
 
- STATE_675:0 "Al Sahra'a Al Janubiyah"
+ STATE_675:0 "Al-Sahra'a Al-Janubiyah"
  STATE_675_RENAMING:0 "[675.controller.GetStateName_675]"
 
  STATE_676:0 "Mosul"
@@ -2133,7 +2133,7 @@
  STATE_677:0 "Aleppo"
  STATE_677_RENAMING:0 "[677.controller.GetStateName_677]"
 
- STATE_678:0 "Rub' al Khali"
+ STATE_678:0 "Al-Rub' Al-Khali"
  STATE_678_RENAMING:0 "[678.controller.GetStateName_678]"
 
  STATE_679:1 "Madinah"
@@ -2775,7 +2775,7 @@
  STATE_884:0 "Upper Nile"
  STATE_884_RENAMING:0 "[884.controller.GetStateName_884]"
 
- STATE_885:0 "Bahr al Ghazal"
+ STATE_885:0 "Bahr Al-Ghazal"
  STATE_885_RENAMING:0 "[885.controller.GetStateName_885]"
 
  STATE_886:0 "Blue Nile"
@@ -3288,7 +3288,7 @@
  STATE_1047:0 "Dulaim"
  STATE_1047_RENAMING:0 "[1047.controller.GetStateName_1047]"
 
- STATE_1048:0 "Sulymaniyah"
+ STATE_1048:0 "Sulaymaniyah"
  STATE_1048_RENAMING:0 "[1048.controller.GetStateName_1048]"
 
  STATE_1049:0 "Erbil"

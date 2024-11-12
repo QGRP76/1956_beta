@@ -212,7 +212,7 @@ BEL2 = {
 BHR = {
 	male = {
 		names = {
-			Aali "Abd Al-Latif"  Abdul "Abdul-Rahman" Abu Adnan Ahmed Ali Amir Ammar Ashfaq Ayuub Baqi Bassem Danyal Esmail Fadil Fareed Fawzi Gabir Ghufran Haider Hakeem Hamid Hanif Hatim Houssam Husain Ibrahim
+			Aali "Abd al-Latif"  Abdul "Abdul-Rahman" Abu Adnan Ahmed Ali Amir Ammar Ashfaq Ayuub Baqi Bassem Danyal Esmail Fadil Fareed Fawzi Gabir Ghufran Haider Hakeem Hamid Hanif Hatim Houssam Husain Ibrahim
 			Idris Imen Iskandar "Ismai'il" Jafar Jamal Jibril Karim Latif Mahometus Maqsud "Mikha'il" Mohammed Mostafa Murtada Nadeem Najm Navid Nur Omar Osama Qasim Rais Rashid Rayan Ruh Saif Salih Shad Shakir
 			Shukri Sulaiman Taj Tayyib Wafai Yakub Yuhanna Zahi Zawar Zulfaqar
 			#Qatar Specific
@@ -224,14 +224,14 @@ BHR = {
 			Aaliyah Aisha Amaal Anisa Ayda Basma Djamila Farah Fatin Gamila Hadia Haifa Haniyah Hosni Ihab Israa Jathibiyya Khalida Latifa Maha Mona Nadia Nashwa Nimat Rabab Rana Rayhana Ruqayyah Sahar Samia Sarah
 			Shahrizad Shayma Suraya Uzma Yasmin Zahia Zakiya Zulekha
 			#Qatar Specific
-			"Al-Mayassa" Amna Nada 
+			"al-Mayassa" Amna Nada 
 		}
 	}
 	surnames = { 
-		Abdullah Abdulrashid Ahmad Ahmed Ajam "Al-Amin" Alfarsi "Al-Ghazzawi" "Al-Hashim" Ali "Al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
+		Abdullah Abdulrashid Ahmad Ahmed Ajam "al-Amin" Alfarsi "al-Ghazzawi" "al-Hashim" Ali "al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
 		Saqqaf Sultan Tawfeek Tawfiq Zaman
 		#Qatar Specific
-		"Al Ansari" "Al-Haidos" "Al Jaidah" "Al Kubaisi" Mubarak Muftah "Al-Nubi" "Al-Rahim" Sahid Saifeldin Sattar Shahenn "Al-Sulaiti" "Al Thani" "bin Thani" Warsama Zaidan Zeidan 
+		"al-Ansari" "al-Haidos" "Al Jaidah" "Al Kubaisi" Mubarak Muftah "al-Nubi" "al-Rahim" Sahid Saifeldin Sattar Shahenn "al-Sulaiti" "Al Thani" "ibn Thani" Warsama Zaidan Zeidan 
 	}
 	callsigns = { }
 
@@ -241,8 +241,8 @@ BHR = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "Al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat Al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -713,8 +713,8 @@ MAU = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "Al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat Al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -1797,10 +1797,10 @@ SMA = {
 		}
 	}
 	surnames = { 
-		Aato Abade Abdi Abdillahi Abdulle Abdulmajid Abrar Abubakar Adan Addou Afrax "Al-Amawi" Ahmed Ali Allas Aptidon "Ar-Rida" Aweys Awl Bani "Al-Barawi" Barre Bile Daar Daud Diinle Dirie Duale Elmi Farah Farole Feiruz Galal 
-		Galaydh Ghalib Ghedi Haji "Haji-Faqi" Hashi Hassan Hersi Hirsi Hussein Ibrahim Ibrahim Ikar Irro Islam Ismail Issa Isse "Al-Jabarti" Jama Osman Jibrell Kahin Kassim "Al-Kawneyn" Kediye Kenadid Kusow Liibaan Maanta Madobe 
-		Mahamuud Malimey Moalim Mohallim Mohamed Muhammad Mukhtar Mumin Mursal Nalayeh Nur Omaar Omer Osman Osoble Qalanjo Qarshe "Al-Qutbi" Said Samatar Sharmarke Shermarke Shirdon Shire Siad Silanyo Sinimo Sufi Timacade Waberi 
-		Warfa Warsame "Al-Zayla'i"
+		Aato Abade Abdi Abdillahi Abdulle Abdulmajid Abrar Abubakar Adan Addou Afrax "al-Amawi" Ahmed Ali Allas Aptidon "Ar-Rida" Aweys Awl Bani "al-Barawi" Barre Bile Daar Daud Diinle Dirie Duale Elmi Farah Farole Feiruz Galal 
+		Galaydh Ghalib Ghedi Haji "Haji-Faqi" Hashi Hassan Hersi Hirsi Hussein Ibrahim Ibrahim Ikar Irro Islam Ismail Issa Isse "al-Jabarti" Jama Osman Jibrell Kahin Kassim "al-Kawneyn" Kediye Kenadid Kusow Liibaan Maanta Madobe 
+		Mahamuud Malimey Moalim Mohallim Mohamed Muhammad Mukhtar Mumin Mursal Nalayeh Nur Omaar Omer Osman Osoble Qalanjo Qarshe "al-Qutbi" Said Samatar Sharmarke Shermarke Shirdon Shire Siad Silanyo Sinimo Sufi Timacade Waberi 
+		Warfa Warsame "al-Zayla'i"
 	}
 	callsigns = { }
 }
@@ -1898,7 +1898,7 @@ DAR = {
 		}
 	}
 	surnames = { 
-	    Abdullah Abubakr Akol AlKabli "Al-Azhari" "Al-Bashir" "Al-Mahdi" "Al-Mirghani" Alsharif Badawi BakrElmahdi Eltayeb Garang Ibrahim Ismail "El Kachief" Keir Khalifa "Matthews-Jouda" Minnawi "El Mubarak" Mustafa Nimeiry 
+	    Abdullah Abubakr Akol AlKabli "al-Azhari" "al-Bashir" "al-Mahdi" "al-Mirghani" Alsharif Badawi BakrElmahdi Eltayeb Garang Ibrahim Ismail "El Kachief" Keir Khalifa "Matthews-Jouda" Minnawi "El Mubarak" Mustafa Nimeiry 
 		Salman Salih Siddig Taban Wardi Abugo Agor Adut Alier Aliir Aligo Bol Bok "Bul Dau" Daw Deng Dut Garang Hassan Kenyi Lohalith Lokonyen Majok Maker Marial Mayardit "Manyang Juuk" Nhial Panyang Wek
 	}
 	callsigns = { }

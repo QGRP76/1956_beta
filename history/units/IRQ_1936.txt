@@ -1,5 +1,5 @@
 ﻿division_template = {
-	name = "Kataeb Al-Mushah" # Infantry Division
+	name = "Firqah Mushah" # Infantry Division
 
 	division_names_group = IRQ_INF_01
 
@@ -19,47 +19,14 @@
 	}
 }
 division_template = {
-	name = "Al Ferqah Al Jabalia"				# Mountain Division
-
-	division_names_group = IRQ_MTN_01
-
-	regiments = {
-		mountaineers = { x = 0 y = 0 }
-		mountaineers = { x = 0 y = 1 }
-		mountaineers = { x = 0 y = 2 }	
-		mountaineers = { x = 1 y = 0 }
-		mountaineers = { x = 1 y = 1 }
-		mountaineers = { x = 1 y = 2 }
-	}
-}
-division_template = {
-	name = "Katibat Aldabbabat"		# They did have a few FT-17 They still use one to this day huzzah.
+	name = "Firqah Aaliyah"
+	division_names_group = IRQ_MOT_01
 
 	regiments = {
-		light_armor = { x = 0 y = 0 }
-		light_armor = { x = 0 y = 1 }
-        light_armor = { x = 1 y = 0 }
-		cavalry = { x = 1 y = 1 }
-		cavalry = { x = 2 y = 0 }
-        cavalry = { x = 2 y = 1 }
-	}
-	support = {
-		light_tank_recon = { x = 0 y = 0 }  
-	}
-}
-division_template = {
-	name = "Ferqat Al Mudara'at" 		
-	division_names_group = IRQ_ARM_01
-
-	regiments = {
-		light_armor = { x = 0 y = 0 }
-		light_armor = { x = 0 y = 1 }
-		cavalry = { x = 0 y = 2 }
-		cavalry = { x = 0 y = 3 }
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
 		cavalry = { x = 1 y = 0 }
 		cavalry = { x = 1 y = 1 }
-		cavalry = { x = 1 y = 2 }
-		cavalry = { x = 1 y = 3 }
 	}
 	support = {
 		recon = { x = 0 y = 0 }
@@ -75,10 +42,9 @@ units = {
 			name_order = 1
 		}
 		location = 2097
-		division_template = "Kataeb Al-Mushah"	
+		division_template = "Firqah Mushah"	
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
-
+		start_equipment_factor = 0.45
 	}
 	division = {
 		#name = "2 Alfurqat"
@@ -86,11 +52,10 @@ units = {
 			is_name_ordered = yes
 			name_order = 2
 		}
-		location = 10106
-		division_template = "Kataeb Al-Mushah"	
+		location = 8123
+		division_template = "Firqah Mushah"	
 		start_experience_factor = 0.2
-		start_equipment_factor = 1
-
+		start_equipment_factor = 0.45
 	}
 	division = {
 		#name = "3 Alfurqat"
@@ -98,11 +63,10 @@ units = {
 			is_name_ordered = yes
 			name_order = 3
 		}
-		location = 2089
-		division_template = "Kataeb Al-Mushah"	
+		location = 2097
+		division_template = "Firqah Mushah"	
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
-
+		start_equipment_factor = 0.40
 	}
 	division = {
 		#name = "4 Alfurqat"
@@ -110,66 +74,17 @@ units = {
 			is_name_ordered = yes
 			name_order = 4
 		}
-		location = 1631
-		division_template = "Kataeb Al-Mushah"	
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
-
-	}
-	division = {
-		#name = "5 Alfurqat"
-		division_name = {    # New syntax for compatibility with name lists
-			is_name_ordered = yes
-			name_order = 5
-		}
 		location = 2004
-		division_template = "Kataeb Al-Mushah"	
+		division_template = "Firqah Mushah"	
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
-
-	}
-	division = {
-		#name = "6 Alfurqat"
-		division_name = {    # New syntax for compatibility with name lists
-			is_name_ordered = yes
-			name_order = 6
-		}
-		location = 8001
-		division_template = "Kataeb Al-Mushah"	
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
-
-	}
-	division = {
-		#name = "7 Alfurqat"
-		division_name = {    # New syntax for compatibility with name lists
-			is_name_ordered = yes
-			name_order = 7
-		}
-		location = 12413
-		division_template = "Kataeb Al-Mushah"	
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
-
-	}
-	division = {
-		#name = "1 Mudra'at"
-		division_name = {    # 
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3795
-		division_template = "Ferqat Al Mudara'at" 
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.8
-		force_equipment_variants = { gw_tank_equipment = { owner = "IRQ" creator = "FRA" amount = 10 } }
+		start_equipment_factor = 0.35
 	}
 }
 
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
-			type = infantry_equipment_1
+			type = infantry_equipment_0
 			creator = "IRQ"
 		}
 		requested_factories = 1

@@ -1417,8 +1417,8 @@ country_event = { # Free officers coup
 		remove_ideas = EGY_egyptian_non_alligment
 		set_party_name = { 
 			ideology = neutrality 
-			long_name = "Al-Ittihâd al-Kawmi"
-			name = "Al-Ittihâd al-Kawmi"
+			long_name = "al-Ittihâd al-Kawmi"
+			name = "al-Ittihâd al-Kawmi"
 		}
 		add_country_leader_role = {
 			character = EGY_gamal_abdel_nasser

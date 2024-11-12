@@ -418,7 +418,7 @@ focus_tree = {
 			}
 
 			division_template = {
-				name = "Quwat Mithqal Al-Qabeliyah"
+				name = "Quwat Mithqal al-Qabeliyah"
 				priority = 1
 				regiments = {
 					irregular_infantry = { x = 0 y = 0 }
@@ -428,7 +428,7 @@ focus_tree = {
 				}
 			}
 			division_template = {
-				name = "Al Jaysh Al Arabi"
+				name = "al-Jaysh al-Arabi"
 				priority = 1
 				is_locked = no
 				regiments = {
@@ -441,11 +441,11 @@ focus_tree = {
 
 			1022 = {
 				create_unit = {
-					division = "name = \"Qabael Sakhr\" division_template = \"Quwat Mithqal Al-Qabeliyah\" start_experience_factor = 0.1 start_equipment_factor = 0.6 force_equipment_variants = { infantry_equipment_0 = { owner = JOR } }"
+					division = "name = \"Qabael Sakhr\" division_template = \"Quwat Mithqal al-Qabeliyah\" start_experience_factor = 0.1 start_equipment_factor = 0.6 force_equipment_variants = { infantry_equipment_0 = { owner = JOR } }"
 					owner = JOR
 				}
 				create_unit = {
-					division = "name = \"Firqat Mushaa\" division_template = \"Al Jaysh Al Arabi\" start_experience_factor = 0.1 start_equipment_factor = 0.6 force_equipment_variants = { infantry_equipment_0 = { owner = JOR } }"
+					division = "name = \"Firqat Mushaa\" division_template = \"al-Jaysh al-Arabi\" start_experience_factor = 0.1 start_equipment_factor = 0.6 force_equipment_variants = { infantry_equipment_0 = { owner = JOR } }"
 					owner = JOR
 				}
 			}

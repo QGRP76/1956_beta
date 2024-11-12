@@ -167,7 +167,7 @@ characters = {
 		}
 	}
 	MPL_raghib_nashashibi = {
-		name = "Raghib Al-Nashashibi"
+		name = "Raghib al-Nashashibi"
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/PAL/r56_portrait_PAL_large_raghib_nashashbi.dds"
@@ -201,7 +201,7 @@ characters = {
 				small = "GFX_idea_PAL_amin_al_husseini"
 			}
 		}
-		name = "Amin Al-Husseini"
+		name = "Amin al-Husseini"
 		country_leader = {
 			ideology = islamism
 			traits = {
@@ -381,7 +381,7 @@ characters = {
 				}
 			}		
 		}
-		name = "Mohammad Daoud Al-Abbasi"
+		name = "Mohammad Daoud al-Abbasi"
 		portraits={
 			army={
 				small="GFX_idea_generic_navy_arab_2" #almost exact copy of him irl, which is why he is navy portrait
@@ -389,7 +389,7 @@ characters = {
 		}
 	}
 	MPL_zeid_bin_hussein = {
-		name="Zeid Bin Hussein"
+		name="Zeid ibn Hussein"
 		portraits={
 			civilian={
 				large= "gfx/leaders/PAL/r56_portrait_PAL_zeid_bin_hussein.dds"
@@ -612,7 +612,7 @@ characters = {
 	}
 
 	MPL_muhammad_nimr_al_hawari = {
-		name= "Muhammad Nimr Al-Hawari"
+		name= "Muhammad Nimr al-Hawari"
 		portraits={
 			army={
 				large ="gfx/leaders/kr_generic/Portrait_Arabia_Generic_land_new_6.dds"
@@ -699,7 +699,7 @@ characters = {
 		}
 	}
 	MPL_abdul_ghani_alkarmi = {
-		name= "Abdul-Ghani Al-Karmi"
+		name= "Abdul-Ghani al-Karmi"
 		portraits={
 			civilian ={
 				small  = "GFX_idea_generic_political_advisor_arab_1"
@@ -1142,7 +1142,7 @@ characters = {
 		
 	}
 	MPL_fawzi_al_qawuqji = {
-		name="Fawzi Al Qawuqji"	
+		name="Fawzi al-Qawuqji"	
 		portraits={
 			army={
 				large ="gfx/leaders/MPL/r56_portrait_MPL_fawzi_qawuqji.dds"

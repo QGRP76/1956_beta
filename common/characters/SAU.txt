@@ -1,6 +1,6 @@
 characters={
 	SAU_abdulaziz_ibn_saud={
-		name="Abdulaziz Ibn Saud"
+		name="Abdulaziz ibn Saud"
 		portraits={
 			civilian={
 				large="gfx/leaders/SAU/r56_portrait_SAU_Abdulaziz_ibn_Saud.dds"
@@ -39,7 +39,7 @@ characters={
 		}				
 	}
 	SAU_muhammad_ibn_abbu_bakr={
-		name="Muhammad Ibn Abbu Bakr"
+		name="Muhammad ibn Abbu Bakr"
 		portraits={
 			civilian={
 				large="gfx/leaders/kr_generic/Portrait_Arabia_Generic_new_5.dds"
@@ -72,7 +72,7 @@ characters={
 		}
 	}
 	SAU_abdullah_bin_suleiman_al_hamdan={
-		name = "Abdullah bin Suleiman Al Hamdan"
+		name = "Abdullah ibn Suleiman al-Hamdan"
 		advisor={
 			slot = political_advisor
 			idea_token = SAU_abdullah_bin_suleiman_al_hamdan
@@ -91,7 +91,7 @@ characters={
 	}
 	
 	SAU_khalid_bin_abdulaziz_al_saud ={ #Saudi Prince
-		name="Khalid Al Saud" #
+		name="Khalid al-Saud" #
 		portraits={
 			army={
 				small="GFX_idea_generic_army_arab_3"
@@ -124,7 +124,7 @@ characters={
 		}						
 	}	
 	SAU_faisal_bin_abdulaziz_al_saud ={ #Saudi Prince
-		name="Faisal Al Saud" #
+		name="Faisal al-Saud" #
 		portraits={
 			army={
 				small="GFX_idea_generic_army_arab_2"
@@ -157,7 +157,7 @@ characters={
 		}					
 	}	
 	SAU_saud_bin_al_saud ={ #Saudi Prince
-		name="Saud Bin Al Saud" #
+		name="Saud ibn al-Saud" #
 		portraits={
 			army={
 				small="GFX_idea_generic_army_arab_1"
@@ -211,7 +211,7 @@ characters={
 				military_theorist 
 			}
 		}		
-		name="Mohammad Al-Tarabulsi" #Mohammad Tarek Abdelkader Al Tarabulsi
+		name="Mohammad al-Tarabulsi" #Mohammad Tarek Abdelkader Al Tarabulsi
 		portraits={
 			army={
 				small="GFX_idea_generic_army_african_3"
@@ -245,7 +245,7 @@ characters={
 					factor  = 1.000
 				}
 		}
-		name="Ja'far Al-Tayyar"
+		name="Ja'far al-Tayyar"
 		portraits={
 			army={
 				small="GFX_idea_generic_army_arab_2"
@@ -276,7 +276,7 @@ characters={
 					factor  = 1.000
 				}
 		}
-		name="Sharif Mohsen Al-Hussein"
+		name="Sharif Mohsen al-Hussein"
 		portraits={
 			army={
 				small="GFX_idea_generic_army_arab_3"
@@ -307,7 +307,7 @@ characters={
 					factor  = 1.000
 				}
 		}
-		name="Mohsen bin Al-Hussein Al-Sharif"
+		name="Mohsen ibn al-Hussein al-Sharif"
 		portraits={
 			army={
 				small="GFX_idea_generic_army_arab_2"
@@ -338,7 +338,7 @@ characters={
 					factor  = 1.000
 				}
 		}
-		name="Abdullah bin Sulaiman Al-Issa"
+		name="Abdullah ibn Sulaiman al-Issa"
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_arab_3"
@@ -408,7 +408,7 @@ characters={
 				factor = 1
 			}
 		}		
-		name="Abdullah Al Mandili"
+		name="Abdullah al-Mandili"
 		portraits={
 			army={
 				small="GFX_idea_generic_air_arab_2"
@@ -429,7 +429,7 @@ characters={
 				factor  = 1.000
 			}
 		}
-		name="Rashid Al Saleh"
+		name="Rashid al-Saleh"
 		portraits={
 			army={
 				small="GFX_idea_generic_air_arab_1"
@@ -452,7 +452,7 @@ characters={
 				factor = 1
 			}
 		}
-		name="Ibrahim Al Tassan"
+		name="Ibrahim al-Tassan"
 		portraits={
 			army={
 				small="GFX_idea_generic_air_arab_3"

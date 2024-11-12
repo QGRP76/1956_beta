@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	EGY_hassan_al_banna = {
-		name="Hassan Al-Banna"
+		name="Hassan al-Banna"
 		portraits={
 			civilian={
 				large="gfx/leaders/EGY/r56_portrait_EGY_Hassan_al_Banna.dds"

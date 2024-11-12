@@ -566,7 +566,7 @@ intelligence_agency = {
 intelligence_agency = {
 	
 	picture = GFX_intelligence_agency_logo_irq
-	names = { "Jihaz Al-Mukhabarat Al-Eiraqii" }
+	names = { "Jihaz al-Mukhabarat al-Eiraqii" }
 	
 	available = { 
 		tag = IRQ

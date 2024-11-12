@@ -1,6 +1,6 @@
 characters = {
 	JOR_abdullah_bin_hussein = {
-		name="Abdullah bin Al-Hussein"
+		name="Abdullah ibn al-Hussein"
 		portraits={
 			army={
 				large ="gfx/leaders/JOR/r56_portrait_JOR_Abdullah_I.dds"
@@ -55,7 +55,7 @@ characters = {
 	}
 
 	JOR_eqab_bin_mohaya = {
-		name = "Eqab bin Mohaya"
+		name = "Eqab ibn Mohaya"
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/kr_generic/Portrait_Arabia_Generic_land_new_2.dds"

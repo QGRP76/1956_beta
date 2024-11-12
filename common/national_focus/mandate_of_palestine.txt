@@ -1909,7 +1909,7 @@ focus_tree = {
 				}
 				949 = {
 					create_unit = {
-						division = "name = \"Al Jaysh Al Tahriree\" division_template = \"Militia Brigade\" start_experience_factor = 0.1 start_equipment_factor = 0.75 force_equipment_variants = { infantry_equipment_0 = { owner = PAL } }" 
+						division = "name = \"al-Jaysh al-Tahrir\" division_template = \"Militia Brigade\" start_experience_factor = 0.1 start_equipment_factor = 0.75 force_equipment_variants = { infantry_equipment_0 = { owner = PAL } }" 
 						owner = MPL
 					}
 				}
@@ -2803,7 +2803,7 @@ focus_tree = {
 					}
 					949 = {
 						create_unit = {
-							division = "name = \"Al Jaysh Al Tahriree\" division_template = \"People's Brigades\" start_experience_factor = 0.1 start_equipment_factor = 0.75 force_equipment_variants = { infantry_equipment_0 = { owner = PAL } }" 
+							division = "name = \"al-Jaysh al-Tahrir\" division_template = \"People's Brigades\" start_experience_factor = 0.1 start_equipment_factor = 0.75 force_equipment_variants = { infantry_equipment_0 = { owner = PAL } }" 
 							owner = MPL
 						}
 					}

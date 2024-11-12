@@ -4289,7 +4289,7 @@ political_actions = {
 					controls_state = 1017
 				}
 				set_province_name = { id = 4088 name = "Bir As-Sab" }
-				set_province_name = { id = 1015 name = "Umm Al-Rashrash"}
+				set_province_name = { id = 1015 name = "Umm al-Rashrash"}
 			}
 			hidden_effect = {
 				PAL = {

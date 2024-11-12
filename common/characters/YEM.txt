@@ -1,8 +1,8 @@
-# Muhammad Mahmoud Al-Zubairi, born in 1910 poet and revolutionary against the monarchy (was in Egypt at the time until 1941 and then was arrested until 42). He established the "Free Yemeni Party" (also translated as the "Liberal Party") in 1944 Minister of Knowledge during the revolution in 1948
+# Muhammad Mahmoud al-Zubairi, born in 1910 poet and revolutionary against the monarchy (was in Egypt at the time until 1941 and then was arrested until 42). He established the "Free Yemeni Party" (also translated as the "Liberal Party") in 1944 Minister of Knowledge during the revolution in 1948
 # Ahmad al Muta: advocate for reform, expelled from the army and as editor of the official newspaper because of his ideas. met and befriended Ahmad Muhammad Numan in the mid 30's
 # Ahmad Muhammad Numan was a Yemeni educator, propagandist and politician. He was one of the main progenitors of modern Yemeni nationalism. Numan was the founder of the Free Yemeni Movement and served as foreign minister and then prime minister in the 60's
 # In 1936 the Imam dispatched his son Sayf al-Islam Qasim to visit the school. Accompanying him were the Governor of Ta'izz Sayyid Ali al-Wazir and the poet Muhammad al-Zubayri. The report must have pleased the Imam inasmuch as he recommended it to an Egyptian education delegation.[7] Complaints from conservatives, however, led to the appointment of a traditional instructor to teach Zaidi doctrines.[9] And when the Imam's secret police discovered the Hay'at al Nidal and arrested al-Muta (in 1936), Numan was placed under house arrest in Ta'izz.
-# Abdullah bin Ahmad al-Wazir -> imam chosen by the al wazir coup attempt.
+# Abdullah ibn Ahmad al-Wazir -> imam chosen by the al wazir coup attempt.
 # Yahia al-Iryani, was the Chief Judge of the Mutawakkilite Kingdom of Yemen
 #
 # Sayyid'Abd Allâh al-Wazîr commanded an army to repress a revolt in 1923, Then again in 1930 = abdullah?
@@ -47,8 +47,8 @@ characters={
 		}		
 	}
 	
-	YEM_abdullah_bin_ahmed_al_wazir={ #Abdullah bin Ahmed al-Wazir, commanded the Imam army against the Saudi in 1926. Then later participated in the failed consitutional revolt in 1948
-		name="Abdullah bin Ahmed al-Wazir"
+	YEM_abdullah_bin_ahmed_al_wazir={ #Abdullah ibn Ahmed al-Wazir, commanded the Imam army against the Saudi in 1926. Then later participated in the failed consitutional revolt in 1948
+		name="Abdullah ibn Ahmed al-Wazir"
 		portraits={
 			civilian={
 				large="gfx/leaders/kr_generic/Portrait_Arabia_Generic_land_new_1.dds"
@@ -106,7 +106,7 @@ characters={
 		}	
 	}	
 	YEM_ahmad_bin_yahya={
-		name="Ahmad bin Yahya"
+		name="Ahmad ibn Yahya"
 		portraits={
 			civilian={
 				large="gfx/leaders/SAU/Portrait_Arabia_Generic_land_3.dds"
@@ -138,7 +138,7 @@ characters={
 		}		
 	}
 	
-	YEM_ali_al_muradi={ #Ali bin Nasser bin Mas'ad al-Qard'i al-Muradi
+	YEM_ali_al_muradi={ #Ali ibn Nasser ibn Mas'ad al-Qard'i al-Muradi
 		name="Ali al-Muradi"
 		portraits={
 			civilian={
@@ -264,7 +264,7 @@ characters={
 	}
 	YEM_ahmed_yahya_al_thalaya={  #previously YEM_abd_al_husseini-> fictitious?
 		advisor={
-			name = "Ahmed Yahya Al-Thalaya"
+			name = "Ahmed Yahya al-Thalaya"
 			slot = high_command
 			idea_token = YEM_ahmed_yahya_al_thalaya
 			ledger = army
@@ -354,7 +354,7 @@ characters={
 				factor = 0
 			}
 		}		
-		name="Ahmad al Hamid"
+		name="Ahmad al-Hamid"
 		portraits={
 			army={
 				small="GFX_idea_generic_army_arab_2"
@@ -379,7 +379,7 @@ characters={
 				}
 		}
 # TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
-		name="Mansur al Badr"
+		name="Mansur al-Badr"
 		portraits={
 			army={
 				small="GFX_idea_generic_air_arab_3"

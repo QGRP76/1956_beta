@@ -110,7 +110,7 @@
 
  ISR_lehi_succeeded:0 "The Lehi uprising has succeeded"
 
- ISR_build_third_temple_tt:0 "§RDue to the Al-Aqsa Mosque being located inside the Temple Mount, this course of action will be utterly catastrophic!§!"
+ ISR_build_third_temple_tt:0 "§RDue to the al-Aqsa Mosque being located inside the Temple Mount, this course of action will be utterly catastrophic!§!"
  ISR_no_muslim_faction:0 "We are not in a faction with any independent Muslim nations."
 
  ################################
@@ -396,7 +396,7 @@
  israel.60.a:0 "Dogs!"
 
  israel.61.t:0 "[ISR.GetNameDefCap] Moves to Build the Third Temple!"
- israel.61.d:0 "[ISR.GetLeader] proclaimed today in Jerusalem that with the Jewish people's control of the holy Temple Mount, [ISR.GetNameDef] will begin construction of the Third Temple effective immediatly. This will almost certainly involve the destruction of the Al-Aqsa Mosque, something we can not allow. We must intervene."
+ israel.61.d:0 "[ISR.GetLeader] proclaimed today in Jerusalem that with the Jewish people's control of the holy Temple Mount, [ISR.GetNameDef] will begin construction of the Third Temple effective immediatly. This will almost certainly involve the destruction of the al-Aqsa Mosque, something we can not allow. We must intervene."
  israel.61.a:0 "They have officialy lost their minds!"
  israel.61.b:0 "Who cares?"
 

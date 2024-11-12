@@ -2857,7 +2857,7 @@ country_event = {
 	}
 }
 
-#Support the Golden Square - Al-Gaylani's Coup
+#Support the Golden Square - al-Gaylani's Coup
 country_event = {
 	id = bftb_turkey.67
 	title = bftb_turkey.67.t

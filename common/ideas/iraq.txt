@@ -1,907 +1,934 @@
 ideas = {
 
-  country = {
-    IRQ_venerate_the_ancient_Mesopotamians = {
-				
-			allowed = {
-				original_tag = IRQ
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			picture = IRQ_mesopotamia
-				
-			removal_cost = -1
-				
-			modifier = {
-				stability_factor = 0.05
-        war_support_factor = 0.05
-				army_core_defence_factor = 0.05
-        army_morale_factor = 0.1
-			}
-		}	
-    IRQ_saidism = {
-				
-			allowed = {
-				original_tag = IRQ
-			}
-
-			cancel = {
-				OR = { 
-					has_government = communism
-					has_government = fascism 
-				}
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			picture = IRQ_saidism_idea
-				
-			removal_cost = -1
-				
-			modifier = {
-				stability_factor = 0.05
-				drift_defence_factor = 0.5
-        army_morale_factor = 0.1
-				generate_wargoal_tension = 1.00
-				join_faction_tension = 1.00
-				lend_lease_tension = 0.50
-				send_volunteers_tension = 0.50
-				guarantee_tension = 1.0
-				ai_badass_factor = 0.01    # Will receive 1% of the threat from others
-				ai_get_ally_desire_factor = -100				
-			}
-		}
-    IRQ_landowners = { #normal
-			allowed = { always = no }
-			available = {
-			}
-			allowed_civil_war = { always = yes }
-			removal_cost = -1
-			picture = generic_agrarian_reform
-			modifier = {
-				consumer_goods_factor = -0.05
-				production_speed_buildings_factor = -0.1 
-        stability_factor = 0.1
-			}
-		}
-    
-    IRQ_landowners2 = { #good
-      name = IRQ_landowners
-			allowed = { always = no }
-			available = {
-			}
-			allowed_civil_war = { always = yes }
-			removal_cost = -1
-			picture = generic_agrarian_reform
-			modifier = {
-				consumer_goods_factor = -0.1
-				production_speed_buildings_factor = 0.1 
-        stability_weekly = 0.001
-			}
-		}
-    IRQ_landowners3 = { #bad
-      name = IRQ_landowners
-			allowed = { always = no }
-			available = {
-			}
-			allowed_civil_war = { always = yes }
-			removal_cost = -1
-			picture = generic_agrarian_reform
-			modifier = {
-				consumer_goods_factor = 0.1
-				production_speed_buildings_factor = -0.2
-        stability_weekly = -0.001
-			}
-		}
-    IRQ_landowners4 = {
-      name = IRQ_landowners
-			allowed = { always = no }
-			available = {
-			}
-			allowed_civil_war = { always = yes }
-			removal_cost = -1
-			picture = generic_agrarian_reform
-			modifier = {
-				consumer_goods_factor = -0.2
-				production_speed_buildings_factor = 0.2
-        stability_weekly = 0.001
-        monthly_population = 0.25
-			}
-		}
-    IRQ_shia_protests = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = POL_Prometheism
-      removal_cost = -1
-
-      modifier = {
-        stability_factor = -0.05
-        political_power_cost = 0.05
-      }
-    }
-		IRQ_oil_concessions = {
-
-			picture = IRQ_petrol
-
-			name = IRQ_oil_concessions
-
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			modifier = {
-				custom_modifier_tooltip = MEX_oil_concessions_tt
-			}
-			on_add = {
-
-			}
-
-		}
-
-    IRQ_anti_british_sentiment = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = FIN_british_threat
-      removal_cost = -1
-
-      modifier = {
-        stability_factor = -0.15
-        political_power_cost = 0.2
-        democratic_drift = -0.01
-      }
-    }
-    IRQ_anti_british_sentiment2 = {
-      name = IRQ_anti_british_sentiment
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = FIN_british_threat
-      removal_cost = -1
-
-      modifier = {
-        stability_factor = 0.1
-        political_power_cost = 0.1
-        neutrality_drift = 0.01
-      }
-    }
-
-    IRQ_slight_german_leniency = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = german_advisors
-      removal_cost = -1
-
-      modifier = {
-        political_power_cost = -0.2
-        fascism_drift = 0.01
-        experience_gain_army_Factor = 0.1
-      }
-    }
-
-    IRQ_1933_deprivation_act = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = NOR_anti_communist_sentiment
-      removal_cost = -1
-
-      modifier = {
-        recruitable_population_factor = -0.05
-        communism_drift = -0.05
-      }
-    }
-
-    IRQ_dissolving_the_parliament1 = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = IRQ_dissolving_the_parliament
-      removal_cost = -1
-
-      modifier = {
-        political_power_gain = 0.15
-        command_power_gain_mult = 0.1
-      }
-    }
-
-    IRQ_economic_policy = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = generic_economic_increase
-      removal_cost = -1
-
-      modifier = {
-        production_lack_of_resource_penalty_factor = -0.1
-        consumer_goods_factor = -0.05
-        production_factory_efficiency_gain_factor = 0.1
-      }
-    }
-    IRQ_arabist_sentiment = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = chi_army_corruption3
-      removal_cost = -1
-
-      modifier = {
-        political_power_cost = -0.1
-        justify_war_goal_time = -0.25
-        weekly_manpower = 150
-        army_org_regain = 0.1
-      }
-    }
-    IRQ_victory_over_britain = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = eng_guided_by_britain
-      removal_cost = -1
-
-      targeted_modifier = {
-        tag = ENG
-        attack_bonus_against = 0.1
-        defense_bonus_against = 0.15
-      }
-    }
-    IRQ_mawtini_idea = {
-
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-
-      allowed_civil_war = {
-        always = yes
-      }
-
-      removal_cost = -1
-
-      picture = nkvd
-
-      modifier = {
-        conscription = 0.020
-        war_support_factor = 0.1
-        army_core_defence_factor = 0.05
-        army_core_attack_factor = 0.05
-      }
-    }
-    IRQ_partial_victory_against_britain = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = vittoria_mutilata
-      removal_cost = -1
-
-      modifier = {
-        army_speed_factor = 0.1
-        army_core_defence_factor = 0.1
-      }
-    }
-    IRQ_islamist_cooperation = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = PAL_sharia
-      removal_cost = -1
-
-      modifier = {
-        conscription = 0.02
-        training_time_army_factor = -0.25
-        resistance_growth_on_our_occupied_states = 0.15
-      }
-    }
-    IRQ_fasting_tactics_idea = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = generic_soldiers_good
-      removal_cost = -1
-
-      modifier = {
-        out_of_supply_factor = -0.1
-        attrition = -0.1
-        supply_consumption_factor = -0.1
-      }
-    }
-    IRQ_conscription_laws_eased = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = generic_soldiers_bad
-      removal_cost = -1
-
-      modifier = {
-        conscription_factor = -0.05
-        conscription = -0.005
-      }
-    }
-    IRQ_arabism = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = MEX_revolutionary_army
-      removal_cost = -1
-
-      modifier = {
-        surrender_limit = 0.1
-        army_core_defence_factor = 0.1
-      }
-    }
-    IRQ_military_investments = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = MEX_callistas
-      removal_cost = -1
-
-      modifier = {
-        consumer_goods_factor = 0.05
-      }
-    }
-    IRQ_dissidents_suppressed = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = ast_classify_aliens
-      removal_cost = -1
-
-      modifier = {
-        political_power_factor = 0.2
-        army_org_factor = -0.05
-        democratic_drift = -0.02
-      }
-    }
-    IRQ_planning_the_countercoup = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = generic_disjointed_gov
-      removal_cost = -1
-
-      modifier = {
-        stability_factor = 0.1
-        democratic_drift = 0.02
-      }
-    }
-    IRQ_planning_the_countercoup2 = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = generic_democratic_drift_bonus
-      removal_cost = -1
-
-      modifier = {
-        stability_factor = 0.15
-        democratic_drift = 0.02
-        political_power_gain = 0.25
-      }
-    }
-    IRQ_workers_culture = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = ITA_il_sol_dell_avvenire_ns
-      removal_cost = -1
-
-      modifier = {
-        production_speed_buildings_factor = 0.1
-        production_lack_of_resource_penalty_factor = -0.1
-        production_factory_efficiency_gain_factor = 0.1
-      }
-    }
-    IRQ_marxist_fanaticism_idea = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = ITA_il_sol_dell_avvenire_ns
-      removal_cost = -1
-
-      modifier = {
-        training_time_army_factor  = -0.2
-        org_loss_when_moving = -0.1
-      }
-    }
-    IRQ_spreading_the_world_revolution = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = workers_brigades
-      removal_cost = -1
-
-      modifier = {
-        justify_war_goal_time = -0.25
-        breakthrough_factor = 0.05
-        army_attack_factor = 0.05
-        pocket_penalty = -0.1
-      }
-    }
-    IRQ_sniper_teams_idea = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = generic_war_preparation
-      removal_cost = -1
-
-      modifier = {
-       recon_factor = 0.15
-       intel_from_combat_factor = 0.15
-      }
-    }
-    IRQ_nra_leadership_jafar = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = ast_volunteer_defence_corps
-      removal_cost = -1
-
-      modifier = {
-        army_org_factor = 0.075
-        army_speed_factor = 0.05
-        stability_factor = -0.1
-        political_power_factor = -0.2
-      }
-    }
-    IRQ_Abd_al_ilah_idea = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = IRQ_Abd_al_Ilah
-      removal_cost = -1
-
-      modifier = {
-        stability_factor = -0.05
-      }
-    }
-    IRQ_faisal_idea = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = IRQ_faisal
-      removal_cost = -1
-
-      modifier = {
-        stability_factor = 0.1
-      }
-    }
-    IRQ_ghazi_idea = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = IRQ_ghazi
-      removal_cost = -1
-
-      modifier = {
-        mobilization_speed = 0.15
-        stability_factor = 0.1
-      }
-    }
-    IRQ_ghazi_idea2 = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = IRQ_ghazi
-      removal_cost = -1
-
-      modifier = {
-        mobilization_speed = 0.15
-        stability_factor = 0.1
-        conscription_factor = 0.1
-        conscription = 0.02
-      }
-    }
-     IRQ_jizya_payments = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = generic_economic_increase
-      removal_cost = -1
-
-      modifier = {
-        consumer_goods_factor = -0.05
-        conscription_factor = -0.05
-      }
-    }
-    IRQ_ban_riba = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = usa_great_depression_2
-      removal_cost = -1
-
-      modifier = {
-        consumer_goods_factor = 0.05
-        production_factory_efficiency_gain_factor = 0.1
-        production_speed_buildings_factor = 0.1
-      }
-    }
-     IRQ_sunni_shia_unity = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = raj_marginalized_muslim_community_happy
-      removal_cost = -1
-
-      modifier = {
-        stability_factor = 0.1
-        political_power_gain = 0.15
-        research_speed_factor = 0.05
-      }
-    }
-    IRQ_shiate_supremacy = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = raj_marginalized_muslim_community_angry
-      removal_cost = -1
-
-      modifier = {
-        conscription = 0.03
-        weekly_manpower = 300
-      }
-    }
-    IRQ_sharia = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = PAL_sharia
-      removal_cost = -1
-
-      modifier = {
-        resistance_growth = -0.15
-        political_power_gain = 0.2
-        stability_weekly_factor = 0.001
-        neutrality_drift = 0.05
-      }
-    }
-    IRQ_military_political_intervention = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = generic_war_preparation
-      removal_cost = -1
-
-      modifier = {
-        drift_defence_factor = 0.2
-        conscription = 0.02
-        command_power_gain = 0.05
-      }
-    }
-    IRQ_the_black_list_idea = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = generic_purge
-      removal_cost = -1
-
-      modifier = {
-        army_org_factor = -0.1
-        army_speed_factor = -0.1
-      }
-    }
-    IRQ_ghazis_personality_cult = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = IRQ_ghazi
-      removal_cost = -1
-
-      modifier = {
-        neutrality_drift = 0.02
-        army_morale_factor = 0.1
-      }
-    }
-    IRQ_intellectuals_invited = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = jap_duplicate_research
-      removal_cost = -1
-
-      modifier = {
-        research_speed_factor = 0.05
-      }
-    }
-    IRQ_parliament_dissolved = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = jap_duplicate_research
-      removal_cost = -1
-
-      modifier = {
-        stability_factor = -0.05
-        political_power_gain = 0.15
-        neutrality_drift = 0.02
-
-      }
-    }
-    IRQ_sidqis_leadership = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = ETH_conservative_high_command
-      removal_cost = -1
-
-      modifier = {
-        breakthrough_factor = 0.05
-        experience_gain_army_factor = 0.15
-        war_support_factor = 0.1
-        conscription_factor = 0.1
-        stability_factor = -0.15
-      }
-    }
-    IRQ_sidqis_leadership2 = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = ETH_conservative_high_command
-      removal_cost = -1
-
-      modifier = {
-        breakthrough_factor = 0.05
-        experience_gain_army_factor = 0.15
-        war_support_factor = 0.1
-        conscription_factor = 0.1
-      }
-    }
-    IRQ_assyrians_taxed = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = EST_exploit_the_banks
-      removal_cost = -1
-
-      modifier = {
-        consumer_goods_factor = -0.05
-        stability_factor = -0.1
-      }
-    }
-    IRQ_abdul_latif_coup = {
-      allowed = {
-        original_tag = IRQ
-        always = no
-      }
-      allowed_civil_war = { always = yes }
-
-      picture = ETH_conservative_high_command
-      removal_cost = -1
-
-      modifier = {
-        army_defence_factor = 0.05
-        max_dig_in_factor = 0.1
-      }
-    }
-    IRQ_Iran_treaty = {
-
-      picture = generic_constitutional_guarantees
-      removal_cost = -1
-
-      modifier = {
-        stability_factor = 0.05
-      }
-    }
-    
-		IRQ_agricultural_reforms_idea = {
-			picture = generic_agrarian_reform
-      name = ROM_agricultural_reforms_idea
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				industrial_capacity_factory = -0.075
-				conscription_factor = 0.10
-				min_export = -0.05
-			}
-		}
-    IRQ_hydroelectric = {
-			
-			allowed = {
-				original_tag = IRQ
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = no
-			}
-			
-			picture = por_hydroelectric_power
-
-			modifier = {
-				production_factory_efficiency_gain_factor = 0.05 
-				production_factory_max_efficiency_factor = 0.1
-			}
-		} 
-    IRQ_GER_TREATY = { #BAD
-			allowed = { always = no }
-			available = {
-			}
-			allowed_civil_war = { always = yes }
-			removal_cost = -1
-			picture = HOL_reliance_on_the_gold_standard
-			modifier = {
-				consumer_goods_factor = 0.1
-				local_resources = -0.1
-			}
-      targeted_modifier = {
-        tag = GER
-        custom_modifier_tooltip = IRQ_OIL
-        stability_factor = 0.1
+    country = {
+
+        # STARTING IDEAS #
+
+        IRQ_landowners = { #normal
+            allowed = { always = no }
+            available = {
+            }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            picture = ROM_king_carol_ii_hedonist
+            modifier = {
+                consumer_goods_factor = -0.05
+                stability_factor = 0.05
+                research_speed_factor = -0.05
+                political_power_factor = -0.15
+                democratic_drift = -0.01
+                war_support_factor = -0.10
+                production_speed_buildings_factor = 0.05
+                production_speed_infrastructure_factor = 0.05
+            }
+        }
+        IRQ_landowners2 = { #good
+            name = IRQ_landowners
+            allowed = { always = no }
+            available = {
+            }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            picture = ROM_king_carol_ii_hedonist
+            modifier = {
+                consumer_goods_factor = -0.1
+                production_speed_buildings_factor = 0.1 
+                stability_weekly = 0.001
+            }
+        }
+        IRQ_landowners3 = { #bad
+            name = IRQ_landowners
+            allowed = { always = no }
+            available = {
+            }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            picture = ROM_king_carol_ii_hedonist
+            modifier = {
+                consumer_goods_factor = 0.1
+                production_speed_buildings_factor = -0.2
+                stability_weekly = -0.001
+            }
+        }
+        IRQ_landowners4 = {
+            name = IRQ_landowners
+            allowed = { always = no }
+            available = {
+            }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            picture = ROM_king_carol_ii_hedonist
+            modifier = {
+                consumer_goods_factor = -0.2
+                production_speed_buildings_factor = 0.2
+                stability_weekly = 0.001
+                monthly_population = 0.25
+            }
+        }
+        IRQ_oil_concessions = {
+
+            picture = PER_anglo_iranian_oil_company
+
+            name = IRQ_oil_concessions
+
+            allowed = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            modifier = {
+                custom_modifier_tooltip = MEX_oil_concessions_tt
+            }
+            on_add = {
+
+            }
+        }
+        IRQ_shia_protests = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = raj_marginalized_muslim_community_angry
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.05
+                political_power_cost = 0.05
+            }
+        }
+        IRQ_ghazi_idea = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = IRQ_ghazi
+            removal_cost = -1
+
+            modifier = {
+                mobilization_speed = 0.15
+                stability_factor = 0.1
+            }
+        }
+        IRQ_ghazi_idea2 = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = IRQ_ghazi
+            removal_cost = -1
+
+            modifier = {
+                mobilization_speed = 0.15
+                stability_factor = 0.1
+                conscription_factor = 0.1
+                conscription = 0.02
+            }
+        }
         
-      }
-		}
-  }
-  materiel_manufacturer = {
+        # END #
+        
+        IRQ_anti_british_sentiment = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = FIN_british_threat
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.15
+                political_power_cost = 0.2
+                democratic_drift = -0.01
+            }
+        }
+        IRQ_anti_british_sentiment2 = {
+            name = IRQ_anti_british_sentiment
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = FIN_british_threat
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = 0.1
+                political_power_cost = 0.1
+                neutrality_drift = 0.01
+            }
+        }
+        IRQ_slight_german_leniency = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = german_advisors
+            removal_cost = -1
+
+            modifier = {
+                political_power_cost = -0.2
+                fascism_drift = 0.01
+                experience_gain_army_Factor = 0.1
+            }
+        }
+        IRQ_1933_deprivation_act = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = NOR_anti_communist_sentiment
+            removal_cost = -1
+
+            modifier = {
+                recruitable_population_factor = -0.05
+                communism_drift = -0.05
+            }
+        }
+        IRQ_dissolving_the_parliament1 = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = IRQ_dissolving_the_parliament
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = 0.15
+                command_power_gain_mult = 0.1
+            }
+        }
+        IRQ_economic_policy = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = generic_economic_increase
+            removal_cost = -1
+
+            modifier = {
+                production_lack_of_resource_penalty_factor = -0.1
+                consumer_goods_factor = -0.05
+                production_factory_efficiency_gain_factor = 0.1
+            }
+        }
+        IRQ_arabist_sentiment = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = chi_army_corruption3
+            removal_cost = -1
+
+            modifier = {
+                political_power_cost = -0.1
+                justify_war_goal_time = -0.25
+                weekly_manpower = 150
+                army_org_regain = 0.1
+            }
+        }
+        IRQ_victory_over_britain = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = eng_guided_by_britain
+            removal_cost = -1
+
+            targeted_modifier = {
+                tag = ENG
+                attack_bonus_against = 0.1
+                defense_bonus_against = 0.15
+            }
+        }
+        IRQ_mawtini_idea = {
+
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+
+            picture = nkvd
+
+            modifier = {
+                conscription = 0.020
+                war_support_factor = 0.1
+                army_core_defence_factor = 0.05
+                army_core_attack_factor = 0.05
+            }
+        }
+        IRQ_partial_victory_against_britain = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = vittoria_mutilata
+            removal_cost = -1
+
+            modifier = {
+                army_speed_factor = 0.1
+                army_core_defence_factor = 0.1
+            }
+        }
+        IRQ_islamist_cooperation = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = PAL_sharia
+            removal_cost = -1
+
+            modifier = {
+                conscription = 0.02
+                training_time_army_factor = -0.25
+                resistance_growth_on_our_occupied_states = 0.15
+            }
+        }
+        IRQ_fasting_tactics_idea = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = generic_soldiers_good
+            removal_cost = -1
+
+            modifier = {
+                out_of_supply_factor = -0.1
+                attrition = -0.1
+                supply_consumption_factor = -0.1
+            }
+        }
+        IRQ_conscription_laws_eased = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = generic_soldiers_bad
+            removal_cost = -1
+
+            modifier = {
+                conscription_factor = -0.05
+                conscription = -0.005
+            }
+        }
+        IRQ_arabism = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = MEX_revolutionary_army
+            removal_cost = -1
+
+            modifier = {
+                surrender_limit = 0.1
+                army_core_defence_factor = 0.1
+            }
+        }
+        IRQ_military_investments = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = MEX_callistas
+            removal_cost = -1
+
+            modifier = {
+                consumer_goods_factor = 0.05
+            }
+        }
+        IRQ_dissidents_suppressed = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = ast_classify_aliens
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.2
+                army_org_factor = -0.05
+                democratic_drift = -0.02
+            }
+        }
+        IRQ_planning_the_countercoup = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = generic_disjointed_gov
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = 0.1
+                democratic_drift = 0.02
+            }
+        }
+        IRQ_planning_the_countercoup2 = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = generic_democratic_drift_bonus
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = 0.15
+                democratic_drift = 0.02
+                political_power_gain = 0.25
+            }
+        }
+        IRQ_workers_culture = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = ITA_il_sol_dell_avvenire_ns
+            removal_cost = -1
+
+            modifier = {
+                production_speed_buildings_factor = 0.1
+                production_lack_of_resource_penalty_factor = -0.1
+                production_factory_efficiency_gain_factor = 0.1
+            }
+        }
+        IRQ_marxist_fanaticism_idea = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = ITA_il_sol_dell_avvenire_ns
+            removal_cost = -1
+
+            modifier = {
+                training_time_army_factor  = -0.2
+                org_loss_when_moving = -0.1
+            }
+        }
+        IRQ_spreading_the_world_revolution = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = workers_brigades
+            removal_cost = -1
+
+            modifier = {
+                justify_war_goal_time = -0.25
+                breakthrough_factor = 0.05
+                army_attack_factor = 0.05
+                pocket_penalty = -0.1
+            }
+        }
+        IRQ_sniper_teams_idea = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = generic_war_preparation
+            removal_cost = -1
+
+            modifier = {
+            recon_factor = 0.15
+            intel_from_combat_factor = 0.15
+            }
+        }
+        IRQ_nra_leadership_jafar = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = ast_volunteer_defence_corps
+            removal_cost = -1
+
+            modifier = {
+                army_org_factor = 0.075
+                army_speed_factor = 0.05
+                stability_factor = -0.1
+                political_power_factor = -0.2
+            }
+        }
+        IRQ_Abd_al_ilah_idea = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = IRQ_Abd_al_Ilah
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.05
+            }
+        }
+        IRQ_faisal_idea = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = IRQ_faisal
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = 0.1
+            }
+        }
+        IRQ_jizya_payments = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = generic_economic_increase
+            removal_cost = -1
+
+            modifier = {
+                consumer_goods_factor = -0.05
+                conscription_factor = -0.05
+            }
+        }
+        IRQ_ban_riba = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = usa_great_depression_2
+            removal_cost = -1
+
+            modifier = {
+                consumer_goods_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.1
+                production_speed_buildings_factor = 0.1
+            }
+        }
+        IRQ_sunni_shia_unity = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = raj_marginalized_muslim_community_happy
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = 0.1
+                political_power_gain = 0.15
+                research_speed_factor = 0.05
+            }
+        }
+        IRQ_venerate_the_ancient_Mesopotamians = {
+        
+            allowed = {
+                original_tag = IRQ
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            picture = IRQ_mesopotamia
+                
+            removal_cost = -1
+                
+            modifier = {
+                stability_factor = 0.05
+                war_support_factor = 0.05
+                army_core_defence_factor = 0.05
+                army_morale_factor = 0.1
+            }
+        }	
+        IRQ_saidism = {
+                    
+            allowed = {
+                original_tag = IRQ
+            }
+
+            cancel = {
+                OR = { 
+                    has_government = communism
+                    has_government = fascism 
+                }
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            picture = IRQ_saidism_idea
+                
+            removal_cost = -1
+                
+            modifier = {
+                stability_factor = 0.05
+                drift_defence_factor = 0.5
+                army_morale_factor = 0.1
+                generate_wargoal_tension = 1.00
+                join_faction_tension = 1.00
+                lend_lease_tension = 0.50
+                send_volunteers_tension = 0.50
+                guarantee_tension = 1.0
+                ai_badass_factor = 0.01    # Will receive 1% of the threat from others
+                ai_get_ally_desire_factor = -100				
+            }
+        }
+        IRQ_shiate_supremacy = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = raj_marginalized_muslim_community_angry
+            removal_cost = -1
+
+            modifier = {
+                conscription = 0.03
+                weekly_manpower = 300
+            }
+        }
+        IRQ_sharia = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = PAL_sharia
+            removal_cost = -1
+
+            modifier = {
+                resistance_growth = -0.15
+                political_power_gain = 0.2
+                stability_weekly_factor = 0.001
+                neutrality_drift = 0.05
+            }
+        }
+        IRQ_military_political_intervention = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = generic_war_preparation
+            removal_cost = -1
+
+            modifier = {
+                drift_defence_factor = 0.2
+                conscription = 0.02
+                command_power_gain = 0.05
+            }
+        }
+        IRQ_the_black_list_idea = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = generic_purge
+            removal_cost = -1
+
+            modifier = {
+                army_org_factor = -0.1
+                army_speed_factor = -0.1
+            }
+        }
+        IRQ_ghazis_personality_cult = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = IRQ_ghazi
+            removal_cost = -1
+
+            modifier = {
+                neutrality_drift = 0.02
+                army_morale_factor = 0.1
+            }
+        }
+        IRQ_intellectuals_invited = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = jap_duplicate_research
+            removal_cost = -1
+
+            modifier = {
+                research_speed_factor = 0.05
+            }
+        }
+        IRQ_parliament_dissolved = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = jap_duplicate_research
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.05
+                political_power_gain = 0.15
+                neutrality_drift = 0.02
+            }
+        }
+        IRQ_sidqis_leadership = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = ETH_conservative_high_command
+            removal_cost = -1
+
+            modifier = {
+                breakthrough_factor = 0.05
+                experience_gain_army_factor = 0.15
+                war_support_factor = 0.1
+                conscription_factor = 0.1
+                stability_factor = -0.15
+            }
+        }
+        IRQ_sidqis_leadership2 = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = ETH_conservative_high_command
+            removal_cost = -1
+
+            modifier = {
+                breakthrough_factor = 0.05
+                experience_gain_army_factor = 0.15
+                war_support_factor = 0.1
+                conscription_factor = 0.1
+            }
+        }
+        IRQ_assyrians_taxed = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = EST_exploit_the_banks
+            removal_cost = -1
+
+            modifier = {
+                consumer_goods_factor = -0.05
+                stability_factor = -0.1
+            }
+        }
+        IRQ_abdul_latif_coup = {
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            allowed_civil_war = { always = yes }
+
+            picture = ETH_conservative_high_command
+            removal_cost = -1
+
+            modifier = {
+                army_defence_factor = 0.05
+                max_dig_in_factor = 0.1
+            }
+        }
+        IRQ_Iran_treaty = {
+            allowed = {
+                original_tag = IRQ
+            }
+            allowed_civil_war = { always = no }
+
+            picture = generic_constitutional_guarantees
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = 0.05
+            }
+        }
+        IRQ_finalized_budget = {
+            picture = generic_agrarian_reform
+
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.05
+                consumer_goods_factor = -0.05
+            }
+        }
+        IRQ_agricultural_reforms_idea = {
+            picture = generic_agrarian_reform
+            name = ROM_agricultural_reforms_idea
+
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = -0.05
+                consumer_goods_factor = 0.05
+                production_speed_buildings_factor = 0.05
+                production_speed_infrastructure_factor = 0.05
+                industrial_capacity_factory = -0.05
+                conscription_factor = 0.10
+                min_export = -0.05
+            }
+        }
+        IRQ_hydroelectric = {
+                
+            allowed = {
+                original_tag = IRQ
+                always = no
+            }
+            
+            allowed_civil_war = {
+                always = no
+            }
+            
+            picture = por_hydroelectric_power
+
+            modifier = {
+                production_factory_efficiency_gain_factor = 0.05 
+                production_factory_max_efficiency_factor = 0.1
+            }
+        } 
+        IRQ_GER_TREATY = { #BAD
+            allowed = { always = no }
+            available = {
+            }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            picture = HOL_reliance_on_the_gold_standard
+            modifier = {
+                consumer_goods_factor = 0.1
+                local_resources = -0.1
+            }
+            targeted_modifier = {
+                tag = GER
+                custom_modifier_tooltip = IRQ_OIL
+                stability_factor = 0.1
+            }
+        }
+    }
+    materiel_manufacturer = {
 			
 		designer = yes
 		
 		Basra_ford_motor_company = {
 			
-			picture = ford_motor_company
-			allowed = {
-				original_tag = IRQ
-			}
-			
+            picture = ford_motor_company
 
-			
-			research_bonus = {
-				motorized_equipment = 0.15
-			}
-			
-			traits = { motorized_equipment_manufacturer }
-			
-			modifier = {
-			}
-		}
-    vauxhall_Baghdad = {
+            allowed = {
+                original_tag = IRQ
+            }
+
+            research_bonus = {
+                motorized_equipment = 0.15
+            }
+            
+            traits = { motorized_equipment_manufacturer }
+            
+            modifier = {
+
+            }
+        }
+        vauxhall_Baghdad = {
 			
 			allowed = {
 				original_tag = IRQ
 			}
+            
 			picture = vauxhall
-
 			
 			research_bonus = {
 				motorized_equipment = 0.15
@@ -910,76 +937,137 @@ ideas = {
 			traits = { motorized_equipment_manufacturer }
 			
 			modifier = {
+                
 			}
 		}
 	}
     industrial_concern = {
 
-      ALB_Post_Telegraph = {
-				
-        allowed = {
-          original_tag = IRQ
-        }
-        available = {
-          has_completed_focus = IRQ_cooperate_with_baghdad_electeric_company		
-        }	
-        
-        picture = ALB_Post_Telegraph
-        
-        cost = 200
-        removal_cost = 10
-        
-        research_bonus = {
-          electronics = 0.15
-        }
-        
-        traits = { electronics_concern }
-        
-        modifier = {
-        }
-      }
-      IRQ_Telegraph_and_Post_national_company = {
-				
-        allowed = {
-          original_tag = IRQ
-        }
-        
-        picture = ALB_Post_Telegraph
-        
-        cost = 150
-        removal_cost = 10
-        
-        research_bonus = {
-          electronics = 0.1
-        }
-        
-        traits = { electronics_concern }
-        
-        modifier = {
-        }
-      }
-      IRQ_iraq_petroleum_company = {
-        
-        picture = generic_refining_concern_1
+        IRQ_baghdad_electric = {
+                    
+            allowed = {
+                original_tag = IRQ
+            }
 
-        allowed = { 
-          original_tag = IRQ
+            available = {
+                has_completed_focus = IRQ_cooperate_with_baghdad_electeric_company
+            }	
+            
+            picture = generic_electronics_concern_1
+            
+            research_bonus = {
+                electronics = 0.10
+                industry = 0.05
+            }
+            
+            traits = { electronics_concern }
+            
+            modifier = {
+                production_speed_industrial_complex_factor = 0.05
+            }
         }
-        
-        research_bonus = {
-          industry = 0.10
-          refining_tech = 0.25
+        IRQ_sir_alexander_gibb_partners = {
+                    
+            allowed = {
+                original_tag = IRQ
+            }
+
+            available = {
+                NOT = {
+                    has_war_with = ENG
+                }
+            }	
+            
+            picture = generic_industrial_concern_2
+            
+            research_bonus = {
+                industry = 0.15
+            }
+            
+            traits = { industrial_concern }
+            
+            modifier = {
+                production_speed_infrastructure_factor = 0.05
+                production_speed_arms_factory_factor = 0.10
+            }
         }
-        modifier = {
-          fuel_gain_factor = 0.1
-        }			
+        IRQ_balfour_beatty = {
+                    
+            allowed = {
+                original_tag = IRQ
+            }
+
+            available = {
+                NOT = {
+                    has_war_with = ENG
+                }
+            }	
+            
+            picture = generic_industrial_concern_3
+            
+            research_bonus = {
+                industry = 0.15
+            }
+            
+            traits = { industrial_concern }
+            
+            modifier = {
+                production_speed_infrastructure_factor = 0.05
+                global_building_slots_factor = 0.15
+                production_speed_industrial_complex_factor = 0.10
+            }
+        }
+        IRQ_iraq_petroleum_company = {
+            
+            picture = generic_refining_concern_1
+
+            allowed = { 
+                original_tag = IRQ
+            }
+            
+            research_bonus = {
+                industry = 0.10
+                refining_tech = 0.25
+            }
+
+            modifier = {
+                fuel_gain_factor = 0.1
+            }			
+            
+            traits = { refinery_concern }
         
-        traits = { refinery_concern }
-    
-        ai_will_do = {
-          factor = 1
-        }			
-      }				
-    }	
-    
+            ai_will_do = {
+                factor = 1
+            }			
+        }
+        IRQ_general_motors = {
+
+			name = USA_general_motors
+			
+			picture = usa_general_motors
+
+			allowed = {
+				original_tag = IRQ
+			}
+
+			available = {
+				has_completed_focus = IRQ_invite_foreign_car_manufacturers
+                NOT = {
+                    has_war_with = USA
+                }
+			}
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			
+			traits = { industrial_concern }
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+    }
+
 }
