@@ -160,6 +160,7 @@ recruit_character = FRA_edouard_requin
 recruit_character = FRA_aubert_frere
 recruit_character = FRA_victor_bourret
 recruit_character = FRA_robert_altmayer
+recruit_character = FRA_frix_michelier
 
 
 set_research_slots = 4

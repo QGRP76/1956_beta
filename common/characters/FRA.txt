@@ -812,6 +812,27 @@ characters={
 		}
 	}
 
+	FRA_frix_michelier={
+		name="Frix Michelier"
+		portraits={
+			army={
+				large="GFX_Portrait_France_KR_Generic_navy_3"
+				small="GFX_Portrait_France_KR_Generic_navy_3_small"
+			}
+		}
+		navy_leader={
+			traits={ chief_engineer naval_lineage cruiser_captain }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=2
+			legacy_id=-1
+			visible = {
+			}
+		}
+	}
+
 	FRA_jean_de_laborde={
 		name=FRA_jean_de_laborde
 		portraits={
