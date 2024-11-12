@@ -2671,11 +2671,11 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ desert_fox }
-			skill=1
+			traits={ desert_fox artillerist }
+			skill=2
 			attack_skill=1
-			defense_skill=1
-			planning_skill=1
+			defense_skill=2
+			planning_skill=3
 			logistics_skill=1
 			legacy_id=-1
 		}
