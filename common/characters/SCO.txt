@@ -490,8 +490,8 @@ characters = {
 		}		
 		portraits={
 			army={
-				large="GFX_portrait_r56_SWE_land_2" #placeholder
-				small="GFX_idea_generic_air_europe_3"
+				large="gfx/leaders/SCO/r56_portrait_SCO_Douglas_Douglas_Hamilton.dds" #placeholder
+				small="gfx/interface/ideas/sco/advisors/r56_idea_SCO_advisor_douglas_douglas_hamilton.dds"
 			}
 		}
 	}
