@@ -504,8 +504,8 @@ characters={
 			skill=3
 			attack_skill=3
 			defense_skill=2
-			planning_skill=3
-			logistics_skill=2
+			planning_skill=4
+			logistics_skill=1
 			legacy_id=-1
 		}
 	}
@@ -2558,11 +2558,11 @@ characters={
 		}
 		corps_commander={
 			traits={ old_guard }
-			skill=3
+			skill=2
 			attack_skill=1
 			defense_skill=3
-			planning_skill=3
-			logistics_skill=3
+			planning_skill=2
+			logistics_skill=1
 			legacy_id=812
 		}
 	}
