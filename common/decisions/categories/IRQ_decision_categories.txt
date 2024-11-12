@@ -28,7 +28,7 @@ IRQ_royal_consolidation_category = {
 		original_tag = IRQ
 	}
 	visible = {
-		has_completed_focus = IRQ_power_struggle
+		has_completed_focus = IRQ_launch_the_countercoup
 	}
 }
 
@@ -77,12 +77,12 @@ IRQ_border_conflicts = {
 		has_completed_focus = IRQ_setup_skirmishes
 	}
 }
-IRQ_power_struggle_category = {
+IRQ_launch_the_countercoup_category = {
 	allowed = { original_tag = IRQ }
 	priority = 80
 	icon = GFX_decision_category_generic_fascism
 	visible = {
-		has_country_flag = IRQ_power_struggle1
+		has_country_flag = IRQ_launch_the_countercoup1
 	}
 }
 Iraqgui_scripted_gui_category = {

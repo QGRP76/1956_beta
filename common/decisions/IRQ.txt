@@ -988,10 +988,10 @@ IRQ_royal_consolidation_category={
 		}
 		visible = {
 			original_tag = IRQ
-			has_completed_focus = IRQ_power_struggle
+			has_completed_focus = IRQ_launch_the_countercoup
 		}
 		activation = {
-			has_completed_focus = IRQ_power_struggle
+			has_completed_focus = IRQ_launch_the_countercoup
 		}
 		available = {
 			OR={
@@ -1748,7 +1748,7 @@ IRQ_border_conflicts = {
 		}
 	}
 }
-IRQ_power_struggle_category={
+IRQ_launch_the_countercoup_category={
 	IRQ_send_Political_Commissars = {
 
 		icon = generic_spy

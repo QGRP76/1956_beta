@@ -7,11 +7,13 @@
 			}
 		}
 		country_leader={
-			ideology= oligarchic_democracy
+			ideology= controlled_democracy
 			expire="1965.1.1"
 			id=-1
 			traits = {
-				IRQ_bismark_of_the_arabs
+				# AFG_pragmatic_reformer
+				IRQ_bismarck_of_the_arabs
+				r56_trait_opposed_to_communism
 			}
 		}
 	}
@@ -39,11 +41,13 @@
 			}
 		}
 		country_leader={
-			ideology= oligarchism
+			ideology= military_junta
 			expire="1965.1.1"
 			id=-1
 			traits = {
 				BUL_independant_agrarianist
+				AUS_military_puppet
+				r56_trait_opposed_to_communism
 			}
 		}
 	}
@@ -299,7 +303,7 @@
 			planning_skill = 1
 			logistics_skill = 1
 		}
-		advisor={ #became head of Iraqi cavalry, supported fascist coup then pardoned
+		advisor={
 			slot = high_command
 			idea_token = IRQ_saleh_saib_al_huburi
 			ledger = army
@@ -350,6 +354,9 @@
 	IRQ_bakr_sidqi={ # Most competent general in Iraq
 		name="Bakr Sidqi"
 		portraits={
+			civilian = {
+				small="gfx/interface/ideas/irq/IRQ_Baqri_Sikdi_2.dds"
+			}
 			army={
 				small="gfx/interface/ideas/irq/IRQ_Baqri_Sikdi.dds"
 				large="gfx/leaders/IRQ/r56_portrait_Bakr_Sidqi_army.dds"
@@ -400,7 +407,14 @@
 			can_be_fired = no
 			allowed = {
 				original_tag = IRQ
-				has_country_flag = IRQ_Coup_happened
+			}
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = IRQ_bakr_sidqi
+						ruling_only = yes
+					}
+				}
 			}
 			traits = {
 				army_connections
@@ -581,22 +595,38 @@
 		}
 	}
 	IRQ_nuri_al_said={ #must be kept 
-		advisor={
-			can_be_fired = no
+		advisor = {
 			slot = political_advisor
 			idea_token = IRQ_nuri_al_said
-			allowed  = {
+			allowed = {
 				original_tag = IRQ
 			}
-			traits = {
-				IRQ_britains_hand_in_baghdad
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = IRQ_hikmat_sulayman
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = IRQ_bakr_sidqi
+						ruling_only = yes
+					}
+				}
+			}
+			visible = {
+				#
+			}
+			can_be_fired = no
+			traits = { IRQ_britains_hand_in_baghdad }
+			ai_will_do = {
+				factor = 0
 			}
 		}
 		name="Nuri Pasha al-Said"
 		portraits={
 			army={
 				large="gfx/leaders/IRQ/r56_portrait_Nuri_al_Said.dds"
-				small="gfx/interface/ideas/irq/IRQ_Nuri_al_Said.dds"
+				small="gfx/interface/ideas/irq/IRQ_nuri_al_said.dds"
 			}
 		}
 		corps_commander = {
@@ -608,6 +638,18 @@
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 1
+			visible = {
+				NOT = {
+					has_country_leader = {
+						character = IRQ_hikmat_sulayman
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = IRQ_bakr_sidqi
+						ruling_only = yes
+					}
+				}
+			}
 		}
 	}
 	IRQ_tahsien_al_askari ={ #yes he's Jafar's bro
@@ -698,16 +740,16 @@
 		advisor={
 			slot = political_advisor
 			idea_token = IRQ_ali_mahmud_al_shaykh
-				allowed = {
-					original_tag = IRQ
-				}
-				traits = {
-					SWE_minister_of_justice
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+			allowed = {
+				original_tag = IRQ
+			}
+			traits = {
+				SWE_minister_of_justice
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 		name="Ali Mahmud al-Shaykh"
 		portraits={
@@ -1075,30 +1117,103 @@
 		# 	logistics_skill = 1
 		# }
 	}
-	IRQ_Taha_Hashmi={ #must be kept but different role, probably staunch monarchist
+	IRQ_taha_hashmi={ #must be kept but different role, probably staunch monarchist
+		field_marshal = {
+			traits = { organizer politically_connected organisational_leader }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+			visible = {
+				NOT = {
+					has_country_leader = {
+						character = IRQ_hikmat_sulayman
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = IRQ_bakr_sidqi
+						ruling_only = yes
+					}
+				}
+			}
+		}
 		advisor={
 			can_be_fired = no
 			slot = political_advisor
-			idea_token = IRQ_Taha_Hashmi
+			idea_token = IRQ_taha_hashmi
 			available = {
-				has_completed_focus = IRQ_appoint_taha_minister
+				OR = {
+					has_completed_focus = IRQ_appoint_taha_minister
+					AND = {
+						NOT = {
+							has_country_leader = {
+								character = IRQ_hikmat_sulayman
+								ruling_only = yes
+							}
+							has_country_leader = {
+								character = IRQ_bakr_sidqi
+								ruling_only = yes
+							}
+						}
+					}
+				}
 			}
 			allowed  = {
-					original_tag  = IRQ
-				}
-				traits  = {
-					puppet_prime_minister
-				}
+				original_tag = IRQ
+			}
+			traits = {
+				puppet_prime_minister
+			}
 		}
 		advisor={
 			slot = high_command
-			idea_token = IRQ_Taha_al_Hashimi
+			idea_token = IRQ_taha_hashmi_army
 			ledger = army
 			allowed = {
 				original_tag = IRQ
 			}
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = IRQ_hikmat_sulayman
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = IRQ_bakr_sidqi
+						ruling_only = yes
+					}
+				}
+			}
 			traits = {
-				army_chief_old_guard
+				army_concealment_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.500
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = IRQ_taha_hashmi_chief
+			ledger = army
+			allowed = {
+				original_tag = IRQ
+			}
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = IRQ_hikmat_sulayman
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = IRQ_bakr_sidqi
+						ruling_only = yes
+					}
+				}
+			}
+			traits = {
+				army_chief_organizational_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -1108,6 +1223,7 @@
 		name="Taha al-Hashmi"
 		portraits={
 			army={
+				large="gfx/leaders/IRQ/r56_portrait_Taha_al_Hashimi.dds"
 				small="gfx/interface/ideas/irq/IRQ_taha_minister.dds"
 			}
 		}

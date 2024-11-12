@@ -35,12 +35,15 @@ assyrian_autonomy = {
 	state_resources_factor = -0.2
 	state_production_speed_buildings_factor = -0.2
 }
+
 IRQ_the_iraqi_army_modifier = {
 	enable = { always = yes }
 
 	icon = GFX_idea_IRQ_military
 
 	#INITIAL
+	political_power_factor = IRQ_the_iraqi_army_pp_factor
+	party_popularity_stability_factor = IRQ_the_iraqi_army_party_stability_factor
 	land_doctrine_cost_factor = IRQ_the_iraqi_land_doctrine_cost_factor 
 	army_org_factor = IRQ_the_iraqi_army_org_factor
 	army_attack_factor = IRQ_the_iraqi_army_attack_factor

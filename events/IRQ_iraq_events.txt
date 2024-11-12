@@ -498,7 +498,7 @@ country_event = { #
 			popularity = 0.3
 		}
 		add_country_leader_role = {
-			character = IRQ_Nuri_al_Said
+			character = IRQ_nuri_al_said
 			country_leader = {
 				expire = "1965.1.1"
 				ideology = conservatism
@@ -624,7 +624,7 @@ country_event = { #
 # 				popularity = 0.3
 # 			}
 # 			add_country_leader_role = {
-# 				character = IRQ_Nuri_al_Said
+# 				character = IRQ_nuri_al_said
 # 				country_leader = {
 # 					expire = "1965.1.1"
 # 					ideology = conservatism
@@ -725,7 +725,7 @@ country_event = {
 	}
 }
 
-country_event = { #october coup
+country_event = { # October Coup
 	id = irq.4
 	title = irq.4.t
 	desc = irq.4.d
@@ -861,29 +861,25 @@ country_event = {
 		name = irq.10.a
 		add_popularity = {
 			ideology = neutrality
-			popularity = 0.6
+			popularity = 0.05
+		}
+		add_stability = -0.10
+		retire_character = IRQ_yasin_hashimi
+		effect_tooltip = {
+			retire_character = IRQ_taha_hashmi
+			retire_character = IRQ_nuri_al_said
 		}
 		set_politics = {
 			ruling_party = neutrality
-   		 	elections_allowed = no
-			long_name = "Hikmat Sulayman Goverment"
-    		name = "National Reform Party"
-		}
-		set_party_name = {
-			ideology = democratic
-			long_name = "Jama'at al-Ahali - Socialists"
-			name = "JA-S"
-		}
-		retire_character = IRQ_yasin_alhashimi
-		promote_character = {
-			character = IRQ_kamel_chaderchi
-			ideology = socialism
+			elections_allowed = no
+			long_name = "Hizb al-Ikhā' al-Watanī - al-Jaysh"
+			name = "HIW-J"
 		}
 		promote_character = {
 			character = IRQ_hikmat_sulayman
-			ideology = oligarchism
+			ideology = military_junta
 		}
-		set_country_flag = IRQ_Coup_happened
+		set_country_flag = IRQ_october_coup_happened
 		deactivate_advisor = IRQ_nuri_al_said
 		activate_advisor = IRQ_bakr_sidqi
 		complete_national_focus = IRQ_the_october_coup
@@ -987,7 +983,7 @@ country_event = {
 				popularity = 0.3
 			}
 			add_country_leader_role = {
-				character = IRQ_Nuri_al_Said
+				character = IRQ_nuri_al_said
 				country_leader = {
 					expire = "1965.1.1"
 					ideology = conservatism
@@ -1776,7 +1772,7 @@ country_event = {
 			right_side = IRQ_Republicans
 			set_value = 0.1
 		}
-		set_country_flag = IRQ_power_struggle1
+		set_country_flag = IRQ_launch_the_countercoup1
 	}
 	
 }

@@ -2,7 +2,7 @@ IRQ_Fascist_power_balance = {
 	initial_value = 0.0
 	left_side = IRQ_Monarchists
 	right_side = IRQ_Republicans
-	decision_category = IRQ_power_struggle_category
+	decision_category = IRQ_launch_the_countercoup_category
   
 	range = {
 		  id = IRQ_balance_range

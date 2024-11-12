@@ -1747,6 +1747,13 @@
 				tag = LIE
 			}
 		}
+		offset = {
+			x = 22
+			y = 0
+			trigger = {
+				tag = IRQ
+			}
+		}
 		cost = 10
 
 		available_if_capitulated = yes
@@ -3356,6 +3363,13 @@
 			y = 0
 			trigger = {
 				tag = WLS
+			}
+		}
+		offset = {
+			x = 23
+			y = 0
+			trigger = {
+				tag = IRQ
 			}
 		}
 		cost = 10

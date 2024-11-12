@@ -531,14 +531,14 @@
  ICE_neutrality_party:0 "Sjálfstæðisflokkurinn"
 
  #IRQ
- IRQ_democratic_party:0 "HIW"
- IRQ_democratic_party_long:0 "Hizb al-Ikhā' al-Watanī"
+ IRQ_democratic_party:0 "JA-S"
+ IRQ_democratic_party_long:0 "Jama'at al-Ahali - Socialists"
  IRQ_communism_party:0 "HSI"
  IRQ_communism_party_long:0 "al-Hizb ash-Shiyū'ī al-'Irāqī"
  IRQ_fascism_party:0 "MD"
  IRQ_fascism_party_long:0 "al-Murabba' adh-Dhahabī"
- IRQ_neutrality_party:0 "al-Hāshimīyūn"
- IRQ_neutrality_party_long:0 "al-Hāshimīyūn"
+ IRQ_neutrality_party:0 "HIW-H"
+ IRQ_neutrality_party_long:0 "Hizb al-Ikhā' al-Watanī - al-Hāshimīyūn"
 
  #JAP
  JAP_neutrality_party:0 "Daihon'ei"
