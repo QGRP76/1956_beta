@@ -54,6 +54,7 @@ ideas = {
 		POR_studying_the_spanish_civil_war = {
 			picture = generic_war_preparation
 			allowed = { original_tag = POR }
+			allowed_civil_war = { original_tag = POR }
 			removal_cost = -1
 			modifier = { experience_gain_army = 0.1 }
 		}
@@ -154,7 +155,6 @@ ideas = {
 		POR_reactionary_resistance = {
 			picture = MEX_politicised_army
 			allowed = { original_tag = POR }
-			cancel = { has_government = neutrality }
 			allowed_civil_war = { 
 				OR = {
 					has_government = communism
@@ -208,7 +208,6 @@ ideas = {
 		POR_divided_revolution = {
 			picture = ARG_no_gods_no_masters
 			allowed = { original_tag = POR }
-			cancel = { has_government = neutrality }
 			allowed_civil_war = { 
 				OR = {
 					has_government = communism

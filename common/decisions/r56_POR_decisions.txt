@@ -774,6 +774,11 @@ POR_securing_the_revolution = {
 		icon = GFX_decision_generic_operation 
 		activation = { 
 			has_war = no
+			has_completed_focus = POR_storm_the_national_assembly
+			OR = {
+				has_government = communism
+				has_government = democratic
+			}
 			OR = {
 				controls_state = 540
 				controls_state = 544
