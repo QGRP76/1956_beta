@@ -23,35 +23,12 @@ country_event = {
 
 	option = {
 		name = germany.4.a
-		4 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = GER
+		every_state = {
+			limit = {
+				is_owned_by = AUS
+				is_core_of = AUS
 			}
-		}
-		152 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = GER
-			}
-		}
-		153 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = GER
-			}
-		}
-		848 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = GER
-			}
-		}
-		1054 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = GER
-			}
+			add_core_of = ROOT
 		}
 		AUS = {
 			every_unit_leader = {
@@ -87,14 +64,13 @@ country_event = {
 					ideology = democratic
 					popularity = 0.45
 				}
-				load_focus_tree = generic_focus
 				if = {
 					limit = {
 						NOT = {
-							has_idea = AUS_austrian_neutrality
+							has_idea = neutrality_idea
 						}
 					}
-					add_ideas = AUS_austrian_neutrality
+					add_ideas = neutrality_idea
 				}
 			}
 		}
@@ -1360,18 +1336,27 @@ country_event = {
 		name = germany.14.c
 		trigger = {
 			has_global_flag = SOV_complied_MR
-			#the Soviets can NOT have taken all intended land, then use original MR
-			NOT = {
-				SOU = {
-					controls_state = 92
-					controls_state = 97
-					controls_state = 91
-					controls_state = 89
-					controls_state = 93
-					controls_state = 94
-					controls_state = 95
-					controls_state = 936
-					controls_state = 96
+			#the Soviets can NOT have taken all intended land, then use original MR, UNLESS original MR cant be done because Lithuania doesnt exist
+			OR = {
+				NOT = {
+					SOU = {
+						controls_state = 92
+						controls_state = 97
+						controls_state = 91
+						controls_state = 89
+						controls_state = 93
+						controls_state = 94
+						controls_state = 95
+						controls_state = 936
+						controls_state = 96
+					}
+				}
+				LIT = {
+					OR = {
+						exists = no
+						is_in_faction_with = SOV
+						is_subject_of = SOV
+					}
 				}
 			}
 			SOU = {
@@ -2480,15 +2465,17 @@ country_event = {
 
 	option = {
 		name = germany.29.a
-		add_state_claim = 4
-		add_state_claim = 152
-		add_state_claim = 153
-		add_state_claim = 848	#Vorarlberg
-		add_state_claim = 1054	#Styria
+		every_state = {
+			limit = {
+				is_owned_by = AUS
+				is_core_of = AUS
+			}
+			add_claim_by = ROOT
+		}
 		create_wargoal = {
 			type = take_state_focus
 			target = AUS
-			generator = { 4 152 153 848 1054 }
+			generator = { 4 152 153 848 1054 1086 }
 		}
 	}
 }
@@ -3256,6 +3243,15 @@ country_event = {
 				AUS = { exists = yes }
 				factor = 0.5
 			}
+			modifier = { # We shouldn't accept if they are protecting us
+				is_ally_with = AUS
+				AUS = {
+					NOT = {
+						is_ally_with = GER
+					}
+				}
+				factor = 0
+			}
 			modifier = { # If they stand a chance they will fight
 				factor = 0
 				strength_ratio = {
@@ -3327,6 +3323,9 @@ country_event = {
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
+				NOT = {
+					is_ally_with = AUS
+				}
 			}
 		}
 		GER = {
@@ -3345,7 +3344,7 @@ country_event = {
 				create_wargoal = {
 					type = take_state_focus
 					target = CZE
-					generator = { 69 74 }
+					generator = { 69 1078 74 }
 				}
 			}
 		}
@@ -3375,9 +3374,10 @@ country_event = {
 		create_wargoal = {
 			type = take_state_focus
 			target = CZE
-			generator = { 69 74 }
+			generator = { 69 1078 74 }
 		}
 		add_state_claim = 69
+		add_state_claim = 1078
 		add_state_claim = 74
 		hidden_effect = {
 			news_event = { hours = 6 id = news.57 }
@@ -3424,9 +3424,10 @@ country_event = {
 		create_wargoal = {
 			type = take_state_focus
 			target = CZE
-			generator = { 69 74 }
+			generator = { 69 1078 74 }
 		}
 		add_state_claim = 69
+		add_state_claim = 1078
 		add_state_claim = 74
 		if = {
 			limit = {
@@ -3455,6 +3456,28 @@ country_event = {
 		name = germany.50.a
 		69 = { add_core_of = GER }
 		GER = { transfer_state = 69 }
+		1078 = { add_core_of = GER }
+		if = {
+			limit = {
+				AUS = { 
+					OR = {
+						is_in_faction_with = GER
+						is_subject_of = GER
+					}
+				}
+			}
+			1078 = { add_core_of = AUS }
+			AUS = { transfer_state = 1078 }
+		}
+		else_if = {
+			limit = {
+				GER = {
+					controls_state = 4
+					controls_state = 152
+				}
+			}
+			transfer_state = 1078
+		}
 		74 = { add_core_of = GER }
 		GER = { transfer_state = 74 }
 		add_war_support = 0.1
@@ -3543,12 +3566,13 @@ country_event = {
 	option = { # Agree
 		name = germany.53.a
 		ai_chance = {
-			factor = 100
+			base = 100
 			modifier = {
 				factor = 0
-				OR = {
-					is_in_faction_with = ENG
-					is_in_faction_with = FRA
+				OR = { #we got allies since then!
+					is_ally_with = ENG
+					is_ally_with = FRA
+					is_ally_with = AUS
 					is_puppet = yes
 					GER = {
 						has_war_with = ENG
@@ -4988,7 +5012,7 @@ country_event = {
 				add_country_leader_role = {
 					promote_leader = yes
 					country_leader = {
-						ideology = moderatism
+						ideology = military_junta
 						expire = "1965.1.1"
 						traits = {
 							army_connections
@@ -5046,7 +5070,7 @@ country_event = {
 				add_country_leader_role = {
 					promote_leader = yes
 					country_leader = {
-						ideology = moderatism
+						ideology = military_junta
 						expire = "1965.1.1"
 						traits = {
 							army_connections
@@ -5136,7 +5160,7 @@ country_event = {
 					add_country_leader_role = {
 						promote_leader = yes
 						country_leader = {
-							ideology = moderatism
+							ideology = military_junta
 							expire = "1965.1.1"
 							traits = {
 								army_connections
@@ -5198,7 +5222,7 @@ country_event = {
 					add_country_leader_role = {
 						promote_leader = yes
 						country_leader = {
-							ideology = moderatism
+							ideology = military_junta
 							expire = "1965.1.1"
 							traits = {
 								army_connections
@@ -5417,6 +5441,7 @@ country_event = {
 						engine_type_slot = tank_gasoline_engine
 						special_type_slot_1 = tank_radio_1
 						special_type_slot_2 = smoke_launchers
+						special_type_slot_3 = r56_tank_hull_lmg
 					}
 					upgrades = {
 						tank_nsb_engine_upgrade = 6
@@ -5436,6 +5461,7 @@ country_event = {
 						engine_type_slot = tank_gasoline_engine
 						special_type_slot_1 = tank_radio_1
 						special_type_slot_2 = smoke_launchers
+						special_type_slot_3 = r56_tank_hull_lmg
 					}
 					upgrades = {
 						tank_nsb_engine_upgrade = 6
@@ -6248,7 +6274,7 @@ country_event = {
 				remove_from_faction = GER
 			}
 			add_stability = -0.2
-			create_faction = "the_berlin_moscow_axis"
+			create_faction = the_berlin_moscow_axis
 			add_to_faction = SOV
 			add_named_threat = { threat = 10 name = germany.89.t }
 			every_other_country = {
@@ -6459,10 +6485,25 @@ country_event = {
 					owns_state = 853
 				}
 			}
-			GER = {
-				transfer_state = 102
-				transfer_state = 956
-				transfer_state = 853
+			if = {
+				limit = {
+					AUS = {
+						exists = yes
+						is_subject_of = GER
+					}
+				}
+				AUS = {
+					transfer_state = 102
+					transfer_state = 956
+					transfer_state = 853
+				}
+			}
+			else = {
+				GER = {
+					transfer_state = 102
+					transfer_state = 956
+					transfer_state = 853
+				}
 			}
 		}
 		if = {
@@ -6475,8 +6516,23 @@ country_event = {
 					owns_state = 853
 				}
 			}
-			GER = {
-				annex_country = { target = SLV transfer_troops = yes }
+			if = {
+				limit = {
+					AUS = {
+						exists = yes
+						is_subject_of = GER				
+					}
+				}
+				
+				AUS = {
+					annex_country = { target = SLV transfer_troops = yes }
+				}
+			}
+			else = {
+				
+				GER = {
+					annex_country = { target = SLV transfer_troops = yes }
+				}
 			}
 		}
 		102 = {
@@ -7131,6 +7187,10 @@ country_event = {
 							limit = { YUG = { owns_state = 45 } }
 							transfer_state = 45
 						}
+						if = {
+							limit = { YUG = { owns_state = 963 } }
+							transfer_state = 963
+						}
 					}
 					puppet = SER 
 				}
@@ -7308,6 +7368,10 @@ country_event = {
 					if = {
 						limit = { YUG = { owns_state = 45 } }
 						transfer_state = 45
+					}
+					if = {
+						limit = { YUG = { owns_state = 963 } }
+						transfer_state = 963
 					}
 				}
 				puppet = SER
@@ -8117,6 +8181,7 @@ country_event = {
 		}
 		SOV = {
 			is_faction_leader = yes
+			has_war_with = GER			#sanity check
 		}
 		OR = {
 			any_of = {
@@ -8132,6 +8197,7 @@ country_event = {
 			any_of = {
 				array = GER.core_states
 				var:v = {
+					is_owned_by = GER						#formable lets Germany core a bunch of lands that could be released
 					controller = {
 						NOT = {
 							tag = GER
@@ -8140,6 +8206,7 @@ country_event = {
 						NOT = {
 							OR = {
 								is_in_faction_with = ROOT
+								is_in_faction_with = GER	#added in case a faction member liberates German land
 								is_in_faction_with = SOV
 							}
 						}
@@ -8989,10 +9056,8 @@ country_event = {
 					#is_owned_and_controlled_by = GER
 					any_country_with_original_tag = {		#stupid new peace deals
 						original_tag_to_check = GER
-						ROOT ={
-							owns_state = PREV
-							controls_state = PREV
-						}
+						owns_state = PREV
+						controls_state = PREV
 					}
 				}
 				DDR = {
@@ -9279,11 +9344,12 @@ country_event = {
 		effect_tooltip = {
 			GER = {
 				add_state_claim = 69
+				add_state_claim = 1078
 				add_state_claim = 74
 				create_wargoal = {
 					type = take_state_focus
 					target = CZE
-					generator = { 69 74 }
+					generator = { 69 1078 74 }
 				}
 			}
 		}
@@ -9337,6 +9403,7 @@ country_event = {
 		effect_tooltip = {
 			GER = {
 				transfer_state = 69
+				transfer_state = 1078
 				transfer_state = 74
 			}
 		}
@@ -9363,6 +9430,7 @@ country_event = {
 	option = {
 		name = germany.123.a
 		add_state_claim = 69
+		add_state_claim = 1078
 		add_state_claim = 74
 		if = {
 			limit = {
@@ -9381,7 +9449,7 @@ country_event = {
 					create_wargoal = {
 						type = take_state_focus
 						target = PREV
-						generator = { 69 74 }
+						generator = { 69 1078 74 }
 					}
 				}
 			}
@@ -9403,6 +9471,8 @@ country_event = {
 		name = germany.124.a
 		add_state_core = 69
 		transfer_state = 69
+		add_state_core = 1078
+		transfer_state = 1078
 		add_state_core = 74
 		transfer_state = 74
 	}

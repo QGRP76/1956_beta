@@ -3259,7 +3259,7 @@ ENG_appeal_to_imperial_loyalists = {
 						desc = " "
 						picture = "gfx/leaders/ENG/portrait_eng_william_birdwood.dds"
 						expire = "1965.1.1"
-						ideology = centrism
+						ideology = military_junta
 					}
 				}
 				AST = { hidden_effect = { news_event = { id = mtg_news.26 days = 1 } } }
@@ -9912,6 +9912,15 @@ operations = {
 			modifier = {	#factor of 1 means they cheap out and dont take it/take it late
 				factor = 1000
 				is_historical_focus_on = yes
+			}
+			modifier = {	#Ive adjusted USA code that made them guarantee, but just in case
+				factor = 0
+				any_country = {
+					NOT = {
+						has_war_with = ROOT
+					}
+					has_guaranteed = ICE
+				}
 			}
 		}
 		
