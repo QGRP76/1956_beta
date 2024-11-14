@@ -105,11 +105,11 @@ set_popularities = {
 add_ideas = {
 	limited_conscription
 	tgm
+	edvard_benes
 	r56_CZE_current_weapon_exporter
 	r56_YUG_little_entente
 }
 
-recruit_character = CZE_edvard_benes
 #recruit_character = CZKE_jan_antonin_bata
 #recruit_character = CZKE_emil_kolben
 recruit_character = CZKE_karel_husarek
