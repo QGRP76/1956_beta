@@ -1511,6 +1511,12 @@ country_event = {
 					modifier = fascism_leanings_good
 				}
 			}
+			every_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_compliance = 18		#To compensate for the reduction upon switching ideologies
+			}
 			if = {
 				limit = { has_completed_focus = POR_ally_anti_colonial_resistance }
 				if = {
@@ -2458,6 +2464,7 @@ country_event = {	#Addressing the New Spain
 		name = portugal.51.a	#Together, we've displayed incredible resolve! Pan-Iberian unity is our path forward!
 		trigger = {
 			has_country_flag = POR_join_forces_with_the_spanish_popular_front_flag
+			NOT = { has_cosmetic_tag = ESU_POR_unified }
 			OR = {
 				SPR = {
 					exists = yes
@@ -2500,6 +2507,7 @@ country_event = {	#Addressing the New Spain
 				add_core_of = ROOT
 			}
 		}
+		set_cosmetic_tag = ESU_POR_unified
 		every_country = {
 			limit = {
 				OR = {
@@ -2571,6 +2579,19 @@ country_event = {	#Addressing the New Spain
 	}
 	option = {
 		name = portugal.51.c	#Despite our differences, what's best for us both is to normalize our relations
+		trigger = {
+			NOT = {
+				41 = {
+					owner = { 
+						OR = {
+							has_completed_focus = SPR_maintain_the_second_republic 
+							has_completed_focus = SPR_the_anti_fascist_workers_revolution
+						}
+					}
+				}
+			}
+			
+		}
 		ai_chance = { base = 15 }
 		41 = {
 			owner = { 
@@ -2581,10 +2602,7 @@ country_event = {	#Addressing the New Spain
 	option = {
 		name = portugal.51.d	#This "new Spain" is a threat to everything we stand for!
 		ai_chance = { base = 1 }
-		every_state = {
-			limit = { has_state_flag = SPR_core_of_spain_flag }
-			add_claim_by = ROOT
-		}	
+		add_war_support = 0.05	
 	}
 }
 

@@ -80,7 +80,7 @@ ideas = {
 		}
 
 		POR_rejuvenating_the_land_forces = {
-			picture = mex_callistas
+			picture = MEX_callistas 
 			allowed = { original_tag = POR }
 			allowed_civil_war = { original_tag = POR }
 			removal_cost = -1
@@ -263,7 +263,7 @@ ideas = {
 				political_power_gain = 0.1
 				stability_factor = 0.05
 				neutrality_drift = -0.01
-				political_advisor_cost_factor = -0.2
+				political_advisor_cost_factor = -0.25
 				weekly_casualties_war_support = 0.001
 				war_stability_factor = 0.1
 			}
@@ -275,7 +275,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				stability_weekly = 0.001
-				political_power_gain = 0.15
+				political_power_gain = 0.1
 				stability_factor = 0.05
 				democratic_drift = 0.02
 				neutrality_drift = -0.01

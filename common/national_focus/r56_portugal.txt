@@ -2637,7 +2637,7 @@ focus_tree = {
 			}
 
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL   }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2659,7 +2659,7 @@ focus_tree = {
 			} 
 		}
 		completion_reward = { country_event = portugal.47 }
-		search_filters = { FOCUS_FILTER_POLITICAL   }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2700,7 +2700,7 @@ focus_tree = {
 				show_ideas_tooltip = POR_alvaro_cunhal
 			}
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL   }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2829,7 +2829,7 @@ focus_tree = {
 			unlock_decision_tooltip = POR_factory_recruitment_drive
 			unlock_decision_tooltip = POR_direct_farmland_to_industrial_projects
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY   }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -2843,7 +2843,7 @@ focus_tree = {
 		relative_position_id = POR_exasperate_the_industrialization
 		bypass = { has_completed_focus = POR_never_another_la_lys }
 		completion_reward = { complete_national_focus = POR_never_another_la_lys }
-		search_filters = { FOCUS_FILTER_INDUSTRY   }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
