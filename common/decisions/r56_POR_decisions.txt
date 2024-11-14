@@ -132,6 +132,28 @@ POR_towards_a_greater_portugal = {
 			custom_effect_tooltip = POR_restore_the_iberian_union_tt
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			set_cosmetic_tag = ESU_POR_unified
+			hidden_effect = {
+				add_state_claim = 171
+				add_state_claim = 790
+				add_state_claim = 174
+				add_state_claim = 788
+				add_state_claim = 170
+				add_state_claim = 169
+				add_state_claim = 173
+				add_state_claim = 789
+				add_state_claim = 175
+				add_state_claim = 41
+				add_state_claim = 791
+				add_state_claim = 792
+				add_state_claim = 176
+				add_state_claim = 793
+				add_state_claim = 168
+				add_state_claim = 167
+				add_state_claim = 172
+				add_state_claim = 166
+				add_state_claim = 794
+				add_state_claim = 165
+			}
 		}
 	}
 
@@ -176,35 +198,28 @@ POR_towards_a_greater_portugal = {
 	POR_eliminate_guerrillas = {
 		name = SPR_eliminate_guerrillas
 		icon = GFX_decision_oppression
-		cost = 40
+		cost = 35
 		fire_only_once = yes
 		ai_will_do = { base = 200 }
-		visible = {
-
-		}
+		visible = { has_cosmetic_tag = ESU_POR_unified }
 		available = {
-			FROM = { compliance > 40 }
-			has_equipment = { infantry_equipment > 1000 }
+			FROM = { 
+				compliance > 40 
+				resistance < 3
+			}
 		}
 		state_target = yes
-		targets = { 41 165 166 167 168 169 170 172 173 174 175 176 177 178 788 789 790 791 792 793 794 }
+		targets = { 41 165 166 167 168 169 170 172 173 174 175 176 177 178 788 789 790 791 792 793 794 973 }
 		target_trigger = {
 			FROM = {
 				is_fully_controlled_by = ROOT
 				NOT = { is_core_of = ROOT }
 			}
 		}
-		days_remove = 70
-		modifier = { weekly_manpower = -250 }
-		visible = { 
-			has_cosmetic_tag = ESU_POR_unified
-		}
 		complete_effect = {
-			add_equipment_to_stockpile = {
-			    type = infantry_equipment
-			    amount = -1000
-			}
+			FROM = { add_resistance = 5 }
 		}
+		days_remove = 90
 		remove_effect = {
 			FROM = { add_core_of = ROOT }
 		}
@@ -420,20 +435,6 @@ POR_the_path_to_economic_progress = {
 					add_idea = POR_transitioning_to_a_mixed_economy
 				}
 			}
-		}
-	}
-
-	POR_subsidize_rolling_stock_production = {
-		icon = railroads
-		fire_only_once = no
-		days_re_enable = 405
-		cost = 40
-		ai_will_do = { base = 50 }
-		visible = { has_completed_focus = POR_support_an_industrial_expansion }
-		days_remove = 135
-		modifier = {
-			production_speed_buildings_factor = 0.1
-			industry_repair_factor = 0.15
 		}
 	}
 

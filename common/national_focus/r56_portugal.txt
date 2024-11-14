@@ -1185,7 +1185,7 @@ focus_tree = {
 	focus = {
 		id = POR_import_foreign_machinery
 		prerequisite = { focus = POR_continue_the_public_works_r56 }
-		icon = GFX_goal_generic_production2 
+		icon = GFX_goal_generic_construction_tools
 		cost = 8
 		ai_will_do = { base = 3 }
 		x = -2
@@ -1239,7 +1239,7 @@ focus_tree = {
 	focus = {
 		id = POR_modernize_the_national_rail_network
 		icon = GFX_focus_POL_warsaw_main_station
-		prerequisite = { focus = POR_support_an_industrial_expansion }
+		prerequisite = { focus = POR_subsidize_rolling_stock_production }
 		prerequisite = { focus = POR_import_foreign_machinery }
 		cost = 10
 		x = 1
@@ -1286,18 +1286,40 @@ focus_tree = {
 			has_full_control_of_state = 112
 			has_full_control_of_state = 181
 		}
-		completion_reward = {	
+		completion_reward = {
+			hidden_effect = {
+				set_province_name = {
+					id = 11885
+					name = POR_cabril_dam
+				}
+			}	
 			add_stability = 0.02
 			add_ideas = POR_hydroelectric_power
 			custom_effect_tooltip = CHL_skip_one_line_tt
-			random_controlled_state = {
-				limit = { is_core_of = ROOT }
-				prioritize = { 181 } 
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
+			if = {
+				limit = { has_full_control_of_state = 181 }
+				181 = {
+					add_extra_state_shared_building_slots = 3	
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+						province = {
+							id = 11885
+						}
+					}
+					add_building_construction = {
+						type = dam
+						level = 1
+						instant_build = yes
+						province = {
+							id = 11885
+						}
+					}
+					custom_effect_tooltip = {
+						localization_key = building_state_modifier|dam
+						INDENT = "    "
+					}
 				}
 			}
 		}
@@ -1305,9 +1327,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_support_an_industrial_expansion
+		id = POR_subsidize_rolling_stock_production
 		prerequisite = { focus = POR_continue_the_public_works_r56 }
-		icon = GFX_goal_generic_construction_tools
+		icon = GFX_focus_SOV_organize_wreckers
 		cost = 8
 		x = 2
 		y = 1
@@ -1327,20 +1349,19 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			unlock_decision_tooltip = POR_subsidize_rolling_stock_production
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
 		id = POR_expand_the_mining_industry
-		prerequisite = { focus = POR_support_an_industrial_expansion }
+		prerequisite = { focus = POR_subsidize_rolling_stock_production }
 		icon = GFX_focus_generic_road_investment
 		cost = 8
 		ai_will_do = { base = 15 }
 		x = 1
 		y = 1
-		relative_position_id = POR_support_an_industrial_expansion
+		relative_position_id = POR_subsidize_rolling_stock_production
 		available = { 
 			has_tech = excavation1
 			has_tech = excavation2 
@@ -1384,12 +1405,12 @@ focus_tree = {
 	focus = {
 		id = POR_finish_the_urban_electrification
 		prerequisite = { focus = POR_import_foreign_machinery }
-		prerequisite = { focus = POR_support_an_industrial_expansion }
-		icon = GFX_focus_generic_public_works_A
+		prerequisite = { focus = POR_subsidize_rolling_stock_production }
+		icon = GFX_focus_generic_energy
 		cost = 10
 		x = -1
 		y = 1
-		relative_position_id = POR_support_an_industrial_expansion
+		relative_position_id = POR_subsidize_rolling_stock_production
 		available = { 
 			OR = {
 				has_tech = concentrated_industry2
@@ -1451,12 +1472,12 @@ focus_tree = {
 
 	focus = {
 		id = POR_strengthen_the_colonial_administration
-		prerequisite = { focus = POR_support_an_industrial_expansion }
+		prerequisite = { focus = POR_subsidize_rolling_stock_production }
 		icon = GFX_focus_generic_military_dictatorship
 		cost = 6
 		x = 2
 		y = 2
-		relative_position_id = POR_support_an_industrial_expansion
+		relative_position_id = POR_subsidize_rolling_stock_production
 		available = {
 			OR = {
 				has_completed_focus = POR_continue_salazars_policies
@@ -1765,7 +1786,7 @@ focus_tree = {
 			focus = POR_renew_the_portuguese_armada
 			focus = POR_support_an_aerial_expansion
 		}
-		icon = GFX_goal_generic_military_funding
+		icon = GFX_focus_generic_mass_production
 		x = 0
 		y = 2
 		relative_position_id = POR_never_another_la_lys
@@ -2343,7 +2364,7 @@ focus_tree = {
 	focus = {
 		id = POR_consolidate_popular_support
 		prerequisite = { focus = POR_tighten_ministerial_control }
-		icon = GFX_goal_GRE_metaxism
+		icon = GFX_goal_generic_friendship_with_church
 		cost = 6
 		ai_will_do = { base = 5 }
 		x = 2
@@ -2443,7 +2464,7 @@ focus_tree = {
 		id = POR_wartime_autarky
 		prerequisite = { focus = POR_address_european_affairs }
 		mutually_exclusive = { focus = POR_expand_allied_trade }
-		icon = GFX_goal_generic_trade
+		icon = GFX_focus_generic_central_planning
 		cost = 5
 		x = -1
 		y = 1

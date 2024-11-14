@@ -192,9 +192,8 @@
  POR_support_educational_expansion:0 "Support Education Expansion"
  POR_support_educational_expansion_desc:0 ""
 
- POR_support_an_industrial_expansion:0 "Support an Industrial Expansion"
- POR_support_an_industrial_expansion_desc:0 ""
  POR_subsidize_rolling_stock_production:0 "Subsidize Rolling Stock Production"
+ POR_subsidize_rolling_stock_production_desc:0 ""
 
  POR_finish_the_santa_luzia_dam:0 "Finish the Santa Luzia Dam"
  POR_finish_the_santa_luzia_dam_desc:0 ""
