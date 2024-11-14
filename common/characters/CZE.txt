@@ -9,6 +9,21 @@ characters={
 		}
 	}
 
+	#rk leader
+	CZE_jaroslav_krejchi={
+		name="Jaroslav Krejčí"
+		portraits={
+			civilian={
+				large=GFX_portrait_Jaroslav_Krejci
+			}
+		}
+		country_leader={
+			ideology=nazism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
 	#political advisors
 	CZKE_jan_antonin_bata = {
 		name="Jan Antonín Baťa"
