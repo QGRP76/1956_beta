@@ -573,6 +573,7 @@ characters={
 				original_tag = NEP
 			}
 			available = {
+				has_completed_focus = NEP_a_nepali_air_force
 				has_country_flag = has_generated_an_ace_pilot
 			}
 			traits = {
