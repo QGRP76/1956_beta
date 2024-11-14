@@ -850,7 +850,7 @@ characters={
 		name="Pierre Goybet"
 		portraits={
 			army={
-				large="gfx/leaders/FRA/r56_portrait_FRA_Pierre_Goybet"
+				large="gfx/leaders/FRA/r56_portrait_FRA_Pierre_Goybet."
 				small="GFX_Portrait_France_KR_Generic_navy_1_small"
 			}
 		}
