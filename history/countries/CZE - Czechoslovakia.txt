@@ -464,8 +464,7 @@ if = {
 	}
 	create_country_leader = {
 		name = "Edvard Beneš"
-		#desc = "POLITICS_HARRY_TRUMAN_DESC"
-		picture = GFX_portrait_Edvard_Benes
+		picture = "gfx/leaders/CZE/r56_portrait_CZE_Edvard_Benes.dds"
 		expire = "1948.9.3" #arguably later if no communist coup happened
 		ideology = liberalism
 		traits = {
