@@ -755,7 +755,7 @@ characters={
 			}
 		}
 		navy_leader={
-			traits={ aviation_enthusiast }
+			traits={ navy_career_officer aviation_enthusiast }
 			skill=2
 			attack_skill=1
 			defense_skill=2
@@ -855,7 +855,7 @@ characters={
 			}
 		}
 		navy_leader={
-			traits={ spotter }
+			traits={ naval_lineage spotter }
 			skill=3
 			attack_skill=3
 			defense_skill=2
