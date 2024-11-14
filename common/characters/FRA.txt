@@ -496,7 +496,7 @@ characters={
 				small="GFX_Portrait_France_KR_Generic_land_2_small"
 			}
 			army={
-				large="GFX_Portrait_France_KR_Generic_land_2"
+				large="gfx/leaders/FRA/r56_Portrait_FRA_Andre_Gaston_Pretelat.dds"
 			}
 		}
 		corps_commander={
@@ -769,7 +769,7 @@ characters={
 		name="Georges Robert"
 		portraits={
 			army={
-				large="GFX_Portrait_France_KR_Generic_navy_1"
+				large="/gfx/leaders/FRA/r56_portrait_FRA_Georges_Robert.dds"
 				small="GFX_Portrait_France_KR_Generic_navy_1_small"
 			}
 		}
