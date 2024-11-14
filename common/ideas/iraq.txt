@@ -8,7 +8,9 @@ ideas = {
             allowed = { always = no }
             available = {
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
             removal_cost = -1
             picture = ROM_king_carol_ii_hedonist
             modifier = {
@@ -27,7 +29,9 @@ ideas = {
             allowed = { always = no }
             available = {
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
             removal_cost = -1
             picture = ROM_king_carol_ii_hedonist
             modifier = {
@@ -41,7 +45,9 @@ ideas = {
             allowed = { always = no }
             available = {
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
             removal_cost = -1
             picture = ROM_king_carol_ii_hedonist
             modifier = {
@@ -55,7 +61,9 @@ ideas = {
             allowed = { always = no }
             available = {
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
             removal_cost = -1
             picture = ROM_king_carol_ii_hedonist
             modifier = {
@@ -91,39 +99,42 @@ ideas = {
         IRQ_shia_protests = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = raj_marginalized_muslim_community_angry
             removal_cost = -1
 
             modifier = {
                 stability_factor = -0.05
-                political_power_cost = 0.05
+                conscription_factor = -0.15
+                political_power_factor = -0.10
             }
         }
         IRQ_ghazi_idea = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = IRQ_ghazi
             removal_cost = -1
 
-            modifier = {
-                mobilization_speed = 0.15
-                stability_factor = 0.1
+            traits = {
+                IRQ_the_shadow_king
             }
         }
         IRQ_ghazi_idea2 = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = IRQ_ghazi
             removal_cost = -1
@@ -141,9 +152,10 @@ ideas = {
         IRQ_anti_british_sentiment = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = FIN_british_threat
             removal_cost = -1
@@ -158,9 +170,10 @@ ideas = {
             name = IRQ_anti_british_sentiment
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = FIN_british_threat
             removal_cost = -1
@@ -174,9 +187,10 @@ ideas = {
         IRQ_slight_german_leniency = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = german_advisors
             removal_cost = -1
@@ -190,9 +204,10 @@ ideas = {
         IRQ_1933_deprivation_act = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = NOR_anti_communist_sentiment
             removal_cost = -1
@@ -205,9 +220,10 @@ ideas = {
         IRQ_dissolving_the_parliament1 = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = IRQ_dissolving_the_parliament
             removal_cost = -1
@@ -220,9 +236,10 @@ ideas = {
         IRQ_economic_policy = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = generic_economic_increase
             removal_cost = -1
@@ -236,26 +253,32 @@ ideas = {
         IRQ_arabist_sentiment = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                is_subject = no
+                OR = {
+                    has_government = fascism
+                    has_government = neutrality
+                }
+            }
 
-            picture = chi_army_corruption3
+            picture = PAL_islamic_militarism
             removal_cost = -1
 
             modifier = {
-                political_power_cost = -0.1
+                political_power_factor = 0.05
+                war_support_factor = 0.10
+                stability_factor = -0.05
                 justify_war_goal_time = -0.25
-                weekly_manpower = 150
-                army_org_regain = 0.1
             }
         }
         IRQ_victory_over_britain = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = eng_guided_by_britain
             removal_cost = -1
@@ -270,7 +293,6 @@ ideas = {
 
             allowed = {
                 original_tag = IRQ
-                always = no
             }
 
             allowed_civil_war = {
@@ -291,9 +313,10 @@ ideas = {
         IRQ_partial_victory_against_britain = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = vittoria_mutilata
             removal_cost = -1
@@ -306,9 +329,10 @@ ideas = {
         IRQ_islamist_cooperation = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = PAL_sharia
             removal_cost = -1
@@ -322,9 +346,10 @@ ideas = {
         IRQ_fasting_tactics_idea = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = generic_soldiers_good
             removal_cost = -1
@@ -338,9 +363,10 @@ ideas = {
         IRQ_conscription_laws_eased = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = generic_soldiers_bad
             removal_cost = -1
@@ -353,9 +379,10 @@ ideas = {
         IRQ_arabism = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = MEX_revolutionary_army
             removal_cost = -1
@@ -368,9 +395,10 @@ ideas = {
         IRQ_military_investments = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = MEX_callistas
             removal_cost = -1
@@ -382,9 +410,10 @@ ideas = {
         IRQ_dissidents_suppressed = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = ast_classify_aliens
             removal_cost = -1
@@ -398,9 +427,10 @@ ideas = {
         IRQ_planning_the_countercoup = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = generic_disjointed_gov
             removal_cost = -1
@@ -413,9 +443,10 @@ ideas = {
         IRQ_planning_the_countercoup2 = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = generic_democratic_drift_bonus
             removal_cost = -1
@@ -426,43 +457,46 @@ ideas = {
                 political_power_gain = 0.25
             }
         }
-        IRQ_workers_culture = {
-            allowed = {
-                original_tag = IRQ
-                always = no
-            }
-            allowed_civil_war = { always = yes }
+        # IRQ_workers_culture = {
+        #     allowed = {
+        #         original_tag = IRQ
+        #     }
+        #     allowed_civil_war = {
+        #         always = yes
+        #     }
 
-            picture = ITA_il_sol_dell_avvenire_ns
-            removal_cost = -1
+        #     picture = ITA_il_sol_dell_avvenire_ns
+        #     removal_cost = -1
 
-            modifier = {
-                production_speed_buildings_factor = 0.1
-                production_lack_of_resource_penalty_factor = -0.1
-                production_factory_efficiency_gain_factor = 0.1
-            }
-        }
-        IRQ_marxist_fanaticism_idea = {
-            allowed = {
-                original_tag = IRQ
-                always = no
-            }
-            allowed_civil_war = { always = yes }
+        #     modifier = {
+        #         production_speed_buildings_factor = 0.1
+        #         production_lack_of_resource_penalty_factor = -0.1
+        #         production_factory_efficiency_gain_factor = 0.1
+        #     }
+        # }
+        # IRQ_marxist_fanaticism_idea = {
+        #     allowed = {
+        #         original_tag = IRQ
+        #     }
+        #     allowed_civil_war = {
+        #         always = yes
+        #     }
 
-            picture = ITA_il_sol_dell_avvenire_ns
-            removal_cost = -1
+        #     picture = ITA_il_sol_dell_avvenire_ns
+        #     removal_cost = -1
 
-            modifier = {
-                training_time_army_factor  = -0.2
-                org_loss_when_moving = -0.1
-            }
-        }
+        #     modifier = {
+        #         training_time_army_factor  = -0.2
+        #         org_loss_when_moving = -0.1
+        #     }
+        # }
         IRQ_spreading_the_world_revolution = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = workers_brigades
             removal_cost = -1
@@ -474,27 +508,29 @@ ideas = {
                 pocket_penalty = -0.1
             }
         }
-        IRQ_sniper_teams_idea = {
-            allowed = {
-                original_tag = IRQ
-                always = no
-            }
-            allowed_civil_war = { always = yes }
+        # IRQ_sniper_teams_idea = {
+        #     allowed = {
+        #         original_tag = IRQ
+        #     }
+        #     allowed_civil_war = {
+        #         always = yes
+        #     }
 
-            picture = generic_war_preparation
-            removal_cost = -1
+        #     picture = generic_war_preparation
+        #     removal_cost = -1
 
-            modifier = {
-            recon_factor = 0.15
-            intel_from_combat_factor = 0.15
-            }
-        }
+        #     modifier = {
+        #     recon_factor = 0.15
+        #     intel_from_combat_factor = 0.15
+        #     }
+        # }
         IRQ_nra_leadership_jafar = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = ast_volunteer_defence_corps
             removal_cost = -1
@@ -509,9 +545,10 @@ ideas = {
         IRQ_Abd_al_ilah_idea = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = IRQ_Abd_al_Ilah
             removal_cost = -1
@@ -523,9 +560,10 @@ ideas = {
         IRQ_faisal_idea = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = IRQ_faisal
             removal_cost = -1
@@ -537,24 +575,27 @@ ideas = {
         IRQ_jizya_payments = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = generic_economic_increase
             removal_cost = -1
 
             modifier = {
                 consumer_goods_factor = -0.05
-                conscription_factor = -0.05
+                conscription_factor = -0.10
+                political_power_factor = 0.05
             }
         }
         IRQ_ban_riba = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = usa_great_depression_2
             removal_cost = -1
@@ -568,9 +609,10 @@ ideas = {
         IRQ_sunni_shia_unity = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = raj_marginalized_muslim_community_happy
             removal_cost = -1
@@ -639,9 +681,10 @@ ideas = {
         IRQ_shiate_supremacy = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = raj_marginalized_muslim_community_angry
             removal_cost = -1
@@ -654,9 +697,10 @@ ideas = {
         IRQ_sharia = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = PAL_sharia
             removal_cost = -1
@@ -671,9 +715,10 @@ ideas = {
         IRQ_military_political_intervention = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = generic_war_preparation
             removal_cost = -1
@@ -687,9 +732,10 @@ ideas = {
         IRQ_the_black_list_idea = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = generic_purge
             removal_cost = -1
@@ -702,9 +748,10 @@ ideas = {
         IRQ_ghazis_personality_cult = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = IRQ_ghazi
             removal_cost = -1
@@ -717,9 +764,10 @@ ideas = {
         IRQ_intellectuals_invited = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = jap_duplicate_research
             removal_cost = -1
@@ -731,9 +779,10 @@ ideas = {
         IRQ_parliament_dissolved = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = jap_duplicate_research
             removal_cost = -1
@@ -747,9 +796,10 @@ ideas = {
         IRQ_sidqis_leadership = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = ETH_conservative_high_command
             removal_cost = -1
@@ -765,9 +815,10 @@ ideas = {
         IRQ_sidqis_leadership2 = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = ETH_conservative_high_command
             removal_cost = -1
@@ -782,9 +833,10 @@ ideas = {
         IRQ_assyrians_taxed = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = EST_exploit_the_banks
             removal_cost = -1
@@ -797,9 +849,10 @@ ideas = {
         IRQ_abdul_latif_coup = {
             allowed = {
                 original_tag = IRQ
-                always = no
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
 
             picture = ETH_conservative_high_command
             removal_cost = -1
@@ -868,7 +921,6 @@ ideas = {
                 
             allowed = {
                 original_tag = IRQ
-                always = no
             }
             
             allowed_civil_war = {
@@ -886,7 +938,9 @@ ideas = {
             allowed = { always = no }
             available = {
             }
-            allowed_civil_war = { always = yes }
+            allowed_civil_war = {
+                always = yes
+            }
             removal_cost = -1
             picture = HOL_reliance_on_the_gold_standard
             modifier = {

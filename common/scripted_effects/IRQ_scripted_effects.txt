@@ -1,28 +1,28 @@
 IRQ_support_republic = {
 	add_power_balance_value = {
-		id = IRQ_Fascist_power_balance
+		id = IRQ_fascist_power_balance
 		value = 0.1
-		tooltip_side = IRQ_Republicans
+		tooltip_side = IRQ_republicans
 	}
 }
 IRQ_support_republic_min = {
 	add_power_balance_value = {
-		id = IRQ_Fascist_power_balance
+		id = IRQ_fascist_power_balance
 		value = 0.05
-		tooltip_side = IRQ_Republicans
+		tooltip_side = IRQ_republicans
 	}
 }
 IRQ_support_monarchy = {
 	add_power_balance_value = {
-		id = IRQ_Fascist_power_balance
+		id = IRQ_fascist_power_balance
 		value = -0.1
-		tooltip_side = IRQ_Monarchists
+		tooltip_side = IRQ_monarchists
 	}
 }
 IRQ_support_monarchy_min = {
 	add_power_balance_value = {
-		id = IRQ_Fascist_power_balance
+		id = IRQ_fascist_power_balance
 		value = -0.05
-		tooltip_side = IRQ_Monarchists
+		tooltip_side = IRQ_monarchists
 	}
 }

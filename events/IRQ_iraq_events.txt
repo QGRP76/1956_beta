@@ -27,8 +27,18 @@ country_event = {
 			has_war_with_major = yes
 		}
 		OR = {
-			date > 1941.4.1
-			911 = {
+			if = {
+				limit = {
+					is_historical_focus_on = yes
+				}
+				date > 1941.4.1
+			}
+			any_state = {
+				OR = {
+					state = 907
+					state = 1016
+					state = 656
+				}
 				owner = {
 					OR = {
 						original_tag = ENG
@@ -47,8 +57,8 @@ country_event = {
 		set_country_flag = IRQ_historical_golden_square_coup
 		set_party_name = {
 			ideology = fascism
-			long_name = "National Defense Government"
-			name = "Al Aqada'a Government"
+			long_name = "Hukūmat al-Difāʿ al-Watanī"
+			name = "HDW"
 		}
 		add_ideas = IRQ_golden_square_defense_government_idea
 		set_politics = {
@@ -1767,9 +1777,9 @@ country_event = {
 	option = { 
 		name = irq.33.a
 		set_power_balance = {
-			id = IRQ_Fascist_power_balance
-			left_side = IRQ_Monarchists
-			right_side = IRQ_Republicans
+			id = IRQ_fascist_power_balance
+			left_side = IRQ_monarchists
+			right_side = IRQ_republicans
 			set_value = 0.1
 		}
 		set_country_flag = IRQ_launch_the_countercoup1
@@ -1792,7 +1802,7 @@ country_event = {
 		}
 		add_stability = 0.1
 		remove_power_balance = {
-			id = IRQ_Fascist_power_balance
+			id = IRQ_fascist_power_balance
 		}
 	}
 	option = { 
@@ -1803,7 +1813,7 @@ country_event = {
 		remove_ideas = IRQ_ghazi_idea2
 		set_cosmetic_tag = IRQ_REP 
 		remove_power_balance = {
-			id = IRQ_Fascist_power_balance
+			id = IRQ_fascist_power_balance
 		}
 		
 	}

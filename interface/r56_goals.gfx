@@ -5486,52 +5486,42 @@ spriteTypes = {
 		name = "GFX_goal_IRQ_royal_referendum"
 		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_royal_referendum.dds"
 	}
-
 	SpriteType = {
 		name = "GFX_goal_IRQ_abdul_latif_takes_power"
 		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_abdul_latif_takes_power.dds"
 	}
-
 	SpriteType = {
-		name = "GFX_goal_IRQ_bakir_path"
-		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_bakir_path.dds"
+		name = "GFX_goal_IRQ_bakirs_personal_state"
+		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_bakirs_personal_state.dds"
 	}
-
 	SpriteType = {
 		name = "GFX_goal_IRQ_get_rid_of_ghazi"
 		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_get_rid_of_ghazi.dds"
 	}
-
 	SpriteType = {
 		name = "GFX_goal_IRQ_ghazi_in_sidqis_shadow"
 		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_ghazi_in_sidqis_shadow.dds"
 	}
-
 	SpriteType = {
 		name = "GFX_goal_IRQ_sidqi_reputation"
 		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_sidqi_reputation.dds"
 	}
-
 	SpriteType = {
 		name = "GFX_goal_IRQ_empower_kurdish_workers"
 		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_empower_kurdish_workers.dds"
 	}
-
 	SpriteType = {
 		name = "GFX_goal_IRQ_yasins_reforms"
 		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_yasins_reforms.dds"
 	}
-
 	SpriteType = {
 		name = "GFX_goal_IRQ_reform_the_army"
 		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_reform_the_army.dds"
 	}
-
 	SpriteType = {
 		name = "GFX_goal_IRQ_regular_exercises"
 		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_regular_exercises.dds"
 	}
-
 	SpriteType = {
 		name = "GFX_goal_IRQ_army_modernization"
 		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_army_modernization.dds"
@@ -5556,7 +5546,10 @@ spriteTypes = {
 		name = "GFX_goal_IRQ_hashemite_navy"
 		texturefile = "gfx/interface/goals/irq/r56_goal_hashemite_navy.dds"
 	}
-
+	spriteType = {
+		name = "GFX_goal_IRQ_Babil"
+		textureFile = "gfx/interface/goals/irq/r56_goal_babil.dds"
+	}
 	SpriteType = {
 		name = "GFX_goal_IRQ_map"
 		texturefile = "gfx/interface/goals/irq/r56_IRQ_map.dds"
@@ -5581,6 +5574,11 @@ spriteTypes = {
 		name = "GFX_goal_IRQ_mesopotamia"
 		texturefile = "gfx/interface/goals/irq/r56_IRQ_mesopotamia.dds"
 	}
+	SpriteType = {
+		name = "GFX_goal_IRQ_pardon_barzani"
+		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_pardon_barzani.dds"
+	}
+
 ### ----> JOR
 
 	SpriteType = { 
@@ -10074,10 +10072,6 @@ spriteType = {
 	spriteType = {
 		name = "GFX_goal_generic_tourism"
 		textureFile = "gfx/interface/goals/generic/r56_generic_tourism.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_IRQ_Babil"
-		textureFile = "gfx/interface/goals/irq/r56_goal_babil.dds"
 	}
 
 
