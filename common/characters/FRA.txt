@@ -302,8 +302,8 @@ characters={
 			traits={ old_guard defensive_doctrine }
 			skill=2
 			attack_skill=1
-			defense_skill=2
-			planning_skill=2
+			defense_skill=3
+			planning_skill=1
 			logistics_skill=2
 			legacy_id=0
 		}
@@ -356,9 +356,9 @@ characters={
 			traits={ career_officer trait_cautious infantry_officer trickster }
 			skill=4
 			attack_skill=3
-			defense_skill=2
+			defense_skill=3
 			planning_skill=4
-			logistics_skill=2
+			logistics_skill=3
 			legacy_id=803
 		}
 
@@ -556,7 +556,7 @@ characters={
 				small="GFX_Portrait_France_KR_Generic_land_4_small"
 			}
 			army={
-				large="GFX_Portrait_France_KR_Generic_land_4"
+				large="gfx/leaders/FRA/r56_portrait_FRA_Edouard_Requin.dds"
 			}
 		}
 		corps_commander={
@@ -769,7 +769,7 @@ characters={
 		name="Georges Robert"
 		portraits={
 			army={
-				large="/gfx/leaders/FRA/r56_portrait_FRA_Georges_Robert.dds"
+				large="gfx/leaders/FRA/r56_portrait_FRA_Georges_Robert.dds"
 				small="GFX_Portrait_France_KR_Generic_navy_1_small"
 			}
 		}
@@ -817,7 +817,7 @@ characters={
 			}
 		}
 		navy_leader={
-			traits={ fleet_protector }
+			traits={ bold fleet_protector }
 			skill=2
 			attack_skill=1
 			defense_skill=3
@@ -842,6 +842,25 @@ characters={
 			defense_skill=2
 			maneuvering_skill=1
 			coordination_skill=2
+			legacy_id=-1
+		}
+	}
+
+	FRA_pierre_goybet={
+		name="Pierre Goybet"
+		portraits={
+			army={
+				large="gfx/leaders/FRA/r56_portrait_FRA_Pierre_Goybet"
+				small="GFX_Portrait_France_KR_Generic_navy_1_small"
+			}
+		}
+		navy_leader={
+			traits={ spotter }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=3
 			legacy_id=-1
 		}
 	}

@@ -161,6 +161,8 @@ recruit_character = FRA_aubert_frere
 recruit_character = FRA_victor_bourret
 recruit_character = FRA_robert_altmayer
 recruit_character = FRA_frix_michelier
+recruit_character = FRA_pierre_goybet
+recruit_character = FRA_antoinemariebenoit_besson
 
 
 set_research_slots = 4
