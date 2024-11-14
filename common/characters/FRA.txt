@@ -502,11 +502,28 @@ characters={
 		corps_commander={
 			traits={ inflexible_strategist infantry_officer }
 			skill=3
-			attack_skill=3
+			attack_skill=2
 			defense_skill=2
-			planning_skill=4
+			planning_skill=3
 			logistics_skill=1
 			legacy_id=-1
+		}
+		advisor={
+			slot = theorist
+			idea_token = FRA_andre_gaston_pretelat
+			ledger = army
+			allowed = {
+				original_tag = FRA
+			}
+			cost = 250
+			traits = { grand_battle_plan_expert }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_tech = trench_warfare
+					add = 1
+				}
+			}
 		}
 	}
 
@@ -887,8 +904,8 @@ characters={
 			traits={ bold seawolf }
 			skill=2
 			attack_skill=2
-			defense_skill=2
-			maneuvering_skill=1
+			defense_skill=1
+			maneuvering_skill=2
 			coordination_skill=2
 			legacy_id=807
 		}
