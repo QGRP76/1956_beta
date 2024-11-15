@@ -1281,9 +1281,11 @@ CZE_jaroslav_maticka = {
 				specialization_nuclear = 1
 			}
 			visible = {
-				OR = {
-					has_government = democratic
-					has_government = neutrality
+				owner = {
+					OR = {
+						has_government = democratic
+						has_government = neutrality
+					}
 				}
 			}
 		}
