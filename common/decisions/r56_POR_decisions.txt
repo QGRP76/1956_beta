@@ -683,6 +683,15 @@ POR_the_path_to_economic_progress = {
 			research_speed_factor = 0.06
 			stability_weekly = 0.002
 		}
+		remove_effect = {
+			if = {
+				limit = { has_completed_focus = POR_push_forward_popular_reform }
+				add_popularity = {
+					ideology = ROOT
+					popularity = 0.03
+				}
+			}
+		}
 	}
 
 	POR_direct_farmland_to_industrial_projects = {
@@ -1033,7 +1042,7 @@ POR_securing_the_revolution = {
 		visible = { 
 			OR = {
 				has_completed_focus = POR_restore_civil_liberties
-				has_completed_focus = POR_shatter_reactionary_dissent
+				has_completed_focus = POR_continue_the_iberian_social_revolution
 			}
 			NOT = { 
 				has_completed_focus = POR_hold_fair_elections

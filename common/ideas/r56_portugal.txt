@@ -224,8 +224,7 @@ ideas = {
 			}
 		}
 
-		POR_shatter_reactionary_dissent_idea = {
-			name = POR_divided_revolution
+		POR_iberias_social_revolution = {
 			picture = ARG_no_gods_no_masters
 			allowed = { original_tag = POR }
 			cancel = { has_government = neutrality }
@@ -237,10 +236,12 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				communism_drift = 0.01
+				political_power_gain = 0.15
+				political_advisor_cost_factor = -0.25
 				weekly_casualties_war_support = 0.001
 				war_stability_factor = 0.1
-				justify_war_goal_time = 0.75
+				justify_war_goal_time = 1
+				neutrality_drft = -0.01
 			}
 		}
 

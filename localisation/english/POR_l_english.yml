@@ -357,8 +357,11 @@
  POR_general_directorate_of_security:0 "General Directorate of Security"
  POR_general_directorate_of_security_desc:0 ""
 
- POR_shatter_reactionary_dissent:0 "Shatter Reactionary Dissent"
- POR_shatter_reactionary_dissent_desc:0 ""
+ POR_continue_the_iberian_social_revolution:0 "Continue the Iberian Social Revolution!"
+ POR_continue_the_iberian_social_revolution_desc:0 ""
+ POR_continue_the_iberian_social_revolution_tt:0 "Half of current §YAuthoritarian§! support is applied as a §RStability§! penalty."
+ POR_iberias_social_revolution:0 "Iberia's Social Revolution!"
+ POR_appropriate_church_riches:0 "Appropriate Church Riches"
 
  POR_empower_socialist_organizations:0 "Empower Socialist Organizations"
  POR_empower_socialist_organizations_desc:0 "Youth movements are a 20th century backbone for countless ideologies and governments. Portuguese socialist movements are far and near to every corner of Portugal; they shall have the support they need to ensure our ideas reign over the nation!"
@@ -368,18 +371,13 @@
 
  POR_defang_the_liberals:0 "Defang the Liberals"
  POR_defang_the_liberals_desc:0 "Portuguese democrats have learned nothing from the failings and sluggishness of democracy in the First Republic. Their plans for Portugal are a sham that will shatter the hopes of prosperity that a new revolution must bring. It is imperative that they forever lack the political power they need to excerpt their plans upon the nation!"
- POR_defang_the_liberals_tt:0 "Has completed Decision §YEnd the Popular Front§!"
- POR_defang_the_liberals2_tt:0 "Half of current §YDemocratic§! support is applied as a §RStability§! penalty. The remainder is §GRemoved§!."
+ POR_end_the_popular_front_flag:0 "Has completed Decision §YEnd the Popular Front§!"
 
  POR_western_europes_red_bulwark:0 "Western Europe's Red Bulwark!"
  POR_western_europes_red_bulwark_desc:0 ""
 
  POR_diplomatic_pragmatism:0 "Diplomatic Pragmatism"
  POR_diplomatic_pragmatism_desc:0 "We cannot sit idle as the scourge of fascism takes root on our continent. Until the time is right, bourgeois democracy is a necessary evil, and a potential ally in our struggle against Europe's fascist menace!"
-
- POR_continue_the_iberian_social_revolution:0 "Continue the Iberian Social Revolution!"
- POR_continue_the_iberian_social_revolution_desc:0 ""
- POR_appropriate_church_riches:0 "Appropriate Church Riches"
 
  POR_towards_an_iberian_red_army:0 "Towards an Iberian Red Army"
  POR_towards_an_iberian_red_army_desc:0 ""
@@ -428,7 +426,6 @@
  POR_foment_peace_with_the_church_desc:0 "Relations between the Catholic Church and Portuguese republican governments have rarely been productive. There is no better time than now to take steps to resolve our differences, and let the individual decide what role religion shall have in their life."
  POR_foment_peace_with_the_church_flag:0 "Has completed Decision §YFoment Peace With the Church§!"
  
-
  POR_curb_political_militias:0 "Curb Political Militas"
  POR_curb_political_militias_desc:0 ""
 
@@ -456,6 +453,7 @@
  POR_organize_provincial_elections_angola:0 "Organize Provincial Elections (Angola)"
 
  POR_push_forward_popular_reform:0 "Push Forward Popular Reform"
+ POR_push_forward_popular_reform_desc:0 ""
  POR_push_forward_popular_reform_tt:0 "§GUpgrades§! the effects of all §YThe Question of Nationalization§! decisions."
 
  POR_unity_and_reconciliation:0 "Unity and Reconciliation"

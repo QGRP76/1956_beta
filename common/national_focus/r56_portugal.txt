@@ -14,11 +14,11 @@ focus_tree = {
 	focus = {
 		id = POR_continue_the_naval_expansion
 		icon = GFX_goal_navy_funding
-		cost = 6
+		cost = 8
 		x = 4
 		y = 0
 		completion_reward = {
-			navy_experience = 30
+			navy_experience = 35
 			add_command_power = 15
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
@@ -334,7 +334,7 @@ focus_tree = {
 	focus = {
 		id = POR_complete_the_military_restructuring
 		icon = GFX_focus_SOV_mobilization_plan
-		cost = 6
+		cost = 8
 		ai_will_do = { base = 15 }
 		x = 18
 		y = 0
@@ -1169,7 +1169,7 @@ focus_tree = {
 		id = POR_import_foreign_machinery
 		prerequisite = { focus = POR_continue_the_public_works_r56 }
 		icon = GFX_goal_generic_construction_tools
-		cost = 8
+		cost = 10
 		ai_will_do = { base = 3 }
 		x = -2
 		y = 1
@@ -1177,8 +1177,8 @@ focus_tree = {
 		available = { has_tech = construction1 }
 		completion_reward = {
 			add_tech_bonus = {
-				bonus = 0.75
-				uses = 1
+				bonus = 0.5
+				uses = 2
 				category = industry
 			}
 			random_controlled_state = {
@@ -1313,7 +1313,7 @@ focus_tree = {
 		id = POR_subsidize_rolling_stock_production
 		prerequisite = { focus = POR_continue_the_public_works_r56 }
 		icon = GFX_focus_SOV_organize_wreckers
-		cost = 8
+		cost = 10
 		x = 2
 		y = 1
 		relative_position_id = POR_continue_the_public_works_r56
@@ -1324,13 +1324,18 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			112 = {
-				add_extra_state_shared_building_slots = 2
+			random_owned_controlled_state = {
+				prioritize = { 112 }
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 795 }
+				add_extra_state_shared_building_slots = 1
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2686,7 +2691,7 @@ focus_tree = {
 		id = POR_consolidate_the_revolution
 		prerequisite = { focus = POR_storm_the_national_assembly }
 		icon = GFX_Goal_USA_Desegregated_military
-		cost = 6
+		cost = 8
 		x = -3
 		y = 2
 		relative_position_id = POR_storm_the_national_assembly
@@ -2755,13 +2760,13 @@ focus_tree = {
 			focus = POR_pave_the_path_to_progress
 		}
 		icon = GFX_social_welfare
-		cost = 6
+		cost = 8
 		x = 3
 		y = 1
 		relative_position_id = POR_consolidate_the_revolution
 		available = { has_completed_focus = POR_continue_the_public_works_r56 }
 		completion_reward = {
-			add_political_power = 40
+			add_political_power = 60
 			custom_effect_tooltip = POR_towards_a_prosperous_proletariat_tt
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			add_ideas = POR_the_question_of_nationalization_idea
@@ -2911,7 +2916,7 @@ focus_tree = {
 		id = POR_pave_the_path_to_progress
 		prerequisite = { focus = POR_storm_the_national_assembly }
 		icon = GFX_focus_ICE_embrace_the_workers_revolution
-		cost = 6
+		cost = 8
 		x = 3
 		y = 2
 		relative_position_id = POR_storm_the_national_assembly
@@ -2957,10 +2962,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_shatter_reactionary_dissent
+		id = POR_continue_the_iberian_social_revolution
 		prerequisite = { focus = POR_consolidate_the_revolution }
-		icon = GFX_goal_generic_red_commando
-		cost = 8
+		icon = GFX_focus_BRA_state_atheism
+		cost = 10
 		x = -1
 		y = 1
 		relative_position_id = POR_consolidate_the_revolution
@@ -2968,12 +2973,26 @@ focus_tree = {
 			always = no
 		}
 		completion_reward = {
-			add_stability = -0.1
+			add_political_power = 35
+			custom_effect_tooltip = POR_continue_the_iberian_social_revolution_tt
+			hidden_effect = {
+				set_temp_variable = {
+					var = POR_continue_the_iberian_social_revolution_var
+					value = party_popularity@neutrality
+				}
+				multiply_temp_variable = {
+					var = POR_continue_the_iberian_social_revolution_var
+					value = -0.5
+				}
+			}
+			add_stability = POR_continue_the_iberian_social_revolution_var
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			swap_ideas = {
 				remove_idea = POR_divided_revolution
-				add_idea = POR_shatter_reactionary_dissent_idea
+				add_idea = POR_iberias_social_revolution
 			}
 			unlock_decision_tooltip = POR_end_the_popular_front
+			unlock_decision_tooltip = POR_appropriate_church_riches
 		}
 		ai_will_do = {
 			base = 5
@@ -2986,36 +3005,16 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_continue_the_iberian_social_revolution
-		prerequisite = { focus = POR_shatter_reactionary_dissent }
-		icon = GFX_focus_BRA_state_atheism
-		cost = 6
-		x = -1
-		y = 1
-		relative_position_id = POR_shatter_reactionary_dissent
-		completion_reward = {
-			add_political_power = 70
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			unlock_decision_tooltip = POR_appropriate_church_riches
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL  }
-	}
-
-	focus = {
 		id = POR_empower_socialist_organizations
 		prerequisite = { 
-			focus = POR_shatter_reactionary_dissent
+			focus = POR_continue_the_iberian_social_revolution
 			focus = POR_general_directorate_of_security 
 		}
 		icon = GFX_goal_generic_revolutionary_guards
 		cost = 7
 		x = 1
 		y = 1
-		relative_position_id = POR_shatter_reactionary_dissent
+		relative_position_id = POR_continue_the_iberian_social_revolution
 		available = {
 			NOT = { has_completed_focus = POR_curb_political_militias }
 		}
@@ -3046,7 +3045,6 @@ focus_tree = {
 					add_idea = POR_reactionary_resistance2
 				}
 			}
-			custom_effect_tooltip = CHL_skip_one_line_tt
 			set_country_flag = POR_arm_anti_fascist_militias_flag
 			unlock_decision_tooltip = POR_arm_anti_fascist_militias
 			unlock_decision_tooltip = POR_tap_aligned_laborer_organizations
@@ -3056,77 +3054,18 @@ focus_tree = {
 
 	focus = {
 		id = POR_defang_the_liberals
-		prerequisite = { focus = POR_shatter_reactionary_dissent }
+		prerequisite = { focus = POR_continue_the_iberian_social_revolution }
 		icon = GFX_focus_SOV_the_last_purge
 		cost = 8
 		x = 0
 		y = 2
-		relative_position_id = POR_shatter_reactionary_dissent
-		completion_reward = {
-			add_political_power = 90
-			set_rule = { can_create_factions = yes }
-			set_rule = { can_send_volunteers = yes }
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			custom_effect_tooltip = POR_defang_the_liberals2_tt
-			hidden_effect = {
-				add_popularity = {
-					ideology = democratic
-					popularity = -1
-				}
-				set_temp_variable = {
-					var = suspend_the_constitution_var
-					value = party_popularity@democratic
-				}
-				multiply_temp_variable = {
-					var = suspend_the_constitution_var
-					value = -0.5
-				}
-			}
-			add_stability = suspend_the_constitution_var
+		relative_position_id = POR_continue_the_iberian_social_revolution
+		available = {
+			has_country_flag = POR_end_the_populaR_front_flag
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL  }
-	}
-
-	focus = {
-		id = POR_towards_an_iberian_red_army
-		prerequisite = { focus = POR_defang_the_liberals }
-		icon = GFX_focus_SOV_builder_of_the_red_army
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = POR_defang_the_liberals
 		completion_reward = {
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL  }
-	}
-
-	focus = {
-		id = POR_western_europes_red_bulwark
-		prerequisite = { focus = POR_defang_the_liberals }
-		mutually_exclusive = { focus = POR_diplomatic_pragmatism }
-		icon = GFX_goal_communist_latin_america
-		cost = 2.2
-		x = -1
-		y = 2
-		relative_position_id = POR_defang_the_liberals
-		completion_reward = {
-			add_war_support = 0.1
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL  }
-	}
-
-	focus = {
-		id = POR_diplomatic_pragmatism
-		prerequisite = { focus = POR_defang_the_liberals }
-		mutually_exclusive = { focus = POR_western_europes_red_bulwark }
-		icon = GFX_focus_focus_fra_fascist_threat
-		cost = 2.2
-		x = 1
-		y = 2
-		relative_position_id = POR_defang_the_liberals
-		completion_reward = {
-			add_war_support = 0.05
-		}
+		ai_will_do = { base = 20 }
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}
 
@@ -3134,12 +3073,12 @@ focus_tree = {
 		id = POR_restore_civil_liberties
 		prerequisite = { focus = POR_pave_the_path_to_progress }
 		icon = GFX_goal_generic_multipartism
-		cost = 8
+		cost = 10
 		x = 1
 		y = 1
 		relative_position_id = POR_pave_the_path_to_progress
 		available = {
-			NOT = { has_completed_focus = POR_shatter_reactionary_dissent }
+			NOT = { has_completed_focus = POR_continue_the_iberian_social_revolution }
 		}
 		completion_reward = {
 			swap_ideas = {
