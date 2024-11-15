@@ -862,10 +862,7 @@ characters = {
 				else = {
 					OR = {
 						NOT = { has_completed_focus = POR_unite_against_salazar }
-						custom_trigger_tooltip = {
-							tooltip = POR_foment_peace_with_the_church_requirement_tt
-							has_country_flag = POR_foment_peace_with_the_church_flag
-						}	
+						has_country_flag = POR_foment_peace_with_the_church_flag	
 					} 
 				}
 			}

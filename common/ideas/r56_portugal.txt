@@ -219,6 +219,7 @@ ideas = {
 				stability_weekly = -0.002
 				weekly_casualties_war_support = 0.001
 				war_stability_factor = 0.1
+				justify_war_goal_time = 1
 			}
 		}
 
@@ -238,6 +239,7 @@ ideas = {
 				communism_drift = 0.01
 				weekly_casualties_war_support = 0.001
 				war_stability_factor = 0.1
+				justify_war_goal_time = 0.75
 			}
 		}
 
@@ -251,6 +253,7 @@ ideas = {
 				neutrality_drift = -0.01
 				weekly_casualties_war_support = 0.001
 				war_stability_factor = 0.1
+				justify_war_goal_time = 1
 			}
 		}
 
@@ -261,11 +264,12 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.1
-				stability_factor = 0.05
+				stability_factor = 0.025
 				neutrality_drift = -0.01
 				political_advisor_cost_factor = -0.25
 				weekly_casualties_war_support = 0.001
 				war_stability_factor = 0.1
+				justify_war_goal_time = 0.5
 			}
 		}
 
