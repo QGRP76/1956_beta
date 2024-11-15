@@ -3285,4 +3285,19 @@ characters = {
 			}
 		}
 	}
+	BUL_dimitar_stanchev = {
+		name = "Dimitar Stanchev"
+		portraits = {
+			army = {
+				large = GFX_portrait_generic_europe_male_16
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_resourceful scientist_trait_r56_research_focused }
+			skills = {
+				specialization_land = 1
+			}
+		}
+	}
 }
