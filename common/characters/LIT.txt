@@ -752,6 +752,12 @@ characters={
 				has_completed_focus = LIT_rastikis_military_reforms
 			}
 		}
+		scientist = { # bloody multitaskers! (but he really did it), could have a scientist portrait
+			traits = { scientist_trait_gifted_engineer scientist_trait_aircraft_specialist }
+			skills = {
+				specialization_air = 2
+			}
+		}
 	}
 
 
