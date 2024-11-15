@@ -2761,7 +2761,7 @@ focus_tree = {
 		relative_position_id = POR_consolidate_the_revolution
 		available = { has_completed_focus = POR_continue_the_public_works_r56 }
 		completion_reward = {
-			add_political_power = 45
+			add_political_power = 40
 			custom_effect_tooltip = POR_towards_a_prosperous_proletariat_tt
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			add_ideas = POR_the_question_of_nationalization_idea
@@ -2860,7 +2860,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_towards_a_prosperous_proletariat
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 70
 			add_popularity = {
 				ideology = neutrality
 				popularity = -0.1
@@ -2917,7 +2917,7 @@ focus_tree = {
 		relative_position_id = POR_storm_the_national_assembly
 		available = { has_civil_war = no }
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 45
 			add_popularity = {
 				ideology = communism
 				popularity = 0.02
@@ -2944,7 +2944,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_pave_the_path_to_progress
 		completion_reward = {
-			add_political_power = 60
+			add_political_power = 55
 			set_rule = { can_generate_female_aces = yes }
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
@@ -2994,7 +2994,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_shatter_reactionary_dissent
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 70
 			add_popularity = {
 				ideology = communism
 				popularity = 0.05
@@ -3020,7 +3020,7 @@ focus_tree = {
 			NOT = { has_completed_focus = POR_curb_political_militias }
 		}
 		completion_reward = {
-			add_political_power = 35
+			add_political_power = 30
 			add_stability = -0.05
 			add_war_support = 0.03
 			custom_effect_tooltip = CHL_skip_one_line_tt
@@ -3167,7 +3167,7 @@ focus_tree = {
 			NOT = { has_completed_focus = POR_empower_socialist_organizations }
 		}
 		completion_reward = { 
-			add_political_power = 35
+			add_political_power = 30
 			add_popularity = {
 				ideology = communism
 				popularity = -0.03
@@ -3208,7 +3208,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_restore_civil_liberties
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 45
 			unlock_decision_tooltip = POR_call_for_reconciliation
 			unlock_decision_tooltip = POR_foment_peace_with_the_church
 		}
@@ -3303,7 +3303,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_hold_fair_elections
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 45
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = POR_duarte_jose_pacheco
 			custom_effect_tooltip = CHL_skip_one_line_tt
@@ -3324,7 +3324,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_reform_the_junta_institutions
 		completion_reward = {
-			add_political_power = 35
+			add_political_power = 30
 			add_war_support = 0.05
 			if = {
 				limit = { has_government = democratic }

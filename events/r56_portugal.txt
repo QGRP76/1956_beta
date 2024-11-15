@@ -1526,10 +1526,10 @@ country_event = {
 						controls_state = 540
 						controls_state = 796
 					}
-					891 = { add_resistance = 15 }
-					892 = { add_resistance = 14 }
-					540 = { add_resistance = 11 }
-					796 = { add_resistance = 5 }
+					891 = { add_resistance = 13 }
+					892 = { add_resistance = 11 }
+					540 = { add_resistance = 9 }
+					796 = { add_resistance = 3 }
 				}
 				if = {
 					limit = { 
@@ -1537,29 +1537,46 @@ country_event = {
 						controls_state = 896
 						controls_state = 544
 					}
-					897 = { add_resistance = 14 }
-					896 = { add_resistance = 10 }
-					544 = { add_resistance = 11 }
+					897 = { add_resistance = 11 }
+					896 = { add_resistance = 7 }
+					544 = { add_resistance = 7 }
 				}
 				if = {
 					limit = { controls_state = 705 }
-					705 = { add_resistance = 15 }
+					705 = { add_resistance = 8 }
 				}
 				if = {
 					limit = { controls_state = 296 }
-					296 = { add_resistance = 14 }
+					296 = { add_resistance = 11 }
 				}
 				if = {
 					limit = { controls_state = 702 }
-					702 = { add_resistance = 12 }
+					702 = { add_resistance = 8 }
 				}
 			}
 		}
 	}
 	option = {
 		name = portugal.45.a
-		add_war_support = 0.05
-		add_manpower = 20000
+		if = {
+			limit = { 
+				OR = {
+					has_idea = extensive_conscriptioon
+					has_idea = service_by_requirement
+					has_idea = all_adults_serve
+					has_idea = scraping_the_Barrel
+				}
+			}
+			add_war_support = 0.05
+			add_manpower = 25000
+		}
+		else = {
+			
+			add_war_support = 0.03
+			add_manpower = 20000
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			add_ideas = extensive_conscription  
+		}
 		custom_effect_tooltip = CHL_skip_one_line_tt
 		if = {
 			limit = { neutrality > 0.56 }
@@ -2148,9 +2165,7 @@ country_event = {
 				POR = { has_full_control_of_state = 721 }
 			}
 			667 = {
-				controller = {
-					country_event = portugal.50
-				}
+				controller = { country_event = portugal.50 }
 			}
 		}
 		if = {
@@ -2166,9 +2181,7 @@ country_event = {
 				POR = { has_full_control_of_state = 729 }
 			}
 			592 = {
-				controller = { 
-					country_event = portugal.48 
-				}
+				controller = { country_event = portugal.48 }
 			}
 		}
 		hidden_effect = {
