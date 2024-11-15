@@ -60,6 +60,7 @@ recruit_character = LAT_nikolajs_duze
 recruit_character = LAT_teodors_spade
 
 recruit_character = LAT_zhanis_bahs					#used instances for his portraits - marijn check?:D
+recruit_character = LAT_karlis_irbitis
 #NSB extra characters
 if = {
 	limit = {
