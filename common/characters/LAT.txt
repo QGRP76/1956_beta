@@ -1130,4 +1130,20 @@ characters={
 			coordination_skill = 2
 		}
 	}
+
+	LAT_karlis_irbitis = {
+		name = "Kārlis Irbītis"
+		portraits = {
+			army = {
+				large = GFX_portrait_generic_europe_male_14
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_aircraft_specialist }
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
 }
