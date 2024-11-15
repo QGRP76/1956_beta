@@ -2670,7 +2670,7 @@ characters={
 		name = "Torsti Verkkola"
 		portraits = {
 			army = {
-				large = GFX_portrait_generic_europe_male_06
+				large = GFX_portrait_generic_europe_male_10
 			}
 		}
 
@@ -2700,7 +2700,7 @@ characters={
 		name = "Wilhelm Wahlforss"
 		portraits = {
 			army = {
-				large = GFX_portrait_generic_europe_male_05
+				large = GFX_portrait_generic_europe_male_06
 			}
 		}
 
@@ -2715,7 +2715,7 @@ characters={
 		name = "Lennart Simons"
 		portraits = {
 			army = {
-				large = GFX_portrait_generic_europe_male_04
+				large = GFX_portrait_generic_europe_male_15
 			}
 		}
 
