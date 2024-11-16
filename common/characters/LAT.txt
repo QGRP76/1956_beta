@@ -1146,4 +1146,19 @@ characters={
 			}
 		}
 	}
+	LAT_fricis_gulbis = {
+		name = "Fricis Gulbis"
+		portraits = {
+			army = {
+				large = GFX_portrait_generic_europe_male_07
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_specialist }
+			skills = {
+				specialization_nuclear = 1
+			}
+		}
+	}
 }
