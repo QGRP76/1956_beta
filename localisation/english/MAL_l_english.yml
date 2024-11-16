@@ -864,3 +864,4 @@ MAL_only_once_decision_tt: "§RThis decision can only be taken once!§!"
 MAL_fighting_for_the_commonwealth_tt: "Create §Y4 Militia§! divisions.\nGet an event to get another §Y4 Militia§! divisions from communist groups, but risks increasing §Rcommunist activities in the future!§!"
 MAL_fighting_for_the_commonwealth_event_tt: "§RBy giving weapons to these groups, they may stash and use some for future conflicts with us!§!"
 MAL_compensation_tt: "If Singapore is ceded, decisions to integrate the state into a core will be unlocked."
+MAL_american_military_investment_idea_tt: "Adds 3 off-map military factories\n §RThis idea will be removed when at war with the [USA.GetNameDef]!§!.

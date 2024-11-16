@@ -668,6 +668,30 @@ ideas = { # things to fix from 16.10.24: fix the icons of some focuses like pro_
 				democratic_drift = 0.0015
 			}
 		}
+		
+		MAL_american_military_investment_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				has_war_with = USA
+			}
+
+			removal_cost = -1
+			
+			picture = 
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				custom_modifier_tooltip = MAL_american_military_investment_idea_tt
+			}
+		}
 	 	
 	}
 
