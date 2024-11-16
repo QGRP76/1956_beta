@@ -90,6 +90,10 @@ ideas = {
             }
 
             modifier = {
+                neutrality_drift = -0.01
+                consumer_goods_factor = -0.05
+                political_power_factor = 0.05
+                min_export = 0.15
                 custom_modifier_tooltip = MEX_oil_concessions_tt
             }
             on_add = {
@@ -118,7 +122,9 @@ ideas = {
                 original_tag = IRQ
             }
             allowed_civil_war = {
-                always = yes
+                NOT = {
+                    has_government = communism
+                }
             }
 
             picture = IRQ_ghazi
@@ -128,22 +134,40 @@ ideas = {
                 IRQ_the_shadow_king
             }
         }
-        IRQ_ghazi_idea2 = {
+        IRQ_ghazi_idea_2 = {
+            name = IRQ_ghazi_idea
             allowed = {
                 original_tag = IRQ
             }
             allowed_civil_war = {
-                always = yes
+                NOT = {
+                    has_government = communism
+                }
             }
 
             picture = IRQ_ghazi
             removal_cost = -1
 
-            modifier = {
-                mobilization_speed = 0.15
-                stability_factor = 0.1
-                conscription_factor = 0.1
-                conscription = 0.02
+            traits = {
+                IRQ_the_shadow_king_2
+            }
+        }
+        IRQ_ghazi_idea_3 = {
+            name = IRQ_ghazi_idea
+            allowed = {
+                original_tag = IRQ
+            }
+            allowed_civil_war = {
+                NOT = {
+                    has_government = communism
+                }
+            }
+
+            picture = IRQ_ghazi
+            removal_cost = -1
+
+            traits = {
+                IRQ_the_shadow_king_3
             }
         }
         
@@ -388,8 +412,9 @@ ideas = {
             removal_cost = -1
 
             modifier = {
-                surrender_limit = 0.1
-                army_core_defence_factor = 0.1
+                war_support_weekly = 0.001
+                fascism_drift = 0.01
+                political_power_factor = -0.05
             }
         }
         IRQ_military_investments = {
@@ -542,7 +567,7 @@ ideas = {
                 political_power_factor = -0.2
             }
         }
-        IRQ_Abd_al_ilah_idea = {
+        IRQ_abd_al_ilah_idea = {
             allowed = {
                 original_tag = IRQ
             }
@@ -550,7 +575,7 @@ ideas = {
                 always = yes
             }
 
-            picture = IRQ_Abd_al_Ilah
+            picture = IRQ_abd_al_ilah
             removal_cost = -1
 
             modifier = {
@@ -717,16 +742,19 @@ ideas = {
                 original_tag = IRQ
             }
             allowed_civil_war = {
-                always = yes
+                always = no
             }
 
-            picture = generic_war_preparation
+            picture = generic_secret_police
             removal_cost = -1
 
             modifier = {
-                drift_defence_factor = 0.2
-                conscription = 0.02
-                command_power_gain = 0.05
+                drift_defence_factor = 0.15
+                neutrality_drift = 0.01
+                stability_factor = -0.05
+                army_org_factor = -0.05
+                political_power_factor = 0.10
+                command_power_gain_mult = 0.05
             }
         }
         IRQ_the_black_list_idea = {
@@ -734,7 +762,7 @@ ideas = {
                 original_tag = IRQ
             }
             allowed_civil_war = {
-                always = yes
+                always = no
             }
 
             picture = generic_purge
@@ -743,6 +771,7 @@ ideas = {
             modifier = {
                 army_org_factor = -0.1
                 army_speed_factor = -0.1
+                experience_gain_army_factor = -0.15
             }
         }
         IRQ_ghazis_personality_cult = {
@@ -934,23 +963,51 @@ ideas = {
                 production_factory_max_efficiency_factor = 0.1
             }
         } 
-        IRQ_GER_TREATY = { #BAD
+        IRQ_german_treaty = { #BAD
             allowed = { always = no }
             available = {
             }
             allowed_civil_war = {
-                always = yes
+                always = no
             }
             removal_cost = -1
-            picture = HOL_reliance_on_the_gold_standard
+            picture = gre_schachtplan3
+            cancel = {
+                has_war_with = GER
+            }
             modifier = {
-                consumer_goods_factor = 0.1
+                consumer_goods_factor = 0.05
                 local_resources = -0.1
+                stability_factor = 0.05
             }
             targeted_modifier = {
                 tag = GER
-                custom_modifier_tooltip = IRQ_OIL
-                stability_factor = 0.1
+                custom_modifier_tooltip = IRQ_GER_OIL
+                trade_cost_for_target_factor = -0.25
+            }
+        }
+        IRQ_german_treaty_2 = { #GOOD
+            name = IRQ_german_treaty
+            allowed = { always = no }
+            available = {
+            }
+            allowed_civil_war = {
+                always = no
+            }
+            removal_cost = -1
+            picture = gre_schachtplan3
+            cancel = {
+                has_war_with = GER
+            }
+            modifier = {
+                consumer_goods_factor = -0.1
+                local_resources = 0.05
+                political_power_factor = -0.05
+            }
+            targeted_modifier = {
+                tag = GER
+                custom_modifier_tooltip = IRQ_GER_OIL
+                trade_cost_for_target_factor = -0.25
             }
         }
     }

@@ -3051,10 +3051,21 @@
  USA_Non_civil_war_communist_tag:0 "United States of America"
  USA_Non_civil_war_communist_tag:0 "the United States of America"
 
- #Iraq
- IRQ_ARB_neutrality: "Hashmite Federation of Arabia"
- IRQ_ARB_neutrality_DEF: "the Hashemite Federation of Arabia"
- IRQ_ARB_ADJ: "Arabian"
+ #IRQ_REP
+ IRQ_REP_fascism:0 "Republic of Iraq"
+ IRQ_REP_fascism_DEF:0 "the Republic of Iraq"
+ IRQ_REP_democratic:0 "Islamic Republic of Iraq"
+ IRQ_REP_democratic_DEF:0 "the Islamic Republic of Iraq"
+ IRQ_REP_neutrality:0 "Republic of Iraq"
+ IRQ_REP_neutrality_def:0 "the Republic of Iraq"
+ IRQ_REP_communism:0 "People's Republic of Iraq"
+ IRQ_REP_communism_DEF:0 "the People's Republic of Afghanistan"
+ IRQ_REP_ADJ:0 "Iraqi"
+ IRQ_REP_fascism_ADJ:0 "Iraqi"
+ IRQ_REP_neutrality_ADJ:0 "Iraqi"
+ IRQ_REP_democratic_ADJ:0 "Iraqi"
+ IRQ_REP_communism_ADJ:0 "Iraqi"
+
  united_guiana_neutrality: "Grand Kingdom of El Dorado"
  united_guiana_neutrality_DEF: "the Grand Kingdom of El Dorado"
  united_guiana_neutrality_ADJ: "Guianan"

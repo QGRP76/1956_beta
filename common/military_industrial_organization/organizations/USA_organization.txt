@@ -30,6 +30,9 @@ USA_chrysler_organization = {
 				has_dlc = "Man the Guns"
 			}
 			NOR_AAT = yes 
+			AND = {
+				tag = IRQ
+			}
 		}
 	}
 
@@ -41,7 +44,14 @@ USA_chrysler_organization = {
 			}
 			FROM = { NOT = { has_war_with = USA } }
 		}
-
+		if = {
+			limit = { 
+				FROM = { original_tag = IRQ }
+			}
+			FROM = {
+				has_completed_focus = IRQ_american_tank_design
+			}
+		}
 		if = {
 			limit = {
 				FROM = { tag = MEX }

@@ -70,12 +70,11 @@ if = {
 	set_technology = { camelry = 1 }
 }
 
-set_war_support = 0.2
-set_stability = 0.40 
+set_war_support = 0.15
+set_stability = 0.39
 set_research_slots = 3
 
 add_ideas = {
-	limited_conscription
  	IRQ_landowners
 	IRQ_oil_concessions
 	IRQ_shia_protests
@@ -85,7 +84,7 @@ add_ideas = {
 # characters
 recruit_character = IRQ_yasin_hashimi
 recruit_character = IRQ_ghazi_i
-recruit_character = IRQ_Abd_al_Ilah
+recruit_character = IRQ_abd_al_ilah
 recruit_character = IRQ_hikmat_sulayman
 recruit_character = IRQ_rashid_ali_algaylani
 recruit_character = IRQ_mohamed_sadr
@@ -140,6 +139,7 @@ recruit_character = IRQ_charles_burnett
 recruit_character = IRQ_Younis_Sabawi
 recruit_character = IRQ_Musatfa_Ali
 recruit_character = IRQ_saleh_saib_al_huburi
+recruit_character = IRQ_clark_kerr
 
 activate_advisor = IRQ_nuri_al_said # Activate Nuri al-Said
 
@@ -195,6 +195,12 @@ set_variable = { IRQ_raid_failure_variable = 80 }
 }
 
 # ANGLO-IRAQI PACT #
+
+#Iraqi oil concessions
+give_resource_rights = { receiver = ENG state = 1045 }
+give_resource_rights = { receiver = ENG state = 1048 }
+give_resource_rights = { receiver = ENG state = 676 }
+
 give_military_access = ENG
 give_market_access = ENG
 

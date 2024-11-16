@@ -1,12 +1,14 @@
 ﻿###########################
-# Iraq Events ############
+####### Iraq Events #######
 ###########################
 
 add_namespace = irq
 add_namespace = iraq_hist
 add_namespace = iraqeco
+
 # Historical events
-country_event = { 
+
+country_event = { # Golden Square Coup
 	id = iraq_hist.1
 	title = iraq_hist.1.t
 	desc = iraq_hist.1.desc
@@ -34,11 +36,7 @@ country_event = {
 				date > 1941.4.1
 			}
 			any_state = {
-				OR = {
-					state = 907
-					state = 1016
-					state = 656
-				}
+				state = 907
 				owner = {
 					OR = {
 						original_tag = ENG
@@ -55,39 +53,46 @@ country_event = {
 	option = {
 		name = iraq_hist.1.a # Golden Square takes over
 		set_country_flag = IRQ_historical_golden_square_coup
-		set_party_name = {
+		add_stability = -0.1
+		add_popularity = {
 			ideology = fascism
-			long_name = "Hukūmat al-Difāʿ al-Watanī"
-			name = "HDW"
+			popularity = 0.25
 		}
-		add_ideas = IRQ_golden_square_defense_government_idea
 		set_politics = {
 			ruling_party = fascism
 			elections_allowed = no
 		}
-		add_popularity = {
+		set_party_name = {
 			ideology = fascism
-			popularity = 0.2
+			long_name = "Hukūmat al-Difā' al-Watanī"
+			name = "HDW"
 		}
-		deactivate_advisor = IRQ_nuri_al_said
-		remove_ideas = IRQ_nuri_al_said
-
-		add_stability = -0.1
-		ENG = {
-			add_opinion_modifier = {
-				target = IRQ
-				modifier = medium_decrease
+		custom_effect_tooltip = r56_newline
+		every_state = {
+			limit = {
+				OR = {
+					state = 1048
+					state = 1045
+					state = 676
+				}
+			}
+			ENG = {
+				remove_resource_rights = PREV
+				add_opinion_modifier = {
+					target = IRQ
+					modifier = large_decrease
+				}
 			}
 		}
-		
+		remove_ideas = IRQ_oil_concessions
 		hidden_effect = {
 			if = {
 				limit = {
 					NOT={
 						has_idea = IRQ_faisal_idea
 					}
-				 }
-				 add_ideas = IRQ_faisal_idea
+				}
+				add_ideas = IRQ_faisal_idea
 			}
 			every_neighbor_country = {
 				if = {
@@ -110,13 +115,14 @@ country_event = {
 					ENG = {
 						controls_state = 656
 						OR = {
+							has_government = democratic
 							has_completed_focus = ENG_the_kings_party
 							has_completed_focus = ENG_home_defence
 							has_completed_focus = ENG_global_defense
 						}
 					}
 				}
-				ENG = {
+				ENG = { # Launch the Invasion
 					country_event = {
 						id = iraq_hist.6
 						days = 30
@@ -129,17 +135,23 @@ country_event = {
 
 	option = {
 		name = iraq_hist.1.b # Coup is defeated
-		set_country_flag = IRQ_golden_square_coup_failed
-		add_political_power = -200
 		add_stability = -0.15
+		add_political_power = -200
+		add_popularity = {
+			ideology = ROOT
+			popularity = -0.25
+		}
+		add_timed_idea = {
+			idea = AFG_recent_political_turmoil
+			days = 180
+		}
 		ai_chance = {
 			base = 0
 		}
-		
 	}
 }
 
-country_event = { # Notification of coup
+country_event = { # Notification of Golden Square Coup
 	id = iraq_hist.2
 	title = iraq_hist.2.t
 	desc = iraq_hist.2.desc
@@ -148,7 +160,7 @@ country_event = { # Notification of coup
 	is_triggered_only = yes
 
 	option = {
-		name = iraq_hist.2.a # British option
+		name = iraq_hist.2.a # British Option
 		trigger = {
 			tag = ENG
 		}
@@ -167,11 +179,11 @@ country_event = { # Notification of coup
 	}
 
 	option = {
-		name = iraq_hist.2.b # gasp!
+		name = iraq_hist.2.b # Gasp!
 	}
 
 	option = {
-		name = iraq_hist.2.c # Axis reaction
+		name = iraq_hist.2.c # Axis Reaction
 		trigger = {
 			OR = {
 				tag = GER
@@ -192,7 +204,7 @@ country_event = { # Notification of coup
 	}
 }
 
-news_event = { # British launch invasion
+news_event = { # News Event - British Invade Iraq
 	id = iraq_hist.3
 	title = iraq_hist.3.t
 	desc = iraq_hist.3.desc
@@ -206,47 +218,49 @@ news_event = { # British launch invasion
 
 }
 
-country_event = { # Axis send guns
+country_event = { # The Axis Send Guns - Golden Square Coup Response
 	id = iraq_hist.4
 	title = iraq_hist.4.t
 	desc = iraq_hist.4.desc
 	picture = GFX_report_event_tur_machine_gunners
 
 	fire_only_once = yes
+	
 	is_triggered_only = yes
 
 	option = {
 		name = iraq_hist.4.a
+		add_war_support = 0.05
 		add_equipment_to_stockpile = {
 			type = infantry_equipment
-			amount = 500
+			amount = 1000
 			producer = FROM
 		}
 	}
 }
 
-country_event = { # British victory, offer terms
+country_event = { # British Victory, Offer Terms
 	id = iraq_hist.5
 	title = iraq_hist.5.t
 	desc = iraq_hist.5.desc
 	picture = GFX_report_event_generic_conference
 
 	trigger = {
-		ENG={
+		ENG = {
 			controls_state = 291
 			has_country_flag = IRQ_anglo_war
 		}
-		IRQ={
+		IRQ = {
 			has_country_flag = IRQ_historical_golden_square_coup
 			has_country_flag = IRQ_anglo_war
 		}
 	}
+
 	fire_only_once = yes
 
-	option = { ## Iraq agrees to terms
+	option = { # Iraq Agrees to Terms
 		name = iraq_hist.5.a
 		white_peace = ENG
-		
 		ENG = {
 			clr_country_flag = IRQ_anglo_war
 			set_autonomy = {
@@ -254,36 +268,41 @@ country_event = { # British victory, offer terms
 				autonomy_state = autonomy_puppet
 				end_wars = yes
 			}
+			if = {
+				limit = {
+					is_in_faction = yes
+				}
+				add_to_faction = IRQ
+			}
 			add_ai_strategy = {
 				type = ignore
 				id = IRQ
 				value = 100
 			}
 		}
-		IRQ={
-			give_military_access = ENG
+		IRQ = {
 			clr_country_flag = IRQ_anglo_war
 			set_country_flag = IRQ_british_occupation_flag
-			set_country_flag = IRQ_golden_square_coup_failed
 			clr_country_flag = IRQ_historical_golden_square_coup
-			drop_cosmetic_tag = yes
 			set_politics = {
 				ruling_party = neutrality
-				elections_allowed = no
+				elections_allowed = yes
+				last_election = 1939.4.29
+				election_frequency = 48
 			}
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.3
-			}
-			country_event = {
-				id = iraq_hist.9
-				days = 10
+				popularity = 0.35
 			}
 			if = {
 				limit = {
 					NOT = {
 						has_country_leader = {
-							character = IRQ_Abd_al_Ilah
+							character = IRQ_nuri_al_said
+							ruling_only = yes
+						}
+						has_country_leader = {
+							character = IRQ_abd_al_ilah
 							ruling_only = yes
 						}
 						has_country_leader = {
@@ -295,46 +314,53 @@ country_event = { # British victory, offer terms
 							ruling_only = yes
 						}
 					}
-					
 				}
 				add_country_leader_role = {
-					character = IRQ_Abd_al_Ilah
+					character = IRQ_nuri_al_said
 					promote_leader = yes
 					country_leader = {
-						ideology = constitutional_monarchy
-						expire = "1965.1.1.1"
-						traits = { EGY_regent }
+						ideology = controlled_democracy
+						traits = {
+							man_of_the_nation
+							appeaser
+						}
 					}
 				}
-				promote_character = IRQ_Abd_al_Ilah
+				# add_country_leader_role = { # Nuri al-Said had more of a sway
+				# 	character = IRQ_abd_al_ilah
+				# 	promote_leader = yes
+				# 	country_leader = {
+				# 		ideology = constitutional_monarchy
+				# 		expire = "1965.1.1.1"
+				# 		traits = { EGY_regent }
+				# 	}
+				# }
+				# promote_character = IRQ_abd_al_ilah
 			}
 		}
-		#swap_ideas = {
-			#remove_idea = IRQ_golden_square_defense_government_idea
-			#add_idea = IRQ_golden_square_defense_government_idea_2
-		#}
+		drop_cosmetic_tag = yes
 	}
 }
 
 country_event = {
-	id = iraq_hist.6 ## British launch invasion
+	id = iraq_hist.6 # British Launch Invasion?
 	title = iraq_hist.6.t
 	desc = iraq_hist.6.desc
 	picture = GFX_report_event_tur_machine_gunners
 
 	fire_only_once = yes
+
 	trigger = {
 		original_tag = ENG
-		IRQ={
+		IRQ = {
 			has_government = fascism
 			has_country_flag = IRQ_historical_golden_square_coup
 		}
-		ENG={
-			NOT={
+		ENG = {
+			NOT = {
 				has_government = fascism
 			}
 		}
-		date > 1941.5.1
 	}
 
 	option = {
@@ -349,25 +375,23 @@ country_event = {
 		ai_chance = {
             base = 100
         }
-		IRQ={
+		IRQ = {
 			set_country_flag = IRQ_anglo_war
-			set_country_flag = {
+			set_country_flag = { # Make into mission for Iraq "Survive the Storm"
 				flag = IRQ_anglo_war_day_counter
-				days = 365
+				days = 180
 			}
 		}
 		ENG = {
 			set_country_flag = IRQ_anglo_war
-			complete_national_focus = uk_iraq_focus
 			declare_war_on = {
 				target = IRQ
 				type = topple_government
 			}
 		}
-		
 		country_event = {
 			id = iraq_hist.3
-			days = 1
+			hours = 6
 		}
 	}
 
@@ -376,17 +400,33 @@ country_event = {
 		ai_chance = {
             base = 0
         }
-		IRQ={
+		IRQ = {
 			set_country_flag = IRQ_golden_square_coup_succeded
-			add_ideas = IRQ_GER_TREATY
-			give_resource_rights = { receiver = GER state = 1045 }
-			give_resource_rights = { receiver = GER state = 676 }
+			every_state = {
+				limit = {
+					OR = {
+						state = 1048
+						state = 1045
+						state = 676
+					}
+				}
+				every_country = {
+					limit = {
+						tag = GER
+					}
+					give_resource_rights = {
+						receiver = GER
+						state = PREV
+					}
+				}
+			}
+			add_ideas = IRQ_german_treaty
 			diplomatic_relation = {
 				country = GER
-				relation = docking_rights
+				relation = offer_military_access
 				active = yes
 			}
-			GER={
+			GER = {
 				diplomatic_relation = {
 					country = IRQ
 					relation = guarantee
@@ -403,6 +443,7 @@ country_event = { # Iraqi victory
 	picture = GFX_report_event_tur_machine_gunners
 
 	fire_only_once = yes
+
 	trigger = {
 		original_tag = IRQ
 		surrender_progress < 0.1 #Iraq isn't losing
@@ -418,16 +459,31 @@ country_event = { # Iraqi victory
 		clr_country_flag = IRQ_anglo_war
 		transfer_state = 656
 		set_country_flag = IRQ_golden_square_coup_succeded
-		add_ideas = IRQ_GER_TREATY
-		give_resource_rights = { receiver = GER state = 1045 }
-		give_resource_rights = { receiver = GER state = 676 }
-		give_resource_rights = { receiver = GER state = 656 }
+		every_state = {
+			limit = {
+				OR = {
+					state = 1048
+					state = 1045
+					state = 676
+				}
+			}
+			every_country = {
+				limit = {
+					tag = GER
+				}
+				give_resource_rights = {
+					receiver = GER
+					state = PREV
+				}
+			}
+		}
+		add_ideas = IRQ_german_treaty
 		diplomatic_relation = {
 			country = GER
 			relation = docking_rights
 			active = yes
 		}
-		GER={
+		GER = { 
 			diplomatic_relation = {
 				country = IRQ
 				relation = guarantee
@@ -435,105 +491,12 @@ country_event = { # Iraqi victory
 			}
 		}
 	}
+
 	option = {
 		name = iraq_hist.7.b #Continue war
 	}
 }
 
-# country_event = { # empty event
-# 	id = iraq_hist.8
-# 	title = iraq_hist.8.t
-# 	desc = iraq_hist.8.desc
-# 	picture = GFX_report_event_IRQ_german_visit
-
-# 	fire_only_once = yes
-# 	trigger = {
-# 		date > 1941.3.1
-# 	}
-
-# 	option = {
-# 		name = iraq_hist.8.a
-		
-# 	}
-# }
-
-country_event = { # 
-	id = iraq_hist.9
-	title = iraq_hist.9.t
-	desc = iraq_hist.9.desc
-	picture = GFX_report_event_tur_machine_gunners
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = iraq_hist.9.a
-		add_ideas = IRQ_jamil_al_midfai
-		hidden_effect = {
-			country_event = {
-				id = iraq.hist.10
-				days = 130
-			}
-		}
-	}
-}
-country_event = { # 
-	id = iraq_hist.10
-	title = iraq_hist.10.t
-	desc = iraq_hist.10.desc
-	picture = GFX_report_event_tur_machine_gunners
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	trigger = {
-		is_subject = yes
-	}
-
-	option = {
-		name = iraq_hist.10.a
-		add_ideas = IRQ_Abd_al_ilah_idea
-		add_stability = -0.05
-		set_politics = {
-			ruling_party = democratic
-   		 	elections_allowed = no
-		}
-		set_party_name = {
-			ideology = democratic
-			long_name = "National Brotherhood Party"
-			name = "NBP"
-		}
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.3
-		}
-		add_country_leader_role = {
-			character = IRQ_nuri_al_said
-			country_leader = {
-				expire = "1965.1.1"
-				ideology = conservatism
-				traits = {
-					man_of_the_nation
-				}
-			}
-			promote_leader = yes
-		}
-		ai_chance = {
-			base = 100
-		}
-	}
-	# option = {
-	# 	name = iraq_hist.10.b
-	# 	country_event = {
-	# 		id = iraq_hist.11
-	# 		days = 50
-	# 	}
-	# 	ai_chance = {
-	# 		base = 0
-	# 	}
-	# }
-	
-}
 # country_event = { # 
 # 	id = iraq_hist.11
 # 	title = iraq_hist.11.t
@@ -1560,7 +1523,7 @@ country_event = {
 		name = irq.27.a
 		add_stability = 0.05
 		add_country_leader_role = {
-			character = IRQ_Abd_al_Ilah
+			character = IRQ_abd_al_ilah
 			promote_leader = yes
 			country_leader = {
 				ideology = absolute_monarchism

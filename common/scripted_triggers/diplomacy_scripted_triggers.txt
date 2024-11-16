@@ -1616,7 +1616,6 @@ DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
 				tag = IRQ
 				has_country_flag = IRQ_british_occupation_flag
 			}
-			
 		}
 		custom_trigger_tooltip = {
 			tooltip = IRQ_british_occupation_diplo_tt
@@ -1680,7 +1679,6 @@ DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
 				tag = IRQ
 				has_country_flag = IRQ_british_occupation_flag
 			}
-			
 		}
 		custom_trigger_tooltip = {
 			tooltip = IRQ_british_occupation_diplo_tt

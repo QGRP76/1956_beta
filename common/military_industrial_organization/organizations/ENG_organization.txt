@@ -170,14 +170,6 @@ ENG_vauxhall_organization = {
 			}
 		}
 		if = {
-			limit = { 
-				FROM = { original_tag = IRQ }				  
-			}
-			FROM = {
-				has_completed_focus = IRQ_invite_foreign_car_manufacturers
-			}
-		}
-		if = {
 			limit = { FROM = { original_tag = ETH } }
 			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
 		}
@@ -229,6 +221,14 @@ ENG_vauxhall_organization = {
 			limit = { FROM = { original_tag = BUL } } 
 			FROM = {
 				has_completed_focus = EGY_study_british_armor
+			}
+		}
+		if = {
+			limit = { 
+				FROM = { original_tag = IRQ }				  
+			}
+			FROM = {
+				has_completed_focus = IRQ_invite_foreign_car_manufacturers
 			}
 		}
 	}

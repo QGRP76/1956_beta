@@ -3283,7 +3283,7 @@ on_actions = {
 				POL = { remove_ideas = POL_Ribbentrop_Beck_Pact }
 			}
 
-			#Iraq declares their golden square coup war
+			#Iraq declares their Golden Square Coup war
 			if = {
 				limit = {
 					FROM = {
@@ -3292,7 +3292,7 @@ on_actions = {
 					}
 					tag = ENG # only if UK declares once
 					NOT = {
-						has_global_flag = R56_this_event_fire_flag #make better later on -  Fantom
+						has_global_flag = R56_this_event_fire_flag #make better later on - Fantom
 					}
 				}
 				hidden_effect = {
@@ -3313,14 +3313,13 @@ on_actions = {
 							}
 						}
 						news_event = {
-							hours = 4
+							hours = 6
 							id = iraq_hist.3
 						}
 					}
 					set_global_flag = R56_this_event_fire_flag #make better later on -  Fantom
 				}
 			}
-
 
 			#remove chi ger opinion
 			if = {

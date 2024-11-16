@@ -5578,6 +5578,10 @@ spriteTypes = {
 		name = "GFX_goal_IRQ_pardon_barzani"
 		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_pardon_barzani.dds"
 	}
+	SpriteType = {
+		name = "GFX_goal_IRQ_befriend_kuwait"
+		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_befriend_kuwait.dds"
+	}
 
 ### ----> JOR
 

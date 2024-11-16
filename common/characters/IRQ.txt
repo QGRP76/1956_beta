@@ -138,7 +138,7 @@
 			}
 		}
 	}
-	IRQ_Abd_al_Ilah={
+	IRQ_abd_al_ilah={
 		name="Abd al-Ilah ibn Ali al-Hashimi"
 		portraits={
 			civilian={
@@ -1454,16 +1454,16 @@
 		advisor={
 			slot = political_advisor
 			idea_token = IRQ_clark_kerr
-			allowed  = {
-					original_tag  = IRQ 
-				}
-				traits  = {
-					the_foreign_connection 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-				cost = 150
+			allowed = {
+				original_tag = IRQ 
+			}
+			traits = {
+				the_foreign_connection 
+			}
+			ai_will_do = {
+				factor= 1.000
+			}
+			cost = 150
 		}
 		name="Archibald Clark Kerr"
 		portraits={

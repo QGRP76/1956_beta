@@ -3391,8 +3391,8 @@ IRQ = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "'Ad" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Isra'" "Mi'raj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibra'il" "Mīkha'il"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -3432,8 +3432,8 @@ OMA = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "'Ad" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Isra'" "Mi'raj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibra'il" "Mīkha'il"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -3503,8 +3503,8 @@ SAU = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "'Ad" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Isra'" "Mi'raj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibra'il" "Mīkha'il"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -3572,8 +3572,8 @@ YEM = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "'Ad" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Isra'" "Mi'raj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibra'il" "Mīkha'il"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -3611,8 +3611,8 @@ EGY = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "'Ad" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Isra'" "Mi'raj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibra'il" "Mīkha'il"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -3651,8 +3651,8 @@ SYR = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "'Ad" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Isra'" "Mi'raj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibra'il" "Mīkha'il"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -3736,8 +3736,8 @@ JOR = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "'Ad" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Isra'" "Mi'raj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibra'il" "Mīkha'il"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -3780,8 +3780,8 @@ KUW = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "'Ad" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Isra'" "Mi'raj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibra'il" "Mīkha'il"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -3821,8 +3821,8 @@ PAL = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "'Ad" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Isra'" "Mi'raj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibra'il" "Mīkha'il"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -3861,8 +3861,8 @@ UAE = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "'Ad" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Isra'" "Mi'raj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibra'il" "Mīkha'il"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
@@ -3901,8 +3901,8 @@ QAT = {
 	
 	operation = {
 		0 = {
-			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
-			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "al-Mansur" "'Ad" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Isra'" "Mi'raj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat al-arsh" "Muqarrabun" "Jibra'il" "Mīkha'il"
 			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
 			"Bustan" "Khaliat Nahl" "Tabl"
 		}
