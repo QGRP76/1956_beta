@@ -11,6 +11,7 @@ recruit_character = MEN_li_shouxin
 recruit_character = MEN_wang_ying
 recruit_character = MEN_ryukichi_tanaka
 recruit_character = MEN_altanochir
+recruit_character = MEN_zhu_shifu
 recruit_character = MEN_hesehn_tiemei
 recruit_character = MEN_guan_xingde
 recruit_character = MEN_kyoiji_tomonaga
@@ -81,6 +82,12 @@ set_country_flag = started_out_as_landlocked
 set_cosmetic_tag = MEN_CHI_AUT
 
 give_military_access = JAP
+
+612 = {
+	add_dynamic_modifier = {
+		modifier = r56_MEN_demilitarized_state
+	}
+}
 
 set_politics = {
 	ruling_party = neutrality

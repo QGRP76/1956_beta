@@ -70,9 +70,9 @@ characters={
 		}		
 	}
 	MEN_ulanhu={
-		name="Ulanhu"
+		name=MEN_ulanhu
 		portraits={
-			civilian={
+			army={
 				large="GFX_r56_portrait_MEN_Ulanhu"
 			}
 		}
@@ -87,17 +87,36 @@ characters={
 		}
 		corps_commander = {
 			traits = {
+				politically_connected
 				trickster 
 				guerilla_fighter 
 			}
 			skill = 2
 			attack_skill = 2
-			defense_skill = 1
+			defense_skill = 2
 			planning_skill = 1
-			logistics_skill = 3
+			logistics_skill = 2
 			legacy_id = -1
 			visible = {
-				always = no # Change later
+				OR = {
+					has_completed_focus = MEN_work_with_the_communists
+					has_government = communism
+				}
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = MEN_ulanhu
+			ledger = army
+			available = {
+				OR = {
+					has_completed_focus = MEN_work_with_the_communists
+					has_government = communism
+				}
+			}
+			cost = 100
+			traits = {
+				army_chief_morale_2
 			}
 		}
 	}
@@ -457,6 +476,41 @@ characters={
 			}
 		}
 	}		
+	MEN_zhu_shifu={
+		name=MEN_zhu_shifu
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_asia_generic_land_7.dds" 
+				large="gfx/leaders/Asia/portrait_asia_generic_land_7.dds"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer artillerist winter_specialist }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			visible = {
+				has_completed_focus = MEN_consolidate_national_rule
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = MEN_zhu_shifu
+			ledger = army
+			available = {
+				has_completed_focus = MEN_consolidate_national_rule
+			}
+			traits = {
+				army_artillery_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}	
 	MEN_hesehn_tiemei={
 		name=MEN_hesehn_tiemei
 		portraits={

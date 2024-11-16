@@ -3,6 +3,7 @@
 
  ################### CHARACTERS ###################
 
+ MEN_ulanhu:0 "Ulaankhüü"
  MEN_li_shouxin:0 "Li Shouxin"
  MEN_altanochir:0 "Altanochir"
  MEN_hikojiro_muratani:0 "Hikojiro Muratani"
@@ -14,7 +15,7 @@
  MEN_nalan_kang_an:0 "Nalan Kang'an"
  MEN_songgotu_zhanshan:0 "Songgotu Zhanshan"
  MEN_yonimitsu_kasahara:0 "Yonimitsu Kasahara"
- MEN_altanochir:0 "Altanochir"
+ MEN_zhu_shifu:0 "Zhu Shifu"
 
  ################### ARMY ###################
 
@@ -483,6 +484,14 @@
 
  MEN_harmony_of_the_five_races:0 "Harmony of the Five Races"
 
+ MEN_the_three_principles:0 "The Three Principles"
+
+ MEN_nationalism_unity_independence:0 "Nationalism, Unity, Independence!"
+
+ MEN_cooperation_with_the_communists:0 "Cooperation with the Communists"
+
+ MEN_the_new_life_movement:0 "The New Life Movement"
+
  ################### DECISIONS ###################
 
  MEN_the_suiyuan_campaign:0 "The Suiyuan Campaign"
@@ -529,3 +538,5 @@
  MEN_possible_event_effects:0 "Possible Reward(s) from §YEvent§!:"
  MEN_alternative_event_effects:0 "Alternative Reward(s) from §YEvent§!:"
  MEN_invasion_countdown_start:0 "We will §Ybegin preparations§! for an §Rinvasion§! of §YInner Mongolia§!."
+ r56_MEN_demilitarized_state:0 "Demilitarized State"
+ MEN_reinvite_chinese_army_tt:0 "Create a §YDì 35 Jūn§! division in §Y[THIS.GetName]§!."

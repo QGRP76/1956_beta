@@ -657,6 +657,7 @@ r56_AUS_german_resistance_armed = {
 		}
 	}
 }
+
 SAU_oil_rush = {
 	icon = GFX_decision_oil
 	
@@ -672,4 +673,20 @@ PHI_agriculture = {
 	production_speed_infrastructure_factor = 0.15
 	production_speed_industrial_complex_factor = 0.1
 	local_supply_impact_factor = -0.15
+}
+
+r56_MEN_demilitarized_state = {
+	icon = GFX_unplanned_offensive
+	attacker_modifier = yes
+	army_speed_factor = -0.25
+	army_attack_factor = -0.15
+	local_supplies = -0.35
+	disable_strategic_redeployment = 1
+	remove_trigger = {
+		612 = {
+			NOT = {
+				is_controlled_by = MEN
+			}
+		}
+	}
 }

@@ -160,6 +160,62 @@ ideas = {
 			}
         }
 
+		MEN_kwantungs_invisible_hand_democratic_2 = {
+
+			name = MEN_kwantungs_invisible_hand
+			
+            allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				NOT = {
+					OR = {
+						is_neighbor_of = JAP
+						JAP = {
+							any_allied_country = {
+								is_neighbor_of = MEN
+							}
+						}
+					}
+				}
+				JAP = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+				NOT = {
+					AND = {
+						is_ally_with = JAP
+						has_war_with = JAP
+					}
+				}
+				JAP = {
+					has_civil_war = yes
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = MEN_kwantungs_invisible_hand
+			
+			modifier = {
+				political_power_factor = -0.05
+				fascism_drift = 0.01
+			}
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = -0.05
+				defense_bonus_against = -0.05
+			}
+        }
+
 		##### FASCIST KWANTUNG SPIRITS #####
 
 		MEN_kwantungs_invisible_hand_fascist = {
@@ -846,71 +902,61 @@ ideas = {
 			}
 		}
 
-        MEN_increasing_jap_influence = {
-            allowed = {
-				original_tag = MEN
+		MEN_nationalism_unity_independence = {
+
+			allowed = {
+				always = no
 			}
 
 			allowed_civil_war = {
-				original_tag = MEN
+				always = yes
 			}
-			
+
 			removal_cost = -1
 
-			picture = generic_intel_bonus
-			
-			modifier = {
-				fascism_drift = 0.05
-				fascism_acceptance = 10
-			}
-        }
+			picture = SPR_torchbearers_of_tomorrow
 
-		MEN_weakened_jap_influence = {
-            allowed = {
-				original_tag = MEN
+			modifier = {
+				conscription_factor = 0.05
+				war_support_factor = 0.10
+				political_power_factor = 0.05
+			}
+		}
+
+		MEN_cooperation_with_the_communists = {
+
+			allowed = {
+				always = no
 			}
 
 			allowed_civil_war = {
-				original_tag = MEN
+				always = no
 			}
-			
+
 			removal_cost = -1
 
-			picture = generic_intel_bonus
-			
+			picture = generic_communism_drift_bonus
+
 			modifier = {
-           	 	fascism_acceptance = 10
+				communism_drift = 0.03
+				conscription = 0.005
+				war_support_factor = 0.05
+				stability_factor = 0.05
+				political_power_factor = -0.05
+				resistance_growth_on_our_occupied_states = 0.10
 			}
-        }
-
-		MEN_limited_jap_influence = {
-            allowed = {
-				original_tag = MEN
-			}
-
-			allowed_civil_war = {
-				original_tag = MEN
-			}
-			
-			removal_cost = -1
-
-			picture = generic_intel_bonus
-			
-			modifier = {
-				fascism_acceptance = 25
-				monthly_population = 0.15
-			}
-        }
+		}
 
 		MEN_military_orgs_banned = {
+
             allowed = {
-				original_tag = MEN
+				always = no
 			}
 
 			allowed_civil_war = {
-				original_tag = MEN
+				always = no
 			}
-			
+
 			removal_cost = -1
 
 			picture = ast_volunteer_defence_corps
@@ -922,17 +968,18 @@ ideas = {
         }
 
 		MEN_the_three_principles = {
-			removal_cost = -1
-			
-			picture = men_three_principles
-			
+
 			allowed = {
 				always = no
 			}
-			
+
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
+
+			removal_cost = -1
+			
+			picture = men_three_principles
 			
 			modifier = {
 				stability_factor = 0.1
@@ -941,17 +988,18 @@ ideas = {
 		}
 
 		MEN_the_three_principles_1 = {
-			removal_cost = -1
-			
-			picture = men_three_principles
 			
 			allowed = {
 				always = no
 			}
-			
+
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
+
+			removal_cost = -1
+			
+			picture = men_three_principles
 			
 			modifier = {
 				stability_factor = 0.1
@@ -961,17 +1009,18 @@ ideas = {
 		}
 
 		MEN_the_three_principles_2 = {
-			removal_cost = -1
-			
-			picture = men_three_principles
 			
 			allowed = {
 				always = no
 			}
-			
+
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
+
+			removal_cost = -1
+			
+			picture = men_three_principles
 			
 			modifier = {
 				stability_factor = 0.15
@@ -981,17 +1030,18 @@ ideas = {
 		}
 
 		MEN_the_new_life_movement = {
-			removal_cost = -1
-			
-			picture = generic_democratic_drift_bonus
 			
 			allowed = {
 				always = no
 			}
-			
+
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
+
+			removal_cost = -1
+			
+			picture = generic_democratic_drift_bonus
 			
 			modifier = {
 				stability_factor = -0.05
@@ -1001,119 +1051,86 @@ ideas = {
 		}
 
 		MEN_the_new_life_movement_1 = {
-			removal_cost = -1
-			
-			picture = generic_exploit_mines
+
+			name = MEN_the_new_life_movement
 			
 			allowed = {
 				always = no
 			}
-			
+
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
+
+			removal_cost = -1
+			
+			picture = generic_democratic_drift_bonus
 			
 			modifier = {
-				political_power_factor = 0.05
+				political_power_factor = 0.10
+				fascism_drift = 0.01
 				production_factory_efficiency_gain_factor = 0.05
+				war_support_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
 			}
 		}
 
 		MEN_the_new_life_movement_2 = {
-			removal_cost = -1
-			
-			picture = generic_exploit_mines
+
+			name = MEN_the_new_life_movement
 			
 			allowed = {
 				always = no
 			}
-			
+
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
+
+			removal_cost = -1
+			
+			picture = generic_democratic_drift_bonus
 			
 			modifier = {
-				stability_factor = -0.05
+				political_power_factor = 0.10
+				fascism_drift = 0.01
+				stability_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.05
+				war_support_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
 				consumer_goods_factor = 0.05
 				production_lack_of_resource_penalty_factor = -0.05
-				industrial_capacity_factory = 0.05
 			}
 		}
 
 		MEN_the_new_life_movement_3 = {
-			removal_cost = -1
-			
-			picture = generic_exploit_mines
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			modifier = {
-				political_power_factor = 0.05
-				production_factory_efficiency_gain_factor = 0.05
-				production_factory_max_efficiency_factor = 0.05
-				consumer_goods_factor = 0.05
-				production_lack_of_resource_penalty_factor = -0.05
-				industrial_capacity_factory = 0.05
-			}
-		}
 
-		MEN_the_new_life_movement_4 = {
-			removal_cost = -1
-			
-			picture = generic_exploit_mines
+			name = MEN_the_new_life_movement
 			
 			allowed = {
 				always = no
 			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			modifier = {
-				political_power_factor = 0.05
-				production_factory_efficiency_gain_factor = 0.05
-				production_factory_max_efficiency_factor = 0.05
-				consumer_goods_factor = 0.1
-				production_lack_of_resource_penalty_factor = -0.05
-				industrial_capacity_factory = 0.05
-				global_building_slots = 0.1
-				production_speed_industrial_complex_factor = 0.1
-				production_speed_infrastructure_factor = 0.1 
-			}
-		}
 
-		MEN_the_new_life_movement_5 = {
-			removal_cost = -1
-			
-			picture = generic_exploit_mines
-			
-			allowed = {
+			allowed_civil_war = {
 				always = no
 			}
+
+			removal_cost = -1
 			
-			allowed_civil_war = {
-				always = yes
-			}
+			picture = generic_democratic_drift_bonus
 			
 			modifier = {
-				political_power_factor = 0.1
-				production_factory_efficiency_gain_factor = 0.05
-				production_factory_max_efficiency_factor = 0.1
-				production_lack_of_resource_penalty_factor = -0.05
+				political_power_factor = 0.10
+				fascism_drift = 0.01
+				stability_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+				war_support_factor = 0.05
+				production_factory_max_efficiency_factor = 0.10
 				industrial_capacity_factory = 0.05
-				global_building_slots = 0.1
-				production_speed_industrial_complex_factor = 0.1
-				production_speed_infrastructure_factor = 0.1 
+				consumer_goods_factor = 0.10
+				production_lack_of_resource_penalty_factor = -0.05
+				research_speed_factor = 0.05
 			}
 		}
 

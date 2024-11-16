@@ -3511,7 +3511,7 @@ focus_tree = {
 			add_political_power = 35
 			add_popularity = {
 				ideology = fascism
-				popularity = -0.10
+				popularity = -0.05
 			}
 			add_stability = -0.05
 			custom_effect_tooltip = r56_newline
@@ -3568,6 +3568,22 @@ focus_tree = {
 					artillery = { x = 0 y = 1 }
 				}
 			}	
+			custom_effect_tooltip = r56_newline
+			if = {
+				limit = {
+					has_idea = MEN_kwantungs_invisible_hand
+				}
+				swap_ideas = {
+					remove_idea = MEN_kwantungs_invisible_hand
+					add_idea = MEN_kwantungs_invisible_hand_democratic
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = MEN_kwantungs_invisible_hand_democratic
+					add_idea = MEN_kwantungs_invisible_hand_democratic_2
+				}
+			}
 			if = {
 				limit = {
 					SHX = {
@@ -3585,6 +3601,19 @@ focus_tree = {
 					}
 				}
 			}
+			effect_tooltip = { # Tooltip
+				create_corps_commander = {
+					name = "Zhu Shifu"
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+					traits = {}
+				}
+			}
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = MEN_zhu_shifu
 			random_owned_controlled_state = {
 				prioritize = { 611 }
 				limit = {
@@ -3607,6 +3636,13 @@ focus_tree = {
 		id = MEN_compromise_with_nanjing
 
 		icon = GFX_goal_CHI_continue_the_peoples_tutelage
+
+		available = {
+			NOT = {
+				has_war_with = CHI
+			}
+			country_exists = CHI
+		}
 		
 		prerequisite = { 
 			focus = MEN_consolidate_national_rule
@@ -3620,16 +3656,43 @@ focus_tree = {
 		y = 1
 	
 		relative_position_id = MEN_consolidate_national_rule
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 0
 		}
 
 		completion_reward = {
-			add_stability = -0.02
-			add_political_power = 25
-			custom_effect_tooltip = MEN_Mini_Game_Unlock_chi_tt
+			add_political_power = -35
+			diplomatic_relation = {
+				country = JAP
+				relation = military_access
+				active = no
+			}
+			if = {
+				limit = {
+					event_target:WTT_current_china_leader = {
+						is_faction_leader = yes
+					}
+				}
+				event_target:WTT_current_china_leader = {
+					add_to_faction = ROOT
+				}
+			}
+			else_if = {
+				limit = { 
+					event_target:WTT_current_china_leader = {
+						is_in_faction = yes
+					}
+				}
+				event_target:WTT_current_china_leader = {
+					faction_leader = {
+						add_to_faction = ROOT
+					}
+				}
+			}
+			custom_effect_tooltip = r56_newline
+			remove_ideas = MEN_kwantungs_invisible_hand_democratic_2
 		}
 	}
 
@@ -3638,10 +3701,7 @@ focus_tree = {
 
 		icon = GFX_goal_MEN_eliminate_the_prince
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = reaffirmed_loyality_to_chi_tt
-				has_country_flag = reaffirmed_loyality_to_chi_flag
-			}
+			fascism < 0.10
 		}
 
 		prerequisite = { 
@@ -3659,30 +3719,17 @@ focus_tree = {
 		ai_will_do = {
 			factor = 0
 		}
+
 		completion_reward = {
-			hidden_effect = {
-				remove_ideas = MEN_increasing_jap_influence
-				set_party_name = { 
-    				ideology = neutrality 
-					name = "Kuomintang"
-					long_name = "Kuomintang"
-				}
-			}
-			remove_ideas = MEN_weakened_jap_influence
-			add_stability = -0.1
+			kill_country_leader = yes 
+			add_stability = -0.05
 			add_popularity = {
     			ideology = fascism
-    			popularity = -1
+    			popularity = -0.10
 			}
-			kill_country_leader = yes 
-			add_country_leader_role = {
-  				character = MEN_nima_odsor
-  				promote_leader = yes
-  				country_leader = {
-    				ideology=the_peoples_tutelage
-    				expire = "1965.1.1.12"
-   					traits={ army_connections }
-				}
+			promote_character = {
+				character = MEN_nima_odsor
+				ideology = the_peoples_tutelage
 			}
 		}
 	}
@@ -3692,9 +3739,9 @@ focus_tree = {
 
 		icon = GFX_goal_MEN_rather_reform_then_change
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = reaffirmed_loyality_to_chi_tt
-				has_country_flag = reaffirmed_loyality_to_chi_flag
+			has_country_leader = {
+				character = MEN_prince_demchugdongrub
+				ruling_only = yes
 			}
 		}
 		prerequisite = { 
@@ -3713,13 +3760,13 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			remove_country_leader_trait = fascist_sympathies
 			add_stability = 0.05
-			add_political_power = 50
+			add_political_power = 15
 			add_popularity = {
     			ideology = fascism
-    			popularity = 0.05
+    			popularity = -0.05
 			}
+			remove_country_leader_trait = subservient_ultranationalist
 		}
 	}
 
@@ -3727,11 +3774,6 @@ focus_tree = {
 		id = MEN_reform_the_mongolian_council
 
 		icon = GFX_goal_generic_intelligence_exchange
-		available = {
-			CHI = {
-				has_war_with = JAP 
-			}
-		}
 
 		prerequisite = { 
 			focus = MEN_no_country_for_fascist_sympathisers focus = MEN_reform_rather_then_change
@@ -3740,16 +3782,18 @@ focus_tree = {
 		y = 1
 	
 		relative_position_id = MEN_no_country_for_fascist_sympathisers
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-			add_timed_idea = {
-				idea = MEN_anti_japanese_stratagems
-				days = 100
+			add_political_power = 75
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
 			}
+			add_stability = 0.05
 		}
 	}
 
@@ -3757,11 +3801,21 @@ focus_tree = {
 		id = MEN_reinvite_the_chinese_military
 
 		icon = GFX_goal_CHI_coa_army
+
 		available = {
-			CHI = {
-				has_war_with = JAP 
+			NOT = {
+				has_war_with = CHI
+			}
+			country_exists = CHI
+			any_neighbor_country = {
+				OR = {
+					tag = CHI
+					is_ally_with = CHI
+				}
 			}
 		}
+
+		bypass_if_unavailable = yes
 
 		prerequisite = { 
 			focus = MEN_reform_rather_then_change
@@ -3770,15 +3824,56 @@ focus_tree = {
 		y = 2
 	
 		relative_position_id = MEN_reform_rather_then_change
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-			add_timed_idea = {
-				idea = MEN_anti_japanese_stratagems
-				days = 100
+			army_experience = 15
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			division_template = {
+				name = "Bùbīng Shī"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					cavalry = { x = 3 y = 0 }
+					cavalry = { x = 3 y = 1 }
+					cavalry = { x = 3 y = 2 }
+				}
+				support = {
+					artillery = { x = 0 y = 1 }
+				}
+			}	
+			random_owned_controlled_state = {
+				prioritize = { 611 }
+				limit = {
+					is_core_of = ROOT
+				}
+				custom_effect_tooltip = MEN_reinvite_chinese_army_tt 
+				hidden_effect = {
+					create_unit = {
+						division = "name = \"Dì 35 Jūn\" division_template = \"Bùbīng Shī\" start_experience_factor = 0.15 start_equipment_factor = 0.95 start_manpower_factor = 0.90"
+						owner = ROOT
+						count = 1
+						prioritize_location = 10397
+					}
+				}
 			}
 		}
 	}
@@ -3787,11 +3882,12 @@ focus_tree = {
 		id = MEN_tear_up_the_qin_doihara_agreement
 
 		icon = GFX_focus_renounce_the_treaty_of_trianon
+
 		available = {
-			CHI = {
-				has_war_with = JAP 
-			}
+			controls_state = 612
 		}
+
+		bypass_if_unavailable = yes
 
 		prerequisite = { 
 			focus = MEN_no_country_for_fascist_sympathisers
@@ -3800,15 +3896,19 @@ focus_tree = {
 		y = 2
 	
 		relative_position_id = MEN_no_country_for_fascist_sympathisers
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-			add_timed_idea = {
-				idea = MEN_anti_japanese_stratagems
-				days = 100
+			add_war_support = 0.05
+			add_political_power = 35
+			random_owned_controlled_state = {
+				prioritize = { 612 }
+				remove_dynamic_modifier = {
+					modifier = r56_MEN_demilitarized_state
+				}
 			}
 		}
 	}
@@ -3822,9 +3922,10 @@ focus_tree = {
 		icon = GFX_focus_attack_japan
 
 		available = {
-			has_country_leader = {
-				character = MEN_nima_odsor
+			NOT = {
+				has_war_with = CHI
 			}
+			country_exists = CHI
 		}
 
 		prerequisite = { 
@@ -3834,23 +3935,25 @@ focus_tree = {
 		y = 1
 	
 		relative_position_id = MEN_tear_up_the_qin_doihara_agreement
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-				add_popularity = {
-					ideology = democratic
-					popularity = 0.1
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_ideas = MEN_the_three_principles
+			CHI = {
+				set_autonomy = {
+					target = ROOT
+					autonomous_state = autonomy_protectorate
+					end_wars = no
+					end_civil_wars = no
 				}
-				swap_ideas = {
-					remove_idea = MEN_the_three_principles
-					add_idea = MEN_the_three_principles_1
-				}
-				
-			custom_effect_tooltip = MEN_new_life_tt
-			set_country_flag = MEN_new_life_not_flag
+			}
 		}
 	}
 
@@ -3870,16 +3973,18 @@ focus_tree = {
 		y = 1
 	
 		relative_position_id = MEN_reinvite_the_chinese_military
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = MEN_the_three_principles
-				add_idea = MEN_the_three_principles_2
-			}	
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_political_power = 35
+			add_ideas = MEN_nationalism_unity_independence
 		}
 	}
 
@@ -3906,7 +4011,25 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			add_ideas = MEN_the_new_life_movement
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			effect_tooltip = { # Tooltip
+				create_corps_commander = {
+					name = "Ulaankhüü"
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+					traits = {}
+				}
+			}
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = MEN_ulanhu
+			custom_effect_tooltip = r56_newline
+			add_ideas = MEN_cooperation_with_the_communists
 		}
 	}
 
@@ -3914,6 +4037,11 @@ focus_tree = {
 		id = MEN_subdue_the_communist_threat
 
 		icon = GFX_goal_attack_communists
+
+		available = {
+			communism < 0.15
+		}
+
 		prerequisite = { 
 			focus = MEN_the_principle_of_nationalism 
 			focus = MEN_the_principle_of_democracy  
@@ -3927,13 +4055,18 @@ focus_tree = {
 		y = 1
 	
 		relative_position_id = MEN_the_principle_of_democracy
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-			add_ideas = MEN_the_new_life_movement
+			add_popularity = {
+				ideology = communism
+				popularity = -0.10
+			}
+			add_stability = 0.05
+			deactivate_advisor = MEN_serengdongrub
 		}
 	}
 
@@ -3948,6 +4081,12 @@ focus_tree = {
 
 		x = -1
 		y = 1
+
+		available = {
+			NOT = {
+				has_government = communism
+			}
+		}
 	
 		relative_position_id = MEN_subdue_the_communist_threat
 		cost = 10
@@ -3971,7 +4110,9 @@ focus_tree = {
 		y = 1
 
 		available = {
-		
+			NOT = {
+				has_government = communism
+			}
 		}
 	
 		relative_position_id = MEN_embrace_the_new_life_movement
@@ -3981,10 +4122,10 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			IF = {
-				Limit = {
+			if = {
+				limit = {
 					MEN = {
-						has_idea = MEN_the_new_life_movement 
+						has_idea = MEN_the_new_life_movement
 					}
 				}
 				swap_ideas = {
@@ -3995,7 +4136,7 @@ focus_tree = {
 			else = {
 				swap_ideas = {
 					remove_idea = MEN_the_new_life_movement_1
-					add_idea = MEN_the_new_life_movement_3
+					add_idea = MEN_the_new_life_movement_2
 				}
 			}
 		}
@@ -4010,11 +4151,8 @@ focus_tree = {
 		y = 1
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = MEN_new_life_democratic_tt
-				NOT = {
-					has_country_flag = MEN_new_life_not_flag
-				}
+			NOT = {
+				has_government = communism
 			}
 		}
 	
@@ -4025,21 +4163,21 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			IF = {
-				Limit = {
+			if = {
+				limit = {
 					MEN = {
-						has_idea = MEN_the_new_life_movement 
+						has_idea = MEN_the_new_life_movement_1
 					}
 				}
 				swap_ideas = {
-					remove_idea = MEN_the_new_life_movement
+					remove_idea = MEN_the_new_life_movement_1
 					add_idea = MEN_the_new_life_movement_2
 				}
 			}
 			else = {
 				swap_ideas = {
-					remove_idea = MEN_the_new_life_movement_1
-					add_idea = MEN_the_new_life_movement_3
+					remove_idea = MEN_the_new_life_movement
+					add_idea = MEN_the_new_life_movement_1
 				}
 			}
 		}
@@ -4059,11 +4197,8 @@ focus_tree = {
 		y = 1
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = MEN_new_life_democratic_tt
-				NOT = {
-					has_country_flag = MEN_new_life_not_flag
-				}
+			NOT = {
+				has_government = communism
 			}
 		}
 	
@@ -4075,8 +4210,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = MEN_the_new_life_movement_3
-				add_idea = MEN_the_new_life_movement_4
+				remove_idea = MEN_the_new_life_movement_2
+				add_idea = MEN_the_new_life_movement_3
 			}
 		}
 	}
@@ -4092,7 +4227,10 @@ focus_tree = {
 		y = 1
 
 		available = {
-		
+			NOT = {
+				has_war_with = CHI
+			}
+			country_exists = CHI
 		}
 	
 		relative_position_id = MEN_the_principle_of_democracy
@@ -4102,18 +4240,30 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			hidden_effect = {
-				set_party_name = { 
-					ideology = democratic
-					name = "KMT-C"
-					long_name = "KMT-C"
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
 			}
+			add_political_power = -15
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.05
 			}
-			add_political_power = 50
+			add_opinion_modifier = {
+				target = CHI
+				modifier = medium_increase
+			}
 		}
 	}
 	
@@ -4128,11 +4278,11 @@ focus_tree = {
 		y = 1
 
 		available = {
-			has_government = democratic
+			
 		}
 	
 		relative_position_id = MEN_request_chinese_investment
-		cost = 5
+		cost = 8
 
 		ai_will_do = {
 			factor = 0
@@ -4140,7 +4290,14 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = {
 				ideology = democratic
-				popularity = 0.25
+				popularity = 0.15
+			}
+			add_political_power = 75
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				last_election = "1936.1.1"
+				election_frequency = 48
 			}
 		}
 	}
