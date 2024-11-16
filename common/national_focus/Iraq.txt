@@ -3351,6 +3351,11 @@ focus_tree = {
 		}
 
 		available = {
+			OR = {
+				controls_state = 1048
+				controls_state = 1045
+				controls_state = 676
+			}
 			has_country_leader = {
 				character = IRQ_bakr_sidqi
 				ruling_only = yes
@@ -3368,7 +3373,14 @@ focus_tree = {
 				}
 				ENG = {
 					remove_resource_rights = PREV
-					country_event = irq.15
+					if = {
+						limit = {
+							NOT = {
+								has_war_with = IRQ
+							}
+						}
+						country_event = { id = irq.15 hours = 12 }
+					}
 					add_opinion_modifier = {
 						target = ROOT
 						modifier = medium_decrease
@@ -3395,6 +3407,10 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {
+				has_war_with = GER
+			}
+			country_exists = GER
 			has_country_leader = {
 				character = IRQ_bakr_sidqi
 				ruling_only = yes
@@ -3439,7 +3455,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 	}
 	focus = {
-		id = IRQ_strengthen_ties_with_iran #TODO
+		id = IRQ_strengthen_ties_with_iran
 		icon = GFX_goal_PER_shah_both_shahs
 		prerequisite = {
 			focus = IRQ_nationalize_oil_company
@@ -3454,6 +3470,10 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {
+				has_war_with = PER
+			}
+			country_exists = PER
 			has_country_leader = {
 				character = IRQ_bakr_sidqi
 				ruling_only = yes
@@ -3463,7 +3483,16 @@ focus_tree = {
 		relative_position_id = IRQ_nationalize_oil_company
 
 		completion_reward = {
-			
+			PER = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
+				}
+			}
+			add_opinion_modifier = {
+				target = PER
+				modifier = large_increase
+			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 	}
@@ -3483,6 +3512,10 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {
+				has_war_with = GER
+			}
+			country_exists = GER
 			has_country_leader = {
 				character = IRQ_bakr_sidqi
 				ruling_only = yes
@@ -3540,12 +3573,21 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {
+				has_global_flag = MPL_no_border_war
+			}
+			656 = {
+				owner = {
+					controls_state = 656
+					NOT = {
+						tag = IRQ
+						has_war_with = ROOT
+					}
+				}
+			}
 			has_country_leader = {
 				character = IRQ_bakr_sidqi
 				ruling_only = yes
-			}
-			NOT = {
-				has_global_flag = MPL_no_border_war
 			}
 		}
 
@@ -3651,7 +3693,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 	}
 	focus = {
-		id = IRQ_militarize_the_saadabad_pact #TODO and everything below
+		id = IRQ_militarize_the_saadabad_pact #TODO
 		icon = GFX_focus_TUR_treaty_of_saadabad
 		prerequisite = {
 			focus = IRQ_strengthen_ties_with_iran
@@ -3691,13 +3733,19 @@ focus_tree = {
 		
 		x = -1
 		y = 1
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
 		}
 
 		available = {
+			any_other_country = {
+				is_major = yes
+				is_faction_leader = yes
+				has_government = fascism
+				is_in_faction_with = IRQ
+			}
 			has_country_leader = {
 				character = IRQ_bakr_sidqi
 				ruling_only = yes
@@ -3707,7 +3755,18 @@ focus_tree = {
 		relative_position_id = IRQ_join_the_axis
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = IRQ_acquire_western_technologies
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+				category = armor
+				category = light_air
+				category = industry
+				category = electronics
+			}
+			add_to_tech_sharing_group = axis_research
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 	}
@@ -3734,12 +3793,9 @@ focus_tree = {
 		}
 
 		relative_position_id = IRQ_join_the_axis
-		
-		continue_if_invalid = yes 
-		cancel_if_invalid = no
 
 		completion_reward = {
-			
+			add_ideas = IRQ_mawtini_idea
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 	}
@@ -3753,13 +3809,17 @@ focus_tree = {
 		
 		x = -4
 		y = 1
-		cost = 8
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
 		}
 
 		available = {
+			OR = {
+				controls_state = 1048
+				controls_state = 1049
+			}
 			has_country_leader = {
 				character = IRQ_bakr_sidqi
 				ruling_only = yes
@@ -3767,20 +3827,25 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			1048 = {
+			add_stability = 0.10
+			add_political_power = -35
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 1048
+						state = 1049
+					}
+					is_controlled_by = ROOT
+				}
 				add_core_of = IRQ
-				add_dynamic_modifier = {
+				add_dynamic_modifier = { #TODO - remove the other dynamic modifiers
 					modifier = r56_IRQ_kurdish_minority
 				}
 			}
-			1049 = {
-				add_core_of = IRQ
-				add_dynamic_modifier = {
-					modifier = r56_IRQ_kurdish_minority
-				}
-			}
-			add_stability = 0.05
-			add_political_power = -100
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 	}
@@ -3841,7 +3906,12 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_ideas = CRO_secularism
+			add_stability = -0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_ideas = PER_secular_nationalism
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 	}
@@ -3869,16 +3939,17 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_manpower = 40000
+			army_experience = 15
+			add_ideas = IRQ_kurdish_conscription
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = 5000
+				amount = 2000
 			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT } 
 	}
 	focus = {
-		id = IRQ_pardon_barzani
+		id = IRQ_pardon_barzani #TODO
 		icon = GFX_goal_IRQ_pardon_barzani
 
 		prerequisite = {
@@ -3927,6 +3998,7 @@ focus_tree = {
 		}
 
 		available = {
+			controls_state = 676
 			has_country_leader = {
 				character = IRQ_bakr_sidqi
 				ruling_only = yes
@@ -3934,6 +4006,22 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 676 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 			add_ideas = IRQ_assyrians_taxed
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY } 

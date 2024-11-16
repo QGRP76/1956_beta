@@ -757,7 +757,7 @@
  MPL_collapse_tt_2:0 "You will control the side that you influenced."
  MPL_collapse_tt_3:0 "The §YMandate of Palestine§! will §Ocollapse§!."
  MPL_arab_revolt_trigger:0 "The 1936 Arab Revolt has begun"
- MPL_no_border_war:0 "Has active border wars"
+ MPL_no_border_war:0 "§YHas§! active §Yborder wars§!."
  MPL_bop_warning:0 "§RTipping this balance of power too far to either side could cause the collapse of the mandate!§!"
  MPL_handle_strikes_tt:0 "Immediate effect upon focus start:\nWe will try to deal with the strikes through negotiations.\n\nEffects upon focus completion:"
  MPL_our_path:0 "§YIt is up to us to choose our next course of action.§!"

@@ -173,6 +173,24 @@ ideas = {
         
         # END #
         
+        IRQ_kurdish_conscription = {
+            allowed = {
+                original_tag = IRQ
+            }
+            allowed_civil_war = {
+                always = no
+            }
+
+            picture = tur_kemalist_army_officers_powerful_effect
+            removal_cost = -1
+
+            modifier = {
+                conscription_factor = 0.10
+                political_power_factor = 0.05
+                stability_factor = -0.05
+                consumer_goods_factor = -0.05
+            }
+        }
         IRQ_anti_british_sentiment = {
             allowed = {
                 original_tag = IRQ
@@ -871,8 +889,9 @@ ideas = {
             removal_cost = -1
 
             modifier = {
-                consumer_goods_factor = -0.05
-                stability_factor = -0.1
+                consumer_goods_factor = -0.10
+                neutrality_drift = -0.01
+                stability_factor = -0.05
             }
         }
         IRQ_abdul_latif_coup = {

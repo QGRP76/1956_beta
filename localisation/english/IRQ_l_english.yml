@@ -356,6 +356,7 @@
  # Ideas #
 
  IRQ_finalized_budget:0 "Finalized National Budget"
+ IRQ_kurdish_conscription:0 "Kurdish Conscription"
  IRQ_anti_british_sentiment:0 "Anti-British Sentiment"
  IRQ_anti_british_sentiment_desc:0 "The British has occupied our country for nearly a decade and we won't be silenced again to express our anger about their presence in our country"
  IRQ_conscription_laws_eased:0 "Conscription Laws Eased"
