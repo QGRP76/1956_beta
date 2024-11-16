@@ -1928,8 +1928,9 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = MAL_american_military_investment_idea
-			add_offsite_building = { type = arms_factory level = 900 }
-			add_offsite_building = { type = arms_factory level = -500 }
+			hidden_effect = {
+				add_offsite_building = { type = arms_factory level = 3 }
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_ }
@@ -1956,7 +1957,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = MAL_malay_international_volunteers_idea
-			add_offsite_building = { type = arms_factory level = -500 }
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2590,7 +2590,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		
+			add_popularity = {
+				ideology = MAL
+				popularity = 0.1
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_ }
