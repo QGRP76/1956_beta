@@ -2384,6 +2384,16 @@ country_event = { # EVENT TO RAJ ABOUT WAR EXHAUSTION
 		if = {
 			limit = {
 				AFG = {
+					controls_state = 1093
+				}
+			}
+			AFG = {
+				transfer_state = 1093
+			}
+		}
+		if = {
+			limit = {
+				AFG = {
 					controls_state = 443
 				}
 			}
@@ -5535,6 +5545,7 @@ country_event = { # UNITING THE ISLAMIC WORLD
 					state = 442
 					state = 445
 					state = 444
+					state = 1093
 					state = 443
 					state = 787
 					state = 441
@@ -5698,6 +5709,7 @@ country_event = { # UNITING THE ISLAMIC WORLD
 							state = 442
 							state = 445
 							state = 444
+							state = 1093
 							state = 443
 							state = 787
 							state = 441
@@ -5869,6 +5881,7 @@ country_event = { # UNITING THE ISLAMIC WORLD
 							state = 442
 							state = 445
 							state = 444
+							state = 1093
 							state = 443
 							state = 787
 							state = 441
@@ -7067,6 +7080,16 @@ country_event = { # AFGHANISTAN YES WHITE PEACE
 				transfer_state = 442
 				transfer_state = 445
 				transfer_state = 444
+			}
+			if = {
+				limit = {
+					AFG = {
+						controls_state = 1093
+					}
+				}
+				AFG = {
+					transfer_state = 1093
+				}
 			}
 			if = {
 				limit = {

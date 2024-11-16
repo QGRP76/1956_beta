@@ -837,7 +837,6 @@ AFG_communist_bop_category = {
 					free_building_slots = {
 						building = infrastructure
 						size > 0
-						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -7009,6 +7008,7 @@ AFG_pan_islamic_unification = {
 				controls_state = 445
 				controls_state = 444
 				controls_state = 443
+				controls_state = 1093
 				controls_state = 787
 				controls_state = 441
 				controls_state = 440
@@ -7141,6 +7141,7 @@ AFG_pan_islamic_unification = {
 				state = 445
 				state = 444
 				state = 443
+				state = 1093
 				state = 787
 				state = 441
 				state = 440
@@ -7264,6 +7265,7 @@ AFG_pan_islamic_unification = {
 				controls_state = 445
 				controls_state = 444
 				controls_state = 443
+				controls_state = 1093
 				controls_state = 787
 				controls_state = 441
 				controls_state = 440
@@ -7283,6 +7285,10 @@ AFG_pan_islamic_unification = {
 					resistance < 25
 				}
 				443 = {
+					compliance > 40
+					resistance < 25
+				}
+				1093 = {
 					compliance > 40
 					resistance < 25
 				}
@@ -7311,6 +7317,7 @@ AFG_pan_islamic_unification = {
 				state = 445
 				state = 444
 				state = 443
+				state = 1093
 				state = 787
 				state = 441
 				state = 440
@@ -7333,6 +7340,7 @@ AFG_pan_islamic_unification = {
 						state = 445
 						state = 444
 						state = 443
+						state = 1093
 						state = 787
 						state = 441
 						state = 440
