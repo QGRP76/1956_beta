@@ -1204,7 +1204,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POR_import_foreign_machinery
-		available = { has_tech = improved_machine_tools }
+		available = { has_tech = advanced_machine_tools }
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 180 }
@@ -1228,7 +1228,11 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = POR_import_foreign_machinery
-		available = { has_tech = construction2 }
+		available = { 
+			has_tech = construction3 
+			controls_state = 112
+			controls_state = 180
+		}
 		completion_reward = {
 			112 = {
 				add_extra_state_shared_building_slots = 2
@@ -1259,14 +1263,13 @@ focus_tree = {
 		id = POR_finish_the_santa_luzia_dam
 		prerequisite = { focus = POR_modernize_the_national_rail_network }
 		icon = GFX_focus_generic_hydroelectric_energy
-		cost = 12.9
+		cost = 15
 		ai_will_do = { base = 15 }
 		x = 0
 		y = 1
 		relative_position_id = POR_modernize_the_national_rail_network
 		available = {
-			has_tech = construction3
-			has_full_control_of_state = 112
+			has_tech = construction4
 			has_full_control_of_state = 181
 		}
 		completion_reward = {
@@ -1276,33 +1279,25 @@ focus_tree = {
 					name = POR_cabril_dam
 				}
 			}	
-			add_stability = 0.02
 			add_ideas = POR_hydroelectric_power
 			custom_effect_tooltip = CHL_skip_one_line_tt
-			if = {
-				limit = { has_full_control_of_state = 181 }
-				181 = {
-					add_extra_state_shared_building_slots = 3	
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-						province = {
-							id = 11885
-						}
-					}
-					add_building_construction = {
-						type = dam
-						level = 1
-						instant_build = yes
-						province = {
-							id = 11885
-						}
-					}
-					custom_effect_tooltip = {
-						localization_key = building_state_modifier|dam
-						INDENT = "    "
-					}
+			181 = {
+				add_extra_state_shared_building_slots = 3	
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					province = { id = 11885 }
+				}
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = { id = 11885 }
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
 				}
 			}
 		}
@@ -1401,8 +1396,8 @@ focus_tree = {
 		relative_position_id = POR_subsidize_rolling_stock_production
 		available = { 
 			OR = {
-				has_tech = concentrated_industry2
-				has_tech = dispersed_industry2
+				has_tech = concentrated_industry3
+				has_tech = dispersed_industry3
 			}
 			controls_state = 112
 			controls_state = 180
@@ -1424,14 +1419,14 @@ focus_tree = {
 		id = POR_modernize_the_countryside
 		prerequisite = { focus = POR_finish_the_urban_electrification }
 		icon = GFX_goal_generic_farm_tractor
-		cost = 12.9
+		cost = 15
 		x = 0
 		y = 1
 		relative_position_id = POR_finish_the_urban_electrification
 		available = { 
 			OR = {
-				has_tech = concentrated_industry3
-				has_tech = dispersed_industry3
+				has_tech = concentrated_industry4
+				has_tech = dispersed_industry4
 			}
 		}
 		completion_reward = {
@@ -2653,7 +2648,7 @@ focus_tree = {
 		id = POR_the_question_of_our_colonies
 		prerequisite = { focus = POR_storm_the_national_assembly }
 		icon = GFX_focus_ITA_corpo_volontari_della_liberta
-		cost = 5
+		cost = 6
 		x = -1
 		y = 1
 		relative_position_id = POR_storm_the_national_assembly
@@ -2675,7 +2670,7 @@ focus_tree = {
 		id = POR_address_the_new_spain
 		prerequisite = { focus = POR_storm_the_national_assembly }
 		icon = GFX_goal_FRA_help_the_spanish_republicans
-		cost = 5
+		cost = 6
 		x = 1
 		y = 1
 		relative_position_id = POR_storm_the_national_assembly
@@ -3056,7 +3051,7 @@ focus_tree = {
 		id = POR_defang_the_liberals
 		prerequisite = { focus = POR_continue_the_iberian_social_revolution }
 		icon = GFX_focus_SOV_the_last_purge
-		cost = 8
+		cost = 10
 		x = 0
 		y = 2
 		relative_position_id = POR_continue_the_iberian_social_revolution
@@ -3064,6 +3059,7 @@ focus_tree = {
 			has_country_flag = POR_end_the_populaR_front_flag
 		}
 		completion_reward = {
+			add_political_power = 105
 		}
 		ai_will_do = { base = 20 }
 		search_filters = { FOCUS_FILTER_POLITICAL  }
@@ -3142,7 +3138,7 @@ focus_tree = {
 		id = POR_unity_and_reconciliation
 		prerequisite = { focus = POR_restore_civil_liberties }
 		icon = GFX_focus_BRA_reach_out_to_military_dem
-		cost = 6
+		cost = 8
 		x =  1
 		y = 1
 		relative_position_id = POR_restore_civil_liberties
@@ -3158,7 +3154,7 @@ focus_tree = {
 		id = POR_hold_fair_elections
 		prerequisite = { focus = POR_restore_civil_liberties }
 		icon = GFX_goal_generic_election
-		cost = 8
+		cost = 10
 		x = 0
 		y = 2
 		relative_position_id = POR_restore_civil_liberties
@@ -3200,7 +3196,7 @@ focus_tree = {
 		id = POR_accomodate_europes_balance_of_power
 		prerequisite = { focus = POR_hold_fair_elections }
 		icon = GFX_goal_generic_ban_extremism
-		cost = 5
+		cost = 6
 		x = -2
 		y = 1
 		relative_position_id = POR_hold_fair_elections

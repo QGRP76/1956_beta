@@ -71,7 +71,6 @@ country_event = {
 	}
 }
 
-
 # POR: Spain Refuses Demands
 country_event = {
 	id = portugal.2
@@ -1561,7 +1560,8 @@ country_event = {
 		if = {
 			limit = { 
 				OR = {
-					has_idea = extensive_conscriptioon
+					has_idea = limited_conscription
+					has_idea = extensive_conscription
 					has_idea = service_by_requirement
 					has_idea = all_adults_serve
 					has_idea = scraping_the_Barrel
@@ -1571,11 +1571,10 @@ country_event = {
 			add_manpower = 25000
 		}
 		else = {
-			
 			add_war_support = 0.03
 			add_manpower = 20000
 			custom_effect_tooltip = CHL_skip_one_line_tt
-			add_ideas = extensive_conscription  
+			add_ideas = limited_conscription
 		}
 		custom_effect_tooltip = CHL_skip_one_line_tt
 		if = {
@@ -2363,7 +2362,8 @@ country_event = {
 					state = 321
 				}
 			}
-			add_compliance = 40
+			add_compliance = 35
+			add_resistance = -10
 			add_dynamic_modifier = { modifier = autonomous_state }
 		}
 	}
@@ -2515,9 +2515,47 @@ country_event = {	#Addressing the New Spain
 			}
 		}
 		hidden_effect = {
-			every_state = {
-				limit = { has_state_flag = SPR_core_of_spain_flag }
-				add_core_of = ROOT
+			if = {
+				limit = {
+					SPR = {
+						OR = {
+							has_government = democratic
+							has_government = communism
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = SPR }
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					SPD = {
+						OR = {
+							has_government = democratic
+							has_government = communism
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = SPD }
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					SPC = {
+						OR = {
+							has_government = democratic
+							has_government = communism
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = SPC }
+					add_core_of = ROOT
+				}
 			}
 		}
 		set_cosmetic_tag = ESU_POR_unified

@@ -211,7 +211,6 @@ POR_towards_a_greater_portugal = {
 		cost = 30
 		fire_only_once = yes
 		ai_will_do = { base = 20 }
-		on_map_mode = map_only
 		visible = { has_cosmetic_tag = ESU_POR_unified }
 		available = {
 			FROM = { 
@@ -558,11 +557,11 @@ POR_the_path_to_economic_progress = {
 			}
 		}
 		days_remove = 150
-		modifier = { consumer_goods_factor = 0.15 }
+		modifier = { consumer_goods_factor = 0.1 }
 		remove_effect = {
 			if = {
 				limit = { has_completed_focus = POR_push_forward_popular_reform }
-				add_political_power = 120
+				add_political_power = 115
 				add_stability = 0.04
 				add_popularity = {
 					ideology = ROOT
@@ -570,7 +569,7 @@ POR_the_path_to_economic_progress = {
 				}
 			}
 			else = {
-				add_political_power = 100
+				add_political_power = 90
 				add_stability = 0.03
 				add_popularity = {
 					ideology = ROOT
@@ -777,7 +776,7 @@ POR_the_path_to_economic_progress = {
 	POR_support_food_exporters = {
 		icon = ger_mefo_bills
 		fire_only_once = no
-		days_re_enable = 365
+		days_re_enable = 360
 		cost = 80
 		ai_will_do = { base = 50 }
 		visible = { has_completed_focus = POR_modernize_the_countryside }
