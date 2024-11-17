@@ -112,7 +112,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_army_problems
+			picture = citizen_militia_2
 			
 			modifier = {
 				custom_modifier_tooltip = SPR_military_disloyalty_tt
@@ -129,11 +129,11 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_build_infrastructure
+			picture = ARG_invest_in_roads
 			
 			modifier = {
-				production_speed_buildings_factor = 0.01
-				production_speed_infrastructure_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				production_speed_infrastructure_factor = 0.10
 			}		
 		}
 
@@ -148,8 +148,10 @@ ideas = {
 			picture = generic_build_infrastructure
 			
 			modifier = {
-				production_speed_infrastructure_factor = 0.15
-				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.10
+				production_speed_industrial_complex_factor = 0.10
+				consumer_goods_factor = -0.05
+				political_power_factor = -0.10
 			}		
 		}
 	}

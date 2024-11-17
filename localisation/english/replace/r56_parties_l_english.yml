@@ -372,6 +372,16 @@
  DEN_communism_party:1 "DKP"
  DEN_communism_party_long:1 "Danmarks Kommunistiske Parti"
 
+ #DNZ
+ DNZ_democratic_party:1 "Zentrum - SPD"
+ DNZ_democratic_party_long:1 "Zentrum - Sozialdemokratische Partei der Freien Stadt Danzig"
+ DNZ_neutrality_party:1 "DNVP"
+ DNZ_neutrality_party_long:1 "Deutschnationale Volkspartei"
+ DNZ_fascism_party:1 "NSDAP"
+ DNZ_fascism_party_long:1 "Nationalsozialistische Deutsche Arbeiterpartei"
+ DNZ_communism_party:1 "KPD"
+ DNZ_communism_party_long:1 "Kommunistische Partei Deutschlands"
+
  #ELS
  ELS_neutrality_party:0 "PNPP"
  ELS_neutrality_party_long:0 "Partido Nacional Pro-Patria"
