@@ -50,7 +50,7 @@ country_event = {
                 has_state_flag = AFG_tribal_state_flag
             }
             create_unit = {
-                division = "name = \"Milishia Qabalia\" division_template = \"Milishia Qabalia\" start_equipment_factor = 0.4"
+                division = "division_template = \"Qawmi Maleshe\" start_equipment_factor = 0.4"
                 owner = ROOT
             }
         }
@@ -137,10 +137,19 @@ country_event = {
 				has_war_with = AFG
 				factor = 0
 			}
+			modifier = {
+				AFG = {
+					has_character = AFG_nisar_muhammad
+				}
+				factor = 1000
+			}
 		}
 		trigger = {
 			OR = {
 				date < 1937.10.8
+				AFG = {
+					has_character = AFG_nisar_muhammad
+				}
 				SOV = {
 					NOT = {
 						has_country_leader = {
@@ -352,15 +361,6 @@ country_event = {
 		unlock_decision_category_tooltip = AFG_tajikistan_category
 		AFG = {
 			transfer_state = 742
-		}
-		add_corps_commander_role = {
-			Character = AFG_mastibek_tashmukhamedov
-			traits = { trickster brilliant_strategist }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 1
 		}
 		742 = {
 			add_compliance = 15
@@ -699,41 +699,117 @@ country_event = { ### FIRST FREE ELECTIONS
 
 	is_triggered_only = yes
 
+	immediate = {
+		if = {
+			limit = {
+				AFG = {
+					neutrality < AFG.party_popularity@democratic
+				}
+			}
+			set_country_flag = AFG_fatherland_party_victory
+		}
+		if = {
+			limit = {
+				AFG = {
+					neutrality > AFG.party_popularity@democratic
+				}
+			}
+			set_country_flag = AFG_conservative_party_victory
+		}
+	}
+
 	option = {
 		name = afghanistan.14.a
-		add_popularity = {
-			ideology = neutrality
-			popularity = 0.05
+		if = {
+			limit = {
+				check_variable = {
+					AFG_election_freedom = 0 
+				}
+			}
+			custom_effect_tooltip = AFG_election_freedom_improve
+			custom_effect_tooltip = r56_newline
+			add_stability = -0.15
+			add_timed_idea = {
+				idea = strikes_1
+				days = 180
+			}
 		}
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.05
+		if = {
+			limit = {
+				check_variable = {
+					AFG_election_freedom = 1 
+				}
+			}
+			custom_effect_tooltip = AFG_election_freedom_improve
+			custom_effect_tooltip = r56_newline
+			add_stability = -0.10
+			add_timed_idea = {
+				idea = strikes_1
+				days = 120
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					AFG_election_freedom = 2
+				}
+			}
+			custom_effect_tooltip = AFG_election_freedom_improve
+			custom_effect_tooltip = r56_newline
+			add_stability = -0.05
+			add_timed_idea = {
+				idea = strikes_1
+				days = 60
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					AFG_election_freedom = 3
+				}
+			}
+			add_stability = 0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
 		}
 		set_country_flag = AFG_shah_mahmud_won
 		complete_national_focus = AFG_shah_mahmud_prevails
-		ai_chance = {
-			base = 1
-			modifier = {
-				add = 1000
-				has_country_flag = AFG_conservative_party_wins
-			}
+		trigger = {
+			has_country_flag = AFG_conservative_party_victory
 		}
 	}
 
 	option = {
 		name = afghanistan.14.b
+		add_stability = 0.05
 		add_popularity = {
 			ideology = democratic
 			popularity = 0.15
 		}
 		set_country_flag = AFG_ghulam_won
 		complete_national_focus = AFG_fatherland_party_triumph
-		ai_chance = {
-			base = 1
-			modifier = {
-				add = 1000
-				has_country_flag = AFG_watan_party_wins
-			}
+		trigger = {
+			has_country_flag = AFG_fatherland_party_victory
+		}
+	}
+
+	option = { # Rig Elections
+		name = afghanistan.14.c
+		add_stability = -0.15
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.10
+		}
+		add_timed_idea = {
+			idea = strikes_1
+			days = 120
+		}
+		set_country_flag = AFG_shah_mahmud_won
+		complete_national_focus = AFG_shah_mahmud_prevails
+		trigger = {
+			has_country_flag = AFG_fatherland_party_victory
 		}
 	}
 }
@@ -1477,95 +1553,13 @@ country_event = {
 	option = {
 		name = afghanistan.28.a ### EXILE THEM
 		custom_effect_tooltip = AFG_exile_royal_family_tt
-		hidden_effect = {
-			every_character = {
-				limit = {
-					NOT = {
-						is_character = AFG_mohammed_daoud_khan
-					}
-					OR = {
-						has_trait = AFG_barakzai_royalist
-						is_character = AFG_abdur_rahim_khan
-						is_character = AFG_abdul_majid_zabuli
-						is_character = AFG_humaira_begum
-						is_character = AFG_hashim_khan
-						is_character = AFG_mohammed_zahir_shah
-					}
-				}
-				retire = yes
-			}
-			every_character = {
-				limit = {
-					has_trait = AFG_barakzai_royalist
-				}
-				remove_trait = {
-					trait = AFG_barakzai_royalist
-				}
-			}
-		}
-		if = {
-			limit = {
-				ITA = {
-					NOT = {
-						has_government = communism
-						has_completed_focus = ITA_the_popular_front
-					}
-				}
-			}
-			hidden_effect = {
-				ITA = {
-					country_event = {
-						id = afghanistan.29 days = 5 random_days = 5
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				ENG = {
-					NOT = {
-						has_government = communism
-						has_completed_focus = ENG_concessions_to_the_trade_unions
-					}
-				}
-			}
-			hidden_effect = {
-				ENG = {
-					country_event = {
-						id = afghanistan.29 days = 5 random_days = 5
-					}
-				}
-			}
-		}
-		ai_chance = {
-			base = 1
-		}
-	}
-
-	option = {
-		name = afghanistan.28.b ### KILL THEM
 		add_popularity = {
 			ideology = communism
 			popularity = 0.05
 		}
+		add_war_support = 0.05
 		add_stability = -0.05
 		hidden_effect = {
-			every_character = {
-				limit = {
-					NOT = {
-						is_character = AFG_mohammed_daoud_khan
-					}
-					OR = {
-						has_trait = AFG_barakzai_royalist
-						is_character = AFG_abdur_rahim_khan
-						is_character = AFG_abdul_majid_zabuli
-						is_character = AFG_humaira_begum
-						is_character = AFG_hashim_khan
-						is_character = AFG_mohammed_zahir_shah
-					}
-				}
-				retire = yes
-			}
 			every_character = {
 				limit = {
 					has_trait = AFG_barakzai_royalist
@@ -1577,42 +1571,6 @@ country_event = {
 		}
 		ai_chance = {
 			base = 1
-			modifier = {
-				has_country_leader = {
-					character = AFG_nisar_muhammad
-					ruling_only = yes
-				}
-				factor = 2
-			}
-			modifier = {
-				has_country_leader = {
-					character = AFG_dmitri_protopopov
-					ruling_only = yes
-				}
-				factor = 1.5
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-			modifier = {
-				is_power_balance_in_range = {
-					id = AFG_communist_power_balance
-					range = AFG_medium_khalq_support
-				}
-				factor = 2
-			}
-			modifier = {
-				is_power_balance_in_range = {
-					id = AFG_communist_power_balance
-					range = AFG_high_khalq_support
-				}
-				factor = 3
-			}
-			modifier = {
-				communism < 0.5
-				factor = 2
-			}
 		}
 	}
 }
@@ -3365,7 +3323,7 @@ country_event = {
 
 	option = {
 		name = afghanistan.63.a
-		swap_ruler_traits = { remove = dethroned_king add = dethroned_king_2 }
+		swap_ruler_traits = { remove = AFG_dethroned_king add = AFG_dethroned_king_2 }
 		custom_effect_tooltip = r56_newline
 		hidden_effect = {
 			set_country_flag = AFG_amanullah_has_returned
@@ -3738,6 +3696,45 @@ country_event = {
 			}
 		}
 	}
+
+	option = {
+		trigger = {
+			has_completed_focus = AFG_the_bannu_resolution
+			is_subject = no
+			PAK = {
+				controls_state = 442
+				is_neighbor_of = AFG
+				NOT = {
+					has_war_with = AFG
+				}
+			}
+		}
+		name = afghanistan.67.b
+		effect_tooltip = {
+			complete_national_focus = AFG_unification_or_death
+			add_war_support = 0.05
+			declare_war_on = {
+				type = take_state
+				target = 442.owner
+				generator = {
+					442
+				}
+			}
+			442 = {
+				add_resistance = 25
+				damage_building = {
+					type = air_base
+					damage = 4
+				}
+			}
+			445 = {
+				damage_building = {
+					type = air_base
+					damage = 2
+				}
+			}
+		}
+	}
 }
 
 country_event = { # RAJ SAYS NO TO CONFERENCE
@@ -3764,6 +3761,45 @@ country_event = { # RAJ SAYS NO TO CONFERENCE
 				}
 				else = {
 					remove_core_of = PAK
+				}
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			has_completed_focus = AFG_the_bannu_resolution
+			is_subject = no
+			PAK = {
+				controls_state = 442
+				is_neighbor_of = AFG
+				NOT = {
+					has_war_with = AFG
+				}
+			}
+		}
+		name = afghanistan.68.b
+		effect_tooltip = {
+			complete_national_focus = AFG_unification_or_death
+			add_war_support = 0.05
+			declare_war_on = {
+				type = take_state
+				target = 442.owner
+				generator = {
+					442
+				}
+			}
+			442 = {
+				add_resistance = 25
+				damage_building = {
+					type = air_base
+					damage = 4
+				}
+			}
+			445 = {
+				damage_building = {
+					type = air_base
+					damage = 2
 				}
 			}
 		}
@@ -5211,6 +5247,10 @@ country_event = { # DAOUD KHAN'S LOYALTY?
 		name = afghanistan.91.a
 		add_war_support = -0.05
 		custom_effect_tooltip = AFG_unlock_daoud_focus
+		remove_trait = {
+			character = AFG_mohammed_daoud_khan
+			trait = AFG_barakzai_royalist
+		}
 		set_country_flag = AFG_unlock_daoud
 	}
 }
@@ -5965,7 +6005,7 @@ country_event = { # Loya Jirga Starts
 	}
 }
 
-country_event = { # Tribal Leaders Request Traditional Roles
+country_event = { # Question of State
 	id = AFG_loya_jirga.2
 	title = AFG_loya_jirga.2.t
 	desc = AFG_loya_jirga.2.desc
@@ -5982,9 +6022,34 @@ country_event = { # Tribal Leaders Request Traditional Roles
 	}
 
 	option = {
-		name = AFG_loya_jirga.2.a
-		add_political_power = 50
-		activate_mission = AFG_first_loya_jirga_mission
+		name = AFG_loya_jirga.2.a # Limited Centralization
+		add_political_power = 15
+		if = {
+			limit = {
+				NOT = {
+					has_idea = r56i_laws_security_balanced
+				}
+			}
+			add_ideas = r56i_laws_security_balanced
+			custom_effect_tooltip = r56_newline
+			effect_tooltip = {
+				add_power_balance_value = {
+					id = AFG_power_balance
+					value = -0.05
+					tooltip_side = AFG_government_side
+				}
+			}
+		}
+		else = {
+			add_power_balance_value = {
+				id = AFG_power_balance
+				value = -0.05
+				tooltip_side = AFG_government_side
+			}
+		}
+		add_to_variable = {
+			AFG_loya_jirga_good_var_var = 1
+		}
 		ai_chance = {
 			base = 20
 			modifier = {
@@ -6001,14 +6066,35 @@ country_event = { # Tribal Leaders Request Traditional Roles
 	}
 
 	option = {
-		name = AFG_loya_jirga.2.b
-		add_power_balance_value = {
-			id = AFG_power_balance
-			value = -0.05
-			tooltip_side = AFG_government_side
+		name = AFG_loya_jirga.2.b # Complete Centralization
+		add_stability = -0.05
+		add_political_power = 35
+		if = {
+			limit = {
+				NOT = {
+					has_idea = r56i_laws_security_order
+				}
+			}
+			add_ideas = r56i_laws_security_order
+			custom_effect_tooltip = r56_newline
+			effect_tooltip = {
+				add_power_balance_value = {
+					id = AFG_power_balance
+					value = -0.10
+					tooltip_side = AFG_government_side
+				}
+			}
 		}
-		add_political_power = -25
-		set_country_flag = AFG_finished_first_loya_jirga
+		else = {
+			add_power_balance_value = {
+				id = AFG_power_balance
+				value = -0.10
+				tooltip_side = AFG_government_side
+			}
+		}
+		add_to_variable = {
+			AFG_loya_jirga_bad_var = 1
+		}
 		ai_chance = {
 			base = 10
 			modifier = {
@@ -6025,7 +6111,7 @@ country_event = { # Tribal Leaders Request Traditional Roles
 	}
 }
 
-country_event = { # Tribal Leaders Request Momand 
+country_event = { # Status of Women
 	id = AFG_loya_jirga.3
 	title = AFG_loya_jirga.3.t
 	desc = AFG_loya_jirga.3.desc
@@ -6042,9 +6128,37 @@ country_event = { # Tribal Leaders Request Momand
 	}
 
 	option = {
-		name = AFG_loya_jirga.3.a
-		add_political_power = 50
-		activate_mission = AFG_second_loya_jirga_mission
+		name = AFG_loya_jirga.3.a # Traditional Roles
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_idea = r56i_laws_gender_traditional
+				}
+			}
+			add_ideas = r56i_laws_gender_traditional
+			custom_effect_tooltip = r56_newline
+			effect_tooltip = {
+				add_power_balance_value = {
+					id = AFG_power_balance
+					value = 0.05
+					tooltip_side = AFG_tribal_side
+				}
+			}
+		}
+		else = {
+			add_power_balance_value = {
+				id = AFG_power_balance
+				value = 0.05
+				tooltip_side = AFG_tribal_side
+			}
+		}
+		add_to_variable = {
+			AFG_loya_jirga_good_var_var = 1
+		}
 		ai_chance = {
 			base = 20
 			modifier = {
@@ -6061,18 +6175,38 @@ country_event = { # Tribal Leaders Request Momand
 	}
 
 	option = {
-		name = AFG_loya_jirga.3.b
-		add_power_balance_value = {
-			id = AFG_power_balance
-			value = -0.05
-			tooltip_side = AFG_government_side
-		}
+		name = AFG_loya_jirga.3.b # Limited Rights
 		add_stability = -0.05
 		add_popularity = {
 			ideology = neutrality
-			popularity = -0.03
+			popularity = -0.05
 		}
-		set_country_flag = AFG_finished_second_loya_jirga
+		if = {
+			limit = {
+				NOT = {
+					has_idea = r56i_laws_gender_limited
+				}
+			}
+			add_ideas = r56i_laws_gender_limited
+			custom_effect_tooltip = r56_newline
+			effect_tooltip = {
+				add_power_balance_value = {
+					id = AFG_power_balance
+					value = -0.05
+					tooltip_side = AFG_government_side
+				}
+			}
+		}
+		else = {
+			add_power_balance_value = {
+				id = AFG_power_balance
+				value = -0.05
+				tooltip_side = AFG_government_side
+			}
+		}
+		add_to_variable = {
+			AFG_loya_jirga_bad_var = 1
+		}
 		ai_chance = {
 			base = 10
 			modifier = {
@@ -6089,7 +6223,7 @@ country_event = { # Tribal Leaders Request Momand
 	}
 }
 
-country_event = { # Tribal Leaders Request Developing
+country_event = { # Question of Islam
 	id = AFG_loya_jirga.4
 	title = AFG_loya_jirga.4.t
 	desc = AFG_loya_jirga.4.desc
@@ -6100,11 +6234,33 @@ country_event = { # Tribal Leaders Request Developing
 	fire_only_once = yes
 
 	option = {
-		name = AFG_loya_jirga.4.a
-		add_political_power = 50
-		activate_mission = AFG_third_loya_jirga_mission
-		hidden_effect = {
-			country_event = { id = AFG_loya_jirga.5 days = 3 }
+		name = AFG_loya_jirga.4.a # Islam is Compatible
+		add_war_support = 0.05
+		if = {
+			limit = {
+				NOT = {
+					has_idea = r56i_laws_social_normal
+				}
+			}
+			add_ideas = r56i_laws_social_normal
+			custom_effect_tooltip = r56_newline
+			effect_tooltip = {
+				add_power_balance_value = {
+					id = AFG_power_balance
+					value = -0.05
+					tooltip_side = AFG_government_side
+				}
+			}
+		}
+		else = {
+			add_power_balance_value = {
+				id = AFG_power_balance
+				value = -0.05
+				tooltip_side = AFG_government_side
+			}
+		}
+		add_to_variable = {
+			AFG_loya_jirga_good_var_var = 1
 		}
 		ai_chance = {
 			base = 20
@@ -6122,23 +6278,101 @@ country_event = { # Tribal Leaders Request Developing
 	}
 
 	option = {
-		name = AFG_loya_jirga.4.b
+		name = AFG_loya_jirga.4.b # Secularization
+		add_stability = -0.05
+		add_power_balance_value = {
+			id = AFG_power_balance
+			value = -0.10
+			tooltip_side = AFG_government_side
+		}
+		# add idea for secularization
+		add_to_variable = {
+			AFG_loya_jirga_bad_var = 1
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_country_flag = AFG_win_loya_jirga
+				factor = 0
+			}
+			modifier = {
+				NOT = {
+					has_country_flag = AFG_win_loya_jirga
+				}
+				factor = 100
+			}
+		}
+	}
+}
+
+country_event = { # Social Reforms
+	id = AFG_loya_jirga.5
+	title = AFG_loya_jirga.5.t
+	desc = AFG_loya_jirga.5.desc
+	picture = GFX_report_event_AFG_loya_jirga_discussions_3
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = AFG_loya_jirga.5.a # Small Illiteracy Program
+		add_political_power = 15
 		add_power_balance_value = {
 			id = AFG_power_balance
 			value = -0.05
 			tooltip_side = AFG_government_side
 		}
-		1009 = {
-			damage_building = {
-				type = infrastructure
-				damage = 0.4
+		custom_effect_tooltip = AFG_illiteracy_decrease_75
+		hidden_effect = {
+			set_variable = {
+				AFG_rural_schools_duration = 75
+			}
+			set_variable = {
+				AFG_rural_schools_cost = 25
+			}
+			country_event = { id = AFG_loya_jirga.6 days = 3 hours = 12 }
+		}
+		add_to_variable = {
+			AFG_loya_jirga_good_var_var = 1
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				has_country_flag = AFG_win_loya_jirga
+				factor = 100
+			}
+			modifier = {
+				NOT = {
+					has_country_flag = AFG_win_loya_jirga
+				}
+				factor = 0
 			}
 		}
-		hidden_effect = {
-			country_event = { id = AFG_loya_jirga.5 days = 3 }
-		}
+	}
+
+	option = {
+		name = AFG_loya_jirga.5.b # Large Illiteracy Program
 		add_stability = -0.05
-		set_country_flag = AFG_finished_third_loya_jirga
+		add_political_power = 35
+		add_power_balance_value = {
+			id = AFG_power_balance
+			value = -0.10
+			tooltip_side = AFG_government_side
+		}
+		custom_effect_tooltip = AFG_illiteracy_decrease_50
+		hidden_effect = {
+			set_variable = {
+				AFG_rural_schools_duration = 60	
+			}
+			set_variable = {
+				AFG_rural_schools_cost = 15
+			}
+			country_event = { id = AFG_loya_jirga.6 days = 3 hours = 12 }
+		}
+		add_to_variable = {
+			AFG_loya_jirga_bad_var = 1
+		}
 		ai_chance = {
 			base = 10
 			modifier = {
@@ -6156,9 +6390,9 @@ country_event = { # Tribal Leaders Request Developing
 }
 
 country_event = { # Loya Jirga Ends
-	id = AFG_loya_jirga.5
-	title = AFG_loya_jirga.5.t
-	desc = AFG_loya_jirga.5.desc
+	id = AFG_loya_jirga.6
+	title = AFG_loya_jirga.6.t
+	desc = AFG_loya_jirga.6.desc
 	picture = GFX_report_event_AFG_loya_jirga_discussions
 	
 	is_triggered_only = yes
@@ -6166,9 +6400,11 @@ country_event = { # Loya Jirga Ends
 	fire_only_once = yes
 
 	option = {
-		name = AFG_loya_jirga.5.a
+		name = AFG_loya_jirga.6.a
 		remove_ideas = AFG_loya_jirga_idea
 		set_country_flag = AFG_loya_jirga_finished
+		clear_variable = AFG_loya_jirga_good_var_var
+		clear_variable = AFG_loya_jirga_bad_var
 	}
 }
 
@@ -6187,9 +6423,6 @@ country_event = { # The Direction Of The Loya Jirga
 		add_power_balance_modifier = {
 			id = AFG_power_balance
 			modifier = r56_AFG_bop_left
-		}
-		hidden_effect = {
-			country_event = { id = AFG_loya_jirga.2 days = 3 }
 		}
 		ai_chance = {
 			base = 20
@@ -6211,9 +6444,6 @@ country_event = { # The Direction Of The Loya Jirga
 		add_power_balance_modifier = {
 			id = AFG_power_balance
 			modifier = r56_AFG_bop_right
-		}
-		hidden_effect = {
-			country_event = { id = AFG_loya_jirga.2 days = 3 }
 		}
 		ai_chance = {
 			base = 10
@@ -6924,5 +7154,352 @@ country_event = { # AFGHANISTAN YES WHITE PEACE
 				add_ideas = PAL_exhausted_army
 			}
 		}
+	}
+}
+
+news_event = {
+	id = afghanistan.105 # Communist Afghan Civil War
+	picture = GFX_news_event_AFG_civil_war_communist
+	title = afghanistan.105.t
+	desc = afghanistan.105.d
+
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = afghanistan.105.a
+	}
+}
+
+country_event = {
+	id = afghanistan.106
+	picture = GFX_report_event_spr_italian_volunteers
+	title = afghanistan.106.t
+	desc = afghanistan.106.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_war_with = SOV
+		}
+	}
+
+	option = { 
+		name = afghanistan.106.a
+		division_template = {
+			name = "Sowyet Khwánd"
+
+			division_names_group = SOV_INF_01
+			priority = 1
+			template_counter = 69
+
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+			support = {
+				engineer = {
+					x = 0 y = 0
+				}
+				artillery = {
+					x = 0 y = 1
+				}
+			}
+		}
+		1008 = {
+			create_unit = {
+				division = "name = \"1ma Sowyet Khwánd 'Ragib Bey'\" division_template = \"Sowyet Khwánd\" start_experience_factor = 0.30 start_equipment_factor = 0.85 start_manpower_factor = 0.75"
+				owner = PREV
+				count = 1
+				allow_spawning_on_enemy_provs = yes
+				prioritize_location = 12248
+			}
+			create_unit = {
+				division = "name = \"2ma Sowyet Khwánd 'Ali Afzal Khan'\" division_template = \"Sowyet Khwánd\" start_experience_factor = 0.30 start_equipment_factor = 0.85 start_manpower_factor = 0.75"
+				owner = PREV
+				count = 1
+				allow_spawning_on_enemy_provs = yes
+				prioritize_location = 12314
+			}
+			create_unit = {
+				division = "name = \"3ma Sowyet Khwánd 'Stalin'\" division_template = \"Sowyet Khwánd\" start_experience_factor = 0.30 start_equipment_factor = 0.85 start_manpower_factor = 0.75"
+				owner = PREV
+				count = 1
+				allow_spawning_on_enemy_provs = yes
+				prioritize_location = 12653
+			}
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 1000
+			producer = SOV
+		}
+		add_field_marshal_role = {
+			Character = AFG_nisar_muhammad
+			traits = { infantry_officer homeland_connoisseur politically_connected }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		add_corps_commander_role = {
+			Character = AFG_mastibek_tashmukhamedov
+			traits = { brilliant_strategist vigorous artillerist }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}
+
+country_event = {
+	id = afghanistan.107
+	picture = GFX_report_event_generic_communist_congress
+	title = afghanistan.107.t
+	desc = afghanistan.107.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_completed_focus = AFG_approach_the_soviets
+		}
+		has_civil_war = yes
+		tag = AFG
+		has_government = communism
+		date < 1937.10.8
+		NOT = {
+			has_war_with = SOV
+		}
+	}
+
+	option = { 
+		name = afghanistan.107.a
+		set_country_flag = AFG_nisar_arrives
+		add_field_marshal_role = {
+			Character = AFG_nisar_muhammad
+			traits = { infantry_officer homeland_connoisseur politically_connected }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+}
+
+country_event = {
+	id = afghanistan.108
+	picture = GFX_report_event_AFG_national_front
+	title = afghanistan.108.t
+	desc = afghanistan.108.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_active_mission = AFG_elections_mission
+	}
+
+	option = { 
+		name = afghanistan.108.a
+		add_stability = -0.05
+		hidden_effect = {
+			set_temp_variable = {
+				var = coalition_var
+				value = party_popularity@communism
+			}
+			multiply_temp_variable = {
+				var = coalition_var
+				value = 0.75
+			}
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = coalition_var
+		}
+		hidden_effect = {
+			multiply_temp_variable = {
+				var = coalition_var
+				value = -0.95
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = coalition_var
+			}
+		}
+		custom_effect_tooltip = AFG_coalition_tt
+		set_party_name = {
+			ideology = democratic
+			long_name = "Jabha-ye Melli"
+			name = "Jabha-ye Melli"
+		}
+	}
+}
+
+country_event = {
+	id = afghanistan.109
+	picture = GFX_report_event_AFG_national_front
+	title = afghanistan.109.t
+	desc = afghanistan.109.d
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 20
+	}
+
+	trigger = {
+		original_tag = AFG
+		is_subject = no
+		PAK = {
+			exists = yes
+			is_neighbor_of = AFG
+			NOT = {
+				has_war_with = AFG
+			}
+			has_war_with = RAJ
+		}
+		NOT = {
+			owns_state = 442
+			controls_state = 442
+			is_ally_with = AFG
+		}
+	}
+
+	option = { 
+		name = afghanistan.109.a
+		effect_tooltip = {
+			add_war_support = 0.05
+		}
+		set_country_flag = AFG_durand_crisis
+		complete_national_focus = AFG_crisis_over_the_durand
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {
+	id = afghanistan.110
+	picture = GFX_report_event_AFG_national_front
+	title = afghanistan.110.t
+	desc = afghanistan.110.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { 
+		name = afghanistan.110.a
+		add_stability = 0.05
+		custom_effect_tooltip = AFG_compromise_durand
+		effect_tooltip = {
+			AFG = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = huge_increase
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = afghanistan.111 days = 1 hours = 12 }
+		}
+	}
+
+	option = { 
+		name = afghanistan.110.b
+		add_stability = -0.10
+		custom_effect_tooltip = AFG_ratify_durand
+		effect_tooltip = {
+			AFG = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = medium_decrease
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = afghanistan.112 days = 1 hours = 12 }
+		}
+	}
+}
+
+country_event = {
+	id = afghanistan.111 # Accept
+	picture = GFX_report_event_AFG_national_front
+	title = afghanistan.111.t
+	desc = afghanistan.111.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = afghanistan.111.a
+		add_stability = 0.05
+		custom_effect_tooltip = AFG_compromise_durand
+		add_opinion_modifier = {
+			target = FROM
+			modifier = huge_increase
+		}
+	}
+}
+
+country_event = {
+	id = afghanistan.112 # Decline
+	picture = GFX_report_event_AFG_national_front
+	title = afghanistan.112.t
+	desc = afghanistan.112.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { 
+		name = afghanistan.112.a
+		add_war_support = 0.05
+		custom_effect_tooltip = AFG_ratify_durand
+		add_opinion_modifier = {
+			target = FROM
+			modifier = medium_decrease
+		}
+	}
+}
+
+country_event = {
+	id = afghanistan.200 # Tribal Resistance
+	picture = GFX_report_event_AFG_national_front
+	title = afghanistan.200.t
+	desc = afghanistan.200.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { 
+		name = afghanistan.200.a
+		every_state = {
+			limit = {
+				is_core_of = ROOT
+				NOT = {
+					state = 267
+				}
+			}
+			remove_core_of = ROOT
+		}
+		add_ideas = AFG_tribal_resistance_1
 	}
 }

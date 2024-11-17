@@ -1949,6 +1949,58 @@ on_actions = {
 	#ROOT is winner #FROM gets annexed - This will also fire on_annex
 	on_civil_war_end = {
 		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = AFG
+						has_government = communism
+					}
+				}
+				country_event = { id = afghanistan.28 days = 7 random_days = 7 }
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = AFG
+						has_government = communism
+					}
+				}
+				random_list = { # Royal Family Exiled
+					75 = {
+						if = {
+							limit = {
+								ITA = {
+									NOT = {
+										has_war_with = AFG
+										has_government = communism
+										has_government = democratic
+									}
+								}
+							}
+							ITA = {
+								country_event = { id = afghanistan.29 days = 7 random_days = 7 }
+							}
+							else_if = {
+								limit = {
+									ENG = {
+										NOT = {
+											has_war_with = AFG
+										}
+									}
+								}
+								ENG = {
+									country_event = { id = afghanistan.29 days = 7 random_days = 7 }
+								}
+							}
+						}
+					}
+					25 = { # Royal Family Captured
+						AFG = {
+							country_event = { id = afghanistan.28 days = 2 random_days = 2 }
+						}
+					}
+				}
+			}
 			if = {# The Norwegian Monarchist Civil War has ended. Norway gets to choose how to deal with the opposition leaders
 				limit = {
 					ROOT = {
@@ -3528,7 +3580,6 @@ on_actions = {
 			#		remove_ideas = generic_can_only_join_factions_same_ideology
 			#	}
 			#}
-
 			if = {	# Mengkukuo or Mongolia change ideology - lose opinion debuff
 				limit = {
 					OR = {
@@ -3573,7 +3624,27 @@ on_actions = {
 					}
 				}
 			}
-
+			if = {
+				limit = {
+					original_tag = AFG
+					has_government = democratic
+					NOT = {
+						has_completed_focus = AFG_form_watan_party
+					}
+					has_country_leader = {
+						character = AFG_ghulam_muhammad_ghubar
+						ruling_only = yes
+					}
+				}
+				remove_trait = {
+					character = AFG_ghulam_muhammad_ghubar
+					trait = AFG_exiled
+				}
+				set_portraits = {
+					character = AFG_ghulam_muhammad_ghubar
+					civilian = { small = "GFX_idea_AFG_advisor_muhammad_ghulam_ghobar" }
+				}
+			}
 			if = {	# communists first congress
 				limit = {
 					original_tag = BUL
@@ -3583,7 +3654,6 @@ on_actions = {
 					id = axis_minors_bulgaria.57 days = 14 random_days = 7			#will take some time to organize
 				}
 			}
-
 			if = {	# communist takeover queen reacts
 				limit = {
 					original_tag = HOL
@@ -3736,6 +3806,20 @@ on_actions = {
 					}
 					country_event = {
 						id = r56_on_action_event.1
+						hours = 12
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = USA
+				}
+				every_other_country = {
+					limit = {
+						has_country_leader_with_trait = likes_usa
+					}
+					country_event = {
+						id = r56_on_action_event.2
 						hours = 12
 					}
 				}
@@ -10356,11 +10440,6 @@ on_actions = {
 						producer = ITA
 					}
 					add_equipment_to_stockpile = {
-						type = light_tank_equipment_1
-						amount = 9
-						producer = USA
-					}
-					add_equipment_to_stockpile = {
 						type = gw_tank_equipment
 						amount = 10
 						producer = FRA
@@ -10466,6 +10545,13 @@ on_actions = {
 						producer = ENG
 					}
 				}
+				PER = {
+					add_equipment_to_stockpile = {
+						type = gw_tank_equipment
+						amount = 84
+						producer = FRA
+					}
+				}
 				PHI = {
 					add_equipment_to_stockpile = {
 						type = gw_tank_equipment
@@ -10498,11 +10584,6 @@ on_actions = {
 						amount = 5
 						producer = ITA
 						variant_name = "L3/35"
-					}
-					add_equipment_to_stockpile = {
-						type = light_tank_chassis_1
-						amount = 9
-						producer = AFG
 					}
 					add_equipment_to_stockpile = {
 						type = light_tank_chassis_0
@@ -10604,6 +10685,13 @@ on_actions = {
 						type = light_tank_chassis_0
 						amount = 1
 						producer = USA
+					}
+				}
+				PER = {
+					add_equipment_to_stockpile = {
+						type = light_tank_chassis_0
+						amount = 84
+						producer = FRA
 					}
 				}
 				POL = {
@@ -10957,15 +11045,48 @@ on_actions = {
 			RAJ = {
 				if = {
 					limit = {
-						has_game_rule = {
-							rule = RAJ_ai_behavior
-							option = RANDOM
+						OR = {
+							AND = {
+								is_historical_focus_on = no
+								has_game_rule = {
+									rule = RAJ_ai_behavior
+									option = DEFAULT
+								}
+							}
+							has_game_rule = {
+								rule = RAJ_ai_behavior
+								option = RANDOM
+							}
+						}
+						AFG = { # Making India independent if Afghanistan is a player
+							is_ai = yes
 						}
 					}
 					random_list = {
-						50 = { set_country_flag = PROVINCIAL_ELECTIONS }	#Party Affiliation is already Random
+						50 = { set_country_flag = PROVINCIAL_ELECTIONS }	# Party Affiliation is already Random
 						35 = { set_country_flag = LORD_LINLITHGOW }
 						15 = { set_country_flag = FREE_INDIA }
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							AND = {
+								is_historical_focus_on = no
+								has_game_rule = {
+									rule = RAJ_ai_behavior
+									option = DEFAULT
+								}
+							}
+							has_game_rule = {
+								rule = RAJ_ai_behavior
+								option = RANDOM
+							}
+						}
+					}
+					random_list = {
+						75 = { set_country_flag = PROVINCIAL_ELECTIONS }	# Party Affiliation is already Random
+						25 = { set_country_flag = FREE_INDIA }
 					}
 				}
 			}

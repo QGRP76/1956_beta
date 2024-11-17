@@ -1119,6 +1119,20 @@ opinion_modifiers = {
 		value = 50
 	}
 
-}	
+###------> GUA <><> <><> <><> <><> <><>
+	
+	GUA_fascist_leanings = {
+		value = -15
+	}
+
+	GUA_usurper_government = {
+		value = -100
+	}
+
+	GUA_anti_american_sentiment = {
+		value = -50
+	}
+	
+}
 
 #####-----------------------------------------------------------> End

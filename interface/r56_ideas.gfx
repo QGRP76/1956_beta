@@ -17,6 +17,10 @@ spriteTypes = {
 	#female advisors, not yet activated by Paradox
 
 	spriteType = {
+		name = "GFX_idea_recent_military_unification"
+		texturefile = "gfx/interface/ideas/generic/r56_idea_recent_military_unification.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_r56_production"
 		texturefile = "gfx/interface/ideas/generic/r56_idea_production.dds"
 	}
@@ -306,6 +310,10 @@ spriteTypes = {
 		name = "GFX_idea_AFG_advisor_wazir_akbar_khan"
 	   	texturefile = "gfx/interface/ideas/afg/advisors/r56_idea_AFG_advisor_wazir_akbar_khan.dds"
    	}
+	   spriteType = {
+		name = "GFX_idea_AFG_bank_millie"
+		texturefile = "gfx/interface/ideas/afg/companies/r56_idea_AFG_bank_millie.dds"
+	}
 
 ###------> AUS <><> <><> <><> <><> <><>
 	spriteType = {
@@ -1289,6 +1297,18 @@ spriteType = {
 	spriteType = {
 		name = "GFX_idea_HON_ancap_society"
 		texturefile = "gfx/interface/ideas/hon/r56_voluntaryism_society.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HON_banana_republic"
+		texturefile = "gfx/interface/ideas/hon/r56_idea_HON_banana_republic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HON_indebted_to_the_west"
+		texturefile = "gfx/interface/ideas/hon/r56_idea_HON_indebted_to_the_west.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HON_political_instability"
+		texturefile = "gfx/interface/ideas/hon/r56_idea_HON_political_instability.dds"
 	}
 
 ###------> ITA <><> <><> <><> <><> <><>
