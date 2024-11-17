@@ -24,6 +24,8 @@ focus_tree = {
 	}
 
 	default = no
+
+	continuous_focus_position = { x = 1765 y = 850 }
 	
 	reset_on_civilwar = no
 
