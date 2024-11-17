@@ -747,7 +747,9 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				NOT = {
+					has_government = communism
+				}
 			}
 			
 			removal_cost = -1
@@ -1135,451 +1137,309 @@ ideas = {
 		}
 
 		MEN_invite_western_scholars = {
-			removal_cost = -1
-			
-			picture = generic_production_bonus
-			
+
 			allowed = {
 				always = no
 			}
-			
+
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
+
+			removal_cost = -1
+			
+			picture = jap_supremacy_of_technology
 			
 			modifier = {
 				research_speed_factor = 0.05
 			}
 		}
 
-		MEN_tax_reform = {
-			removal_cost = -1
-			
-			picture = generic_foreign_capital
-			
+		
+		MEN_end_the_humiliation_idea = {
+
+			name = MEN_end_the_humiliation
+
 			allowed = {
 				always = no
 			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			modifier = {
-				consumer_goods_factor = -0.05
-			}
-		}
 
-		MEN_invited_civllian_companys = {
-			removal_cost = -1
-			
-			picture = FRA_factory_strikes
-			
-			allowed = {
+			allowed_civil_war = {
 				always = no
 			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			modifier = {
-				production_speed_industrial_complex_factor = 0.1
-			}
-		}
 
-		MEN_constitutional_government = {
 			removal_cost = -1
 			
-			picture = HUN_treaty_of_triannon
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			modifier = {
-				stability_factor = 0.25
-			}
-		}
-
-		MEN_the_golden_decade = {
-			removal_cost = -1
-			
-			picture = generic_foreign_capital
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			modifier = {
-				production_speed_industrial_complex_factor = 0.1
-			}
-		}
-
-		MEN_payment_for_suiyuan = {
-			removal_cost = -1
-			
-			picture = HUN_treaty_of_triannon
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			modifier = {
-				consumer_goods_factor = -0.05
-			}
-		}
-
-		MEN_payment_for_suiyuan_men = {
-			removal_cost = -1
-			
-			picture = HUN_treaty_of_triannon
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			modifier = {
-				consumer_goods_factor = 0.05
-			}
-		}
-
-		MEN_chinese_triumph = {
-			removal_cost = -1
-			
-			picture = HUN_treaty_of_triannon
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			modifier = {
-				political_power_factor = 0.15 
-				stability_factor = 0.1
-				war_support_factor = 0.1
-			}
-		}
-
-		MEN_increased_presence_at_the_international = {
-			removal_cost = -1
-			
-			picture = HUN_treaty_of_triannon
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			modifier = {
-				communism_drift = 0.1
-			}
-		}
-
-		MEN_communist_partitan_millitas = {
-			removal_cost = -1
-			
-			picture = HUN_treaty_of_triannon
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			modifier = {
-				communism_drift = 0.05
-				conscription = 0.02
-				resistance_damage_to_garrison_on_our_occupied_states = 0.1
-			}
-		}
-
-		MEN_limited_nobility_power = {
-			removal_cost = -1
-			
-			picture = tfv_can_conscription_crisis
-			
-			allowed = {
-				NOT = {
-					has_government = communism 
-				}
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			modifier = {
-				political_power_factor = -0.25
-			}
-		}
-
-		MEN_chinese_communism = {
-			removal_cost = -1
-			
-			picture = HUN_treaty_of_triannon
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			modifier = {
-				communism_drift = 0.1
-				conscription = 0.02
-				autonomy_gain = 2.5
-			}
-		}
-
-		MEN_chinese_communism_2 = {
-			removal_cost = -1
-			
-			picture = HUN_treaty_of_triannon
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			modifier = {
-				communism_drift = 0.1
-				conscription = 0.05
-			}
-		}
-
-		MEN_a_communist_beacon_in_china = {
-			removal_cost = -1
-			
-			picture = generic_foreign_capital
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			modifier = {
-				consumer_goods_factor = -0.05
-				political_power_factor = 0.1
-			}
-		}
-
-		MEN_funds_for_chinese_communists = {
-			removal_cost = -1
-			
-			picture = generic_foreign_capital
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			modifier = {
-				consumer_goods_factor = 0.05
-			}
-		}
-
-		MEN_the_great_inner_mongol_army = {
-			removal_cost = -1
-			
-			picture = chi_army_corruption_2
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
+			picture = man_low_legitimacy5
 			
 			modifier = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
-				army_speed_factor = 0.1
+				army_speed_factor = 0.10
+				mobilization_speed = 0.15
+				conscription = 0.01
+				political_power_factor = -0.05
 			}
 		}
 
-		MEN_increased_cooperation_with_the_united_front = {
-			removal_cost = -1
-			
-			picture = man_low_legitimacy5
-			
+		MEN_anti_japanese_stratagems_idea = {
+
+			name = MEN_anti_japanese_stratagems
+
 			allowed = {
 				always = no
 			}
-			
+
 			allowed_civil_war = {
-				always = yes
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = generic_japanese_conflict
+
+			modifier = {
+				experience_gain_army_factor = -0.10
+				max_planning_factor = 0.10
+				resistance_growth_on_our_occupied_states = 0.15
 			}
 			
 			targeted_modifier = {
-            	tag = JAP
-            	attack_bonus_against = 0.05
-            	defense_bonus_against = 0.05
+				tag = JAP
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.10
             }
 		}
 
-		MEN_assist_in_the_great_patriotic_war = {
-			removal_cost = -1
-			
-			picture = man_low_legitimacy5
-			
+		MEN_communist_peasant_millitas = {
+
 			allowed = {
 				always = no
 			}
-			
+
 			allowed_civil_war = {
-				always = yes
+				has_government = communism
+			}
+
+			removal_cost = -1
+			
+			picture = POL_looming_peasants_strike
+			
+			modifier = {
+				communism_drift = 0.05
+				conscription = 0.01
+				drift_defence_factor = -0.15
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+			}
+		}
+
+		MEN_assist_in_the_great_patriotic_war = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = FIN_german_threat
+
+			modifier = {
+				planning_speed = 0.10
+				max_planning = 0.05
 			}
 
 			targeted_modifier = {
 				tag = GER
 				attack_bonus_against = 0.10
-				defense_bonus_against = 0.05
+				defense_bonus_against = 0.10
             }
 		}
 
-		MEN_anti_japanese_stratagems = {
-			removal_cost = -1
-			
-			picture = man_low_legitimacy5
-			
+		MEN_chinese_mongolian_military = {
+
 			allowed = {
 				always = no
 			}
-			
+
 			allowed_civil_war = {
-				always = yes
+				has_government = communism
 			}
-			
-			
-			targeted_modifier = {
-				tag = JAP
-				attack_bonus_against = 0.20
-				defense_bonus_against = 0.20
-            }
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				conscription_factor = 0.10
+				political_power_factor = -0.05
+				high_command_cost_factor = -0.25
+				land_doctrine_cost_factor = -0.05
+				army_org_factor = 0.05
+			}
 		}
 
-		MEN_end_the_century_of_humiliation = {
-			removal_cost = -1
-			
-			picture = man_low_legitimacy5
-			
+		MEN_beacon_of_resistance_idea = {
+
 			allowed = {
 				always = no
 			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			targeted_modifier = {
-				tag = JAP
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.15
-            }
 
-			targeted_modifier = {
-				tag = MAN
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.15
-            }
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = SPR_anti_fascist_crusade
+
+			modifier = {
+				war_support_weekly = 0.001
+				conscription = 0.01
+				resistance_growth_on_our_occupied_states = 0.10
+				resistance_damage_to_garrison_on_our_occupied_states = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				surrender_limit = 0.05
+			}
+		}
+
+		MEN_the_honour_of_death_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = SPR_anti_fascist_crusade
+
+			modifier = {
+				supply_factor = 0.10
+				war_support_weekly = 0.002
+				conscription = 0.02
+				resistance_growth_on_our_occupied_states = 0.15
+				resistance_damage_to_garrison_on_our_occupied_states = 0.10
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				surrender_limit = 0.10
+			}
 		}
 		
-        MEN_mon_mil_gov_made = {
-            allowed = {
-				always = yes 
+		MEN_funding_chinese_communists = {
+
+			allowed = {
+				always = no
 			}
 
 			allowed_civil_war = {
-				always = yes 
+				has_government = communism
 			}
-			
+
 			removal_cost = -1
 
-			picture = MEX_politicised_army
-			
-			modifier = {		 
-				war_support_factor = 0.1
-				conscription = 0.015
-				mobilization_speed = 0.015
-			}
-        }
+			picture = ETH_customs_barrier_ITA
 
-		MEN_Chairman_Yondonwangchug = {
-            allowed = {
-				always = yes 
-			}
-
-			allowed_civil_war = {
-				always = yes 
-			}
-			
-			removal_cost = -1
-
-			picture = MEX_politicised_army
-			
 			modifier = {
-				stability_factor = 0.1
-				fascism_acceptance = 25
-				neutrality_acceptance = 25
-				neutrality_drift = 0.02
+				consumer_goods_factor = 0.10
+				political_power_factor = 0.05
 			}
-        }
+		}
 
-		MEN_strike_our_old_oppressers = {
-            allowed = {
-				always = yes 
+		MEN_mongolian_funds_for_chinese_communists = {
+
+			allowed = {
+				always = no
 			}
 
 			allowed_civil_war = {
-				always = yes 
+				NOT = {
+					has_government = communism
+				}
 			}
-			
+
 			removal_cost = -1
 
-			picture = jap_intervene_in_china
-			 
+			picture = generic_communism_drift_bonus
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				communism_drift = 0.03
+				drift_defence_factor = -0.10
+				political_power_factor = -0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		MEN_anti_chinese_propaganda = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = jap_ichi_go
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_factor = 0.05
+				war_support_weekly = 0.001
+			}
+
 			targeted_modifier = {
 				tag = CHI
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-            }
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.10
+			}
+		}
+
+		MEN_our_place_under_the_red_sun_idea = {
+
+			name = MEN_our_place_under_the_red_sun
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				is_subject_of = JAP
+			}
+
+			cancel = {
+				NOT = {
+					is_subject_of = JAP
+				}
+			}
+
+			removal_cost = -1
+
+			picture = jap_militarism_showa
+
+			modifier = {
+				war_support_factor = 0.10
+				conscription = 0.01
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				research_speed_factor = 0.05
+				political_power_factor = -0.10
+				local_resources_factor = 0.10
+			}
 		}
 
 		##### ARMY IDEAS #####
@@ -1864,28 +1724,8 @@ ideas = {
 			}
 		}
 
-		MEN_Embrasing_Our_Heritage = {
-			allowed = {
-				always = yes 
-			}
-
-			allowed_civil_war = {
-				always = yes 
-			}
-			
-			removal_cost = -1
-
-			picture = CZE_planning_bonus
-			
-			modifier = {
-				cavalry_attack_factor = 0.05
-				cavalry_defence_factor = 0.05
-				production_speed_infrastructure_factor = 0.1
-				supply_node_range = 0.05
-			}
-		}
-
 		MEN_the_bank_of_mengjiang = {
+
 			removal_cost = -1
 			
 			picture = tur_balkan_central_bank_wealthy_greece
@@ -1906,6 +1746,7 @@ ideas = {
 		}
 
 		MEN_rapid_industrialization = {
+			
 			removal_cost = -1
 			
 			picture = ARG_rapid_militarization

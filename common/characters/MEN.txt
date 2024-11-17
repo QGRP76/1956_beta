@@ -7,13 +7,13 @@ characters={
 			}
 		}
 		country_leader={
-			ideology= fascism_ideology
+			ideology = fascism_ideology
 			traits={ subservient_ultranationalist r56_trait_opposed_to_communism }
 			expire="1965.1.1"
 			id=-1
 		}
 		country_leader={
-			ideology= oligarchism
+			ideology = oligarchism
 			traits={ subservient_ultranationalist r56_trait_opposed_to_communism }
 			expire="1965.1.1"
 			id=-1
@@ -72,8 +72,12 @@ characters={
 	MEN_ulanhu={
 		name=MEN_ulanhu
 		portraits={
+			civilian = {
+				small="gfx/interface/ideas/men/advisors/r56_idea_MEN_advisor_ulanhu.dds"
+			}
 			army={
-				large="GFX_r56_portrait_MEN_Ulanhu"
+				large="gfx/leaders/MEN/r56_portrait_MEN_Ulanhu.dds"
+				small="gfx/interface/ideas/men/advisors/r56_idea_MEN_advisor_ulanhu_army.dds"
 			}
 		}
 		country_leader={
@@ -87,15 +91,15 @@ characters={
 		}
 		corps_commander = {
 			traits = {
-				politically_connected
+				organizer
 				trickster 
 				guerilla_fighter 
 			}
-			skill = 2
+			skill = 3
 			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 2
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 3
 			legacy_id = -1
 			visible = {
 				OR = {
@@ -116,7 +120,105 @@ characters={
 			}
 			cost = 100
 			traits = {
-				army_chief_morale_2
+				army_chief_organizational_2
+			}
+		}
+	}
+	MEN_li_sen={
+		name="Li Sen"
+		portraits={
+			army={
+				large="gfx/leaders/Asia/portrait_asia_generic_land_8.dds"
+				small="gfx/interface/ideas/idea_asia_generic_land_8.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				career_officer
+				cavalry_officer
+				hill_fighter
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
+			visible = {
+				has_government = communism
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = MEN_li_sen_army
+			ledger = army
+			available = {
+				has_government = communism
+			}
+			cost = 100
+			traits = {
+				army_cavalry_2
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = MEN_li_sen_chief
+			ledger = army
+			available = {
+				has_government = communism
+			}
+			cost = 100
+			traits = {
+				army_chief_offensive_2
+			}
+		}
+	}
+	MEN_kuibi={
+		name="Kuibi"
+		portraits={
+			army={
+				large="gfx/leaders/Asia/portrait_asia_generic_land_7.dds"
+				small="gfx/interface/ideas/idea_asia_generic_land_7.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				caring_leader
+				politically_connected
+				infantry_officer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id = -1
+			visible = {
+				has_government = communism
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = MEN_kuibi_army
+			ledger = army
+			available = {
+				has_government = communism
+			}
+			cost = 100
+			traits = {
+				army_infantry_2
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = MEN_kuibi_chief
+			ledger = army
+			available = {
+				has_government = communism
+			}
+			cost = 100
+			traits = {
+				army_chief_defensive_2
 			}
 		}
 	}
@@ -131,20 +233,16 @@ characters={
 				small="gfx/interface/ideas/MEN/advisors/r56_idea_MEN_advisor_serengdongrub_army.dds" 
 			}
 		}
-		country_leader={
-			ideology=marxism
-			traits={ 
-				MEN_militant_communist 
-			}
-			expire="1965.1.1.1"
-			id=-1
-		}
 		advisor = {
 			cost = 150
 			available = {
 				NOT = {
 					has_government = fascism
 					has_war_with = CHI
+					has_country_leader = {
+						character = MEN_serengdongrub
+						ruling_only = yes
+					}
 				}
 			}
 			can_be_fired = no
@@ -159,6 +257,41 @@ characters={
 			}
 			ai_will_do = {
 				factor = 10
+			}
+		}
+		corps_commander = {
+			traits = {
+				unpopular
+				politically_connected 
+				trickster
+				trait_reckless 
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+			visible = {
+				OR = {
+					has_completed_focus = MEN_work_with_the_communists
+					has_government = communism
+				}
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = MEN_serengdongrub_army
+			ledger = army
+			available = {
+				OR = {
+					has_completed_focus = MEN_work_with_the_communists
+					has_government = communism
+				}
+			}
+			cost = 50
+			traits = {
+				army_regrouping_1
 			}
 		}
 	}
@@ -323,9 +456,10 @@ characters={
 					has_war_with = JAP
 					has_government = communism
 					has_government = democratic
+					has_active_mission = MEN_imminent_japanese_invasion
 				}
 				AND = {
-					tag = MEN
+					original_tag = MEN
 					NOT = {
 						has_completed_focus = MEN_root_out_japanese_loyality
 					}
@@ -341,6 +475,7 @@ characters={
 					has_war_with = JAP
 					has_government = communism
 					has_government = democratic
+					has_active_mission = MEN_imminent_japanese_invasion
 					has_completed_focus = MEN_root_out_japanese_loyality
 				}
 			}
@@ -358,6 +493,7 @@ characters={
 					has_war_with = JAP
 					has_government = communism
 					has_government = democratic
+					has_active_mission = MEN_imminent_japanese_invasion
 					has_completed_focus = MEN_root_out_japanese_loyality
 				}
 			}
@@ -387,9 +523,10 @@ characters={
 					has_war_with = JAP
 					has_government = communism
 					has_government = democratic
+					has_active_mission = MEN_imminent_japanese_invasion
 				}
 				AND = {
-					tag = MEN
+					original_tag = MEN
 					NOT = {
 						has_completed_focus = MEN_root_out_japanese_loyality
 					}
@@ -405,6 +542,7 @@ characters={
 					has_war_with = JAP
 					has_government = communism
 					has_government = democratic
+					has_active_mission = MEN_imminent_japanese_invasion
 					has_completed_focus = MEN_root_out_japanese_loyality
 				}
 			}
@@ -425,6 +563,7 @@ characters={
 					has_war_with = JAP
 					has_government = communism
 					has_government = democratic
+					has_active_mission = MEN_imminent_japanese_invasion
 					has_completed_focus = MEN_root_out_japanese_loyality
 				}
 			}

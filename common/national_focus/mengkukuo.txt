@@ -2228,8 +2228,6 @@ focus_tree = {
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
-
 	}
 
 	focus = {
@@ -2244,6 +2242,8 @@ focus_tree = {
 		x = 52
 		y = 0
 	 	available = {
+			is_subject = no
+			has_civil_war = no
 			has_country_flag = MEN_nima_odsor_not_assassinated
 		}
 		
@@ -2276,8 +2276,6 @@ focus_tree = {
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
-
 	}
 
 	focus = {
@@ -2292,6 +2290,8 @@ focus_tree = {
 		x = 71
 		y = 0
 		available = {
+			is_subject = no
+			has_civil_war = no
 			has_idea = MEN_the_long_winter
 		}
 
@@ -2315,8 +2315,6 @@ focus_tree = {
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
 	}
 
 	##### FASCIST - JAPANESE PATH #####
@@ -2328,6 +2326,7 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+			has_civil_war = no
 		}
 		
 		bypass = {
@@ -2394,10 +2393,11 @@ focus_tree = {
 					add_idea = MEN_kwantungs_invisible_hand_fascist
 				}
 			}
+			hidden_effect = {
+				drop_cosmetic_tag = yes
+			}
 			set_cosmetic_tag = MEN_MIL_GOV
 		}
-
-		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL}
 
 	}
 
@@ -2441,8 +2441,6 @@ focus_tree = {
 			deactivate_advisor = MEN_serengdongrub
 		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL  FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_STABILITY}
-
 	}
 
 	focus = {
@@ -2478,14 +2476,17 @@ focus_tree = {
 				ideology = fascism
 				popularity = 0.05
 			}
-			swap_ideas = {
-				remove_idea = MEN_aftermath_of_the_long_winter
-				add_idea = MEN_aftermath_of_the_long_winter_zenrin
-				add_days = -60
+			if = {
+				limit = {
+					has_idea = MEN_aftermath_of_the_long_winter
+				}
+				swap_ideas = {
+					remove_idea = MEN_aftermath_of_the_long_winter
+					add_idea = MEN_aftermath_of_the_long_winter_zenrin
+					add_days = -60
+				}
 			}
 		}
-
-		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL }
 
 	}
 
@@ -2569,8 +2570,6 @@ focus_tree = {
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL}
-
 	}
 
 	focus = {
@@ -2645,8 +2644,6 @@ focus_tree = {
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
-
 	}
 
 	focus = {
@@ -2697,16 +2694,16 @@ focus_tree = {
 				attacker = {
 					state = 611
 					num_provinces = 3
-					on_win = himalaya_tibet.45
-					on_lose = himalaya_tibet.46
-					on_cancel = himalaya_tibet.44
+					on_win = men.26
+					on_lose = men.27
+					on_cancel = men.28
 				}
 				defender = {
 					state = 621
 					num_provinces = 3
-					on_win = himalaya_tibet.42
-					on_lose = himalaya_tibet.43
-					on_cancel = himalaya_tibet.44
+					on_win = men.29
+					on_lose = men.30
+					on_cancel = men.31
 				}
 			}
 			custom_effect_tooltip = MEN_effects_if_border_conflict_is_won
@@ -2736,13 +2733,11 @@ focus_tree = {
 				set_border_war_data = {
 					attacker = 611
 					defender = 621
-					defender_modifier = 0.15
+					defender_modifier = 0.25 # Bigger cuz they should win
 					combat_width = 80
 				}
 			}
 		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
 
 	}
 
@@ -2783,8 +2778,6 @@ focus_tree = {
 			add_war_support = 0.05
 			add_country_leader_trait = MEN_spirit_of_genghis
 		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL  FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_STABILITY }
 
 	}
 
@@ -2828,8 +2821,6 @@ focus_tree = {
 				add_idea = MEN_kwantungs_invisible_hand_servants
 			}
 		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
 
 	}
 
@@ -3138,13 +3129,13 @@ focus_tree = {
 					if = {
 						limit = {
 							non_damaged_building_level = {
-								building = rail_way
+								building = supply_node
 								level > 0
 							}
 						}
 						damage_building = {
-							type = rail_way
-							damage = 2
+							type = supply_node
+							damage = 0.8
 						}
 					}
 				}
@@ -3237,6 +3228,7 @@ focus_tree = {
 			event_target:WTT_current_china_leader = {
 				add_timed_idea = {
 					idea = MEN_anti_japanese_intelligence_china
+					days = 180
 				}
 			}
 			custom_effect_tooltip = r56_newline
@@ -3384,22 +3376,34 @@ focus_tree = {
 				has_war_with = CHI 
 			}
 		}
+
+		bypass = {
+			JAP = {
+				NOT = {
+					has_war_with = CHI 
+				}
+			}
+		}
 		
 		prerequisite = { 
 			focus = MEN_loyalty_to_the_kwantung 
 		}
 		relative_position_id = MEN_loyalty_to_the_kwantung
+
 		x = 1
 		y = 1
 	
-		
 		cost = 10
 
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
-			add_ideas = MEN_strike_our_old_oppressers 
+			add_war_support = 0.10
+			add_timed_idea = {
+				idea = MEN_anti_chinese_propaganda
+				days = 180
+			}
 		}
 	}
 
@@ -3426,7 +3430,13 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			add_ideas = MEN_strike_our_old_oppressers 
+			add_war_support = 0.05
+			every_state = {
+				limit = {
+					is_core_of = MON
+				}
+				add_core_of = ROOT
+			}
 		}
 	}
 
@@ -3436,9 +3446,7 @@ focus_tree = {
 		icon = GFX_focus_generic_spread_fascism
 
 		available = {
-			JAP = {
-				has_war_with = CHI 
-			}
+			is_ally_with = JAP
 		}
 		
 		prerequisite = { 
@@ -3454,7 +3462,46 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			add_ideas = MEN_strike_our_old_oppressers 
+			JAP = {
+				country_event = { id = men.23 hours = 12 }
+			}
+			custom_effect_tooltip = MEN_possible_event_effects
+			effect_tooltip = {
+				add_stability = 0.05
+				JAP = {
+					every_owned_state = {
+						limit = {
+							OR = {
+								is_core_of = MON
+								is_core_of = TAN
+							}
+							state = 621
+							state = 746
+						}
+						transfer_state_to = MEN
+					}
+					every_controlled_state = {
+						limit = {
+							OR = {
+								is_core_of = MON
+								is_core_of = TAN
+							}
+							state = 621
+							state = 746
+						}
+						ROOT = {
+							set_state_controller = PREV
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = MEN_alternative_event_effects
+			effect_tooltip = {
+				add_opinion_modifier = {
+					target = JAP
+					modifier = betrayed_our_cause
+				}
+			}
 		}
 	}
 
@@ -3464,9 +3511,7 @@ focus_tree = {
 		icon = GFX_focus_ETH_an_empire_in_the_shade_of_the_sun
 
 		available = {
-			JAP = {
-				has_war_with = CHI 
-			}
+			is_subject_of = JAP
 		}
 		
 		prerequisite = { 
@@ -3482,7 +3527,7 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			add_ideas = MEN_strike_our_old_oppressers 
+			add_ideas = MEN_our_place_under_the_red_sun_idea
 		}
 	}
 
@@ -3985,6 +4030,9 @@ focus_tree = {
 			}
 			add_political_power = 35
 			add_ideas = MEN_nationalism_unity_independence
+			hidden_effect = {
+				drop_cosmetic_tag = yes
+			}
 		}
 	}
 
@@ -4025,9 +4073,19 @@ focus_tree = {
 					logistics_skill = 1
 					traits = {}
 				}
+				create_corps_commander = {
+					name = "Serengdongrub"
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+					traits = {}
+				}
 			}
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = MEN_ulanhu
+			show_ideas_tooltip = MEN_serengdongrub_army
 			custom_effect_tooltip = r56_newline
 			add_ideas = MEN_cooperation_with_the_communists
 		}
@@ -4349,13 +4407,37 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			every_owned_state = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
 				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
+			add_ideas = SIA_state_invervention
 		}
 	}
 
@@ -4369,18 +4451,101 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		available = {
-			has_government = democratic
+		bypass = {
+			OR = {
+				AND = {
+					controls_state = 621
+					controls_state = 746
+				}
+				any_other_country = {
+					has_war_with = ROOT
+					owns_state = 621
+					owns_state = 746
+				}
+			}
 		}
-	
-		relative_position_id =  MEN_transition_into_the_third_phase
+
+		available = {
+			any_other_country = {
+				NOT = {
+					has_war_with = ROOT
+				}
+				OR = {
+					AND = {
+						owns_state = 621
+						controls_state = 621
+					}
+					AND = {
+						owns_state = 746
+						controls_state = 746
+					}
+				}
+			}
+		}
+
+		relative_position_id = MEN_transition_into_the_third_phase 
 		cost = 10
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-			add_ideas = MEN_tax_reform
+			every_state = {
+				limit = {
+					OR = {
+						state = 621
+						state = 746
+					}
+				}
+				add_core_of = ROOT
+			}
+			every_other_country = {
+				limit = {
+					NOT = {
+						has_war_with = ROOT
+					}
+					OR = {
+						AND = {
+							owns_state = 621
+							controls_state = 621
+						}
+						AND = {
+							owns_state = 746
+							controls_state = 746
+						}
+					}
+				}
+				country_event = { id = men.17 hours = 12 }
+			}
+			custom_effect_tooltip = MEN_possible_event_effects
+			effect_tooltip = {
+				every_other_country = {
+					limit = {
+						NOT = {
+							has_war_with = ROOT
+						}
+						OR = {
+							AND = {
+								owns_state = 621
+								controls_state = 621
+							}
+							AND = {
+								owns_state = 746
+								controls_state = 746
+							}
+						}
+					}
+					every_owned_state = {
+						limit = {
+							OR = { 
+								state = 621
+								state = 746
+							}
+						}
+						transfer_state_to = MEN
+					}
+				}
+			}
 		}
 	}
 
@@ -4401,9 +4566,19 @@ focus_tree = {
 			factor = 0
 		}
 
+		available = {
+			has_government = democratic
+		}
+
 		completion_reward = {
-			add_ideas = MEN_invited_civllian_companys
-			612 = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -4411,6 +4586,12 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			add_political_power = -35
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_ideas = LAT_liberal_welfare
 		}
 	}
 
@@ -4423,6 +4604,11 @@ focus_tree = {
 		}
 		x = 0
 		y = 1
+
+		available = {
+			has_government = democratic
+			surrender_progress < 0.25
+		}
 	
 		relative_position_id =  MEN_nationalism_democracy_welfare
 		cost = 10
@@ -4431,7 +4617,8 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-
+			add_war_support = 0.10
+			add_ideas = MEN_end_the_humiliation_idea
 		}
 	}
 
@@ -4447,11 +4634,43 @@ focus_tree = {
 		relative_position_id = MEN_the_principle_of_nationalism 
 		cost = 5
 
+		available = {
+			controls_state = 611
+		}
+
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-			add_stability = 0.1	
+			add_stability = 0.05
+			611 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 1590
+				}
+			}
+			611 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 10397
+				}
+			}
+			611 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 6904
+				}
+			}
+			add_timed_idea = {
+				idea = GEN_Anti_Invasion_I
+				days = 60
+			}
 		}
 	}
 
@@ -4467,19 +4686,128 @@ focus_tree = {
 		x = -1
 		y = 1
 
+		bypass = {
+			OR = {
+				AND = {
+					controls_state = 621
+					controls_state = 746
+				}
+				any_other_country = {
+					has_war_with = ROOT
+					owns_state = 621
+					owns_state = 746
+				}
+			}
+		}
+
+		available = {
+			any_other_country = {
+				NOT = {
+					has_war_with = ROOT
+				}
+				OR = {
+					AND = {
+						owns_state = 621
+						controls_state = 621
+					}
+					AND = {
+						owns_state = 746
+						controls_state = 746
+					}
+				}
+			}
+		}
+
 		relative_position_id = MEN_fortify_the_capital 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-			add_state_claim = 621
+			every_state = {
+				limit = {
+					OR = {
+						state = 621
+						state = 746
+					}
+				}
+				add_core_of = ROOT
+			}
 			every_other_country = {
 				limit = {
-					has_full_control_of_state = 621
+					NOT = {
+						has_war_with = ROOT
+					}
+					OR = {
+						AND = {
+							owns_state = 621
+							controls_state = 621
+						}
+						AND = {
+							owns_state = 746
+							controls_state = 746
+						}
+					}
 				}
-				country_event = MEN.26
+				country_event = { id = men.17 hours = 12 }
+			}
+			custom_effect_tooltip = MEN_possible_event_effects
+			effect_tooltip = {
+				every_other_country = {
+					limit = {
+						NOT = {
+							has_war_with = ROOT
+						}
+						OR = {
+							AND = {
+								owns_state = 621
+								controls_state = 621
+							}
+							AND = {
+								owns_state = 746
+								controls_state = 746
+							}
+						}
+					}
+					every_owned_state = {
+						limit = {
+							OR = { 
+								state = 621
+								state = 746
+							}
+						}
+						transfer_state_to = MEN
+					}
+				}
+			}
+			custom_effect_tooltip = MEN_alternative_event_effects
+			effect_tooltip = {
+				every_other_country = {
+					limit = {
+						NOT = {
+							has_war_with = ROOT
+						}
+						OR = {
+							AND = {
+								owns_state = 621
+								controls_state = 621
+							}
+							AND = {
+								owns_state = 746
+								controls_state = 746
+							}
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							target = PREV
+							type = take_core_state
+							generator = { 621 746 }
+							expire = 0
+						}
+					}
+				}
 			}
 		}
 	}
@@ -4495,15 +4823,67 @@ focus_tree = {
 		}
 		x = 1
 		y = 1
+
+		available = {
+			is_subject = no
+			any_other_country = {
+				NOT = {
+					has_war_with = ROOT
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				OR = {
+					owns_state = 621
+					owns_state = 746
+				}
+			}
+		}
+
+		bypass = {
+			any_other_country = {
+				has_war_with = ROOT
+				OR = {
+					owns_state = 621
+					owns_state = 746
+				}
+			}
+		}
 	
 		relative_position_id = MEN_fortify_the_capital 
-		cost = 5
+		cost = 10
+
+		will_lead_to_war_with = SHX
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-			add_stability = 0.1	
+			add_war_support = 0.05
+			every_state = {
+				limit = {
+					OR = {
+						state = 621
+						state = 746
+					}
+				}
+				add_core_of = ROOT
+			}
+			every_other_country = {
+				limit = {
+					OR = {
+						owns_state = 621
+						owns_state = 746
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						target = PREV
+						type = take_core_state
+						expire = 0
+						generator = { 621 746 }
+					}
+				}
+			}
 		}
 	}
 
@@ -4522,21 +4902,14 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				JAP = {
-					exists = no
+			JAP = {
+				exists = yes
+				OR = {
+					has_war_with = ROOT
+					has_government = fascism
+					has_government = communism
 				}
-
-				MAN = {
-					exists = no 
-				}
-
-				KOR = {
-					exists = yes 
-					is_subject = no 
-				}
-			}	
-
+			}
 		}
 	
 		relative_position_id = MEN_request_suiyuan_and_ordos
@@ -4546,9 +4919,10 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = MEN_end_the_century_of_humiliation
-				add_idea = MEN_chinese_triumph
+			add_war_support = 0.05
+			add_timed_idea = {
+				idea = MEN_anti_japanese_stratagems_idea
+				days = 180
 			}
 		}
 	}
@@ -4568,14 +4942,11 @@ focus_tree = {
 		}
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = MEN_has_united_mongolia_tt
-				has_cosmetic_tag = MEN_mongol_unify
-			}
+			controls_state = 610
+			controls_state = 946
+			controls_state = 715
 			controls_state = 761
 			controls_state = 714
-			controls_state = 873
-			controls_state = 715
 		}
 
 		relative_position_id = MEN_anti_japanese_stratagems
@@ -4585,20 +4956,31 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			761 = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 610
+						state = 946
+						state = 715
+						state = 761
+						state = 714
+					}
+				}
 				add_core_of = ROOT 
 			}
-
-			714 = {
-				add_core_of = ROOT 
-			}
-
-			873 = {
-				add_core_of = ROOT 
-			}
-
-			715 = {
-				add_core_of = ROOT 
+			if = {
+				limit = {
+					country_exists = MON
+					NOT = {
+						has_war_with = MON
+						is_ally_with = MON
+					}
+				}
+				create_wargoal = {
+					target = MON
+					type = annex_everything
+					expire = 0
+				}
 			}
 		}
 	}
@@ -4620,11 +5002,19 @@ focus_tree = {
 		y = 1
 
 		bypass = {
-			
+			has_war_with = SOV
+			has_war_with = PRC
+			NOT = {
+				country_exists = SOV
+				country_exists = PRC
+			}
 		}
 
 		available = {
-			
+			NOT = {
+				has_war_with = SOV
+			}
+			country_exists = SOV
 		}
 
 		relative_position_id = MEN_radicalize_the_peasants
@@ -4634,11 +5024,24 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
+			add_war_support = 0.05
 			add_popularity = {
 				ideology = communism
 				popularity = 0.05
 			}
-			add_ideas = MEN_increased_presence_at_the_international
+			add_opinion_modifier = {
+				target = SOV
+				modifier = medium_increase
+			}
+			custom_effect_tooltip = MEN_upon_civil_war_start
+			effect_tooltip = {
+				add_manpower = 5000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 500
+					producer = SOV
+				}
+			}
 		}
 	}
 
@@ -4657,11 +5060,19 @@ focus_tree = {
 		y = 1
 
 		bypass = {
-			
+			has_war_with = SOV
+			has_war_with = PRC
+			NOT = {
+				country_exists = SOV
+				country_exists = PRC
+			}
 		}
 
 		available = {
-			
+			NOT = {
+				has_war_with = PRC
+			}
+			country_exists = PRC
 		}
 
 		relative_position_id = MEN_radicalize_the_peasants
@@ -4671,11 +5082,24 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
+			add_war_support = 0.05
 			add_popularity = {
 				ideology = communism
 				popularity = 0.05
 			}
-			add_ideas = MEN_increased_presence_at_the_international
+			add_opinion_modifier = {
+				target = PRC
+				modifier = medium_increase
+			}
+			custom_effect_tooltip = MEN_upon_civil_war_start
+			effect_tooltip = {
+				add_manpower = 1000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 250
+					producer = PRC
+				}
+			}
 		}
 	}
 
@@ -4704,27 +5128,46 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			add_ideas = MEN_communist_partitan_millitas
-			if = {
-				limit = {
-					Not = {
-						OR = {
-							has_tech = mobile_warfare
-							has_tech = superior_firepower
-							has_tech = grand_battle_plan
-							has_tech = mass_assault
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				uses = 1
+				category = land_doctrine
+			}
+			add_timed_idea = {
+				idea = MEN_communist_peasant_millitas
+				days = 180
+			}
+			custom_effect_tooltip = MEN_upon_civil_war_start
+			effect_tooltip = {
+				division_template = {
+					name = "Měngqì Ānbao Túan"
+					regiments = {
+						infantry = { x = 0 y = 0 }	
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }	
+						infantry = { x = 1 y = 2 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+					}
+				}	
+				random_owned_controlled_state = {
+					prioritize = { 611 }
+					limit = {
+						is_core_of = ROOT
+					}
+					custom_effect_tooltip = MEN_create_security_army 
+					hidden_effect = {
+						create_unit = {
+							division = "name = \"1. Měngqì Ānbao Túan\" division_template = \"Měngqì Ānbao Túan\" start_experience_factor = 0.10 start_equipment_factor = 0.85 start_manpower_factor = 0.75"
+							owner = ROOT
+							count = 1
+							prioritize_location = 10397
 						}
 					}
-				}
-				set_technology = {
-					r56_guerilla_warfare = 1
-				}
-			}
-			else = {
-				add_doctrine_cost_reduction = {
-					cost_reduction = 1
-					uses = 1
-					category = land_doctrine
 				}
 			}
 		}
@@ -4741,13 +5184,12 @@ focus_tree = {
 		y = 1
 
 		bypass = {
-			
+			has_government = communism
 		}
 
 		available = {
-			
+			communism > 0.25
 		}
-		
 	
 		relative_position_id = MEN_establish_peasant_militias
 		cost = 5 
@@ -4756,8 +5198,343 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			MON = {
-				country_event = MEN.28 
+			add_war_support = 0.10
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			delete_unit = {} ### DELETE ALL UNITS FOR BALANCE
+			start_civil_war = {
+				ideology = neutrality
+				ruling_party = communism
+				size = 0.45
+				keep_all_characters = yes
+				keep_political_party_members = yes
+				states = {
+					612
+				}
+				PREV = {
+					every_character = {
+						limit = {
+							OR = {
+								is_character = MEN_prince_demchugdongrub
+								is_character = MEN_li_shouxin
+								is_character = MEN_wang_ying
+								is_character = MEN_jodbajab
+							}
+						}
+						set_nationality = PREV.PREV
+					}
+				}
+			}
+			effect_tooltip = { # Tooltip
+				create_corps_commander = {
+					name = "Ulaankhüü"
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+					traits = {}
+				}
+				create_corps_commander = {
+					name = "Kuibi"
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+					traits = {}
+				}
+				create_corps_commander = {
+					name = "Li Sen"
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+					traits = {}
+				}
+				create_corps_commander = {
+					name = "Serengdongrub"
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+					traits = {}
+				}
+				effect_tooltip = {
+					if = {	# Mengkukuo or Mongolia change ideology - lose opinion debuff
+						limit = {
+							MON = {
+								OR = {
+									has_government = communism
+									has_government = democratic
+								}
+							}
+						}
+					}
+					MON = {
+						add_opinion_modifier = {
+							target = MEN
+							modifier = MEN_shared_struggle
+						}
+					}
+					add_opinion_modifier = {
+						target = MON
+						modifier = MEN_shared_struggle
+					}
+				}
+			}
+			hidden_effect = {
+				612 = {
+					remove_dynamic_modifier = {
+						modifier = r56_MEN_demilitarized_state
+					}
+				}
+				every_country = { ### BREAKAWAY - NOT MEN
+					limit = {
+						original_tag = MEN
+						has_civil_war = yes
+						has_war_with = MEN
+						NOT = {
+							has_government = communism
+						}
+					}
+					set_capital = {
+						state = 611
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 250
+						producer = JAP
+					}
+					promote_character = {
+						character = MEN_prince_demchugdongrub
+						ideology = oligarchism
+					}
+					division_template = {
+						name = "Yavgan Tsergiin Diviz"			# Infantry Division
+						division_names_group = MEN_INF_01
+					
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							cavalry = { x = 0 y = 2 }
+						}
+						support = {
+							artillery = { x = 0 y = 0 }
+						}
+					}
+					division_template = {
+						name = "Morin Tsergiin Diviz"			# Cavalry Division
+						division_names_group = MEN_CAV_01
+					
+						regiments = {
+							cavalry = { x = 0 y = 0 }
+							cavalry = { x = 0 y = 1 }
+						}
+						support = {
+							artillery = { x = 0 y = 0 }
+						}
+					}
+					division_template = {
+						name = "Kantō Bunkeitai"			# Kwantung Detachment
+						division_names_group = JAP_INF_01
+					
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+							artillery = { x = 0 y = 1 }
+						}
+					}
+					random_owned_controlled_state = {
+						prioritize = { 612 }
+						limit = {
+							is_core_of = ROOT
+						}
+						create_unit = {
+							division = "name = \"1. Morin Tsergiin Diviz 'Rehe'\" division_template = \"Morin Tsergiin Diviz\" start_experience_factor = 0.05 start_equipment_factor = 0.45 start_manpower_factor = 0.85"
+							owner = PREV
+							count = 1
+							allow_spawning_on_enemy_provs = yes
+							prioritize_location = 12348
+						}
+					}
+					random_owned_controlled_state = {
+						prioritize = { 611 }
+						limit = {
+							is_core_of = ROOT
+						}
+						create_unit = {
+							division = "name = \"1. Yavgan Tsergiin Diviz 'Binguangfu'\" division_template = \"Yavgan Tsergiin Diviz\" start_experience_factor = 0.05 start_equipment_factor = 0.45 start_manpower_factor = 0.85"
+							owner = PREV
+							count = 1
+							allow_spawning_on_enemy_provs = yes
+							prioritize_location = 11752
+						}
+						create_unit = {
+							division = "name = \"2. Morin Tsergiin Diviz 'Chahar'\" division_template = \"Morin Tsergiin Diviz\" start_experience_factor = 0.05 start_equipment_factor = 0.45 start_manpower_factor = 0.85"
+							owner = PREV
+							count = 1
+							allow_spawning_on_enemy_provs = yes
+							prioritize_location = 4495
+						}
+						create_unit = {
+							division = "name = \"1. Kantō Bunkeitai 'Hebei'\" division_template = \"Kantō Bunkeitai\" start_experience_factor = 0.10 start_equipment_factor = 0.55 start_manpower_factor = 1"
+							owner = PREV
+							count = 1
+							allow_spawning_on_enemy_provs = yes
+							prioritize_location = 3955
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_template = "Yavgan Tsergiin Diviz"
+						}
+					}
+					division_template = {
+						name = "Yavgan Tsergiin Diviz"			# Infantry Division
+						division_names_group = MEN_INF_01
+					
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							cavalry = { x = 0 y = 2 }
+						}
+						support = {
+							artillery = { x = 0 y = 0 }
+						}
+					}
+				}
+				division_template = {
+					name = "Sain Duryn Brigad"			# Volunteer Brigade
+					division_names_group = MEN_INF_01
+					template_counter = 14
+				
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+					}
+					support = {
+						artillery = { x = 0 y = 1 }
+					}
+				}
+				division_template = {
+					name = "Měngqì Ānbao Túan"
+					division_names_group = MEN_INF_01
+					template_counter = 3
+
+					regiments = {
+						infantry = { x = 0 y = 0 }	
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }	
+						infantry = { x = 1 y = 2 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+					}
+				}	
+				random_owned_controlled_state = {
+					prioritize = { 612 }
+					limit = {
+						is_core_of = ROOT
+					}
+					create_unit = {
+						division = "name = \"2. Yavgan Tsergiin Diviz 'Bowangfu'\" division_template = \"Yavgan Tsergiin Diviz\" start_experience_factor = 0.05 start_equipment_factor = 0.45 start_manpower_factor = 0.85"
+						owner = PREV
+						count = 1
+						allow_spawning_on_enemy_provs = yes
+						prioritize_location = 12448
+					}
+				}
+				random_owned_controlled_state = {
+					prioritize = { 611 }
+					limit = {
+						is_core_of = ROOT
+					}
+					create_unit = {
+						division = "name = \"1. Měngqì Ānbao Túan\" division_template = \"Měngqì Ānbao Túan\" start_experience_factor = 0.10 start_equipment_factor = 0.85 start_manpower_factor = 0.95"
+						owner = ROOT
+						count = 1
+						prioritize_location = 10397
+					}
+					create_unit = {
+						division = "name = \"1. Sain Duryn Brigad\" division_template = \"Sain Duryn Brigad\" start_experience_factor = 0 start_equipment_factor = 0.35 start_manpower_factor = 1"
+						owner = PREV
+						count = 1
+						allow_spawning_on_enemy_provs = yes
+						prioritize_location = 4612
+					}
+					create_unit = {
+						division = "name = \"2. Sain Duryn Brigad\" division_template = \"Sain Duryn Brigad\" start_experience_factor = 0 start_equipment_factor = 0.35 start_manpower_factor = 1"
+						owner = PREV
+						count = 1
+						allow_spawning_on_enemy_provs = yes
+						prioritize_location = 7674
+					}
+					create_unit = {
+						division = "name = \"3. Sain Duryn Brigad\" division_template = \"Sain Duryn Brigad\" start_experience_factor = 0 start_equipment_factor = 0.35 start_manpower_factor = 1"
+						owner = PREV
+						count = 1
+						allow_spawning_on_enemy_provs = yes
+						prioritize_location = 9776
+					}
+				}
+				drop_cosmetic_tag = yes
+				hidden_effect = {
+					MEN_ulanhu = {
+						promote_leader = yes # Promote to Field Marshal
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = MEN_reach_out_to_the_soviets
+					}
+					add_manpower = 5000
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 500
+						producer = SOV
+					}
+				}
+				else = {
+					add_manpower = 10000
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 250
+						producer = PRC
+					}
+				}
+				if = {	# Mengkukuo or Mongolia change ideology - lose opinion debuff
+					limit = {
+						MON = {
+							OR = {
+								has_government = communism
+								has_government = democratic
+							}
+						}
+					}
+					MON = {
+						add_opinion_modifier = {
+							target = MEN
+							modifier = MEN_shared_struggle
+						}
+					}
+					add_opinion_modifier = {
+						target = MON
+						modifier = MEN_shared_struggle
+					}
+				}
 			}
 		}
 	}
@@ -4777,11 +5554,26 @@ focus_tree = {
 		y = 1
 
 		bypass = {
-			
+			OR = {
+				NOT = {
+					country_exists = SOV
+				}
+				SOV = {
+					NOT = {
+						has_government = communism
+					}
+				}
+			}
 		}
 
 		available = {
-			
+			country_exists = SOV
+			SOV = {
+				has_government = communism
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
 		}
 	
 		relative_position_id = MEN_the_second_bailingmiao_uprising
@@ -4791,8 +5583,19 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			MON = {
-				country_event = MEN.28 
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			SOV = {
+				add_opinion_modifier = {
+					target = SOV
+					modifier = large_increase
+				}
+			}
+			add_opinion_modifier = {
+				target = SOV
+				modifier = large_increase
 			}
 		}
 	}
@@ -4815,7 +5618,14 @@ focus_tree = {
 		}
 
 		available = {
-			
+			country_exists = CHI
+			country_exists = PRC
+			CHI = {
+				NOT = {
+					has_war_with = PRC
+					has_war_with = ROOT
+				}
+			}
 		}
 	
 		relative_position_id = MEN_the_second_bailingmiao_uprising
@@ -4825,6 +5635,10 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
 			add_country_leader_role = {
 				character = MEN_serengdongrub
 				promote_leader = yes
@@ -4832,7 +5646,28 @@ focus_tree = {
 					ideology=marxism
 					expire = "1965.1.1.12"
 					traits={ 
-						MEN_militant_communist 	   
+						MEN_militant_communist MEN_chinese_cooperation_proponent
+					}
+				}
+			}
+			hidden_effect = {
+				deactivate_advisor = MEN_serengdongrub
+			}
+			every_other_country = {
+				limit = {
+					OR = {
+						tag = CHI
+						tag = PRC
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
+				}
+				ROOT = {
+					add_opinion_modifier = {
+						target = PREV
+						modifier = large_increase
 					}
 				}
 			}
@@ -4850,23 +5685,65 @@ focus_tree = {
 		y = 1
 
 		bypass = {
-			
+			OR = {
+				NOT = {
+					country_exists = SOV
+				}
+				SOV = {
+					NOT = {
+						has_government = communism
+					}
+				}
+			}
 		}
 
 		available = {
-			
+			country_exists = SOV
+			SOV = {
+				has_government = communism
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
 		}
 	
 		relative_position_id = MEN_invite_ulanhu_from_mongolia
 		
-		cost = 3
+		cost = 8
 
 		ai_will_do = {
 			factor = 10
 		}
 
 		completion_reward = {
-			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = -15
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_tech_bonus = {
+				name = MEN_request_soviet_industrial_aid
+				bonus = 0.5
+				uses = 1
+				ahead_reduction = 0.5
+				category = industry
+				category = electronics
+			}
 		}
 	}
 
@@ -4881,23 +5758,59 @@ focus_tree = {
 		y = 1
 
 		bypass = {
-			
+			OR = {
+				NOT = {
+					country_exists = SOV
+				}
+				SOV = {
+					NOT = {
+						has_government = communism
+					}
+				}
+			}
 		}
 
 		available = {
-			
+			country_exists = SOV
+			SOV = {
+				has_government = communism
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
 		}
 
 		relative_position_id = MEN_invite_ulanhu_from_mongolia
 		
-		cost = 3
+		cost = 8
 
 		ai_will_do = {
 			factor = 10
 		}
 
 		completion_reward = {
-			
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = SOV
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 100
+				producer = SOV
+			}
+			add_tech_bonus = {
+				name = MEN_soviet_mongol_military_cooperation
+				bonus = 0.5
+				uses = 1
+				ahead_reduction = 0.5
+				category = infantry_weapons
+				category = artillery
+			}
 		}
 	}
 
@@ -4916,36 +5829,25 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = MEN_ulanhu_returned_tt 
-					has_country_flag = MEN_ulanhu_returned_flag 
-				}
-				MON = {
-					exists = no
-				}
-			}
+			has_government = communism
 		}
 
 		relative_position_id = MEN_soviet_mongol_military_cooperation
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-			add_country_leader_role = {
-  				character = MEN_ulanhu
-  				promote_leader = yes
-  				country_leader = {
-    				ideology=marxism
-    				expire = "1965.1.1.12"
-   					traits={ 
-						   MEN_guerilla_fighter
-							r56_trait_anti_fascist 
-					}
-				}
+			add_stability = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.10
+			}
+			add_timed_idea = {
+				idea = SIA_anti_fascism
+				days = 180
 			}
 		}
 	}
@@ -4965,36 +5867,62 @@ focus_tree = {
 		y = 1
 
 		bypass = {
-			
+			is_in_faction_with = SOV
 		}
 
 		available = {
-			communism > 0.4
+			is_subject = no
+			is_in_faction = no
+			has_government = communism
+			OR = {
+				SOV = {
+					NOT = { has_war_with = ROOT }
+					has_government = communism
+					has_capitulated = no
+					is_faction_leader = yes
+				}
+				any_other_country = {
+					is_major = yes
+					has_government = communism
+					is_faction_leader = yes
+					NOT = { has_war_with = ROOT }
+				}
+			}
 		}
 	
 		relative_position_id = MEN_stamp_out_fascist_sympathies
 		
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = { 
-			retire_character = MEN_serengdongrub
-			set_cosmetic_tag = MEN_inner_mongolian_pr_good_color_tag
-			kill_country_leader = yes 
-			start_civil_war = {
-				ruling_party = communism
-				ideology = neutrality
-				size = 0.4
-				capital = 612
-				states = { 
-					612
+			if = {
+				limit = {
+					SOV = {
+						has_government = communism
+						is_faction_leader = yes
+						has_capitulated = no
+						NOT = { has_war_with = ROOT }
+					}
+					NOT = {
+						any_other_country = {
+							is_in_faction_with = SOV
+							has_war_with = ROOT
+						}
+					}
+				}
+				SOV = {
+					country_event = generic.2
 				}
 			}
-			hidden_effect = {
-				remove_ideas = MEN_increasing_jap_influence
-			}		
+			else = {
+				get_best_alliance_match_communism_effect = yes
+				var:best_leader = {
+					country_event = generic.2
+				}
+			}
 		}
 	}
 
@@ -5017,20 +5945,30 @@ focus_tree = {
 		}
 
 		available = {
+			is_subject = no
+			is_in_faction = no
 			has_government = communism
-			has_civil_war = no 
+			PRC = {
+				NOT = { has_war_with = ROOT }
+				has_government = communism
+				has_capitulated = no
+				OR = {
+					is_faction_leader = yes
+					is_in_faction = yes
+				}
+			}
 		}
 	
 		relative_position_id = MEN_stamp_out_fascist_sympathies
 		
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-			IF = {
-				Limit = {
+			if = {
+				limit = {
 					PRC = {
 						is_faction_leader = yes
 					}
@@ -5039,9 +5977,20 @@ focus_tree = {
 					country_event = generic.2
 				}
 			}
-			Else = {
+			else_if = {
+				limit = {
+					PRC = {
+						is_in_faction = yes
+					}
+				}
 				PRC = {
-					country_event = MEN.31
+					faction_leader = { # Should work
+						ROOT = {
+							PREV = {
+								country_event = generic.2
+							}
+						}
+					}
 				}
 			}
 		}
@@ -5057,69 +6006,62 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		bypass = {
-			owns_state = 621
-		}
-
 		available = {
-			OR = {
-				is_in_faction_with = PRC
-				has_government = fascism
+			any_other_country = {
+				NOT = {
+					has_war_with = ROOT
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				OR = {
+					owns_state = 621
+					owns_state = 746
+				}
 			}
 		}
 
-		relative_position_id = MEN_loyalty_to_the_maoists
-		
+		bypass = {
+			any_other_country = {
+				has_war_with = ROOT
+				OR = {
+					owns_state = 621
+					owns_state = 746
+				}
+			}
+		}
+	
+		relative_position_id = MEN_loyalty_to_the_maoists 
 		cost = 10
+
+		will_lead_to_war_with = SHX
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-			add_state_claim = 746
-			add_state_core = 621
+			add_war_support = 0.05
+			every_state = {
+				limit = {
+					OR = {
+						state = 621
+						state = 746
+					}
+				}
+				add_core_of = ROOT
+			}
 			every_other_country = {
 				limit = {
-					NOT = { is_in_faction_with = PREV }
-					NOT = { is_subject_of = PREV }
-					any_owned_state = {
-						state = 621
+					OR = {
+						owns_state = 621
+						owns_state = 746
 					}
 				}
 				ROOT = {
 					create_wargoal = {
 						target = PREV
-						type = take_state_focus
+						type = take_core_state
 						expire = 0
-					}
-				}
-			}
-			If = {
-				Limit = {
-					PRC = {
-						exists = yes 
-						is_in_faction_with = MEN
-					}
-				}
-				PRC = {
-					every_other_country = {
-						limit = {
-							NOT = { is_in_faction_with = PREV }
-							NOT = { is_subject_of = PREV }
-							any_owned_state = {
-								OR = {
-									state = 615
-									state = 746
-								}
-							}
-						}
-						ROOT = {
-							create_wargoal = {
-								target = PREV
-								type = take_state_focus
-								expire = 0
-							}
-						}
+						generator = { 621 746 }
 					}
 				}
 			}
@@ -5137,18 +6079,25 @@ focus_tree = {
 		y = 1
 
 		bypass = {
-			PRC = {
-				owns_state = 615 
-			}	
+			OR = {
+				has_war_with = MON
+				MON = {
+					all_core_state = {
+						is_owned_by = ROOT
+					}
+				}
+				NOT = {
+					country_exists = MON
+				}
+			}
 		}
 
 		available = {
 			has_government = communism
-			is_in_faction_with = PRC
-			owns_state = 615
-			SHX = {
-				exists = no 
+			NOT = {
+				has_war_with = MON
 			}
+			country_exists = MON
 		}
 	
 		relative_position_id = MEN_join_the_comintern
@@ -5159,7 +6108,35 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-		
+			MON = {
+				country_event = { id = men.20 hours = 12 }
+			}
+			custom_effect_tooltip = MEN_possible_event_effects
+			effect_tooltip = {
+				annex_country = {
+					target = MON 
+					transfer_troops = yes
+				}
+				MON = {
+					every_unit_leader = {
+						set_nationality = MEN
+					}
+				}
+				every_state = {
+					limit = {
+						is_core_of = MON 
+					}
+					add_core_of = FROM
+				}
+				set_cosmetic_tag = MON
+			}
+			custom_effect_tooltip = MEN_alternative_event_effects
+			effect_tooltip = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = AFG_PER_refused_annex
+				}
+			}
 		}
 	}
 
@@ -5174,35 +6151,38 @@ focus_tree = {
 		y = 1
 
 		bypass = {
-			
+			OR = {
+				is_in_faction_with = PRC 
+				NOT = {
+					country_exists = PRC
+				}
+			}
 		}
 
 		available = {
+			is_subject = no
 			has_government = communism
-			is_in_faction_with = PRC 
-			or = {
-				PRC = {
-					exists = no
-				}
-				SHX = {
-					exists = no 
-				}
-			}	
+			NOT = {
+				is_in_faction_with = PRC 
+			}
+			country_exists = PRC
 		}
 	
 		relative_position_id = MEN_propose_mongol_unification
 		
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
+			add_war_support = 0.05
+			create_wargoal = { 
+				type = topple_government
+				target = PRC
+				expire = 0
+			}
 			PRC = {
-				create_wargoal = { 
-						type = annex_everything
-						target = MEN
-				}
 				add_opinion_modifier = {
 					target = MEN
 					modifier = hostile_status
@@ -5212,7 +6192,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = MEN_prioritize_the_eastern_threat
+		id = MEN_prioritize_the_eastern_threat #TODO
 		icon = GFX_focus_jap_strike_south
 		prerequisite = { 
 			focus = MEN_behead_the_cornered_fox
@@ -5231,15 +6211,6 @@ focus_tree = {
 
 		available = {
 			has_government = communism
-			is_in_faction_with = PRC 
-			or = {
-				PRC = {
-					exists = no
-				}
-				SHX = {
-					exists = no 
-				}
-			}	
 		}
 	
 		relative_position_id = MEN_behead_the_cornered_fox
@@ -5250,21 +6221,12 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			PRC = {
-				create_wargoal = { 
-						type = annex_everything
-						target = MEN
-				}
-				add_opinion_modifier = {
-					target = MEN
-					modifier = hostile_status
-				}
-			}
+			add_stability = 0.05
 		}
 	}
 
 	focus = {
-		id = MEN_pivot_to_the_west
+		id = MEN_pivot_to_the_west #TODO
 		icon = GFX_focus_usa_focus_on_europe
 		prerequisite = { 
 			focus = MEN_behead_the_cornered_fox
@@ -5283,35 +6245,18 @@ focus_tree = {
 
 		available = {
 			has_government = communism
-			is_in_faction_with = PRC 
-			or = {
-				PRC = {
-					exists = no
-				}
-				SHX = {
-					exists = no 
-				}
-			}	
+			is_in_faction_with = SOV 
 		}
 	
 		relative_position_id = MEN_behead_the_cornered_fox
 		
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-			PRC = {
-				create_wargoal = { 
-						type = annex_everything
-						target = MEN
-				}
-				add_opinion_modifier = {
-					target = MEN
-					modifier = hostile_status
-				}
-			}
+			add_war_support = 0.05
 		}
 	}
 
@@ -5330,34 +6275,50 @@ focus_tree = {
 		}
 
 		available = {
-			has_government = communism
-			is_in_faction_with = PRC 
-			or = {
-				PRC = {
-					exists = no
-				}
-				SHX = {
-					exists = no 
-				}
-			}	
+			OR = {
+				controls_state = 611
+				controls_state = 612
+			}
 		}
 	
 		relative_position_id = MEN_prioritize_the_eastern_threat
 		
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-			PRC = {
-				create_wargoal = { 
-						type = annex_everything
-						target = MEN
+			611 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 3955
 				}
-				add_opinion_modifier = {
-					target = MEN
-					modifier = hostile_status
+			}
+			611 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 952
+				}
+			}
+			611 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 4495
+				}
+			}
+			612 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 12348
 				}
 			}
 		}
@@ -5378,16 +6339,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_government = communism
-			is_in_faction_with = PRC 
-			or = {
-				PRC = {
-					exists = no
-				}
-				SHX = {
-					exists = no 
-				}
-			}	
+			controls_state = 611
 		}
 	
 		relative_position_id = MEN_prioritize_the_eastern_threat
@@ -5398,14 +6350,36 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			PRC = {
-				create_wargoal = { 
-						type = annex_everything
-						target = MEN
+			611 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 1590
 				}
-				add_opinion_modifier = {
-					target = MEN
-					modifier = hostile_status
+			}
+			611 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 6904
+				}
+			}
+			611 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 9776
+				}
+			}
+			611 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 3955
 				}
 			}
 		}
@@ -5422,20 +6396,21 @@ focus_tree = {
 		y = 1
 
 		bypass = {
-			
+			OR = {
+				is_in_faction_with = JAP 
+				NOT = {
+					country_exists = JAP
+				}
+			}
 		}
 
 		available = {
+			is_subject = no
 			has_government = communism
-			is_in_faction_with = PRC 
-			or = {
-				PRC = {
-					exists = no
-				}
-				SHX = {
-					exists = no 
-				}
-			}	
+			NOT = {
+				is_in_faction_with = JAP 
+			}
+			country_exists = JAP
 		}
 	
 		relative_position_id = MEN_fortify_the_south
@@ -5446,21 +6421,27 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			PRC = {
-				create_wargoal = { 
-						type = annex_everything
-						target = MEN
-				}
+			add_war_support = 0.05
+			create_wargoal = { 
+				type = topple_government
+				target = JAP
+				expire = 0
+			}
+			JAP = {
 				add_opinion_modifier = {
 					target = MEN
 					modifier = hostile_status
 				}
 			}
+			add_timed_idea = {
+				idea = MEN_anti_japanese_stratagems_idea
+				days = 180
+			}
 		}
 	}
 
 	focus = {
-		id = MEN_soviet_mongol_mutual_assistance
+		id = MEN_soviet_mongol_mutual_assistance #TODO
 		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
 		prerequisite = { 
 			focus = MEN_pivot_to_the_west
@@ -5475,15 +6456,11 @@ focus_tree = {
 
 		available = {
 			has_government = communism
-			is_in_faction_with = PRC 
-			or = {
-				PRC = {
-					exists = no
-				}
-				SHX = {
-					exists = no 
-				}
-			}	
+			is_in_faction_with = SOV 
+			SOV = {
+				has_war_with_major = yes
+				surrender_progress > 0.05
+			}
 		}
 	
 		relative_position_id = MEN_pivot_to_the_west
@@ -5494,15 +6471,23 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			PRC = {
-				create_wargoal = { 
-						type = annex_everything
-						target = MEN
-				}
-				add_opinion_modifier = {
-					target = MEN
-					modifier = hostile_status
-				}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = SOV
+			}
+			add_timed_idea = {
+				idea = MEN_assist_in_the_great_patriotic_war
+				days = 365
+			}
+			add_tech_bonus = {
+				name = MEN_assist_in_the_great_patriotic_war
+				bonus = 0.5
+				uses = 1
+				ahead_reduction = 0.5
+				category = infantry_weapons
+				category = artillery
+				category = armor
 			}
 		}
 	}
@@ -5517,15 +6502,14 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		bypass = {
-			
-		}
-
 		available = {
 			has_government = communism
-			NOT = {
-				is_in_faction_with = CHI
-			}	
+			country_exists = CHI
+			CHI = {
+				NOT = {
+					has_government = communism
+				}
+			}
 		}
 
 		relative_position_id = MEN_loyalty_to_the_maoists
@@ -5536,23 +6520,14 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			IF = {
-				Limit = {
-					CHI = {
-						Not = {
-							has_government = communism
-						}	
-					}
-				}
-				CHI = {
-					add_timed_idea = {
-						idea = communist_influence_weak
-						days = 2000
-					}
-				}
+			add_timed_idea = {
+				idea = MEN_funding_chinese_communists
+				days = 730
+			}
+			CHI = {
 				add_timed_idea = {
-					idea = MEN_funds_for_chinese_communists
-					days = 1000
+					idea = MEN_mongolian_funds_for_chinese_communists
+					days = 730
 				}
 			}
 		}
@@ -5573,31 +6548,44 @@ focus_tree = {
 		y = 1
 
 		bypass = {
-			CHI = {
-				has_government = communism
-			}
+
 		}
 
 		available = {
+			is_subject = no
 			has_government = communism
 			NOT = {
 				is_in_faction_with = CHI
 			}
+			country_exists = CHI
 			CHI = {
-				communism > 0.45
+				has_country_leader = {
+					character = CHI_chiang_kai_shek
+					ruling_only = yes
+				}
 			}
 		}
 	
 		relative_position_id = MEN_joint_invasion_of_shx
 		
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 0
 		}
+
 		completion_reward = {
+			add_war_support = 0.05
+			create_wargoal = { 
+				type = topple_government
+				target = CHI
+				expire = 0
+			}
 			CHI = {
-				country_event = MEN.32
+				add_opinion_modifier = {
+					target = MEN
+					modifier = hostile_status
+				}
 			}
 		}
 	}
@@ -5617,19 +6605,13 @@ focus_tree = {
 		y = 1
 
 		bypass = {
-			CHI = {
-				has_government = communism
+			NOT = {
+				country_exists = JAP
 			}
 		}
 
 		available = {
-			has_government = communism
-			NOT = {
-				is_in_faction_with = CHI
-			}
-			CHI = {
-				communism > 0.45
-			}
+			country_exists = JAP
 		}
 	
 		relative_position_id = MEN_joint_invasion_of_shx
@@ -5640,8 +6622,10 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			CHI = {
-				country_event = MEN.32
+			add_war_support = 0.05
+			add_timed_idea = {
+				idea = MEN_anti_japanese_stratagems_idea
+				days = 180
 			}
 		}
 	}
@@ -5662,11 +6646,6 @@ focus_tree = {
 
 		available = {
 			has_government = communism
-			country_exists = PRC
-			NOT = {
-				has_war_with = PRC
-				country_exists = CHI
-			}
 		}
 
 		relative_position_id = MEN_focus_on_the_greater_threat
@@ -5677,8 +6656,18 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			PRC = {
-				country_event = MEN.34
+			add_political_power = 75
+			every_state = {
+				limit = {
+					OR = {
+						state = 610
+						state = 946
+						state = 715
+						state = 761
+						state = 714
+					}
+				}
+				add_core_of = ROOT
 			}
 		}
 	}
@@ -5693,24 +6682,30 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		bypass = {
-			
-		}
-
 		mutually_exclusive = {
 			focus = MEN_reclaim_our_lands 
 		}
 
+		bypass = {
+			OR = {
+				has_war_with = MON
+				MON = {
+					all_core_state = {
+						is_owned_by = ROOT
+					}
+				}
+				NOT = {
+					country_exists = MON
+				}
+			}
+		}
+
 		available = {
 			has_government = communism
-			PRC = {
-				or = {
-					owns_state = 621
-					owns_state = 746
-					owns_state = 616
-					owns_state = 756
-				}
-			}	
+			NOT = {
+				has_war_with = MON
+			}
+			country_exists = MON
 		}
 	
 		relative_position_id = MEN_form_the_inner_mongolia_autonomous_region
@@ -5721,8 +6716,34 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			PRC = {
-				country_event = MEN.37
+			MON = {
+				country_event = { id = men.20 hours = 12 }
+			}
+			custom_effect_tooltip = MEN_possible_event_effects
+			effect_tooltip = {
+				annex_country = {
+					target = MON 
+					transfer_troops = yes
+				}
+				MON = {
+					every_unit_leader = {
+						set_nationality = MEN
+					}
+				}
+				every_state = {
+					limit = {
+						is_core_of = MON 
+					}
+					add_core_of = FROM
+				}
+				set_cosmetic_tag = MON
+			}
+			custom_effect_tooltip = MEN_alternative_event_effects
+			effect_tooltip = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = AFG_PER_refused_annex
+				}
 			}
 		}
 	}
@@ -5738,7 +6759,17 @@ focus_tree = {
 		y = 1
 
 		bypass = {
-			
+			OR = {
+				has_war_with = MON
+				MON = {
+					all_core_state = {
+						is_owned_by = ROOT
+					}
+				}
+				NOT = {
+					country_exists = MON
+				}
+			}
 		}
 		
 		mutually_exclusive = {
@@ -5746,7 +6777,12 @@ focus_tree = {
 		}
 
 		available = {
-			has_government = communism	
+			is_subject = no
+			has_government = communism
+			NOT = {
+				has_war_with = MON
+			}
+			country_exists = MON
 		}
 	
 		relative_position_id = MEN_form_the_inner_mongolia_autonomous_region
@@ -5757,7 +6793,18 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-
+			add_war_support = 0.05
+			every_state = {
+				limit = {
+					is_core_of = MON
+				}
+				add_core_of = ROOT
+			}
+			create_wargoal = {
+				target = MON
+				type = annex_everything
+				expire = 0
+			}
 		}
 	}
 
@@ -5776,7 +6823,12 @@ focus_tree = {
 		}
 
 		available = {
-			has_government = communism	
+			is_subject = no
+			has_government = communism
+			NOT = {
+				has_war_with = TAN
+			}
+			country_exists = TAN
 		}
 	
 		relative_position_id = MEN_ask_the_prc_to_return_our_lands
@@ -5787,7 +6839,18 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-
+			add_war_support = 0.05
+			every_state = {
+				limit = {
+					is_core_of = TAN
+				}
+				add_core_of = ROOT
+			}
+			create_wargoal = {
+				target = TAN
+				type = annex_everything
+				expire = 0
+			}
 		}
 	}
 
@@ -5806,27 +6869,38 @@ focus_tree = {
 		}
 
 		available = {
-			
+			country_exists = CHI
+			country_exists = PRC
+			CHI = {
+				NOT = {
+					has_war_with = PRC
+					has_war_with = ROOT
+				}
+			}
 		}
 	
 		relative_position_id = MEN_favour_the_cooperationists
 		
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-			swap_ideas = {
-				add_idea = MEN_chinese_communism
-				remove_idea = MEN_communist_partitan_millitas
-			}
+			add_stability = 0.05
 			PRC = {
 				add_opinion_modifier = {
-					target = MEN
-					modifier = hostile_status
+					target = CHI
+					modifier = medium_increase
 				}
 			}
+			CHI = {
+				add_opinion_modifier = {
+					target = PRC
+					modifier = medium_increase
+				}
+			}
+			add_ideas = CHI_chinese_unity_2
 		}
 	}
 
@@ -5845,7 +6919,7 @@ focus_tree = {
 		}
 
 		available = {
-			
+			has_government = communism
 		}
 
 		relative_position_id = MEN_promote_chinese_unity
@@ -5856,17 +6930,40 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_stability = -0.05
 			add_popularity = {
 				ideology = communism
 				popularity = 0.1
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
 			}
 		}
 	}
@@ -5882,22 +6979,50 @@ focus_tree = {
 		y = 1
 
 		bypass = {
-			
+			OR = { 
+				has_war_with = CHI
+				NOT = {
+					country_exists = CHI
+				}
+			}
 		}
 
 		available = {
-			
+			NOT = { 
+				has_war_with = CHI
+			}
+			country_exists = CHI
 		}
 
 		relative_position_id = MEN_promote_chinese_unity
 		
-		cost = 5
+		cost = 8
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-			add_ideas = MEN_limited_nobility_power
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_stability = 0.05
+			add_political_power = 35
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
 		}
 	}
 
@@ -5920,8 +7045,7 @@ focus_tree = {
 		}
 
 		available = {
-			compare_autonomy_state > autonomy_puppet
-			communism > 0.5	
+			has_government = communism
 		}
 	
 		relative_position_id = MEN_nationalize_key_industry
@@ -5932,11 +7056,9 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			set_politics = { 
-				ruling_party = communism 
-				elections_allowed = no
-			}
-			set_cosmetic_tag = MEN_inner_mongolian_pr_good_color_tag
+			army_experience = 15
+			add_manpower = 10000
+			add_ideas = MEN_chinese_mongolian_military
 		}
 	}
 
@@ -5956,7 +7078,12 @@ focus_tree = {
 		}
 
 		available = {
-			
+			event_target:WTT_current_china_leader = {
+				OR = {
+					is_in_faction = yes
+					is_faction_leader = yes
+				}
+			}
 		}
 
 		relative_position_id = MEN_integrate_the_chinese_into_the_army
@@ -5967,7 +7094,40 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			remove_ideas = MEN_increasing_jap_influence
+			if = {
+				limit = {
+					event_target:WTT_current_china_leader = {
+						is_faction_leader = yes
+					}
+				}
+				event_target:WTT_current_china_leader = {
+					add_to_faction = ROOT
+				}
+			}
+			else_if = {
+				limit = { 
+					event_target:WTT_current_china_leader = {
+						is_in_faction = yes
+					}
+				}
+				event_target:WTT_current_china_leader = {
+					faction_leader = {
+						add_to_faction = ROOT
+					}
+				}
+			}
+			if = {
+				limit = {
+					event_target:WTT_current_china_leader = {
+						has_war_with = JAP
+					}
+				}
+				add_to_war = {
+					targeted_alliance = event_target:WTT_current_china_leader
+					enemy = JAP
+					hostility_reason = asked_to_join
+				}
+			}
 		}
 	}
 
@@ -5987,18 +7147,21 @@ focus_tree = {
 		}
 
 		available = {
-			
+			has_war = yes
+			has_government = communism
+			surrender_progress > 0.25
 		}
 
 		relative_position_id = MEN_join_the_united_front
 		
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-			remove_ideas = MEN_increasing_jap_influence
+			add_war_support = 0.05
+			add_ideas = MEN_beacon_of_resistance_idea
 		}
 	}
 
@@ -6018,18 +7181,28 @@ focus_tree = {
 		}
 
 		available = {
-			
+			has_war = yes
+			has_government = communism
+			surrender_progress > 0.5
 		}
 
 		relative_position_id = MEN_beacon_of_resistance
 		
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 0
 		}
 		completion_reward = {
-			remove_ideas = MEN_increasing_jap_influence
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.10
+			}
+			swap_ideas = {
+				remove_idea = MEN_beacon_of_resistance_idea
+				add_idea = MEN_the_honour_of_death_idea
+			}
 		}
 	}
 }

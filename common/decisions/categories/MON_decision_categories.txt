@@ -311,7 +311,6 @@ MON_greater_mongolia = {
 	allowed = {
 		OR = {
 			original_tag = MON
-			original_tag = MEN
 			original_tag = TAN
 			original_tag = BYA
 		}

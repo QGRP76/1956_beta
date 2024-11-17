@@ -8,4 +8,6 @@ MEN_inner_mongolian_gambit = {
 	visible = {
 		tag = MEN
 	}
+
+	visible_when_empty = no
 }

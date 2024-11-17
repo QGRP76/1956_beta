@@ -2011,6 +2011,45 @@ on_actions = {
 					}
 				}
 			}
+			#Afghanistan Civil War Loss - skill issue you are monarchist now
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = MEN
+						NOT = {
+							has_government = neutrality
+							has_country_leader = {
+								character = MEN_prince_demchugdongrub
+								ruling_only = yes
+							}
+						}
+					}
+				}
+				ROOT = {
+					JAP = {
+						set_autonomy = {
+							target = ROOT
+							autonomy_state = autonomy_wtt_imperial_protectorate
+							end_wars = no
+							end_civil_wars = no
+						}
+					}
+					load_focus_tree = { tree = mengkukuo_focus keep_completed = yes }
+					mark_focus_tree_layout_dirty = yes
+					uncomplete_national_focus = {
+						focus = MEN_petition_nima-odsor_to_stay_in_shangbei
+						uncomplete_children = yes
+						refund_political_power = no
+					}
+					uncomplete_national_focus = {
+						focus = MEN_radicalize_the_peasants
+						uncomplete_children = yes
+						refund_political_power = no
+					}
+					unlock_national_focus = MEN_strengthen_ties_with_japan
+					change_tag_from = FROM
+				}
+			}
 			if = {
 				limit = {
 					TAG = EGY
@@ -3321,7 +3360,6 @@ on_actions = {
 				}
 			}
 
-
 			#remove chi ger opinion
 			if = {
 				limit = {
@@ -3490,6 +3528,52 @@ on_actions = {
 			#		remove_ideas = generic_can_only_join_factions_same_ideology
 			#	}
 			#}
+
+			if = {	# Mengkukuo or Mongolia change ideology - lose opinion debuff
+				limit = {
+					OR = {
+						AND = {
+							original_tag = MEN
+							OR = {
+								has_government = communism
+								has_government = democratic
+							}
+							MON = {
+								OR = {
+									has_government = communism
+									has_government = democratic
+								}
+							}
+						}
+						AND = {
+							original_tag = MON
+							OR = {
+								has_government = neutrality
+								has_government = fascism
+							}
+							MEN = {
+								OR = {
+									has_government = neutrality
+									has_government = fascism
+								}
+							}
+						}
+					}
+				}
+				MEN = {
+					remove_opinion_modifier = {
+						target = MON
+						modifier = political_rivalry
+					}
+				}
+				MON = {
+					remove_opinion_modifier = {
+						target = MEN
+						modifier = political_rivalry
+					}
+				}
+			}
+
 			if = {	# communists first congress
 				limit = {
 					original_tag = BUL

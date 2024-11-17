@@ -22,7 +22,10 @@ country_event = { # The Zhangbei Meeting
 			add_stability = 0.03
 			custom_effect_tooltip = MEN_unforseen_consequences
 			hidden_effect = {
-				country_event = { id = men.12 hours = 12 }
+				country_event = { id = men.11 hours = 12 }
+				JAP = {
+					country_event = { id = men.15 hours = 12 }
+				}
 			}
 		}
 		else = {
@@ -50,7 +53,10 @@ country_event = { # The Zhangbei Meeting
 		add_stability = -0.10
 		custom_effect_tooltip = MEN_prevent_destabilization
 		hidden_effect = {
-			country_event = { id = men.11 hours = 12 }
+			country_event = { id = men.12 hours = 12 }
+			JAP = {
+				country_event = { id = men.16 hours = 12 }
+			}
 		}
 	}
 }
@@ -130,16 +136,15 @@ country_event = { # The Long Winter
 	
 	option = {
 		name = men.13.a
-		effect_tooltip = {
-			swap_ideas = {
-				remove_idea = MEN_the_long_winter
-				add_idea = MEN_aftermath_of_the_long_winter
-			}
+		swap_ideas = {
+			remove_idea = MEN_the_long_winter
+			add_idea = MEN_aftermath_of_the_long_winter
+			add_days = 180
 		}
 	}
 }
 
-country_event = { # Assassination Event for Japan
+country_event = { # Assassination Event for Japana
 	id = men.14
 	title = men.14.t
 	desc = men.14.d
@@ -168,7 +173,6 @@ country_event = { # Assassination Event for Japan
 					ideology = democratic
 					popularity = -0.10
 				}
-		
 				effect_tooltip = {
 					unlock_national_focus = MEN_strengthen_ties_with_japan
 				}
@@ -249,7 +253,6 @@ country_event = { # Successful Assassination Event for Japan
 					ideology = democratic
 					popularity = -0.10
 				}
-		
 				effect_tooltip = {
 					unlock_national_focus = MEN_strengthen_ties_with_japan
 				}
@@ -328,501 +331,662 @@ country_event = { # Unsuccessful Assassination Event for Japan
 	}
 }
 
-#MEN break away
-country_event = {
-	id = men.22
-	title = men.22.t
-	desc = men.22.d
-	
-	picture = GFX_report_event_chinese_soldiers_01
-	
-	is_triggered_only = yes
-	
+country_event = { # Request Suiyuan and Yikezhao
+	id = men.17
+	title = men.17.t 
+	desc = men.17.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes 
+	fire_only_once = yes
+
 	option = {
-		name = men.22.a
-		add_political_power = -10
+		name = men.17.a 
+		every_owned_state = {
+			limit = {
+				OR = { 
+					state = 621
+					state = 746
+				}
+			}
+			transfer_state_to = MEN
+		}
+		ai_chance = {
+			base = 60
+			modifier = {
+				is_in_faction_with = FROM
+				factor = 1.25
+			}
+			modifier = {
+				has_war_together_with = FROM
+				factor = 1.5
+			}
+			modifier = {
+				has_government = FROM
+				factor = 1.25
+			}
+			modifier = {
+				FROM = {
+					strength_ratio = {
+						tag = SHX
+						ratio > 1.5
+					}
+				}
+				factor = 1.5
+			}
+			modifier = {
+				FROM = {
+					strength_ratio = {
+						tag = SHX
+						ratio > 2
+					}
+				}
+				factor = 2
+			}
+		}
+	}
+
+	option = {
+		name = men.17.b
+		add_political_power = -50
+		FROM = {
+			if = {
+				limit = {
+					has_completed_focus = MEN_the_principle_of_nationalism
+				}
+				effect_tooltip = {
+					create_wargoal = {
+						target = ROOT
+						type = take_core_state
+						generator = { 621 746 }
+						expire = 0
+					}
+				}
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = medium_decrease
+			}
+			hidden_effect = {
+				country_event = men.19
+			}
+		}
+		ai_chance = {
+			base = 40
+		}
 	}
 }
-#localization in kmt file
 
+country_event = { # Shanxi Accepts Request
+	id = men.18
+	title = men.18.t 
+	desc = men.18.d
+	picture = GFX_report_event_generic_sign_treaty1
 
-country_event = {
+	is_triggered_only = yes 
+	fire_only_once = yes
+
+	option = {
+		name = men.18.a 
+		effect_tooltip = {
+			FROM = {
+				every_owned_state = {
+					limit = {
+						OR = { 
+							state = 621
+							state = 746
+						}
+					}
+					transfer_state_to = MEN
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Shanxi Declines Request
+	id = men.19
+	title = men.19.t 
+	desc = men.19.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes 
+	fire_only_once = yes
+
+	option = {
+		name = men.19.a 
+		create_wargoal = {
+			target = FROM
+			type = take_core_state
+			generator = { 621 746 }
+			expire = 0
+		}
+		effect_tooltip = {
+			add_opinion_modifier = {
+				target = FROM
+				modifier = medium_decrease
+			}
+		}
+	}
+}
+
+country_event = { # Mongolian Unification?
+	id = men.20
+	title = men.20.t 
+	desc = men.20.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes 
+
+	option = { # Yes 
+		name = men.20.a 
+		MEN = {
+			annex_country = {
+				target = MON 
+				transfer_troops = yes
+			}
+			MON = {
+				every_unit_leader = {
+					set_nationality = MEN
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = MON 
+				}
+				add_core_of = FROM
+			}
+			set_cosmetic_tag = MON
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+		hidden_effect = {
+			country_event = { id = men.21 hours = 12 }
+		}
+		ai_chance = {
+			base = 75
+			modifier = {
+				is_in_faction_with = FROM
+				factor = 1.5
+			}
+			modifier = {
+				has_war_together_with = FROM
+				factor = 2
+			}
+			modifier = {
+				has_government = FROM
+				factor = 1.5
+			}
+			modifier = {
+				FROM = {
+					strength_ratio = {
+						tag = MON
+						ratio > 1.5
+					}
+				}
+				factor = 1.5
+			}
+			modifier = {
+				FROM = {
+					strength_ratio = {
+						tag = MON
+						ratio > 2
+					}
+				}
+				factor = 2
+			}
+			modifier = {
+				has_war = yes
+				factor = 1.25
+			}
+			modifier = {
+				surrender_progress > 0.2
+				factor = 1.5
+			}
+			modifier = {
+				factor = 5
+				is_subject_of = FROM
+			}
+			modifier = {
+				factor = 1.5
+				ROOT = {
+					has_opinion = {
+						target = FROM
+						value > 59
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				ROOT = {
+					has_opinion = {
+						target = FROM
+						value > 99
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				ROOT = {
+					has_opinion = {
+						target = FROM
+						value > 149
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = men.20.b # No
+		add_war_support = 0.05
+		MEN = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = AFG_PER_refused_annex
+			}
+		}
+		hidden_effect = {
+			country_event = { id = men.22 hours = 12 }
+		}
+		ai_chance = {
+			base = 25
+		}
+	}
+}
+
+country_event = { # Mongolian Unification - Yes
+	id = men.21
+	title = men.21.t 
+	desc = men.21.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes 
+
+	option = {
+		name = men.21.a 
+		effect_tooltip = {
+			annex_country = {
+				target = MON 
+				transfer_troops = yes
+			}
+			MON = {
+				every_unit_leader = {
+					set_nationality = MEN
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = MON 
+				}
+				add_core_of = FROM
+			}
+			set_cosmetic_tag = MON
+		}
+	}
+}
+
+country_event = { # Mongolian Unification - No
+	id = men.22
+	title = men.22.t 
+	desc = men.22.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes 
+
+	option = {
+		name = men.22.a 
+		effect_tooltip = {
+			add_opinion_modifier = {
+				target = FROM
+				modifier = AFG_PER_refused_annex
+			}
+		}
+	}
+}
+
+country_event = { # Request Mongol Territories
 	id = men.23
 	title = men.23.t
 	desc = men.23.d
-	
-	picture = GFX_report_event_chinese_soldiers_01
-	
-	is_triggered_only = yes
-	
+	is_triggered_only = yes 
+	picture = GFX_report_event_generic_sign_treaty1
+
 	option = {
 		name = men.23.a
-		add_political_power = -10
-		MEN = {
-			set_state_owner = 621
-			set_state_owner = 746
-			set_cosmetic_tag = MEN_Menj_form
-		}
-		ai_chance = {
-			factor = 100
-		}
-	}
-
-	option = {
-		name = men.23.b
-		add_political_power = 50
-	}
-}
-
-country_event = {
-	id = men.24
-	title = men.24.t 
-	desc = men.24.d 
-	is_triggered_only = yes 
-
-
-	option = {
-	name = men.24.a 
-	
-	}
-}
-
-
-country_event = {
-	id = men.25
-	title = men.25.t
-	desc = men.25.desc 
-	is_triggered_only = yes 
-	fire_only_once = yes 
-
-	trigger = {
-		tag = MEN
-		date > 1936.2.26
-	}
-	option = {
-		name = men.25.a 
-		custom_effect_tooltip = MEN_nima_odsor_dies_tt
-		set_country_flag = MEN_nima_odsor_dead_yes_flag
-	}
-}
-
-
-country_event = {
-	id = men.26
-	title = men.26.t 
-	desc = men.26.desc 
-	is_triggered_only = yes 
-
-	option = {
-		name = men.26.a 
-		ai_chance = {
-			factor = 70
-		}
-		MEN = {
-			621 = {
-				add_core_of = MEN 
+		every_owned_state = {
+			limit = {
+				OR = {
+					is_core_of = MON
+					is_core_of = TAN
+				}
+				state = 621
+				state = 746
 			}
-			
-			add_timed_idea = {
-				idea = MEN_payment_for_suiyuan_men 
-				days = 365 
-			}
-		}
-
-		621 = {
 			transfer_state_to = MEN
 		}
-		add_timed_idea = {
-			idea = MEN_payment_for_suiyuan
-			days = 365
-		}
-	}
-
-
-	option = {
-		ai_chance = {
-			factor = 30
-		}
-		name = men.26.b 
-		add_political_power = -50 
-	}
-}
-
-
-
-
-country_event = { # mongol unify 
-	id = men.27
-	title = men.27.t 
-	desc = men.27.desc 
-	is_triggered_only = yes 
-
-
-	option = {   #yes 
-		name = men.27.a 
-		ai_chance = {
-			factor = 70
-		}
-		MEN = {
-			annex_country = {
-    				target = MON 
-    				transfer_troops = yes
+		every_controlled_state = {
+			limit = {
+				OR = {
+					is_core_of = MON
+					is_core_of = TAN
 				}
-				every_state = {
-					limit = {
-						is_core_of = MON 
+				state = 621
+				state = 746
+			}
+			ROOT = {
+				set_state_controller = PREV
+			}
+		}
+		hidden_effect = {
+			country_event = { id = men.24 hours = 12 }
+		}
+		ai_chance = {
+			base = 75
+			modifier = {
+				is_in_faction_with = FROM
+				factor = 1.5
+			}
+			modifier = {
+				has_war_together_with = FROM
+				factor = 2
+			}
+			modifier = {
+				has_government = FROM
+				factor = 1.5
+			}
+			modifier = {
+				FROM = {
+					strength_ratio = {
+						tag = MON
+						ratio > 1.5
 					}
-					add_core_of = ROOT
 				}
-			set_cosmetic_tag = Men_mongol_unify
+				factor = 1.5
+			}
+			modifier = {
+				FROM = {
+					strength_ratio = {
+						tag = MON
+						ratio > 2
+					}
+				}
+				factor = 2
+			}
+			modifier = {
+				has_war = yes
+				factor = 1.25
+			}
+			modifier = {
+				surrender_progress > 0.2
+				factor = 1.5
+			}
+			modifier = {
+				factor = 5
+				is_subject_of = FROM
+			}
+			modifier = {
+				factor = 1.5
+				ROOT = {
+					has_opinion = {
+						target = FROM
+						value > 59
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				ROOT = {
+					has_opinion = {
+						target = FROM
+						value > 99
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				ROOT = {
+					has_opinion = {
+						target = FROM
+						value > 149
+					}
+				}
+			}
 		}
-
 	}
 
-
-
-
 	option = {
-		name = men.27.b 
-		ai_chance = {
-			factor = 30
-		}
+		name = men.23.b 
+		add_political_power = -25
 		MEN = {
-			create_wargoal = { 
-				type = annex_everything
-				target = MON
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = betrayed_our_cause
 			}
+		}
+		hidden_effect = {
+			country_event = { id = men.25 hours = 12 }
+		}
+		ai_chance = {
+			base = 25
 		}
 	}
 }
 
+country_event = { # Request Mongol Territories - Yes
+	id = men.24
+	title = men.24.t 
+	desc = men.24.d
+	picture = GFX_report_event_generic_sign_treaty1
 
-
-country_event = {
-	id = men.28 
-	title = men.28.t 
-	desc = men.28.desc
 	is_triggered_only = yes 
 
 	option = {
-		ai_chance = {
-			factor = 70
-		}
-		name = men.28.a 
-		add_political_power = 50 
-		MEN = {
-			set_country_flag = men_ulanhu_returned_flag 
-		}
-		
-		hidden_effect = {
-			MEN = {
-				country_event = men.29
+		name = men.24.a 
+		add_stability = 0.05
+		effect_tooltip = {
+			FROM = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							is_core_of = MON
+							is_core_of = TAN
+						}
+						state = 621
+						state = 746
+					}
+					transfer_state_to = MEN
+				}
+				every_controlled_state = {
+					limit = {
+						OR = {
+							is_core_of = MON
+							is_core_of = TAN
+						}
+						state = 621
+						state = 746
+					}
+					ROOT = {
+						set_state_controller = PREV
+					}
+				}
 			}
 		}
 	}
+}
+
+country_event = { # Request Mongol Territories - No
+	id = men.25
+	title = men.25.t 
+	desc = men.25.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes 
 
 	option = {
-		ai_chance = {
-			factor = 30
-		}
-		name = men.28.b 
-		add_political_power = -50 
-		hidden_effect = {
-			MEN = {
-				country_event = men.30
+		name = men.25.a 
+		effect_tooltip = {
+			add_opinion_modifier = {
+				target = FROM
+				modifier = betrayed_our_cause
 			}
 		}
-		
+	}
+}
+
+### SUIYUAN CAMPAIGN BORDER WAR EVENTS ###
+
+country_event = {
+	id = men.26 # Suiyuan Win for Mengkukuo 
+	title = men.26.t
+	desc = men.26.d
+	picture = GFX_report_event_r56_suiyuan
+
+	is_triggered_only = yes 
+
+	option = {
+		name = men.26.a
+		set_country_flag = MEN_suiyuan_ended
+		transfer_state = 621
+		add_state_core = 621
+		complete_national_focus = MEN_rebuilding_the_disaster_of_suiyan
+		effect_tooltip = {
+			army_experience = 25
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			swap_ideas = {
+				remove_idea = MEN_disorganized_military
+				add_idea = MEN_disorganized_military_2
+			}
+		}
 	}
 }
 
 country_event = {
-	id = men.29 
+	id = men.27 # Suiyuan Loss for Mengkukuo 
+	title = men.27.t
+	desc = men.27.d
+	picture = GFX_report_event_r56_suiyuan
+
+	is_triggered_only = yes 
+
+	option = {
+		name = men.27.a
+		set_country_flag = MEN_suiyuan_ended
+		army_experience = 15
+		effect_tooltip = {
+			unlock_national_focus = MEN_rebuilding_the_disaster_of_suiyan
+		}
+	}
+}
+
+country_event = {
+	id = men.28 # Suiyuan Tie for Mengkukuo 
+	title = men.28.t
+	desc = men.28.d
+	picture = GFX_report_event_r56_suiyuan
+
+	is_triggered_only = yes 
+	
+	option = {
+		name = men.28.a
+		set_country_flag = MEN_suiyuan_ended
+		army_experience = 20
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+		}
+		effect_tooltip = {
+			unlock_national_focus = MEN_rebuilding_the_disaster_of_suiyan
+		}
+	}
+}
+
+country_event = {
+	id = men.29 # Suiyuan Win for Shanxi 
 	title = men.29.t
-	desc = men.29.desc 
+	desc = men.29.d
+	picture = GFX_report_event_r56_suiyuan
+
 	is_triggered_only = yes 
 
 	option = {
 		name = men.29.a
+		set_country_flag = MEN_suiyuan_ended
+		army_experience = 25
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 2
+			category = land_doctrine
+		}
 	}
 }
 
-
-
-
-
 country_event = {
-	id = men.30
+	id = men.30 # Suiyuan Loss for Shanxi 
 	title = men.30.t
-	desc = men.30.desc 
+	desc = men.30.d
+	picture = GFX_report_event_r56_suiyuan
+
 	is_triggered_only = yes 
 
 	option = {
 		name = men.30.a
-	}
-}
-
-country_event = {
-	id = men.31
-	title = men.31.t 
-	desc = men.31.desc 
-	is_triggered_only = yes 
-
-
-	option = {
-		name = men.31.a 
-		MEN = {
-			create_faction = "Chinese Communist Bloc"
-			add_to_faction = PRC 
+		army_experience = 15
+		effect_tooltip = {
+			MEN = {
+				transfer_state = 621
+				add_state_core = 621
+			}
 		}
 	}
-
-	option = {
-		name = men.31.b 
-		add_political_power = -100
-	}	
-
-
 }
 
-
 country_event = {
+	id = men.31 # Suiyuan Tie for Shanxi
+	title = men.31.t
+	desc = men.31.d
+	picture = GFX_report_event_r56_suiyuan
+
+	is_triggered_only = yes 
+
+	option = {
+		name = men.31.a
+		army_experience = 20
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+		}
+	}
+}
+
+country_event = { # Japan Mobilizes the Kwantung
 	id = men.32
-	title = men.32.t 
-	desc = men.32.desc 
-	is_triggered_only = yes 
-
+	title = men.32.t
+	desc = men.32.d
+	
+	picture = GFX_report_event_japanese_transport_soldiers
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
 	option = {
-		name = men.32.a 
-		start_civil_war = {
-			ruling_party = neutrality
-			ideology = communism 
-			size = 0.45
-			capital = 600
-			states = { 
-				600
-				602
-				595
-				596
-			}
+		name = men.32.a
+		add_stability = -0.03
+		add_war_support = 0.05
+		activate_mission = MEN_imminent_japanese_invasion
+		effect_tooltip = {
+			retire_character = MEN_li_shouxin
+			retire_character = MEN_wang_ying
 		}
-	}
-}
-
-
-
-
-
-country_event = {
-	id = men.33
-	title = men.33.t 
-	desc = men.33.desc 
-	is_triggered_only = yes 
-
-	option = {
-		name = men.33.a 
-		ai_chance = {
-			factor = 100
-				
+		add_manpower = -5000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -250
 		}
-		PRC = {
-			annex_country = {
-				target = CHI
-    			transfer_troops = yes
-			}
-		}
-	}
-
-
-	option = {
-		name = men.33.b 
-		ai_chance = {
-			factor = 0
-		}
-		PRC = {
-			create_wargoal = { 
-				type = annex_everything
-				target = CHI
-			}
-		}
-	}
-}
-
-
-
-
-
-
-country_event = {
-	id = men.34
-	title = men.34.t 
-	desc = men.34.desc 
-	is_triggered_only = yes 
-
-	option = {
-		name = men.34.a 
-		ai_chance = {
-			factor = 100
-				
-		}
-		PRC = {
-			puppet = MEN
-			set_autonomy = {
-    			target = PREV
-    			autonomy_state = autonomy_dominion
-			}
-		}
-
-
-		hidden_effect = {
-			MEN = {
-				country_event = men.25
-			}
-		}
-	}
-
-	option = {
-		name = men.34.b 
-		ai_chance = {
-			factor = 0
-		}
-		add_political_power = -150
-		add_stability = -0.05
-
-
-
-
-		hidden_effect = {
-			MEN = {
-				country_event = men.26
-			}
-		}
-	}
-}
-
-
-
-country_event = {
-	id = men.35 #China Says Yes 
-	title = men.35.t
-	desc = men.35.desc 
-	is_triggered_only = yes 
-
-	option = {
-		name = men.35.a
-	}
-}
-
-
-
-
-country_event = {
-	id = men.36 #China Says No 
-	title = men.36.t
-	desc = men.36.desc 
-	is_triggered_only = yes 
-
-	option = {
-		name = men.36.a
-	}
-}
-
-
-country_event = {
-	id = men.37
-	title = men.37.t
-	desc = men.37.desc 
-	is_triggered_only = yes 
-
-	option = {
-		name = men.37.a
-			621 = {
-				transfer_state_to = MEN
-			}
-			746 = {
-				transfer_state_to = MEN
-			}
-			616 = {
-				transfer_state_to = MEN
-			}
-			756 = {
-				transfer_state_to = MEN
-			}
-	}
-
-
-	option = {
-		name = men.37.b 
-		add_political_power = -50
-	}
-}
-
-
-country_event = {
-	id = men.38 #suiyuan win for men 
-	title = men.38.t
-	desc = men.38.desc 
-	is_triggered_only = yes 
-	picture = GFX_report_event_r56_suiyuan
-
-	option = {
-		name = men.38.a
-		set_country_flag = MEN_won_at_suiyuan
-		MEN = {transfer_state = 621}
-	}
-}
-
-country_event = {
-	id = men.39 #suiyuan lose for men 
-	title = men.39.t
-	desc = men.39.desc 
-	is_triggered_only = yes 
-	picture = GFX_report_event_r56_suiyuan
-	option = {
-		name = men.39.a
-	}
-}
-
-country_event = {
-	id = men.40 #suiyuan tie for men 
-	title = men.40.t
-	desc = men.40.desc 
-	is_triggered_only = yes 
-	picture = GFX_report_event_r56_suiyuan
-	option = {
-		name = men.40.a
-	}
-}
-
-country_event = {
-	id = men.41 #suiyuan win for shx
-	title = men.41.t
-	desc = men.41.desc 
-	is_triggered_only = yes 
-	picture = GFX_report_event_r56_suiyuan
-	option = {
-		name = men.40.a
-	}
-}
-
-country_event = {
-	id = men.42 #suiyuan lose for shx
-	title = men.42.t
-	desc = men.42.desc 
-	is_triggered_only = yes 
-	picture = GFX_report_event_r56_suiyuan
-	option = {
-		name = men.42.a
-	}
-}
-
-country_event = {
-	id = men.43 #suiyuan tie for shx
-	title = men.43.t
-	desc = men.43.desc 
-	is_triggered_only = yes 
-	picture = GFX_report_event_r56_suiyuan
-	option = {
-		name = men.43.a
 	}
 }

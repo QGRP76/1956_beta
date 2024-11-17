@@ -1113,7 +1113,11 @@ opinion_modifiers = {
 		value = 20
 	}
 
+###------> MEN <><> <><> <><> <><> <><>
 
+	MEN_shared_struggle = {
+		value = 50
+	}
 
 }	
 
