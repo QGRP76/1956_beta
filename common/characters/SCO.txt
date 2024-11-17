@@ -748,4 +748,49 @@ characters = {
 			}
 		}
 	}
+	SCO_samuel_crowe_curran = { # aa fuse, it makes navy a bit stupid but oh well...
+		name = "Samuel Crowe Curran"
+		portraits = {
+			army = {
+				large = GFX_portrait_generic_europe_male_03
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_resourceful }
+			skills = {
+				specialization_navy = 1
+			}
+		}
+	}
+	SCO_james_mcfadyen_mcneill = { # Vanguard battleship
+		name = "James McFadyen McNeill"
+		portraits = {
+			army = {
+				large = GFX_portrait_generic_europe_male_08
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_surface_ship_specialist scientist_trait_gifted_engineer }
+			skills = {
+				specialization_navy = 2
+			}
+		}
+	}
+	SCO_robert_lickley = {
+		name = "Robert Lickley"
+		portraits = {
+			army = {
+				large = GFX_portrait_generic_europe_male_11
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_jet_expert }
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
 }
