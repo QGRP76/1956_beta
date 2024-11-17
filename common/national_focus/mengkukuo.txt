@@ -47,7 +47,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		completion_reward = {
@@ -136,7 +136,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		completion_reward = {
@@ -464,7 +464,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		completion_reward = {
@@ -502,7 +502,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		completion_reward = {
@@ -575,7 +575,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		completion_reward = {
@@ -609,7 +609,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		completion_reward = {
@@ -678,7 +678,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		completion_reward = {
@@ -1438,7 +1438,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		completion_reward = {
@@ -1501,7 +1501,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		select_effect = {
@@ -1615,7 +1615,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		select_effect = {
@@ -1725,7 +1725,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		select_effect = {
@@ -1841,7 +1841,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		
 		completion_reward = {
@@ -1914,7 +1914,7 @@ focus_tree = {
 		cost = 15
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		
 		completion_reward = {
@@ -2053,7 +2053,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		completion_reward = {
@@ -2122,7 +2122,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		completion_reward = {
@@ -2187,7 +2187,11 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 100
+			factor = 45
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 100
+			}
 		}
 		completion_reward = {
 			add_political_power = 25
@@ -2250,7 +2254,11 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 0
+			factor = 35
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
 		}
 		completion_reward = {
 			add_war_support = 0.10
@@ -2301,7 +2309,11 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 0
+			factor = 20
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
 		}
 		completion_reward = {
 			add_war_support = 0.05
@@ -3549,7 +3561,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		completion_reward = {
@@ -3592,7 +3604,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		completion_reward = {
@@ -3704,7 +3716,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		completion_reward = {
@@ -3762,7 +3774,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		completion_reward = {
@@ -3802,7 +3814,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_stability = 0.05
@@ -3830,7 +3842,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_political_power = 75
@@ -3872,7 +3884,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			army_experience = 15
@@ -3944,7 +3956,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_war_support = 0.05
@@ -3983,7 +3995,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_popularity = {
@@ -4021,7 +4033,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_popularity = {
@@ -4056,7 +4068,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_popularity = {
@@ -4116,7 +4128,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_popularity = {
@@ -4150,7 +4162,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_ideas = MEN_the_new_life_movement
@@ -4177,7 +4189,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			if = {
@@ -4218,7 +4230,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			if = {
@@ -4264,7 +4276,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -4295,7 +4307,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -4343,7 +4355,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_popularity = {
@@ -4378,7 +4390,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_research_slot = 1
@@ -4404,7 +4416,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -4487,7 +4499,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			every_state = {
@@ -4563,7 +4575,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		available = {
@@ -4614,7 +4626,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_war_support = 0.10
@@ -4639,7 +4651,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_stability = 0.05
@@ -4722,7 +4734,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			every_state = {
@@ -4855,7 +4867,7 @@ focus_tree = {
 		will_lead_to_war_with = SHX
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_war_support = 0.05
@@ -4916,7 +4928,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_war_support = 0.05
@@ -4953,7 +4965,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			every_state = {
@@ -5021,7 +5033,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_war_support = 0.05
@@ -5079,7 +5091,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_war_support = 0.05
@@ -5125,7 +5137,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_doctrine_cost_reduction = {
@@ -5195,7 +5207,7 @@ focus_tree = {
 		cost = 5 
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_war_support = 0.10
@@ -5580,7 +5592,7 @@ focus_tree = {
 		cost = 5 
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_popularity = {
@@ -5632,7 +5644,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_popularity = {
@@ -5837,7 +5849,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_stability = 0.05
@@ -5895,7 +5907,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = { 
 			if = {
@@ -5964,7 +5976,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			if = {
@@ -6036,7 +6048,7 @@ focus_tree = {
 		will_lead_to_war_with = SHX
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_war_support = 0.05
@@ -6105,7 +6117,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			MON = {
@@ -6173,7 +6185,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_war_support = 0.05
@@ -6218,7 +6230,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_stability = 0.05
@@ -6253,7 +6265,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_war_support = 0.05
@@ -6286,7 +6298,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			611 = {
@@ -6347,7 +6359,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			611 = {
@@ -6418,7 +6430,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_war_support = 0.05
@@ -6468,7 +6480,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_equipment_to_stockpile = {
@@ -6517,7 +6529,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -6571,7 +6583,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		completion_reward = {
@@ -6619,7 +6631,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_war_support = 0.05
@@ -6653,7 +6665,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_political_power = 75
@@ -6713,7 +6725,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			MON = {
@@ -6790,7 +6802,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_war_support = 0.05
@@ -6836,7 +6848,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_war_support = 0.05
@@ -6884,7 +6896,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_stability = 0.05
@@ -6927,7 +6939,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -6999,7 +7011,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -7053,7 +7065,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			army_experience = 15
@@ -7091,7 +7103,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			if = {
@@ -7157,7 +7169,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_war_support = 0.05
@@ -7191,7 +7203,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		completion_reward = {
 			add_war_support = 0.05

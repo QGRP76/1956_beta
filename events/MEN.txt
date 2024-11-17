@@ -38,6 +38,9 @@ country_event = { # The Zhangbei Meeting
 				unlock_national_focus = MEN_petition_nima-odsor_to_stay_in_shangbei
 			}
 		}
+		ai_chance = {
+			base = 40
+		}
 	}
 
 	option = {
@@ -56,6 +59,13 @@ country_event = { # The Zhangbei Meeting
 			country_event = { id = men.12 hours = 12 }
 			JAP = {
 				country_event = { id = men.16 hours = 12 }
+			}
+		}
+		ai_chance = {
+			base = 60
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
 			}
 		}
 	}
@@ -144,7 +154,7 @@ country_event = { # The Long Winter
 	}
 }
 
-country_event = { # Assassination Event for Japana
+country_event = { # Assassination Event for Japan
 	id = men.14
 	title = men.14.t
 	desc = men.14.d
@@ -211,6 +221,9 @@ country_event = { # Assassination Event for Japana
 		MEN = {
 			set_country_flag = MEN_japanese_gambit
 		}
+		ai_chance = {
+			base = 75
+		}
 	}
 
 	option = {
@@ -224,6 +237,13 @@ country_event = { # Assassination Event for Japana
 			add_stability = 0.10
 			effect_tooltip = {
 				unlock_national_focus = MEN_petition_nima-odsor_to_stay_in_shangbei
+			}
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
 			}
 		}
 	}
@@ -299,6 +319,13 @@ country_event = { # Unsuccessful Assassination Event for Japan
 				}
 			}
 		}
+		ai_chance = {
+			base = 40
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
 	}
 
 	option = {
@@ -326,6 +353,13 @@ country_event = { # Unsuccessful Assassination Event for Japan
 					target = JAP
 					modifier = small_decrease
 				}
+			}
+		}
+		ai_chance = {
+			base = 60
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
 			}
 		}
 	}
