@@ -291,10 +291,10 @@ characters={
 	}
 
 	FRA_antoinemariebenoit_besson={
-		name=FRA_antoinemariebenoit_besson
+		name="Benoit Besson"
 		portraits={
 			army={
-				large="gfx/leaders/FRA/Portrait_France_Generic_land_2.dds"
+				large="gfx/leaders/FRA/r56_portrait_FRA_Benoit_Besson.dds"
 				small="gfx/interface/ideas/idea_FRA_generic_land_2.dds"
 			}
 		}
