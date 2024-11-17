@@ -2842,22 +2842,6 @@ characters={
 			}
 		}
 	}
-
-	POL_stanislaw_prauss = {
-		name = "Stanisław Prauss"
-		portraits = {
-			army = {
-				large = GFX_portrait_generic_europe_male_13
-			}
-		}
-
-		scientist = {
-			traits = { scientist_trait_aircraft_specialist scientist_trait_bright scientist_trait_r56_political_dancer }
-			skills = {
-				specialization_air = 2
-			}
-		}
-	}
 	SWE_lars_brising  = {
 		name = "Lars Brising"
 		portraits = {
