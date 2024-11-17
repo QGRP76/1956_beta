@@ -216,6 +216,11 @@ recruit_character = POR_jose_pedro_pinheiro_correia				#high command
 recruit_character = POR_francisco_bernardo_do_canto				#commander
 recruit_character = POR_tasso_de_miranda_cabral					#army chief
 
+### SCIENTISTS ###
+recruit_character = POR_branca_edmee_marques
+recruit_character = POR_alberto_silveira_avila_de_melo
+recruit_character = POR_manuel_gomes_de_araujo
+
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1933.3.5"
