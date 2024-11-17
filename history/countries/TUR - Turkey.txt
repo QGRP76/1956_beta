@@ -122,7 +122,6 @@ recruit_character = TUR_memduh_tagmac
 recruit_character = TUR_hassan_saka
 recruit_character = TUR_nazmi_solok
 
-recruit_character = TUR_vecihi_hurkus
 recruit_character = TUR_resit_sureyya_gursey
 recruit_character = TUR_fikret_karabudak
 #if = {
