@@ -141,7 +141,7 @@ characters = {
 		corps_commander = {
 			traits = {
 				organizer politically_connected media_personality
-				AUS_nazi_loyalties # For now, replace with fascist sympathizer when Mengkukuo PR merges
+				MEN_fascist_sympathies # For now, replace with fascist sympathizer when Mengkukuo PR merges
 			}
 			skill = 3
 			attack_skill = 2
@@ -985,7 +985,7 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
-				trait_reckless politically_connected AUS_nazi_loyalties
+				trait_reckless politically_connected MEN_fascist_sympathies
 			}
 			skill = 2
 			attack_skill = 2
