@@ -1259,7 +1259,7 @@ ENG_r56_you_need_to_defend_egypt_bruv = {
 	ai_strategy = {
 		type = force_defend_ally_borders
 		id = EGY
-		value = 125
+		value = 250
 	}
 
 }
@@ -1537,7 +1537,7 @@ r56_ENG_hunker_down_and_get_to_bussiness = {
 
 	ai_strategy = {
 		type = put_unit_buffers
-		ratio = 0.35
+		ratio = 0.40
 		states = { #Isles
 			127
 			123
@@ -1601,5 +1601,54 @@ r56_ENG_dont_turn_ECU_PRU_war_into_WW3 = {
 		type = alliance
 		id = "ECU"
 		value = -75
+	}
+}
+
+r56_ENG_dont_join_jordan = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		has_subject = JOR
+		JOR = {
+			has_war_with = ISR
+		}
+		ISR = {
+			NOT = {
+				has_completed_focus = ISR_win
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = JOR
+		value = -1000
+		target_country = ISR
+	}
+}
+
+
+r56_ENG_dont_join_egypt = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		has_subject = EGY
+		EGY = {
+			has_war_with = ISR
+		}
+		ISR = {
+			NOT = {
+				has_completed_focus = ISR_win
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = EGY
+		value = -1000
+		target_country = ISR
 	}
 }

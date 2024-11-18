@@ -212,7 +212,7 @@
  FRA_travaux:0 "Grands Travaux"
  FRA_war_opposition:0 "War Opposition"
  FRA_case_anton_idea:0 "Case Anton"
- FRA_intervention_idea:0 "[FRA.GetAdjective] Intervention"
+ FRA_intervention_idea:0 "[ROOT.GetAdjective] Intervention"
  FRA_protected_by_the_maginot_line_attack:0 "Protected by the Maginot Line"
  FRA_protected_by_the_maginot_line_attack_desc:0 "Having fortified the border allows [FRA.GetNameDef] to plan and prepare carefully, but it does sacrifice some flexibility in the event of something unexpected."
  FRA_protected_by_the_maginot_line_defense:0 "Protected by the Maginot Line"
@@ -635,7 +635,7 @@
  FRA_our_natural_borders_desc:0 "To ensure [FRA.GetNameDef]'s security, our northern border must follow the course of the Rhine. It is time for us to recover our rightful border."
  FRA_compromise_with_germany:0 "Compromise with [GER.GetNameDef]"
  FRA_compromise_with_germany_desc:0 "Maybe we could reach an agreement with [GER.GetLeader] to secure our zones of influence and focus on our problems."
- FRA_approach_poland_and_romania:0 "Approach [POL.GetAdjective] and [ROM.GetAdjective] governments"
+ FRA_approach_poland_and_romania:0 "Approach [POL.GetAdjective] and [ROM.GetAdjective] Governments"
  FRA_approach_poland_and_romania_desc:0 "[POL.GetNameDefCap] and [ROM.GetNameDef] are essential for the security of Eastern Europe; they are therefore crucial for the equilibrium of the Continental System."
  FRA_obtain_polish_cryptological_data:0 "Obtain Polish Cryptological Data" #This Focus exists in the Hungarian Tree and the French tree.
  FRA_obtain_polish_cryptological_data_desc:0 "Our great Polish allies have made breakthrough in the field of machine assisted decryption. By collaborating closely, we could take advantage of their technologies."

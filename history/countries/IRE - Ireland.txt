@@ -137,6 +137,9 @@ recruit_character = IRE_tom_barry
 recruit_character = IRE_fallen_dail
 
 
+#scientists
+recruit_character = IRE_ernest_walton 
+
 set_technology = {
 
 	# Extended Technologies

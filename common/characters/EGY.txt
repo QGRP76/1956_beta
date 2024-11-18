@@ -221,7 +221,6 @@ characters={
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 3
-			legacy_id=6981
 		}
 	}
 	EGY_hussein_sirri_amer = { # Aristocrat
@@ -1259,6 +1258,21 @@ characters={
 			}
 			traits = {
 				air_close_air_support_1
+			}
+		}
+	}
+	EGY_sameera_moussa = {
+		name = "Sameera Moussa"
+		portraits = {
+			army = {
+				large = GFX_portrait_generic_arabia_female_02
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_power_expert }
+			skills = {
+				specialization_nuclear = 1
 			}
 		}
 	}
