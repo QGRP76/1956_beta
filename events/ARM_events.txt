@@ -40,12 +40,13 @@ country_event = {
 		set_country_flag = ARM_catholicos_khoren_has_died
 		if = {
 			limit = {
+				ARM_khoren_I = {
+					is_hired_as_advisor = yes
+				}
 				has_idea = ARM_khoren_I	
 			}
-			swap_ideas = {
-				remove_idea = ARM_khoren_I
-				add_idea = ARM_gevorg_VI
-			}
+			deactivate_advisor = ARM_khoren_I
+			activate_advisor = ARM_gevorg_VI
 		}
 	}
 	option = {

@@ -348,8 +348,8 @@
 #			factor = 10
 #		}
 #		text_icon = NORDIC_focus_style
-
-		available = {
+# 
+#  		available = {
 #			NOT = {
 #				has_idea = generic_recent_economic_unification
 #			}

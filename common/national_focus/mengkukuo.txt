@@ -3137,18 +3137,6 @@ focus_tree = {
 							damage = 2
 						}
 					}
-					if = {
-						limit = {
-							non_damaged_building_level = {
-								building = supply_node
-								level > 0
-							}
-						}
-						damage_building = {
-							type = supply_node
-							damage = 0.8
-						}
-					}
 				}
 			}
 			else = { # Tooltip
@@ -5878,7 +5866,21 @@ focus_tree = {
 		y = 1
 
 		bypass = {
-			is_in_faction_with = SOV
+			OR = {
+				is_in_faction_with = SOV
+				NOT = {
+					any_other_country = {
+						is_major = yes
+						has_capitulated = no
+						has_government = communism
+						is_faction_leader = yes
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				PRC = {
+					has_war_with = ROOT
+				}
+			}
 		}
 
 		available = {
@@ -5886,14 +5888,9 @@ focus_tree = {
 			is_in_faction = no
 			has_government = communism
 			OR = {
-				SOV = {
-					NOT = { has_war_with = ROOT }
-					has_government = communism
-					has_capitulated = no
-					is_faction_leader = yes
-				}
 				any_other_country = {
 					is_major = yes
+					has_capitulated = no
 					has_government = communism
 					is_faction_leader = yes
 					NOT = { has_war_with = ROOT }

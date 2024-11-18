@@ -143,7 +143,7 @@ ideas = {
 			modifier = {
 				stability_factor = -0.05
 				conscription = 0.01
-				communism = 0.03
+				communism_drift = 0.03
 				war_support_factor = 0.10
 			}
 
