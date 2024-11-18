@@ -116,14 +116,14 @@
  marhaenism_desc:0 "The early 20th century saw numerous changes in the East Indies political scenery, with Ethische Politiek created a new class of Indonesian native intellectuals called the Boemipoetras, and alongside that, a soul-searching efforts for a new national identity to both differentiate themselves from the Dutch and the previous regional nationalists. Much were already present, such as Islamism and even Marxism, but they were either too radical in their own struggles which alienates the majorly-Westernized Boemipoetras, or too vague on their premise.\n\nIn 1926, a young archithect graduate named Soekarno formulated his own political theory which synthesizes the three main ideological streams of the Boemipoetras, secular §ONationalism§!, §GIslam§!, and §YMarxism§! - all of which has influenced Soekarno since his youth -, combined into one binding ideology of the Indonesians called §YMarhaenism§!, "the Indonesian socialism in practice"."
 
  #ADR
- ADR_neutrality_party:0 "Co-Principality Council"
- ADR_neutrality_party_long:0 "Co-Principality Organization"
- ADR_democratic_party:0 "Unió Andorrana"
- ADR_democratic_party_long:0 "Unió Andorrana"
- ADR_fascism_party:0 "Falange Española en Andorra"
+ ADR_fascism_party:1 "FE-A"
  ADR_fascism_party_long:0 "Falange Española en Andorra"
- ADR_communism_party:0 "Joves Andorrans"
+ ADR_democratic_party:1 "UA"
+ ADR_democratic_party_long:1 "Unió Andorrana"
+ ADR_communism_party:0 "JA"
  ADR_communism_party_long:0 "Joves Andorrans"
+ ADR_neutrality_party:1 "GNI"
+ ADR_neutrality_party_long:1 "Grup Nacionalista Integral"
 
  #ADU
  ADU_neutrality_party:0 "HIW"

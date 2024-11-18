@@ -8,6 +8,124 @@ spriteTypes = {
 		noOfFrames = 19
 	}
 
+###------> ADR <><> <><> <><> <><> <><>
+	SpriteType = {
+		name = "GFX_portrait_ADR_julia_reig_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_julia_reig_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_manuel_cerqueda_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_manuel_cerqueda_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_xavier_d_areny_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_xavier_d_areny_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_jean_baptiste_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_jean_baptiste_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_Friedrich_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_friederich_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_joan_fornesa_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_joan_fornesa_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_josep_dencas_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_josep_dencas_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_joan_riberaygua_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_joan_riberaygua_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_valenti_mora_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_valenti_mora_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_joan_boronat_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_joan_boronat_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_josep_ros_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_josep_ros_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_miguel_bondacia_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_miguel_bondacia_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_pau_benazet_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_pau_benazet_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_mauricio_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_mauricio_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_lasmartes_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_lasmartes_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_Andorra_Generic_land_1_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_generico_1_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_Andorra_Generic_land_2_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_generico_2_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_Andorra_Generic_land_3_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_generico_3_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_Andorra_Generic_land_4_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_generico_4_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_Andorra_Generic_land_5_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_generico_5_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_Andorra_Generic_land_6_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_generico_6_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_Andorra_Generic_land_7"
+		texturefile = "gfx/leaders/ADR/ADR_generico_7.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_Andorra_Generic_land_7_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_generico_7_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_Andorra_Generic_land_8_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_generico_8_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_Andorra_Generic_land_9_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_generico_9_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_Andorra_Generic_navy_1_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_generico_navy_1_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_Andorra_Generic_navy_2_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_generico_navy_2_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_Andorra_Generic_navy_3_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_generico_navy_3_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_Andorra_Generic_navy_4_small"
+		texturefile = "gfx/interface/ideas/adr/ADR_generico_navy_4_small.dds"
+	}
+
 ###------> AFG <><> <><> <><> <><> <><>
 	spriteType = {
 		name = "GFX_idea_AFG_daoud_khan"

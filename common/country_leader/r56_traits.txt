@@ -659,6 +659,465 @@ leader_traits = {
 		neutrality_drift = 0.1
 	}
 
+###------> ADR <><> <><> <><> <><> <><>
+	pragmatic_politician = {
+		random = no
+		stability_factor = 0.1
+		war_support_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	sindic_general = {
+		random = no
+		political_advisor_cost_factor = -0.15
+		party_popularity_stability_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	master_of_propaganda = {
+		random = no
+		war_support_factor = 0.1
+		stability_factor = 0.05
+		improve_relations_maintain_cost_factor = -0.25
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	lieutenant_of_the_king = {
+		random = no
+		political_power_factor = 0.05
+		neutrality_drift = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	count_of_paris_adr = {
+		random = no
+		political_power_factor = 0.05
+		stability_weekly = 0.003
+		democratic_acceptance = 40
+		neutrality_drift = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	duke_of_guise = {
+		random = no
+		political_power_factor = 0.1
+		production_speed_buildings_factor = 0.05
+		neutrality_drift = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	heir_of_charlemagne = {
+		random = no
+		war_support_weekly = 0.002
+		justify_war_goal_time = -0.5
+		conscription = 0.025
+		compliance_growth = 0.1
+		resistance_growth = -0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	carlist_regent = {
+		random = no
+		war_support_factor = 0.05
+		stability_factor = 0.05
+		experience_gain_army = 0.2
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	carlist_king = {
+		random = no
+		war_support_factor = 0.1
+		stability_factor = 0.1
+		experience_gain_army = 0.3
+		army_morale_factor = 0.1
+		resistance_growth = -0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	reformer_king = {
+		random = no
+		war_support_factor = 0.1
+		stability_factor = 0.1
+		political_power_factor = 0.1
+		democratic_acceptance = 40
+		compliance_growth = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	expansionist_king = {
+		random = no
+		war_support_factor = 0.1
+		stability_factor = 0.1
+		justify_war_goal_time = -0.5
+		generate_wargoal_tension = -0.4
+		conscription = 0.03
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	king_of_the_valleys = {
+		random = no
+		political_power_factor = 0.1
+		army_morale_factor = 0.1
+		conscription = 0.01
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	king_of_the_valleys_2 = {
+		random = no
+		political_power_factor = 0.1
+		army_morale_factor = 0.1
+		conscription = 0.025
+		justify_war_goal_time = -0.5
+		generate_wargoal_tension = -0.4
+		non_core_manpower = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	sovereign_prince = {
+		random = no
+		political_power_factor = 0.1
+		stability_factor = 0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	holy_andorran_emperor = {
+		random = no
+		justify_war_goal_time = -0.5
+		generate_wargoal_tension = -0.5
+		puppet_cost_factor = -0.15
+		annex_cost_factor = -0.1
+		custom_modifier_tooltip = BUL_ferdinand_subjects_modifier_tt
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	defender_of_tradition = {
+		random = no
+		army_core_defence_factor = 0.15
+		army_core_attack_factor = 0.1
+		war_support_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	military_priest = {
+		random = no
+		war_support_weekly = 0.001
+		experience_loss_factor = -0.15
+		army_morale_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	fame_of_saintliness = {
+		random = no
+		weekly_manpower = 750
+		non_core_manpower = 0.1
+		compliance_gain = 0.05
+		resistance_growth = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	fascist_industrialistt = {
+		random = no
+		war_support_factor = 0.05
+		stability_factor = -0.05
+		consumer_goods_factor = -0.1
+		training_time_army_factor = -0.05
+		non_core_manpower = 0.03
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	full_power = {
+		random = no
+		political_power_factor = 0.15
+		conscription = 0.01
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	oportunista = {
+		random = no
+		political_power_factor = 0.05
+		war_support_factor = 0.05
+		stability_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	left_leaning_politician = {
+		random = no
+		fascism_acceptance = -20
+		communism_acceptance = 20
+		industrial_capacity_factory = 0.1
+		stability_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	irlandes = {
+		random = no
+		army_attack_against_major_factor = 0.1
+		army_speed_factor = 0.03
+		political_power_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	andorran_council = {
+		random = no
+		political_power_factor = -0.1
+		stability_factor = 0.1
+		war_support_factor = 0.05
+		communism_drift = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	face_of_liberalism = {
+		random = no
+		sprite = 13
+		democratic_drift = 0.05
+		political_power_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	opus_dei_founder = {
+		random = no
+		sprite = 13
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
+		political_power_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	episcopal_representative = {
+		random = no
+		sprite = 13
+		neutrality_drift = 0.05
+		compliance_gain = 0.03
+		political_power_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	episcopal_coprince = {
+		random = no
+		sprite = 13
+		neutrality_drift = 0.02
+		stability_factor = 0.05
+		political_power_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	french_coprince = {
+		random = no
+		sprite = 13
+		democratic_acceptance = 20
+		stability_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	french_coprince_f = {
+		random = no
+		sprite = 13
+		fascism_acceptance = 20
+		stability_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	french_coprince_m = {
+		random = no
+		sprite = 13
+		neutrality_drift = 0.03
+		stability_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	king_of_france_and_andorra = {
+		random = no
+		sprite = 13
+		neutrality_drift = 0.03
+		stability_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	illusionista = {
+		random = no
+		sprite = 15
+		operative_slot = 1
+		agency_upgrade_time = -0.1
+		civilian_intel_factor = 0.1
+		army_intel_factor = 0.1
+		navy_intel_factor = 0.1
+		airforce_intel_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	french_representative = {
+		random = no
+		sprite = 13
+		stability_factor = 0.05
+		weekly_manpower = 100
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	enigmatic_adventurer = {
+		random = no
+		sprite = 13
+		conscription = 0.01
+		mobilization_speed = 0.1
+		army_morale_factor = 0.05
+		stability_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	catalanist = {
+		random = no
+		sprite = 13
+		war_support_factor = 0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	catalanist = {
+		random = no
+		sprite = 13
+		war_support_factor = 0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	white_russian_leader = {
+		random = no
+		sprite = 13
+		weekly_manpower = 150
+		experience_gain_army_factor = 0.05
+		army_org_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	carlist_organizer = {
+		random = no
+		sprite = 13
+		training_time_army_factor = -0.1
+		conscription = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	companys_trait = {
+		random = no
+		sprite = 13
+		army_core_defence_factor = 0.1
+		army_core_attack_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	catalan_supremacist = {
+		random = no
+		sprite = 13
+		fascism_drift = 0.05
+		justify_war_goal_time = -0.25
+		resistance_growth = -0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	paramilitary_leader = {
+		random = no
+		sprite = 13
+		non_core_manpower = 0.05
+		training_time_army_factor = -0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	monarchist_industrialist = {
+		random = no
+		sprite = 13
+		production_speed_buildings_factor = 0.05
+		industrial_capacity_factory = 0.05
+		consumer_goods_factor = -0.05
+		neutrality_drift = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 ###------> AFG <><> <><> <><> <><> <><>
 
 	turkish_academic = {

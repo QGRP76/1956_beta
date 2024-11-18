@@ -2,21 +2,161 @@ spriteTypes = {
 
 
 # ADR
-	spriteType = {
-		name = "GFX_Portrait_ADR_co_prince_council"
-		texturefile = "gfx/leaders/ADR/r56_potrait_ADR_co_prince_council.dds"
+SpriteType = {
+		name = "GFX_portrait_ADR_francesc_cairat"
+		texturefile = "gfx/leaders/ADR/Francesc_cairat.dds"
 	}
-	spriteType = {
-		name = "GFX_Portrait_ADR_roc_pallares_i_rossell"
-		texturefile = "gfx/leaders/ADR/r56_portrait_ADR_roc_pallares_i_rossell.dds"
+	SpriteType = {
+		name = "GFX_portrait_ADR_roc_pallares"
+		texturefile = "gfx/leaders/ADR/Roc_Pallares_I_Rossell.dds"
 	}
-	spriteType = {
-		name = "GFX_Portrait_ADR_miquel_mateu_i_pla"
-		texturefile = "gfx/leaders/ADR/r56_portrait_ADR_miquel_mateu_i_pla.dds"
+	SpriteType = {
+		name = "GFX_portrait_ADR_miquel_mateu"
+		texturefile = "gfx/leaders/ADR/Miquel_Mateu_I_Pla.dds"
 	}
-	spriteType = {
-		name = "GFX_Portrait_ADR_consell_sindical"
-		texturefile = "gfx/leaders/ADR/r56_portrait_ADR_consell_sindical.dds"
+	SpriteType = {
+		name = "GFX_portrait_ADR_consell_syndical"
+		texturefile = "gfx/leaders/ADR/communist_council.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_secundi_tomas"
+		texturefile = "gfx/leaders/ADR/secundi_tomas.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_justi_guitart"
+		texturefile = "gfx/leaders/ADR/Justi_guitart.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_ramon_iglesias"
+		texturefile = "gfx/leaders/ADR/Ramon_iglesias.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_jaume_sansa"
+		texturefile = "gfx/leaders/ADR/Jaume_sansa.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_boris"
+		texturefile = "gfx/leaders/ADR/Boris_general.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_boris_civ"
+		texturefile = "gfx/leaders/ADR/boris_normal.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_boris_king"
+		texturefile = "gfx/leaders/ADR/Boris_tsar.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_lluis_companys"
+		texturefile = "gfx/leaders/ADR/lluis_companys.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_daniel_cardona"
+		texturefile = "gfx/leaders/ADR/daniel_cardona.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_manuel_carrasco"
+		texturefile = "gfx/leaders/ADR/daniel_cardona.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_AND_andreu_nin"
+		texturefile = "gfx/leaders/ADR/andreu_nin.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_joaquin_maurin"
+		texturefile = "gfx/leaders/ADR/joaquin_maurin.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_rene_baulard"
+		texturefile = "gfx/leaders/ADR/rene_baulard.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_emilio_herrera"
+		texturefile = "gfx/leaders/ADR/Emilio_Herrera_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_frederic_escofet"
+		texturefile = "gfx/leaders/ADR/frederic_escofet.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_anton_huguet"
+		texturefile = "gfx/leaders/ADR/Anton_Huguet.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_josemaria"
+		texturefile = "gfx/leaders/ADR/jose_maria_escriva.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_jose_solchaga"
+		texturefile = "gfx/leaders/ADR/jose_solchaga.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_rafael_garcia"
+		texturefile = "gfx/leaders/ADR/rafael_garcia.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_enrique_barrau"
+		texturefile = "gfx/leaders/ADR/enrique_barrau.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_yevgueni"
+		texturefile = "gfx/leaders/ADR/yevgeny.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_nikolai"
+		texturefile = "gfx/leaders/ADR/nikolai_shinkarenko.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_josep_maria_benet"
+		texturefile = "gfx/leaders/ADR/josep_maria_benet.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_xavier_de_borbon"
+		texturefile = "gfx/leaders/ADR/xavier_de_borbon.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_xavier_de_borbon_king"
+		texturefile = "gfx/leaders/ADR/xavier_de_borbon_rey.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_carlos_pio"
+		texturefile = "gfx/leaders/ADR/carlos_pio.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_juan_de_borbon"
+		texturefile = "gfx/leaders/ADR/juan_de_borbon.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_emilio_esteban"
+		texturefile = "gfx/leaders/ADR/emilio_esteban.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_andres_saliquet"
+		texturefile = "gfx/leaders/ADR/andres_saliquet.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_ADR_jean_king"
+		texturefile = "gfx/leaders/ADR/jean_king.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ADR_henri_king"
+		texturefile = "gfx/leaders/ADR/henri_king.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_Andorra_Generic_navy_5"
+		texturefile = "gfx/leaders/ADR/ADR_generico_navy_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_Andorra_Generic_navy_6"
+		texturefile = "gfx/leaders/ADR/ADR_generico_navy_6.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_Andorra_Generic_navy_7"
+		texturefile = "gfx/leaders/ADR/ADR_generico_navy_7.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_Andorra_Generic_navy_8"
+		texturefile = "gfx/leaders/ADR/ADR_generico_navy_8.dds"
 	}
 
 # AFG

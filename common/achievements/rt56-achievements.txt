@@ -1531,3 +1531,246 @@ vampire_economy = {
 		}
     }
 }
+
+ach_andorrusian = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1936.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+        #achievment specific 
+        original_tag = ADR
+    }
+ 
+    happened = {
+        has_completed_focus = ADR_united_tsardom_of_andorra_and_russia
+    }
+}
+
+ach_boris = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1936.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+        #achievment specific 
+        original_tag = ADR
+    }
+ 
+    happened = {
+        has_completed_focus = ADR_the_kingdom_of_andorra
+        any_country = {
+            original_tag = BUL
+            is_puppet_of = ADR
+        }
+    }
+}
+
+ach_carlos = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1936.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+        #achievment specific 
+        original_tag = ADR
+    }
+ 
+    happened = {
+        has_completed_focus = ADR_heirs_of_charlemagne
+    }
+}
+
+ach_catalan = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1936.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+        #achievment specific 
+        original_tag = ADR
+    }
+ 
+    happened = {
+        has_completed_focus = ADR_catalan_war_of_independence
+        controls_state = 41
+    }
+}
+
+ach_catalan_2 = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1936.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+        #achievment specific 
+        original_tag = ADR
+    }
+ 
+    happened = {
+        has_completed_focus = ADR_catalan_war_of_independence
+        any_state = {
+            is_on_continent = africa
+            is_controlled_by = ADR
+        }
+        OR = {
+            any_state = {
+                is_on_continent = north_america
+                is_controlled_by = ADR
+            }
+            any_state = {
+                is_on_continent = south_america
+                is_controlled_by = ADR
+            }
+        }
+        any_state = {
+            is_on_continent = asia
+            is_controlled_by = ADR
+        }
+    }
+}
+
+ach_chad = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1936.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+        #achievment specific 
+        original_tag = ADR
+    }
+ 
+    happened = {
+        custom_trigger_tooltip = {
+            tooltip = ocupar_rumania
+            NOT = {
+                any_state = {
+                    is_core_of = ROM
+                    NOT = {
+                        is_controlled_by = ADR
+                    }
+                }
+            }
+        }
+        custom_trigger_tooltip = {
+            tooltip = ocupar_chad
+            NOT = {
+                any_state = {
+                    is_core_of = CHA
+                    NOT = {
+                        is_controlled_by = ADR
+                    }
+                }
+            }
+        }
+    }
+}
+
+ach_europa = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1936.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+        #achievment specific 
+        original_tag = ADR
+    }
+ 
+    happened = {
+        OR = {
+            has_completed_focus = ADR_the_queen_of_europe
+            has_completed_focus = ADR_european_revolution
+        }
+        controls_state = 64
+        controls_state = 16
+        controls_state = 2
+    }
+}
+
+ach_mundial = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1936.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+        #achievment specific 
+        original_tag = ADR
+    }
+ 
+    happened = {
+        has_completed_focus = ADR_proclaim_the_andorran_empire
+        NOT = {
+            any_state = {
+                NOT = {
+                    OR = {
+                        is_controlled_by = ADR
+                        controller = {
+                            is_puppet_of = ADR
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+ach_rome = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1936.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+        #achievment specific 
+        original_tag = ADR
+    }
+ 
+    happened = {
+        has_completed_focus = ADR_sons_of_rome
+        has_country_flag = formed_rome_adr
+    }
+}
+
+ach_secreto = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1936.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+        #achievment specific 
+        original_tag = ADR
+    }
+ 
+    happened = {
+        has_completed_focus = ADR_the_sovereign_prince_of_the_valleys
+        has_country_flag = ADR_josemaria_es_lider
+    }
+}
+
+ach_spain = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1936.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+        #achievment specific 
+        original_tag = ADR
+    }
+ 
+    happened = {
+        has_completed_focus = ADR_a_new_spanish_kingdom
+        controls_state = 378
+        controls_state = 375
+        controls_state = 366
+    }
+}

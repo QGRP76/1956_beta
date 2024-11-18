@@ -1,42 +1,154 @@
 ﻿capital = 973
 
-set_research_slots = 2
-
-oob = "empty"	#fixes a bug
-
-set_country_flag = started_out_as_landlocked
+oob = "ADR_1936"
 
 # Starting tech
 set_technology = {
-	# Extended Technologies
-	etax_doctrine = 1
-	camo = 1
-		
-
-	infantry_weapons = 1		
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	
+	
+	
 }
 
-set_stability = 0.85
-set_war_support = 0.02
+set_research_slots = 2
 
-add_ideas = {
-	disarmed_nation
-	TIB_mountainous_people
-        neutrality_idea
+set_convoys = 20
+
+recruit_character = ADR_francesc_cairat
+recruit_character = ADR_roc_pallares
+recruit_character = ADR_miquel_mateu
+recruit_character = ADR_consell_syndical
+recruit_character = ADR_secundi_tomas
+recruit_character = ADR_julia_reig
+recruit_character = ADR_manuel_cerqueda
+recruit_character = ADR_xavier_d_areny
+recruit_character = ADR_jaume_sansa
+recruit_character = ADR_jean_baptiste
+recruit_character = ADR_Friedrich
+recruit_character = ADR_boris
+recruit_character = ADR_joan_fornesa
+recruit_character = ADR_lluis_companys
+recruit_character = ADR_daniel_cardona
+recruit_character = ADR_josep_dencas
+recruit_character = ADR_manuel_carrasco
+recruit_character = AND_andreu_nin
+recruit_character = ADR_joaquin_maurin
+recruit_character = ADR_rene_baulard
+recruit_character = ADR_emilio_herrera
+recruit_character = ADR_frederic_escofet
+recruit_character = ADR_anton_huguet
+recruit_character = ADR_joan_riberaygua
+recruit_character = ADR_valenti_mora
+recruit_character = ADR_joan_boronat
+recruit_character = ADR_josep_ros
+recruit_character = ADR_miguel_bondacia
+recruit_character = ADR_pau_benazet
+recruit_character = ADR_francesc_cambo
+recruit_character = ADR_josemaria
+recruit_character = ADR_lasmartes
+recruit_character = ADR_justi_guitart
+recruit_character = ADR_ramon_iglesias
+recruit_character = ADR_enrique_barrau
+recruit_character = ADR_jose_solchaga
+recruit_character = ADR_rafael_garcia
+recruit_character = ADR_yevgueni
+recruit_character = ADR_nikolai
+recruit_character = ADR_mauricio
+recruit_character = ADR_josep_maria_benet
+recruit_character = ADR_xavier_de_borbon
+recruit_character = ADR_carlos_pio
+recruit_character = ADR_juan_de_borbon
+recruit_character = ADR_emilio_esteban
+recruit_character = ADR_andres_saliquet
+recruit_character = ADR_dummy_1
+recruit_character = ADR_dummy_2
+recruit_character = ADR_dummy_3
+recruit_character = ADR_dummy_4
+recruit_character = ADR_jean_king
+recruit_character = ADR_henri_king
+recruit_character = ADR_henri
+recruit_character = ADR_maurras
+
+
+
+##Andorran economy
+
+set_variable = { ADR_eco_consumer_goods_factor = 0.15 }
+set_variable = { ADR_eco_production_speed_buildings_factor = -0.1 }
+set_variable = { ADR_eco_production_factory_efficiency_gain_factor = -0.1 }
+set_variable = { ADR_eco_production_factory_max_efficiency_factor = -0.1 }
+set_variable = { ADR_eco_research_speed_factor = -0.05 }
+set_variable = { ADR_eco_stability_factor = 0 }
+set_variable = { ADR_eco_production_speed_arms_factory_factor = 0 }
+set_variable = { ADR_eco_production_speed_industrial_complex_factor = 0 }
+set_variable = { ADR_eco_global_building_slots_factor = 0 }
+set_variable = { ADR_eco_political_power_gain = 0 }
+set_variable = { ADR_eco_weekly_manpower = 0 }
+
+
+add_ideas = ADR_medieval_institutions
+add_ideas = ADR_anarquistasss
+add_ideas = ADR_coprince_justi
+add_ideas = ADR_coprince_albert
+add_ideas = ADR_french_paternalism_idea
+add_ideas = ADR_army
+add_dynamic_modifier = {
+	modifier = ADR_economy_dynamic_modifier
 }
 
-recruit_character = ADR_co_prince_council
-recruit_character = ADR_ramon_iglesias_i_navarri
-recruit_character = ADR_miquel_mateu_i_pla
-recruit_character = ADR_consell_sindical
-recruit_character = ADR_roc_pallares_i_rossell
+1939.1.1 = {
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = naval_effort
+	complete_national_focus = flexible_navy
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	
+	set_technology = {
 
+		#doctrines
+		grand_battle_plan = 1
+		trench_warfare = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
 set_politics = {
 	ruling_party = neutrality
-	last_election = "1934.11.23"
-	election_frequency = 57
-	elections_allowed = no
+	last_election = "1933.3.3"
+	election_frequency = 48
+	elections_allowed = yes
 }
 set_popularities = {
-	neutrality = 100
+	neutrality = 66
+	democratic = 14
+	fascism = 3
+	communism = 17
 }
+
+set_stability = 0.6
+set_war_support = 0.05
+

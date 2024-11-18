@@ -2237,6 +2237,117 @@ spriteTypes = {
 		name = "GFX_goal_generic_cruisers"
 		texturefile = "gfx/interface/goals/generic/r56_goal_generic_cruisers.dds"
 	}
+
+###------> ADR <><> <><> <><> <><> <><>
+	SpriteType = { 
+		name = "GFX_ADR_catalan_war_of_independence"
+		texturefile = "gfx/interface/goals/ADR/1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_ADR_the_andorran_republic"
+		texturefile = "gfx/interface/goals/ADR/2.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_defense_of_andorra"
+		texturefile = "gfx/interface/goals/ADR/3.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_els_paisos_catalas"
+		texturefile = "gfx/interface/goals/ADR/4.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_pancatalanism"
+		texturefile = "gfx/interface/goals/ADR/5.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_support_catalanism"
+		texturefile = "gfx/interface/goals/ADR/6.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_invite_boris"
+		texturefile = "gfx/interface/goals/ADR/7.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_expand_the_cos_de_policia"
+		texturefile = "gfx/interface/goals/ADR/8.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_create_the_andorran_army"
+		texturefile = "gfx/interface/goals/ADR/9.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_invite_emilio_herrera"
+		texturefile = "gfx/interface/goals/ADR/10.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_claim_the_mare_nostrum"
+		texturefile = "gfx/interface/goals/ADR/12.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_absorb_aragonese_legacy"
+		texturefile = "gfx/interface/goals/ADR/11.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_ensure_our_loyalty_to_the_coprinces"
+		texturefile = "gfx/interface/goals/ADR/13.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_look_to_the_future"
+		texturefile = "gfx/interface/goals/ADR/14.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_demand_southern_france"
+		texturefile = "gfx/interface/goals/ADR/15.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_proclaim_the_andorran_empire"
+		texturefile = "gfx/interface/goals/ADR/16.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_the_pyrenean_principality"
+		texturefile = "gfx/interface/goals/ADR/17.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_to_protect_europe"
+		texturefile = "gfx/interface/goals/ADR/18.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_the_queen_of_europe"
+		texturefile = "gfx/interface/goals/ADR/19.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_support_de_gaulle"
+		texturefile = "gfx/interface/goals/ADR/20.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_march_on_the_valls"
+		texturefile = "gfx/interface/goals/ADR/21.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_ADR_the_sovereign_prince_of_the_valleys"
+		texturefile = "gfx/interface/goals/ADR/22.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_ADR_the_holy_land"
+		texturefile = "gfx/interface/goals/ADR/23.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_ADR_the_holy_andorran_empire"
+		texturefile = "gfx/interface/goals/ADR/24.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_the_kingdom_stands_strong"
+		texturefile = "gfx/interface/goals/ADR/25.dds"
+	}
+	SpriteType = { 
+		name = "GFX_ADR_occitanian_brothership"
+		texturefile = "gfx/interface/goals/ADR/26.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goalADR_expand_fhasa"
+		texturefile = "gfx/interface/goals/ADR/27.dds"
+	}
+
 ###------> AFG <><> <><> <><> <><> <><>
 	SpriteType = {
 		name = "GFX_goal_AFG_army"

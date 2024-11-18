@@ -1,0 +1,195 @@
+################
+##### ADR ######
+################
+ADR_preparar_alzamiento_catolico_category = {
+	priority = 10
+	icon = border_war
+
+	picture = GFX_decision_cat_ADR_iglesia_category
+
+	allowed = {
+		original_tag = ADR
+	}
+
+}
+ADR_charlemagne_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_ADR_charlemagne_empire_category
+
+	allowed = {
+		original_tag = ADR
+	}
+}
+ADR_preparar_alzamiento_frances_category = {
+	priority = 10
+	icon = border_war
+
+	picture = GFX_decision_cat_ADR_iglesia_category
+
+	allowed = {
+		original_tag = ADR
+	}
+
+}
+ADR_scw_category = {
+	priority = 10
+	icon = border_war
+
+	picture = GFX_decision_cat_ADR_iglesia_category
+
+	allowed = {
+		original_tag = ADR
+	}
+
+}
+ADR_new_spanish_uprising_category = {
+	priority = 10
+	icon = border_war
+
+	allowed = {
+		original_tag = ADR
+	}
+
+}
+ADR_new_spanish_anarchist_uprising_category = {
+	priority = 10
+	icon = border_war
+
+	allowed = {
+		original_tag = ADR
+	}
+
+}
+ADR_boris_kingdom_category = {
+	priority = 10
+	icon = generic_political_actions
+
+	picture = GFX_decision_cat_ADR_boris_kingdom_category
+
+	allowed = {
+		original_tag = ADR
+	}
+
+}
+ADR_pyrenean_revolt_category = {
+	priority = 11
+	icon = border_war
+
+	picture = GFX_decision_cat_ADR_pyrenean_revolt_category
+
+	allowed = {
+		original_tag = ADR
+	}
+
+}
+ADR_ensure_american_catholicism_category = {
+	priority = 8
+	icon = spr_reassert_american_dominance
+
+	allowed = {
+		original_tag = ADR
+	}
+
+}
+
+ADR_american_mission_category = {
+	priority = 7
+	icon = border_war
+	picture = GFX_decision_cat_generic_gran_colombia
+
+	allowed = {
+		original_tag = ADR
+	}
+
+}
+
+form_roman_empire_category_adr = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_roman_empire
+
+	allowed = {
+		original_tag = ADR
+	}
+}
+ADR_gabachos_category = {
+	priority = 10
+	icon = generic_political_actions
+
+	picture = GFX_decision_cat_ADR_gabachos_category
+
+	allowed = {
+		original_tag = ADR
+	}
+
+}
+ADR_french_influence_in_andorra_category = {
+	priority = 10
+	icon = generic_political_actions
+
+	picture = GFX_decision_cat_ADR_gabachos_category
+
+	allowed = {
+		OR = {
+			original_tag = FRA
+			tag = VIC
+		}
+	}
+
+}
+ADR_iglesia_category = {
+	priority = 9
+	icon = generic_political_actions
+
+	picture = GFX_decision_cat_ADR_iglesia_category
+
+	allowed = {
+		original_tag = ADR
+	}
+
+}
+ADR_imperioandorrano = {
+	priority = 8
+	icon = generic_foreign_policy
+
+	picture = GFX_decision_cat_ADR_imperioandorrano
+
+	allowed = {
+		original_tag = ADR
+	}
+
+}
+ADR_catalan_integration_category = {
+	priority = 8
+	icon = generic_foreign_policy
+
+	picture = GFX_decision_cat_ADR_catalan_integration_category
+
+	allowed = {
+		original_tag = ADR
+	}
+
+}
+ADR_unificar_europa = {
+	priority = 8
+	icon = generic_foreign_policy
+
+	picture = GFX_decision_cat_generic_european_union
+
+	allowed = {
+		original_tag = ADR
+	}
+
+}
+ADR_compar_armas_category = {
+	priority = 1
+	icon = gre_faction_management
+
+	allowed = {
+		original_tag = ADR
+	}
+
+}

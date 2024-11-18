@@ -2,6 +2,7 @@
 ####-----> Reorganized by Pordy <><> <><> <><>
 spriteTypes = {
 ###--->  Main category <><> <><> <><>
+
 	#base game wrote sov instead of SOV
 	spriteType = {
 		name = "GFX_decision_category_SOV_great_patriotic_war" 
@@ -439,6 +440,41 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_decision_generic_no_election_category"
 		texturefile = "gfx/interface/decisions/r56_decision_generic_no_election_category.dds"
+	}
+
+###--->  ADR <><> <><> <><>
+
+SpriteType = {
+		name = "GFX_decision_cat_ADR_gabachos_category"
+		texturefile = "gfx/interface/decisions/ADR/decision_cat_adr_cosasgabachas.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_cat_ADR_iglesia_category"
+		texturefile = "gfx/interface/decisions/ADR/decision_cat_adr_laiglesia.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_cat_ADR_imperioandorrano"
+		texturefile = "gfx/interface/decisions/ADR/decision_cat_adr_imperioandorrano.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_cat_ADR_catalan_integration_category"
+		texturefile = "gfx/interface/decisions/ADR/decision_cat_adr_catalan_integration.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_cat_ADR_catholicintegration_category"
+		texturefile = "gfx/interface/decisions/ADR/decision_cat_adr_catholicintegration.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_cat_ADR_boris_kingdom_category"
+		texturefile = "gfx/interface/decisions/ADR/decision_cat_generic_boris_kingdom.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_cat_ADR_pyrenean_revolt_category"
+		texturefile = "gfx/interface/decisions/ADR/decision_cat_generic_pyrenean_uprising.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_cat_ADR_charlemagne_empire_category"
+		texturefile = "gfx/interface/decisions/ADR/decision_cat_adr_charlemagne.dds"
 	}
 	
 ###--->  AFG <><> <><> <><>

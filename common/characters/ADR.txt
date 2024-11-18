@@ -1,79 +1,1539 @@
-characters = {
-	ADR_co_prince_council = {
-		name = ADR_co_prince_council
-		portraits = {
-			civilian = {
-				large = GFX_Portrait_ADR_co_prince_council
+﻿characters={
+
+	ADR_francesc_cairat={
+		name=ADR_francesc_cairat
+		portraits={
+			army={
+				large=GFX_portrait_ADR_francesc_cairat
+				small = GFX_portrait_ADR_francesc_cairat_small
 			}
 		}
-		country_leader = {
-			ideology = oligarchism
-			expire = "1965.1.1"
-			id = -1
-		}
-	}
-	ADR_roc_pallares_i_rossell = {
-		name = ADR_roc_pallares_i_rossell
-		portraits = {
-			civilian = {
-				large = GFX_Portrait_ADR_roc_pallares_i_rossell
-			}
-		}
-		country_leader = {
-			ideology = conservatism
-			expire = "1965.1.1"
-			id = -1
-		}
-	}
-	ADR_miquel_mateu_i_pla = {
-		name = ADR_miquel_mateu_i_pla
-		portraits = {
-			civilian = {
-				large = GFX_Portrait_ADR_miquel_mateu_i_pla
-			}
-		}
-		country_leader = {
-			ideology = falangism
-			expire = "1965.1.1"
-			id = -1
-		}
-	}
-	ADR_consell_sindical = {
-		name = ADR_consell_sindical
-		portraits = {
-			civilian = {
-				large = GFX_Portrait_ADR_consell_sindical
-			}
-		}
-		country_leader = {
-			ideology = anarchist_communism
-			expire = "1965.1.1"
-			id = -1
-		}
-	}
-	ADR_ramon_iglesias_i_navarri = {
-		name = ADR_ramon_iglesias_i_navarri
-		portraits = {
-			civilian = {
-				small = "GFX_idea_generic_political_advisor_europe_3"
-			}
-		}
-		country_leader = {
-			ideology = oligarchism
-			expire = "1965.1.1"
-			id = -1
+		country_leader={
+			ideology=centrism
+			traits={ pragmatic_politician }
+			expire="1965.1.1.1"
+			id=-1
 		}
 		advisor = {
 			slot = political_advisor
-			idea_token = ADR_ramon_iglesias_i_navarri
+			idea_token = ADR_francesc_cairat
 			allowed = {
 				original_tag = ADR
 			}
 			available = {
-				has_completed_focus = ADR_continue_the_policy_of_neutrality
+				NOT = {
+					has_completed_focus = ADR_the_andorran_republic
+				}
+			}
+			visible = {
+				
 			}
 			traits = {
-				smooth_talking_charmer
+				popular_figurehead 
+			}
+		}
+		field_marshal={
+			traits={ old_guard }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			visible = {
+				NOT = {
+					has_completed_focus = ADR_the_andorran_republic
+				}
+			}
+		}
+	}
+	ADR_roc_pallares={
+		name=ADR_roc_pallares
+		portraits={
+			army={
+				large=GFX_portrait_ADR_roc_pallares
+				small = GFX_portrait_ADR_roc_pallares_small
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={ oportunista }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_roc_pallares
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				OR = {
+					has_completed_focus = ADR_legacy_of_the_revolution
+					has_completed_focus = ADR_bring_back_the_exiles
+					has_completed_focus = ADR_collaborate_with_unio_andorrana
+				}
+			}
+			visible = {
+				
+			}
+			traits = {
+				face_of_liberalism 
+			}
+		}
+		field_marshal={
+			traits={ expert_delegator }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=3
+			visible = {
+				has_completed_focus = ADR_the_andorran_republic
+			}
+		}
+		
+	}
+	ADR_miquel_mateu={
+		name=ADR_miquel_mateu
+		portraits={
+			army={
+				large=GFX_portrait_ADR_miquel_mateu
+				small = GFX_portrait_ADR_miquel_mateu_small
+			}
+		}
+		country_leader={
+			ideology=falangism
+			traits={ fascist_industrialistt }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_miquel_mateu
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				OR = {
+					has_completed_focus = ADR_colaborate_with_miquel_matue
+					has_completed_focus = ADR_industrial_support
+					has_completed_focus = ADR_the_dread_of_communism
+					has_government = fascism
+				}
+			}
+			visible = {
+				
+			}
+			traits = {
+				falangist_industrialist 
+			}
+		}
+		corps_commander={
+			traits={ politically_connected harsh_leader }
+			skill = 2
+			attack_skill=3
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			visible = {
+				OR = {
+					has_completed_focus = ADR_colaborate_with_miquel_matue
+					has_completed_focus = ADR_industrial_support
+					has_completed_focus = ADR_the_dread_of_communism
+				}
+			}
+		}
+		
+	}
+	ADR_consell_syndical={
+		name=ADR_consell_syndical
+		portraits={
+			army={
+				large=GFX_portrait_ADR_consell_syndical
+			}
+		}
+		country_leader={
+			ideology= anarchist_communism
+			traits={ andorran_council }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		
+	}
+	ADR_justi_guitart={
+		name=ADR_justi_guitart
+		portraits={
+			army={
+				large=GFX_portrait_ADR_justi_guitart
+			}
+		}
+		
+	}
+	ADR_ramon_iglesias={
+		name=ADR_ramon_iglesias
+		portraits={
+			army={
+				large=GFX_portrait_ADR_ramon_iglesias
+			}
+		}
+		
+	}
+	ADR_jean_king={
+		name=ADR_jean_king
+		portraits={
+			army={
+				large=GFX_portrait_ADR_ADR_jean_king
+			}
+		}
+		
+	}
+	ADR_henri_king={
+		name=ADR_henri_king
+		portraits={
+			army={
+				large=GFX_portrait_ADR_henri_king
+			}
+		}
+		
+	}
+	ADR_secundi_tomas={
+		name=ADR_secundi_tomas
+		portraits={
+			army={
+				large=GFX_portrait_ADR_secundi_tomas
+				small = GFX_portrait_ADR_secundi_tomas_small
+			}
+		}
+		advisor={
+			cost = 100
+			slot = high_command
+			idea_token = ADR_secundi_tomas
+			ledger = army
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				
+			}
+			traits = {
+				army_infantry_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+			traits={ trait_mountaineer }
+			skill = 2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			visible = {
+			}
+		}
+	}
+	ADR_josep_maria_benet={
+		name=ADR_josep_maria_benet
+		portraits={
+			army={
+				large=GFX_portrait_ADR_josep_maria_benet
+				small = GFX_portrait_ADR_josep_maria_benet_small
+			}
+		}
+		corps_commander={
+			traits={ trait_mountaineer }
+			skill = 2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=1
+			visible = {
+				OR = {
+					has_completed_focus = ADR_prepare_a_catalan_uprising
+					has_completed_focus = ADR_catalan_support
+				}
+			}
+		}
+		
+	}
+	ADR_xavier_de_borbon={
+		name=ADR_xavier_de_borbon
+		portraits={
+			army={
+				large=GFX_portrait_ADR_xavier_de_borbon
+				small = GFX_portrait_ADR_xavier_de_borbon_small
+			}
+		}
+		field_marshal={
+			traits={ organizer war_hero }
+			skill = 3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			visible = {
+				has_completed_focus = ADR_a_carlist_king
+			}
+		}
+		
+	}
+	ADR_carlos_pio={
+		name=ADR_carlos_pio
+		portraits={
+			army={
+				large=GFX_portrait_ADR_carlos_pio
+			}
+		}
+		field_marshal={
+			traits={  }
+			skill = 1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			visible = {
+				has_country_flag = ADR_carlos_pio_en_la_casa
+			}
+		}
+		
+	}
+	ADR_juan_de_borbon={
+		name=ADR_juan_de_borbon
+		portraits={
+			army={
+				large=GFX_portrait_ADR_juan_de_borbon
+			}
+		}
+		field_marshal={
+			traits={  }
+			skill = 2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			visible = {
+				has_country_flag = ADR_juan_de_borbon_en_la_casa
+			}
+		}
+		
+	}
+	ADR_julia_reig={
+		name=ADR_julia_reig
+		portraits={
+			army={
+				small = GFX_portrait_ADR_julia_reig_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_julia_reig
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_the_tobacco_industry
+			}
+			visible = {
+				
+			}
+			traits = {
+				NOR_tobacco_industrialist 
+			}
+		}
+	}
+	ADR_manuel_cerqueda ={
+		name=ADR_manuel_cerqueda
+		portraits={
+			army={
+				small = GFX_portrait_ADR_manuel_cerqueda_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_manuel_cerqueda
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+
+			}
+			visible = {
+				
+			}
+			traits = {
+				economic_organizer 
+			}
+		}
+	}
+	ADR_jaume_sansa ={
+		name=ADR_jaume_sansa
+		portraits={
+			army={
+				large=GFX_portrait_ADR_jaume_sansa
+				small = GFX_portrait_ADR_jaume_sansa_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_jaume_sansa
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				OR = {
+					NOT = {
+						has_country_flag = ADR_adios_al_obispo
+					}
+					has_completed_focus = ADR_compensate_the_bishop
+				}
+			}
+			visible = {
+				
+			}
+			traits = {
+				episcopal_representative 
+			}
+		}
+	}
+	ADR_jean_baptiste ={
+		name=ADR_jean_baptiste
+		portraits={
+			army={
+				small = GFX_portrait_ADR_jean_baptiste_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_jean_baptiste
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				NOT = {
+					has_country_flag = ADR_adios_a_los_gabachos
+					has_idea = ADR_coprince_petain
+					has_idea = ADR_coprince_fascist
+				}
+			}
+			visible = {
+				
+			}
+			traits = {
+				french_representative 
+			}
+		}
+	}
+	ADR_lasmartes ={
+		name=ADR_lasmartes
+		portraits={
+			army={
+				small = GFX_portrait_ADR_lasmartes_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_lasmartes
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				OR = {
+					has_idea = ADR_coprince_petain
+					has_idea = ADR_coprince_fascist
+				}
+			}
+			visible = {
+				
+			}
+			traits = {
+				prince_of_terror 
+			}
+		}
+	}
+	ADR_Friedrich ={
+		name=ADR_Friedrich
+		portraits={
+			army={
+				small = GFX_portrait_ADR_Friedrich_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_Friedrich
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				OR = {
+					has_completed_focus = ADR_legacy_of_the_revolution
+					has_completed_focus = ADR_bring_back_the_exiles
+					has_completed_focus = ADR_collaborate_with_unio_andorrana
+				}
+			}
+			visible = {
+				
+			}
+			traits = {
+				ICE_progressive_doctor 
+			}
+		}
+	}
+	ADR_boris ={
+		name=ADR_boris
+		portraits={
+			civilian = {
+				large=GFX_portrait_ADR_boris_civ
+				small = GFX_portrait_ADR_boris_small
+			}
+			army={
+				large=GFX_portrait_ADR_boris
+				small = GFX_portrait_ADR_boris_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_boris
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				OR = {
+					has_completed_focus = ADR_invite_boris
+					has_completed_focus = ADR_the_return_of_boris
+				}
+			}
+			visible = {
+				
+			}
+			traits = {
+				enigmatic_adventurer 
+			}
+		}
+		corps_commander={
+			traits={ commando }
+			skill = 3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			visible = {
+				OR = {
+					has_completed_focus = ADR_invite_boris
+					has_completed_focus = ADR_the_return_of_boris
+				}
+			}
+		}
+	}
+	ADR_joan_fornesa ={
+		name=ADR_joan_fornesa
+		portraits={
+			army={
+				small = GFX_portrait_ADR_joan_fornesa_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_joan_fornesa
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_support_catalanism
+			}
+			visible = {
+				
+			}
+			traits = {
+				catalanist 
+			}
+		}
+	}
+	ADR_lluis_companys ={
+		name=ADR_lluis_companys
+		portraits={
+			army={
+				large=GFX_portrait_ADR_lluis_companys
+				small = GFX_portrait_ADR_lluis_companys_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_lluis_companys
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				OR = {
+					has_completed_focus = ADR_catalan_politicians
+					has_completed_focus = ADR_catalan_support
+				}
+			}
+			visible = {
+				
+			}
+			traits = {
+				companys_trait 
+			}
+		}
+	}
+	ADR_daniel_cardona ={
+		name=ADR_daniel_cardona
+		portraits={
+			army={
+				large=GFX_portrait_ADR_daniel_cardona
+				small = GFX_portrait_ADR_daniel_cardona_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_daniel_cardona
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				OR = {
+					has_completed_focus = ADR_catalan_politicians
+					has_completed_focus = ADR_catalan_support
+				}
+			}
+			visible = {
+				
+			}
+			traits = {
+				catalan_supremacist 
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist }
+			skill = 2
+			attack_skill=3
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			visible = {
+				OR = {
+					has_completed_focus = ADR_the_escamots
+					has_completed_focus = ADR_catalan_support
+				}
+			}
+		}
+	}
+	ADR_josep_dencas ={
+		name=ADR_josep_dencas
+		portraits={
+			army={
+				small = GFX_portrait_ADR_josep_dencas_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_josep_dencas
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_the_escamots
+			}
+			visible = {
+				
+			}
+			traits = {
+				paramilitary_leader 
+			}
+		}
+	}
+	ADR_manuel_carrasco ={
+		name=ADR_manuel_carrasco
+		portraits={
+			army={
+				large=GFX_portrait_ADR_manuel_carrasco
+				small = GFX_portrait_ADR_manuel_carrasco_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_manuel_carrasco
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_protect_catalan_christians
+			}
+			visible = {
+				
+			}
+			traits = {
+				voice_of_restraint 
+			}
+		}
+	}
+	ADR_francesc_cambo ={
+		name=ADR_francesc_cambo
+		portraits={
+			army={
+				large=GFX_portrait_ADR_francesc_cambo
+				small = GFX_portrait_ADR_francesc_cambo_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_francesc_cambo
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_protect_catalan_christians
+			}
+			visible = {
+				
+			}
+			traits = {
+				monarchist_industrialist 
+			}
+		}
+	}
+	AND_andreu_nin ={
+		name=AND_andreu_nin
+		portraits={
+			army={
+				large=GFX_portrait_AND_andreu_nin
+				small = GFX_portrait_AND_andreu_nin_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AND_andreu_nin
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_bring_in_catalan_communists
+			}
+			visible = {
+				
+			}
+			traits = {
+				marxist_philosopher 
+			}
+		}
+		corps_commander={
+			traits={ infantry_leader }
+			skill = 2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=1
+			visible = {
+				has_completed_focus = ADR_bring_in_catalan_communists
+			}
+		}
+	}
+	ADR_joaquin_maurin ={
+		name=ADR_joaquin_maurin
+		portraits={
+			army={
+				large=GFX_portrait_ADR_joaquin_maurin
+				small = GFX_portrait_ADR_joaquin_maurin_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_joaquin_maurin
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_bring_in_catalan_communists
+			}
+			visible = {
+				
+			}
+			traits = {
+				 ICE_trade_unionist
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader }
+			skill = 1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			visible = {
+				has_completed_focus = ADR_bring_in_catalan_communists
+			}
+		}
+	}
+	ADR_yevgueni={
+		name=ADR_yevgueni
+		portraits={
+			army={
+				large=GFX_portrait_ADR_yevgueni
+				small = GFX_portrait_ADR_yevgueni_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_yevgueni
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_invite_white_exiles
+			}
+			visible = {
+				
+			}
+			traits = {
+				white_russian_leader 
+			}
+		}
+		field_marshal={
+			traits={ war_hero expert_delegator organizer }
+			skill = 3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			visible = {
+				has_completed_focus = ADR_invite_white_exiles
+			}
+		}
+		
+	}
+	ADR_mauricio ={
+		name=ADR_mauricio
+		portraits={
+			army={
+				small = GFX_portrait_ADR_mauricio_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_mauricio
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_bring_in_carlist_advisors
+			}
+			visible = {
+				
+			}
+			traits = {
+				carlist_organizer 
+			}
+		}
+	}
+	ADR_maurras ={
+		name=ADR_maurras
+		portraits={
+			army={
+				small = GFX_portrait_ADR_maurras_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_maurras
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_contact_french_monarchists
+			}
+			visible = {
+				
+			}
+			traits = {
+				national_integralist 
+			}
+		}
+	}
+	ADR_henri ={
+		name=ADR_henri
+		portraits={
+			army={
+				small = GFX_portrait_ADR_henri_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_henri
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_contact_french_monarchists
+			}
+			visible = {
+				
+			}
+			traits = {
+				staunch_monarchist 
+			}
+		}
+	}
+	ADR_joan_riberaygua={
+		name=ADR_joan_riberaygua
+		portraits={
+			army={
+				small = GFX_portrait_ADR_joan_riberaygua_small
+			}
+		}
+		advisor={
+			cost = 50
+			slot = army_chief
+			idea_token = ADR_joan_riberaygua
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				
+			}
+			traits = {
+				army_chief_drill_1
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ADR_rene_baulard={
+		name=ADR_rene_baulard
+		portraits={
+			army={
+				large=GFX_portrait_ADR_rene_baulard
+				small = GFX_portrait_ADR_rene_baulard_small
+			}
+		}
+		advisor={
+			cost = 100
+			slot = army_chief
+			idea_token = ADR_rene_baulard
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_french_military_advisors
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		field_marshal={
+			traits={ defensive_doctrine }
+			skill=3
+			attack_skill=1
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=3
+			visible = {
+				has_completed_focus = ADR_french_military_advisors
+			}
+		}
+	}
+	ADR_emilio_herrera={
+		name=ADR_emilio_herrera
+		portraits={
+			army={
+				large=GFX_portrait_ADR_emilio_herrera
+				small = GFX_portrait_ADR_emilio_herrera_small
+			}
+		}
+		advisor={
+			cost = 100
+			slot = air_chief
+			idea_token = ADR_emilio_herrera
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_invite_emilio_herrera
+			}
+			traits = {
+				air_chief_ground_support_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+			traits={ organizer }
+			skill = 3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			visible = {
+				has_completed_focus = ADR_invite_emilio_herrera
+			}
+		}
+	}
+	ADR_frederic_escofet={
+		name=ADR_frederic_escofet
+		portraits={
+			army={
+				large=GFX_portrait_ADR_frederic_escofet
+				small = GFX_portrait_ADR_frederic_escofet_small
+			}
+		}
+		advisor={
+			cost = 100
+			slot = army_chief
+			idea_token = ADR_frederic_escofet
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				OR = {
+					has_completed_focus = ADR_expand_the_mossos_de_esquadra
+					has_completed_focus = ADR_catalan_support
+				}
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+			traits={ infantry_leader }
+			skill = 2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			visible = {
+				OR = {
+					has_completed_focus = ADR_expand_the_mossos_de_esquadra
+					has_completed_focus = ADR_catalan_support
+				}
+			}
+		}
+	}
+	ADR_anton_huguet={
+		name=ADR_anton_huguet
+		portraits={
+			army={
+				large=GFX_portrait_ADR_anton_huguet
+				small = GFX_portrait_ADR_anton_huguet_small
+			}
+		}
+		advisor={
+			cost = 100
+			slot = navy_chief
+			idea_token = ADR_anton_huguet
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_an_andorran_navy
+			}
+			traits = {
+				navy_chief_commerce_raiding_1
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		navy_leader={
+			traits={ superior_tactician }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			maneuvering_skill=4
+			coordination_skill=2
+			visible = {
+				has_completed_focus = ADR_an_andorran_navy
+			}
+		}
+	}
+	
+	ADR_valenti_mora={
+		name=ADR_valenti_mora
+		portraits={
+			army={
+				small = GFX_portrait_ADR_valenti_mora_small
+			}
+		}
+		advisor={
+			cost = 50
+			slot = air_chief
+			idea_token = ADR_valenti_mora
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_officer_training
+			}
+			traits = {
+				air_chief_all_weather_1
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ADR_joan_boronat={
+		name=ADR_joan_boronat
+		portraits={
+			army={
+				small = GFX_portrait_ADR_joan_boronat_small
+			}
+		}
+		advisor={
+			cost = 50
+			slot = high_command
+			idea_token = ADR_joan_boronat
+			ledger = army
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_officer_training
+			}
+			traits = {
+				army_logistics_1
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ADR_josep_ros={
+		name=ADR_josep_ros
+		portraits={
+			army={
+				small = GFX_portrait_ADR_josep_ros_small
+			}
+		}
+		advisor={
+			cost = 50
+			slot = high_command
+			idea_token = ADR_josep_ros
+			ledger = army
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_officer_training
+			}
+			traits = {
+				army_armored_1
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ADR_miguel_bondacia={
+		name=ADR_miguel_bondacia
+		portraits={
+			army={
+				small = GFX_portrait_ADR_miguel_bondacia_small
+			}
+		}
+		advisor={
+			cost = 50
+			slot = high_command
+			idea_token = ADR_miguel_bondacia
+			ledger = army
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_officer_training
+			}
+			traits = {
+				army_regrouping_1
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ADR_pau_benazet={
+		name=ADR_pau_benazet
+		portraits={
+			army={
+				small = GFX_portrait_ADR_pau_benazet_small
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = ADR_pau_benazet
+			ledger = army
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_officer_training
+			}
+			traits = {
+				military_theorist
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ADR_enrique_barrau={
+		name=ADR_enrique_barrau
+		portraits={
+			army={
+				large=GFX_portrait_ADR_enrique_barrau
+				small = GFX_portrait_ADR_enrique_barrau_small
+			}
+		}
+		advisor={
+			cost = 100
+			slot = high_command
+			idea_token = ADR_enrique_barrau
+			ledger = army
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_bring_in_carlist_advisors
+			}
+			traits = {
+				army_cavalry_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+			traits={ cavalry_expert trait_reckless }
+			skill = 3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			visible = {
+				has_completed_focus = ADR_bring_in_carlist_advisors
+			}
+		}
+	}
+	ADR_nikolai={
+		name=ADR_nikolai
+		portraits={
+			army={
+				large=GFX_portrait_ADR_nikolai
+				small = GFX_portrait_ADR_nikolai_small
+			}
+		}
+		advisor={
+			cost = 100
+			slot = high_command
+			idea_token = ADR_nikolai
+			ledger = army
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_invite_white_exiles
+			}
+			traits = {
+				army_artillery_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill = 2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=3
+			visible = {
+				has_completed_focus = ADR_invite_white_exiles
+			}
+		}
+	}
+	ADR_rafael_garcia={
+		name=ADR_rafael_garcia
+		portraits={
+			army={
+				large=GFX_portrait_ADR_rafael_garcia
+				small = GFX_portrait_ADR_rafael_garcia_small
+			}
+		}
+		advisor={
+			cost = 100
+			slot = army_chief
+			idea_token = ADR_rafael_garcia
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_bring_in_carlist_advisors
+			}
+			traits = {
+				army_chief_organizational_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+			traits={ hill_fighter }
+			skill = 3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			visible = {
+				has_completed_focus = ADR_bring_in_carlist_advisors
+			}
+		}
+	}
+	ADR_emilio_esteban={
+		name=ADR_emilio_esteban
+		portraits={
+			army={
+				large=GFX_portrait_ADR_emilio_esteban
+				small = GFX_portrait_ADR_emilio_esteban_small
+			}
+		}
+		advisor={
+			cost = 100
+			slot = high_command
+			idea_token = ADR_emilio_esteban
+			ledger = air
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_collaborate_with_nationalist_spain
+			}
+			traits = {
+				air_air_superiority_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+			traits={ armor_officer }
+			skill = 2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=3
+			visible = {
+				has_completed_focus = ADR_collaborate_with_nationalist_spain
+			}
+		}
+	}
+	ADR_andres_saliquet={
+		name=ADR_andres_saliquet
+		portraits={
+			army={
+				large=GFX_portrait_ADR_andres_saliquet
+				small = GFX_portrait_ADR_andres_saliquet_small
+			}
+		}
+		advisor={
+			cost = 100
+			slot = army_chief
+			idea_token = ADR_andres_saliquet
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				has_completed_focus = ADR_collaborate_with_nationalist_spain
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+			traits={ infantry_leader }
+			skill = 3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			visible = {
+				has_completed_focus = ADR_collaborate_with_nationalist_spain
+			}
+		}
+	}
+	ADR_jose_solchaga={
+		name=ADR_jose_solchaga
+		portraits={
+			army={
+				large=GFX_portrait_ADR_jose_solchaga
+				small = GFX_portrait_ADR_jose_solchaga_small
+			}
+		}
+		corps_commander={
+			traits={ infantry_leader }
+			skill = 2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=1
+			visible = {
+				has_completed_focus = ADR_bring_in_carlist_advisors
+			}
+		}
+	}
+	ADR_josemaria={
+		name=ADR_josemaria
+		portraits={
+			army={
+				large=GFX_portrait_ADR_josemaria
+				small = GFX_portrait_ADR_josemaria_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_josemaria
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				
+			}
+			visible = {
+				has_country_flag = ADR_josemaria_esta_en_la_casa
+			}
+			traits = {
+				opus_dei_founder 
+			}
+		}
+	}
+	ADR_xavier_d_areny ={
+		name=ADR_xavier_d_areny
+		portraits={
+			army={
+				small = GFX_portrait_ADR_xavier_d_areny_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_xavier_d_areny
+			allowed = {
+				original_tag = ADR
+				has_dlc = "La Resistance"
+			}
+			available = {
+				has_intelligence_agency  = yes 
+			}
+			visible = {
+				
+			}
+			traits = {
+				illusionista 
+			}
+		}
+	}
+	ADR_dummy_1 ={
+		name=ADR_dummy_1
+		portraits={
+			army={
+				small = GFX_portrait_ADR_xavier_d_areny_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_dummy_1
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				
+			}
+			visible = {
+				always = no
+			}
+			traits = {
+				communist_revolutionary 
+			}
+		}
+	}
+	ADR_dummy_2 ={
+		name=ADR_dummy_2
+		portraits={
+			army={
+				small = GFX_portrait_ADR_xavier_d_areny_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_dummy_2
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				
+			}
+			visible = {
+				always = no
+			}
+			traits = {
+				fascist_demagogue 
+			}
+		}
+	}
+	ADR_dummy_3 ={
+		name=ADR_dummy_3
+		portraits={
+			army={
+				small = GFX_portrait_ADR_xavier_d_areny_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_dummy_3
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				
+			}
+			visible = {
+				always = no
+			}
+			traits = {
+				democratic_reformer 
+			}
+		}
+	}
+	ADR_dummy_4 ={
+		name=ADR_dummy_4
+		portraits={
+			army={
+				small = GFX_portrait_ADR_xavier_d_areny_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADR_dummy_4
+			allowed = {
+				original_tag = ADR
+			}
+			available = {
+				
+			}
+			visible = {
+				always = no
+			}
+			traits = {
+				head_of_intelligence 
 			}
 		}
 	}

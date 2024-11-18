@@ -1,0 +1,6056 @@
+ADR_unificar_europa = {
+	ADR_integrar_francia = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			OR = {
+				has_completed_focus = ADR_the_queen_of_europe
+				has_completed_focus = ADR_european_revolution
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = form_eu_france_required_states_tt
+				controls_state = 29
+				controls_state = 18
+				controls_state = 17
+				controls_state = 28
+				controls_state = 15
+				controls_state = 16
+				controls_state = 27
+				controls_state = 14
+				controls_state = 30
+				controls_state = 24
+				controls_state = 23
+				controls_state = 33
+				controls_state = 26
+				controls_state = 20
+				controls_state = 32
+				controls_state = 735
+				controls_state = 25
+				controls_state = 22
+				controls_state = 21
+				controls_state = 851
+				controls_state = 19
+				controls_state = 20
+				controls_state = 1
+				controls_state = 785
+				controls_state = 31
+				controls_state = 806
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = FRA
+				}
+				add_core_of = ADR
+			}
+		}
+	}
+	ADR_integrar_italia = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			OR = {
+				has_completed_focus = ADR_the_queen_of_europe
+				has_completed_focus = ADR_european_revolution
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = form_eu_italy_required_states_tt
+				controls_state = 158
+				controls_state = 159
+				controls_state = 39
+				controls_state = 160
+				controls_state = 161
+				controls_state = 162
+				controls_state = 157
+				controls_state = 2
+				controls_state = 117
+				controls_state = 156
+				controls_state = 115
+				controls_state = 114
+				controls_state = 736
+				controls_state = 849
+				controls_state = 850
+				controls_state = 852
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = ITA
+				}
+				add_core_of = ADR
+			}
+		}
+	}
+	ADR_integrar_alemania = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			OR = {
+				has_completed_focus = ADR_the_queen_of_europe
+				has_completed_focus = ADR_european_revolution
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = form_country_germany_required_states_tt
+				controls_state = 51
+				controls_state = 42
+				controls_state = 56
+				controls_state = 57
+				controls_state = 55
+				controls_state = 50
+				controls_state = 59
+				controls_state = 58
+				controls_state = 909 #New state of SCHLESWIG
+				controls_state = 60
+				controls_state = 54
+				controls_state = 52
+				controls_state = 53
+				controls_state = 61
+				controls_state = 64
+				controls_state = 65
+				controls_state = 62
+				controls_state = 68
+				controls_state = 66
+				controls_state = 67
+				controls_state = 63
+				controls_state = 5
+				controls_state = 763
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = GER
+				}
+				add_core_of = ADR
+			}
+		}
+	}
+	ADR_integrar_benelux = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			OR = {
+				has_completed_focus = ADR_the_queen_of_europe
+				has_completed_focus = ADR_european_revolution
+			}
+		}
+		
+		available = {
+			controls_state = 8
+			# Netherlands
+			custom_trigger_tooltip = {
+				tooltip = form_eu_netherlands_required_states_tt
+				controls_state = 7
+				controls_state = 35
+				controls_state = 36
+			}
+			# Belgium
+			custom_trigger_tooltip = {
+				tooltip = form_eu_belgium_required_states_tt
+				controls_state = 6
+				controls_state = 34
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = BEL
+						is_core_of = HOL
+						is_core_of = LUX
+					}
+				}
+				add_core_of = ADR
+			}
+		}
+	}
+}
+ADR_catalan_integration_category = {
+	ADR_integrar_sardinia_2 = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_pancatalanism
+		}
+		
+		available = {
+			controls_state = 114
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 114
+		}
+	}
+	ADR_integrar_corsica_2 = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_pancatalanism
+		}
+		
+		available = {
+			controls_state = 1
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 1
+		}
+	}
+	ADR_integrar_sicilia = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_pancatalanism
+		}
+		
+		available = {
+			controls_state = 115
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 115
+		}
+	}
+	ADR_integrar_napoles = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_pancatalanism
+		}
+		
+		available = {
+			controls_state = 849
+			controls_state = 117
+			controls_state = 156
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 849
+			add_state_core = 117
+			add_state_core = 156
+		}
+	}
+	ADR_integrar_malta = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_pancatalanism
+		}
+		
+		available = {
+			controls_state = 116
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 116
+		}
+	}
+	ADR_integrar_creta = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_pancatalanism
+		}
+		
+		available = {
+			controls_state = 182
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 182
+		}
+	}
+	ADR_integrar_atenas = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_pancatalanism
+		}
+		
+		available = {
+			controls_state = 47
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 47
+		}
+	}
+	ADR_integrar_occitania = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_pancatalanism
+		}
+		
+		available = {
+			has_completed_focus = ADR_integrate_the_occitans
+			custom_trigger_tooltip = {
+				tooltip = ADR_integrar_occitaniaa_tt
+				NOT = {
+					any_state = {
+						is_core_of = OCC
+						NOT = {
+							is_controlled_by = ADR
+						}
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = OCC
+				}
+				add_core_of = ADR
+			}
+		}
+	}
+}
+ADR_french_influence_in_andorra_category = {
+	ADR_new_french_coprince = {
+	
+		icon = GFX_decision_generic_speech
+
+		allowed = { 
+			
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			OR = {
+				AND = {
+					original_tag = FRA
+					FRA = {
+						NOT = {
+							has_government = democratic
+						}
+					}
+				}
+				AND = {
+					tag = VIC
+					VIC = {
+						NOT = {
+							has_government = democratic
+						}
+					}
+				}
+			}
+			ADR = {
+				NOT = {
+					has_country_flag = ADR_adios_a_los_gabachos
+				}
+			}
+			
+		}
+		
+		available = {
+			OR = {
+				tag = VIC
+				has_civil_war = no
+			}
+			NOT = {
+				has_war_with = ADR
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			add_political_power = 25
+			ADR = {
+				country_event = { id = mod_andorra.17 hours = 6 random_hours = 6 }
+			}
+		}
+	}
+	ADR_claim_andorra_france = {
+	
+		icon = generic_military
+
+		allowed = { 
+			
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_country_flag = decision_to_claim_andorra
+		}
+		
+		available = {
+			OR = {
+				NOT = {
+					has_government = democratic
+				}
+				ADR = {
+					OR = {
+						has_government = communism
+						has_government = fascism
+					}
+				}
+			}
+			NOT = {
+				has_rule = can_not_declare_war
+			}
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				tag = VIC
+			}
+			modifier = {
+				factor = 20
+				date > 1940.1.1
+			}
+		}
+
+		days_remove = 180
+
+		remove_effect = {
+			add_state_claim = 973
+			set_country_flag = ready_to_invade_andorra
+			ADR = {
+				country_event = { id = mod_andorra.15 hours = 6 random_hours = 6 }
+			}
+		}
+	}
+	ADR_annex_andorra_france = {
+	
+		icon = generic_prepare_civil_war
+
+		allowed = { 
+			
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_country_flag = decision_to_claim_andorra
+		}
+		
+		available = {
+			has_country_flag = ready_to_invade_andorra
+			NOT = {
+				has_rule = can_not_declare_war
+			}
+		}
+
+		cost = 75
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				tag = VIC
+			}
+			modifier = {
+				factor = 20
+				date > 1940.1.1
+			}
+		}
+
+		days_remove = 180
+
+		complete_effect = {
+			ADR = {
+				country_event = { id = mod_andorra.16 hours = 6 random_hours = 6 }
+			}
+		}
+
+		remove_effect = {
+			create_wargoal = {
+				target = ADR
+				type = take_claimed_state
+			}
+		}
+	}
+}
+ADR_gabachos_category = {
+	ADR_echar_a_los_gabachos = {
+	
+		icon = generic_military
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			NOT = {
+				has_country_flag = ADR_adios_a_los_gabachos
+			}
+		}
+		
+		available = {
+			OR = {
+				has_government = fascism
+				FRA = {
+					has_war = yes
+				}
+			}
+		}
+
+		cost = 100
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_idea = ADR_coprince_albert
+				}
+				remove_ideas = ADR_coprince_albert
+			}
+			if = {
+				limit = {
+					has_idea = ADR_coprince_fascist
+				}
+				remove_ideas = ADR_coprince_fascist
+			}
+			if = {
+				limit = {
+					has_idea = ADR_coprince_king
+				}
+				remove_ideas = ADR_coprince_king
+			}
+			if = {
+				limit = {
+					has_idea = ADR_coprince_petain
+				}
+				remove_ideas = ADR_coprince_petain
+			}
+			if = {
+				limit = {
+					has_idea = ADR_french_paternalism_idea
+				}
+				remove_ideas = ADR_french_paternalism_idea
+			}
+			if = {
+				limit = {
+					has_idea = ADR_french_paternalism_idea_2
+				}
+				remove_ideas = ADR_french_paternalism_idea_2
+			}
+		}
+	}
+	ADR_armas_gabachas = {
+	
+		icon = generic_military
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			NOT = {
+				has_country_flag = ADR_adios_a_los_gabachos
+			}
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = ADR_decision_gabacha
+			}
+			NOT = {
+				has_country_flag = ADR_adios_a_los_gabachos
+			}
+			has_completed_focus = ADR_invite_french_investors
+		}
+
+		cost = 100
+
+		days_remove = 90
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			set_country_flag = ADR_decision_gabacha
+		}
+
+		remove_effect = {
+			clr_country_flag = ADR_decision_gabacha
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV } 
+					free_building_slots = {
+						building = industrial_complex
+						size > 1							
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	ADR_ciudadanos_gabachos = {
+	
+		icon = generic_military
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			NOT = {
+				has_country_flag = ADR_adios_a_los_gabachos
+			}
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = ADR_decision_gabacha
+			}
+			NOT = {
+				has_country_flag = ADR_adios_a_los_gabachos
+			}
+			has_completed_focus = ADR_invite_french_investors
+		}
+
+		cost = 50
+
+		days_remove = 75
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		modifier = {
+			weekly_manpower = 150
+		}
+		complete_effect = {
+			set_country_flag = ADR_decision_gabacha
+		}
+
+		remove_effect = {
+			clr_country_flag = ADR_decision_gabacha
+		}
+	}
+	ADR_entrenamiento_gabacho = {
+	
+		icon = generic_military
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			NOT = {
+				has_country_flag = ADR_adios_a_los_gabachos
+			}
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = ADR_decision_gabacha
+			}
+			NOT = {
+				has_country_flag = ADR_adios_a_los_gabachos
+			}
+			has_completed_focus = ADR_french_gendarmerie
+		}
+
+		cost = 50
+
+		days_remove = 75
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		modifier = {
+			experience_gain_army = 0.05
+			experience_gain_air = 0.05
+			command_power_gain = 0.05
+		}
+		complete_effect = {
+			set_country_flag = ADR_decision_gabacha
+		}
+
+		remove_effect = {
+			clr_country_flag = ADR_decision_gabacha
+		}
+	}
+}
+ADR_iglesia_category = {
+	ADR_echar_al_obispo = {
+	
+		icon = generic_prepare_civil_war
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			NOT = {
+				has_country_flag = ADR_adios_al_obispo
+			}
+			NOT = {
+				has_completed_focus = ADR_united_under_catholicism
+			}
+		}
+		
+		available = {
+			OR = {
+				has_government = democratic
+			}
+			NOT = {
+				has_country_flag = ADR_decision_iglesia
+			}
+		}
+
+		cost = 100
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			remove_ideas = ADR_justi_guitart
+		}
+	}
+	ADR_fiesta_religiosa = {
+	
+		icon = GFX_decision_generic_speech
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			NOT = {
+				has_country_flag = ADR_adios_al_obispo
+			}
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = ADR_decision_iglesia
+			}
+			NOT = {
+				has_country_flag = ADR_adios_al_obispo
+			}
+			OR = {
+				has_completed_focus = ADR_support_from_the_church
+				has_completed_focus = ADR_united_under_catholicism
+			}
+		}
+
+		cost = 50
+
+		days_remove = 60
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			set_country_flag = ADR_decision_iglesia
+		}
+
+		remove_effect = {
+			clr_country_flag = ADR_decision_iglesia
+			add_stability = 0.05
+		}
+	}
+	ADR_visita_del_obispo = {
+	
+		icon = generic_military
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			NOT = {
+				has_country_flag = ADR_adios_al_obispo
+			}
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = ADR_decision_iglesia
+			}
+			NOT = {
+				has_country_flag = ADR_adios_al_obispo
+			}
+			OR = {
+				has_completed_focus = ADR_support_from_the_church
+				has_completed_focus = ADR_united_under_catholicism
+			}
+		}
+
+		cost = 50
+
+		days_remove = 60
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			set_country_flag = ADR_decision_gabacha
+		}
+
+		remove_effect = {
+			clr_country_flag = ADR_decision_gabacha
+			add_war_support = 0.05
+		}
+	}
+	ADR_church_investments = {
+	
+		icon = generic_military
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			NOT = {
+				has_country_flag = ADR_adios_al_obispo
+			}
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = ADR_decision_iglesia
+			}
+			NOT = {
+				has_country_flag = ADR_adios_al_obispo
+			}
+			OR = {
+				has_completed_focus = ADR_support_from_the_church
+				has_completed_focus = ADR_united_under_catholicism
+			}
+		}
+
+		cost = 100
+
+		days_remove = 90
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		modifier = {
+			political_power_cost = 0.25
+		}
+		complete_effect = {
+			set_country_flag = ADR_decision_iglesia
+		}
+
+		remove_effect = {
+			clr_country_flag = ADR_decision_iglesia
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV } 
+					free_building_slots = {
+						building = industrial_complex
+						size > 1							
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+ADR_imperioandorrano = {
+	ADR_integrar_burgos = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_proclaim_the_andorran_empire
+		}
+		
+		available = {
+			has_completed_focus = ADR_greater_kingdom_of_navarre
+			controls_state = 176
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 176
+		}
+	}
+	ADR_integrar_navarra_y_vasco = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_proclaim_the_andorran_empire
+			NOT = {
+				has_completed_focus = ADR_the_pyrenean_principality
+			}
+		}
+		
+		available = {
+			has_completed_focus = ADR_greater_kingdom_of_navarre
+			controls_state = 792
+			controls_state = 172
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 792
+			add_state_core = 172
+		}
+	}
+	ADR_integrar_bearne = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_proclaim_the_andorran_empire
+		}
+		
+		available = {
+			has_completed_focus = ADR_demand_southern_france
+			controls_state = 806
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 806
+		}
+	}
+	ADR_integrar_foix = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_proclaim_the_andorran_empire
+		}
+		
+		available = {
+			has_completed_focus = ADR_demand_southern_france
+			controls_state = 31
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 31
+		}
+	}
+	ADR_integrar_aragon = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_proclaim_the_andorran_empire
+			NOT = {
+				has_completed_focus = ADR_the_pyrenean_principality
+			}
+		}
+		
+		available = {
+			has_completed_focus = ADR_aragonese_claims
+			controls_state = 166
+			controls_state = 794
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 168
+			add_state_core = 166
+			add_state_core = 794
+		}
+	}
+	ADR_integrar_catalonia = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_proclaim_the_andorran_empire
+			NOT = {
+				has_completed_focus = ADR_the_pyrenean_principality
+			}
+		}
+		
+		available = {
+			has_completed_focus = ADR_aragonese_claims
+			controls_state = 165
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 165
+		}
+	}
+	ADR_integrar_valencia = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_proclaim_the_andorran_empire
+		}
+		
+		available = {
+			has_completed_focus = ADR_aragonese_claims
+			controls_state = 167
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 167
+		}
+	}
+	ADR_integrar_mallorca = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_proclaim_the_andorran_empire
+		}
+		
+		available = {
+			has_completed_focus = ADR_aragonese_claims
+			controls_state = 177
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 177
+		}
+	}
+	ADR_integrar_sardinia = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_proclaim_the_andorran_empire
+		}
+		
+		available = {
+			has_completed_focus = ADR_aragonese_claims
+			controls_state = 114
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 114
+		}
+	}
+	ADR_integrar_corsica = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_proclaim_the_andorran_empire
+		}
+		
+		available = {
+			has_completed_focus = ADR_aragonese_claims
+			controls_state = 1
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 1
+		}
+	}
+	ADR_integrar_sicilia_y_napoles = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_proclaim_the_andorran_empire
+		}
+		
+		available = {
+			has_completed_focus = ADR_aragonese_claims
+			controls_state = 849
+			controls_state = 117
+			controls_state = 156
+			controls_state = 115
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 849
+			add_state_core = 117
+			add_state_core = 156
+			add_state_core = 115
+			add_state_core = 116
+		}
+	}
+	ADR_dominios_en_grecia = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_proclaim_the_andorran_empire
+		}
+		
+		available = {
+			has_completed_focus = ADR_aragonese_claims
+			controls_state = 182
+			controls_state = 47
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 182
+			add_state_core = 47
+		}
+	}
+	ADR_el_mundo = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_forge_the_new_world_order
+		}
+		
+		available = {
+			controls_state = 275
+			controls_state = 613
+			controls_state = 282
+			controls_state = 408
+			controls_state = 219
+			controls_state = 126
+			controls_state = 64
+			controls_state = 2
+			controls_state = 16
+			controls_state = 378
+			controls_state = 361
+			controls_state = 500
+		}
+
+		cost = 150
+
+		days_remove = 180
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		remove_effect = {
+			every_state = {
+				add_core_of = ADR
+			}
+		}
+	}
+}
+ADR_compar_armas_category = {
+	ADR_buy_infantry_equipment = {
+	
+		icon = generic_military
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			has_completed_focus = ADR_buy_foreign_equipment
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = ADR_comprando_otras_armas
+			}
+		}
+
+		cost = 75
+
+		days_remove = 60
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		modifier = {
+			political_power_cost = 0.25
+		}
+		complete_effect = {
+			set_country_flag = ADR_comprando_otras_armas
+		}
+
+		remove_effect = {
+			clr_country_flag = ADR_comprando_otras_armas
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1500
+			}
+		}
+	}
+	ADR_buy_support_equipment = {
+	
+		icon = generic_military
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			has_completed_focus = ADR_buy_foreign_equipment
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = ADR_comprando_otras_armas
+			}
+		}
+
+		cost = 75
+
+		days_remove = 60
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		modifier = {
+			political_power_cost = 0.25
+		}
+		complete_effect = {
+			set_country_flag = ADR_comprando_otras_armas
+		}
+
+		remove_effect = {
+			clr_country_flag = ADR_comprando_otras_armas
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 250
+			}
+		}
+	}
+	ADR_buy_artillery = {
+	
+		icon = generic_military
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			has_completed_focus = ADR_buy_foreign_equipment
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = ADR_comprando_otras_armas
+			}
+		}
+
+		cost = 75
+
+		days_remove = 60
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		modifier = {
+			political_power_cost = 0.25
+		}
+		complete_effect = {
+			set_country_flag = ADR_comprando_otras_armas
+		}
+
+		remove_effect = {
+			clr_country_flag = ADR_comprando_otras_armas
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 250
+			}
+		}
+	}
+}
+ADR_preparar_alzamiento_catolico_category = {
+	ADR_preprare_state_catholic = { # Decision to prepare the state
+		icon = {
+			key = GFX_decision_NOR_prepare_state_mon_0
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM = {
+					NOT = {	has_variable = ADR_state_preparation }  
+				}
+			}
+		}		
+		icon = {
+			key = GFX_decision_NOR_prepare_state_mon_1
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM ={
+					check_variable = { ADR_state_preparation = 1 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_NOR_prepare_state_mon_2
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM = {
+					check_variable = { ADR_state_preparation = 2 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_NOR_prepare_state_mon_3
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM = {
+					check_variable = { ADR_state_preparation = 3 }
+				}
+			}
+		}
+
+		visible = {  
+			has_war = no 
+			has_completed_focus = ADR_prepare_a_catholic_uprising
+			NOT = { has_completed_focus = ADR_for_a_catholic_spain }
+		}
+
+		available = {
+			NOT = { has_country_flag = ADR_preparing_other_states }
+		}
+
+		on_map_mode = map_and_decisions_view
+
+		state_target = yes
+
+		targets = {	
+			state = 165 # Oslofjord
+			state = 794 # Telemark
+			state = 166 # Agder
+			state = 172 # Vestlandet
+			state = 167 # Trondelag
+		}
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 165 # Oslofjord
+					state = 794 # Telemark
+					state = 166 # Agder
+					state = 172 # Vestlandet
+					state = 167 # Trondelag
+				}
+				OR = {
+					check_variable = { ADR_state_preparation < 3 }
+					has_state_flag = ADR_preparing_state
+				}
+			}
+		}
+
+		cost = 30
+
+		days_remove = 30
+	 
+		complete_effect = {
+			FROM = { 
+				if = {
+					limit = {   
+						has_variable = ADR_state_preparation
+						check_variable = { ADR_state_preparation < 3 }
+					}
+					if = { # Going to Level 2 
+						limit = {
+							check_variable = { ADR_state_preparation = 1 }
+						}
+						add_to_variable = { ADR_state_preparation = 1 }
+						custom_effect_tooltip = ADR_prepare_catholic_one_more_div
+					}
+					else_if = { # Going to Level 3
+						limit = {
+							check_variable = { ADR_state_preparation = 2 }
+						}
+						add_to_variable = { ADR_state_preparation = 1 }
+						custom_effect_tooltip = ADR_prepare_catholic_one_more_div
+					}
+					set_state_flag = ADR_preparing_state
+				}
+				else_if = { # Adding the modifier if it doesn't have it 
+					limit = { # Going to Level 1 
+						NOT = {	has_variable = ADR_state_preparation }
+					} 
+					set_variable = { ADR_state_preparation = 1 } 
+					set_state_flag = ADR_preparing_state
+					custom_effect_tooltip = ADR_prepare_catholic_this_state_will_join_us
+				}
+				else = {
+					#log = "Max Level" 	
+				}
+			} 
+		}
+
+		remove_effect = {
+			FROM = {
+				clr_state_flag = ADR_preparing_state
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+}
+ADR_ensure_american_catholicism_category = {
+	ADR_influence_in_america = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			strength_ratio = {
+			    tag = FROM
+			    ratio > 2
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				capital_scope = {
+					OR = {
+						is_on_continent = south_america
+						is_on_continent = north_america
+					}
+				}
+				NOT = { is_subject_of = ROOT }
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_war_with = ROOT }
+				NOT = {
+					original_tag = HOL
+					original_tag = DEN
+					original_tag = FRA
+					original_tag = ENG
+					original_tag = BRA
+					original_tag = BOL
+					original_tag = CAN
+					original_tag = ARG
+					original_tag = CHL
+					original_tag = PRU
+					original_tag = VEN
+					original_tag = COL
+					original_tag = MEX
+					original_tag = USA
+				}
+			}
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_completed_focus = ADR_ensure_american_catholicism
+				has_completed_focus = ADR_opportunities_in_america
+				has_completed_focus = ADR_return_to_america
+			}
+			tag = ADR
+		}
+
+		complete_effect = {
+			FROM = { country_event = mod_andorra.29 }
+		}
+	}
+	ADR_attack_american = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			strength_ratio = {
+			    tag = FROM
+			    ratio > 2
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				capital_scope = {
+					OR = {
+						is_on_continent = south_america
+						is_on_continent = north_america
+					}
+				}
+				NOT = { is_subject_of = ROOT }
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_war_with = ROOT }
+				OR = {
+					original_tag = BOL
+					original_tag = ARG
+					original_tag = CHL
+					original_tag = PRU
+					original_tag = VEN
+					original_tag = COL
+					original_tag = MEX
+				}
+			}
+		}
+
+		cost = 75
+		days_remove = 50
+
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_completed_focus = ADR_ensure_american_catholicism
+				has_completed_focus = ADR_opportunities_in_america
+				has_completed_focus = ADR_return_to_america
+			}
+		}
+
+		remove_effect = {
+			create_wargoal = {
+				target = FROM
+				type = puppet_wargoal_focus
+				expire = 0
+			}
+		}
+	}
+}
+ADR_american_mission_category  = {
+	ADR_integrate_american_puppets = {
+	
+		icon = generic_political_discourse
+		
+		fire_only_once = yes
+
+		allowed = {
+			original_tag = ADR
+		}
+		
+		visible = {
+			has_completed_focus = ADR_the_american_mission
+		}
+		
+		target_root_trigger = {
+			has_completed_focus = ADR_the_american_mission
+		}
+		cancel_trigger = {  
+			OR = {
+				has_capitulated = yes 
+				FROM = {
+					NOT = { is_subject_of = ADR }
+				}
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				is_puppet_of = ADR
+				OR = {
+					capital_scope = {
+						is_on_continent = north_america
+					}
+					capital_scope = {
+						is_on_continent = south_america
+					}
+				}
+				
+			}
+        }
+
+		available = {
+			
+		}
+
+		cost = 75
+
+		days_remove = 60
+		
+
+		remove_effect = {
+			annex_country = {
+				target = FROM
+				transfer_troops = yes
+			}
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	ADR_integrar_mexico = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_the_american_mission
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ADR_integrar_mexico_tt
+				all_state = {
+					OR = {
+						is_controlled_by = ROOT
+						AND = {
+							NOT = { is_core_of = MEX }
+						}
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			
+			
+			every_state = {
+				limit = {
+					is_core_of = MEX
+				}
+				add_core_of = ADR
+	
+			}
+		}
+	}
+	ADR_integrar_centroamerica = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_the_american_mission
+		}
+		
+		available = {
+			controls_state = 313
+			controls_state = 314
+			controls_state = 312
+			controls_state = 316
+			controls_state = 317
+			controls_state = 304
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+
+		complete_effect = {
+			add_state_core = 313
+			add_state_core = 314
+			add_state_core = 312
+			add_state_core = 316
+			add_state_core = 317
+			add_state_core = 304
+				add_state_core = 311
+				add_state_core = 685
+		}
+	}
+	ADR_integrar_caribe2 = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_the_american_mission
+		}
+		
+		available = {
+			controls_state = 315
+			controls_state = 318
+			controls_state = 319
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+
+		complete_effect = {
+			add_state_core = 315
+				add_state_core = 318
+				add_state_core = 319
+				add_state_core = 689
+				add_state_core = 693
+				add_state_core = 690
+				add_state_core = 686
+				add_state_core = 694
+				add_state_core = 308
+				add_state_core = 692
+				add_state_core = 691
+				add_state_core = 695
+		}
+	}
+	ADR_integrar_colombia = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_the_american_mission
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ADR_integrar_colombia_tt
+				all_state = {
+					OR = {
+						is_controlled_by = ROOT
+						AND = {
+							NOT = { is_core_of = COL }
+						}
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			
+			
+			every_state = {
+				limit = {
+					is_core_of = COL
+				}
+				add_core_of = ADR
+	
+			}
+		}
+	}
+	ADR_integrar_venezuela = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_the_american_mission
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ADR_integrar_venezuela_tt
+				all_state = {
+					OR = {
+						is_controlled_by = ROOT
+						AND = {
+							NOT = { is_core_of = VEN }
+						}
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			
+			
+			every_state = {
+				limit = {
+					is_core_of = VEN
+				}
+				add_core_of = ADR
+	
+			}
+		}
+	}
+	ADR_integrar_ecuador = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_the_american_mission
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ADR_integrar_ecuador_tt
+				all_state = {
+					OR = {
+						is_controlled_by = ROOT
+						AND = {
+							NOT = { is_core_of = ECU }
+						}
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			
+			
+			every_state = {
+				limit = {
+					is_core_of = ECU
+				}
+				add_core_of = ADR
+	
+			}
+		}
+	}
+	ADR_integrar_peru = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_the_american_mission
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ADR_integrar_peru_tt
+				all_state = {
+					OR = {
+						is_controlled_by = ROOT
+						is_core_of = ECU
+						AND = {
+							NOT = { is_core_of = PRU }
+						}
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			
+			
+			every_state = {
+				limit = {
+					is_core_of = PRU
+				}
+				add_core_of = ADR
+	
+			}
+		}
+	}
+	ADR_integrar_bolivia = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_the_american_mission
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ADR_integrar_bolivia_tt
+				all_state = {
+					OR = {
+						is_controlled_by = ROOT
+						AND = {
+							NOT = { is_core_of = BOL }
+						}
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			
+			
+			every_state = {
+				limit = {
+					is_core_of = BOL
+				}
+				add_core_of = ADR
+	
+			}
+		}
+	}
+	ADR_integrar_paraguay = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_the_american_mission
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ADR_integrar_paraguay_tt
+				all_state = {
+					OR = {
+						is_controlled_by = ROOT
+						AND = {
+							NOT = { is_core_of = PAR }
+						}
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			
+			
+			every_state = {
+				limit = {
+					is_core_of = PAR
+				}
+				add_core_of = ADR
+	
+			}
+		}
+	}
+	ADR_integrar_chile = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_the_american_mission
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ADR_integrar_chile_tt
+				all_state = {
+					OR = {
+						is_controlled_by = ROOT
+						AND = {
+							NOT = { is_core_of = CHL }
+						}
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			
+			
+			every_state = {
+				limit = {
+					is_core_of = CHL
+				}
+				add_core_of = ADR
+	
+			}
+		}
+	}
+	ADR_integrar_argentina = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_the_american_mission
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ADR_integrar_argentina_tt
+				all_state = {
+					OR = {
+						is_controlled_by = ROOT
+						AND = {
+							NOT = { is_core_of = ARG }
+						}
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			
+			
+			every_state = {
+				limit = {
+					is_core_of = ARG
+				}
+				add_core_of = ADR
+	
+			}
+		}
+	}
+	ADR_integrar_uruguay = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_the_american_mission
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ADR_integrar_uruguay_tt
+				all_state = {
+					OR = {
+						is_controlled_by = ROOT
+						AND = {
+							NOT = { is_core_of = URG }
+						}
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			
+			
+			every_state = {
+				limit = {
+					is_core_of = URG
+				}
+				add_core_of = ADR
+	
+			}
+		}
+	}
+	ADR_integrar_brasil = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_the_american_mission
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ADR_integrar_brasil_tt
+				all_state = {
+					OR = {
+						is_controlled_by = ROOT
+						AND = {
+							NOT = { is_core_of = BRA }
+						}
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			
+			
+			every_state = {
+				limit = {
+					is_core_of = BRA
+				}
+				add_core_of = ADR
+	
+			}
+		}
+	}
+}
+
+form_roman_empire_category_adr = {
+
+	form_roman_empire_adr = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			
+			is_subject = no
+			controls_state = 2
+		}
+
+		visible = {
+			original_tag = ADR
+			NOT = { has_global_flag = form_roman_empire_flag_adr }
+			ADR = {
+				has_completed_focus = ADR_sons_of_rome
+			}
+		}
+
+		complete_effect = {
+			#hidden_effect = {
+			#	news_event = { hours = 6 id = noticias_mod.17 }
+			#}
+			if = {
+				limit = { has_completed_focus = ADR_the_sovereign_prince_of_the_valleys }
+				set_cosmetic_tag = ADR_obispoempire
+			}
+			else = {
+				set_cosmetic_tag = SPQR_UNIFIED
+			}
+			custom_effect_tooltip = form_spqr_core_mare_nostrum_states_tt
+			set_country_flag = formed_rome_adr
+ 			hidden_effect = {
+
+ 				1 = { add_core_of = ROOT }
+ 				735 = { add_core_of = ROOT }
+ 				851 = { add_core_of = ROOT }
+ 				21 = { add_core_of = ROOT }
+ 				22 = { add_core_of = ROOT }
+ 				31 = { add_core_of = ROOT }
+ 				165 = { add_core_of = ROOT }
+ 				177 = { add_core_of = ROOT }
+ 				167 = { add_core_of = ROOT }
+ 				168 = { add_core_of = ROOT }
+ 				173 = { add_core_of = ROOT }
+ 				118 = { add_core_of = ROOT }
+ 				290 = { add_core_of = ROOT }
+ 				461 = { add_core_of = ROOT }
+ 				459 = { add_core_of = ROOT }
+ 				460 = { add_core_of = ROOT }
+ 				116 = { add_core_of = ROOT }
+ 				458 = { add_core_of = ROOT }
+ 				665 = { add_core_of = ROOT }
+ 				448 = { add_core_of = ROOT }
+ 				661 = { add_core_of = ROOT }
+ 				273 = { add_core_of = ROOT }
+ 				662 = { add_core_of = ROOT }
+ 				449 = { add_core_of = ROOT }
+ 				450 = { add_core_of = ROOT }
+ 				663 = { add_core_of = ROOT }
+ 				451 = { add_core_of = ROOT }
+ 				452 = { add_core_of = ROOT }
+ 				447 = { add_core_of = ROOT }
+ 				907 = { add_core_of = ROOT }
+ 				446 = { add_core_of = ROOT }
+ 				453 = { add_core_of = ROOT }
+ 				454 = { add_core_of = ROOT }
+ 				553 = { add_core_of = ROOT }
+ 				183 = { add_core_of = ROOT }
+ 				677 = { add_core_of = ROOT }
+ 				799 = { add_core_of = ROOT }
+ 				344 = { add_core_of = ROOT }
+ 				345 = { add_core_of = ROOT }
+ 				342 = { add_core_of = ROOT }
+ 				164 = { add_core_of = ROOT }
+ 				182 = { add_core_of = ROOT }
+ 				339 = { add_core_of = ROOT }
+ 				187 = { add_core_of = ROOT }
+ 				340 = { add_core_of = ROOT }
+ 				797 = { add_core_of = ROOT }
+ 				341 = { add_core_of = ROOT }
+ 				184 = { add_core_of = ROOT }
+ 				731 = { add_core_of = ROOT }
+ 				47 = { add_core_of = ROOT }
+ 				186 = { add_core_of = ROOT }
+ 				185 = { add_core_of = ROOT }
+ 				805 = { add_core_of = ROOT }
+ 				44 = { add_core_of = ROOT }
+ 				934 = { add_core_of = ROOT }
+ 				105 = { add_core_of = ROOT }
+ 				103 = { add_core_of = ROOT }
+ 				163 = { add_core_of = ROOT }
+ 				804 = { add_core_of = ROOT }
+ 				104 = { add_core_of = ROOT }
+ 				853 = { add_core_of = ROOT }
+				every_state = {
+					limit = {
+						is_core_of = ITA
+					}
+					add_core_of = ROOT
+				}
+
+ 			}
+			
+			
+			hidden_effect = {
+				set_global_flag = form_roman_empire_flag_adr
+				
+			}
+
+			add_stability = 0.1
+
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+
+	reintigrate_hispania_adr = {
+
+		icon = GFX_decision_generic_nationalism
+
+		name = reintigrate_hispania
+
+		cost = 100
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			
+			controls_state = 794 #Eastern Aragon
+			controls_state = 166 #Western Aragon
+			controls_state = 172 #Navarra
+			controls_state = 792 #Pais Vasco
+			controls_state = 790 #Asturias
+			controls_state = 171 #Galicia
+			controls_state = 174 #Leon
+			controls_state = 791 #Valladolid
+			controls_state = 176 #Burgos
+			controls_state = 793 #Guadalajara
+			controls_state = 788 #Salamanca
+			controls_state = 41 #Madrid
+			controls_state = 175 #Ciudad Real
+			controls_state = 170 #Extramadura
+			controls_state = 789 #Cordoba
+			controls_state = 169 #Sevilla
+			controls_state = 179 #Beja
+			controls_state = 795 #Santarem
+			controls_state = 112 #Lisbon
+			controls_state = 181 #Guarda
+			controls_state = 180 #Porto
+
+		}
+
+		visible = {
+			original_tag = ADR
+			NOT = { has_global_flag = reclaim_hispania_flag }
+			has_global_flag = form_roman_empire_flag_adr
+		}
+
+		complete_effect = {
+
+			# Eastern Aragon
+			794 = { add_core_of = ROOT }
+
+			# Western Aragon
+			166 = { add_core_of = ROOT }
+
+			# Navarra
+			172 = { add_core_of = ROOT }
+
+			# Pais Vasco
+			792 = { add_core_of = ROOT }
+
+			# Asturias
+			790 = { add_core_of = ROOT }
+
+			# Galicia
+			171 = { add_core_of = ROOT }
+
+			# Leon
+			174 = { add_core_of = ROOT }
+
+			# Valladolid
+			791 = { add_core_of = ROOT }
+
+			# Burgos
+			176 = { add_core_of = ROOT }
+
+			# Guadalajara
+			793 = { add_core_of = ROOT }
+
+			# Salamanca
+			788 = { add_core_of = ROOT }
+
+			# Madrid
+			41 = { add_core_of = ROOT }
+
+			# Ciudad Real
+			175 = { add_core_of = ROOT }
+
+			# Extramadura
+			170 = { add_core_of = ROOT }
+
+			# Cordoba
+			789 = { add_core_of = ROOT }
+
+			# Sevilla
+			169 = { add_core_of = ROOT }
+
+			# Beja
+			179 = { add_core_of = ROOT }
+
+			# Santarem
+			795 = { add_core_of = ROOT }
+
+			# Lisbon
+			112 = { add_core_of = ROOT }
+
+			# Guarda
+			181 = { add_core_of = ROOT }
+
+			# Porto
+			180 = { add_core_of = ROOT }
+			
+			add_stability = -0.05
+			 
+			hidden_effect = { 
+				set_global_flag = reclaim_hispania_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+
+	reintigrate_dacia_adr = {
+
+		icon = GFX_decision_generic_nationalism
+
+		name = reintigrate_dacia
+
+		cost = 100
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			
+			controls_state = 76 #North Transylvania
+			controls_state = 84 #Transylvania
+			controls_state = 83 #Crisana
+			controls_state = 81 #Oltenia
+			controls_state = 82 #Banat
+			controls_state = 764 #West Banat
+
+		}
+
+		visible = { 
+			original_tag = ADR
+			NOT = { has_global_flag = reclaim_dacia_flag }
+			has_global_flag = form_roman_empire_flag_adr
+		}
+
+		complete_effect = {
+
+			# North Transylvania
+			76 = { add_core_of = ROOT }
+
+			# Transylvania
+			84 = { add_core_of = ROOT }
+
+			# Crisana
+			83 = { add_core_of = ROOT }
+
+			# Oltenia
+			81 = { add_core_of = ROOT }
+
+			# Banat
+			82 = { add_core_of = ROOT }
+
+			# West Banat
+			764 = { add_core_of = ROOT }
+
+			
+			
+			add_stability = -0.05
+			 
+			hidden_effect = { 
+				set_global_flag = reclaim_dacia_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+
+	reintigrate_moesia_adr = {
+
+		icon = GFX_decision_generic_nationalism
+
+		name = reintigrate_moesia
+
+		cost = 100
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			
+			controls_state = 766 #Southern Bessarabia
+
+			controls_state = 46 #Muntenia
+
+			controls_state = 77 #Dobrudja
+
+			controls_state = 211 #Burgas
+
+			controls_state = 801 #Moesia
+
+			controls_state = 212 #Plovdiv
+
+			controls_state = 48 #Sofia
+
+			controls_state = 803 #Southern Serbia
+
+			controls_state = 106 #Macedonia
+ 
+			controls_state = 802 #Kosovo
+
+			controls_state = 108 #Morava
+
+			controls_state = 107 #Serbia
+			
+
+		}
+
+		visible = { 
+			original_tag = ADR
+			NOT = { has_global_flag = reclaim_moesia_flag }
+			has_global_flag = form_roman_empire_flag_adr
+		}
+
+		complete_effect = {
+
+			# Southern Bessarabia
+			766 = { add_core_of = ROOT }
+
+			# Muntenia
+			46 = { add_core_of = ROOT }
+
+			# Dobrudja
+			77 = { add_core_of = ROOT }
+
+			# Burgas
+			211 = { add_core_of = ROOT }
+
+			# Moesia
+			801 = { add_core_of = ROOT }
+
+			# Plovdiv
+			212 = { add_core_of = ROOT }
+
+			# Sofia
+			48 = { add_core_of = ROOT }
+
+			# Southern Serbia
+			803 = { add_core_of = ROOT }
+
+			# Macedonia
+			106 = { add_core_of = ROOT }
+
+			# Kosovo
+			802 = { add_core_of = ROOT }
+
+			# Morava
+			108 = { add_core_of = ROOT }
+
+			# Serbia
+			107 = { add_core_of = ROOT }
+
+
+
+			
+			add_stability = -0.05
+			 
+			hidden_effect = { 
+				set_global_flag = reclaim_moesia_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	reintigrate_aegyptus_adr = {
+
+		icon = GFX_decision_generic_nationalism
+
+		name = reintigrate_aegyptus
+
+		cost = 75
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			
+			controls_state = 552 #Western Desert
+			controls_state = 456 #Aswan
+			controls_state = 457 #Eastern Desert
+
+		}
+
+		visible = { 
+			original_tag = ADR
+			NOT = { has_global_flag = reclaim_aegyptus_flag }
+			has_global_flag = form_roman_empire_flag_adr
+		}
+
+		complete_effect = {
+
+			# Western Desert
+			552 = { add_core_of = ROOT }
+
+			# Aswan
+			456 = { add_core_of = ROOT }
+
+			# Eastern Desert
+			457 = { add_core_of = ROOT }
+
+			
+			
+			add_stability = -0.05
+			 
+			hidden_effect = { 
+				set_global_flag = reclaim_aegyptus_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	restore_mesopotamia_adr = {
+
+		icon = GFX_decision_generic_nationalism
+
+		name = restore_mesopotamia
+
+		cost = 100
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			
+			controls_state = 656 #Kuwait
+			controls_state = 291 #Baghdad
+			controls_state = 675 #Al Hajara
+			controls_state = 676 #Mosul
+			controls_state = 680 #Deir-az-Zur
+			controls_state = 350 #Diyarbakir
+
+		}
+
+		visible = { 
+			original_tag = ADR
+			NOT = { has_global_flag = restore_mesopotamia_flag }
+			has_global_flag = form_roman_empire_flag_adr
+		}
+
+		complete_effect = {
+ 
+
+			# Kuwait
+			656 = { add_core_of = ROOT }
+
+			# Baghdad
+			291 = { add_core_of = ROOT }
+
+			# Al Hajara
+			675 = { add_core_of = ROOT }
+
+			# Mosul
+			676 = { add_core_of = ROOT }
+
+			# Deir-az-Zur
+			680 = { add_core_of = ROOT }
+
+			# Diyarbakir
+			350 = { add_core_of = ROOT }
+			
+			
+			add_stability = -0.05
+			 
+			hidden_effect = { 
+				set_global_flag = restore_mesopotamia_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	reconquer_galatia_et_cappadocia_adr = {
+
+		icon = GFX_decision_generic_nationalism
+
+		name = reconquer_galatia_et_cappadocia
+
+		cost = 100
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			
+			controls_state = 347 #Izmit
+			controls_state = 49 #Ankara
+			controls_state = 343 #Afyon
+			controls_state = 346 #Konya
+			controls_state = 356 #Kastamonu
+			controls_state = 798 #Amasya
+			controls_state = 348 #Kayseri
+			controls_state = 349 #Sivas
+			controls_state = 355 #Samsun
+			controls_state = 354 #Trabzon
+			
+
+		}
+
+		visible = { 
+			original_tag = ADR
+			NOT = { has_global_flag = reconquer_cappadocia_flag }
+			has_global_flag = form_roman_empire_flag_adr
+		}
+
+		complete_effect = {
+ 
+
+			# Izmit
+			347 = { add_core_of = ROOT }
+
+			# Ankara
+			49 = { add_core_of = ROOT }
+
+			# Afyon
+			343 = { add_core_of = ROOT }
+
+			# Konya
+			346 = { add_core_of = ROOT }
+
+			# Kastamonu
+			356 = { add_core_of = ROOT }
+
+			# Amasya
+			798 = { add_core_of = ROOT }
+
+			# Kayseri
+			348 = { add_core_of = ROOT }
+
+			# Sivas
+			349 = { add_core_of = ROOT } 
+
+			# Samsun
+			355 = { add_core_of = ROOT }
+
+			# Trabzon
+			354 = { add_core_of = ROOT }
+			
+			
+			add_stability = -0.05
+			 
+			hidden_effect = { 
+				set_global_flag = reconquer_cappadocia_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	integrate_armenian_lands_adr = {
+
+		icon = GFX_decision_generic_nationalism
+
+		name = integrate_armenian_lands
+
+		cost = 100
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			
+			controls_state = 230 #Armenia
+			controls_state = 800 #Van
+			controls_state = 353 #Tunceli
+			controls_state = 352 #Hakkari
+			
+
+		}
+
+		visible = { 
+			original_tag = ADR
+			NOT = { has_global_flag = integrate_armenia_flag }
+			has_global_flag = form_roman_empire_flag_adr
+		}
+
+		complete_effect = { 
+ 
+
+			# Armenia
+			230 = { add_core_of = ROOT }
+
+			# Van
+			800 = { add_core_of = ROOT }
+
+			# Tunceli
+			353 = { add_core_of = ROOT }
+
+			# Hakkari
+			352 = { add_core_of = ROOT }
+			
+			
+			add_stability = -0.05
+			 
+			hidden_effect = { 
+				set_global_flag = integrate_armenia_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	restore_order_in_arabia_petra_adr = {
+
+		icon = GFX_decision_generic_nationalism
+
+		name = restore_order_in_arabia_petra
+
+		cost = 75
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			
+			controls_state = 554 #Damascus
+			controls_state = 455 #Jordan
+			controls_state = 854 #Jawf
+			controls_state = 855 #Tabuk
+			
+
+		}
+
+		visible = { 
+			original_tag = ADR
+			NOT = { has_global_flag = integrate_petra_flag }
+			has_global_flag = form_roman_empire_flag_adr
+		}
+
+		complete_effect = { 
+ 
+
+			# Damascus
+			554 = { add_core_of = ROOT }
+
+			# Jordan
+			455 = { add_core_of = ROOT }
+
+			# Jawf
+			854 = { add_core_of = ROOT }
+
+			# Tabuk
+			855 = { add_core_of = ROOT }
+			
+			
+			add_stability = -0.05
+			 
+			hidden_effect = { 
+				set_global_flag = integrate_petra_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	restore_order_in_mauretania_adr = {
+
+		icon = GFX_decision_generic_nationalism
+
+		name = restore_order_in_mauretania
+
+		cost = 75
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			
+			controls_state = 513 #Tlemcen
+			controls_state = 514 #Algerian Desert
+			controls_state = 462 #Marrakech
+			controls_state = 783 #Sidi Ifni
+
+		}
+
+		visible = { 
+			original_tag = ADR
+			NOT = { has_global_flag = integrate_mauretania_flag }
+			has_global_flag = form_roman_empire_flag_adr
+		}
+
+		complete_effect = { 
+ 
+
+			# Tlemcen
+			513 = { add_core_of = ROOT }
+
+			# Algerian Desert
+			514 = { add_core_of = ROOT }
+
+			# Marrakech
+			462 = { add_core_of = ROOT }
+
+			# Sidi Ifni
+			783 = { add_core_of = ROOT }
+			
+			
+			add_stability = -0.05
+			 
+			hidden_effect = { 
+				set_global_flag = integrate_mauretania_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	return_to_pannonia_adr = {
+
+		icon = GFX_decision_generic_nationalism
+
+		name = return_to_pannonia
+
+		cost = 100
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			
+			controls_state = 43 #Northern Hungary
+			controls_state = 154 #Alföld
+			controls_state = 155 #Transdanubia
+			controls_state = 45 #Vojvodina
+			controls_state = 109 #Croatia
+			controls_state = 102 #North Slovenia
+
+		}
+
+		visible = { 
+			original_tag = ADR
+			NOT = { has_global_flag = integrate_pannonia_flag }
+			has_global_flag = form_roman_empire_flag_adr
+		}
+
+		complete_effect = { 
+ 
+
+			# Northern Hungary
+			43 = { add_core_of = ROOT }
+
+			# Alföld
+			154 = { add_core_of = ROOT }
+
+			# Transdanubia
+			155 = { add_core_of = ROOT }
+
+			# Vojvodina
+			45 = { add_core_of = ROOT }
+
+			# Croatia
+			109 = { add_core_of = ROOT }
+
+			# North Slovenia
+			102 = { add_core_of = ROOT }
+			
+			
+			add_stability = -0.05
+			 
+			hidden_effect = { 
+				set_global_flag = integrate_pannonia_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	restore_roman_rule_to_raetia_et_noricum_adr = {
+
+		icon = GFX_decision_generic_nationalism
+
+		name = restore_roman_rule_to_raetia_et_noricum
+
+		cost = 100
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			
+			controls_state = 4 #Lower Austria
+			controls_state = 152 #Upper Austria
+			controls_state = 153 #Tyrol
+			controls_state = 848 #Vorarlberg
+			controls_state = 151 #Eastern Swiss Alps
+			controls_state = 846 #Ticino
+			controls_state = 847 #Western Swiss Alps
+			controls_state = 3 #Swiss Plateu
+			controls_state = 845 #Jura Mountains
+
+		}
+
+		visible = { 
+			original_tag = ADR
+			NOT = { has_global_flag = integrate_alps_flag }
+			has_global_flag = form_roman_empire_flag_adr
+		}
+
+		complete_effect = { 
+ 
+
+			# Lower Austria 
+			4 = { add_core_of = ROOT }
+
+			# Upper Austria
+			152 = { add_core_of = ROOT }
+
+			# Tyrol
+			153 = { add_core_of = ROOT }
+			
+			# Vorarlberg
+			848 = { add_core_of = ROOT }
+
+			# Eastern Swiss Alps
+			151 = { add_core_of = ROOT }
+
+			# Ticino
+			846 = { add_core_of = ROOT }
+
+			# Western Swiss Alps
+			847 = { add_core_of = ROOT }
+
+			# Swiss Plateu
+			3 = { add_core_of = ROOT }
+
+			# Jura Mountains
+			845 = { add_core_of = ROOT }
+			
+			
+			add_stability = -0.05
+			 
+			hidden_effect = { 
+				set_global_flag = integrate_alps_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	restore_roman_rule_to_gaul_adr = {
+
+		icon = GFX_decision_generic_nationalism
+
+		name = restore_roman_rule_to_gaul 	
+
+		cost = 100
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			
+			controls_state = 806 #Pyrenees-Atlantiques
+			controls_state = 19 #Aquitaine
+			controls_state = 25 #Limousin
+			controls_state = 26 #Auveragne
+			controls_state = 20 #Rhone
+			controls_state = 32 #Alpes
+			controls_state = 33 #Centre-Sud
+			controls_state = 23 #Poitou
+			controls_state = 30 #Loire
+			controls_state = 14 #Brittany
+			controls_state = 27 #Bourgogne
+			controls_state = 17 #Franche-Comte
+			controls_state = 28 #Alsace-Lorraine
+			controls_state = 16 #Ile De France
+			controls_state = 24 #Centre
+			controls_state = 15 #Normandy
+			controls_state = 785 #Picardy
+			controls_state = 18 #Champagne
+
+		}
+
+		visible = { 
+			original_tag = ADR
+			NOT = { has_global_flag = integrate_gaul_flag }
+			has_global_flag = form_roman_empire_flag_adr
+		}
+
+		complete_effect = { 
+ 
+
+			# Pyrenees-Atlantiques 
+			806 = { add_core_of = ROOT }
+
+			# Aquitaine
+			19 = { add_core_of = ROOT }
+
+			# Limousin
+			25 = { add_core_of = ROOT }
+
+			# Auveragne
+			26 = { add_core_of = ROOT }
+
+			# Rhone
+			20 = { add_core_of = ROOT }
+
+			# Alpes
+			32 = { add_core_of = ROOT }
+
+			# Centre-Sud
+			33 = { add_core_of = ROOT }
+
+			# Poitou
+			23 = { add_core_of = ROOT }
+
+			# Loire
+			30 = { add_core_of = ROOT }
+
+			# Brittany
+			14 = { add_core_of = ROOT }
+
+			# Bourgogne
+			27 = { add_core_of = ROOT }
+
+			# Franche-Comte
+			17 = { add_core_of = ROOT }
+
+			# Alsace-Lorraine
+			28 = { add_core_of = ROOT }
+
+			# Ile De France
+			16 = { add_core_of = ROOT }
+
+			# Centre
+			24 = { add_core_of = ROOT }
+
+			# Normandy
+			15 = { add_core_of = ROOT }
+
+			# Picardy
+			785 = { add_core_of = ROOT }
+
+			# Champagne
+			18 = { add_core_of = ROOT }
+			
+			
+			add_stability = -0.05
+			 
+			hidden_effect = { 
+				set_global_flag = integrate_gaul_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	restore_roman_rule_to_belgica_adr = {
+
+		icon = GFX_decision_generic_nationalism
+
+		name = restore_roman_rule_to_belgica
+
+		cost = 100
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			
+			controls_state = 35 #Brabant
+			controls_state = 6 #Vlaanderen
+			controls_state = 34 #Wallonia
+			controls_state = 8 #Luxembourg
+			controls_state = 29 #Nord-Pas-De-Calais
+			
+
+		}
+
+		visible = { 
+			original_tag = ADR
+			NOT = { has_global_flag = integrate_belgica_flag }
+			has_global_flag = form_roman_empire_flag_adr
+		}
+
+		complete_effect = { 
+ 
+
+			# Brabant
+			35 = { add_core_of = ROOT }
+
+			# Vlaanderen
+			6 = { add_core_of = ROOT }
+
+			# Wallonia
+			34 = { add_core_of = ROOT }
+
+			# Luxembourg
+			8 = { add_core_of = ROOT }
+
+			# Nord-Pas-De-Calais
+			29 = { add_core_of = ROOT }
+			
+			
+			add_stability = -0.05
+			  
+			hidden_effect = { 
+				set_global_flag = integrate_belgica_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	occupy_iberia_adr = {
+
+		icon = GFX_decision_generic_nationalism
+
+		name = occupy_iberia
+
+		cost = 100
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			
+			controls_state = 229 #Azerbaijan
+			controls_state = 231 #Georgia
+			controls_state = 826 #Abkhazia
+
+		}
+
+		visible = { 
+			original_tag = ADR
+			NOT = { has_global_flag = occupy_iberia_flag }
+			has_global_flag = form_roman_empire_flag_adr
+		}
+
+		complete_effect = { 
+ 
+
+			# Azerbaijan
+			229 = { add_core_of = ROOT }
+
+			# Georgia
+			231 = { add_core_of = ROOT }
+ 
+			# Abkhazia
+			826 = { add_core_of = ROOT }
+			
+			
+			add_stability = -0.05
+			  
+			hidden_effect = { 
+				set_global_flag = occupy_iberia_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	return_to_britannia_adr = {
+
+		icon = GFX_decision_generic_nationalism
+
+		name = return_to_britannia
+
+		cost = 100
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			
+			controls_state = 127 #Sussex
+			controls_state = 123 #South-West England
+			controls_state = 338 #Gloucestershire
+			controls_state = 126 #Greater London Area
+			controls_state = 125 #East Anglia
+			controls_state = 128 #West Midlands
+			controls_state = 122 #Wales
+			controls_state = 129 #East Midlands
+			controls_state = 132 #Lancashire
+			controls_state = 130 #Yorkshire
+			controls_state = 131 #Nothern England
+			controls_state = 931 #Cumbria
+			controls_state = 932 #Mann
+
+		}
+
+		visible = { 
+			original_tag = ADR
+			NOT = { has_global_flag = return_to_britannia_flag }
+			has_global_flag = form_roman_empire_flag_adr
+		}
+
+		complete_effect = { 
+ 
+
+			# Sussex
+			127 = { add_core_of = ROOT }
+
+			# South-West England
+			123 = { add_core_of = ROOT }
+ 
+			# Gloucestershire
+			338 = { add_core_of = ROOT }
+
+			# Greater London Area
+			126 = { add_core_of = ROOT }
+
+			# East Anglia
+			125 = { add_core_of = ROOT }
+
+			# West Midlands
+			128 = { add_core_of = ROOT }
+
+			# Wales
+			122 = { add_core_of = ROOT }
+
+			# East Midlands
+			129 = { add_core_of = ROOT }
+
+			# Lancashire
+			132 = { add_core_of = ROOT }
+
+			# Yorkshire
+			130 = { add_core_of = ROOT }
+
+			# Nothern England
+			131 = { add_core_of = ROOT }
+
+			# Cumbria
+			931 = { add_core_of = ROOT } 
+
+			# Mann
+			932 = { add_core_of = ROOT }
+			
+			
+			add_stability = -0.05
+			  
+			hidden_effect = { 
+				set_global_flag = return_to_britannia_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	conquer_hibernia_adr = {
+
+		icon = GFX_decision_generic_nationalism
+
+		name = conquer_hibernia
+
+		cost = 100
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			
+			controls_state = 113 #Leinster
+			controls_state = 135 #Munster
+			controls_state = 134 #Connaught
+			controls_state = 119 #Northern Ireland
+
+		}
+
+		visible = { 
+			original_tag = ADR
+			NOT = { has_global_flag = conquer_hibernia_flag }
+			has_global_flag = form_roman_empire_flag_adr
+		}
+
+		complete_effect = { 
+ 
+
+			# Leinster
+			113 = { add_core_of = ROOT }
+
+			# Munster
+			135 = { add_core_of = ROOT }
+ 
+			# Connaught
+			134 = { add_core_of = ROOT }
+
+			# Northern Ireland
+			119 = { add_core_of = ROOT }
+			
+			
+			add_stability = -0.05
+			  
+			hidden_effect = { 
+				set_global_flag = conquer_hibernia_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	conquer_caledonia_adr = {
+
+		icon = GFX_decision_generic_nationalism
+
+		name = conquer_caledonia
+
+		cost = 100
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			
+			controls_state = 133 #Lanark
+			controls_state = 121 #Lothian
+			controls_state = 136 #Aberdeenshire
+			controls_state = 120 #Scottish Highlands
+
+		}
+
+		visible = { 
+			original_tag = ADR
+			NOT = { has_global_flag = conquer_caledonia_flag }
+			has_global_flag = form_roman_empire_flag_adr
+		}
+
+		complete_effect = { 
+ 
+
+			# Lanark
+			133 = { add_core_of = ROOT }
+
+			# Lothian
+			121 = { add_core_of = ROOT }
+ 
+			# Aberdeenshire
+			136 = { add_core_of = ROOT }
+
+			# Scottish Highlands
+			120 = { add_core_of = ROOT }
+			
+			
+			add_stability = -0.05
+			  
+			hidden_effect = { 
+				set_global_flag = conquer_caledonia_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	avenge_teutoburg_adr = {
+
+		icon = GFX_decision_generic_nationalism
+
+		name = avenge_teutoburg
+
+		cost = 100
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			
+			controls_state = 7 #Holland
+			controls_state = 36 #Friesland
+			controls_state = 56 #Weser-Ems
+			controls_state = 57 #Westfalen
+			controls_state = 51 #Rhineland
+			controls_state = 42 #Moselland
+			controls_state = 55 #Hessen
+			controls_state = 54 #Franken
+			controls_state = 50 #Wurtemberg
+			controls_state = 52 #Oberbayern
+			controls_state = 53 #Niederbayern
+
+		}
+
+		visible = { 
+			original_tag = ADR
+			NOT = { has_global_flag = avenge_teutoberg_flag }
+			has_global_flag = form_roman_empire_flag_adr
+		}
+
+		complete_effect = { 
+ 
+
+			# Holland
+			7 = { add_core_of = ROOT }
+
+			# Friesland
+			36 = { add_core_of = ROOT }
+ 
+			# Weser-Ems
+			56 = { add_core_of = ROOT }
+
+			# Westfalen
+			57 = { add_core_of = ROOT }
+
+			# Rhineland
+			51 = { add_core_of = ROOT }
+
+			# Moselland
+			42 = { add_core_of = ROOT }
+
+			# Hessen
+			55 = { add_core_of = ROOT }
+
+			# Franken
+			54 = { add_core_of = ROOT }
+
+			# Wurtemberg
+			50 = { add_core_of = ROOT }
+ 
+			# Oberbayern
+			52 = { add_core_of = ROOT }
+
+			# Niederbayern
+			53 = { add_core_of = ROOT }
+			
+			
+			add_stability = -0.05
+			  
+			hidden_effect = { 
+				set_global_flag = avenge_teutoberg_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	reestablish_the_bosporan_kingdom_adr = {
+
+		icon = GFX_decision_generic_nationalism
+
+		name = reestablish_the_bosporan_kingdom
+
+		cost = 120
+
+		allowed = {
+			original_tag = ADR
+		}
+
+		available = {
+			
+			controls_state = 192 #Odessa
+			controls_state = 197 #Mykolaiv
+			controls_state = 196 #Kherson
+			controls_state = 137 #Crimea
+			controls_state = 226 #Dnipropetrovsk
+			controls_state = 200 #Zaporozhe
+			controls_state = 227 #Stalino
+			controls_state = 218 #Rostov
+			controls_state = 234 #Krasnodar
+
+			OR = {
+				CRI = {
+					exists = no
+				}
+				CRI = {
+					is_subject_of = SPR
+				}
+			}
+
+		}
+
+		visible = { 
+			original_tag = ADR
+			NOT = { has_global_flag = the_bosporan_kingdom_flag }
+			has_global_flag = form_roman_empire_flag_adr
+		}
+
+		complete_effect = { 
+ 
+
+			# Odessa
+			192 = { add_core_of = CRI }
+
+			# Mykolaiv
+			197 = { add_core_of = CRI }
+
+			# Kherson
+			196 = { add_core_of = CRI }
+
+			# Dnipropetrovsk
+			226 = { add_core_of = CRI }
+
+			# Zaporozhe
+			200 = { add_core_of = CRI }
+
+			# Stalino
+			227 = { add_core_of = CRI }
+
+			# Rostov
+			218 = { add_core_of = CRI }
+
+			# Krasnodar
+			234 = { add_core_of = CRI }
+				
+			CRI = {
+				transfer_state = 192
+				transfer_state = 197
+				transfer_state = 196
+				transfer_state = 137
+				transfer_state = 226
+				transfer_state = 200
+				transfer_state = 227
+				transfer_state = 218
+				transfer_state = 234
+
+				set_cosmetic_tag = regnum_bospori
+			}
+
+			  
+			hidden_effect = { 
+				set_global_flag = the_bosporan_kingdom_flag
+
+				IF = {
+					limit = {
+						SPR = {
+							has_government = fascism
+						}
+					}
+					SPR = {
+						set_politics = {
+							ruling_party = fascism
+						    elections_allowed = no
+						    last_election = "1935.12.17"
+						    election_frequency = 48
+						}
+					}
+				}
+				IF = {
+					limit = {
+						SPR = {
+							has_government = neutrality
+						}
+					}
+					SPR = {
+						set_politics = {
+							ruling_party = neutrality
+						    elections_allowed = no
+						    last_election = "1935.12.17"
+						    election_frequency = 48
+						}
+					}
+				}
+
+				ROOT = {
+					puppet = CRI
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+ADR_boris_kingdom_category = {
+	ADR_royal_parade = {
+	
+		icon = GFX_decision_generic_speech
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			has_completed_focus = ADR_the_kingdom_of_andorra
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = ADR_decision_kingdom
+			}
+		}
+
+		cost = 50
+
+		days_remove = 60
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			set_country_flag = ADR_decision_kingdom
+		}
+
+		remove_effect = {
+			clr_country_flag = ADR_decision_kingdom
+			add_stability = 0.05
+		}
+	}
+	ADR_rally_for_war = {
+	
+		icon = generic_military
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			has_completed_focus = ADR_the_kingdom_of_andorra
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = ADR_decision_kingdom
+			}
+			
+		}
+
+		cost = 50
+
+		days_remove = 60
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			set_country_flag = ADR_decision_kingdom
+		}
+
+		remove_effect = {
+			clr_country_flag = ADR_decision_kingdom
+			add_war_support = 0.05
+		}
+	}
+	ADR_fascist_propaganda = {
+	
+		icon = generic_military
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			has_completed_focus = ADR_the_kingdom_of_andorra
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = ADR_decision_kingdom
+			}
+			has_completed_focus = ADR_closer_ties_with_germany
+			
+		}
+
+		cost = 25
+
+		days_remove = 60
+
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			fascism_drift = 0.1
+			mobilization_speed = 0.1
+		}
+
+		complete_effect = {
+			set_country_flag = ADR_decision_kingdom
+		}
+
+		remove_effect = {
+			clr_country_flag = ADR_decision_kingdom
+		}
+	}
+	ADR_integrar_valenciaa = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_heirs_of_the_crown_of_aragon
+		}
+		
+		available = {
+			controls_state = 167
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 167
+		}
+	}
+	ADR_integrar_mallorcaa = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_heirs_of_the_crown_of_aragon
+		}
+		
+		available = {
+			controls_state = 177
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 177
+		}
+	}
+	ADR_integrar_sardiniaa = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_heirs_of_the_crown_of_aragon
+		}
+		
+		available = {
+			controls_state = 114
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 114
+		}
+	}
+	ADR_integrar_corsicaa = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_heirs_of_the_crown_of_aragon
+		}
+		
+		available = {
+			controls_state = 1
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 1
+		}
+	}
+	ADR_integrar_sicilia_y_napoless = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_heirs_of_the_crown_of_aragon
+		}
+		
+		available = {
+			controls_state = 849
+			controls_state = 117
+			controls_state = 156
+			controls_state = 115
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 849
+			add_state_core = 117
+			add_state_core = 156
+			add_state_core = 115
+			add_state_core = 116
+		}
+	}
+	ADR_dominios_en_greciaa = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_heirs_of_the_crown_of_aragon
+		}
+		
+		available = {
+			controls_state = 182
+			controls_state = 47
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 182
+			add_state_core = 47
+		}
+	}
+	ADR_integrar_occitaniaa = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_occitanian_brothership
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ADR_integrar_occitaniaa_tt
+				NOT = {
+					any_state = {
+						is_core_of = OCC
+						NOT = {
+							is_controlled_by = ADR
+						}
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = OCC
+				}
+				add_core_of = ADR
+			}
+		}
+	}
+	ADR_integrar_lituania = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_baron_of_skossyreff
+		}
+		
+		available = {
+			controls_state = 189
+			controls_state = 11
+			controls_state = 815
+			controls_state = 814
+			
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = LIT
+				}
+				add_core_of = ADR
+			}
+		}
+	}
+	ADR_integrar_latvia = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_baron_of_skossyreff
+		}
+		
+		available = {
+			controls_state = 190
+			controls_state = 809
+			controls_state = 808
+			controls_state = 810
+			controls_state = 12
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = LAT
+				}
+				add_core_of = ADR
+			}
+		}
+	}
+	ADR_integrar_estonia = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_baron_of_skossyreff
+		}
+		
+		available = {
+			controls_state = 811
+			controls_state = 812
+			controls_state = 813
+			controls_state = 13
+			controls_state = 191
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = EST
+				}
+				add_core_of = ADR
+			}
+		}
+	}
+	ADR_integrar_holanda = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_count_of_oranje
+		}
+		
+		available = {
+			controls_state = 7
+			controls_state = 35
+			controls_state = 36
+			
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = HOL
+				}
+				add_core_of = ADR
+			}
+		}
+	}
+	ADR_integrar_belgica = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_count_of_oranje
+		}
+		
+		available = {
+			controls_state = 6
+			controls_state = 34
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = BEL
+				}
+				add_core_of = ADR
+			}
+		}
+	}
+	ADR_integrar_luxemburgo = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_count_of_oranje
+		}
+		
+		available = {
+			controls_state = 8
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = LUX
+				}
+				add_core_of = ADR
+			}
+		}
+	}
+}
+ADR_pyrenean_revolt_category = {
+	ADR_preprare_state_spain = { # Decision to prepare the state
+		icon = {
+			key = GFX_decision_NOR_prepare_state_mon_0
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM = {
+					NOT = {	has_variable = ADR_state_preparation }  
+				}
+			}
+		}		
+		icon = {
+			key = GFX_decision_NOR_prepare_state_mon_1
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM ={
+					check_variable = { ADR_state_preparation = 1 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_NOR_prepare_state_mon_2
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM = {
+					check_variable = { ADR_state_preparation = 2 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_NOR_prepare_state_mon_3
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM = {
+					check_variable = { ADR_state_preparation = 3 }
+				}
+			}
+		}
+
+		visible = {  
+			has_war = no 
+			has_completed_focus = ADR_revolts_in_the_pyrenees
+			NOT = { has_completed_focus = ADR_spanish_uprising }
+		}
+
+		available = {
+			NOT = { has_country_flag = ADR_preparing_other_states }
+		}
+
+		on_map_mode = map_and_decisions_view
+
+		state_target = yes
+
+		targets = {	
+			state = 165 # Oslofjord
+			state = 794 # Telemark
+			state = 166 # Agder
+			state = 172 # Vestlandet
+			state = 792 # Trondelag
+		}
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 165 # Oslofjord
+					state = 794 # Telemark
+					state = 166 # Agder
+					state = 172 # Vestlandet
+					state = 792 # Trondelag
+				}
+				OR = {
+					check_variable = { ADR_state_preparation < 3 }
+					has_state_flag = ADR_preparing_state
+				}
+				NOT = {
+					is_controlled_by = ADR
+				}
+			}
+		}
+
+		cost = 30
+
+		days_remove = 30
+	 
+		complete_effect = {
+			FROM = { 
+				if = {
+					limit = {   
+						has_variable = ADR_state_preparation
+						check_variable = { ADR_state_preparation < 3 }
+					}
+					if = { # Going to Level 2 
+						limit = {
+							check_variable = { ADR_state_preparation = 1 }
+						}
+						add_to_variable = { ADR_state_preparation = 1 }
+						custom_effect_tooltip = ADR_prepare_catholic_one_more_div
+					}
+					else_if = { # Going to Level 3
+						limit = {
+							check_variable = { ADR_state_preparation = 2 }
+						}
+						add_to_variable = { ADR_state_preparation = 1 }
+						custom_effect_tooltip = ADR_prepare_catholic_one_more_div
+					}
+					set_state_flag = ADR_preparing_state
+				}
+				else_if = { # Adding the modifier if it doesn't have it 
+					limit = { # Going to Level 1 
+						NOT = {	has_variable = ADR_state_preparation }
+					} 
+					set_variable = { ADR_state_preparation = 1 } 
+					set_state_flag = ADR_preparing_state
+					custom_effect_tooltip = ADR_prepare_catholic_this_state_will_join_us
+				}
+				else = {
+					#log = "Max Level" 	
+				}
+			} 
+		}
+
+		remove_effect = {
+			FROM = {
+				clr_state_flag = ADR_preparing_state
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+	ADR_preprare_state_france = { # Decision to prepare the state
+		icon = {
+			key = GFX_decision_NOR_prepare_state_mon_0
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM = {
+					NOT = {	has_variable = ADR_state_preparation }  
+				}
+			}
+		}		
+		icon = {
+			key = GFX_decision_NOR_prepare_state_mon_1
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM ={
+					check_variable = { ADR_state_preparation = 1 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_NOR_prepare_state_mon_2
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM = {
+					check_variable = { ADR_state_preparation = 2 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_NOR_prepare_state_mon_3
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM = {
+					check_variable = { ADR_state_preparation = 3 }
+				}
+			}
+		}
+
+		visible = {
+			has_completed_focus = ADR_revolts_in_the_pyrenees
+			NOT = { has_completed_focus = ADR_french_uprising }
+		}
+
+		available = {
+			NOT = { has_country_flag = ADR_preparing_other_states }
+		}
+
+		on_map_mode = map_and_decisions_view
+
+		state_target = yes
+
+		targets = {	
+			state = 31 # Oslofjord
+			state = 806 # Telemark
+			state = 19
+		}
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 31 # Oslofjord
+					state = 806 # Telemark
+					state = 19 # Agder
+				}
+				OR = {
+					check_variable = { ADR_state_preparation < 3 }
+					has_state_flag = ADR_preparing_state
+				}
+				NOT = {
+					is_controlled_by = ADR
+				}
+			}
+		}
+
+		cost = 30
+
+		days_remove = 30
+	 
+		complete_effect = {
+			FROM = { 
+				if = {
+					limit = {   
+						has_variable = ADR_state_preparation
+						check_variable = { ADR_state_preparation < 3 }
+					}
+					if = { # Going to Level 2 
+						limit = {
+							check_variable = { ADR_state_preparation = 1 }
+						}
+						add_to_variable = { ADR_state_preparation = 1 }
+						custom_effect_tooltip = ADR_prepare_catholic_one_more_div
+					}
+					else_if = { # Going to Level 3
+						limit = {
+							check_variable = { ADR_state_preparation = 2 }
+						}
+						add_to_variable = { ADR_state_preparation = 1 }
+						custom_effect_tooltip = ADR_prepare_catholic_one_more_div
+					}
+					set_state_flag = ADR_preparing_state
+				}
+				else_if = { # Adding the modifier if it doesn't have it 
+					limit = { # Going to Level 1 
+						NOT = {	has_variable = ADR_state_preparation }
+					} 
+					set_variable = { ADR_state_preparation = 1 } 
+					set_state_flag = ADR_preparing_state
+					custom_effect_tooltip = ADR_prepare_catholic_this_state_will_join_us
+				}
+				else = {
+					#log = "Max Level" 	
+				}
+			} 
+		}
+
+		remove_effect = {
+			FROM = {
+				clr_state_flag = ADR_preparing_state
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+}
+ADR_preparar_alzamiento_frances_category = {
+	ADR_monarquicos_en_ejercito = {
+	
+		icon = GFX_decision_generic_speech
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			has_completed_focus = ADR_prepare_the_counter_revolution
+			NOT = {
+				has_completed_focus = ADR_return_to_the_throne
+			}
+		}
+		
+		available = {
+			has_completed_focus = ADR_monarchism_in_the_army
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+		
+		days_remove = 60
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+				add_political_power = -25
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = ADR_mas_generales_tt
+			add_manpower = 5000
+			hidden_effect = {
+				FRA = {
+					random_unit_leader = {
+						set_unit_leader_flag = POL_monarchy_sympathies_flag
+					}
+				}
+			}
+		}
+	}
+	ADR_preprare_state_france_king = { # Decision to prepare the state
+		icon = {
+			key = GFX_decision_NOR_prepare_state_mon_0
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM = {
+					NOT = {	has_variable = ADR_state_preparation }  
+				}
+			}
+		}		
+		icon = {
+			key = GFX_decision_NOR_prepare_state_mon_1
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM ={
+					check_variable = { ADR_state_preparation = 1 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_NOR_prepare_state_mon_2
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM = {
+					check_variable = { ADR_state_preparation = 2 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_NOR_prepare_state_mon_3
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM = {
+					check_variable = { ADR_state_preparation = 3 }
+				}
+			}
+		}
+
+		visible = {
+			has_completed_focus = ADR_prepare_the_counter_revolution
+			NOT = { has_completed_focus = ADR_return_to_the_throne }
+		}
+
+		available = {
+			NOT = { has_country_flag = ADR_preparing_other_states }
+		}
+
+		on_map_mode = map_and_decisions_view
+
+		state_target = yes
+
+		targets = {	
+			state = 31 # Oslofjord
+			state = 806 # Telemark
+			state = 19
+			state = 22 # Telemark
+			state = 25
+		}
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 31 # Oslofjord
+					state = 806 # Telemark
+					state = 19 # Agder
+					state = 22 # Telemark
+					state = 25
+				}
+				OR = {
+					check_variable = { ADR_state_preparation < 3 }
+					has_state_flag = ADR_preparing_state
+				}
+				NOT = {
+					is_controlled_by = ADR
+				}
+			}
+		}
+
+		cost = 30
+
+		days_remove = 30
+	 
+		complete_effect = {
+			FROM = { 
+				if = {
+					limit = {   
+						has_variable = ADR_state_preparation
+						check_variable = { ADR_state_preparation < 3 }
+					}
+					if = { # Going to Level 2 
+						limit = {
+							check_variable = { ADR_state_preparation = 1 }
+						}
+						add_to_variable = { ADR_state_preparation = 1 }
+						custom_effect_tooltip = ADR_prepare_catholic_one_more_div
+					}
+					else_if = { # Going to Level 3
+						limit = {
+							check_variable = { ADR_state_preparation = 2 }
+						}
+						add_to_variable = { ADR_state_preparation = 1 }
+						custom_effect_tooltip = ADR_prepare_catholic_one_more_div
+					}
+					set_state_flag = ADR_preparing_state
+				}
+				else_if = { # Adding the modifier if it doesn't have it 
+					limit = { # Going to Level 1 
+						NOT = {	has_variable = ADR_state_preparation }
+					} 
+					set_variable = { ADR_state_preparation = 1 } 
+					set_state_flag = ADR_preparing_state
+					custom_effect_tooltip = ADR_prepare_catholic_this_state_will_join_us
+				}
+				else = {
+					#log = "Max Level" 	
+				}
+			} 
+		}
+
+		remove_effect = {
+			FROM = {
+				clr_state_flag = ADR_preparing_state
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+}
+ADR_new_spanish_uprising_category = {
+	ADR_preprare_state_spanish = { # Decision to prepare the state
+		icon = {
+			key = GFX_decision_NOR_prepare_state_mon_0
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM = {
+					NOT = {	has_variable = ADR_state_preparation }  
+				}
+			}
+		}		
+		icon = {
+			key = GFX_decision_NOR_prepare_state_mon_1
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM ={
+					check_variable = { ADR_state_preparation = 1 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_NOR_prepare_state_mon_2
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM = {
+					check_variable = { ADR_state_preparation = 2 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_NOR_prepare_state_mon_3
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM = {
+					check_variable = { ADR_state_preparation = 3 }
+				}
+			}
+		}
+
+		visible = {  
+			has_war = no 
+			OR = {
+				has_completed_focus = ADR_prepare_the_carlist_uprising
+				has_completed_focus = ADR_bring_in_nationalist_exiles
+			}
+			NOT = { has_completed_focus = ADR_the_reconquista }
+		}
+
+		available = {
+			
+		}
+
+		on_map_mode = map_and_decisions_view
+
+		state_target = yes
+
+		targets = {	
+			state = 165 # Oslofjord
+			state = 794 # Telemark
+			state = 166 # Agder
+			state = 172 # Vestlandet
+			state = 792 # Trondelag
+		}
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 165 # Oslofjord
+					state = 794 # Telemark
+					state = 166 # Agder
+					state = 172 # Vestlandet
+					state = 792 # Trondelag
+				}
+				OR = {
+					check_variable = { ADR_state_preparation < 3 }
+					has_state_flag = ADR_preparing_state
+				}
+				NOT = {
+					is_controlled_by = ADR
+				}
+			}
+		}
+
+		cost = 30
+
+		days_remove = 30
+	 
+		complete_effect = {
+			FROM = { 
+				if = {
+					limit = {   
+						has_variable = ADR_state_preparation
+						check_variable = { ADR_state_preparation < 3 }
+					}
+					if = { # Going to Level 2 
+						limit = {
+							check_variable = { ADR_state_preparation = 1 }
+						}
+						add_to_variable = { ADR_state_preparation = 1 }
+						custom_effect_tooltip = ADR_prepare_catholic_one_more_div
+					}
+					else_if = { # Going to Level 3
+						limit = {
+							check_variable = { ADR_state_preparation = 2 }
+						}
+						add_to_variable = { ADR_state_preparation = 1 }
+						custom_effect_tooltip = ADR_prepare_catholic_one_more_div
+					}
+					set_state_flag = ADR_preparing_state
+				}
+				else_if = { # Adding the modifier if it doesn't have it 
+					limit = { # Going to Level 1 
+						NOT = {	has_variable = ADR_state_preparation }
+					} 
+					set_variable = { ADR_state_preparation = 1 } 
+					set_state_flag = ADR_preparing_state
+					custom_effect_tooltip = ADR_prepare_catholic_this_state_will_join_us
+				}
+				else = {
+					#log = "Max Level" 	
+				}
+			} 
+		}
+
+		remove_effect = {
+			FROM = {
+				clr_state_flag = ADR_preparing_state
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+}
+ADR_new_spanish_anarchist_uprising_category = {
+	ADR_preprare_state_anarchist = { # Decision to prepare the state
+		icon = {
+			key = GFX_decision_NOR_prepare_state_comm_0
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM = {
+					NOT = {	has_variable = ADR_state_preparation }  
+				}
+			}
+		}		
+		icon = {
+			key = GFX_decision_NOR_prepare_state_comm_1
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM ={
+					check_variable = { ADR_state_preparation = 1 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_NOR_prepare_state_comm_2
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM = {
+					check_variable = { ADR_state_preparation = 2 }
+				}
+			}
+		}
+		icon = {
+			key = GFX_decision_NOR_prepare_state_comm_3
+			trigger = {
+				has_country_flag = ADR_going_catholic
+				FROM = {
+					check_variable = { ADR_state_preparation = 3 }
+				}
+			}
+		}
+
+		visible = {  
+			has_war = no 
+			has_completed_focus = ADR_support_the_cnt_fai
+			NOT = { has_completed_focus = ADR_join_the_revolution }
+		}
+
+		available = {
+			
+		}
+
+		on_map_mode = map_and_decisions_view
+
+		state_target = yes
+
+		targets = {	
+			state = 165 # Oslofjord
+			state = 794 # Telemark
+			state = 166 # Agder
+			state = 172 # Vestlandet
+			state = 792 # Trondelag
+		}
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 165 # Oslofjord
+					state = 794 # Telemark
+					state = 166 # Agder
+					state = 172 # Vestlandet
+					state = 792 # Trondelag
+				}
+				OR = {
+					check_variable = { ADR_state_preparation < 3 }
+					has_state_flag = ADR_preparing_state
+				}
+				NOT = {
+					is_controlled_by = ADR
+				}
+			}
+		}
+
+		cost = 30
+
+		days_remove = 30
+	 
+		complete_effect = {
+			FROM = { 
+				if = {
+					limit = {   
+						has_variable = ADR_state_preparation
+						check_variable = { ADR_state_preparation < 3 }
+					}
+					if = { # Going to Level 2 
+						limit = {
+							check_variable = { ADR_state_preparation = 1 }
+						}
+						add_to_variable = { ADR_state_preparation = 1 }
+						custom_effect_tooltip = ADR_prepare_catholic_one_more_div
+					}
+					else_if = { # Going to Level 3
+						limit = {
+							check_variable = { ADR_state_preparation = 2 }
+						}
+						add_to_variable = { ADR_state_preparation = 1 }
+						custom_effect_tooltip = ADR_prepare_catholic_one_more_div
+					}
+					set_state_flag = ADR_preparing_state
+				}
+				else_if = { # Adding the modifier if it doesn't have it 
+					limit = { # Going to Level 1 
+						NOT = {	has_variable = ADR_state_preparation }
+					} 
+					set_variable = { ADR_state_preparation = 1 } 
+					set_state_flag = ADR_preparing_state
+					custom_effect_tooltip = ADR_prepare_catholic_this_state_will_join_us
+				}
+				else = {
+					#log = "Max Level" 	
+				}
+			} 
+		}
+
+		remove_effect = {
+			FROM = {
+				clr_state_flag = ADR_preparing_state
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+}
+ADR_scw_category = {
+	ADR_attack_nationalists = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			OR = {
+				has_completed_focus = ADR_for_a_catholic_spain
+				has_completed_focus = ADR_the_reconquista
+				has_completed_focus = ADR_join_the_revolution
+			}
+			SPA = {
+				exists = yes
+				NOT = {
+					has_war_with = ADR
+				}
+				NOT = {
+					is_puppet_of = ADR
+				}
+			}
+		}
+		
+		available = {
+			
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			create_wargoal = {
+				target = SPA
+				type = annex_everything
+			}
+		}
+	}
+	ADR_attack_anarquistas = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			OR = {
+				has_completed_focus = ADR_for_a_catholic_spain
+				has_completed_focus = ADR_the_reconquista
+			}
+			SPC = {
+				exists = yes
+				NOT = {
+					has_war_with = ADR
+				}
+				NOT = {
+					is_puppet_of = ADR
+				}
+			}
+		}
+		
+		available = {
+			
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			create_wargoal = {
+				target = SPC
+				type = annex_everything
+			}
+		}
+	}
+	ADR_attack_republicans = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			OR = {
+				has_completed_focus = ADR_for_a_catholic_spain
+				has_completed_focus = ADR_the_reconquista
+				has_completed_focus = ADR_join_the_revolution
+			}
+			SPD = {
+				exists = yes
+				NOT = {
+					has_war_with = ADR
+				}
+				NOT = {
+					is_puppet_of = ADR
+				}
+			}
+		}
+		
+		available = {
+			
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			create_wargoal = {
+				target = SPD
+				type = annex_everything
+			}
+		}
+	}
+	ADR_integrate_carlists = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			OR = {
+				has_completed_focus = ADR_for_a_catholic_spain
+				has_completed_focus = ADR_the_reconquista
+			}
+			NOT = {
+				has_completed_focus = ADR_bring_in_nationalist_exiles
+			}
+			SPB = {
+				exists = yes
+				NOT = {
+					has_war_with = ADR
+				}
+			}
+		}
+		
+		available = {
+			
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			SPB = {
+				every_character = {
+					limit = {
+						OR = {
+							is_corps_commander = yes 
+							is_navy_leader = yes
+							is_field_marshal = yes
+						}
+					}
+					set_nationality = ADR
+				}
+			}
+			every_country = {
+				limit = {
+					is_puppet_of = SPB
+				}
+				ROOT = {
+					puppet = PREV
+				}
+			}
+			annex_country = {
+				target = SPB
+				transfer_troops = yes
+			}
+		}
+	}
+	ADR_integrate_anarchists = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_join_the_revolution
+			SPC = {
+				exists = yes
+				NOT = {
+					has_war_with = ADR
+				}
+			}
+		}
+		
+		available = {
+			
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			SPC = {
+				every_character = {
+					limit = {
+						OR = {
+							is_corps_commander = yes 
+							is_navy_leader = yes
+							is_field_marshal = yes
+						}
+					}
+					set_nationality = ADR
+				}
+			}
+			every_country = {
+				limit = {
+					is_puppet_of = SPC
+				}
+				ROOT = {
+					puppet = PREV
+				}
+			}
+			annex_country = {
+				target = SPC
+				transfer_troops = yes
+			}
+		}
+	}
+	ADR_attack_carlists = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			OR = {
+				AND = {
+					has_completed_focus = ADR_the_reconquista
+					has_completed_focus = ADR_bring_in_nationalist_exiles
+				}
+				has_completed_focus = ADR_join_the_revolution
+			}
+			SPB = {
+				exists = yes
+				NOT = {
+					has_war_with = ADR
+				}
+				NOT = {
+					is_puppet_of = ADR
+				}
+			}
+		}
+		
+		available = {
+			
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			create_wargoal = {
+				target = SPB
+				type = annex_everything
+			}
+		}
+	}
+	ADR_eliminar_militias = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+			OR = {
+				has_template = "Guarnición Nacionalista"
+				has_template = "División de la Guardia de Asalto"
+				has_template = "Brigada de la Guardia Civil"
+				has_template = "Fifth Columnist Brigade"
+				has_template = "Guarnición Republicana"
+				has_template = "Carabineros"
+				has_template = "Brigada Popular"
+				has_template = "Brigada de Juventudes Sindicales"
+				has_template = "Brigada Anarquista"
+				has_template = "Soviet Special Brigades"
+				has_template = "International Marxist Brigades"
+				has_template = "Brigada Legionario"
+				has_template = "Brigada Internacionales"
+			}
+		}
+		
+		available = {
+			
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			delete_unit_template_and_units = { division_template = "Brigada Internacionales" }
+			delete_unit_template_and_units = { division_template = "Brigada Legionario" }
+			delete_unit_template_and_units = {
+				division_template = "Soviet Special Brigades"
+				disband = yes
+			}
+			delete_unit_template_and_units = {
+				division_template = "International Marxist Brigades"
+				disband = yes
+			}
+			delete_unit_template_and_units = {
+				division_template = "Guarnición Republicana"
+				disband = yes
+			}
+			delete_unit_template_and_units = {
+				division_template = "División de la Guardia de Asalto"
+				disband = yes
+			}
+			delete_unit_template_and_units = {
+				division_template = "Brigada de la Guardia Civil"
+				disband = yes
+			}
+			delete_unit_template_and_units = {
+				division_template = "Carabineros"
+				disband = yes
+			}
+			delete_unit_template_and_units = {
+				division_template = "Brigada Popular"
+				disband = yes
+			}
+			delete_unit_template_and_units = {
+				division_template = "Brigada de Juventudes Sindicales"
+				disband = yes
+			}
+			delete_unit_template_and_units = {
+				division_template = "Brigada Anarquista"
+				disband = yes
+			}
+			delete_unit_template_and_units = {
+				division_template = "Guarnición Nacionalista"
+				disband = yes
+			}
+			delete_unit_template_and_units = {
+				division_template = "Fifth Columnist Brigade"
+				disband = yes
+			}
+		}
+	}
+}
+ADR_charlemagne_empire_category = {
+	ADR_integrar_alemaniaa = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_reclaim_the_carolingian_empire
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = form_country_germany_required_states_tt
+				controls_state = 51
+				controls_state = 42
+				controls_state = 56
+				controls_state = 57
+				controls_state = 55
+				controls_state = 50
+				controls_state = 59
+				controls_state = 58
+				controls_state = 909 #New state of SCHLESWIG
+				controls_state = 60
+				controls_state = 54
+				controls_state = 52
+				controls_state = 53
+				controls_state = 61
+				controls_state = 64
+				controls_state = 65
+				controls_state = 62
+				controls_state = 68
+				controls_state = 66
+				controls_state = 67
+				controls_state = 63
+				controls_state = 5
+				controls_state = 763
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = GER
+				}
+				add_core_of = ADR
+			}
+		}
+	}
+	ADR_integrar_beneluxxx = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_reclaim_the_carolingian_empire
+		}
+		
+		available = {
+			controls_state = 8
+			# Netherlands
+			custom_trigger_tooltip = {
+				tooltip = form_eu_netherlands_required_states_tt
+				controls_state = 7
+				controls_state = 35
+				controls_state = 36
+			}
+			# Belgium
+			custom_trigger_tooltip = {
+				tooltip = form_eu_belgium_required_states_tt
+				controls_state = 6
+				controls_state = 34
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = BEL
+						is_core_of = HOL
+						is_core_of = LUX
+					}
+				}
+				add_core_of = ADR
+			}
+		}
+	}
+	ADR_integrar_suiza = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_reclaim_the_carolingian_empire
+		}
+		
+		available = {
+			controls_state = 845
+			controls_state = 846
+			controls_state = 847
+			controls_state = 3
+			controls_state = 151
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = SWI
+				}
+				add_core_of = ADR
+			}
+		}
+	}
+	ADR_integrar_austria = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_reclaim_the_carolingian_empire
+		}
+		
+		available = {
+			controls_state = 848
+			controls_state = 4
+			controls_state = 152
+			controls_state = 153
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = AUS
+				}
+				add_core_of = ADR
+			}
+		}
+	}
+	ADR_integrar_norteitalia = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_reclaim_the_carolingian_empire
+		}
+		
+		available = {
+			controls_state = 158
+			controls_state = 159
+			controls_state = 850
+			controls_state = 39
+			controls_state = 160
+			controls_state = 736
+			controls_state = 852
+			controls_state = 161
+			controls_state = 162
+			controls_state = 157
+			controls_state = 2
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 158
+			add_state_core = 159
+			add_state_core = 850
+			add_state_core = 39
+			add_state_core = 160
+			add_state_core = 736
+			add_state_core = 852
+			add_state_core = 161
+			add_state_core = 162
+			add_state_core = 157
+			add_state_core = 2
+		}
+	}
+	ADR_integrar_marcahispanica = {
+	
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = ADR
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = ADR_reclaim_the_carolingian_empire
+		}
+		
+		available = {
+			controls_state = 792
+			controls_state = 172
+			controls_state = 166
+			controls_state = 794
+			controls_state = 165
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			add_state_core = 792
+			add_state_core = 172
+			add_state_core = 166
+			add_state_core = 794
+			add_state_core = 165
+		}
+	}
+}

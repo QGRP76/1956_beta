@@ -1,59 +1,3183 @@
-add_namespace = andorra
+﻿add_namespace = mod_andorra
 
-# Andorra asks for Spanish guarantee
+
+
+
+# exigir foixberne
 country_event = {
-    id = andorra.1
-    picture = GFX_report_event_generic_conference
-	title = andorra.1.t
-	desc = andorra.1.d
-    fire_only_once = yes
+	id = mod_andorra.1
+	title = mod_andorra.1.t
+	desc = mod_andorra.1.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
 
-    is_triggered_only = yes
+	fire_only_once = no
 
-    option = {
-        name = andorra.1.a
-        ai_chance = {
+
+	
+
+	# siuuu
+	option = {
+		name = mod_andorra.1.a
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 3
+				has_government = fascism
+			}
+			
+		}
+		effect_tooltip = {
+			if = {
+				limit = {
+					806 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 806
+				}
+			}
+			if = {
+				limit = {
+					31 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 31
+				}
+			}
+			
+		}
+		ADR = {
+			country_event = { id = mod_andorra.2 hours = 6 random_hours = 6 } 
+		}
+
+		
+	}
+
+	# noo
+	option = {
+		name = mod_andorra.1.b
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
 			base = 10
-        }
-        give_guarantee = ADR
-        ADR = { country_event = { id = andorra.2 hours = 12 } }
-    }
-     
-    option = {
-        name = andorra.1.b
-        ai_chance = {
+			modifier = {
+				factor = 0.8
+				strength_ratio = { tag = FROM ratio < 0.5 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = FROM value > 99 }
+			}
+			modifier = {
+				factor = 0.7
+				strength_ratio = { tag = FROM ratio < 0.3 }
+			}
+			modifier = {
+				factor = 0.6
+				strength_ratio = { tag = FROM ratio < 0.2 }
+			}
+			modifier = {
+				factor = 0.5
+				strength_ratio = { tag = FROM ratio < 0.1 }
+			}
+			modifier = {
+				factor = 0
+				has_government = fascism
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				create_wargoal = {
+				    type = annex_everything
+				    target = ROOT
+				}
+			}
+		}
+		ADR = {
+			country_event = { id = mod_andorra.3 hours = 6 random_hours = 6 }
+		}
+	}
+
+}
+
+# entregan foixberne
+country_event = {
+	id = mod_andorra.2
+	title = mod_andorra.2.t
+	desc = mod_andorra.2.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+		tag = ADR
+	}
+
+	
+
+	# siuuu
+	option = {
+		name = mod_andorra.2.a
+		trigger = {
+			always = yes
+		}
+		if = {
+			limit = {
+				806 = {
+					
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 806
+				806 = {
+					add_compliance = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				31 = {
+					
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 31
+				31 = {
+					add_compliance = 40
+				}
+			}
+		}
+		
+	}
+
+}
+# no entregan foixberne
+country_event = {
+	id = mod_andorra.3
+	title = mod_andorra.3.t
+	desc = mod_andorra.3.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+		tag = ADR
+	}
+
+	
+
+	# noo
+	option = {
+		name = mod_andorra.3.a
+		trigger = {
+			always = yes
+		}
+		create_wargoal = {
+			target = FROM
+			type = annex_everything
+		}
+		
+	}
+	# meh
+	option = {
+		name = mod_andorra.3.b
+		trigger = {
+			always = yes
+		}
+		
+	}
+
+}
+
+
+
+# exigir aragon
+country_event = {
+	id = mod_andorra.4
+	title = mod_andorra.4.t
+	desc = mod_andorra.4.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+
+	
+
+	# siuuu
+	option = {
+		name = mod_andorra.4.a
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0.5
+				is_major = yes
+			}
+			
+		}
+		effect_tooltip = {
+			if = {
+				limit = {
+					47 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 47
+				}
+			}
+			if = {
+				limit = {
+					182 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 182
+				}
+			}
+			if = {
+				limit = {
+					115 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 115
+				}
+			}
+			if = {
+				limit = {
+					156 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 156
+				}
+			}
+			if = {
+				limit = {
+					117 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 117
+				}
+			}
+			if = {
+				limit = {
+					849 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 849
+				}
+			}
+			if = {
+				limit = {
+					1 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 1
+				}
+			}
+			if = {
+				limit = {
+					114 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 114
+				}
+			}
+			if = {
+				limit = {
+					22 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 22
+				}
+			}
+			if = {
+				limit = {
+					31 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 31
+				}
+			}
+			if = {
+				limit = {
+					168 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 168
+				}
+			}
+			if = {
+				limit = {
+					177 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 177
+				}
+			}
+			if = {
+				limit = {
+					166 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 166
+				}
+			}
+			if = {
+				limit = {
+					794 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 794
+				}
+			}
+			if = {
+				limit = {
+					167 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 167
+				}
+			}
+			if = {
+				limit = {
+					165 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 165
+				}
+			}
+			
+		}
+		ADR = {
+			country_event = { id = mod_andorra.5 hours = 6 random_hours = 6 } 
+		}
+
+		
+	}
+
+	# noo
+	option = {
+		name = mod_andorra.4.b
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0.8
+				strength_ratio = { tag = FROM ratio < 0.5 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = FROM value > 99 }
+			}
+			modifier = {
+				factor = 0.7
+				strength_ratio = { tag = FROM ratio < 0.3 }
+			}
+			modifier = {
+				factor = 0.6
+				strength_ratio = { tag = FROM ratio < 0.2 }
+			}
+			modifier = {
+				factor = 0.5
+				strength_ratio = { tag = FROM ratio < 0.1 }
+			}
+			modifier = {
+				factor = 0.2
+				OR = {
+					AND = {
+						tag = SPR
+						ADR = {
+							has_completed_focus = ADR_collaborate_with_nationalist_spain
+						}
+					}
+					is_in_faction_with = ADR
+				}
+			}
+			modifier = {
+				factor = 0
+				is_vichy_france = yes
+			}
+			modifier = {
+				factor = 0
+				is_puppet_of = ADR
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				create_wargoal = {
+				    type = annex_everything
+				    target = ROOT
+				}
+			}
+		}
+		ADR = {
+			country_event = { id = mod_andorra.3 hours = 6 random_hours = 6 }
+		}
+	}
+
+}
+
+# entregan aragon
+country_event = {
+	id = mod_andorra.5
+	title = mod_andorra.5.t
+	desc = mod_andorra.5.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+		tag = ADR
+	}
+
+	
+
+	# siuuu
+	option = {
+		name = mod_andorra.5.a
+		trigger = {
+			always = yes
+		}
+		if = {
+			limit = {
+				47 = {
+					
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 47
+				47 = {
+					add_compliance = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				182 = {
+					
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 182
+				182 = {
+					add_compliance = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				165 = {
+					
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 165
+				165 = {
+					add_compliance = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				115 = {
+					
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 115
+				115 = {
+					add_compliance = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				156 = {
+					
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 156
+				156 = {
+					add_compliance = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				117 = {
+					
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 117
+				117 = {
+					add_compliance = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				849 = {
+					
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 849
+				849 = {
+					add_compliance = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				1 = {
+					
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 1
+				1 = {
+					add_compliance = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				114 = {
+					
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 114
+				114 = {
+					add_compliance = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				168 = {
+					
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 168
+				168 = {
+					add_compliance = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				177 = {
+					
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 177
+				177 = {
+					add_compliance = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				166 = {
+					
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 166
+				166 = {
+					add_compliance = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				794 = {
+					
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 794
+				794 = {
+					add_compliance = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				167 = {
+					
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 167
+				167 = {
+					add_compliance = 40
+				}
+			}
+		}
+		
+	}
+
+}
+
+
+# cuestiondeliderazgo
+country_event = {
+	id = mod_andorra.6
+	title = mod_andorra.6.t
+	desc = mod_andorra.6.desc
+	picture = GFX_report_event_adr_generic_government
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+		tag = ADR
+	}
+
+	
+
+	# francesc!!
+	option = {
+		name = mod_andorra.6.a
+		trigger = {
+			always = yes
+		}
+		add_country_leader_role = {
+			character = ADR_francesc_cairat
+			country_leader = {
+				ideology = fascism_ideology
+				traits = { pragmatic_politician sindic_general }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes 
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		
+	}
+	# miquel!!
+	option = {
+		name = mod_andorra.6.b
+		trigger = {
+			always = yes
+		}
+		effect_tooltip = {
+			add_country_leader_role = {
+				character = ADR_miquel_mateu
+				country_leader = {
+					ideology = fascism_ideology
+					traits = { fascist_industrialistt }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes 
+			}
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		
+	}
+
+}
+
+# josemaria!!
+country_event = {
+	id = mod_andorra.7
+	title = mod_andorra.7.t
+	desc = mod_andorra.7.desc
+	picture = GFX_report_event_adr_opus
+	
+	is_triggered_only = no
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ADR
+		date > 1937.12.12
+		NOT = {
+			has_country_flag = ADR_adios_al_obispo
+		}
+	}
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	
+
+	# siuuu!!
+	option = {
+		name = mod_andorra.7.a
+		trigger = {
+			always = yes
+		}
+		add_stability = -0.05
+		set_country_flag = ADR_josemaria_esta_en_la_casa
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = ADR_josemaria
+		
+	}
+	# posbien
+	option = {
+		name = mod_andorra.7.b
+		trigger = {
+			always = yes
+		}
+		add_political_power = 75
+		
+	}
+
+}
+
+# Andorra apoya a degaulle
+country_event = {
+	id = mod_andorra.8
+	title = mod_andorra.8.t
+	desc = mod_andorra.8.desc
+	picture = GFX_report_event_adr_generic_frances
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		
+	}
+
+	
+
+	# Fantástico!
+	option = {
+		name = mod_andorra.8.a
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			base = 20
+		}
+		add_political_power = 75
+		ADR = { 
+			country_event = { id = mod_andorra.9 hours = 6 random_hours = 6 }
+		 }
+		
+	}
+	# nah
+	option = {
+		name = mod_andorra.8.b
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
 			base = 0
-        }
-        add_opinion_modifier = {
-            target = ROOT
-            modifier = SWI_refused_guarantee
-        }
-        ADR = { country_event = { id = andorra.3 hours = 12 } }
-    }
+		}
+		ADR = {
+			country_event = { id = mod_andorra.10 hours = 6 random_hours = 6 }
+		}
+	}
+
 }
+
+# Degaulle acepta!
 country_event = {
-    id = andorra.2
-    picture = GFX_report_event_generic_sign_treaty1
-	title = andorra.2.t
-	desc = andorra.2.d
-    fire_only_once = yes
+	id = mod_andorra.9
+	title = mod_andorra.9.t
+	desc = mod_andorra.9.desc
+	picture = GFX_report_event_adr_generic_frances
+	
+	is_triggered_only = yes
 
-    is_triggered_only = yes
+	fire_only_once = yes
 
-    option = {
-        name = andorra.2.a
-    } 
+	trigger = {
+		
+	}
+
+	
+
+	# Fantástico!
+	option = {
+		name = mod_andorra.9.a
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			base = 20
+		}
+		add_political_power = 120
+		add_war_support = 0.05
+		add_ideas = ADR_coprince_charles
+		diplomatic_relation = {
+		    country = FROM
+		    relation = non_aggression_pact
+		    active = yes
+		}
+		if = {
+			limit = {
+				VIC = {
+					exists = yes
+				}
+			}
+			VIC = {
+				country_event = { id = mod_andorra.14 hours = 6 random_hours = 6 }
+			}
+		}
+	}
+
 }
+
+
+# Degaulle rechaza!
 country_event = {
-    id = andorra.3
-    picture = GFX_report_event_tur_politician_march
-	title = andorra.3.t
-	desc = andorra.3.d
-    fire_only_once = yes
+	id = mod_andorra.10
+	title = mod_andorra.10.t
+	desc = mod_andorra.10.desc
+	picture = GFX_report_event_adr_generic_frances
+	
+	is_triggered_only = yes
 
-    is_triggered_only = yes
+	fire_only_once = yes
 
-    option = {
-        name = andorra.3.a
-    } 
+	trigger = {
+		
+	}
+
+	
+
+	# triste!
+	option = {
+		name = mod_andorra.10.a
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			base = 20
+		}
+		add_political_power = 70
+		add_war_support = 0.03
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = ADR_adios_a_los_gabachos
+				}
+			 }
+		}
+		set_country_flag = ADR_adios_a_los_gabachos
+		
+	}
+
 }
+
+
+# Andorra lidera la liberacion francesa
+country_event = {
+	id = mod_andorra.11
+	title = mod_andorra.11.t
+	desc = mod_andorra.11.desc
+	picture = GFX_report_event_adr_generic_frances
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		
+	}
+
+	
+
+	# Fantástico!
+	option = {
+		name = mod_andorra.11.a
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			base = 20
+		}
+		ADR = {
+			country_event = { id = mod_andorra.12 hours = 6 random_hours = 6 }
+		}
+		
+		
+	}
+	# nah
+	option = {
+		name = mod_andorra.11.b
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				ROOT ={
+					has_capitulated = yes
+				}
+			}
+		}
+		
+		ADR = {
+			country_event = { id = mod_andorra.13 hours = 6 random_hours = 6 }
+		}
+	}
+
+}
+
+# Degaulle acepta!
+country_event = {
+	id = mod_andorra.12
+	title = mod_andorra.12.t
+	desc = mod_andorra.12.desc
+	picture = GFX_report_event_adr_generic_frances
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		
+	}
+
+	
+
+	# Fantástico!
+	option = {
+		name = mod_andorra.12.a
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			base = 20
+		}
+		FRA = {
+			every_character = {
+				limit = {
+					OR = {
+						is_corps_commander = yes 
+						is_navy_leader = yes
+						is_field_marshal = yes
+					}
+				}
+				set_nationality = ADR
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = FRA
+			}
+			add_claim_by = ADR
+		}
+		annex_country = {
+			target = FRA
+			transfer_troops = yes
+			
+		}
+
+	}
+
+}
+
+
+# Degaulle rechaza!
+country_event = {
+	id = mod_andorra.13
+	title = mod_andorra.13.t
+	desc = mod_andorra.13.desc
+	picture = GFX_report_event_adr_generic_frances
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		
+	}
+
+	
+
+	# triste!
+	option = {
+		name = mod_andorra.13.a
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			base = 20
+		}
+		add_political_power = 70
+		add_war_support = 0.03
+		
+	}
+
+}
+
+
+# Vichy france: andorra befriends degaulle
+country_event = {
+	id = mod_andorra.14
+	title = mod_andorra.14.t
+	desc = mod_andorra.14.desc
+	picture = GFX_report_event_adr_generic_frances
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		
+	}
+
+	
+
+	# They will pay
+	option = {
+		name = mod_andorra.14.a
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				surrender_progress > 0.3
+			}
+		}
+		add_stability = -0.05
+		add_war_support = 0.05
+		set_country_flag = decision_to_claim_andorra
+		
+	}
+	
+	# It is not worth the trouble
+	option = {
+		name = mod_andorra.14.b
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_war = no
+			}
+		}
+		
+	}
+
+}
+
+
+# France claims andorra
+country_event = {
+	id = mod_andorra.15
+	title = mod_andorra.15.t
+	desc = mod_andorra.15.desc
+	picture = GFX_report_event_adr_generic_government
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		
+	}
+
+	
+
+	# ohno
+	option = {
+		name = mod_andorra.15.a
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			base = 20
+			
+		}
+		add_stability = -0.05
+		add_war_support = 0.05
+		
+	}
+	
+
+}
+
+
+# France prepares to invade andorra
+country_event = {
+	id = mod_andorra.16
+	title = mod_andorra.16.t
+	desc = mod_andorra.16.desc
+	picture = GFX_report_event_adr_generic_government
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		
+	}
+
+	
+
+	# ohno
+	option = {
+		name = mod_andorra.16.a
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			base = 20
+			
+		}
+		add_war_support = 0.05
+		add_manpower = 5000
+		custom_effect_tooltip = ADR_france_is_coming_tt
+		
+	}
+	
+
+}
+
+# New french coprince
+country_event = {
+	id = mod_andorra.17
+	title = mod_andorra.17.t
+	desc = mod_andorra.17.desc
+	picture = GFX_report_event_adr_generic_frances
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+		
+	}
+
+	
+
+	# francia se vuelve fascista
+	option = {
+		name = mod_andorra.17.a
+		trigger = {
+			FROM ={
+				original_tag = FRA
+				NOT = {
+					tag = VIC
+				}
+				has_government = fascism
+			}
+		}
+		ai_chance = {
+			base = 20
+			
+		}
+		remove_ideas = ADR_coprince_albert
+		add_ideas = ADR_coprince_fascist
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = ADR_lasmartes
+		custom_effect_tooltip = remove_political_advisor
+		show_ideas_tooltip = ADR_jean_baptiste
+		
+	}
+	
+	# francia se vuelve monarquica
+	option = {
+		name = mod_andorra.17.b
+		trigger = {
+			FROM ={
+				original_tag = FRA
+				NOT = {
+					tag = VIC
+				}
+				has_government = neutrality
+			}
+		}
+		ai_chance = {
+			base = 20
+			
+		}
+		remove_ideas = ADR_coprince_albert
+		add_ideas = ADR_coprince_king
+		
+	}
+	
+	# francia se vuelve vichy
+	option = {
+		name = mod_andorra.17.c
+		trigger = {
+			FROM ={
+				tag = VIC
+			}
+		}
+		ai_chance = {
+			base = 20
+			
+		}
+		remove_ideas = ADR_coprince_albert
+		add_ideas = ADR_coprince_petain
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = ADR_lasmartes
+		custom_effect_tooltip = remove_political_advisor
+		show_ideas_tooltip = ADR_jean_baptiste
+		
+	}
+
+	
+	# francia se vuelve comunista
+	option = {
+		name = mod_andorra.17.e
+		trigger = {
+			FROM ={
+				original_tag = FRA
+				NOT = {
+					tag = VIC
+				}
+				has_government = communism
+			}
+		}
+		ai_chance = {
+			base = 20
+			
+		}
+		remove_ideas = ADR_coprince_albert
+		set_country_flag = ADR_adios_a_los_gabachos
+		custom_effect_tooltip = remove_political_advisor
+		show_ideas_tooltip = ADR_jean_baptiste
+		
+		
+	}
+	
+	# no queremos fascismo gracias
+	option = {
+		name = mod_andorra.17.f
+		trigger = {
+			OR = {
+				FROM ={
+					has_government = fascism
+				}
+				AND = {
+					FROM ={
+						has_government = neutrality
+					}
+					ADR = {
+						has_completed_focus = ADR_allign_with_the_new_europe
+					}
+				}
+			}
+			NOT = {
+				has_completed_focus = ADR_ensure_our_neutrality
+			}
+		}
+		ai_chance = {
+			base = 20
+			
+		}
+		remove_ideas = ADR_coprince_albert
+		set_country_flag = ADR_adios_a_los_gabachos
+		custom_effect_tooltip = remove_political_advisor
+		show_ideas_tooltip = ADR_jean_baptiste
+		FROM = {
+			country_event = { id = mod_andorra.18 hours = 4 }
+		}
+	}
+	
+	# viva de gaulle carajo
+	option = {
+		name = mod_andorra.17.g
+		trigger = {
+			FROM ={
+				tag = VIC
+			}
+			FRA = {
+				has_capitulated = yes
+				has_country_leader = {
+					character = FRA_charles_de_gaulle
+					ruling_only = yes
+				}
+			}
+			NOT = {
+				has_war_with = FRA
+			}
+			NOT = {
+				has_completed_focus = ADR_ensure_our_neutrality
+				has_completed_focus = ADR_allign_with_the_new_europe
+			}
+		}
+		ai_chance = {
+			base = 20
+			
+		}
+		remove_ideas = ADR_coprince_albert
+		FRA = {
+			country_event = { id = mod_andorra.8 hours = 4 }
+		}
+		custom_effect_tooltip = ADR_support_de_gaulle_tt
+		event_option_tooltip = mod_andorra.9.a
+	}
+	
+
+}
+
+
+# Andorra rejects our prince
+country_event = {
+	id = mod_andorra.18
+	title = mod_andorra.18.t
+	desc = mod_andorra.18.desc
+	picture = GFX_report_event_adr_generic_frances
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		
+	}
+
+	
+
+	# They will pay
+	option = {
+		name = mod_andorra.14.a
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				surrender_progress > 0.3
+			}
+		}
+		add_stability = -0.05
+		add_war_support = 0.05
+		set_country_flag = decision_to_claim_andorra
+		
+	}
+	
+	# It is not worth the trouble
+	option = {
+		name = mod_andorra.14.b
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_war = no
+			}
+		}
+		
+	}
+
+}
+
+
+
+# solicita ayuda!
+country_event = {
+	id = mod_andorra.19
+	title = mod_andorra.19.t
+	desc = mod_andorra.19.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+	
+	}
+
+	
+
+	# vale
+	option = {
+		name = mod_andorra.19.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					OR = {
+						has_government = democratic
+						has_government = fascism
+					}
+				}
+			}
+		}
+		trigger = {
+			always = yes
+		}
+		add_political_power = 50
+		add_manpower = -2000
+		effect_tooltip = {
+			FROM = { add_manpower = 500 }
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -500
+			producer = ROOT
+		}
+		hidden_effect = {
+			ADR = {
+				country_event = {
+					id = mod_andorra.20
+					days = 1
+				}
+			}
+		}
+	}
+	# siuuu
+	option = {
+		name = mod_andorra.19.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				ROOT = {
+					has_war = yes
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_government = neutrality
+					has_government = democratic
+					is_major = no
+				}
+			}
+			modifier = {
+				factor = 400
+				ROOT = {
+					original_tag = FRA
+					ADR = {
+						NOT = {
+							has_country_flag = ADR_adios_a_los_gabachos
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			always = yes
+		}
+		add_ideas = ADR_voluntarios
+		add_opinion_modifier = { target = ROOT modifier = SPA_spanish_civil_war_commitments }
+		add_ai_strategy = {
+			type = send_volunteers_desire
+			id = ADR
+			value = 200
+		}
+		set_rule = { can_send_volunteers = yes }
+	}
+	# no
+	option = {
+		name = mod_andorra.19.c
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				ROOT = {
+					has_government = democratic
+					NOT = {
+						tag = JAP
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				ROOT = {
+					has_government = neutrality
+				}
+			}
+			modifier = {
+				factor = 20
+				ROOT = {
+					OR = {
+						original_tag = GER
+						original_tag = ITA
+					}
+					has_government = fascism
+				}
+				any_country = {
+					original_tag = SPR
+					has_volunteers_amount_from = {
+						tag = ROOT
+						count > 0
+					}
+				}
+			}
+		}
+		trigger = {
+			always = yes
+		}
+	}
+
+}
+
+# mandan armas
+country_event = {
+	id = mod_andorra.20
+	title = mod_andorra.20.t
+	desc = mod_andorra.20.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+		
+	}
+
+	
+
+	# Popular Front
+	option = {
+		name = mod_andorra.20.a
+		add_manpower = 2000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 500
+			producer = FROM
+		}
+		trigger = {
+			always = yes
+		}
+	}
+
+}
+
+
+
+# exigir mediterraneo
+country_event = {
+	id = mod_andorra.21
+	title = mod_andorra.21.t
+	desc = mod_andorra.21.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+
+	
+
+	# siuuu
+	option = {
+		name = mod_andorra.21.a
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0.5
+				is_major = yes
+			}
+			
+		}
+		effect_tooltip = {
+			if = {
+				limit = {
+					1 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 1
+				}
+			}
+			if = {
+				limit = {
+					114 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 114
+				}
+			}
+			if = {
+				limit = {
+					115 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 115
+				}
+			}
+			if = {
+				limit = {
+					116 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 116
+				}
+			}
+			if = {
+				limit = {
+					182 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 182
+				}
+			}
+			if = {
+				limit = {
+					187 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 187
+				}
+			}
+			if = {
+				limit = {
+					164 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 164
+				}
+			}
+			if = {
+				limit = {
+					183 = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+					}
+				}
+				ADR = {
+					transfer_state = 183
+				}
+			}
+		}
+		ADR = {
+			country_event = { id = mod_andorra.22 hours = 6 random_hours = 6 } 
+		}
+
+		
+	}
+
+	# noo
+	option = {
+		name = mod_andorra.21.b
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0.8
+				strength_ratio = { tag = FROM ratio < 0.5 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = FROM value > 99 }
+			}
+			modifier = {
+				factor = 0.7
+				strength_ratio = { tag = FROM ratio < 0.3 }
+			}
+			modifier = {
+				factor = 0.6
+				strength_ratio = { tag = FROM ratio < 0.2 }
+			}
+			modifier = {
+				factor = 0.5
+				strength_ratio = { tag = FROM ratio < 0.1 }
+			}
+			modifier = {
+				factor = 0.2
+				tag = SPR
+				ADR = {
+					has_completed_focus = ADR_support_the_spanish_republic
+				}
+			}
+			modifier = {
+				factor = 0
+				is_vichy_france = yes
+			}
+			modifier = {
+				factor = 0
+				is_puppet_of = ADR
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				create_wargoal = {
+				    type = annex_everything
+				    target = ROOT
+				}
+			}
+		}
+		ADR = {
+			country_event = { id = mod_andorra.3 hours = 6 random_hours = 6 }
+		}
+	}
+
+}
+
+# entregan mediterraneo
+country_event = {
+	id = mod_andorra.22
+	title = mod_andorra.22.t
+	desc = mod_andorra.22.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+		tag = ADR
+	}
+
+	
+
+	# siuuu
+	option = {
+		name = mod_andorra.22.a
+		trigger = {
+			always = yes
+		}
+		if = {
+			limit = {
+				1 = {
+					is_owned_by = FROM
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 1
+			}
+		}
+		if = {
+			limit = {
+				114 = {
+					is_owned_by = FROM
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 114
+			}
+		}
+		if = {
+			limit = {
+				115 = {
+					is_owned_by = FROM
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 115
+			}
+		}
+		if = {
+			limit = {
+				116 = {
+					is_owned_by = FROM
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 116
+			}
+		}
+		if = {
+			limit = {
+				182 = {
+					is_owned_by = FROM
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 182
+			}
+		}
+		if = {
+			limit = {
+				187 = {
+					is_owned_by = FROM
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 187
+			}
+		}
+		if = {
+			limit = {
+				164 = {
+					is_owned_by = FROM
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 164
+			}
+		}
+		if = {
+			limit = {
+				183 = {
+					is_owned_by = FROM
+					is_fully_controlled_by = FROM
+				}
+			}
+			ADR = {
+				transfer_state = 183
+			}
+		}
+		
+	}
+
+}
+
+
+# cuestiondeliderazgocatalan
+country_event = {
+	id = mod_andorra.23
+	title = mod_andorra.23.t
+	desc = mod_andorra.23.desc
+	picture = GFX_report_event_adr_generic_government
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+		tag = ADR
+	}
+
+	
+
+	# mantener!!
+	option = {
+		name = mod_andorra.23.a
+		trigger = {
+			always = yes
+		}
+		
+		ai_chance = {
+			base = 1
+			
+		}
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = 70
+		
+	}
+	# lluis!!
+	option = {
+		name = mod_andorra.23.b
+		trigger = {
+			always = yes
+		}
+		
+		ai_chance = {
+			base = 1
+			
+		}
+		
+		add_country_leader_role = {
+			character = ADR_lluis_companys
+			country_leader = {
+				ideology = liberalism
+				traits = { left_leaning_politician }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes 
+		}
+		
+	}
+	
+	# daniel!!
+	option = {
+		name = mod_andorra.23.c
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			base = 1
+			
+		}
+		
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.2
+		}
+		add_country_leader_role = {
+			character = ADR_daniel_cardona
+			country_leader = {
+				ideology = fascism_ideology
+				traits = { irlandes }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes 
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = fascism
+			long_name = ADR_estat_party_long
+			name = ADR_estat_party
+		}
+		
+	}
+
+}
+
+
+# los catalanes declaran la independencia
+country_event = {
+	id = mod_andorra.24
+	title = mod_andorra.24.t
+	desc = mod_andorra.24.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+		
+	}
+
+	
+
+	# se van a enterar!!
+	option = {
+		name = mod_andorra.24.a
+		trigger = {
+			always = yes
+		}
+		
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+			}
+			
+		}
+		declare_war_on = {
+			target = ADR
+			type = annex_everything
+		}
+		
+	}
+	# meh
+	option = {
+		name = mod_andorra.24.b
+		trigger = {
+			always = yes
+		}
+		
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					has_government = democratic
+					has_government = communism
+				}
+			}
+		}
+		
+		
+	}
+	
+
+}
+
+
+# se muere el obispo
+country_event = {
+	id = mod_andorra.25
+	title = mod_andorra.25.t
+	desc = mod_andorra.25.desc
+	picture = GFX_report_event_adr_generic_justiguitart
+	
+	is_triggered_only = no
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ADR
+		date > 1940.1.1
+		NOT = {
+			has_country_flag = ADR_adios_al_obispo
+		}
+	}
+	mean_time_to_happen = {
+		days = 15
+	}
+
+	
+
+	# esperemos al vaticano
+	option = {
+		name = mod_andorra.25.a
+		trigger = {
+			NOT = {
+				has_completed_focus = ADR_the_sovereign_prince_of_the_valleys
+			}
+		}
+		set_country_flag = ADR_justi_ha_muerto
+		if = {
+			limit = { has_idea = ADR_coprince_justi }
+			remove_ideas = ADR_coprince_justi
+			add_ideas = ADR_coprince_sedevacante
+		}
+		if = {
+			limit = {
+				has_country_leader = {
+					character = ADR_justi_guitart
+					ruling_only = yes
+				}
+			 }
+			 retire_ideology_leader = neutrality
+			 add_country_leader_role = {
+				character = ADR_jaume_sansa
+				country_leader = {
+					ideology = despotism
+					traits = { episcopal_representative }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes 
+			}
+		}
+		set_country_flag = ADR_esperando_al_vaticano
+		custom_effect_tooltip = ADR_nuevo_obispo_en_tres_years
+		if = {
+			limit = {
+				has_country_leader = {
+					character = ADR_justi_guitart
+					ruling_only = yes
+				}
+			}
+			effect_tooltip = {
+				if = {
+					limit = {
+						has_completed_focus = ADR_the_holy_andorran_empire
+					 }
+					 add_country_leader_role = {
+						character = ADR_ramon_iglesias
+						country_leader = {
+							ideology = despotism
+							traits = { sovereign_prince holy_andorran_emperor military_priest }
+							expire = "1965.1.1"
+						}
+						promote_leader = yes 
+					}
+				}
+				else = {
+					add_country_leader_role = {
+						character = ADR_ramon_iglesias
+						country_leader = {
+							ideology = despotism
+							traits = { sovereign_prince military_priest }
+							expire = "1965.1.1"
+						}
+						promote_leader = yes 
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_idea = ADR_coprince_justi
+			}
+			effect_tooltip = {
+				add_ideas = ADR_coprince_ramon
+			}
+		}
+		
+	}
+	# necesitamos al obispo cuanto antes!
+	option = {
+		name = mod_andorra.25.b
+		trigger = {
+			always = yes
+		}
+		set_country_flag = ADR_justi_ha_muerto
+		if = {
+			limit = { has_idea = ADR_coprince_justi }
+			remove_ideas = ADR_coprince_justi
+			add_ideas = ADR_coprince_sedevacante
+		}
+		if = {
+			limit = {
+				has_country_leader = {
+					character = ADR_justi_guitart
+					ruling_only = yes
+				}
+			 }
+			 retire_ideology_leader = neutrality
+			 add_country_leader_role = {
+				character = ADR_jaume_sansa
+				country_leader = {
+					ideology = despotism
+					traits = { episcopal_representative }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes 
+			}
+		}
+		custom_effect_tooltip = ADR_nuevo_obispo_pronto
+		if = {
+			limit = {
+				has_country_leader = {
+					character = ADR_justi_guitart
+					ruling_only = yes
+				}
+			}
+			effect_tooltip = {
+				if = {
+					limit = {
+						has_completed_focus = ADR_the_holy_andorran_empire
+					 }
+					 add_country_leader_role = {
+						character = ADR_ramon_iglesias
+						country_leader = {
+							ideology = despotism
+							traits = { sovereign_prince holy_andorran_emperor military_priest }
+							expire = "1965.1.1"
+						}
+						promote_leader = yes 
+					}
+				}
+				else = {
+					add_country_leader_role = {
+						character = ADR_ramon_iglesias
+						country_leader = {
+							ideology = despotism
+							traits = { sovereign_prince military_priest }
+							expire = "1965.1.1"
+						}
+						promote_leader = yes 
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_idea = ADR_coprince_justi
+			}
+			effect_tooltip = {
+				add_ideas = ADR_coprince_ramon
+			}
+		}
+		hidden_effect = {
+			country_event = { id = mod_andorra.27 days = 30 }
+		}
+		
+	}
+	# josemaria será nuestro obispo!!
+	option = {
+		name = mod_andorra.25.c
+		trigger = {
+			always = yes
+			has_completed_focus = ADR_use_the_opus_dei
+		}
+		set_country_flag = ADR_justi_ha_muerto
+		if = {
+			limit = {
+				has_country_leader = {
+					character = ADR_justi_guitart
+					ruling_only = yes
+				}
+			 }
+			 retire_ideology_leader = neutrality
+			 add_country_leader_role = {
+				character = ADR_jaume_sansa
+				country_leader = {
+					ideology = despotism
+					traits = { episcopal_representative }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes 
+			}
+		}
+		custom_effect_tooltip = ADR_obispo_sera_josemaria
+		effect_tooltip = {
+			if = {
+				limit = {
+					has_completed_focus = ADR_the_holy_andorran_empire
+				 }
+				 add_country_leader_role = {
+					character = ADR_josemaria
+					country_leader = {
+						ideology = despotism
+						traits = { sovereign_prince holy_andorran_emperor fame_of_saintliness }
+						expire = "1965.1.1"
+					}
+					promote_leader = yes 
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character = ADR_josemaria
+					country_leader = {
+						ideology = despotism
+						traits = { sovereign_prince fame_of_saintliness }
+						expire = "1965.1.1"
+					}
+					promote_leader = yes 
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = mod_andorra.28 days = 30 }
+		}
+		
+	}
+
+}
+
+
+# ramon iglesias! (esperamos al obispo)
+country_event = {
+	id = mod_andorra.26
+	title = mod_andorra.26.t
+	desc = mod_andorra.26.desc
+	picture = GFX_report_event_adr_generic_ramoniglesias
+	
+	is_triggered_only = no
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ADR
+		date > 1943.4.4
+		NOT = {
+			has_country_flag = ADR_adios_al_obispo
+		}
+		has_country_flag = ADR_esperando_al_vaticano
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	
+
+	# siuuuu
+	option = {
+		name = mod_andorra.26.a
+		trigger = {
+			always = yes
+		}
+		if = {
+			limit = { has_idea = ADR_coprince_sedevacante }
+			remove_ideas = ADR_coprince_sedevacante
+			add_ideas = ADR_coprince_ramon
+		}
+		if = {
+			limit = {
+				has_country_leader = {
+					character = ADR_jaume_sansa
+					ruling_only = yes
+				}
+			 }
+			 retire_ideology_leader = neutrality
+			 if = {
+				limit = {
+					has_completed_focus = ADR_the_holy_andorran_empire
+				 }
+			 add_country_leader_role = {
+					character = ADR_ramon_iglesias
+					country_leader = {
+						ideology = despotism
+						traits = { sovereign_prince holy_andorran_emperor military_priest }
+						expire = "1965.1.1"
+					}
+					promote_leader = yes 
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character = ADR_ramon_iglesias
+					country_leader = {
+						ideology = despotism
+						traits = { sovereign_prince military_priest }
+						expire = "1965.1.1"
+					}
+					promote_leader = yes 
+				}
+			}
+		}
+		
+	}
+
+}
+
+
+# ramon iglesias pronto!!
+country_event = {
+	id = mod_andorra.27
+	title = mod_andorra.27.t
+	desc = mod_andorra.27.desc
+	picture = GFX_report_event_adr_generic_ramoniglesias
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+		tag = ADR
+	}
+
+	
+
+	# siuuuu
+	option = {
+		name = mod_andorra.27.a
+		trigger = {
+			always = yes
+		}
+		if = {
+			limit = { has_idea = ADR_coprince_sedevacante }
+			remove_ideas = ADR_coprince_sedevacante
+			add_ideas = ADR_coprince_ramon
+		}
+		if = {
+			limit = {
+				has_country_leader = {
+					character = ADR_jaume_sansa
+					ruling_only = yes
+				}
+			 }
+			 retire_ideology_leader = neutrality
+			 if = {
+				limit = {
+					has_completed_focus = ADR_the_holy_andorran_empire
+				 }
+			 add_country_leader_role = {
+					character = ADR_ramon_iglesias
+					country_leader = {
+						ideology = despotism
+						traits = { sovereign_prince holy_andorran_emperor military_priest }
+						expire = "1965.1.1"
+					}
+					promote_leader = yes 
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character = ADR_ramon_iglesias
+					country_leader = {
+						ideology = despotism
+						traits = { sovereign_prince military_priest }
+						expire = "1965.1.1"
+					}
+					promote_leader = yes 
+				}
+			}
+		}
+		
+	}
+
+}
+
+
+# jose maria obispo!!
+country_event = {
+	id = mod_andorra.28
+	title = mod_andorra.28.t
+	desc = mod_andorra.28.desc
+	picture = GFX_report_event_adr_generic_ramoniglesias
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+		tag = ADR
+	}
+
+	
+
+	# siuuuu
+	option = {
+		name = mod_andorra.28.a
+		trigger = {
+			always = yes
+		}
+		retire_ideology_leader = neutrality
+
+		set_country_flag = ADR_josemaria_es_lider
+		mark_focus_tree_layout_dirty = yes
+
+		if = {
+			limit = {
+				has_completed_focus = ADR_the_holy_andorran_empire
+			 }
+			 add_country_leader_role = {
+				character = ADR_josemaria
+				country_leader = {
+					ideology = despotism
+					traits = { sovereign_prince holy_andorran_emperor fame_of_saintliness }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes 
+			}
+		}
+		else = {
+			add_country_leader_role = {
+				character = ADR_josemaria
+				country_leader = {
+					ideology = despotism
+					traits = { sovereign_prince fame_of_saintliness }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes 
+			}
+		}
+	}
+
+}
+
+
+# exigir sumision
+country_event = {
+	id = mod_andorra.29
+	title = mod_andorra.29.t
+	desc = mod_andorra.29.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+
+	
+
+	# siuuu
+	option = {
+		name = mod_andorra.29.a
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 0
+				OR = {
+					strength_ratio = { tag = FROM ratio > 1 }
+					is_major = yes
+				}
+				is_vichy_france = no
+			}
+			
+		}
+		effect_tooltip = {
+			FROM = { puppet = ROOT }
+		}
+		ADR = {
+			country_event = { id = mod_andorra.30 hours = 6 random_hours = 6 } 
+		}
+
+		
+	}
+
+	# noo
+	option = {
+		name = mod_andorra.29.b
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			base = 15
+			modifier = {
+				factor = 0.8
+				strength_ratio = { tag = FROM ratio < 0.5 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = FROM value > 99 }
+			}
+			modifier = {
+				factor = 0.8
+				strength_ratio = { tag = FROM ratio < 0.3 }
+			}
+			modifier = {
+				factor = 0.8
+				strength_ratio = { tag = FROM ratio < 0.2 }
+			}
+			modifier = {
+				factor = 0.8
+				strength_ratio = { tag = FROM ratio < 0.1 }
+			}
+			modifier = {
+				factor = 0
+				is_vichy_france = yes
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				create_wargoal = {
+				    type = puppet_wargoal_focus
+				    target = ROOT
+				}
+			}
+		}
+		ADR = {
+			country_event = { id = mod_andorra.31 hours = 6 random_hours = 6 }
+		}
+	}
+
+}
+
+
+# aceptan sumision
+country_event = {
+	id = mod_andorra.30
+	title = mod_andorra.30.t
+	desc = mod_andorra.30.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+		tag = ADR
+	}
+
+	
+
+	# siuuu
+	option = {
+		name = mod_andorra.30.a
+		trigger = {
+			always = yes
+		}
+		puppet = FROM
+		
+	}
+
+}
+
+# rechazan sumision
+country_event = {
+	id = mod_andorra.31
+	title = mod_andorra.31.t
+	desc = mod_andorra.31.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+		tag = ADR
+	}
+
+	
+
+	# melaspagaran
+	option = {
+		name = mod_andorra.31.a
+		trigger = {
+			always = yes
+		}
+		create_wargoal = {
+		    type = puppet_wargoal_focus
+		    target = FROM
+		}
+		if = {
+			limit = {
+				FROM ={
+					is_in_faction_with = ADR
+					is_puppet = no
+				}
+			}
+			remove_from_faction = FROM
+		}
+		
+	}
+	
+	# queselevaahacer
+	option = {
+		name = mod_andorra.31.b
+		trigger = {
+			always = yes
+		}
+		
+	}
+
+}
+
+# exigir anexion
+country_event = {
+	id = mod_andorra.32
+	title = mod_andorra.32.t
+	desc = mod_andorra.32.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+
+	
+
+	# siuuu
+	option = {
+		name = mod_andorra.32.a
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			factor = 15
+			
+			
+		}
+		effect_tooltip = {
+			FROM = {
+				annex_country = {
+					target = ROOT
+				}
+			}
+		}
+		ADR = {
+			country_event = { id = mod_andorra.33 hours = 6 random_hours = 6 } 
+		}
+
+		
+	}
+
+	# noo
+	option = {
+		name = mod_andorra.32.b
+		trigger = {
+			always = yes
+		}
+		ai_chance = {
+			base = 15
+			modifier = {
+				factor = 0.8
+				strength_ratio = { tag = FROM ratio < 0.5 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = FROM value > 99 }
+			}
+			modifier = {
+				factor = 0.8
+				strength_ratio = { tag = FROM ratio < 0.3 }
+			}
+			modifier = {
+				factor = 0.8
+				strength_ratio = { tag = FROM ratio < 0.2 }
+			}
+			modifier = {
+				factor = 0.8
+				strength_ratio = { tag = FROM ratio < 0.1 }
+			}
+			modifier = {
+				factor = 0
+				tag = LIT
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				create_wargoal = {
+				    type = annex_everything
+				    target = ROOT
+				}
+			}
+		}
+		ADR = {
+			country_event = { id = mod_andorra.34 hours = 6 random_hours = 6 }
+		}
+	}
+
+}
+
+
+# aceptan anexion
+country_event = {
+	id = mod_andorra.33
+	title = mod_andorra.33.t
+	desc = mod_andorra.33.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+		tag = ADR
+	}
+
+	
+
+	# siuuu
+	option = {
+		name = mod_andorra.30.a
+		trigger = {
+			always = yes
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						tag = BEL
+						tag = LUX
+					}
+				}
+			}
+			every_character = {
+				limit = {
+					OR = {
+						is_corps_commander = yes 
+						is_navy_leader = yes
+						is_field_marshal = yes
+					}
+				}
+				set_nationality = ADR
+			}
+		}
+		every_country = {
+			limit = {
+				is_puppet_of = FROM
+			}
+			ROOT = {
+				puppet = PREV
+			}
+		}
+		annex_country = {
+			target = FROM
+			transfer_troops = yes
+		}
+		
+	}
+
+}
+
+# rechazan anexion
+country_event = {
+	id = mod_andorra.34
+	title = mod_andorra.34.t
+	desc = mod_andorra.34.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+		tag = ADR
+	}
+
+	
+
+	# melaspagaran
+	option = {
+		name = mod_andorra.34.a
+		trigger = {
+			always = yes
+		}
+		create_wargoal = {
+		    type = annex_everything
+		    target = FROM
+		}
+		if = {
+			limit = {
+				FROM ={
+					is_in_faction_with = ADR
+					is_puppet = no
+				}
+			}
+			remove_from_faction = FROM
+		}
+		
+	}
+	
+	# queselevaahacer
+	option = {
+		name = mod_andorra.34.b
+		trigger = {
+			always = yes
+		}
+		
+	}
+
+}
+
+
+
+
+# pyrenean uprising
+country_event = {
+	id = mod_andorra.35
+	title = mod_andorra.35.t
+	desc = mod_andorra.35.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+		
+	}
+
+	
+
+	# se van a enterar!!
+	option = {
+		name = mod_andorra.35.a
+		trigger = {
+			always = yes
+		}
+		
+		ai_chance = {
+			base = 3
+			modifier = {
+				factor = 0
+				tag = SPR
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+			}
+			modifier = {
+				factor = 0
+				tag = FRA
+				has_idea = FRA_disjointed_government
+			}
+			
+		}
+		declare_war_on = {
+			target = ADR
+			type = annex_everything
+		}
+		
+	}
+	# meh
+	option = {
+		name = mod_andorra.35.b
+		trigger = {
+			always = yes
+		}
+		
+		ai_chance = {
+			base = 1
+			
+		}
+		
+		
+	}
+	
+
+}
+
+
+# angry bishop!!
+country_event = {
+	id = mod_andorra.36
+	title = mod_andorra.36.t
+	desc = mod_andorra.36.desc
+	picture = GFX_report_event_adr_generic_justiguitart
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+		tag = ADR
+	}
+
+	
+
+	# vaya
+	option = {
+		name = mod_andorra.36.a
+		trigger = {
+			always = yes
+		}
+		add_ideas = ADR_angry_church
+		
+	}
+	
+
+}
+
+
+
+# cuestiondereyes
+country_event = {
+	id = mod_andorra.37
+	title = mod_andorra.37.t
+	desc = mod_andorra.37.desc
+	picture = GFX_report_event_adr_generic_government
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+		tag = ADR
+	}
+
+	
+
+	# xavier!!
+	option = {
+		name = mod_andorra.37.a
+		trigger = {
+			always = yes
+		}
+		swap_ruler_traits = {
+			remove = carlist_regent
+			add = carlist_king
+		}
+		ADR_xavier_de_borbon = {
+			set_portraits = {
+				civilian = {
+					large = GFX_portrait_ADR_xavier_de_borbon_king
+					small = GFX_portrait_ADR_xavier_de_borbon_small
+				}
+			}
+		}
+		
+	}
+	# juan!!
+	option = {
+		name = mod_andorra.37.b
+		trigger = {
+			always = yes
+		}
+		add_country_leader_role = {
+			character = ADR_juan_de_borbon
+			country_leader = {
+				ideology = despotism
+				traits = { reformer_king }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes 
+		}
+		set_country_flag = ADR_juan_de_borbon_en_la_casa
+		show_unit_leaders_tooltip = ADR_juan_de_borbon
+		
+	}
+	# carlos!!
+	option = {
+		name = mod_andorra.37.c
+		trigger = {
+			always = yes
+		}
+		add_country_leader_role = {
+			character = ADR_carlos_pio
+			country_leader = {
+				ideology = despotism
+				traits = { expansionist_king }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes 
+		}
+		set_country_flag = ADR_carlos_pio_en_la_casa
+		show_unit_leaders_tooltip = ADR_carlos_pio
+	}
+
+}
+
+
+# se muere Jean
+country_event = {
+	id = mod_andorra.38
+	title = mod_andorra.38.t
+	desc = mod_andorra.38.desc
+	picture = GFX_report_event_adr_generic_government
+	
+	is_triggered_only = no
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ADR
+		date > 1940.8.8
+		OR = {
+			has_idea = ADR_king_jean
+			has_completed_focus = ADR_king_of_all_of_france
+		}
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	
+
+	# larga vida al rey!!
+	option = {
+		name = mod_andorra.38.a
+		trigger = {
+			always = yes
+		}
+		
+		if = {
+			limit = {
+				has_completed_focus = ADR_heirs_of_charlemagne
+				
+			}
+			retire_country_leader = yes
+			add_country_leader_role = {
+				character = ADR_henri_king
+				country_leader = {
+					ideology = despotism
+					traits = { count_of_paris_adr heir_of_charlemagne }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes 
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_idea = ADR_king_jean
+				}
+			}
+			retire_country_leader = yes
+			add_country_leader_role = {
+				character = ADR_henri_king
+				country_leader = {
+					ideology = despotism
+					traits = { count_of_paris_adr }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes 
+			}
+		}
+		if = {
+			limit = {
+				has_idea = ADR_king_jean
+			}
+			remove_ideas = ADR_king_jean
+			add_ideas = ADR_king_henry
+		}
+		
+	}
+
+}
+
