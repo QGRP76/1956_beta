@@ -1270,7 +1270,7 @@ focus_tree = {
 			focus = URG_1938_elections
 		}
 		mutually_exclusive = {
-			focus = URG_seize_the_opprotunity focus = URG_colorado_victory focus = URG_seize_the_opprotunity
+			focus = URG_seize_the_opprotunity focus = URG_colorado_victory focus = URG_blanco_victory
 		}
 		available = {
 			always = no
@@ -3243,7 +3243,7 @@ focus_tree = {
 		prerequisite = {
 			focus = URG_the_dream_of_artigas
 		}
-		will_lead_to_war_with = 510.owner
+		will_lead_to_war_with = ARG
 		available = {
 			is_subject = no
 			any_other_country = {
@@ -3285,7 +3285,7 @@ focus_tree = {
 		prerequisite = {
 			focus = URG_the_dream_of_artigas
 		}
-		will_lead_to_war_with = 502.owner
+		will_lead_to_war_with = BRA
 		available = {
 			is_subject = no
 			any_other_country = {

@@ -4,6 +4,7 @@ characters={
 		portraits={
 			civilian={
 				large="GFX_portrait_el_salvador_maximiliano_hernandez_martinez"
+				small="gfx/interface/ideas/els/advisors/r56_idea_ELS_advisor_maximiliano_hernandez.dds"
 			}
 		}
 		country_leader={
@@ -35,6 +36,50 @@ characters={
 					character = ELS_maximiliano_hernández_martínez
 					ruling_only = yes
 				}
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = army_chief
+			idea_token = ELS_maximiliano_hernández_martínez_chief
+			ledger = army
+			allowed = {
+				original_tag = ELS
+			}
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+					has_country_leader = {
+						character = ELS_maximiliano_hernández_martínez
+						ruling_only = yes
+					}
+				}
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = ELS_maximiliano_hernández_martínez_army
+			ledger = army
+			allowed = {
+				original_tag = ELS
+			}
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+					has_country_leader = {
+						character = ELS_maximiliano_hernández_martínez
+						ruling_only = yes
+					}
+				}
+			}
+			traits = {
+				army_logistics_2
 			}
 		}
 	}
@@ -228,29 +273,30 @@ characters={
 			}
 		}
 	}
-	ELS_manuel_de_jesus_cordova={
-		name="Manuel de Jesús Cordova"
-		portraits={
-			army={
-				small="GFX_idea_generic_army_south_america_4"
-			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = ELS_manuel_de_jesus_cordova
-			allowed = {
-				original_tag = ELS
-			}
-			traits = {
-				army_chief_offensive_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
 
+	# ELS_manuel_de_jesus_cordova={
+	# 	name="Manuel de Jesús Cordova"
+	# 	portraits={
+	# 		army={
+	# 			small="GFX_idea_generic_army_south_america_4"
+	# 		}
+	# 	}
+	# 	advisor={
+	# 		slot = army_chief
+	# 		idea_token = ELS_manuel_de_jesus_cordova
+	# 		allowed = {
+	# 			original_tag = ELS
+	# 		}
+	# 		traits = {
+	# 			army_chief_offensive_2
+	# 		}
+	# 		cost = 100
+	# 		ai_will_do = {
+	# 			factor = 1.000
+	# 		}
+	# 	}
+	# }
+	
 	ELS_augustin_farabundo_marti={
 		name="Augustín Farabundo Martí"
 		portraits={
@@ -392,7 +438,7 @@ characters={
 		portraits={
 			army={
 				large = "gfx/leaders/ELS/r56_Portrait_ELS_Salvador_Castaneda_Castro.dds"
-				small="GFX_idea_generic_political_advisor_south_america_1"
+				small = "gfx/interface/ideas/idea_europe_generic_land_13.dds"
 			}
 		}
 		advisor={
@@ -413,6 +459,36 @@ characters={
 			planning_skill = 2
 			logistics_skill = 1
 			legacy_id=-1
+		}
+		advisor = {
+			cost = 100
+			slot = army_chief
+			idea_token = ELS_salvador_castaneda_castro_chief
+			ledger = army
+			allowed = {
+				original_tag = ELS
+			}
+			available = {
+				#
+			}
+			traits = {
+				army_chief_organizational_2
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = ELS_salvador_castaneda_castro_army
+			ledger = army
+			allowed = {
+				original_tag = ELS
+			}
+			available = {
+				#
+			}
+			traits = {
+				army_artillery_2
+			}
 		}
 	}
 
@@ -440,6 +516,7 @@ characters={
 		portraits={
 			army={
 				large = "gfx/leaders/r56_generic/r56_portrait_south_america_generic_land_3.dds"
+				small = "gfx/interface/ideas/idea_south_america_generic_land_3.dds"
 			}
 		}
 		corps_commander={
@@ -451,6 +528,36 @@ characters={
 			logistics_skill = 2
 			legacy_id=-1
 		}
+		advisor = {
+			cost = 100
+			slot = army_chief
+			idea_token = ELS_joaquin_valdez_chief
+			ledger = army
+			allowed = {
+				original_tag = ELS
+			}
+			available = {
+				#
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = ELS_joaquin_valdez_army
+			ledger = army
+			allowed = {
+				original_tag = ELS
+			}
+			available = {
+				#
+			}
+			traits = {
+				army_concealment_2
+			}
+		}
 	}
 	
 	ELS_andres_ignacio_menendez={
@@ -458,6 +565,7 @@ characters={
 		portraits={
 			army={
 				large = "gfx/leaders/ELS/r56_Portrait_ELS_Andres_Ignacio_Menendez.dds"
+				small = "gfx/interface/ideas/idea_europe_generic_land_9.dds"
 			}
 		}
 		corps_commander={
@@ -468,6 +576,36 @@ characters={
 			planning_skill = 1
 			logistics_skill = 2
 			legacy_id=-1
+		}
+		advisor = {
+			cost = 100
+			slot = army_chief
+			idea_token = ELS_andres_ignacio_menendez_chief
+			ledger = army
+			allowed = {
+				original_tag = ELS
+			}
+			available = {
+				#
+			}
+			traits = {
+				army_chief_morale_2
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = ELS_andres_ignacio_menendez_army
+			ledger = army
+			allowed = {
+				original_tag = ELS
+			}
+			available = {
+				#
+			}
+			traits = {
+				army_infantry_2
+			}
 		}
 	}
 	

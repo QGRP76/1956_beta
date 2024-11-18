@@ -188,7 +188,7 @@ characters={
 			}
 		}
 		advisor={
-			slot = high_command
+			slot = army_chief
 			idea_token = COS_rene_picado_michalski_chief
 			allowed = {
 				original_tag = COS

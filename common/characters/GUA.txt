@@ -148,8 +148,8 @@ characters={
 		name="José Victor Mejía"
 		portraits={
 			army={
-				small="gfx/interface/ideas/gua/r56_idea_GUA_Jose_Victor_Mejía_de_León.dds"
-				large="gfx/leaders/GUA/r56_Portrait_GUA_Jose_Victor_Mejía.dds"
+				small="gfx/interface/ideas/idea_south_america_generic_land_8.dds"
+				large="gfx/leaders/South America/portrait_south_america_generic_land_8.dds"
 			}
 		}
 		advisor={

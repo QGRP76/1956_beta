@@ -209,8 +209,42 @@ focus_tree = {
 			factor = 10
 		}
 
+		available = {
+			if = {
+				limit = {
+					ENG = { 
+						controls_state = 311 
+					}
+				}
+				ENG = { has_opinion = { target = ROOT value > 59 }  controls_state = 311  }
+			}
+			if = {
+				limit = {
+					MEX = { 
+						controls_state = 311 
+					}
+				}
+				MEX = { has_opinion = { target = ROOT value > 59 }  controls_state = 311 }
+			}
+		}
+
 		completion_reward = {
-			
+			if = {
+				limit = {
+					ENG = { 
+						controls_state = 311 
+					}
+				}
+				ENG = { country_event = { id = hon.13 } }
+			}
+			if = {
+				limit = {
+					MEX = { 
+						controls_state = 311 
+					}
+				}
+				MEX = { country_event = { id = hon.13 } }
+			}
 		}
 	}
 	focus = {
@@ -369,7 +403,7 @@ focus_tree = {
 				limit = {
 					free_building_slots = {
 						building = infrastructure
-						size > 1
+						size > 0
 						include_locked = yes
 					}
 				}
