@@ -997,6 +997,7 @@
 				category = nuclear
 				category = rocketry
 			}
+			add_ideas = generic_secret_weapons_ns
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
