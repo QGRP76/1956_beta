@@ -413,10 +413,14 @@ recruit_character = ENG_charles_edward_of_albany
 
 #scientists
 recruit_character = ENG_john_cockcroft
-recruit_character = ENG_charles_goodeve
+#recruit_character = ENG_charles_goodeve # moved to Canada as he was Canadian
 recruit_character = ENG_nevil_shute
 recruit_character = ENG_robert_watson_watt
 recruit_character = ENG_r56_percy_hobart
+
+recruit_character = ENG_stanley_vernon_goodall
+recruit_character = ENG_charles_lillicrap
+recruit_character = ENG_victor_shepheard
 
 country_event = { id = britain.16 days = 20 }		#George V dies
 country_event = { id = britain.17 days = 344 }		#Edward VIII abdicates for non-MtG people
