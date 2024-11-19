@@ -236,12 +236,18 @@ characters={
 		advisor = {
 			cost = 150
 			available = {
-				NOT = {
-					has_government = fascism
-					has_war_with = CHI
+				OR = {
 					has_country_leader = {
 						character = MEN_serengdongrub
 						ruling_only = yes
+					}
+					NOT = {
+						has_government = fascism
+						has_war_with = CHI
+						has_country_leader = {
+							character = MEN_serengdongrub
+							ruling_only = yes
+						}
 					}
 				}
 			}

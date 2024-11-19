@@ -5066,6 +5066,14 @@ MON_raids_operations_category = {
 					strength_ratio = { tag = FROM ratio < 0.08 }	#with 6 starting divisions, shall be around 75 for FROM, starting CHI is slightly smaller
 				}
 			}
+			modifier = {	#raid mengkukuo if its a player
+				factor = 2
+				FROM = {
+					is_ai = no
+					original_tag = MEN
+					has_idea = MEN_mongol_raids
+				}
+			}
 			modifier = {	#we don't like fascists and imperialists
 				factor = 10
 				has_government = communism
@@ -5074,6 +5082,16 @@ MON_raids_operations_category = {
 						has_government = fascism
 						original_tag = MAN
 						original_tag = MEN
+					}
+				}
+			}
+			modifier = {	#we dont like japanese collaborators
+				factor = 1.5
+				FROM = {
+					original_tag = MEN
+					has_country_leader = {
+						character = MEN_prince_demchugdongrub
+						ruling_only = yes
 					}
 				}
 			}
@@ -5373,6 +5391,14 @@ MON_raids_operations_category = {
 					has_state_flag = border_incident_active
 				}
 			}
+			modifier = {	#raid mengkukuo if its a player
+				factor = 2
+				FROM = {
+					is_ai = no
+					original_tag = MEN
+					has_idea = MEN_mongol_raids
+				}
+			}
 			modifier = {	#we don't like fascists and imperialists
 				factor = 10
 				has_government = communism
@@ -5381,6 +5407,16 @@ MON_raids_operations_category = {
 						has_government = fascism
 						original_tag = MAN
 						original_tag = MEN
+					}
+				}
+			}
+			modifier = {	#we dont like japanese collaborators
+				factor = 1.5
+				FROM = {
+					original_tag = MEN
+					has_country_leader = {
+						character = MEN_prince_demchugdongrub
+						ruling_only = yes
 					}
 				}
 			}

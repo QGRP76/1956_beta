@@ -1040,6 +1040,7 @@ focus_tree = {
 
 		completion_reward = {
 			random_owned_controlled_state = {
+				prioritize = { 611 }
 				limit = {
 					free_building_slots = {
 						building = industrial_complex
@@ -1430,7 +1431,17 @@ focus_tree = {
 		available = {
 			OR = {
 				is_subject = no
-				compare_autonomy_state > autonomy_integrated_puppet
+				any_other_country = {
+					is_major = yes
+					num_of_factories > 35
+					OR = {
+						is_ally_with = ROOT
+						has_opinion = {
+							target = ROOT
+							value > 59
+						}
+					}
+				}
 			}
 		}
 
@@ -1440,6 +1451,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
 		}
 
 		completion_reward = {
@@ -1488,9 +1503,16 @@ focus_tree = {
 		}
 		
 		available = {
-			OR = {
-				is_subject = no
-				compare_autonomy_state > autonomy_integrated_puppet
+			any_other_country = {
+				is_major = yes
+				num_of_factories > 35
+				OR = {
+					is_ally_with = ROOT
+					has_opinion = {
+						target = ROOT
+						value > 59
+					}
+				}
 			}
 		}
 
@@ -1602,9 +1624,16 @@ focus_tree = {
 		}
 		
 		available = {
-			OR = {
-				is_subject = no
-				compare_autonomy_state > autonomy_integrated_puppet
+			any_other_country = {
+				is_major = yes
+				num_of_factories > 35
+				OR = {
+					is_ally_with = ROOT
+					has_opinion = {
+						target = ROOT
+						value > 59
+					}
+				}
 			}
 		}
 
@@ -1712,9 +1741,16 @@ focus_tree = {
 		}
 		
 		available = {
-			OR = {
-				is_subject = no
-				compare_autonomy_state > autonomy_integrated_puppet
+			any_other_country = {
+				is_major = yes
+				num_of_factories > 35
+				OR = {
+					is_ally_with = ROOT
+					has_opinion = {
+						target = ROOT
+						value > 59
+					}
+				}
 			}
 		}
 
@@ -1831,9 +1867,16 @@ focus_tree = {
 		}
 		
 		available = {
-			OR = {
-				is_subject = no
-				compare_autonomy_state > autonomy_integrated_puppet
+			any_other_country = {
+				is_major = yes
+				num_of_factories > 35
+				OR = {
+					is_ally_with = ROOT
+					has_opinion = {
+						target = ROOT
+						value > 59
+					}
+				}
 			}
 		}
 
@@ -1901,9 +1944,16 @@ focus_tree = {
 		
 		available = {
 			has_idea = MEN_rapid_industrialization
-			OR = {
-				is_subject = no
-				compare_autonomy_state > autonomy_integrated_puppet
+			any_other_country = {
+				is_major = yes
+				num_of_factories > 35
+				OR = {
+					is_ally_with = ROOT
+					has_opinion = {
+						target = ROOT
+						value > 59
+					}
+				}
 			}
 		}
 
@@ -1977,7 +2027,20 @@ focus_tree = {
 		}
 
 		available = {
-			num_of_factories > 5
+			OR = {
+				num_of_factories > 5
+				any_other_country = {
+					is_major = yes
+					num_of_factories > 35
+					OR = {
+						is_ally_with = ROOT
+						has_opinion = {
+							target = ROOT
+							value > 59
+						}
+					}
+				}
+			}
 		}
 
 		relative_position_id = MEN_fuel_for_the_war_machine
@@ -2112,9 +2175,16 @@ focus_tree = {
 		
 		available = {
 			controls_state = 621
-			OR = {
-				is_subject = no
-				compare_autonomy_state > autonomy_integrated_puppet
+			any_other_country = {
+				is_major = yes
+				num_of_factories > 35
+				OR = {
+					is_ally_with = ROOT
+					has_opinion = {
+						target = ROOT
+						value > 59
+					}
+				}
 			}
 		}
 
@@ -4380,7 +4450,6 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			add_research_slot = 1
 			add_ideas = MEN_invite_western_scholars
 		}
 	}

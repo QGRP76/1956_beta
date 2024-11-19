@@ -677,7 +677,7 @@ ideas = {
 				MEN = {
 					add_timed_idea = {
 						idea = MEN_aftermath_of_the_long_winter
-						days = 180
+						days = 365
 					}
 					country_event = { id = men.13 hours = 12 }
 				}
@@ -704,7 +704,7 @@ ideas = {
 				stability_factor = -0.05
 				stability_weekly = -0.001
 				war_support_factor = -0.05
-				monthly_population = -0.20
+				monthly_population = -0.25
 				conscription_factor = -0.15
 				political_power_factor = -0.05
 				consumer_goods_factor = 0.15

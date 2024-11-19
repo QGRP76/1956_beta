@@ -34,6 +34,7 @@ country_event = { # The Zhangbei Meeting
 				popularity = 0.05
 			}
 			add_stability = 0.10
+			set_country_flag = MEN_nima_odsor_not_assassinated
 			effect_tooltip = {
 				unlock_national_focus = MEN_petition_nima-odsor_to_stay_in_shangbei
 			}
@@ -92,7 +93,6 @@ country_event = { # Nima-odsor Assassinated
 			ideology = democratic
 			popularity = -0.10
 		}
-
 		effect_tooltip = {
 			unlock_national_focus = MEN_strengthen_ties_with_japan
 		}
@@ -146,10 +146,11 @@ country_event = { # The Long Winter
 	
 	option = {
 		name = men.13.a
-		swap_ideas = {
-			remove_idea = MEN_the_long_winter
-			add_idea = MEN_aftermath_of_the_long_winter
-			add_days = 180
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = MEN_aftermath_of_the_long_winter
+				days = 365
+			}
 		}
 	}
 }

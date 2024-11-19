@@ -29,8 +29,8 @@ activate_advisor = MEN_nima_odsor
 activate_advisor = MEN_jodbajab
 activate_advisor = MEN_serengdongrub
 
-set_war_support = 0.1
-set_stability = 0.5
+set_war_support = 0.25
+set_stability = 0.6
 set_research_slots = 2
 
 add_ideas = {
