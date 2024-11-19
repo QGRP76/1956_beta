@@ -85,6 +85,8 @@ recruit_character = CAN_j_b_salsberg			#union boss
 recruit_character = CAN_john_ross_taylor		#fascist terror prince
 recruit_character = CAN_arthur_cardin			#very conditional cpt of industry
 
+recruit_character = ENG_charles_goodeve
+
 set_research_slots = 4
 set_country_flag = monroe_doctrine
 set_stability = 0.7
