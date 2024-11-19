@@ -219,7 +219,7 @@ country_event = { # UK gets a choice to cede Singapore
 		}
 		
 		MAL = { 
-			country_event = { id = malaya.5 hours = 5 } 
+			country_event = { id = malaysia.5 hours = 1 } 
 		}
 	}
 	
@@ -236,7 +236,7 @@ country_event = { # UK gets a choice to cede Singapore
 		}
 		
 		MAL = { 
-			country_event = { id = malaya.6 hours = 5 } 
+			country_event = { id = malaysia.6 hours = 1 } 
 		}
 	}
 }
@@ -300,9 +300,9 @@ country_event = { # eliminate united-front sympathisers
 		name = malaysia.7.b
 		ai_chance = { factor = 50 }
 		
-		set_political_party = {
+		add_popularity = {
 			ideology = communism
-			popularity = 0
+			popularity = -1
 		}
 		# resistance total wipe in uncored malayan states + singapore
 		add_war_support = 0.1
@@ -320,7 +320,15 @@ country_event = { # japan can puppet malaya
 	
 	option = { # puppet em
 		name = malaysia.8.a
-		ai_chance = { factor = 0 }
+		ai_chance = {
+			base = 0
+			modifier = { 
+				factor = 100
+				MAL = {
+					is_ai = no
+				}
+			}
+		}
 		
 		puppet = MAL
 		send_equipment = {
@@ -335,7 +343,15 @@ country_event = { # japan can puppet malaya
 	
 	option = { # no, but allies is okay
 		name = malaysia.8.b
-		ai_chance = { factor = 100 }
+		ai_chance = {
+			base = 100
+			modifier = { 
+				factor = 0
+				MAL = {
+					is_ai = yes
+				}
+			}
+		}
 		
 		MAL = { country_event = { id = malaysia.10 hours = 1 } }
 	}
@@ -371,6 +387,8 @@ country_event = { # japan said no... but hey, we became allies
 	option = {
 		name = malaysia.10.b
 		ai_chance = { factor = 100 }
+		
+		leave_faction = yes
 		
 		JAP = { add_to_faction = MAL }
 	}

@@ -1,4 +1,4 @@
-ideas = { # things to fix from 16.10.24: fix the icons of some focuses like pro_malay_policy and colonial admin
+ideas = { 
 
 	country = {
 		
@@ -642,7 +642,7 @@ ideas = { # things to fix from 16.10.24: fix the icons of some focuses like pro_
 
 			removal_cost = -1
 			
-			picture = EST_exploit_the_banks
+			picture = YUG_federal_defense_council
 			
 			modifier = {
 				send_volunteer_divisions_required = -1
@@ -663,7 +663,7 @@ ideas = { # things to fix from 16.10.24: fix the icons of some focuses like pro_
 
 			removal_cost = -1
 			
-			picture = EST_exploit_the_banks
+			picture = POL_ideology_drift_defence
 			
 			modifier = {
 				democratic_drift = 0.025
@@ -686,7 +686,7 @@ ideas = { # things to fix from 16.10.24: fix the icons of some focuses like pro_
 
 			removal_cost = -1
 			
-			picture = EST_exploit_the_banks
+			picture = generic_usa_conflict
 			
 			on_add = {
 				add_offsite_building = { type = arms_factory level = 3 }
@@ -697,6 +697,8 @@ ideas = { # things to fix from 16.10.24: fix the icons of some focuses like pro_
 				production_speed_arms_factory_factor = 0.1
 				custom_modifier_tooltip = MAL_american_military_investment_idea_tt
 			}
+			
+			custom_modifier_tooltip = MAL_american_military_investment_idea_tt
 			
 			on_remove = {
 				add_offsite_building = { type = arms_factory level = -3 }
@@ -715,12 +717,12 @@ ideas = { # things to fix from 16.10.24: fix the icons of some focuses like pro_
 
 			removal_cost = -1
 			
-			picture = EST_exploit_the_banks
+			picture = imperial_glory_idea
 			
 			modifier = {
 				stability_factor = -0.2
 				war_support_factor = 0.3
-				war_stability_factor = -0.5
+				war_stability_factor = 0.05
 				stability_weekly_factor = 0.01
 				fascism_drift = 0.01
 				industrial_capacity_factory = 0.15
@@ -740,7 +742,7 @@ ideas = { # things to fix from 16.10.24: fix the icons of some focuses like pro_
 
 			removal_cost = -1
 			
-			picture = EST_exploit_the_banks
+			picture = prc_low_popular_support
 			
 			modifier = {
 				stability_factor = 0.05
@@ -760,7 +762,7 @@ ideas = { # things to fix from 16.10.24: fix the icons of some focuses like pro_
 
 			removal_cost = -1
 			
-			picture = EST_exploit_the_banks
+			picture = prc_low_popular_support2
 			
 			modifier = {
 				stability_factor = 0.05
@@ -785,7 +787,7 @@ ideas = { # things to fix from 16.10.24: fix the icons of some focuses like pro_
 
 			removal_cost = -1
 			
-			picture = EST_exploit_the_banks
+			picture = prc_low_popular_support3
 			
 			modifier = {
 				stability_factor = 0.05

@@ -554,11 +554,11 @@ MAL_reintegrate_singapore = {
 		}
 		
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 
 		complete_effect = {				
 			336 = {
-				add_compliance = 15
+				add_compliance = 5
 			}			
 			add_popularity = {
 				ideology = communism
@@ -587,7 +587,7 @@ MAL_reintegrate_singapore = {
 		
 		fire_only_once = yes
 		days_remove = 90
-		cost = 50
+		cost = 25
 		
 		modifier = {
 			consumer_goods_factor = 0.15
@@ -595,7 +595,7 @@ MAL_reintegrate_singapore = {
 
 		remove_effect = {				
 			336 = {
-				add_compliance = 15
+				add_compliance = 5
 			}			
 		}			
 		ai_will_do = {
@@ -620,7 +620,7 @@ MAL_reintegrate_singapore = {
 		
 		fire_only_once = yes
 		days_remove = 30
-		cost = 50
+		cost = 25
 		
 		modifier = {
 			stability_factor = -0.2
@@ -628,7 +628,7 @@ MAL_reintegrate_singapore = {
 
 		remove_effect = {				
 			336 = {
-				add_compliance = 15
+				add_compliance = 5
 			}			
 		}			
 		ai_will_do = {
@@ -662,8 +662,6 @@ MAL_collaboration_with_the_japanese_decisions = {
 			JAP = {
 				country_event = { id = malaysia.8 hours = 1 }
 			}
-			
-			add_ideas = MAL_collaboration_with_the_japanese_idea
 		}			
 		ai_will_do = {
 			factor = 50
