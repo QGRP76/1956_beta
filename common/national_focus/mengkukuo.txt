@@ -2301,6 +2301,8 @@ focus_tree = {
 					modifier = medium_decrease
 				}
 			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = MEN_unenbayal
 		}
 
 	}

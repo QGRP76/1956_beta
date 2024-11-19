@@ -17,6 +17,11 @@
  MEN_songgotu_zhanshan:0 "Songgotu Zhanshan"
  MEN_yonimitsu_kasahara:0 "Yonimitsu Kasahara"
  MEN_zhu_shifu:0 "Zhu Shifu"
+ MEN_unenbayal:0 "Ünenbayal"
+ MEN_lu_jingru:0 "Lu Jingru"
+ MEN_altan_ochir:0 "Altan-Ochir"
+ MEN_nuoligarzabu:0 "Nuoligarzabu"
+ MEN_basar_gadan:0 "Basar Gadan"
 
  ################### ARMY ###################
 
@@ -595,6 +600,7 @@
  MEN_fascist_sympathies:0 "Fascist Sympathiser"
  MEN_fascist_sympathies_desc:0 "§LThis man has openly expressed support for fascist elements, either through his actions or words.§!"
  MEN_chinese_cooperation_proponent:0 "Chinese Cooperation Proponent"
+ MEN_hidden_hand:0 "The Hidden Hand"
 
  MEN_rapid_industrialization_timer_tt:0 "[?MEN_rapid_industrialization_timer:days_left|Y0]"
  MEN_remove_industrialization:0 "Will be §Rpermanently removed§! in §Y[GetMenIndustrializationTimer]§! days if no §Yindustrial focus§! is §Ystarted§!"

@@ -655,7 +655,139 @@ characters={
 				factor = 1.000
 			}
 		}
-	}	
+	}
+	MEN_unenbayal={
+		name=MEN_unenbayal
+		portraits = {
+			civilian = {
+				small="gfx/interface/ideas/idea_generic_political_advisor_asia_2.dds"
+			}
+		}
+		advisor={			
+			slot = political_advisor
+			idea_token = MEN_unenbayal
+			allowed = {
+				original_tag = MEN
+			}
+			available = {
+				has_completed_focus = MEN_strengthen_ties_with_japan
+				OR = {
+					has_government = fascism
+					has_country_leader = {
+						character = MEN_prince_demchugdongrub
+						ruling_only = yes
+					}
+				}
+			}
+			traits = {
+				fascist_workhorse
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	MEN_altan_ochir={
+		name=MEN_altan_ochir
+		portraits = {
+			civilian = {
+				small="gfx/interface/ideas/generic/advisors/kr_generic_asia_3.dds"
+			}
+		}
+		advisor={			
+			slot = political_advisor
+			idea_token = MEN_altan_ochir
+			allowed = {
+				original_tag = MEN
+			}
+			available = {
+				#
+			}
+			traits = {
+				GER_minister_of_agriculture
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	MEN_lu_jingru={
+		name=MEN_lu_jingru
+		portraits = {
+			civilian = {
+				small="gfx/interface/ideas/idea_asia_generic_fascism.dds"
+			}
+		}
+		advisor={			
+			slot = political_advisor
+			idea_token = MEN_lu_jingru
+			allowed = {
+				original_tag = MEN
+			}
+			available = {
+				#
+			}
+			traits = {
+				minister_of_mines_and_resources
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	MEN_nuoligarzabu={
+		name=MEN_nuoligarzabu
+		portraits = {
+			civilian = {
+				small="gfx/interface/ideas/generic/advisors/kr_generic_asia_1.dds"
+			}
+		}
+		advisor={			
+			slot = political_advisor
+			idea_token = MEN_nuoligarzabu
+			allowed = {
+				original_tag = MEN
+			}
+			available = {
+				#
+			}
+			traits = {
+				MEN_hidden_hand
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	MEN_basar_gadan={
+		name=MEN_basar_gadan
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_1"
+			}
+		}
+		advisor={			
+			slot = political_advisor
+			idea_token = MEN_basar_gadan
+			allowed = {
+				original_tag = MEN
+			}
+			available = {
+				#
+			}
+			traits = {
+				MPL_experienced_banker
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
 	MEN_hesehn_tiemei={
 		name=MEN_hesehn_tiemei
 		portraits={
