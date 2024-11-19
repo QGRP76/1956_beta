@@ -124,6 +124,8 @@ if = {
 	recruit_character = BEL_mike_donnet			#should verify before update release that he hasnt been made freely available
 	recruit_character = BEL_auguste_piccard
 }
+recruit_character = BEL_marc_de_hemptinne
+
 set_country_flag = started_out_as_landlocked
 set_technology = {
 
