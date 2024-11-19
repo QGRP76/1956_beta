@@ -519,7 +519,7 @@ focus_tree = {
 				category = military_police_tech
 			}
 		}
-		search_filters = { FOCUS_FILTER_ARMY_XP }
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -1142,10 +1142,10 @@ focus_tree = {
 		x = 32
 		y = 0
 		completion_reward = {
-			add_stability = 0.05
+			add_stability = 0.03
 			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
+				bonus = 0.35
+				uses = 3
 				category = industry
 			}
 		}
@@ -1160,7 +1160,19 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POR_continue_the_public_works_r56
-		available = { num_of_factories > 40 }
+		available = { 
+			if = {
+				limit = { 
+					NOT = { 
+						has_completed_focus = POR_storm_the_national_assembly
+						has_completed_focus = POR_unlatch_salazars_grip
+					}
+				}
+				has_stability > 0.9
+				num_of_factories > 35
+			}
+			else = { num_of_factories > 40 }
+		}
 		completion_reward = { add_research_slot = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -1177,8 +1189,8 @@ focus_tree = {
 		available = { has_tech = construction1 }
 		completion_reward = {
 			add_tech_bonus = {
-				bonus = 0.5
-				uses = 2
+				bonus = 0.75
+				uses = 1
 				category = industry
 			}
 			random_controlled_state = {
@@ -1450,7 +1462,7 @@ focus_tree = {
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			unlock_decision_tooltip = POR_support_food_exporters
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -2592,7 +2604,7 @@ focus_tree = {
 	focus = {
 		id = POR_ally_anti_colonial_resistance
 		prerequisite = { focus = POR_unite_against_salazar }
-		icon = GFX_focus_spr_masters_of_our_own_fate
+		icon = GFX_focus_GER_liberate_exploited_colonial_workers
 		cost = 6
 		x = -2
 		y = 1
@@ -2679,7 +2691,7 @@ focus_tree = {
 			has_global_flag = scw_over 
 		}
 		completion_reward = { country_event = portugal.51 }
-		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2744,6 +2756,54 @@ focus_tree = {
 				custom_effect_tooltip = CHL_skip_one_line_tt
 			}
 			add_ideas = POR_general_directorate_of_securty_idea
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = POR_empower_socialist_organizations
+		prerequisite = { 
+			focus = POR_portugals_path_to_marxism_leninism
+			focus = POR_general_directorate_of_security 
+		}
+		icon = GFX_focus_GER_support_the_proletarian_uprising
+		cost = 7
+		x = -1
+		y = 1
+		relative_position_id = POR_general_directorate_of_security
+		available = {
+			NOT = { has_completed_focus = POR_curb_political_militias }
+		}
+		completion_reward = {
+			add_political_power = 30
+			add_stability = -0.05
+			add_war_support = 0.03
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			if = {
+				limit = { has_idea = POR_reactionary_resistance2 }
+				swap_ideas = {
+					remove_idea = POR_reactionary_resistance2
+					add_idea = POR_reactionary_resistance3
+				}
+			}
+			else_if = {
+				limit = { has_idea = POR_reactionary_resistance3 }
+				remove_ideas = POR_reactionary_resistance3
+				custom_effect_tooltip = CHL_skip_one_line_tt
+				add_timed_idea = {
+					idea = POR_reactionary_resistance4
+					days = 365
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = POR_reactionary_resistance
+					add_idea = POR_reactionary_resistance2
+				}
+			}
+			set_country_flag = POR_arm_anti_fascist_militias_flag
+			unlock_decision_tooltip = POR_arm_anti_fascist_militias
+			unlock_decision_tooltip = POR_tap_aligned_laborer_organizations
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -2949,45 +3009,41 @@ focus_tree = {
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = POR_maria_lamas
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			custom_effect_tooltip = POR_advance_the_cause_for_equality_tt
-			unlock_decision_tooltip = POR_grant_womens_suffrage
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL   }
 	}
 
 	focus = {
-		id = POR_continue_the_iberian_social_revolution
+		id = POR_portugals_path_to_marxism_leninism
 		prerequisite = { focus = POR_consolidate_the_revolution }
-		icon = GFX_focus_BRA_state_atheism
+		icon = GFX_postive_heroism
 		cost = 10
 		x = -1
 		y = 1
 		relative_position_id = POR_consolidate_the_revolution
 		available = {
 			always = no
+			NOT = { has_completed_focus = POR_restore_civil_liberties }
 		}
 		completion_reward = {
-			add_political_power = 35
-			custom_effect_tooltip = POR_continue_the_iberian_social_revolution_tt
+			add_political_power = 50
 			hidden_effect = {
 				set_temp_variable = {
-					var = POR_continue_the_iberian_social_revolution_var
-					value = party_popularity@neutrality
+					var = suspend_the_constitution_var
+					value = party_popularity@democratic
 				}
 				multiply_temp_variable = {
-					var = POR_continue_the_iberian_social_revolution_var
+					var = suspend_the_constitution_var
 					value = -0.5
 				}
 			}
-			add_stability = POR_continue_the_iberian_social_revolution_var
+			custom_effect_tooltip = ENG_alliance_with_germany_tt
+			add_stability = suspend_the_constitution_var
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			swap_ideas = {
 				remove_idea = POR_divided_revolution
-				add_idea = POR_iberias_social_revolution
-			}
-			unlock_decision_tooltip = POR_end_the_popular_front
-			unlock_decision_tooltip = POR_appropriate_church_riches
+				add_idea = POR_portugals_path_to_marxism_leninism
+			}	
 		}
 		ai_will_do = {
 			base = 5
@@ -2996,73 +3052,139 @@ focus_tree = {
 				has_country_flag = TUR_SOV_prommised_support
 			}
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}
 
 	focus = {
-		id = POR_empower_socialist_organizations
-		prerequisite = { 
-			focus = POR_continue_the_iberian_social_revolution
-			focus = POR_general_directorate_of_security 
-		}
-		icon = GFX_goal_generic_revolutionary_guards
-		cost = 7
-		x = 1
+		id = POR_crush_reactionary_impedence
+		prerequisite = { focus = POR_portugals_path_to_marxism_leninism }
+		icon = GFX_focus_SOV_the_last_purge
+		cost = 8
+		x = -1
 		y = 1
-		relative_position_id = POR_continue_the_iberian_social_revolution
+		relative_position_id = POR_portugals_path_to_marxism_leninism
 		available = {
-			NOT = { has_completed_focus = POR_curb_political_militias }
 		}
 		completion_reward = {
-			add_political_power = 30
-			add_stability = -0.05
-			add_war_support = 0.03
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			if = {
-				limit = { has_idea = POR_reactionary_resistance2 }
-				swap_ideas = {
-					remove_idea = POR_reactionary_resistance2
-					add_idea = POR_reactionary_resistance3
-				}
-			}
-			else_if = {
-				limit = { has_idea = POR_reactionary_resistance3 }
-				remove_ideas = POR_reactionary_resistance3
-				custom_effect_tooltip = CHL_skip_one_line_tt
-				add_timed_idea = {
-					idea = POR_reactionary_resistance4
-					days = 365
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = POR_reactionary_resistance
-					add_idea = POR_reactionary_resistance2
-				}
-			}
-			set_country_flag = POR_arm_anti_fascist_militias_flag
-			unlock_decision_tooltip = POR_arm_anti_fascist_militias
-			unlock_decision_tooltip = POR_tap_aligned_laborer_organizations
+		}
+		ai_will_do = {
+			base = 5
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
-		id = POR_defang_the_liberals
-		prerequisite = { focus = POR_continue_the_iberian_social_revolution }
-		icon = GFX_focus_SOV_the_last_purge
+		id = POR_continue_the_iberian_social_revolution
+		prerequisite = { focus = POR_portugals_path_to_marxism_leninism }
+		icon = GFX_focus_BRA_state_atheism
 		cost = 10
 		x = 0
 		y = 2
-		relative_position_id = POR_continue_the_iberian_social_revolution
+		relative_position_id = POR_portugals_path_to_marxism_leninism
 		available = {
-			has_country_flag = POR_end_the_populaR_front_flag
 		}
 		completion_reward = {
-			add_political_power = 105
+			unlock_decision_tooltip = POR_appropriate_church_riches
 		}
-		ai_will_do = { base = 20 }
-		search_filters = { FOCUS_FILTER_POLITICAL  }
+		ai_will_do = {
+			base = 5
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = POR_further_the_centralization
+		prerequisite = { focus = POR_continue_the_iberian_social_revolution }
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		cost = 8
+		x = 0
+		y = 1
+		relative_position_id = POR_continue_the_iberian_social_revolution
+		available = {
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			base = 5
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = POR_covert_return_to_the_world_stage
+		prerequisite = { focus = POR_continue_the_iberian_social_revolution }
+		mutually_exclusive = { focus = POR_join_the_global_fight_against_fascism }
+		icon = GFX_focus_ETH_callout_to_the_world
+		cost = 6
+		x = -1
+		y = 2
+		relative_position_id = POR_continue_the_iberian_social_revolution
+		available = {
+		}
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+		}
+		ai_will_do = {
+			base = 5
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = POR_join_the_global_fight_against_fascism
+		prerequisite = { focus = POR_continue_the_iberian_social_revolution }
+		mutually_exclusive = { focus = POR_covert_return_to_the_world_stage }
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 6
+		x = 1
+		y = 2
+		relative_position_id = POR_continue_the_iberian_social_revolution
+		available = {
+		}
+		completion_reward = {
+			add_war_support = 0.05
+		}
+		ai_will_do = {
+			base = 5
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = POR_PLACEHOLDER
+		prerequisite = { focus = POR_continue_the_iberian_social_revolution }
+		icon = GFX_focus_GER_proletarian_solidarity
+		cost = 8
+		x = -2
+		y = 1
+		relative_position_id = POR_continue_the_iberian_social_revolution
+		available = {
+		}
+		completion_reward = {
+		}
+		ai_will_do = {
+			base = 5
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = POR_PLACEH0LDER
+		prerequisite = { focus = POR_continue_the_iberian_social_revolution }
+		icon = GFX_focus_GER_proletarian_dictatorship
+		cost = 8
+		x = 2
+		y = 1
+		relative_position_id = POR_continue_the_iberian_social_revolution
+		available = {
+		}
+		completion_reward = {
+		}
+		ai_will_do = {
+			base = 5
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3074,7 +3196,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_pave_the_path_to_progress
 		available = {
-			NOT = { has_completed_focus = POR_continue_the_iberian_social_revolution }
+			NOT = { has_completed_focus = POR_portugals_path_to_marxism_leninism }
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -3717,7 +3839,7 @@ focus_tree = {
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			unlock_decision_tooltip = POR_request_axis_membership
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM FOCUS_FILTER_ALLIANCE }
 	}
 
 	focus = {

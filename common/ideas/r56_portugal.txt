@@ -224,7 +224,7 @@ ideas = {
 			}
 		}
 
-		POR_iberias_social_revolution = {
+		POR_portugals_path_to_marxism_leninism = {
 			picture = ARG_no_gods_no_masters
 			allowed = { original_tag = POR }
 			cancel = { has_government = neutrality }

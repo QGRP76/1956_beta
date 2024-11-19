@@ -25,8 +25,17 @@
  POR_gains_claims_on_all_spanish_states_tt:0 "Gains claim on all §YSpanish§! states in Europe."
  POR_restore_the_iberian_union_tt:0 "Unlocks §YIntegrating the Spanish Interior§! decisions." 
 
- POR_grant_regional_autonomy:0 "Grant Regional Autonomy"
- POR_grant_regional_autonomy_desc:0 "Despite long being under the thumb of Madrid, Basque and Catalan-speaking regions throughout Spain have stood firm against assimilation efforts. Offering these regions the autonomy they desire would go a long way in accelerating their integration into a truly pan-Iberian nation."
+ POR_relocate_the_capital_to_madrid:0 "Relocate the Capital to Madrid"
+
+ POR_restore_basque_regional_autonomy:0 "Restore Basque Regional Autonomy"
+ POR_restore_basque_regional_autonomy_desc:0 "Despite long being under the thumb of Madrid, Basque regions throughout Spain have stood firm against assimilation efforts. Offering the Basque the autonomy they desire would go a long way in accelerating their integration into a truly pan-Iberian nation."
+
+ POR_restore_catalan_regional_autonomy:0 "Restore Catalan Regional Autonomy"
+ POR_restore_catalan_regional_autonomy_desc:0 ""
+
+ POR_organize_elections_in_the_hispanic_regions:0 "Organize Elections in the Hispanic Regions"
+ POR_organize_elections_in_the_hispanic_regions_desc:0 ""
+ organize_elections_in_the_hispanic_regions_tt:0 "Controls, and has at least 30% compliance in all mainland §YSpanish§! states"
 
  POR_avenge_the_1890_british_ultimatum:0 "Avenge the 1890 British Ultimatum"
  POR_avenge_the_1890_british_ultimatum_desc:0 "The British Ultimatum of 1890 was a national tragedy for all across our plural-continental empire. With the chance at hand, we can finally connect our African holdings once again!"
@@ -357,11 +366,13 @@
  POR_general_directorate_of_security:0 "General Directorate of Security"
  POR_general_directorate_of_security_desc:0 ""
 
- POR_continue_the_iberian_social_revolution:0 "Continue the Iberian Social Revolution!"
- POR_continue_the_iberian_social_revolution_desc:0 ""
- POR_continue_the_iberian_social_revolution_tt:0 "Half of current §YAuthoritarian§! support is applied as a §RStability§! penalty."
- POR_iberias_social_revolution:0 "Iberia's Social Revolution!"
  POR_appropriate_church_riches:0 "Appropriate Church Riches"
+
+ POR_covert_return_to_the_world_stage:0 "Covert Return to the World Stage"
+ POR_covert_return_to_the_world_stage_desc:0 ""
+
+ POR_further_the_centralization:0 "Further the Centralization"
+ POR_further_the_centralization_desc:0 ""
 
  POR_empower_socialist_organizations:0 "Empower Socialist Organizations"
  POR_empower_socialist_organizations_desc:0 "Youth movements are a 20th century backbone for countless ideologies and governments. Portuguese socialist movements are far and near to every corner of Portugal; they shall have the support they need to ensure our ideas reign over the nation!"
@@ -369,15 +380,17 @@
  POR_arm_anti_fascist_militias:0 "Arm Anti-Fascist Militias"
  POR_arm_anti_fascist_militias_tt:0 "§GRemoves§! all remaining §YAuthoritarian§! and §YFascism§! support"
 
- POR_defang_the_liberals:0 "Defang the Liberals"
- POR_defang_the_liberals_desc:0 "Portuguese democrats have learned nothing from the failings and sluggishness of democracy in the First Republic. Their plans for Portugal are a sham that will shatter the hopes of prosperity that a new revolution must bring. It is imperative that they forever lack the political power they need to excerpt their plans upon the nation!"
- POR_end_the_popular_front_flag:0 "Has completed Decision §YEnd the Popular Front§!"
+ POR_portugals_path_to_marxism_leninism:0 "Portugal's Path to Marxism-Leninism"
+ POR_portugals_path_to_marxism_leninism_desc:0 "In less than 20 years, Lenin and his allies had brought Russia from a pit of backwardness to a foward, strong bastion of the revolution. We must bring the same fate to Portugal."
 
- POR_western_europes_red_bulwark:0 "Western Europe's Red Bulwark!"
- POR_western_europes_red_bulwark_desc:0 ""
+ POR_crush_reactionary_impedence:0 "Crush Reactionary Impedence"
+ POR_crush_reactionary_impedence_desc:0 "Portuguese democrats have learned nothing from the failings and sluggishness of democracy in the First Republic. Their plans for Portugal are a sham that will shatter the hopes of prosperity that a new revolution must bring. They, and Portugal's remaining Salazarists, must be cut from the nation at all costs!"
 
- POR_diplomatic_pragmatism:0 "Diplomatic Pragmatism"
- POR_diplomatic_pragmatism_desc:0 "We cannot sit idle as the scourge of fascism takes root on our continent. Until the time is right, bourgeois democracy is a necessary evil, and a potential ally in our struggle against Europe's fascist menace!"
+ POR_continue_the_iberian_social_revolution:0 "Continue the Iberian Social Revolution"
+ POR_continue_the_iberian_social_revolution_desc:0 ""
+
+ POR_join_the_global_fight_against_fascism:0 "Join the Global Fight Against Fascism"
+ POR_join_the_global_fight_against_fascism_desc:0 "We cannot sit idle as the scourge of fascism takes root on our continent. Until the time is right, bourgeois democracy is a necessary evil, and a potential ally in our struggle against Europe's fascist menace!"
 
  POR_towards_an_iberian_red_army:0 "Towards an Iberian Red Army"
  POR_towards_an_iberian_red_army_desc:0 ""
@@ -415,7 +428,6 @@
 
  POR_advance_the_cause_for_equality:0 "Advance the Cause for Equality"
  POR_advance_the_cause_for_equality_desc:0 ""
- POR_advance_the_cause_for_equality_tt:0 "If focus §YRestore Civil Liberties§! has been completed:"
 
  POR_restore_civil_liberties:0 "Restore Civil Liberties"
  POR_restore_civil_liberties_desc:0 ""
