@@ -215,7 +215,7 @@ MAL_the_malayan_economy_decisions = {
 		
 		modifier = {
 			#country_resource_oil = 24
-			fuel_gain_factor = 50
+			fuel_gain_factor = 0.5
 			consumer_goods_factor = -0.1
 			custom_modifier_tooltip = MAL_only_once_decision_tt
 		}
@@ -246,10 +246,10 @@ MAL_the_malayan_economy_decisions = {
 		}
 		
 		modifier = {
-			army_fuel_consumption_factor = -0.3
-			air_fuel_consumption_factor = -0.3
-			navy_fuel_consumption_factor = -0.3
-			out_of_supply_factor = 0.2
+			army_fuel_consumption_factor = -0.4
+			air_fuel_consumption_factor = -0.4
+			navy_fuel_consumption_factor = -0.4
+			out_of_supply_factor = -0.2
 			army_org_factor = -0.15
 			navy_org_factor = -0.15		
 			air_accidents_factor = 0.15
@@ -589,7 +589,7 @@ MAL_reintegrate_singapore = {
 		days_remove = 90
 		cost = 50
 		
-		complete_effect = {
+		modifier = {
 			consumer_goods_factor = 0.15
 		}
 
@@ -622,7 +622,7 @@ MAL_reintegrate_singapore = {
 		days_remove = 30
 		cost = 50
 		
-		complete_effect = {
+		modifier = {
 			stability_factor = -0.2
 		}
 
@@ -631,6 +631,111 @@ MAL_reintegrate_singapore = {
 				add_compliance = 15
 			}			
 		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+}
+
+MAL_collaboration_with_the_japanese_decisions = {
+	MAL_formally_enter_the_co_prosperity_sphere = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = MAL
+		}
+
+		available = {
+			JAP = {
+				has_resources_rights = {
+					state = 915
+				}
+				has_military_access_to = MAL
+			}
+		}
+		
+		fire_only_once = yes
+		cost = 50
+
+		complete_effect = {		
+			JAP = {
+				country_event = { id = malaysia.8 hours = 1 }
+			}
+			
+			add_ideas = MAL_collaboration_with_the_japanese_idea
+		}			
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	
+	MAL_grant_resource_rights = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = MAL
+		}
+
+		available = {
+			JAP = {
+				NOT = {
+					has_resources_rights = {
+						state = 915
+					}
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 180
+		cost = 25
+		
+		complete_effect = {
+			give_resource_rights = {
+				receiver = JAP
+				state = 915
+			}
+		}
+		
+		modifier = {
+			consumer_goods_factor = -0.2
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	
+	MAL_allow_military_and_naval_access = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = MAL
+		}
+
+		available = {
+			JAP = {
+				NOT = {
+					has_military_access_to = MAL
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 180
+		cost = 25
+		
+		complete_effect = {
+			give_military_access = JAP
+		}
+		
+		modifier = {
+			stability_factor = 0.2
+		}
+		
 		ai_will_do = {
 			factor = 50
 		}

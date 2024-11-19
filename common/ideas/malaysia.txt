@@ -194,7 +194,7 @@ ideas = { # things to fix from 16.10.24: fix the icons of some focuses like pro_
 			}
 		}
 		
-		MAL_shentons_batallion_limit = {
+		MAL_shentons_battalion_limit = {
 
 			allowed = {
 				always = no
@@ -686,7 +686,11 @@ ideas = { # things to fix from 16.10.24: fix the icons of some focuses like pro_
 
 			removal_cost = -1
 			
-			picture = 
+			picture = EST_exploit_the_banks
+			
+			on_add = {
+				add_offsite_building = { type = arms_factory level = 3 }
+			}
 			
 			modifier = {
 				consumer_goods_factor = 0.15
@@ -698,7 +702,101 @@ ideas = { # things to fix from 16.10.24: fix the icons of some focuses like pro_
 				add_offsite_building = { type = arms_factory level = -3 }
 			}
 		}
-	 	
+		
+		MAL_collaboration_with_the_japanese_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = EST_exploit_the_banks
+			
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = 0.3
+				war_stability_factor = -0.5
+				stability_weekly_factor = 0.01
+				fascism_drift = 0.01
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+			}
+		}
+		
+	 	MAL_chinese_populace_developments = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = EST_exploit_the_banks
+			
+			modifier = {
+				stability_factor = 0.05
+				recruitable_population_factor = 0.1
+			}
+		}
+		
+		MAL_chinese_populace_developments_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = EST_exploit_the_banks
+			
+			modifier = {
+				stability_factor = 0.05
+				recruitable_population_factor = 0.1
+			}
+			
+			research_bonus = {
+				industry = 0.10
+				electronics = 0.1
+			}
+		}
+		
+		MAL_chinese_populace_developments_3 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = EST_exploit_the_banks
+			
+			modifier = {
+				stability_factor = 0.05
+				recruitable_population_factor = 0.1
+			}
+			
+			research_bonus = {
+				industry = 0.10
+				electronics = 0.1
+			}
+		}
 	}
 
 	industrial_concern = {

@@ -62,6 +62,21 @@ MAL_reintegrate_singapore = {
 	}
 }
 
+MAL_collaboration_with_the_japanese_decisions = {
+	priority = 13
+
+	allowed = {
+		original_tag = MAL
+	}
+
+	visible = {
+		has_completed_focus = MAL_collaboration_with_the_japanese
+		NOT = {
+			has_war_with = JAP
+		}
+	}
+}
+
 MAL_mining_decisions = {
     icon = generic_prospect_for_resources
     priority = 85

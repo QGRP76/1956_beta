@@ -865,3 +865,5 @@ MAL_fighting_for_the_commonwealth_tt: "Create §Y4 Militia§! divisions.\nGet an
 MAL_fighting_for_the_commonwealth_event_tt: "§RBy giving weapons to these groups, they may stash and use some for future conflicts with us!§!"
 MAL_compensation_tt: "If Singapore is ceded, decisions to integrate the state into a core will be unlocked."
 MAL_american_military_investment_idea_tt: "Adds 3 off-map military factories\n §RThis idea will be removed when at war with the [USA.GetNameDef]!§!.
+MAL_collaboration_with_the_japanese_tt: "Unlocks decisions to slowly allow ourselves to enter the Co-Prosperity Sphere of [JAP.GetNameDef] at a cost of our independence"
+MAL_collaboration_with_the_japanese_guns_tt: "Receive §Y10,000 Infantry Equipment§! from [JAP.GetNameDef]"
