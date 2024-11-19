@@ -172,6 +172,10 @@ recruit_character = HOL_hubert_von_frijtag					#army
 #recruit_character = HOL_willem_kruys						#navy
 
 recruit_character = HOL_anthony_fokker
+recruit_character = HOL_jan_grase
+recruit_character = HOL_gerardus_t_Hooft
+recruit_character = HOL_cornelis_bakker
+recruit_character = HOL_franciscus_den_hollander
 
 set_autonomy = {
 	target = INS
