@@ -49,7 +49,7 @@ POR_towards_a_greater_portugal = {
 		available = {
 			171 = {
 				is_fully_controlled_by = POR
-				compliance > 30
+				compliance > 25
 				resistance < 3
 			}
 		}
@@ -273,67 +273,67 @@ POR_towards_a_greater_portugal = {
 				tooltip = organize_elections_in_the_hispanic_regions_tt
 				790 = {
 					is_controlled_by = ROOT
-					has_compliance > 30
+					compliance > 30
 				}
 				174 = {
 					is_controlled_by = ROOT
-					has_compliance > 30
+					compliance > 30
 				}
 				788 = {
 					is_controlled_by = ROOT
-					has_compliance > 30
+					compliance > 30
 				}
 				170 = {
 					is_controlled_by = ROOT
-					has_compliance > 30
+					compliance > 30
 				}
 				169 = {
 					is_controlled_by = ROOT
-					has_compliance > 30
+					compliance > 30
 				}
 				173 = {
 					is_controlled_by = ROOT
-					has_compliance > 30
+					compliance > 30
 				}
 				789 = {
 					is_controlled_by = ROOT
-					has_compliance > 30
+					compliance > 30
 				}
 				175 = {
 					is_controlled_by = ROOT
-					has_compliance > 30
+					compliance > 30
 				}
 				41 = {
 					is_controlled_by = ROOT
-					has_compliance > 30
+					compliance > 30
 				}
 				791 = {
 					is_controlled_by = ROOT
-					has_compliance > 30
+					compliance > 30
 				}
 				176 = {
 					is_controlled_by = ROOT
-					has_compliance > 30
+					compliance > 30
 				}
 				793 = {
 					is_controlled_by = ROOT
-					has_compliance > 30
+					compliance > 30
 				}
 				168 = {
 					is_controlled_by = ROOT
-					has_compliance > 30
+					compliance > 30
 				}
 				166 = {
 					is_controlled_by = ROOT
-					has_compliance > 30
+					compliance > 30
 				}
 				794 = {
 					is_controlled_by = ROOT
-					has_compliance > 30
+					compliance > 30
 				}
 				697 = {
 					is_controlled_by = ROOT
-					has_compliance > 30
+					compliance > 30
 				}
 			}
 		}

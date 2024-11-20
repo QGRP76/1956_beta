@@ -3096,7 +3096,7 @@ focus_tree = {
 		id = POR_further_the_centralization
 		prerequisite = { focus = POR_continue_the_iberian_social_revolution }
 		icon = GFX_focus_SOV_builder_of_the_red_army
-		cost = 8
+		cost = 10
 		x = 0
 		y = 1
 		relative_position_id = POR_continue_the_iberian_social_revolution
@@ -3114,9 +3114,9 @@ focus_tree = {
 	focus = {
 		id = POR_covert_return_to_the_world_stage
 		prerequisite = { focus = POR_continue_the_iberian_social_revolution }
-		mutually_exclusive = { focus = POR_join_the_global_fight_against_fascism }
+		mutually_exclusive = { focus = POR_diplomatic_pragmatism }
 		icon = GFX_focus_ETH_callout_to_the_world
-		cost = 6
+		cost = 4
 		x = -1
 		y = 2
 		relative_position_id = POR_continue_the_iberian_social_revolution
@@ -3132,18 +3132,88 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_join_the_global_fight_against_fascism
+		id = POR_anti_colonial_action
+		prerequisite = { focus = POR_covert_return_to_the_world_stage }
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		cost = 6
+		x = -1
+		y = 1
+		relative_position_id = POR_covert_return_to_the_world_stage
+		available = {
+		}
+		completion_reward = {
+		}
+		ai_will_do = {
+			base = 5
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = POR_diplomatic_pragmatism
 		prerequisite = { focus = POR_continue_the_iberian_social_revolution }
 		mutually_exclusive = { focus = POR_covert_return_to_the_world_stage }
-		icon = GFX_focus_generic_anti_fascist_diplomacy
-		cost = 6
+		icon = GFX_goal_generic_defence 
+		cost = 4
 		x = 1
 		y = 2
 		relative_position_id = POR_continue_the_iberian_social_revolution
 		available = {
 		}
 		completion_reward = {
+		}
+		ai_will_do = {
+			base = 5
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = POR_join_the_global_fight_against_fascism
+		prerequisite = { 
+			focus = POR_covert_return_to_the_world_stage 
+			focus = POR_diplomatic_pragmatism
+		}
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 8
+		x = 1
+		y = 1
+		relative_position_id = POR_covert_return_to_the_world_stage
+		available = { is_subject = no }
+		completion_reward = {
 			add_war_support = 0.05
+			every_country = {
+				limit = {
+					has_government = fascism
+					capital_scope = { is_on_continent = europe }
+					NOT = { is_in_faction_with = ROOT }
+				}
+				ROOT = {
+					create_wargoal = {
+						target = PREV
+						type = topple_government
+						expire = 0
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 5
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = POR_peace_with_the_western_democracies
+		prerequisite = { focus = POR_diplomatic_pragmatism }
+		icon = GFX_focus_SWE_refuge_from_war
+		cost = 6
+		x = 1
+		y = 1
+		relative_position_id = POR_diplomatic_pragmatism
+		available = {
+		}
+		completion_reward = {
 		}
 		ai_will_do = {
 			base = 5

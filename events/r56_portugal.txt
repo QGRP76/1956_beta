@@ -2515,47 +2515,9 @@ country_event = {	#Addressing the New Spain
 			}
 		}
 		hidden_effect = {
-			if = {
-				limit = {
-					SPR = {
-						OR = {
-							has_government = democratic
-							has_government = communism
-						}
-					}
-				}
-				every_state = {
-					limit = { is_core_of = SPR }
-					add_core_of = ROOT
-				}
-			}
-			if = {
-				limit = {
-					SPD = {
-						OR = {
-							has_government = democratic
-							has_government = communism
-						}
-					}
-				}
-				every_state = {
-					limit = { is_core_of = SPD }
-					add_core_of = ROOT
-				}
-			}
-			if = {
-				limit = {
-					SPC = {
-						OR = {
-							has_government = democratic
-							has_government = communism
-						}
-					}
-				}
-				every_state = {
-					limit = { is_core_of = SPC }
-					add_core_of = ROOT
-				}
+			every_state = {
+				limit = { has_state_flag = SPR_core_of_spain_flag }
+				add_core_of = ROOT
 			}
 		}
 		set_cosmetic_tag = ESU_POR_unified
