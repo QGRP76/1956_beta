@@ -1234,17 +1234,19 @@ form_polynesia_category = {
 			FROM = {
 				OR = {
 					# Polynesia
-					state = 284 #North Island
 					state = 630 #Johnston Atoll
 					state = 629 #Hawaii
 					state = 642 #Canton Island
 					state = 643 #Ellice Islands
 					state = 641 #Tahiti
 					state = 727 #Line Islands
+					state = 284 #North Island
 					state = 723 #South Island
+					state = 1087 #Chatham Islands
 					state = 726 #Samoa
+					state = 1088 #American Samoa
 					state = 734 #Tonga
-					state = 1087 #Chatham
+					state = 1089 #Niue
 				}
 			}
 		}

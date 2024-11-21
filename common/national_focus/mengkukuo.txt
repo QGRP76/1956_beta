@@ -3631,9 +3631,20 @@ focus_tree = {
 			}
 			add_stability = -0.05
 			custom_effect_tooltip = r56_newline
-			swap_ideas = {
-				remove_idea = MEN_kwantungs_invisible_hand
-				add_idea = MEN_kwantungs_invisible_hand_democratic
+			if = {
+				limit = {
+					has_idea = MEN_kwantungs_invisible_hand
+				}
+				swap_ideas = {
+					remove_idea = MEN_kwantungs_invisible_hand
+					add_idea = MEN_kwantungs_invisible_hand_democratic
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = MEN_kwantungs_invisible_hand_democratic
+					add_idea = MEN_kwantungs_invisible_hand_democratic_2
+				}
 			}
 			add_manpower = -5000
 			add_equipment_to_stockpile = {
@@ -3687,17 +3698,17 @@ focus_tree = {
 			custom_effect_tooltip = r56_newline
 			if = {
 				limit = {
-					has_idea = MEN_kwantungs_invisible_hand
+					has_idea = MEN_kwantungs_invisible_hand_democratic
 				}
 				swap_ideas = {
-					remove_idea = MEN_kwantungs_invisible_hand
-					add_idea = MEN_kwantungs_invisible_hand_democratic
+					remove_idea = MEN_kwantungs_invisible_hand_democratic
+					add_idea = MEN_kwantungs_invisible_hand_democratic_2
 				}
 			}
 			else = {
 				swap_ideas = {
-					remove_idea = MEN_kwantungs_invisible_hand_democratic
-					add_idea = MEN_kwantungs_invisible_hand_democratic_2
+					remove_idea = MEN_kwantungs_invisible_hand
+					add_idea = MEN_kwantungs_invisible_hand_democratic
 				}
 			}
 			if = {
@@ -4967,9 +4978,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		bypass = {
-			
-		}
+		bypass_if_unavailable = yes # Bypass if Japan is not a threat
 
 		available = {
 			JAP = {
@@ -5051,6 +5060,9 @@ focus_tree = {
 					type = annex_everything
 					expire = 0
 				}
+			}
+			effect_tooltip = {
+				unlock_decision_tooltip = MON_unify_greater_mongolia
 			}
 		}
 	}

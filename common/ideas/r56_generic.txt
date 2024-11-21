@@ -796,7 +796,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = bad_economy
+			picture = generic_economic_crisis
 
 			modifier = {
 				trade_laws_cost_factor = 0.25
