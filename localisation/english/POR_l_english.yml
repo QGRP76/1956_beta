@@ -383,8 +383,11 @@
  POR_peace_with_the_western_democracies:0 "Peace With the Western Democracies"
  POR_peace_with_the_western_democracies_desc:0 ""
 
- POR_further_the_centralization:0 "Further the Centralization"
- POR_further_the_centralization_desc:0 ""
+ POR_centralize_the_administraton:0 "Centralize the Administration"
+ POR_centralize_the_administraton_desc:0 ""
+
+ POR_crush_reactionary_impedence:0 "Crush Reactionary Impedence"
+ POR_crush_reactionary_impedence_desc:0 "Portuguese democrats have learned nothing from the failings and sluggishness of democracy in the First Republic. Their plans for Portugal are a sham that will shatter the hopes of prosperity that a new revolution must bring. They, and Portugal's remaining Salazarists, must be cut from the nation at all costs!"
 
  POR_empower_socialist_organizations:0 "Empower Socialist Organizations"
  POR_empower_socialist_organizations_desc:0 "Youth movements are a 20th century backbone for countless ideologies and governments. Portuguese socialist movements are far and near to every corner of Portugal; they shall have the support they need to ensure our ideas reign over the nation!"
@@ -392,11 +395,12 @@
  POR_arm_anti_fascist_militias:0 "Arm Anti-Fascist Militias"
  POR_arm_anti_fascist_militias_tt:0 "§GRemoves§! all remaining §YAuthoritarian§! and §YFascism§! support"
 
+ POR_return_to_national_secularism:0 "Return to National Secularism"
+ POR_return_to_national_secularism_desc:0 ""
+
  POR_portugals_path_to_marxism_leninism:0 "Portugal's Path to Marxism-Leninism"
  POR_portugals_path_to_marxism_leninism_desc:0 "In less than 20 years, Lenin and his allies had brought Russia from a pit of backwardness to a foward, strong bastion of the revolution. We must bring the same fate to Portugal."
-
- POR_crush_reactionary_impedence:0 "Crush Reactionary Impedence"
- POR_crush_reactionary_impedence_desc:0 "Portuguese democrats have learned nothing from the failings and sluggishness of democracy in the First Republic. Their plans for Portugal are a sham that will shatter the hopes of prosperity that a new revolution must bring. They, and Portugal's remaining Salazarists, must be cut from the nation at all costs!"
+ POR_portugals_path_to_socialism:0 "Portugal's Path to Socialism"
 
  POR_continue_the_iberian_social_revolution:0 "Continue the Iberian Social Revolution"
  POR_continue_the_iberian_social_revolution_desc:0 ""
@@ -430,8 +434,8 @@
  POR_prepare_for_a_war_of_annihilation:0 "Prepare for a War of Annihilation"
  POR_prepare_for_a_war_of_annihilation_desc:0 ""
 
- POR_exasperate_the_industrialization:0 "Exasperate the Industrialization"
- POR_exasperate_the_industrialization_desc:0 ""
+ POR_escalate_the_industrialization:0 "Escalate the Industrialization"
+ POR_escalate_the_industrialization_desc:0 ""
  POR_factory_recruitment_drive:0 "Factory Recruitment Drive"
  POR_direct_farmland_to_industrial_projects:0 "Direct Farmland to Industrial Projects"
 

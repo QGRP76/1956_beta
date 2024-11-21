@@ -2763,7 +2763,7 @@ focus_tree = {
 	focus = {
 		id = POR_empower_socialist_organizations
 		prerequisite = { 
-			focus = POR_portugals_path_to_marxism_leninism
+			focus = POR_crush_reactionary_impedence
 			focus = POR_general_directorate_of_security 
 		}
 		icon = GFX_focus_GER_support_the_proletarian_uprising
@@ -2833,7 +2833,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_exasperate_the_industrialization
+		id = POR_escalate_the_industrialization
 		prerequisite = { focus = POR_towards_a_prosperous_proletariat }
 		icon = GFX_goal_generic_communist_economy
 		cost = 8
@@ -2898,13 +2898,13 @@ focus_tree = {
 
 	focus = {
 		id = POR_prepare_for_a_war_of_annihilation
-		prerequisite = { focus = POR_exasperate_the_industrialization }
+		prerequisite = { focus = POR_escalate_the_industrialization }
 		icon = GFX_goal_generic_dictatorship_of_proletariat
 		cost = 5
 		ai_will_do = { base = 25 }
 		x = 0
 		y = 1
-		relative_position_id = POR_exasperate_the_industrialization
+		relative_position_id = POR_escalate_the_industrialization
 		bypass = { has_completed_focus = POR_never_another_la_lys }
 		completion_reward = { complete_national_focus = POR_never_another_la_lys }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3014,9 +3014,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_portugals_path_to_marxism_leninism
+		id = POR_crush_reactionary_impedence
 		prerequisite = { focus = POR_consolidate_the_revolution }
-		icon = GFX_postive_heroism
+		icon = GFX_focus_SOV_the_last_purge
 		cost = 10
 		x = -1
 		y = 1
@@ -3042,7 +3042,7 @@ focus_tree = {
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			swap_ideas = {
 				remove_idea = POR_divided_revolution
-				add_idea = POR_portugals_path_to_marxism_leninism
+				add_idea = POR_portugals_path_to_socialism
 			}	
 		}
 		ai_will_do = {
@@ -3056,11 +3056,46 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_crush_reactionary_impedence
-		prerequisite = { focus = POR_portugals_path_to_marxism_leninism }
-		icon = GFX_focus_SOV_the_last_purge
-		cost = 8
+		id = POR_return_to_national_secularism
+		prerequisite = { focus = POR_crush_reactionary_impedence }
+		icon = GFX_focus_BRA_state_atheism
+		cost = 8 
 		x = -1
+		y = 1
+		relative_position_id = POR_crush_reactionary_impedence
+		available = {
+		}
+		completion_reward = {
+			unlock_decision_tooltip = POR_appropriate_church_riches
+		}
+		ai_will_do = { base = 5 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = POR_portugals_path_to_marxism_leninism
+		prerequisite = { focus = POR_crush_reactionary_impedence }
+		icon = GFX_postive_heroism
+		cost = 10
+		x = 0
+		y = 2
+		relative_position_id = POR_crush_reactionary_impedence
+		available = {
+		}
+		completion_reward = {
+		}
+		ai_will_do = {
+			base = 5
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	focus = {
+		id = POR_towards_an_iberian_red_army
+		prerequisite = { focus = POR_portugals_path_to_marxism_leninism }
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		cost = 10
+		x = 2
 		y = 1
 		relative_position_id = POR_portugals_path_to_marxism_leninism
 		available = {
@@ -3076,30 +3111,27 @@ focus_tree = {
 	focus = {
 		id = POR_continue_the_iberian_social_revolution
 		prerequisite = { focus = POR_portugals_path_to_marxism_leninism }
-		icon = GFX_focus_BRA_state_atheism
-		cost = 10
-		x = 0
-		y = 2
+		icon = GFX_focus_GER_proletarian_solidarity
+		cost = 8
+		x = -2
+		y = 1
 		relative_position_id = POR_portugals_path_to_marxism_leninism
 		available = {
 		}
 		completion_reward = {
-			unlock_decision_tooltip = POR_appropriate_church_riches
 		}
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
-		id = POR_further_the_centralization
-		prerequisite = { focus = POR_continue_the_iberian_social_revolution }
-		icon = GFX_focus_SOV_builder_of_the_red_army
-		cost = 10
+		id = POR_centralize_the_administraton
+		prerequisite = { focus = POR_portugals_path_to_marxism_leninism }
+		icon = GFX_generic_goal_communist_reforms
+		cost = 8
 		x = 0
 		y = 1
-		relative_position_id = POR_continue_the_iberian_social_revolution
+		relative_position_id = POR_portugals_path_to_marxism_leninism
 		available = {
 		}
 		completion_reward = {
@@ -3113,13 +3145,13 @@ focus_tree = {
 
 	focus = {
 		id = POR_covert_return_to_the_world_stage
-		prerequisite = { focus = POR_continue_the_iberian_social_revolution }
+		prerequisite = { focus = POR_portugals_path_to_marxism_leninism }
 		mutually_exclusive = { focus = POR_diplomatic_pragmatism }
 		icon = GFX_focus_ETH_callout_to_the_world
 		cost = 4
 		x = -1
 		y = 2
-		relative_position_id = POR_continue_the_iberian_social_revolution
+		relative_position_id = POR_portugals_path_to_marxism_leninism
 		available = {
 		}
 		completion_reward = {
@@ -3151,13 +3183,13 @@ focus_tree = {
 
 	focus = {
 		id = POR_diplomatic_pragmatism
-		prerequisite = { focus = POR_continue_the_iberian_social_revolution }
+		prerequisite = { focus = POR_portugals_path_to_marxism_leninism }
 		mutually_exclusive = { focus = POR_covert_return_to_the_world_stage }
 		icon = GFX_goal_generic_defence 
 		cost = 4
 		x = 1
 		y = 2
-		relative_position_id = POR_continue_the_iberian_social_revolution
+		relative_position_id = POR_portugals_path_to_marxism_leninism
 		available = {
 		}
 		completion_reward = {
@@ -3180,26 +3212,65 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_covert_return_to_the_world_stage
 		available = { is_subject = no }
+		will_lead_to_war_with = ITA
+		will_lead_to_war_with = GER
 		completion_reward = {
 			add_war_support = 0.05
-			every_country = {
+			if = {
 				limit = {
-					has_government = fascism
-					capital_scope = { is_on_continent = europe }
-					NOT = { is_in_faction_with = ROOT }
+					has_completed_focus = POR_diplomatic_pragmatism
+					is_in_faction = no
+					ENG = {
+						is_faction_leader = yes
+						NOT = { 
+							has_government = fascism
+							has_war_with = ROOT 
+						}
+					}
+					any_country = {
+						has_government = fascism
+						has_war_with = ENG
+					}
 				}
-				ROOT = {
-					create_wargoal = {
-						target = PREV
-						type = topple_government
-						expire = 0
+				ENG = {
+					country_event = { id = generic.2 }
+				}
+			}
+			else_if = {
+				limit = {
+					is_in_faction = no
+					SOV = { 
+						is_faction_leader = yes
+						has_government = communism 
+						NOT = { has_war_with = ROOT }
+					}
+					any_country = {
+						has_government = fascism
+						has_war_with = SOV
+					}
+				}
+				SOV = {
+					country_event = { id = generic.2 }
+				}
+				
+			}
+			else = {
+				every_country = {
+					limit = {
+						capital_scope = { is_on_continent = europe }
+						has_government = fascism
+					}
+					ROOT = {
+						create_wargoal = {
+							type = puppet_wargoal_focus
+							target = PREV
+							expire = 0
+						}
 					}
 				}
 			}
 		}
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 2 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
@@ -3222,42 +3293,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_PLACEHOLDER
-		prerequisite = { focus = POR_continue_the_iberian_social_revolution }
-		icon = GFX_focus_GER_proletarian_solidarity
-		cost = 8
-		x = -2
-		y = 1
-		relative_position_id = POR_continue_the_iberian_social_revolution
-		available = {
-		}
-		completion_reward = {
-		}
-		ai_will_do = {
-			base = 5
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = POR_PLACEH0LDER
-		prerequisite = { focus = POR_continue_the_iberian_social_revolution }
-		icon = GFX_focus_GER_proletarian_dictatorship
-		cost = 8
-		x = 2
-		y = 1
-		relative_position_id = POR_continue_the_iberian_social_revolution
-		available = {
-		}
-		completion_reward = {
-		}
-		ai_will_do = {
-			base = 5
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
 		id = POR_restore_civil_liberties
 		prerequisite = { focus = POR_pave_the_path_to_progress }
 		icon = GFX_goal_generic_multipartism
@@ -3266,7 +3301,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_pave_the_path_to_progress
 		available = {
-			NOT = { has_completed_focus = POR_portugals_path_to_marxism_leninism }
+			NOT = { has_completed_focus = POR_crush_reactionary_impedence }
 		}
 		completion_reward = {
 			swap_ideas = {
