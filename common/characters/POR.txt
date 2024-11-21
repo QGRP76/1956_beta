@@ -715,7 +715,7 @@ characters = {
 					limit = { has_global_flag = por_lar_focus_tree }
 					has_completed_focus = POR_reorganization_of_the_communist_party 
 				}
-				else = { has_completed_focus = POR_towards_a_prosperous_proletariat }
+				else = { has_completed_focus = POR_centralize_the_administration }
 			}
 			traits = { financial_expert }
 			ai_will_do = { base = 1 }

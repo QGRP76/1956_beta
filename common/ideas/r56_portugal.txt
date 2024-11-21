@@ -122,6 +122,18 @@ ideas = {
 			}
 		}
 
+		POR_colonial_army_r56 = {
+			name = POR_colonial_army
+			picture = por_colonial_army
+			allowed = { original_tag = POR }
+			allowed_civil_war = { tag = POR }
+			removal_cost = -1
+			modifier = {
+				non_core_manpower = 0.05
+				weekly_manpower = 500
+			}
+		}
+
 		#Political - Democratic/Communist
 
 		POR_unite_against_salazar_idea = {
@@ -225,7 +237,7 @@ ideas = {
 		}
 
 		POR_portugals_path_to_socialism = {
-			picture = ARG_no_gods_no_masters
+			picture = LIT_commie_militia
 			allowed = { original_tag = POR }
 			cancel = { has_government = neutrality }
 			allowed_civil_war = { 
@@ -342,6 +354,21 @@ ideas = {
 			}
 		}
 
+		POR_socialist_market_economy = {
+			picture = generic_production_bonus
+			allowed = { original_tag = POR }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.001
+				political_power_factor = -0.15
+				stability_factor = 0.03
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.15
+				communism_drift = 0.01
+				global_building_slots_factor = 0.1
+			}
+		}
+
 		POR_slow_collectivization = {
 			picture = generic_production_bonus
 			allowed = { original_tag = POR }
@@ -349,6 +376,20 @@ ideas = {
 			modifier = {
 				production_speed_buildings_factor = 0.075
 				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		POR_the_portuguese_new_economic_policy = {
+			picture = generic_production_bonus
+			allowed = { original_tag = POR }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				stability_weekly = 0.001
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				communism_drift = 0.01
+				global_building_slots_factor = 0.05
 			}
 		}
 
@@ -372,7 +413,17 @@ ideas = {
 				production_speed_buildings_factor = 0.125
 				production_factory_efficiency_gain_factor = 0.14
 			}
-		}																																
+		}		
+		
+		POR_the_red_industrial_revolution = {
+			picture = generic_production_bonus
+			allowed = { original_tag = POR }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.2
+			}
+		}
 
 		#Political - Historical/Authoritarian
 

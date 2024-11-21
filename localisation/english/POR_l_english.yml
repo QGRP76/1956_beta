@@ -366,8 +366,6 @@
  POR_general_directorate_of_security:0 "General Directorate of Security"
  POR_general_directorate_of_security_desc:0 ""
 
- POR_appropriate_church_riches:0 "Appropriate Church Riches"
-
  POR_covert_return_to_the_world_stage:0 "Covert Return to the World Stage"
  POR_covert_return_to_the_world_stage_desc:0 ""
 
@@ -383,8 +381,8 @@
  POR_peace_with_the_western_democracies:0 "Peace With the Western Democracies"
  POR_peace_with_the_western_democracies_desc:0 ""
 
- POR_centralize_the_administraton:0 "Centralize the Administration"
- POR_centralize_the_administraton_desc:0 ""
+ POR_towards_an_iberian_red_army:0 "Towards an Iberian Red Army"
+ POR_towards_an_iberian_red_army_desc:0 ""
 
  POR_crush_reactionary_impedence:0 "Crush Reactionary Impedence"
  POR_crush_reactionary_impedence_desc:0 "Portuguese democrats have learned nothing from the failings and sluggishness of democracy in the First Republic. Their plans for Portugal are a sham that will shatter the hopes of prosperity that a new revolution must bring. They, and Portugal's remaining Salazarists, must be cut from the nation at all costs!"
@@ -397,6 +395,8 @@
 
  POR_return_to_national_secularism:0 "Return to National Secularism"
  POR_return_to_national_secularism_desc:0 ""
+ POR_appropriate_church_riches:0 "Appropriate Church Riches"
+ POR_stamp_out_clergy_influence:0 "Stamp Out Clergy Influence"
 
  POR_portugals_path_to_marxism_leninism:0 "Portugal's Path to Marxism-Leninism"
  POR_portugals_path_to_marxism_leninism_desc:0 "In less than 20 years, Lenin and his allies had brought Russia from a pit of backwardness to a foward, strong bastion of the revolution. We must bring the same fate to Portugal."
@@ -405,8 +405,12 @@
  POR_continue_the_iberian_social_revolution:0 "Continue the Iberian Social Revolution"
  POR_continue_the_iberian_social_revolution_desc:0 ""
 
- POR_towards_an_iberian_red_army:0 "Towards an Iberian Red Army"
- POR_towards_an_iberian_red_army_desc:0 ""
+ POR_centralize_the_administration:0 "Centralize the Administration"
+ POR_centralize_the_administration_desc:0 ""
+ POR_the_question_of_nationalization_decisions_taken_5_or_greater_tt:0 "Has carried out §Y5§! or more §YThe Path to Economic Progress§! decisions (Current progress is §Y[?POR_the_question_of_nationalization_decisions_taken]/5§!)"
+ POR_socialist_market_economy:0 "Socialist Market Economy"
+ POR_the_portuguese_new_economic_policy:0 "The Portuguese New Economic Policy"
+ POR_the_red_industrial_revolution:0 "The Red Industrial Revolution"
 
  POR_pave_the_path_to_progress:0 "Pave the Path to Progress"
  POR_pave_the_path_to_progress_desc:0 "Our cause will never truly triumph if the victories of today becomes yet another constant tomorrow. We must ensure that Portugal's stride forward never ends!"

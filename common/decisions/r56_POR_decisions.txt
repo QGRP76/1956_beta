@@ -588,10 +588,11 @@ POR_the_path_to_economic_progress = {
 		}
 		days_remove = 100
 		modifier = {
-			political_power_factor = 0.1
+			political_power_factor = 0.05
 			consumer_goods_factor = -0.05
 		}
 		remove_effect = {
+			add_to_variable = { POR_the_question_of_nationalization_decisions_taken = 1 }
 			if = {
 				limit = { 
 					has_idea = POR_looming_economic_disaster
@@ -642,6 +643,9 @@ POR_the_path_to_economic_progress = {
 			industrial_capacity_factory = 0.1
 			production_factory_efficiency_gain_factor = 0.15
 		}
+		remove_effect = {
+			add_to_variable = { POR_the_question_of_nationalization_decisions_taken = 1 }
+		}
 	}
 
 	POR_support_private_collectives = {
@@ -662,6 +666,7 @@ POR_the_path_to_economic_progress = {
 			consumer_goods_factor = -0.1
 		}
 		remove_effect = {
+			add_to_variable = { POR_the_question_of_nationalization_decisions_taken = 1 }
 			if = {
 				limit = { 
 					has_idea = POR_the_question_of_nationalization_idea
@@ -724,6 +729,7 @@ POR_the_path_to_economic_progress = {
 		days_remove = 150
 		modifier = { consumer_goods_factor = 0.1 }
 		remove_effect = {
+			add_to_variable = { POR_the_question_of_nationalization_decisions_taken = 1 }
 			if = {
 				limit = { has_completed_focus = POR_push_forward_popular_reform }
 				add_political_power = 115
@@ -765,6 +771,7 @@ POR_the_path_to_economic_progress = {
 			monthly_population = 0.25
 		}
 		remove_effect = {
+			add_to_variable = { POR_the_question_of_nationalization_decisions_taken = 1 }
 			add_popularity = {
 				ideology = ROOT
 				popularity = 0.03
@@ -787,6 +794,7 @@ POR_the_path_to_economic_progress = {
 			political_power_factor = -0.1
 		}
 		remove_effect = {
+			add_to_variable = { POR_the_question_of_nationalization_decisions_taken = 1 }
 			if = {
 				limit = { has_completed_focus = POR_push_forward_popular_reform }
 				add_political_power = 20
@@ -820,10 +828,9 @@ POR_the_path_to_economic_progress = {
 				}
 			}
 			else = {
-				add_stability = -0.05
 				add_popularity = {
 					ideology = ROOT
-					popularity = 0.02
+					popularity = 0.01
 				}
 			}
 		}
@@ -848,6 +855,7 @@ POR_the_path_to_economic_progress = {
 			stability_weekly = 0.002
 		}
 		remove_effect = {
+			add_to_variable = { POR_the_question_of_nationalization_decisions_taken = 1 }
 			if = {
 				limit = { has_completed_focus = POR_push_forward_popular_reform }
 				add_popularity = {
@@ -873,6 +881,7 @@ POR_the_path_to_economic_progress = {
 		available = { has_government = communism }
 		days_remove = 120
 		remove_effect = {
+			add_to_variable = { POR_the_question_of_nationalization_decisions_taken = 1 }
 			if = {
 				limit = { has_completed_focus = POR_push_forward_popular_reform }
 				add_political_power = 30
@@ -914,7 +923,7 @@ POR_the_path_to_economic_progress = {
 				}
 			}
 			else = {
-				add_stability = -0.05
+				add_stability = -0.03
 				add_popularity = {
 					ideology = ROOT
 					popularity = -0.02
@@ -1404,6 +1413,47 @@ POR_securing_the_revolution = {
 			democratic_drift = 0.01
 		}
 		remove_effect = { set_country_flag = POR_end_the_political_trials_flag }
+	}
+
+	POR_stamp_out_clergy_influence = {
+		cost = 75
+		icon = oppression
+		fire_only_once = yes
+		visible = { has_completed_focus = POR_return_to_national_secularism }
+		days_remove = 200
+		complete_effect = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			} 
+		}
+		remove_effect = {
+			add_political_power = 90
+			if = {
+				limit = { has_idea = POR_reactionary_resistance2 }
+				swap_ideas = {
+					remove_idea = POR_reactionary_resistance2
+					add_idea = POR_reactionary_resistance3
+				}
+			}
+			else_if = {
+				limit = { has_idea = POR_reactionary_resistance3 }
+				remove_ideas = POR_reactionary_resistance3
+				custom_effect_tooltip = CHL_skip_one_line_tt
+				add_timed_idea = {
+					idea = POR_reactionary_resistance4
+					days = 365
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = POR_reactionary_resistance
+					add_idea = POR_reactionary_resistance2
+				}
+			}
+		}
+		ai_will_do = { base = 1 }
 	}
 
 	POR_foment_peace_with_the_church = {

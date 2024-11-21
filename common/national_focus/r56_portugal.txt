@@ -1511,7 +1511,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POR_strengthen_the_colonial_administration
-		completion_reward = { add_ideas = POR_colonial_army }
+		completion_reward = { add_ideas = POR_colonial_army_r56 }
 	}
 
 	focus = {
@@ -2825,9 +2825,6 @@ focus_tree = {
 			custom_effect_tooltip = POR_towards_a_prosperous_proletariat_tt
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			add_ideas = POR_the_question_of_nationalization_idea
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = POR_bento_de_jesus_caraca
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -3026,7 +3023,6 @@ focus_tree = {
 			NOT = { has_completed_focus = POR_restore_civil_liberties }
 		}
 		completion_reward = {
-			add_political_power = 50
 			hidden_effect = {
 				set_temp_variable = {
 					var = suspend_the_constitution_var
@@ -3063,10 +3059,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POR_crush_reactionary_impedence
-		available = {
-		}
 		completion_reward = {
+			add_political_power = 50
 			unlock_decision_tooltip = POR_appropriate_church_riches
+			unlock_decision_tooltip = POR_stamp_out_clergy_influence
 		}
 		ai_will_do = { base = 5 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3091,20 +3087,61 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = POR_towards_an_iberian_red_army
+		id = POR_centralize_the_administration
 		prerequisite = { focus = POR_portugals_path_to_marxism_leninism }
-		icon = GFX_focus_SOV_builder_of_the_red_army
-		cost = 10
-		x = 2
+		icon = GFX_generic_goal_communist_reforms
+		cost = 15
+		x = 0
 		y = 1
 		relative_position_id = POR_portugals_path_to_marxism_leninism
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = POR_the_question_of_nationalization_decisions_taken_5_or_greater_tt
+				check_variable = { 
+					POR_the_question_of_nationalization_decisions_taken = 5 
+					compare = greater_than_or_equals 
+				}
+			}
 		}
 		completion_reward = {
+			if = {
+				limit = { has_idea = POR_the_question_of_nationalization_idea }
+				swap_ideas = {
+					remove_idea = POR_the_question_of_nationalization_idea
+					add_idea = POR_socialist_market_economy
+				}
+			}
+			else_if = { 
+				limit = { has_idea = POR_slow_collectivization }
+				swap_ideas = {
+					remove_idea = POR_slow_collectivization
+					add_idea = POR_the_portuguese_new_economic_policy
+				}
+			}
+			else_if = { 
+				limit = { has_idea = POR_heavy_handed_central_planning }
+				swap_ideas = {
+					remove_idea = POR_heavy_handed_central_planning
+					add_idea = POR_the_red_industrial_revolution
+				}
+			}
+			else_if = { 
+				limit = { has_idea = POR_looming_economic_disaster }
+				swap_ideas = {
+					remove_idea = POR_looming_economic_disaster
+					add_idea = POR_the_red_industrial_revolution
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = POR_transitioning_to_a_mixed_economy
+					add_idea = POR_socialist_market_economy
+				}
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = POR_bento_de_jesus_caraca
 		}
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 99 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
@@ -3125,21 +3162,18 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_centralize_the_administraton
+		id = POR_towards_an_iberian_red_army
 		prerequisite = { focus = POR_portugals_path_to_marxism_leninism }
-		icon = GFX_generic_goal_communist_reforms
+		icon = GFX_focus_SOV_builder_of_the_red_army
 		cost = 8
-		x = 0
+		x = 2
 		y = 1
 		relative_position_id = POR_portugals_path_to_marxism_leninism
 		available = {
 		}
 		completion_reward = {
-			
 		}
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
