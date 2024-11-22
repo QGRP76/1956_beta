@@ -4,7 +4,7 @@ ideas = {
 		POR_lackluster_armed_forces = {
 			picture = ETH_conservative_high_command
 			allowed = { original_tag = POR }
-			allowed_civil_war = { original_tag = POR }
+			allowed_civil_war = { tag = POR }
 			removal_cost = -1
 			modifier = {
 				army_attack_factor = -0.05	
@@ -19,6 +19,7 @@ ideas = {
 		POR_disgruntled_republicans = {
 			picture = EST_democratic_opposition
 			allowed = { original_tag = POR }
+			allowed_civil_war = { tag = POR }
 			cancel = { has_government = communism }
 			removal_cost = -1
 			modifier = {
@@ -54,7 +55,7 @@ ideas = {
 		POR_studying_the_spanish_civil_war = {
 			picture = generic_war_preparation
 			allowed = { original_tag = POR }
-			allowed_civil_war = { original_tag = POR }
+			allowed_civil_war = { tag = POR }
 			removal_cost = -1
 			modifier = { experience_gain_army = 0.1 }
 		}
@@ -63,7 +64,7 @@ ideas = {
 			removal_cost = -1
 			picture = MEX_politicised_army
 			allowed = { original_tag = POR }
-			allowed_civil_war = { original_tag = POR }
+			allowed_civil_war = { tag = POR }
 			modifier = {
 				target_sabotage_factor = 0.2
 				resistance_damage_to_garrison_on_our_occupied_states = 0.15
@@ -74,7 +75,7 @@ ideas = {
 		POR_renewing_the_portuguese_armada = {
 			picture = generic_navy_bonus
 			allowed = { original_tag = POR }
-			allowed_civil_war = { original_tag = POR }
+			allowed_civil_war = { tag = POR }
 			removal_cost = -1
 			modifier = { industrial_capacity_dockyard = 0.15 }
 		}
@@ -82,7 +83,7 @@ ideas = {
 		POR_rejuvenating_the_land_forces = {
 			picture = MEX_callistas 
 			allowed = { original_tag = POR }
-			allowed_civil_war = { original_tag = POR }
+			allowed_civil_war = { tag = POR }
 			removal_cost = -1
 			equipment_bonus = {
 				infantry_equipment = { build_cost_ic = -0.15 }
@@ -97,7 +98,7 @@ ideas = {
 		POR_supporting_the_spanish_nationalists = {
 			picture = por_volunteers_in_the_war
 			allowed = { original_tag = POR }
-			allowed_civil_war = { original_tag = POR }
+			allowed_civil_war = { tag = POR }
 			cancel = { has_global_flag = scw_over }
 			removal_cost = -1
 			rule = { can_send_volunteers = yes }
@@ -237,6 +238,86 @@ ideas = {
 		}
 
 		POR_portugals_path_to_socialism = {
+			picture = SPR_class_war
+			allowed = { original_tag = POR }
+			cancel = { has_government = neutrality }
+			allowed_civil_war = { 
+				OR = {
+					has_government = communism
+					has_government = democratic
+				} 
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.1
+				political_advisor_cost_factor = -0.15
+				weekly_casualties_war_support = 0.001
+				war_stability_factor = 0.1
+				justify_war_goal_time = 1
+				neutrality_drft = -0.01
+			}
+		}
+
+		POR_portugals_path_to_marxism_leninism_idea = {
+			name = POR_portugals_path_to_socialism
+			picture = NOR_sivog
+			allowed = { original_tag = POR }
+			cancel = { has_government = neutrality }
+			allowed_civil_war = { 
+				OR = {
+					has_government = communism
+					has_government = democratic
+				} 
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.2
+				political_advisor_cost_factor = -0.3
+				weekly_casualties_war_support = 0.001
+				war_stability_factor = 0.1
+				justify_war_goal_time = 0.5
+				neutrality_drft = -0.01
+			}
+		}
+
+		POR_integrating_socialist_militias = {
+			picture = POL_the_peasants_strike
+			allowed = { original_tag = POR }
+			cancel = { has_government = neutrality }
+			allowed_civil_war = { 
+				OR = {
+					has_government = communism
+					has_government = democratic
+				} 
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.15
+				conscription_factor = 0.1
+				war_support_factor = 0.03
+			}
+		}
+
+		POR_integrating_socialist_militias2 = {
+			name = POR_integrating_socialist_militias
+			picture = POL_the_peasants_strike
+			allowed = { original_tag = POR }
+			cancel = { has_government = neutrality }
+			allowed_civil_war = { 
+				OR = {
+					has_government = communism
+					has_government = democratic
+				} 
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.07
+				conscription_factor = 0.12
+				war_support_factor = 0.05
+			}
+		}
+
+		POR_protectors_of_the_revolution = {
 			picture = LIT_commie_militia
 			allowed = { original_tag = POR }
 			cancel = { has_government = neutrality }
@@ -248,12 +329,12 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = 0.15
-				political_advisor_cost_factor = -0.25
-				weekly_casualties_war_support = 0.001
-				war_stability_factor = 0.1
-				justify_war_goal_time = 1
-				neutrality_drft = -0.01
+				conscription_factor = 0.15
+				war_support_factor = 0.05
+				high_command_cost_factor = -0.25
+				air_chief_cost_factor = -0.25
+				army_chief_cost_factor = -0.25
+				navy_chief_cost_factor = -0.25
 			}
 		}
 
@@ -346,7 +427,7 @@ ideas = {
 			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
-				political_power_factor = -0.15
+				political_power_factor = -0.05
 				democratic_drift = 0.01 
 				stability_factor = 0.03
 				industrial_capacity_factory = 0.05

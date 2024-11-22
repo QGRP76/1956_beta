@@ -1545,6 +1545,7 @@ focus_tree = {
 			every_controlled_state = {
 				limit = { is_core_of = MZB }
 				add_compliance = 5
+				add_resistance = -5
 				add_extra_state_shared_building_slots = 1
 			}
 			custom_effect_tooltip = CHL_skip_one_line_tt
@@ -1593,6 +1594,7 @@ focus_tree = {
 			every_controlled_state = {
 				limit = { is_core_of = ANG }
 				add_compliance = 5
+				add_resistance = -5
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -2625,7 +2627,7 @@ focus_tree = {
 	focus = {
 		id = POR_storm_the_national_assembly
 		prerequisite = { focus = POR_unite_against_salazar }
-		icon = GFX_goal_ussr_revolt
+		icon = GFX_focus_GER_proletarian_solidarity
 		cost = 8
 		x = 0
 		y = 1
@@ -2801,7 +2803,6 @@ focus_tree = {
 					add_idea = POR_reactionary_resistance2
 				}
 			}
-			set_country_flag = POR_arm_anti_fascist_militias_flag
 			unlock_decision_tooltip = POR_arm_anti_fascist_militias
 			unlock_decision_tooltip = POR_tap_aligned_laborer_organizations
 		}
@@ -3052,7 +3053,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_return_to_national_secularism
+		id = POR_the_iberian_social_revolution
 		prerequisite = { focus = POR_crush_reactionary_impedence }
 		icon = GFX_focus_BRA_state_atheism
 		cost = 8 
@@ -3060,7 +3061,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_crush_reactionary_impedence
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
 			unlock_decision_tooltip = POR_appropriate_church_riches
 			unlock_decision_tooltip = POR_stamp_out_clergy_influence
 		}
@@ -3077,17 +3078,23 @@ focus_tree = {
 		y = 2
 		relative_position_id = POR_crush_reactionary_impedence
 		available = {
+			democratic < 0.1
 		}
 		completion_reward = {
+			add_political_power = 75
+			swap_ideas = {
+				remove_idea = POR_portugals_path_to_socialism
+				add_idea = POR_portugals_path_to_marxism_leninism_idea
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = POR_bento_de_jesus_caraca
 		}
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	
 	focus = {
-		id = POR_centralize_the_administration
+		id = POR_solidify_the_economic_reforms
 		prerequisite = { focus = POR_portugals_path_to_marxism_leninism }
 		icon = GFX_generic_goal_communist_reforms
 		cost = 15
@@ -3096,7 +3103,7 @@ focus_tree = {
 		relative_position_id = POR_portugals_path_to_marxism_leninism
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = POR_the_question_of_nationalization_decisions_taken_5_or_greater_tt
+				tooltip = POR_the_path_to_economic_progress_decisions_taken_5_or_greater_tt
 				check_variable = { 
 					POR_the_question_of_nationalization_decisions_taken = 5 
 					compare = greater_than_or_equals 
@@ -3104,6 +3111,11 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_political_power = 90
+			add_stability = 0.05
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = POR_upgrades_the_effects_of_all_the_question_of_nationalization_decisions_tt
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			if = {
 				limit = { has_idea = POR_the_question_of_nationalization_idea }
 				swap_ideas = {
@@ -3138,17 +3150,15 @@ focus_tree = {
 					add_idea = POR_socialist_market_economy
 				}
 			}
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = POR_bento_de_jesus_caraca
 		}
 		ai_will_do = { base = 99 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
-		id = POR_continue_the_iberian_social_revolution
+		id = PLACEHOLDER_FOCUS
 		prerequisite = { focus = POR_portugals_path_to_marxism_leninism }
-		icon = GFX_focus_GER_proletarian_solidarity
+		icon = placeholder
 		cost = 8
 		x = -2
 		y = 1
@@ -3169,9 +3179,11 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = POR_portugals_path_to_marxism_leninism
-		available = {
-		}
+		available = { has_government = communism }
 		completion_reward = {
+			add_ideas = POR_integrating_socialist_militias
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = POR_towards_an_iberian_red_army_tt
 		}
 		ai_will_do = { base = 5 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3205,13 +3217,22 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POR_covert_return_to_the_world_stage
-		available = {
+		available = { 
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = POR_anti_colonial_action_trigger
+				AND = {
+					has_completed_focus = POR_the_question_of_our_colonies
+					OR = {
+						has_country_flag = POR_released_colonies_flag
+						has_country_flag = POR_colonial_autonomy_flag
+					}
+				}	
+			} 
 		}
 		completion_reward = {
 		}
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
@@ -3219,7 +3240,7 @@ focus_tree = {
 		id = POR_diplomatic_pragmatism
 		prerequisite = { focus = POR_portugals_path_to_marxism_leninism }
 		mutually_exclusive = { focus = POR_covert_return_to_the_world_stage }
-		icon = GFX_goal_generic_defence 
+		icon = GFX_focus_generic_national_security
 		cost = 4
 		x = 1
 		y = 2
@@ -3268,6 +3289,10 @@ focus_tree = {
 				}
 				ENG = {
 					country_event = { id = generic.2 }
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = TUR_valued_strategic_partners
+					}
 				}
 			}
 			else_if = {
@@ -3285,6 +3310,10 @@ focus_tree = {
 				}
 				SOV = {
 					country_event = { id = generic.2 }
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = TUR_valued_strategic_partners
+					}
 				}
 				
 			}
@@ -3316,8 +3345,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = POR_diplomatic_pragmatism
-		available = {
-		}
+		available = { is_subject = no }
 		completion_reward = {
 		}
 		ai_will_do = {
@@ -3473,7 +3501,7 @@ focus_tree = {
 	focus = {
 		id = POR_push_forward_popular_reform
 		prerequisite = { focus = POR_hold_fair_elections }
-		icon = GFX_goal_cuba_support_the_confederation_of_cuban_workers
+		icon = GFX_focus_GER_customs_union
 		cost = 6
 		x = 2
 		y = 1
@@ -3485,7 +3513,7 @@ focus_tree = {
 				popularity = 0.03
 			}
 			custom_effect_tooltip = CHL_skip_one_line_tt
-			custom_effect_tooltip = POR_push_forward_popular_reform_tt
+			custom_effect_tooltip = POR_upgrades_the_effects_of_all_the_question_of_nationalization_decisions_tt
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}

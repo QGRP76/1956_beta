@@ -1525,9 +1525,9 @@ country_event = {
 						controls_state = 540
 						controls_state = 796
 					}
-					891 = { add_resistance = 13 }
-					892 = { add_resistance = 11 }
-					540 = { add_resistance = 9 }
+					891 = { add_resistance = 11 }
+					892 = { add_resistance = 9 }
+					540 = { add_resistance = 7 }
 					796 = { add_resistance = 3 }
 				}
 				if = {
@@ -1536,7 +1536,7 @@ country_event = {
 						controls_state = 896
 						controls_state = 544
 					}
-					897 = { add_resistance = 11 }
+					897 = { add_resistance = 9 }
 					896 = { add_resistance = 7 }
 					544 = { add_resistance = 7 }
 				}
@@ -1546,7 +1546,7 @@ country_event = {
 				}
 				if = {
 					limit = { controls_state = 296 }
-					296 = { add_resistance = 11 }
+					296 = { add_resistance = 9 }
 				}
 				if = {
 					limit = { controls_state = 702 }

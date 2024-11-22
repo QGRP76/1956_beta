@@ -371,6 +371,7 @@
 
  POR_anti_colonial_action:0 "Anti-Colonial Action"
  POR_anti_colonial_action_desc:0 ""
+ POR_anti_colonial_action_trigger:0 "Has completed focus §YThe Question of Our Colonies§! while §RWithdrawing§! or §CGranting Autonomy§! to them"
 
  POR_diplomatic_pragmatism:0 "Diplomatic Pragmatism"
  POR_diplomatic_pragmatism_desc:0 ""
@@ -383,6 +384,9 @@
 
  POR_towards_an_iberian_red_army:0 "Towards an Iberian Red Army"
  POR_towards_an_iberian_red_army_desc:0 ""
+ POR_towards_an_iberian_red_army_tt:0 "§YEmpower Socialist Organizations§! decisions will §GUpgrade§! this national spirit"
+ POR_integrating_socialist_militias:0 "Integrating Socialist Militia's"
+ POR_protectors_of_the_revolution:0 "Protectors of the Revolution"
 
  POR_crush_reactionary_impedence:0 "Crush Reactionary Impedence"
  POR_crush_reactionary_impedence_desc:0 "Portuguese democrats have learned nothing from the failings and sluggishness of democracy in the First Republic. Their plans for Portugal are a sham that will shatter the hopes of prosperity that a new revolution must bring. They, and Portugal's remaining Salazarists, must be cut from the nation at all costs!"
@@ -393,21 +397,18 @@
  POR_arm_anti_fascist_militias:0 "Arm Anti-Fascist Militias"
  POR_arm_anti_fascist_militias_tt:0 "§GRemoves§! all remaining §YAuthoritarian§! and §YFascism§! support"
 
- POR_return_to_national_secularism:0 "Return to National Secularism"
- POR_return_to_national_secularism_desc:0 ""
+ POR_the_iberian_social_revolution:0 "The Iberian Social Revolution"
+ POR_the_iberian_social_revolution_desc:0 ""
  POR_appropriate_church_riches:0 "Appropriate Church Riches"
  POR_stamp_out_clergy_influence:0 "Stamp Out Clergy Influence"
 
  POR_portugals_path_to_marxism_leninism:0 "Portugal's Path to Marxism-Leninism"
- POR_portugals_path_to_marxism_leninism_desc:0 "In less than 20 years, Lenin and his allies had brought Russia from a pit of backwardness to a foward, strong bastion of the revolution. We must bring the same fate to Portugal."
+ POR_portugals_path_to_marxism_leninism_desc:0 "In a period of less than 20 years, Vladimir Lenin brought Russia from one of Europe's most backward nations, to a bastion of the revolution which is feared by the west. There is no doubt that we must learn from, and replicate his incredible accomplishments."
  POR_portugals_path_to_socialism:0 "Portugal's Path to Socialism"
 
- POR_continue_the_iberian_social_revolution:0 "Continue the Iberian Social Revolution"
- POR_continue_the_iberian_social_revolution_desc:0 ""
-
- POR_centralize_the_administration:0 "Centralize the Administration"
- POR_centralize_the_administration_desc:0 ""
- POR_the_question_of_nationalization_decisions_taken_5_or_greater_tt:0 "Has carried out §Y5§! or more §YThe Path to Economic Progress§! decisions (Current progress is §Y[?POR_the_question_of_nationalization_decisions_taken]/5§!)"
+ POR_solidify_the_economic_reforms:0 "Solidify the Economic Reforms"
+ POR_solidify_the_economic_reforms_desc:0 ""
+ POR_the_path_to_economic_progress_decisions_taken_5_or_greater_tt:0 "Has carried out §Y5§! or more §YThe Path to Economic Progress§! decisions (Current progress is §Y[?POR_the_question_of_nationalization_decisions_taken]/5§!)"
  POR_socialist_market_economy:0 "Socialist Market Economy"
  POR_the_portuguese_new_economic_policy:0 "The Portuguese New Economic Policy"
  POR_the_red_industrial_revolution:0 "The Red Industrial Revolution"
@@ -483,7 +484,7 @@
 
  POR_push_forward_popular_reform:0 "Push Forward Popular Reform"
  POR_push_forward_popular_reform_desc:0 ""
- POR_push_forward_popular_reform_tt:0 "§GUpgrades§! the effects of all §YThe Question of Nationalization§! decisions."
+ POR_upgrades_the_effects_of_all_the_question_of_nationalization_decisions_tt:0 "§GUpgrades§! the effects of all §YThe Question of Nationalization§! decisions."
 
  POR_unity_and_reconciliation:0 "Unity and Reconciliation"
  POR_unity_and_reconciliation_desc:0 "We cannot allow the divides of the first republic to tear our nation apart. It is imperative that solidarity and unity be promoted, and that the divides fostered by Salazar are crushed at once!"
