@@ -331,6 +331,9 @@ MON_greater_mongolia = {
 					state = 820
 					#Tannu Tuva
 					state = 329
+					#Xinjiang
+					state = 618
+					state = 760
 					#Inner Mongolia
 					state = 616
 					state = 746

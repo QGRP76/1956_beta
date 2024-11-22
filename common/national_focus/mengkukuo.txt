@@ -3582,7 +3582,7 @@ focus_tree = {
 		icon = GFX_focus_ETH_an_empire_in_the_shade_of_the_sun
 
 		available = {
-			is_subject_of = JAP
+			is_ally_with = JAP
 		}
 		
 		prerequisite = { 
@@ -3598,7 +3598,22 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_war_support = 0.10
 			add_ideas = MEN_our_place_under_the_red_sun_idea
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = form_greater_mongolia_flag
+					}
+				}
+				effect_tooltip = {
+					unlock_decision_tooltip = MON_unify_greater_mongolia
+				}
+			}
 		}
 	}
 
@@ -5008,7 +5023,7 @@ focus_tree = {
 
 	focus = {
 		id = MEN_greater_mongolian_reunification
-		icon = GFX_goal_generic_martial_law
+		icon = GFX_goal_MON_greater_mongolia
 		prerequisite = { 
 			focus = MEN_anti_japanese_stratagems
 		}
@@ -5017,15 +5032,44 @@ focus_tree = {
 		y = 1
 
 		bypass = {
-			
+
 		}
 
 		available = {
-			controls_state = 610
-			controls_state = 946
-			controls_state = 715
-			controls_state = 761
-			controls_state = 714
+			NOT = {
+				has_global_flag = form_greater_mongolia_flag
+			}
+			count_triggers = { # Tooltip
+				amount = 3
+				any_controlled_state = {
+					OR = {
+						state = 621
+						state = 746
+						state = 616
+						state = 946
+						state = 715
+						state = 761
+						state = 760
+						state = 618
+						is_core_of = MON
+						hidden_trigger = {
+							state = 621
+							state = 746
+							state = 616
+							state = 946
+							state = 715
+							state = 761
+							state = 819
+							state = 817
+							state = 330
+							state = 820
+							state = 818
+							state = 760
+							state = 618
+						}
+					}
+				}
+			}
 		}
 
 		relative_position_id = MEN_anti_japanese_stratagems
@@ -5035,17 +5079,27 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			every_state = {
+			add_war_support = 0.10
+			every_controlled_state = {
 				limit = {
 					OR = {
-						state = 610
+						state = 621
+						state = 746
+						state = 616
 						state = 946
 						state = 715
 						state = 761
-						state = 714
+						state = 819
+						state = 817
+						state = 330
+						state = 820
+						state = 818
+						state = 760
+						state = 618
 					}
 				}
-				add_core_of = ROOT 
+				add_compliance = 25
+				add_resistance = -15
 			}
 			if = {
 				limit = {
@@ -6748,17 +6802,32 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 75
+			add_stability = 0.10
 			every_state = {
 				limit = {
+					NOT = {
+						is_core_of = ROOT
+					}
 					OR = {
-						state = 610
+						state = 616
+						state = 746
+						state = 621
 						state = 946
 						state = 715
 						state = 761
-						state = 714
 					}
 				}
 				add_core_of = ROOT
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = form_greater_mongolia_flag
+					}
+				}
+				effect_tooltip = {
+					unlock_decision_tooltip = MON_unify_greater_mongolia
+				}
 			}
 		}
 	}

@@ -7193,7 +7193,11 @@ MON_greater_mongolia = {
 				limit = {
 					original_tag = MEN
 				}
-				has_completed_focus = MEN_greater_mongolian_reunification
+				OR = {
+					has_completed_focus = MEN_greater_mongolian_reunification
+					has_completed_focus = MEN_our_place_under_the_red_sun
+					has_completed_focus = MEN_form_the_inner_mongolia_autonomous_region
+				}
 			}
 			#Outer Mongolia
 			controls_state = 330
@@ -7203,6 +7207,9 @@ MON_greater_mongolia = {
 			controls_state = 820
 			#Tannu Tuva
 			controls_state = 329
+			#Xinjiang
+			controls_state = 618
+			controls_state = 760
 			#Inner Mongolia
 			controls_state = 616
 			controls_state = 746
