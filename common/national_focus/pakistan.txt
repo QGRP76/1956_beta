@@ -860,14 +860,12 @@ focus_tree = {
         icon = GFX_goal_generic_attack_afghanistan
         cost = 10
 		available = {
-			NOT = { is_in_faction_with = AFG }
+			NOT = { is_ally_with = AFG }
 			surrender_progress < 0.1
 			AFG = { exists = yes }
 		}
 		 ai_will_do = { factor = 2 }
-		bypass = {
-			is_in_faction_with = AFG
-		}
+		bypass = { is_ally_with = AFG }
         prerequisite = {
             focus = PAK_Align_the_Soviet_Union
 			focus = PAK_Align_Japan
