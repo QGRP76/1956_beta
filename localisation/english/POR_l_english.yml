@@ -469,21 +469,28 @@
  portugal.58.b:0 "Santos's legacy of excellent governance will lead Portugal forward!"
  portugal.58.c:0 "Gonçalves's red-tinted democracy shall forge our people a brighter tomorrow!"
 
- POR_return_to_civil_meritocracy:0 "Return to Civil Meritocracy"
- POR_return_to_civil_meritocracy_desc:0 ""
+ POR_restore_economic_stability:0 "Restore Economic Stability"
+ POR_restore_economic_stability_desc:0 ""
+
+ POR_accomodate_europes_balance_of_power:0 "Accomodate Europe's Balance of Power"
+ POR_accomodate_europes_balance_of_power_desc:0 "Despite the work done at Versailles, revanchist expansionism has become the foreign policy of far too many nations. Any order on the continent, no matter how fragile, must be protected at all costs."
+
+ POR_a_tight_hand_on_reintegration:0 "A Tight Hand on Reintegration"
+ POR_a_tight_hand_on_reintegration_desc:0 ""
+ 
+ POR_meritocracy_above_ideology:0 "Meritocracy Above Ideology"
+ POR_meritocracy_above_ideology_desc:0 ""
+ POR_expand_civil_amnesty:0 "Expand Civil Amnesty"
+
  POR_western_europes_model_democracy:0 "Western Europe's Model Democracy"
  POR_red_tinted_democracy:0 "Red-Tinted Democracy"
 
  POR_reform_the_junta_institutions:0 "Reform the Junta Institutions"
  POR_reform_the_junta_institutions_desc:0 ""
- POR_grant_limited_amnesty:0 "Grant Limited Amnesty"
  POR_a_new_status_for_the_colonies:0 "A New Status For the Colonies"
  POR_organize_provincial_elections_portuguese_guinea:0 "Organize Provincial Elections (Portuguese Guinea)"
  POR_organize_provincial_elections_mozambique:0 "Organize Provincial Elections (Mozambique)"
  POR_organize_provincial_elections_angola:0 "Organize Provincial Elections (Angola)"
-
- POR_push_forward_popular_reform:0 "Push Forward Popular Reform"
- POR_push_forward_popular_reform_desc:0 ""
  POR_upgrades_the_effects_of_all_the_question_of_nationalization_decisions_tt:0 "§GUpgrades§! the effects of all §YThe Question of Nationalization§! decisions."
 
  POR_unity_and_reconciliation:0 "Unity and Reconciliation"
@@ -495,13 +502,10 @@
  POR_rehabilitate_the_armed_forces_desc:0 "Peace is rapidly leaving Europe, and Portugal must stand ready. Whether we like it or not, the protection of the nation goes well above any benefits of further politicization of our armed forces."
  POR_crack_down_on_leftist_anti_democrats:0 "Crack Down on Leftist Anti-Democrats"
 
- POR_accomodate_europes_balance_of_power:0 "Accomodate Europe's Balance of Power"
- POR_accomodate_europes_balance_of_power_desc:0 "Despite the work done at Versailles, revanchist expansionism has become the foreign policy of far too many nations. Any order on the continent, no matter how fragile, must be protected at all costs."
-
  POR_consolidate_portuguese_democracy:0 "Consolidate Portuguese Democracy"
  POR_consolidate_portuguese_democracy_desc:0 ""
  POR_create_a_constitutional_judiciary_flag:0 "Has completed Decision §YCreate a Constitutional Judiciary§!"
- POR_grant_limited_amnesty_flag:0 "Has completed Decision §YGrant Limited Amnesty§!"
+ POR_expand_civil_amnesty_flag:0 "Has completed Decision §YExpand Civil Amnesty§!"
 
  #Political - Historical (Maintain Salazar's Dictatorship)
  POR_continue_salazars_policies:0 "Continue Salazar's Policies"

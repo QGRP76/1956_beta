@@ -153,7 +153,7 @@ characters = {
 			idea_token = POR_jose_manuel_sarmento_de_beires
 			ledger = air
 			allowed = { original_tag = POR }
-			available = {
+			visible = {
 				if = {
 					limit = {
 						has_global_flag = por_lar_focus_tree
@@ -811,7 +811,7 @@ characters = {
 					limit = { has_focus_tree = r56_portuguese_focus }
 					OR = {
 						has_completed_focus = POR_continue_salazars_policies
-						has_completed_focus = POR_reform_the_junta_institutions
+						has_completed_focus = POR_meritocracy_above_ideology
 						has_completed_focus = POR_united_against_the_bolshevik_threat
 					} 
 				}

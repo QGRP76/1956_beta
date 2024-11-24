@@ -71,7 +71,7 @@ focus_tree = {
 		id = POR_expand_the_alfeite_shipyard
 		prerequisite = { focus = POR_expand_naval_production }
 		icon = GFX_goal_generic_blue_navy
-		cost = 6
+		cost = 8
 		x = -1
 		y = 1
 		relative_position_id = POR_expand_naval_production
@@ -93,7 +93,7 @@ focus_tree = {
 		id = POR_expand_northern_repair_facilities
 		prerequisite = { focus = POR_expand_naval_production }
 		icon = GFX_goal_generic_expand_the_naval_industry
-		cost = 4
+		cost = 5
 		x = 1
 		y = 1
 		relative_position_id = POR_expand_naval_production
@@ -641,7 +641,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POR_study_foreign_tanks
-		cost = 6
+		cost = 8
 		ai_will_do = { base = 1 }
 		available = {
 		}
@@ -668,7 +668,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = POR_study_foreign_tanks
-		cost = 6	
+		cost = 8	
 		ai_will_do = { base = 1 }
 		completion_reward = {
 			add_tech_bonus = {
@@ -1307,10 +1307,10 @@ focus_tree = {
 					instant_build = yes
 					province = { id = 11885 }
 				}
-				custom_effect_tooltip = {
-					localization_key = building_state_modifier|dam
-					INDENT = "    "
-				}
+				#custom_effect_tooltip = {
+					#localization_key = building_state_modifier|dam
+					#INDENT = "    "
+				#}
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2619,9 +2619,8 @@ focus_tree = {
 			add_war_support = 0.02
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			custom_effect_tooltip = POR_ally_anti_colonial_resistance_tt
-			mark_focus_tree_layout_dirty = yes
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL   }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3480,6 +3479,21 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
+	
+	focus = {
+		id = POR_restore_economic_stability1
+		prerequisite = { focus = POR_hold_fair_elections }
+		icon = GFX_goal_generic_financial_markets
+
+		cost = 8
+		x = 2
+		y = 1
+		relative_position_id = POR_hold_fair_elections
+		completion_reward = {
+			custom_effect_tooltip = POR_upgrades_the_effects_of_all_the_question_of_nationalization_decisions_tt
+		}
+		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL }
+	}
 
 	focus = {
 		id = POR_accomodate_europes_balance_of_power
@@ -3499,26 +3513,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_push_forward_popular_reform
-		prerequisite = { focus = POR_hold_fair_elections }
-		icon = GFX_focus_GER_customs_union
-		cost = 6
-		x = 2
-		y = 1
-		relative_position_id = POR_hold_fair_elections
-		completion_reward = {
-			add_political_power = 25
-			add_popularity = {
-				ideology = ROOT
-				popularity = 0.03
-			}
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			custom_effect_tooltip = POR_upgrades_the_effects_of_all_the_question_of_nationalization_decisions_tt
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
 		id = POR_reform_the_junta_institutions
 		prerequisite = { focus = POR_hold_fair_elections }
 		icon = GFX_goal_generic_trial
@@ -3528,15 +3522,50 @@ focus_tree = {
 		relative_position_id = POR_hold_fair_elections
 		completion_reward = {
 			add_political_power = 45
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = POR_duarte_jose_pacheco
-			custom_effect_tooltip = CHL_skip_one_line_tt
 			unlock_decision_tooltip = POR_create_a_constitutional_judiciary
-			unlock_decision_tooltip = POR_grant_limited_amnesty
 			unlock_decision_tooltip = POR_a_new_status_for_the_colonies
-			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
+	}
+
+	focus = {
+		id = POR_restore_economic_stability
+		prerequisite = { focus = POR_reform_the_junta_institutions }
+		icon = GFX_goal_generic_financial_markets
+		cost = 6
+		x = 1
+		y = 1
+		relative_position_id = POR_reform_the_junta_institutions
+		completion_reward = {
+			custom_effect_tooltip = POR_upgrades_the_effects_of_all_the_question_of_nationalization_decisions_tt
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = POR_meritocracy_above_ideology
+		prerequisite = { focus = POR_reform_the_junta_institutions }
+		icon = GFX_focus_GER_customs_union
+		cost = 6
+		x = -1
+		y = 1
+		relative_position_id = POR_reform_the_junta_institutions
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			unlock_decision_tooltip = POR_expand_civil_amnesty
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = POR_duarte_jose_pacheco
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3544,8 +3573,8 @@ focus_tree = {
 		prerequisite = { focus = POR_reform_the_junta_institutions }
 		icon = GFX_focus_generic_military_mission
 		cost = 8
-		x = -1
-		y = 1
+		x = -2
+		y = 2
 		relative_position_id = POR_reform_the_junta_institutions
 		completion_reward = {
 			add_political_power = 30
@@ -3570,12 +3599,12 @@ focus_tree = {
 		prerequisite = { focus = POR_reform_the_junta_institutions }
 		icon = GFX_goal_generic_democracy
 		cost = 10
-		x = 1
-		y = 1
+		x = 2
+		y = 2
 		relative_position_id = POR_reform_the_junta_institutions
 		available = {
 			has_country_flag = POR_create_a_constitutional_judiciary_flag
-			has_country_flag = POR_grant_limited_amnesty_flag
+			has_country_flag = POR_expand_civil_amnesty_flag
 		}
 		completion_reward = {
 			add_political_power = 75
