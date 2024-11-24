@@ -504,12 +504,12 @@ AUS_aushun_path = {
 		AUS_for_kaiser_and_fatherland
 		AUS_abandon_jansa_plan
 		AUS_manoeuvre_warfare
+		AUS_support_croatian_independence
 		AUS_old_ties
 		AUS_form_donaubund
 		AUS_ally_poland_empire
 		AUS_partition_czechoslovakia_empire
 		AUS_ally_bulgaria_empire
-		AUS_support_croatian_independence
 		AUS_imperial_infrastructure
 		AUS_prioritize_austria
 		AUS_empower_private_enterprises
@@ -614,7 +614,7 @@ AUS_moderate_restoration_plan = {
 		AUS_national_defence_effort
 		AUS_cement_the_jansa_plan
 		AUS_defence_focus
-		AUS_join_the_allies
+		AUS_join_the_allies_r56
 		AUS_our_own_pact
 		AUS_a_danubian_association
 		AUS_slovenia_for_alliance
