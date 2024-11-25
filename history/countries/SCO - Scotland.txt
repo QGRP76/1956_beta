@@ -32,6 +32,11 @@ recruit_character = SCO_kenneth_loch
 recruit_character = SCO_douglas_douglas_hamilton
 recruit_character = SCO_dashwood_fowler_moir
 
+### SCIENTISTS ###
+recruit_character = SCO_samuel_crowe_curran
+recruit_character = SCO_james_mcfadyen_mcneill
+recruit_character = SCO_robert_lickley
+
 #Jock Cunningham
 
 if = {
