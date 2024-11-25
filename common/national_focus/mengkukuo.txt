@@ -3536,7 +3536,7 @@ focus_tree = {
 			JAP = {
 				country_event = { id = men.23 hours = 12 }
 			}
-			custom_effect_tooltip = MEN_possible_event_effects
+			custom_effect_tooltip = r56_possible_event_effects
 			effect_tooltip = {
 				add_stability = 0.05
 				JAP = {
@@ -3566,7 +3566,7 @@ focus_tree = {
 					}
 				}
 			}
-			custom_effect_tooltip = MEN_alternative_event_effects
+			custom_effect_tooltip = r56_alternative_event_effects
 			effect_tooltip = {
 				add_opinion_modifier = {
 					target = JAP
@@ -4613,7 +4613,7 @@ focus_tree = {
 				}
 				country_event = { id = men.17 hours = 12 }
 			}
-			custom_effect_tooltip = MEN_possible_event_effects
+			custom_effect_tooltip = r56_possible_event_effects
 			effect_tooltip = {
 				every_other_country = {
 					limit = {
@@ -4848,7 +4848,7 @@ focus_tree = {
 				}
 				country_event = { id = men.17 hours = 12 }
 			}
-			custom_effect_tooltip = MEN_possible_event_effects
+			custom_effect_tooltip = r56_possible_event_effects
 			effect_tooltip = {
 				every_other_country = {
 					limit = {
@@ -4877,7 +4877,7 @@ focus_tree = {
 					}
 				}
 			}
-			custom_effect_tooltip = MEN_alternative_event_effects
+			custom_effect_tooltip = r56_alternative_event_effects
 			effect_tooltip = {
 				every_other_country = {
 					limit = {
@@ -6256,7 +6256,7 @@ focus_tree = {
 			MON = {
 				country_event = { id = men.20 hours = 12 }
 			}
-			custom_effect_tooltip = MEN_possible_event_effects
+			custom_effect_tooltip = r56_possible_event_effects
 			effect_tooltip = {
 				annex_country = {
 					target = MON 
@@ -6275,7 +6275,7 @@ focus_tree = {
 				}
 				set_cosmetic_tag = MON
 			}
-			custom_effect_tooltip = MEN_alternative_event_effects
+			custom_effect_tooltip = r56_alternative_event_effects
 			effect_tooltip = {
 				add_opinion_modifier = {
 					target = ROOT
@@ -6879,7 +6879,7 @@ focus_tree = {
 			MON = {
 				country_event = { id = men.20 hours = 12 }
 			}
-			custom_effect_tooltip = MEN_possible_event_effects
+			custom_effect_tooltip = r56_possible_event_effects
 			effect_tooltip = {
 				annex_country = {
 					target = MON 
@@ -6898,7 +6898,7 @@ focus_tree = {
 				}
 				set_cosmetic_tag = MON
 			}
-			custom_effect_tooltip = MEN_alternative_event_effects
+			custom_effect_tooltip = r56_alternative_event_effects
 			effect_tooltip = {
 				add_opinion_modifier = {
 					target = ROOT

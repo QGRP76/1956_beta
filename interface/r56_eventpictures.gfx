@@ -352,16 +352,8 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/AFG/report_event_AFG_turkoman_sports_festival.dds"
 	}
 	spriteType = {
-		name = "GFX_report_event_AFG_picking_leader_rejected"
-		texturefile = "gfx/event_pictures/AFG/report_event_AFG_picking_leader_rejected.dds"
-	}
-	spriteType = {
 		name = "GFX_report_event_AFG_education_reform_ended"
 		texturefile = "gfx/event_pictures/AFG/report_event_AFG_education_reform_ended.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_AFG_requests_envoys"
-		texturefile = "gfx/event_pictures/AFG/report_event_AFG_requests_envoys.dds"
 	}
 	spriteType = {
 		name = "GFX_report_event_AFG_operation_countenance"
@@ -370,10 +362,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_AFG_hashim_khan_shah_mahmud"
 		texturefile = "gfx/event_pictures/AFG/report_event_AFG_hashim_khan_shah_mahmud.dds"
-	}
-	spriteType = {
-		name = "GFX_report_event_AFG_muhammed_amin_bughra_approaches"
-		texturefile = "gfx/event_pictures/AFG/report_event_AFG_muhammed_amin_bughra_approaches.dds"
 	}
 	spriteType = {
 		name = "GFX_report_event_AFG_pamir_flight_begins"
@@ -508,10 +496,6 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/AFG/report_event_AFG_raj_border.dds"
 	}
 	spriteType = {
-		name = "GFX_report_event_AFG_lemonade_salesman"
-		texturefile = "gfx/event_pictures/AFG/report_event_AFG_the_lemonade_salesman.dds"
-	}
-	spriteType = {
 		name = "GFX_news_event_AFG_join_faction_YUG"
 		texturefile = "gfx/event_pictures/AFG/news_event_AFG_join_faction_YUG.dds"
 	}
@@ -558,6 +542,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_news_event_AFG_restoration_of_RAS"
 		texturefile = "gfx/event_pictures/AFG/news_event_AFG_restoration_of_RAS.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_AFG_elections"
+		texturefile = "gfx/event_pictures/AFG/report_event_AFG_elections.dds"
 	}
 	
 ###------> ALG <><> <><> <><> <><> <><>

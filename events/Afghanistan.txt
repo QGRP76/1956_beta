@@ -86,7 +86,7 @@ country_event = {
 
 country_event = {
     id = afghanistan.2 ### SOVIETS ASKED TO SEND LEADERS
-    picture = GFX_report_event_AFG_picking_leader_rejected
+    picture = GFX_report_event_generic_sign_treaty1
 	title = afghanistan.2.t
 	desc = afghanistan.2.d
 
@@ -94,6 +94,55 @@ country_event = {
 
     option = { ### SEND NISAR
         name = afghanistan.2.a
+		trigger = {
+			OR = {
+				date < 1937.10.8
+				AFG = {
+					has_character = AFG_nisar_muhammad
+				}
+				SOV = {
+					NOT = {
+						has_country_leader = {
+							character = SOV_iosif_stalin
+							ruling_only = yes
+						}
+					}
+				}
+			}
+		}
+		add_political_power = -20
+		if = {
+			limit = {
+				has_country_flag = SOV_paranoia_system_active_flag
+			}
+			SOV_paranoia_very_low_increase_effect = yes
+		}
+		hidden_effect = {
+			AFG = {
+				country_event = {
+					id = afghanistan.16 hours = 6
+				}
+			}
+		}
+		if = {
+			limit = {
+				SOV_vitaly_primakov = {
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			SOV_vitaly_primakov = {
+				remove_unit_leader_role = yes
+			}
+			AFG = {
+				set_country_flag = AFG_get_vitaly_primakov
+			}
+		}
+		custom_effect_tooltip = r56_newline
+		effect_tooltip = {
+			AFG = {
+				promote_character = AFG_nisar_muhammad
+			}
+		}
 		ai_chance = {
 			base = 10
 			modifier = {
@@ -134,43 +183,21 @@ country_event = {
 				factor = 0.5
 			}
 			modifier = {
-				has_war_with = AFG
-				factor = 0
-			}
-			modifier = {
 				AFG = {
 					has_character = AFG_nisar_muhammad
 				}
 				factor = 1000
 			}
 		}
-		trigger = {
-			OR = {
-				date < 1937.10.8
-				AFG = {
-					has_character = AFG_nisar_muhammad
-				}
-				SOV = {
-					NOT = {
-						has_country_leader = {
-							character = SOV_iosif_stalin
-							ruling_only = yes
-						}
-					}
-				}
-			}
-		}
-        AFG = {
-			country_event = {
-				id = afghanistan.16 hours = 6
-			}
-		}
+    }
+
+	option = { ### SEND PROTOPOPOV
+        name = afghanistan.2.b
+		add_political_power = -10
 		if = {
 			limit = {
-				SOV = {
-					SOV_vitaly_primakov = {
-						NOT = { has_character_flag = SOV_exiled_flag }
-					}
+				SOV_vitaly_primakov = {
+					NOT = { has_character_flag = SOV_exiled_flag }
 				}
 			}
 			SOV_vitaly_primakov = {
@@ -180,19 +207,19 @@ country_event = {
 				set_country_flag = AFG_get_vitaly_primakov
 			}
 		}
-		if = {
-			limit = {
-				SOV = {
-					has_country_flag = SOV_paranoia_system_active_flag
+		custom_effect_tooltip = r56_newline
+		effect_tooltip = {
+			AFG = {
+				promote_character = AFG_dmitri_protopopov
+			}
+		}
+		hidden_effect = {
+			AFG = {
+				country_event = {
+					id = afghanistan.17 hours = 6
 				}
 			}
-			SOV_paranoia_very_low_increase_effect = yes
 		}
-		add_political_power = -20
-    }
-
-	option = { ### SEND PROTOPOPOV
-        name = afghanistan.2.b
 		ai_chance = {
 			base = 15
 			modifier = {
@@ -219,54 +246,34 @@ country_event = {
 				}
 				factor = 2
 			}
-			modifier = {
-				has_war_with = AFG
-				factor = 0
-			}
 		}
-        AFG = {
-			country_event = {
-				id = afghanistan.17 hours = 6
-			}
-		}
-		if = {
-			limit = {
-				SOV = {
-					SOV_vitaly_primakov = {
-						NOT = { has_character_flag = SOV_exiled_flag }
-					}
-				}
-			}
-			SOV_vitaly_primakov = {
-				remove_unit_leader_role = yes
-			}
-			AFG = {
-				set_country_flag = AFG_get_vitaly_primakov
-			}
-		}
-		add_political_power = -10
     }
 
 	option = { ### NO
         name = afghanistan.2.c
-		ai_chance = {
-			base = 1
-			modifier = {
-				SOV = {
-					has_war_with = AFG
+		effect_tooltip = {
+			AFG = {
+				add_stability = -0.05
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = AFG_SOV_refused_to_send
 				}
-				factor = 5
 			}
+		}
+		hidden_effect = {
+			AFG = {
+				country_event = {
+					id = afghanistan.18 hours = 6
+				}
+			}
+		}
+		ai_chance = {
+			base = 0.5
 			modifier = {
 				SOV = {
 					has_wargoal_against = AFG
 				}
 				factor = 5
-			}
-		}
-        AFG = {
-			country_event = {
-				id = afghanistan.18 hours = 6
 			}
 		}
     }
@@ -282,9 +289,18 @@ country_event = {
 
     option = { ### YES
         name = afghanistan.3.a
-		custom_effect_tooltip = AFG_get_tajikistan_tt
-		AFG = { 
-			country_event = { id = afghanistan.4 hours = 6 } 
+		effect_tooltip = {
+			AFG = {
+				transfer_state = 742
+				742 = {
+					add_compliance = 15
+				}
+			}
+		}
+		hidden_effect = {
+			AFG = { 
+				country_event = { id = afghanistan.4 hours = 12 } 
+			}
 		}
 		ai_chance = {
 			base = 1
@@ -325,24 +341,36 @@ country_event = {
 
 	option = { ### NO
 		name = afghanistan.3.b
-		AFG = { country_event = { id = afghanistan.6 hours = 1 } }
+		effect_tooltip = {
+			AFG = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_decrease
+				}
+			}
+		}
+		hidden_effect = {
+			AFG = { 
+				country_event = { id = afghanistan.6 hours = 12 } 
+			}
+		}
 		ai_chance = {
 			base = 1
 			modifier = {
-				factor = 2
+				factor = 0.5
 				has_war = yes
 			}
 			modifier = {
 				742 = {
-					industrial_complex > 3
+					industrial_complex > 1
 				}
 				factor = 1.5
 			}
 			modifier = {
 				742 = {
-					arms_factory > 3
+					arms_factory > 1
 				}
-				factor = 2
+				factor = 1.5
 			}
 		}
 	}
@@ -397,6 +425,21 @@ country_event = {
 				days = 180
 			}
 		}
+		add_ai_strategy = {
+			type = antagonize
+			id = PER
+			value = 50
+		}
+		add_ai_strategy = {
+			type = declare_war
+			id = PER
+			value = 25
+		}
+		add_ai_strategy = {
+			type = conquer
+			id = PER
+			value = 10
+		}
 		ai_chance = {
 			base = 1
 			modifier = {
@@ -427,12 +470,22 @@ country_event = {
 
 	option = { ### NO
 		name = afghanistan.5.b
-		AFG = {	country_event = { id = afghanistan.13 hours = 6 } }
+		effect_tooltip = {
+			AFG = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = medium_decrease
+				}
+			}
+		}
+		hidden_effect = {
+			AFG = {	country_event = { id = afghanistan.13 hours = 6 } }
+		}
 		ai_chance = {
 			base = 1
 			modifier = {
 				has_war = yes
-				factor = 5
+				factor = 2.5
 			}
 			modifier = {
 				strength_ratio = {
@@ -447,7 +500,7 @@ country_event = {
 
 country_event = {
 	id = afghanistan.6 ### SOVIETS DECLINE
-	picture = GFX_report_event_AFG_tajikistan_issue
+	picture = GFX_report_event_stalin_02
 	title = afghanistan.6.t
 	desc = afghanistan.6.d
 
@@ -455,6 +508,10 @@ country_event = {
 
 	option = {
 		name = afghanistan.6.a
+		add_opinion_modifier = {
+			target = SOV
+			modifier = large_decrease
+		}
 	}
 }
 
@@ -635,7 +692,7 @@ country_event = {
 
 country_event = { ### HASHIM VISITS GERMANY
 	id = afghanistan.12
-	picture = GFX_report_event_AFG_hashim_visit_berlin
+	picture = GFX_report_event_hitler_handshake
 	title = afghanistan.12.t
 	desc = afghanistan.12.d
 
@@ -676,7 +733,7 @@ country_event = { ### HASHIM VISITS GERMANY
 
 country_event = { ###SOVIETS REJECT OPERATION COUNTENANCE
 	id = afghanistan.13
-	picture = GFX_report_event_AFG_invasion_of_persia
+	picture = GFX_report_event_stalin_02
 	title = afghanistan.13.t
 	desc = afghanistan.13.d
 
@@ -685,13 +742,17 @@ country_event = { ###SOVIETS REJECT OPERATION COUNTENANCE
 	is_triggered_only = yes
 
 	option = {
+		add_opinion_modifier = {
+			target = SOV
+			modifier = medium_decrease
+		}
 		name = afghanistan.13.a
 	}
 }
 
 country_event = { ### FIRST FREE ELECTIONS
 	id = afghanistan.14
-	picture = GFX_report_event_election_vote
+	picture = GFX_report_event_AFG_elections
 	title = afghanistan.14.t
 	desc = afghanistan.14.d
 
@@ -832,7 +893,7 @@ country_event = {
 
 country_event = { ### SOVIETS SEND NISAR
 	id = afghanistan.16
-	picture = GFX_report_event_soviet_purge_trial
+	picture = GFX_report_event_soviet_purge_officers_01
 	title = afghanistan.16.t
 	desc = afghanistan.16.d
 
@@ -842,12 +903,6 @@ country_event = { ### SOVIETS SEND NISAR
 
 	option = {
 		name = afghanistan.16.a
-		promote_character = AFG_nisar_muhammad
-		set_party_name = {
-			ideology = communism
-			long_name = AFG_khalq_party_long
-			name = AFG_khalq_party
-		}
 		if = {
 			limit = {
 				has_country_flag = AFG_get_vitaly_primakov
@@ -861,6 +916,12 @@ country_event = { ### SOVIETS SEND NISAR
 				planning_skill = 2
 				logistics_skill = 3
 			}
+		}
+		promote_character = AFG_nisar_muhammad
+		set_party_name = {
+			ideology = communism
+			long_name = AFG_khalq_party_long
+			name = AFG_khalq_party
 		}
 		if = {
 			limit = { 
@@ -879,7 +940,7 @@ country_event = { ### SOVIETS SEND NISAR
 
 country_event = { ### SOVIETS SEND DMITRI
 	id = afghanistan.17
-	picture = GFX_report_event_soviet_purge_trial
+	picture = GFX_report_event_soviet_purge_officers_01
 	title = afghanistan.17.t
 	desc = afghanistan.17.d
 
@@ -889,21 +950,6 @@ country_event = { ### SOVIETS SEND DMITRI
 
 	option = {
 		name = afghanistan.17.a
-		if = {
-			limit = {
-				NOT = {
-					TAJ = {
-						exists = yes
-					}
-				}
-			}
-			promote_character = AFG_dmitri_protopopov
-		}
-		set_party_name = {
-			ideology = communism
-			long_name = AFG_khalq_party_long
-			name = AFG_khalq_party
-		}
 		if = {
 			limit = {
 				has_country_flag = AFG_get_vitaly_primakov
@@ -917,6 +963,12 @@ country_event = { ### SOVIETS SEND DMITRI
 				planning_skill = 2
 				logistics_skill = 3
 			}
+		}
+		promote_character = AFG_dmitri_protopopov
+		set_party_name = {
+			ideology = communism
+			long_name = AFG_khalq_party_long
+			name = AFG_khalq_party
 		}
 		if = {
 			limit = { 
@@ -935,7 +987,7 @@ country_event = { ### SOVIETS SEND DMITRI
 
 country_event = { ### SOVIETS REJECT SENDING
 	id = afghanistan.18
-	picture = GFX_report_event_soviet_purge_trial
+	picture = GFX_report_event_bul_dimitrov_with_stalin
 	title = afghanistan.18.t
 	desc = afghanistan.18.d
 
@@ -945,6 +997,7 @@ country_event = { ### SOVIETS REJECT SENDING
 
 	option = {
 		name = afghanistan.18.a
+		add_stability = -0.05
 		add_opinion_modifier = {
 			target = SOV
 			modifier = AFG_SOV_refused_to_send
@@ -952,19 +1005,15 @@ country_event = { ### SOVIETS REJECT SENDING
 		hidden_effect = {
 			country_event = { id = afghanistan.19 days = 10 random_days = 30 }
 		}
-	}
-
-	option = {
-		name = afghanistan.18.b
-		hidden_effect = {
-			country_event = { id = afghanistan.19 days = 10 random_days = 30 }
+		ai_chance = {
+			base = 95
 		}
 	}
 }
 
 country_event = { ### NO LEADER EVENT
 	id = afghanistan.19
-	picture = GFX_report_event_AFG_picking_leader_rejected
+	picture = GFX_report_event_generic_communist_congress
 	title = afghanistan.19.t
 	desc = afghanistan.19.d
 
@@ -978,12 +1027,14 @@ country_event = { ### NO LEADER EVENT
 			trait = AFG_divided_council
 		}
 		ai_chance = {
-			base = 4
+			base = 3
 		}
 	}
 
 	option = {
 		name = afghanistan.19.b
+		add_stability = -0.05
+		add_political_power = 35
 		promote_character = AFG_mawlana_qiamuddin_khadim
 		if = {
 			limit = { 
@@ -993,76 +1044,76 @@ country_event = { ### NO LEADER EVENT
 			}
 			add_power_balance_value = {
 				id = AFG_communist_power_balance
-				value = -0.3
+				value = -0.25
 				tooltip_side = AFG_parcham_side
 			}
 		}
 		ai_chance = {
-			base = 1
+			base = 2
 		}
 	}
 }
 
-country_event = { ### KING LEAVES TURKOMAN FESTIVAL
-	id = afghanistan.20
-	picture = GFX_report_event_AFG_turkoman_sports_festival
-	title = afghanistan.20.t
-	desc = afghanistan.20.d
+# country_event = { ### KING LEAVES TURKOMAN FESTIVAL
+# 	id = afghanistan.20
+# 	picture = GFX_report_event_AFG_turkoman_sports_festival
+# 	title = afghanistan.20.t
+# 	desc = afghanistan.20.d
 
-	trigger = {
-		has_government = neutrality
-		OR = {
-			has_country_leader = {
-				character = AFG_mohammed_zahir_shah
-				ruling_only = yes
-			}
-			has_country_leader = {
-				character = AFG_hashim_khan
-				ruling_only = yes
-			}
-			has_country_leader = {
-				character = AFG_sardar_shah_mahmud_khan
-				ruling_only = yes
-			}
-		}
-		exists = yes
-		is_subject = no
-		NOT = {
-			has_completed_focus = AFG_handle_the_king
-		}
-	}
+# 	trigger = {
+# 		has_government = neutrality
+# 		OR = {
+# 			has_country_leader = {
+# 				character = AFG_mohammed_zahir_shah
+# 				ruling_only = yes
+# 			}
+# 			has_country_leader = {
+# 				character = AFG_hashim_khan
+# 				ruling_only = yes
+# 			}
+# 			has_country_leader = {
+# 				character = AFG_sardar_shah_mahmud_khan
+# 				ruling_only = yes
+# 			}
+# 		}
+# 		exists = yes
+# 		is_subject = no
+# 		NOT = {
+# 			has_completed_focus = AFG_handle_the_king
+# 		}
+# 	}
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 
-	option = {
-		name = afghanistan.20.a
-		add_political_power = 20
-		ai_chance = {
-			base = 0
-			modifier = {
-				has_country_flag = AFG_win_loya_jirga
-				add = 5
-			}
-		}
-	}
+# 	option = {
+# 		name = afghanistan.20.a
+# 		add_political_power = 20
+# 		ai_chance = {
+# 			base = 0
+# 			modifier = {
+# 				has_country_flag = AFG_win_loya_jirga
+# 				add = 5
+# 			}
+# 		}
+# 	}
 
-	option = {
-		name = afghanistan.20.b
-		add_popularity = {
-			ideology = neutrality
-			popularity = -0.01
-		}
-		ai_chance = {
-			base = 0
-			modifier = {
-				NOT = {
-					has_country_flag = AFG_win_loya_jirga
-				}
-				add = 5
-			}
-		}
-	}
-}
+# 	option = {
+# 		name = afghanistan.20.b
+# 		add_popularity = {
+# 			ideology = neutrality
+# 			popularity = -0.01
+# 		}
+# 		ai_chance = {
+# 			base = 0
+# 			modifier = {
+# 				NOT = {
+# 					has_country_flag = AFG_win_loya_jirga
+# 				}
+# 				add = 5
+# 			}
+# 		}
+# 	}
+# }
 
 country_event = { ### ARRESTING QIAMUDDIN KHADIM
 	id = afghanistan.21
@@ -1119,7 +1170,7 @@ country_event = { ### ARRESTING QIAMUDDIN KHADIM
 
 	option = { ### IMPRISON HIM
 		name = afghanistan.21.b
-		add_stability = 0.05
+		add_political_power = 15
 		hidden_effect = {
 			country_event = { id = afghanistan.22 days = 270 random_days = 90 }
 		}
@@ -1178,7 +1229,8 @@ country_event = { ### ARRESTING QIAMUDDIN KHADIM
 
 	option = { ### RELEASE HIM
 		name = afghanistan.21.c
-		add_political_power = 100
+		add_stability = 0.05
+		add_political_power = 35
 		if = {
 			limit = { 
 				has_power_balance = {
@@ -1245,6 +1297,10 @@ country_event = { ### QIAMUDDIN KHADIM DIES IN PRISON
 
 	option = { 
 		name = afghanistan.22.a
+		add_popularity = {
+			ideology = communism
+			popularity = -0.01
+		}
 		custom_effect_tooltip = AFG_qiamuddin_dies_in_prison
 		hidden_effect = {
 			retire_character = AFG_mawlana_qiamuddin_khadim
@@ -1275,7 +1331,7 @@ country_event = { ### EDUCATIONAL REFORM ENDS
 
 country_event = { ### MUHAMMAD AMIN BUGHRA APPROACHES GOVERNMENT
 	id = afghanistan.24
-	picture = GFX_report_event_AFG_muhammed_amin_bughra_approaches
+	picture = GFX_report_event_chinese_soldiers_02
 	title = afghanistan.24.t
 	desc = afghanistan.24.d 
 
@@ -1286,6 +1342,7 @@ country_event = { ### MUHAMMAD AMIN BUGHRA APPROACHES GOVERNMENT
 	trigger = {
 		NOT = {
 			OR = {
+				is_historical_focus_on = yes
 				is_in_faction_with = TNG
 				has_government = communism
 				is_in_faction_with = SIK
@@ -1333,10 +1390,6 @@ country_event = { ### MUHAMMAD AMIN BUGHRA APPROACHES GOVERNMENT
 				has_government = neutrality
 			}
 			modifier = {
-				factor = 0.5
-				is_historical_focus_on = yes
-			}
-			modifier = {
 				factor = 3
 				has_government = fascism
 			}
@@ -1382,11 +1435,7 @@ country_event = { ### MUHAMMAD AMIN BUGHRA APPROACHES GOVERNMENT
 			add_opinion_modifier = { target = ROOT modifier = small_increase }
 		}
 		ai_chance = {
-			base = 1
-			modifier = {
-				factor = 99
-				is_historical_focus_on = yes
-			}
+			base = 1.5
 		}
 	}
 
@@ -1657,7 +1706,7 @@ country_event = {
 	}
 }
 
-country_event = { ###Jamaat-e-Islami Approached
+country_event = { ### Jamaat-e-Islami Approached
 	id = afghanistan.30	
 	picture = GFX_report_event_AFG_jamaat_islami_approached
 	title = afghanistan.30.t
@@ -1694,7 +1743,7 @@ country_event = { ###Jamaat-e-Islami Approached
 	}
 }
 
-country_event = { ###Tribes contacted
+country_event = { ### Tribes Contacted
 	id = afghanistan.31
 	picture = GFX_report_event_AFG_approached_tribes
 	title = afghanistan.31.t
@@ -1715,7 +1764,7 @@ country_event = { ###Tribes contacted
 
 country_event = {
 	id = afghanistan.32
-	picture = GFX_report_event_AFG_civil_war
+	picture = GFX_report_event_tur_kurdish_guerillas
 	title = afghanistan.32.t
 	desc = afghanistan.32.d
 
@@ -1759,7 +1808,7 @@ country_event = {
 
 country_event = {
 	id = afghanistan.33
-	picture = GFX_report_event_AFG_tribes_give_support
+	picture = GFX_report_event_tur_kurdish_guerillas
 	title = afghanistan.33.t
 	desc = afghanistan.33.d
 
@@ -1795,7 +1844,7 @@ country_event = {
 
 country_event = {
 	id = afghanistan.34
-	picture = GFX_report_event_AFG_tribes_give_support
+	picture = GFX_report_event_AFG_tribes_tribes_give_support_2
 	title = afghanistan.34.t
 	desc = afghanistan.34.d
 
@@ -1838,7 +1887,7 @@ country_event = {
 }
 
 country_event = {
-	id = afghanistan.35 #the question of shura
+	id = afghanistan.35 # QUESTION OF SHURA
 	picture = GFX_report_event_baltic_entente_one
 	title = afghanistan.35.t
 	desc = afghanistan.35.d
@@ -1857,7 +1906,7 @@ country_event = {
 	}
 
 	option = { 
-		name = afghanistan.35.a  #elected by the Ulema
+		name = afghanistan.35.a  # Elected by the Ulema
 		add_to_variable = {
 			AFG_afghan_constitution_army_defence_factor = 0.05
 		}
@@ -1868,7 +1917,7 @@ country_event = {
 	}
 
 	option = { 
-		name = afghanistan.35.b #elected by the Emir
+		name = afghanistan.35.b # Elected by the Emir
 		add_to_variable = {
 			AFG_afghan_constitution_resistance_target = -0.05	
 		}
@@ -1889,7 +1938,7 @@ country_event = {
 	}
 
 	option = { 
-		name = afghanistan.35.c #elected by the people
+		name = afghanistan.35.c # Elected by the people
 		add_to_variable = {
 			AFG_afghan_constitution_surrender_limit = 0.15
 		}
@@ -1904,7 +1953,7 @@ country_event = {
 }
 
 country_event = {
-	id = afghanistan.36 #shari'a interpretations
+	id = afghanistan.36 # QUESTION OF SHARIA
 	picture = GFX_report_event_baltic_entente_one
 	title = afghanistan.36.t
 	desc = afghanistan.36.d
@@ -1923,7 +1972,7 @@ country_event = {
 	}
 
 	option = { 
-		name = afghanistan.36.a #follow the rashidun's sharia
+		name = afghanistan.36.a # Follow the rashidun's sharia
 		add_to_variable = {
 			AFG_afghan_constitution_resistance_target = -0.05
 		}
@@ -1945,7 +1994,7 @@ country_event = {
 	}
 
 	option = { 
-		name = afghanistan.36.b #follow the ummayad's sharia
+		name = afghanistan.36.b # Follow the ummayad's sharia
 		add_to_variable = {
 			AFG_afghan_constitution_justify_war_goal_time = -0.25
 		}
@@ -1960,7 +2009,7 @@ country_event = {
 	}
 
 	option = { 
-		name = afghanistan.36.c #follow the mecelle
+		name = afghanistan.36.c # Follow the mecelle
 		add_to_variable = {
 			AFG_afghan_constitution_weekly_manpower = 200
 		}
@@ -1977,7 +2026,7 @@ country_event = {
 }
 
 country_event = {
-	id = afghanistan.37 #stance of the Ulema
+	id = afghanistan.37 # ULEMA STANCE
 	picture = GFX_report_event_baltic_entente_one
 	title = afghanistan.37.t
 	desc = afghanistan.37.d
@@ -1996,7 +2045,7 @@ country_event = {
 	}
 
 	option = { 
-		name = afghanistan.37.a #they should have political influence 
+		name = afghanistan.37.a # They should have political influence 
 		add_to_variable = {
 			AFG_afghan_constitution_army_morale_factor = 0.1
 		}
@@ -2014,7 +2063,7 @@ country_event = {
 	}
 
 	option = { 
-		name = afghanistan.37.b #bolster the Ulema in the army 
+		name = afghanistan.37.b # Bolster the Ulema in the army 
 		add_to_variable = {
 			AFG_afghan_constitution_army_org_regain = 0.1
 		}
@@ -2032,7 +2081,7 @@ country_event = {
 	}
 
 	option = { 
-		name = afghanistan.37.c #bolstered within the populace
+		name = afghanistan.37.c # Bolster the Ulema within the populace
 		add_to_variable = {
 			AFG_afghan_constitution_research_speed_factor = 0.05
 		}
@@ -2053,7 +2102,7 @@ country_event = {
 }
 
 country_event = {
-	id = afghanistan.38 #zakat
+	id = afghanistan.38 # Matters of Zakat
 	picture = GFX_report_event_baltic_entente_one
 	title = afghanistan.38.t
 	desc = afghanistan.38.d
@@ -2072,7 +2121,7 @@ country_event = {
 	}
 
 	option = { 
-		name = afghanistan.38.a #zakat is done by the state, 2.5% of the gdp is sent to the homeless and poor +5 consumer goods, +10% production effeciency
+		name = afghanistan.38.a # Zakat is done by the state, 2.5% of the gdp is sent to the homeless and poor
 		add_to_variable = {
 			AFG_afghan_constitution_consumer_goods_factor = 0.1
 		}
@@ -2093,7 +2142,7 @@ country_event = {
 	}
 
 	option = { 
-		name = afghanistan.38.b #zakat is done by the populace, 2.5% of salary is sent to the homeless and poor
+		name = afghanistan.38.b # Zakat is done by the populace, 2.5% of salary is sent to the homeless and poor
 		add_to_variable = {
 			AFG_afghan_constitution_consumer_goods_factor = -0.15
 		}
@@ -2114,7 +2163,7 @@ country_event = {
 	}
 
 	option = { 
-		name = afghanistan.38.c #zakat is sent to the state, the state provides jobs to the poor
+		name = afghanistan.38.c # Zakat is sent to the state, the state provides jobs to the poor
 		add_to_variable = {
 			AFG_afghan_constitution_production_speed_buildings_factor = 0.1
 		}
@@ -2133,7 +2182,7 @@ country_event = {
 }
 
 country_event = {
-	id = afghanistan.39 #jihad
+	id = afghanistan.39 # JIHAD
 	picture = GFX_report_event_baltic_entente_one
 	title = afghanistan.39.t
 	desc = afghanistan.39.d
@@ -2143,7 +2192,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = { 
-		name = afghanistan.39.a #Encourage Military Jihad
+		name = afghanistan.39.a # Encourage military Jihad
 		add_to_variable = {
 			AFG_afghan_constitution_pocket_penalty = -0.1
 		}
@@ -2164,7 +2213,7 @@ country_event = {
 	}
 
 	option = { 
-		name = afghanistan.39.b #Encourage Jihad of the Workers
+		name = afghanistan.39.b # Encourage Jihad of the Workers
 		add_to_variable = {
 			AFG_afghan_constitution_production_lack_of_resource_penalty_factor = -0.1
 		}
@@ -2175,7 +2224,7 @@ country_event = {
 	}
 
 	option = { 
-		name = afghanistan.39.c #Encourage Jihad among the people
+		name = afghanistan.39.c # Encourage Jihad among the people
 		add_to_variable = {
 			AFG_afghan_constitution_resistance_growth_on_our_occupied_states = 0.1
 		}
@@ -2197,7 +2246,7 @@ country_event = {
 }
 
 country_event = {
-	id = afghanistan.40 #the emirate's constitution
+	id = afghanistan.40 # The Emirate's Constitution
 	picture = GFX_report_event_baltic_entente_one
 	title = afghanistan.40.t
 	desc = afghanistan.40.d
@@ -2218,7 +2267,7 @@ country_event = {
 }
 
 country_event = {
-	id = afghanistan.41 #Successful Protest in [FROM.GetName]
+	id = afghanistan.41 # Successful Protest in [FROM.GetName]
 	picture = GFX_report_event_worker_protests
 	title = afghanistan.41.t
 	desc = afghanistan.41.d
@@ -2258,7 +2307,7 @@ country_event = {
 }
 
 country_event = {
-	id = afghanistan.42 #Protest in [FROM.GetName]
+	id = afghanistan.42 # Protest in [FROM.GetName]
 	picture = GFX_report_event_worker_protests
 	title = afghanistan.42.t
 	desc = afghanistan.42.d
@@ -2298,7 +2347,7 @@ country_event = {
 }
 
 country_event = {
-	id = afghanistan.43 #Violent Protest in [FROM.GetName]
+	id = afghanistan.43 # Violent Protest in [FROM.GetName]
 	picture = GFX_report_event_worker_protests
 	title = afghanistan.43.t
 	desc = afghanistan.43.d
@@ -6023,7 +6072,7 @@ country_event = { # Question of State
 
 	option = {
 		name = AFG_loya_jirga.2.a # Limited Centralization
-		add_political_power = 15
+		add_political_power = -25
 		if = {
 			limit = {
 				NOT = {
@@ -6067,8 +6116,7 @@ country_event = { # Question of State
 
 	option = {
 		name = AFG_loya_jirga.2.b # Complete Centralization
-		add_stability = -0.05
-		add_political_power = 35
+		add_political_power = 50
 		if = {
 			limit = {
 				NOT = {
@@ -6133,6 +6181,7 @@ country_event = { # Status of Women
 			ideology = neutrality
 			popularity = 0.05
 		}
+		add_political_power = -25
 		if = {
 			limit = {
 				NOT = {
@@ -6177,6 +6226,7 @@ country_event = { # Status of Women
 	option = {
 		name = AFG_loya_jirga.3.b # Limited Rights
 		add_stability = -0.05
+		add_political_power = 50
 		add_popularity = {
 			ideology = neutrality
 			popularity = -0.05
@@ -6236,6 +6286,7 @@ country_event = { # Question of Islam
 	option = {
 		name = AFG_loya_jirga.4.a # Islam is Compatible
 		add_war_support = 0.05
+		add_political_power = -25
 		if = {
 			limit = {
 				NOT = {
@@ -6280,6 +6331,7 @@ country_event = { # Question of Islam
 	option = {
 		name = AFG_loya_jirga.4.b # Secularization
 		add_stability = -0.05
+		add_political_power = 50
 		add_power_balance_value = {
 			id = AFG_power_balance
 			value = -0.10
@@ -6317,7 +6369,7 @@ country_event = { # Social Reforms
 
 	option = {
 		name = AFG_loya_jirga.5.a # Small Illiteracy Program
-		add_political_power = 15
+		add_political_power = -25
 		add_power_balance_value = {
 			id = AFG_power_balance
 			value = -0.05
@@ -6354,7 +6406,7 @@ country_event = { # Social Reforms
 	option = {
 		name = AFG_loya_jirga.5.b # Large Illiteracy Program
 		add_stability = -0.05
-		add_political_power = 35
+		add_political_power = 50
 		add_power_balance_value = {
 			id = AFG_power_balance
 			value = -0.10
@@ -7479,27 +7531,27 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = afghanistan.200 # Tribal Resistance
-	picture = GFX_report_event_AFG_national_front
-	title = afghanistan.200.t
-	desc = afghanistan.200.d
+# country_event = { # For another time
+# 	id = afghanistan.200 # Tribal Resistance
+# 	picture = GFX_report_event_AFG_national_front
+# 	title = afghanistan.200.t
+# 	desc = afghanistan.200.d
 
-	fire_only_once = yes
+# 	fire_only_once = yes
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 
-	option = { 
-		name = afghanistan.200.a
-		every_state = {
-			limit = {
-				is_core_of = ROOT
-				NOT = {
-					state = 267
-				}
-			}
-			remove_core_of = ROOT
-		}
-		add_ideas = AFG_tribal_resistance_1
-	}
-}
+# 	option = { 
+# 		name = afghanistan.200.a
+# 		every_state = {
+# 			limit = {
+# 				is_core_of = ROOT
+# 				NOT = {
+# 					state = 267
+# 				}
+# 			}
+# 			remove_core_of = ROOT
+# 		}
+# 		add_ideas = AFG_tribal_resistance_1
+# 	}
+# }

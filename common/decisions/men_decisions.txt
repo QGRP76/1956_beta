@@ -30,7 +30,7 @@ MEN_inner_mongolian_gambit = {
 			country_event = {
 				id = men.10 hours = 12
 			}
-			custom_effect_tooltip = MEN_possible_event_effects
+			custom_effect_tooltip = r56_possible_event_effects
 			effect_tooltip = {
 				if = {
 					limit = {
@@ -45,7 +45,7 @@ MEN_inner_mongolian_gambit = {
 					hidden_effect = {
 						country_event = { id = men.12 hours = 12 }
 					}
-					custom_effect_tooltip = MEN_alternative_event_effects
+					custom_effect_tooltip = r56_alternative_event_effects
 					effect_tooltip = {
 						add_political_power = -35
 						add_popularity = {

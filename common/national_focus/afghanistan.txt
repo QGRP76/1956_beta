@@ -660,7 +660,7 @@ focus_tree = {
 		icon = GFX_goal_generic_nuclear_energy
 		x = 1
 		y = 1
-		cost = 8
+		cost = 10
 
 		available = {
 			date > 1941.1.1
@@ -679,11 +679,28 @@ focus_tree = {
 		relative_position_id = AFG_rejuvenate_the_gold_mines
 		
 		completion_reward = {
-			add_tech_bonus = {
-				name = maud_focus
-				bonus = 1.0
-				uses = 1
-				category = nuclear
+			if = {
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = AFG_explore_helmand_uranium_deposits
+					bonus = 0.50
+					uses = 1
+					category = nuclear
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.25
+				}
+			}
+			else = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.50
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -900,18 +917,11 @@ focus_tree = {
 					tooltip_side = AFG_government_side
 				}
 			}
-			if = {
-				limit = { 
-					has_power_balance = {
-						id = AFG_communist_power_balance
-					}
-				}
-				custom_effect_tooltip = r56_newline
-				add_power_balance_value = {
-					id = AFG_communist_power_balance
-					value = -0.05
-					tooltip_side = AFG_parcham_side
-				}
+			custom_effect_tooltip = r56_newline
+			add_power_balance_value = {
+				id = AFG_communist_power_balance
+				value = -0.05
+				tooltip_side = AFG_parcham_side
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -3185,7 +3195,7 @@ focus_tree = {
 			add_ideas = AFG_loya_jirga_idea
 			custom_effect_tooltip = AFG_remove_loya_jirga_idea
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 	}
 	focus = { ######### RIGHT SIDE
 		id = AFG_power_to_the_king
@@ -3267,7 +3277,7 @@ focus_tree = {
 			show_ideas_tooltip = AFG_abdul_majid_zabuli
 			mark_focus_tree_layout_dirty = yes
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 	}
 	focus = { ######### AUTHORITARIAN/HISTORICAL PATH
 		id = AFG_the_regency
@@ -3308,7 +3318,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 		}
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 	}
 	focus = {
 		id = AFG_appoint_hashim
@@ -3343,7 +3353,7 @@ focus_tree = {
 				add_idea = AFG_zahir_shah_improved_idea
 			}
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 	}
 	focus = {
 		id = AFG_appoint_mahmud
@@ -3379,64 +3389,6 @@ focus_tree = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
-	}
-	focus = {
-		id = AFG_visit_berlin
-		icon = GFX_focus_chi_mission_to_germany
-		x = 0
-		y = 1
-
-		cost = 5
-
-		available = {
-			has_government = neutrality
-			GER = {
-				has_civil_war = no
-				has_capitulated = no
-				OR = {
-					has_government = fascism
-					has_government = neutrality
-				}
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
-		}
-
-		bypass = {
-			GER = {
-				OR = {
-					has_civil_war = yes
-					has_war_with = ROOT
-					has_capitulated = yes
-					has_government = communism
-					has_government = democratic
-				}
-			}
-		}
-
-		prerequisite = {
-			focus = AFG_appoint_hashim
-		}
-
-		relative_position_id = AFG_appoint_hashim
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			country_event = { id = afghanistan.12 hours = 12 }
-			effect_tooltip = {
-				add_popularity = {
-					ideology = fascism
-					popularity = 0.05
-				}
-				add_country_leader_trait = AFG_germanophile
-				set_country_flag = AFG_visited_berlin
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = AFG_form_watan_party
@@ -4100,7 +4052,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_liberal_constitution
-		icon = GFX_goal_constitution
+		icon = GFX_goal_FRA_reynaud_economic_reforms
 		x = 0
 		y = 1
 
@@ -4203,7 +4155,7 @@ focus_tree = {
 	focus = {
 		id = AFG_enact_censorship
 		icon = GFX_goal_generic_censorship
-		x = 1
+		x = -2
 		y = 1
 
 		cost = 5
@@ -4213,10 +4165,10 @@ focus_tree = {
 		}
 
 		prerequisite = {
-			focus = AFG_visit_berlin
+			focus = AFG_appoint_hashim
 		}
 
-		relative_position_id = AFG_visit_berlin
+		relative_position_id = AFG_appoint_hashim
 
 		ai_will_do = {
 			factor = 1
@@ -4239,22 +4191,45 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 	}
 	focus = {
-		id = AFG_institutionalize_pashto
-		icon = GFX_focus_ARG_universidad_de_buenos_aires
-		x = 3
+		id = AFG_visit_berlin
+		icon = GFX_focus_chi_mission_to_germany
+		x = 0
 		y = 1
 
 		cost = 5
 
 		available = {
 			has_government = neutrality
+			GER = {
+				has_civil_war = no
+				has_capitulated = no
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		bypass = {
+			GER = {
+				OR = {
+					has_civil_war = yes
+					has_war_with = ROOT
+					has_capitulated = yes
+					has_government = communism
+					has_government = democratic
+				}
+			}
 		}
 
 		prerequisite = {
-			focus = AFG_appoint_hashim focus = AFG_appoint_mahmud
+			focus = AFG_appoint_hashim
 		}
 
 		relative_position_id = AFG_appoint_hashim
@@ -4264,29 +4239,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			unlock_decision_tooltip = AFG_imprison_political_opponents
-			add_ideas = AFG_censorship
-			if = {
-				limit = {
-					has_completed_focus = AFG_appoint_hashim
+			country_event = { id = afghanistan.12 hours = 12 }
+			effect_tooltip = {
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.05
 				}
-				add_research_slot = 1
-			}
-			if = {
-				limit = {
-					has_power_balance = {
-						id = AFG_power_balance
-					}
-				}
-				custom_effect_tooltip = r56_newline
-				add_power_balance_value = {
-					id = AFG_power_balance
-					value = 0.05
-					tooltip_side = AFG_tribal_side
-				}
+				add_country_leader_trait = AFG_germanophile
+				set_country_flag = AFG_visited_berlin
 			}
 		}
-		search_filters = { FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 	}
 	focus = {
 		id = AFG_build_up_roads
@@ -4352,7 +4315,99 @@ focus_tree = {
 			custom_effect_tooltip = available_industrial_concern
 			show_ideas_tooltip = AFG_organisation_todt
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+	}
+	focus = {
+		id = AFG_invite_wehrmacht_officers
+		icon = GFX_goal_generic_german_advisor
+		x = 1
+		y = 1
+
+		cost = 5
+
+		available = {
+			has_government = neutrality
+			NOT = {
+				GER = {
+					has_civil_war = yes
+				}
+			}
+		}
+
+		prerequisite = {
+			focus = AFG_visit_berlin
+		}
+
+		relative_position_id = AFG_visit_berlin
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					GER = {
+						has_government = fascism
+					}
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.05
+				}
+			}
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = AFG_carl_august_von_gablenz
+			show_ideas_tooltip = AFG_werner_otto_von_hentig	
+		}
+		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT FOCUS_FILTER_HISTORICAL }
+	}
+	focus = {
+		id = AFG_institutionalize_pashto
+		icon = GFX_focus_ARG_universidad_de_buenos_aires
+		x = 1
+		y = 1
+
+		cost = 5
+
+		available = {
+			has_government = neutrality
+		}
+
+		prerequisite = {
+			focus = AFG_build_up_roads focus = AFG_invite_wehrmacht_officers
+		}
+
+		relative_position_id = AFG_build_up_roads
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			unlock_decision_tooltip = AFG_imprison_political_opponents
+			add_ideas = AFG_censorship
+			if = {
+				limit = {
+					has_completed_focus = AFG_appoint_hashim
+				}
+				add_research_slot = 1
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = AFG_power_balance
+					}
+				}
+				custom_effect_tooltip = r56_newline
+				add_power_balance_value = {
+					id = AFG_power_balance
+					value = 0.05
+					tooltip_side = AFG_tribal_side
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 	}
 	focus = {
 		id = AFG_german_investments_program
@@ -4419,13 +4474,13 @@ focus_tree = {
 			custom_effect_tooltip = available_industrial_concern
 			show_ideas_tooltip = AFG_afghan_german_trading_company
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 	}
 	focus = {
 		id = AFG_treaty_of_saadabad_hist
 		icon = GFX_focus_TUR_treaty_of_saadabad
-		prerequisite = { focus = AFG_appoint_hashim }
-		x = -2
+		prerequisite = { focus = AFG_appoint_hashim focus = AFG_appoint_mahmud }
+		x = 3
 		y = 1
 		relative_position_id = AFG_appoint_hashim 
 		cost = 5
@@ -4504,56 +4559,11 @@ focus_tree = {
 			}
 			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
-	}
-	focus = {
-		id = AFG_invite_wehrmacht_officers
-		icon = GFX_goal_generic_german_advisor
-		x = -1
-		y = 1
-
-		cost = 5
-
-		available = {
-			has_government = neutrality
-			NOT = {
-				GER = {
-					has_civil_war = yes
-				}
-			}
-		}
-
-		prerequisite = {
-			focus = AFG_enact_censorship focus = AFG_build_up_roads
-		}
-
-		relative_position_id = AFG_enact_censorship
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			if = {
-				limit = {
-					GER = {
-						has_government = fascism
-					}
-				}
-				add_popularity = {
-					ideology = fascism
-					popularity = 0.05
-				}
-			}
-			custom_effect_tooltip = available_military_high_command
-			show_ideas_tooltip = AFG_carl_august_von_gablenz
-			show_ideas_tooltip = AFG_werner_otto_von_hentig	
-		}
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
 	}
 	focus = {
 		id = AFG_bolster_the_nationalists
-		icon = GFX_focus_ITA_generic_fascist_workers
+		icon = GFX_focus_generic_fascist_troops
 		x = -1
 		y = 1
 
@@ -4564,10 +4574,10 @@ focus_tree = {
 		}
 
 		prerequisite = {
-			focus = AFG_invite_wehrmacht_officers
+			focus = AFG_institutionalize_pashto
 		}
 
-		relative_position_id = AFG_invite_wehrmacht_officers
+		relative_position_id = AFG_institutionalize_pashto
 
 		mutually_exclusive = {
 			focus = AFG_purge_the_nationalists
@@ -4583,7 +4593,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = AFG_purge_the_nationalists
@@ -4598,10 +4608,10 @@ focus_tree = {
 		}
 
 		prerequisite = {
-			focus = AFG_invite_wehrmacht_officers
+			focus = AFG_institutionalize_pashto
 		}
 
-		relative_position_id = AFG_invite_wehrmacht_officers
+		relative_position_id = AFG_institutionalize_pashto
 
 		mutually_exclusive = {
 			focus = AFG_bolster_the_nationalists
@@ -4617,11 +4627,11 @@ focus_tree = {
 				popularity = -0.1
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 	}
 	focus = {
 		id = AFG_fund_the_army
-		icon = GFX_goal_generic_military_funding
+		icon = GFX_goal_italy_redirect_military_fundings
 		x = 1
 		y = 1
 
@@ -4656,11 +4666,11 @@ focus_tree = {
 				days = 365
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT }
+		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT FOCUS_FILTER_HISTORICAL }
 	}
 	focus = {
 		id = AFG_stabilize_the_currency
-		icon = GFX_goal_generic_financial_markets
+		icon = GFX_focus_ITA_devaluate_the_lire
 		x = 3
 		y = 1
 
@@ -4687,7 +4697,7 @@ focus_tree = {
 				days = 365
 			}
 		}
-		search_filters = { FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 	}
 	focus = {
 		id = AFG_invite_abwehr_agents
@@ -4779,7 +4789,7 @@ focus_tree = {
 			}
 			add_ideas = neutrality_idea
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 	}
 	focus = {
 		id = AFG_join_allies
@@ -4938,7 +4948,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_from_the_leopard_corps
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_generic_military_mission
 		x = 1
 		y = 1
 
@@ -4975,7 +4985,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_acquire_german_radios
-		icon = GFX_focus_ARG_end_operation_bolivar
+		icon = GFX_focus_generic_radio_communication
 		x = 3
 		y = 1
 
@@ -5008,7 +5018,7 @@ focus_tree = {
 		    }
 			add_ideas = AFG_leopard_corps
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT }
+		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT FOCUS_FILTER_HISTORICAL }
 	}
 	focus = {
 		id = AFG_operation_tiger
@@ -5147,7 +5157,7 @@ focus_tree = {
 			add_war_support = 0.05
 			add_ideas = deterrence
 		}
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
 	}
 	focus = {
 		id = AFG_implement_autarky
@@ -5200,9 +5210,7 @@ focus_tree = {
 				remove_ideas = AFG_privatizied_economy
 			}
 		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
-		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 	}
 	focus = {
 		id = AFG_combat_foreign_influence
@@ -5230,13 +5238,11 @@ focus_tree = {
 			add_stability = 0.05
 			add_ideas = AFG_combat_foreign_influence
 		}
-		search_filters = {
-			FOCUS_FILTER_STABILITY
-		}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 	}
 	focus = {
 		id = AFG_fortify_the_durand_line
-		icon = GFX_goal_generic_nested_fortifications
+		icon = GFX_goal_fortify_the_westwall
 		x = -1
 		y = 1
 
@@ -5315,9 +5321,7 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = AFG_the_uneasey_border
@@ -5404,9 +5408,7 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = AFG_press_for_pakistan
@@ -5655,7 +5657,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_aquire_british_ships
-		icon = GFX_goal_generic_navigate_the_seas
+		icon = GFX_goal_generic_intelligence_exchange
 		x = 1
 		y = 1
 
@@ -5746,7 +5748,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_operation_red_mosque
-		icon = GFX_goal_generic_anti_communism
+		icon = GFX_goal_attack_communists
 		x = 0
 		y = 2
 
@@ -5797,7 +5799,7 @@ focus_tree = {
 	}
 	focus = { ######### AUTHORITARIAN PATH
 		id = AFG_abolish_the_regency
-		icon = GFX_goal_AFG_zahir_shah
+		icon = GFX_goal_AFG_paradise_in_the_barrel
 		x = 7
 		y = 1
 
@@ -6138,7 +6140,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_adopt_constitutional_monarchy
-		icon = GFX_focus_hol_the_foundations_of_defense
+		icon = GFX_focus_generic_treaty
 		x = 0
 		y = 2
 
@@ -6519,7 +6521,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_amanullahs_visit_to_europe
-		icon = GFX_focus_usa_focus_on_europe
+		icon = GFX_focus_GER_european_confederation
 		x = 0
 		y = 1
 
@@ -6670,7 +6672,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_nationalize_banks
-		icon = GFX_goal_AFG_nationalize_banks
+		icon = GFX_goal_generic_banking_legislation
 		x = 1
 		y = 1
 
@@ -7195,7 +7197,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_the_hazara_question
-		icon = GFX_goal_PAL_cooperation_and_development
+		icon = GFX_goal_PAL_figure_of_islamism
 		x = 1
 		y = 1
 
@@ -7263,7 +7265,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_subvert_soviet_influence_focus	
-		icon = GFX_goal_generic_defence
+		icon = GFX_goal_anti_comintern_pact
 		x = -1
 		y = 1
 
@@ -7303,7 +7305,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_army_reform
-		icon = GFX_goal_generic_army
+		icon = GFX_focus_generic_full_social_mobilization
 		x = 1
 		y = 1
 
@@ -7517,7 +7519,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_the_kabul_pact
-		icon = GFX_goal_generic_befriend_afghanistan
+		icon = GFX_focus_generic_befriend_afghanistan
 		x = -1
 		y = 1
 
@@ -7967,7 +7969,7 @@ focus_tree = {
 	}
 	focus = { ######### COMMUNIST PATH
 		id = AFG_form_weekh_zalmian 
-		icon = GFX_goal_spread_communism
+		icon = GFX_focus_ITA_peasants_rise
 		x = -7
 		y = 1
 
@@ -8004,7 +8006,7 @@ focus_tree = {
 	focus = {
 		id = AFG_approach_the_soviets
 		icon = GFX_focus_chi_mission_to_the_soviet_union
-		x = -2
+		x = 2
 		y = 1
 
 		cost = 5
@@ -8041,7 +8043,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_form_worker_communes
-		icon = GFX_goal_generic_dictatorship_of_proletariat
+		icon = GFX_social_welfare
 		x = 0
 		y = 1
 
@@ -8072,7 +8074,7 @@ focus_tree = {
 	focus = {
 		id = AFG_utilize_the_military
 		icon = GFX_goal_AFG_daouds_coup
-		x = 2
+		x = -2
 		y = 1
 
 		cost = 5
@@ -8116,8 +8118,8 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_depose_the_king
-		icon = GFX_goal_communist_revolt
-		x = -2
+		icon = GFX_focus_NOR_send_the_king_back_to_denmark
+		x = 2
 		y = 1
 
 		cost = 8
@@ -8469,18 +8471,11 @@ focus_tree = {
 				right_side = AFG_khalq_side
 				set_value = 0.15
 			}
-			if = {
-				limit = { 
-					has_power_balance = {
-						id = AFG_communist_power_balance
-					}
-				}
-				custom_effect_tooltip = r56_newline
-				add_power_balance_value = {
-					id = AFG_communist_power_balance
-					value = -0.05
-					tooltip_side = AFG_parcham_side
-				}
+			custom_effect_tooltip = r56_newline
+			add_power_balance_value = {
+				id = AFG_communist_power_balance
+				value = -0.05
+				tooltip_side = AFG_parcham_side
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -8536,13 +8531,75 @@ focus_tree = {
 			SOV = {
 				country_event = { id = afghanistan.2 hours = 12 random_hours = 12 }
 			}
-			custom_effect_tooltip = r56_newline
+			custom_effect_tooltip = r56_possible_event_effects
+			effect_tooltip = {
+				SOV = {
+					add_political_power = -20
+					if = {
+						limit = {
+							SOV = {
+								has_country_flag = SOV_paranoia_system_active_flag
+							}
+						}
+						SOV_paranoia_very_low_increase_effect = yes
+					}
+					if = {
+						limit = {
+							SOV = {
+								SOV_vitaly_primakov = {
+									NOT = { has_character_flag = SOV_exiled_flag }
+								}
+							}
+						}
+						SOV_vitaly_primakov = {
+							remove_unit_leader_role = yes
+						}
+					}
+					custom_effect_tooltip = r56_newline
+					effect_tooltip = {
+						AFG = {
+							promote_character = AFG_nisar_muhammad
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = r56_alternative_event_effects
+			effect_tooltip = {
+				SOV = {
+					add_political_power = -10
+					if = {
+						limit = {
+							SOV_vitaly_primakov = {
+								NOT = { has_character_flag = SOV_exiled_flag }
+							}
+						}
+						SOV_vitaly_primakov = {
+							remove_unit_leader_role = yes
+						}
+						AFG = {
+							set_country_flag = AFG_get_vitaly_primakov
+						}
+					}
+					custom_effect_tooltip = r56_newline
+					effect_tooltip = {
+						AFG = {
+							promote_character = AFG_dmitri_protopopov
+						}
+					}
+				}
+			}
 			custom_effect_tooltip = AFG_soviet_expedition_tt
 			set_power_balance = {
 				id = AFG_communist_power_balance
 				left_side = AFG_parcham_side
 				right_side = AFG_khalq_side
 				set_value = 0.15
+			}
+			custom_effect_tooltip = r56_newline
+			add_power_balance_value = {
+				id = AFG_communist_power_balance
+				value = -0.05
+				tooltip_side = AFG_khalq_side
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -8570,25 +8627,18 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			add_ideas = AFG_islamic_socialism_idea
-			if = {
-				limit = { 
-					has_power_balance = {
-						id = AFG_communist_power_balance
-					}
-				}
-				custom_effect_tooltip = r56_newline
-				add_power_balance_value = {
-					id = AFG_communist_power_balance
-					value = -0.1
-					tooltip_side = AFG_parcham_side
-				}
+			custom_effect_tooltip = r56_newline
+			add_power_balance_value = {
+				id = AFG_communist_power_balance
+				value = -0.1
+				tooltip_side = AFG_parcham_side
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
 		id = AFG_form_khad
-		icon = GFX_goal_generic_communist_secret_police
+		icon = GFX_goal_HON_nkvd_assistance
 		x = 1
 		y = 1
 
@@ -8624,25 +8674,18 @@ focus_tree = {
 			else = {
 				add_ideas = AFG_khad_idea_no_lar
 			}
-			if = {
-				limit = { 
-					has_power_balance = {
-						id = AFG_communist_power_balance
-					}
-				}
-				custom_effect_tooltip = r56_newline
-				add_power_balance_value = {
-					id = AFG_communist_power_balance
-					value = 0.05
-					tooltip_side = AFG_khalq_side
-				}
+			custom_effect_tooltip = r56_newline
+			add_power_balance_value = {
+				id = AFG_communist_power_balance
+				value = 0.05
+				tooltip_side = AFG_khalq_side
 			}
 		}
 		search_filters = { FOCUS_FILTER_ESPIONAGE }
 	}
 	focus = {
 		id = AFG_arrest_qiamuddin
-		icon = GFX_goal_generic_secret_police
+		icon = GFX_goal_generic_secret_police_2
 		x = -1
 		y = 1
 
@@ -8669,11 +8712,40 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = AFG_parcham_purged
 			country_event = { id = afghanistan.21 hours = 12 }
+			custom_effect_tooltip = r56_possible_event_effects
+			effect_tooltip = {
+				add_stability = -0.05
+				retire_character = AFG_mawlana_qiamuddin_khadim
+				add_power_balance_value = {
+					id = AFG_communist_power_balance
+					value = 0.15
+					tooltip_side = AFG_khalq_side
+				}
+			}
+			custom_effect_tooltip = r56_alternative_event_effects
+			effect_tooltip = {
+				add_political_power = 15
+				add_power_balance_value = {
+					id = AFG_communist_power_balance
+					value = 0.05
+					tooltip_side = AFG_khalq_side
+				}
+			}
+			custom_effect_tooltip = r56_alternative_event_effects
+			effect_tooltip = {
+				add_stability = 0.05
+				add_political_power = 35
+				add_power_balance_value = {
+					id = AFG_communist_power_balance
+					value = -0.05
+					tooltip_side = AFG_parcham_side
+				}
+			}
 		}
 	}
 	focus = {
 		id = AFG_purge_the_bourgeoisie
-		icon = GFX_goal_generic_socialism_fist
+		icon = GFX_goal_generic_ban_aristocrats
 		x = 2
 		y = 1
 
@@ -8731,25 +8803,18 @@ focus_tree = {
 				idea = AFG_persecuted_believers
 				days = 365
 			} 
-			if = {
-				limit = { 
-					has_power_balance = {
-						id = AFG_communist_power_balance
-					}
-				}
-				custom_effect_tooltip = r56_newline
-				add_power_balance_value = {
-					id = AFG_communist_power_balance
-					value = 0.1
-					tooltip_side = AFG_khalq_side
-				}
+			custom_effect_tooltip = r56_newline
+			add_power_balance_value = {
+				id = AFG_communist_power_balance
+				value = 0.1
+				tooltip_side = AFG_khalq_side
 			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 	}
 	focus = {
 		id = AFG_begin_colectivization
-		icon = GFX_goal_generic_communist_industries
+		icon = GFX_goal_generic_soviet_construction
 		x = 1
 		y = 1
 
@@ -8814,18 +8879,11 @@ focus_tree = {
 				custom_effect_tooltip = r56_newline
 				custom_effect_tooltip = AFG_soviet_trade_agreement_tt
 			}
-			if = {
-				limit = { 
-					has_power_balance = {
-						id = AFG_communist_power_balance
-					}
-				}
-				custom_effect_tooltip = r56_newline
-				add_power_balance_value = {
-					id = AFG_communist_power_balance
-					value = 0.05
-					tooltip_side = AFG_khalq_side
-				}
+			custom_effect_tooltip = r56_newline
+			add_power_balance_value = {
+				id = AFG_communist_power_balance
+				value = 0.05
+				tooltip_side = AFG_khalq_side
 			}
 			set_country_flag = AFG_counter_for_five_year_plan
 		}
@@ -8833,7 +8891,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_universal_suffarage
-		icon = GFX_goal_generic_red_freedom
+		icon = GFX_focus_generic_universal_suffrage
 		x = -1
 		y = 1
 
@@ -8855,25 +8913,18 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = AFG_homeira_seljuqi
 			add_ideas = r56i_laws_gender_limited
-			if = {
-				limit = { 
-					has_power_balance = {
-						id = AFG_communist_power_balance
-					}
-				}
-				custom_effect_tooltip = r56_newline
-				add_power_balance_value = {
-					id = AFG_communist_power_balance
-					value = -0.10
-					tooltip_side = AFG_parcham_side
-				}
+			custom_effect_tooltip = r56_newline
+			add_power_balance_value = {
+				id = AFG_communist_power_balance
+				value = -0.10
+				tooltip_side = AFG_parcham_side
 			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 	focus = {
 		id = AFG_socialist_constitution
-		icon = GFX_goal_FRA_social_reforms
+		icon = GFX_generic_goal_communist_reforms
 		x = 1
 		y = 1
 
@@ -8900,7 +8951,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_land_redistribution
-		icon = GFX_goal_generic_land_seizure
+		icon = GFX_goal_agrarian_reform
 		x = 4
 		y = 1
 
@@ -8935,18 +8986,11 @@ focus_tree = {
 				}
 			}
 			add_stability = -0.05
-			if = {
-				limit = { 
-					has_power_balance = {
-						id = AFG_communist_power_balance
-					}
-				}
-				custom_effect_tooltip = r56_newline
-				add_power_balance_value = {
-					id = AFG_communist_power_balance
-					value = 0.05
-					tooltip_side = AFG_khalq_side
-				}
+			custom_effect_tooltip = r56_newline
+			add_power_balance_value = {
+				id = AFG_communist_power_balance
+				value = 0.05
+				tooltip_side = AFG_khalq_side
 			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
@@ -9002,18 +9046,11 @@ focus_tree = {
 				idea = AFG_five_year_plan_idea
 				days = 1875
 			}
-			if = {
-				limit = { 
-					has_power_balance = {
-						id = AFG_communist_power_balance
-					}
-				}
-				custom_effect_tooltip = r56_newline
-				add_power_balance_value = {
-					id = AFG_communist_power_balance
-					value = 0.05
-					tooltip_side = AFG_khalq_side
-				}
+			custom_effect_tooltip = r56_newline
+			add_power_balance_value = {
+				id = AFG_communist_power_balance
+				value = 0.05
+				tooltip_side = AFG_khalq_side
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -9046,25 +9083,18 @@ focus_tree = {
 				popularity = 0.05
 			}
 			add_ideas = AFG_hazara_rights
-			if = {
-				limit = { 
-					has_power_balance = {
-						id = AFG_communist_power_balance
-					}
-				}
-				custom_effect_tooltip = r56_newline
-				add_power_balance_value = {
-					id = AFG_communist_power_balance
-					value = -0.05
-					tooltip_side = AFG_parcham_side
-				}
+			custom_effect_tooltip = r56_newline
+			add_power_balance_value = {
+				id = AFG_communist_power_balance
+				value = -0.05
+				tooltip_side = AFG_parcham_side
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = AFG_crush_hazara_nationalism
-		icon = GFX_goal_crush_resistance2
+		icon = GFX_focus_generic_anti_fascist_diplomacy
 		x = 1
 		y = 1
 
@@ -9090,25 +9120,18 @@ focus_tree = {
 				popularity = 0.05
 			}
 			add_ideas = AFG_hazara_nationalism_crushed
-			if = {
-				limit = { 
-					has_power_balance = {
-						id = AFG_communist_power_balance
-					}
-				}
-				custom_effect_tooltip = r56_newline
-				add_power_balance_value = {
-					id = AFG_communist_power_balance
-					value = 0.05
-					tooltip_side = AFG_khalq_party
-				}
+			custom_effect_tooltip = r56_newline
+			add_power_balance_value = {
+				id = AFG_communist_power_balance
+				value = 0.05
+				tooltip_side = AFG_khalq_party
 			}
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
 	}
 	focus = {
 		id = AFG_marxist_thought
-		icon = GFX_socialist_science
+		icon = GFX_focus_generic_socialist_science
 		x = 1
 		y = 1
 
@@ -9184,7 +9207,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_our_own_path
-		icon = GFX_goal_support_fourth_int
+		icon = GFX_goal_generic_communist_pride
 		x = 0
 		y = 1
 
@@ -9212,18 +9235,11 @@ focus_tree = {
 		completion_reward = {
 			create_faction = "Afghan Socialist Front"
 			add_ideas = AFG_flames_of_the_revolution
-			if = {
-				limit = { 
-					has_power_balance = {
-						id = AFG_communist_power_balance
-					}
-				}
-				custom_effect_tooltip = r56_newline
-				add_power_balance_value = {
-					id = AFG_communist_power_balance
-					value = -0.05
-					tooltip_side = AFG_parcham_side
-				}
+			custom_effect_tooltip = r56_newline
+			add_power_balance_value = {
+				id = AFG_communist_power_balance
+				value = -0.05
+				tooltip_side = AFG_parcham_side
 			}
 		}
 		search_filters = { FOCUS_FILTER_ALLIANCE }
@@ -9250,18 +9266,11 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = AFG_socialist_education_idea
-			if = {
-				limit = { 
-					has_power_balance = {
-						id = AFG_communist_power_balance
-					}
-				}
-				custom_effect_tooltip = r56_newline
-				add_power_balance_value = {
-					id = AFG_communist_power_balance
-					value = -0.05
-					tooltip_side = AFG_parcham_side
-				}
+			custom_effect_tooltip = r56_newline
+			add_power_balance_value = {
+				id = AFG_communist_power_balance
+				value = -0.05
+				tooltip_side = AFG_parcham_side
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -9377,18 +9386,11 @@ focus_tree = {
 					end_civil_wars = no
 				}
 			}
-			if = {
-				limit = { 
-					has_power_balance = {
-						id = AFG_communist_power_balance
-					}
-				}
-				custom_effect_tooltip = r56_newline
-				add_power_balance_value = {
-					id = AFG_communist_power_balance
-					value = 0.1
-					tooltip_side = AFG_khalq_side
-				}
+			custom_effect_tooltip = r56_newline
+			add_power_balance_value = {
+				id = AFG_communist_power_balance
+				value = 0.1
+				tooltip_side = AFG_khalq_side
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -9401,10 +9403,7 @@ focus_tree = {
 
 		available = {
 			has_government = communism
-			OR = {
-				is_subject_of = SOV
-				is_in_faction_with = SOV
-			}
+			is_ally_with = SOV
 			SOV = {
 				owns_state = 742
 			}
@@ -9434,10 +9433,23 @@ focus_tree = {
 			}
 			custom_effect_tooltip = if_they_accept_tt
 			effect_tooltip = {
+				unlock_decision_category_tooltip = AFG_tajikistan_category
 				AFG = {
 					transfer_state = 742
 				}
-				unlock_decision_category_tooltip = AFG_tajikistan_category
+				742 = {
+					add_compliance = 15
+					add_dynamic_modifier = {
+						modifier = AFG_severe_tajik_separatism
+					}
+				}
+			}
+			custom_effect_tooltip = if_they_refuse_newline_tt
+			effect_tooltip = {
+				add_opinion_modifier = {
+					target = SOV
+					modifier = large_decrease
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -9481,18 +9493,11 @@ focus_tree = {
 					localization = AFG_lower_autonomy
 				}
 			}
-			if = {
-				limit = { 
-					has_power_balance = {
-						id = AFG_communist_power_balance
-					}
-				}
-				custom_effect_tooltip = r56_newline
-				add_power_balance_value = {
-					id = AFG_communist_power_balance
-					value = 0.1
-					tooltip_side = AFG_khalq_side
-				}
+			custom_effect_tooltip = r56_newline
+			add_power_balance_value = {
+				id = AFG_communist_power_balance
+				value = 0.1
+				tooltip_side = AFG_khalq_side
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -9567,18 +9572,11 @@ focus_tree = {
 			add_war_support = 0.05
 			unlock_decision_category_tooltip = AFG_prepare_soviet_war
 			custom_effect_tooltip = AFG_undermine_moscow_tt
-			if = {
-				limit = { 
-					has_power_balance = {
-						id = AFG_communist_power_balance
-					}
-				}
-				custom_effect_tooltip = r56_newline
-				add_power_balance_value = {
-					id = AFG_communist_power_balance
-					value = -0.1
-					tooltip_side = AFG_parcham_side
-				}
+			custom_effect_tooltip = r56_newline
+			add_power_balance_value = {
+				id = AFG_communist_power_balance
+				value = -0.1
+				tooltip_side = AFG_parcham_side
 			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
@@ -9609,18 +9607,11 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.1
 			unlock_decision_tooltip = AFG_sabotage_soviet_railways
-			if = {
-				limit = { 
-					has_power_balance = {
-						id = AFG_communist_power_balance
-					}
-				}
-				custom_effect_tooltip = r56_newline
-				add_power_balance_value = {
-					id = AFG_communist_power_balance
-					value = -0.1
-					tooltip_side = AFG_parcham_side
-				}
+			custom_effect_tooltip = r56_newline
+			add_power_balance_value = {
+				id = AFG_communist_power_balance
+				value = -0.1
+				tooltip_side = AFG_parcham_side
 			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
@@ -9665,18 +9656,11 @@ focus_tree = {
 				amount = 100
 				producer = AFG
 			}
-			if = {
-				limit = { 
-					has_power_balance = {
-						id = AFG_communist_power_balance
-					}
-				}
-				custom_effect_tooltip = r56_newline
-				add_power_balance_value = {
-					id = AFG_communist_power_balance
-					value = -0.1
-					tooltip_side = AFG_parcham_side
-				}
+			custom_effect_tooltip = r56_newline
+			add_power_balance_value = {
+				id = AFG_communist_power_balance
+				value = -0.1
+				tooltip_side = AFG_parcham_side
 			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MILITARY_EQUIPMENT }
@@ -9977,6 +9961,12 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			army_experience = 25
+			add_manpower = 10000
+			SOV = {
+				army_experience = 25
+				add_manpower = 10000
+			}
 			add_ideas = AFG_combined_training
 		}
 	}
@@ -10027,7 +10017,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_anti_fascist_league
-		icon = GFX_focus_ger_great_red_menace
+		icon = GFX_focus_ITA_liberation_or_death
 		x = 1
 		y = 1
 
@@ -10170,7 +10160,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_socialist_economic_union
-		icon = GFX_goal_generic_communist_pride
+		icon = GFX_goal_generic_risky_deal
 		x = 0
 		y = 1
 
@@ -10251,7 +10241,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_socialist_welfare
-		icon = GFX_goal_generic_government_pensions
+		icon = GFX_focus_generic_welfare
 		x = 1
 		y = 1
 
@@ -10279,7 +10269,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_revolution_through_force
-		icon = GFX_focus_SOV_builder_of_the_red_army
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
 		x = 1
 		y = 1
 
@@ -10526,8 +10516,8 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_invite_jamaat_islami
-		icon = GFX_goal_PAL_grand_jihad
-		x = 1
+		icon = GFX_goal_PAL_cooperation_and_development
+		x = -1
 		y = 1
 
 		cost = 5
@@ -10573,7 +10563,7 @@ focus_tree = {
 	focus = {
 		id = AFG_contact_tribes
 		icon = GFX_focus_ETH_sway_the_warlords
-		x = -1
+		x = 1
 		y = 1
 
 		cost = 5
@@ -10620,7 +10610,7 @@ focus_tree = {
 	focus = {
 		id = AFG_waaidu
 		icon = GFX_goal_AFG_waaidu
-		x = 1
+		x = -1
 		y = 1
 
 		cost = 8
@@ -11161,7 +11151,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_nationalize_spiznar
-		icon = GFX_goal_generic_light_industry
+		icon = GFX_goal_generic_state_economy
 		x = 1
 		y = 1
 
@@ -11388,7 +11378,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_request_german_reinforcements
-		icon = GFX_focus_ger_oppose_hitler
+		icon = GFX_focus_POL_beck_ribbentrop
 		x = 1
 		y = 1
 
@@ -11444,7 +11434,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_kabul_military_college
-		icon = GFX_goal_military_government
+		icon = GFX_focus_generic_military_academy
 		x = 1
 		y = 1
 
@@ -11471,7 +11461,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_german_equipment
-		icon = GFX_goal_machine_gun
+		icon = GFX_focus_chi_mission_to_germany
 		x = 0
 		y = 2
 
@@ -11742,7 +11732,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_eradicate_communism
-		icon = GFX_goal_FRA_root_out_communism
+		icon = GFX_goal_attack_communists
 		x = -1
 		y = 1
 
@@ -11773,7 +11763,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_widen_perspective_of_religion
-		icon = GFX_goal_AFG_widen_perspective_of_religion
+		icon = GFX_goal_PER_religious_warfare
 		x = -1
 		y = 1
 
@@ -11893,7 +11883,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_the_constitution_question
-		icon = GFX_goal_AFG_the_constitution_question
+		icon = GFX_focus_AUS_lawmaking_leniency
 		x = -1
 		y = 1
 
@@ -11960,7 +11950,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_mix_sciences_with_religion
-		icon = GFX_goal_PAL_pick_up_the_ulemas_pace
+		icon = GFX_focus_research
 		x = -1
 		y = 1
 
@@ -12042,7 +12032,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_tulaia_mutaharrika
-		icon = GFX_goal_AFG_tulaia_mutaharrika
+		icon = GFX_focus_generic_horse_studs
 		x = 1
 		y = 1
 
@@ -12258,7 +12248,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_end_the_revolution
-		icon = GFX_goal_generic_anti_communism
+		icon = GFX_goal_attack_communists
 		x = 3
 		y = 1
 
