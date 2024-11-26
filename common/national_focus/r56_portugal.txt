@@ -424,7 +424,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_dispatch_an_observation_mission_to_spain
+		id = POR_study_the_spanish_civil_war
 		prerequisite = { focus = POR_complete_the_military_restructuring }
 		icon = GFX_goal_italy_study_the_spanish_civil_war
 		x = 0
@@ -447,11 +447,11 @@ focus_tree = {
 
 	focus = {
 		id = POR_learn_from_guerrilla_operations
-		prerequisite = { focus = POR_dispatch_an_observation_mission_to_spain }
+		prerequisite = { focus = POR_study_the_spanish_civil_war }
 		icon = GFX_goal_assymetric_doctrine
 		x = 0
 		y = 1
-		relative_position_id = POR_dispatch_an_observation_mission_to_spain
+		relative_position_id = POR_study_the_spanish_civil_war
 		cost = 8
 		ai_will_do = {
 			base = 5
@@ -524,11 +524,11 @@ focus_tree = {
 
 	focus = {
 		id = POR_begin_mechanizing_the_army
-		prerequisite = { focus = POR_dispatch_an_observation_mission_to_spain }
+		prerequisite = { focus = POR_study_the_spanish_civil_war }
 		icon = GFX_goal_generic_production2
 		x = -4
 		y = 1
-		relative_position_id = POR_dispatch_an_observation_mission_to_spain
+		relative_position_id = POR_study_the_spanish_civil_war
 		cost = 8
 		ai_will_do = { base = 3 }
 		completion_reward = {
@@ -683,12 +683,12 @@ focus_tree = {
 
 	focus = {
 		id = POR_continue_the_standardization
-		prerequisite = { focus = POR_dispatch_an_observation_mission_to_spain }
+		prerequisite = { focus = POR_study_the_spanish_civil_war }
 		icon = GFX_goal_generic_warfighting_technology
 		cost = 8
 		x = 5
 		y = 1
-		relative_position_id = POR_dispatch_an_observation_mission_to_spain
+		relative_position_id = POR_study_the_spanish_civil_war
 		ai_will_do = { base = 12 }
 		completion_reward = {
 			add_tech_bonus = {
@@ -2809,7 +2809,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_towards_a_prosperous_proletariat
+		id = POR_forge_a_prosperous_proletariat
 		prerequisite = { 
 			focus = POR_consolidate_the_revolution 
 			focus = POR_pave_the_path_to_progress
@@ -2822,7 +2822,7 @@ focus_tree = {
 		available = { has_completed_focus = POR_continue_the_public_works_r56 }
 		completion_reward = {
 			add_political_power = 60
-			custom_effect_tooltip = POR_towards_a_prosperous_proletariat_tt
+			custom_effect_tooltip = POR_forge_a_prosperous_proletariat_tt
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			add_ideas = POR_the_question_of_nationalization_idea
 		}
@@ -2831,13 +2831,13 @@ focus_tree = {
 
 	focus = {
 		id = POR_escalate_the_industrialization
-		prerequisite = { focus = POR_towards_a_prosperous_proletariat }
+		prerequisite = { focus = POR_forge_a_prosperous_proletariat }
 		icon = GFX_goal_generic_communist_economy
 		cost = 8
 		ai_will_do = { base = 99 }
 		x = -1
 		y = 1
-		relative_position_id = POR_towards_a_prosperous_proletariat
+		relative_position_id = POR_forge_a_prosperous_proletariat
 		completion_reward = {
 			if = {
 				limit = { 
@@ -2909,13 +2909,13 @@ focus_tree = {
 
 	focus = {
 		id = POR_restore_the_social_state
-		prerequisite = { focus = POR_towards_a_prosperous_proletariat }
+		prerequisite = { focus = POR_forge_a_prosperous_proletariat }
 		icon = GFX_goal_medicine
 		cost = 8
 		ai_will_do = { base = 99 }
 		x = 1
 		y = 1
-		relative_position_id = POR_towards_a_prosperous_proletariat
+		relative_position_id = POR_forge_a_prosperous_proletariat
 		completion_reward = {
 			add_political_power = 70
 			add_popularity = {
@@ -3052,7 +3052,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_the_iberian_social_revolution
+		id = POR_towards_institutional_atheism
 		prerequisite = { focus = POR_crush_reactionary_impedence }
 		icon = GFX_focus_BRA_state_atheism
 		cost = 8 
@@ -3102,9 +3102,9 @@ focus_tree = {
 		relative_position_id = POR_portugals_path_to_marxism_leninism
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = POR_the_path_to_economic_progress_decisions_taken_5_or_greater_tt
+				tooltip = POR_the_path_to_economic_progress_decisions_taken_6_or_greater_tt
 				check_variable = { 
-					POR_the_question_of_nationalization_decisions_taken = 5 
+					POR_the_question_of_nationalization_decisions_taken = 6
 					compare = greater_than_or_equals 
 				}
 			}
@@ -3155,9 +3155,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = PLACEHOLDER_FOCUS
+		id = POR_the_iberian_social_revolution
 		prerequisite = { focus = POR_portugals_path_to_marxism_leninism }
-		icon = placeholder
+		icon = GFX_focus_GER_the_peoples_victory
 		cost = 8
 		x = -2
 		y = 1
@@ -3479,21 +3479,6 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
-	
-	focus = {
-		id = POR_restore_economic_stability1
-		prerequisite = { focus = POR_hold_fair_elections }
-		icon = GFX_goal_generic_financial_markets
-
-		cost = 8
-		x = 2
-		y = 1
-		relative_position_id = POR_hold_fair_elections
-		completion_reward = {
-			custom_effect_tooltip = POR_upgrades_the_effects_of_all_the_question_of_nationalization_decisions_tt
-		}
-		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL }
-	}
 
 	focus = {
 		id = POR_accomodate_europes_balance_of_power
@@ -3513,41 +3498,52 @@ focus_tree = {
 	}
 
 	focus = {
+		id = POR_restore_economic_stability
+		prerequisite = { focus = POR_hold_fair_elections }
+		icon = GFX_goal_generic_financial_markets
+		cost = 6
+		x = 2
+		y = 1
+		relative_position_id = POR_hold_fair_elections
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POR_the_path_to_economic_progress_decisions_taken_4_or_greater_tt
+				check_variable = { 
+					POR_the_question_of_nationalization_decisions_taken = 4
+					compare = greater_than_or_equals 
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			custom_effect_tooltip = POR_upgrades_the_effects_of_all_the_question_of_nationalization_decisions_tt
+		}
+		ai_will_do = { base = 5 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
 		id = POR_reform_the_junta_institutions
 		prerequisite = { focus = POR_hold_fair_elections }
 		icon = GFX_goal_generic_trial
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = POR_hold_fair_elections
 		completion_reward = {
 			add_political_power = 45
-			unlock_decision_tooltip = POR_create_a_constitutional_judiciary
-			unlock_decision_tooltip = POR_a_new_status_for_the_colonies
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}
 
 	focus = {
-		id = POR_restore_economic_stability
+		id = POR_merit_above_ideology
 		prerequisite = { focus = POR_reform_the_junta_institutions }
-		icon = GFX_goal_generic_financial_markets
-		cost = 6
-		x = 1
-		y = 1
-		relative_position_id = POR_reform_the_junta_institutions
-		completion_reward = {
-			custom_effect_tooltip = POR_upgrades_the_effects_of_all_the_question_of_nationalization_decisions_tt
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = POR_meritocracy_above_ideology
-		prerequisite = { focus = POR_reform_the_junta_institutions }
+		mutually_exclusive = { focus = POR_rehabilitate_the_armed_forces }
 		icon = GFX_focus_GER_customs_union
 		cost = 6
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = POR_reform_the_junta_institutions
 		completion_reward = {
@@ -3564,6 +3560,11 @@ focus_tree = {
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = POR_duarte_jose_pacheco
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			show_ideas_tooltip = POR_joao_de_azevedo_coutinho
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = POR_julio_botelho_moniz
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -3571,40 +3572,47 @@ focus_tree = {
 	focus = {
 		id = POR_rehabilitate_the_armed_forces
 		prerequisite = { focus = POR_reform_the_junta_institutions }
+		mutually_exclusive = { focus = POR_merit_above_ideology }
 		icon = GFX_focus_generic_military_mission
-		cost = 8
-		x = -2
-		y = 2
+		cost = 6
+		x = -1
+		y = 1
 		relative_position_id = POR_reform_the_junta_institutions
 		completion_reward = {
-			add_political_power = 30
+			add_political_power = 35
+			add_stability = 0.05
 			add_war_support = 0.05
-			if = {
-				limit = { has_government = democratic }
-				custom_effect_tooltip = CHL_skip_one_line_tt
-				unlock_decision_tooltip = POR_crack_down_on_leftist_anti_democrats
-			}
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = POR_joao_de_azevedo_coutinho
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			custom_effect_tooltip = available_chief_of_army
-			show_ideas_tooltip = POR_julio_botelho_moniz
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}
 
 	focus = {
+		id = POR_modernize_the_administration
+		prerequisite = { focus = POR_reform_the_junta_institutions }
+		icon = GFX_focus_generic_improve_the_administration
+		cost = 8
+		x = -2
+		y = 2
+		relative_position_id = POR_reform_the_junta_institutions
+		available = {
+			has_country_flag = POR_create_a_constitutional_judiciary_flag
+		}
+		completion_reward = {
+			unlock_decision_tooltip = POR_a_new_status_for_the_colonies
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+	}
+	
+	focus = {
 		id = POR_consolidate_portuguese_democracy
 		prerequisite = { focus = POR_reform_the_junta_institutions }
 		icon = GFX_goal_generic_democracy
-		cost = 10
+		cost = 8
 		x = 2
 		y = 2
 		relative_position_id = POR_reform_the_junta_institutions
 		available = {
 			has_country_flag = POR_create_a_constitutional_judiciary_flag
-			has_country_flag = POR_expand_civil_amnesty_flag
 		}
 		completion_reward = {
 			add_political_power = 75
@@ -3621,6 +3629,8 @@ focus_tree = {
 					add_idea = POR_western_europes_model_democracy
 				}
 			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			unlock_decision_tooltip = POR_create_a_constitutional_judiciary
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}
@@ -3673,7 +3683,7 @@ focus_tree = {
 			}
 			mark_focus_tree_layout_dirty = yes
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3687,7 +3697,7 @@ focus_tree = {
 		available = {
 			NOT = { has_completed_focus = POR_unlatch_salazars_grip } 
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3706,7 +3716,7 @@ focus_tree = {
 			unlock_decision_tooltip = POR_rally_the_monarchists_of_porto
 			set_country_flag = POR_seek_restorationist_support_flag 
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3759,7 +3769,7 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3779,7 +3789,7 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = POR_alberto_monsaraz
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3792,7 +3802,7 @@ focus_tree = {
 		relative_position_id = POR_integrate_the_blueshirts
 		completion_reward = { 
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3810,7 +3820,7 @@ focus_tree = {
 				add_idea = POR_secret_police_crackdowns
 			}
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3825,14 +3835,14 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = POR_secret_police_crackdowns
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
 		id = POR_united_against_the_bolshevik_threat
 		prerequisite = { focus = POR_reinstitute_the_secret_police }
 		mutually_exclusive = { focus = POR_purge_the_remaining_salazarists }
-		icon = GFX_goal_attack_communists
+		icon = GFX_focus_generic_full_social_mobilization
 		cost = 6
 		x = -1
 		y = 1
@@ -3843,7 +3853,7 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = POR_duarte_jose_pacheco
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3864,7 +3874,7 @@ focus_tree = {
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			remove_ideas = POR_austerity_measures
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3877,7 +3887,7 @@ focus_tree = {
 		relative_position_id = POR_end_the_austerity_measures
 		bypass = { has_completed_focus = POR_never_another_la_lys }
 		completion_reward = { complete_national_focus = POR_never_another_la_lys }
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3892,7 +3902,7 @@ focus_tree = {
 			add_stability = 0.03
 			unlock_decision_tooltip = POR_direct_farmland_to_industrial_projects
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -3904,7 +3914,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_end_the_austerity_measures
 		completion_reward = { add_ideas = POR_portugals_own_labor_charter }
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3924,7 +3934,7 @@ focus_tree = {
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			unlock_decision_tooltip = POR_maternalistic_welfare
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3941,7 +3951,7 @@ focus_tree = {
 			custom_effect_tooltip = CHL_skip_one_line_tt 
 			unlock_decision_tooltip = POR_invest_in_public_education
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3962,7 +3972,7 @@ focus_tree = {
 			unlock_decision_tooltip = POR_factory_recruitment_drive
 			unlock_decision_tooltip = POR_support_private_collectives
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3980,7 +3990,7 @@ focus_tree = {
 				add_idea = POR_portugals_own_labor_charter2
 			} 
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -4017,7 +4027,7 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -4035,7 +4045,7 @@ focus_tree = {
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			unlock_decision_tooltip = POR_request_axis_membership
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM FOCUS_FILTER_ALLIANCE }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
 	}
 
 	focus = {
@@ -4053,7 +4063,7 @@ focus_tree = {
 				name = POR_reclaim_our_overseas_belongings 
 			}
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -4072,7 +4082,7 @@ focus_tree = {
 		}
 		completion_reward = {
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -4125,7 +4135,7 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -4144,7 +4154,7 @@ focus_tree = {
 		}
 		completion_reward = {
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -4194,6 +4204,6 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PATH_FASCISM }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 }

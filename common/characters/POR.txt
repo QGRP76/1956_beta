@@ -184,7 +184,7 @@ characters = {
 				else = {
 					OR = {
 						has_completed_focus = POR_continue_salazars_policies
-						has_completed_focus = POR_rehabilitate_the_armed_forces
+						has_completed_focus = POR_merit_above_ideology
 					}
 				}
 			}
@@ -787,7 +787,7 @@ characters = {
 					OR = {
 						has_completed_focus = POR_promote_national_catholicism
 						has_completed_focus = POR_restore_the_empire
-						has_completed_focus = POR_rehabilitate_the_armed_forces
+						has_completed_focus = POR_merit_above_ideology
 					} 
 				}
 				
@@ -806,12 +806,12 @@ characters = {
 			slot = political_advisor
 			idea_token = POR_duarte_jose_pacheco
 			allowed = { original_tag = POR }
-			available = {
+			visible = {
 				if = {
 					limit = { has_focus_tree = r56_portuguese_focus }
 					OR = {
 						has_completed_focus = POR_continue_salazars_policies
-						has_completed_focus = POR_meritocracy_above_ideology
+						has_completed_focus = POR_merit_above_ideology
 						has_completed_focus = POR_united_against_the_bolshevik_threat
 					} 
 				}
@@ -830,7 +830,7 @@ characters = {
 			slot = political_advisor
 			idea_token = POR_augusto_de_vasconcelos
 			allowed = { original_tag = POR }
-			available = {
+			visible = {
 				if = {
 					limit = { has_focus_tree = r56_portuguese_focus }
 					has_completed_focus = POR_restore_civil_liberties

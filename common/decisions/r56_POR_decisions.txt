@@ -655,7 +655,7 @@ POR_the_path_to_economic_progress = {
 		ai_will_do = { base = 90 }
 		visible = { 
 			OR = {
-				has_completed_focus = POR_towards_a_prosperous_proletariat
+				has_completed_focus = POR_forge_a_prosperous_proletariat
 				has_completed_focus = POR_expand_support_for_fascist_trade_unions
 			}
 		}
@@ -721,7 +721,7 @@ POR_the_path_to_economic_progress = {
 		ai_will_do = { base = 25 }
 		visible = { 
 			OR = {
-				has_completed_focus = POR_towards_a_prosperous_proletariat
+				has_completed_focus = POR_forge_a_prosperous_proletariat
 				has_completed_focus = POR_reforge_the_social_state
 				has_completed_focus = POR_assistance_for_the_countryside
 			}
@@ -733,7 +733,7 @@ POR_the_path_to_economic_progress = {
 			if = {
 				limit = {
 					OR = {
-						has_completed_focus = POR_solidify_the_economic_reforms
+						has_completed_focus = POR_solidify_the_administrative_reforms
 						has_completed_focus = POR_restore_economic_stability
 					} 
 				}
@@ -790,7 +790,7 @@ POR_the_path_to_economic_progress = {
 		days_re_enable = 420
 		cost = 60
 		ai_will_do = { base = 50 }
-		visible = { has_completed_focus = POR_towards_a_prosperous_proletariat }
+		visible = { has_completed_focus = POR_forge_a_prosperous_proletariat }
 		available = { has_government = communism }
 		days_remove = 140
 		modifier = {
@@ -803,7 +803,7 @@ POR_the_path_to_economic_progress = {
 			if = {
 				limit = {
 					OR = {
-						has_completed_focus = POR_solidify_the_economic_reforms
+						has_completed_focus = POR_solidify_the_administrative_reforms
 						has_completed_focus = POR_restore_economic_stability
 					} 
 				}
@@ -869,7 +869,7 @@ POR_the_path_to_economic_progress = {
 			if = {
 				limit = {
 					OR = {
-						has_completed_focus = POR_solidify_the_economic_reforms
+						has_completed_focus = POR_solidify_the_administrative_reforms
 						has_completed_focus = POR_restore_economic_stability
 					} 
 				}
@@ -900,7 +900,7 @@ POR_the_path_to_economic_progress = {
 			if = {
 				limit = {
 					OR = {
-						has_completed_focus = POR_solidify_the_economic_reforms
+						has_completed_focus = POR_solidify_the_administrative_reforms
 						has_completed_focus = POR_restore_economic_stability
 					} 
 				}
@@ -1252,24 +1252,6 @@ POR_securing_the_revolution = {
 		ai_will_do = { base = 100 }
 	}
 
-	POR_crack_down_on_leftist_anti_democrats = {
-		icon = generic_civil_support
-		fire_only_once = yes
-		visible = { 
-			has_completed_focus =  POR_rehabilitate_the_armed_forces
-			NOT = { has_government = communism }
-		}
-		days_remove = 150
-		modifier = {
-			political_power_gain = -0.15
-			communism_drift = -0.01
-		}
-		remove_effect = {
-			add_stability = 0.05
-		}	
-		ai_will_do = { base = 100 }
-	}
-
 	POR_tap_aligned_laborer_organizations = {
 		icon = eng_trade_unions_demand
 		fire_only_once = no
@@ -1335,7 +1317,7 @@ POR_securing_the_revolution = {
 	POR_expand_civil_amnesty = {
 		icon = GFX_decision_eng_trade_unions_support
 		fire_only_once = yes
-		visible = { has_completed_focus = POR_meritocracy_above_ideology }	
+		visible = { has_completed_focus = POR_merit_above_ideology }	
 		days_remove = 120
 		complete_effect = {
 			add_stability = -0.04
@@ -1547,7 +1529,7 @@ POR_securing_the_revolution = {
 		icon = generic_scales
 		cost = 90
 		fire_only_once = yes
-		visible = { has_completed_focus = POR_reform_the_junta_institutions }	
+		visible = { has_completed_focus = POR_consolidate_portuguese_democracy }	
 		days_remove = 180
 		modifier = { political_power_cost = 0.2 }
 		remove_effect = {
@@ -1566,7 +1548,7 @@ POR_securing_the_revolution = {
 		fire_only_once = yes
 		cost = 150
 		visible = {
-			has_completed_focus = POR_reform_the_junta_institutions
+			has_completed_focus = POR_consolidate_portuguese_democracy
 			has_completed_focus = POR_the_question_of_our_colonies
 			NOT = { has_country_flag = POR_released_colonies_flag }
 		}
