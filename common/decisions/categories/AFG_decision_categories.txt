@@ -243,12 +243,15 @@ AFG_prepare_soviet_war = {
 		original_tag = AFG
 	}
 
+	picture = GFX_decision_cat_AFG_basmachi_movement
+
 	priority = 15
 
 	on_map_area = {
 		target_array = SOV.controlled_states
 		target_trigger = {
 			FROM = {
+				is_owned_by = SOV
 				OR = {
 					is_core_of = TAJ
 					is_core_of = UZB
@@ -263,13 +266,13 @@ AFG_prepare_soviet_war = {
 		zoom = 600
 	}
 
+	visible_when_empty = yes
+
 	visible = {
 		has_completed_focus = AFG_undermine_moscow
-		OR = {
-			is_in_faction_with = SOV
-			is_subject_of = SOV
-		}
+		is_ally_with = SOV
 		NOT = {
+			has_war_with = SOV
 			has_completed_focus = AFG_end_soviet_rule
 		}
 	}

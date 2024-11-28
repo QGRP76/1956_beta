@@ -4507,8 +4507,6 @@ form_roman_empire_category = {
 
 			# West Banat
 			764 = { add_core_of = ROOT }
-
-			
 			
 			add_stability = -0.05
 			 
@@ -4655,7 +4653,6 @@ form_roman_empire_category = {
 			# R56, West Sandzak
 			963 = { add_core_of = ROOT }
 
-			
 			add_stability = -0.05
 			 
 			hidden_effect = { 
@@ -7434,7 +7431,6 @@ form_byzantine_empire_category = {
 		}
 	}
 }
-
 
 form_arabia_category = {
 

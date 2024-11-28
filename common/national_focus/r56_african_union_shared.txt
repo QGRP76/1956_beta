@@ -75,21 +75,14 @@
 			}
 		}		
 		offset = {
-			x = 8
+			x = 11
 			y = 0
 			trigger = {
-				tag = MLI
-			}
-		}
-		offset = {
-			x = 10
-			y = 0
-			trigger = {
-				has_focus_tree = nigeria_focus
+				has_focus_tree = west_africa_focus
 			}
 		}		
 		offset = {
-			x = -30
+			x = -31
 			y = 0
 			trigger = {
 				tag = SUD

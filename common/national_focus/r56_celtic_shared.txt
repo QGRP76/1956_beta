@@ -139,7 +139,7 @@
 							is_core_of = ROOT	#create only in core states
 						}
 						create_unit = {
-							division = "name = \"IDivision d'Infanterie\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.3 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_1 = { owner = FRA } }" 
+							division = "name = \"Division d'Infanterie\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.3 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_1 = { owner = FRA } }" 
 							owner = ROOT
 						}
 					}

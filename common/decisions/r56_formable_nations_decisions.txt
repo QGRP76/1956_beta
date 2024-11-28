@@ -1621,104 +1621,93 @@ form_nation_mod_category = {
             factor = 50
         }
     }
+
     form_west_african_union = {
+
         fire_only_once = yes
+
         icon = generic_form_nation
 
         allowed = {
             OR = {
-                original_tag = SEN
-                original_tag = TOG
-                original_tag = IVO
-                original_tag = CMR
-                original_tag = DAH
-                original_tag = GNA
-				original_tag = GHA
-                original_tag = NGA
-
-                original_tag = LIB
-                original_tag = MLI
-            }
-
+				tag = MRT
+				tag = GAM
+				tag = MLI
+				tag = GNB
+				tag = GNA
+				tag = SIE
+				tag = LIB
+				tag = IVO
+				tag = VOL
+				tag = GHA
+				tag = TOG
+				tag = DAH
+				tag = NGR
+				tag = NGA
+			}
         }
+
         visible = {
-            #avoid west africa - Ancient Mali combo
             NOT = {
+                has_cosmetic_tag = ARA_UNIFIED
                 has_cosmetic_tag = MALI_UNITED
             }
         }
-        available = { #
-            all_state = {
-                OR = {
-                    NOT = { is_core_of = SEN }
-                    is_controlled_by = ROOT
-                }
-            }
-            all_state = {
-                OR = {
-                    NOT = { is_core_of = TOG }
-                    is_controlled_by = ROOT
-                }
-            }
-            all_state = {
-                OR = {
-                    NOT = { is_core_of = IVO }
-                    is_controlled_by = ROOT
-                }
-            }
-            all_state = {
-                OR = {
-                    NOT = { is_core_of = CMR }
-                    is_controlled_by = ROOT
-                }
-            }
-            all_state = {
-                OR = {
-                    NOT = { is_core_of = DAH }
-                    is_controlled_by = ROOT
-                }
-            }
-            all_state = {
-                OR = {
-                    NOT = { is_core_of = GNA }
-                    is_controlled_by = ROOT
-                }
-            }
-            all_state = {
-                OR = {
-                    NOT = { is_core_of = GHA }
-                    is_controlled_by = ROOT
-                }
-            }
-            all_state = {
-                OR = {
-                    NOT = { is_core_of = NGA }
-                    is_controlled_by = ROOT
-                }
-            }
-            all_state = {
-                OR = {
-                    NOT = { is_core_of = SIE }
-                    is_controlled_by = ROOT
-                }
-            }
-            all_state = {
-                OR = {
-                    NOT = { is_core_of = LIB }
-                    is_controlled_by = ROOT
-                }
-            }            
+
+        available = {
+            is_subject = no
+           	controls_state = 557
+			controls_state = 272
+			controls_state = 701
+			controls_state = 296
+			controls_state = 780
+            controls_state = 899
+            controls_state = 898
+            controls_state = 556
+            controls_state = 700
+            controls_state = 298
+            controls_state = 779
+            controls_state = 799
+            controls_state = 778
+            controls_state = 274
+            controls_state = 777
+            controls_state = 776
+            controls_state = 781
+            controls_state = 902
+            controls_state = 558
+            controls_state = 900
+            controls_state = 901
         }
+
+        highlight_states = {
+            highlight_state_targets = {
+                state = 557
+                state = 272
+                state = 701
+                state = 296
+                state = 780
+                state = 899
+                state = 898
+                state = 556
+                state = 700
+                state = 298
+                state = 779
+                state = 799
+                state = 778
+                state = 274
+                state = 777
+                state = 776
+                state = 781
+                state = 902
+                state = 558
+                state = 900
+                state = 901
+            }
+        }
+
         complete_effect = {
             set_cosmetic_tag = WAU_UNITED
-            #if = {
-            #    limit = {
-            #        278 = { is_capital = no }
-            #    }
-            #    set_capital = 278
-            #}
             hidden_effect = {
-
                 if = {
                     limit = {
                         has_dlc = "La Resistance"
@@ -1727,16 +1716,20 @@ form_nation_mod_category = {
                         every_operative = {
                             limit = {
                                 OR = {
-                                    has_nationality = SEN
-                                    has_nationality = TOG
-                                    has_nationality = IVO
-                                    has_nationality = CMR
-                                    has_nationality = DAH
+                                    has_nationality = MRT
+                                    has_nationality = GAM
+                                    has_nationality = MLI
+                                    has_nationality = GNB
                                     has_nationality = GNA
-									has_nationality = GHA
-                                    has_nationality = NGA
+                                    has_nationality = SIE
                                     has_nationality = LIB
-                                    has_nationality = MLI                                   
+                                    has_nationality = IVO
+                                    has_nationality = VOL
+                                    has_nationality = GHA
+                                    has_nationality = TOG
+                                    has_nationality = DAH
+                                    has_nationality = NGR
+                                    has_nationality = NGA                                
                                 }
                                 NOT = {
                                     has_nationality = ROOT
@@ -1746,30 +1739,41 @@ form_nation_mod_category = {
                         }
                     }
                 }
-
-
                 every_state = { #This has a day of lag, for some reason.
                     limit = {
                         OR = {
-                            is_core_of = IVO
-                            is_core_of = CMR
-                            is_core_of = DAH
-                            is_core_of = TOG
-                            is_core_of = SEN
-                            is_core_of = GNA
-                            is_core_of = GHA
-                            is_core_of = NGA
-                            is_core_of = LIB
-                            is_core_of = SIE
-                            is_core_of = GNB
-                            is_core_of = GAM
-                            is_core_of = LIB
+                            state = 557
+                            state = 272
+                            state = 701
+                            state = 296
+                            state = 780
+                            state = 899
+                            state = 898
+                            state = 556
+                            state = 700
+                            state = 298
+                            state = 779
+                            state = 799
+                            state = 778
+                            state = 274
+                            state = 777
+                            state = 776
+                            state = 781
+                            state = 902
+                            state = 558
+                            state = 900
+                            state = 901
+                            state = 786 # Sahara
+                            state = 782 # Sahara
+                            state = 515 # Sahara
                         }
                     }
-                    add_core_of = PREV #ROOT
+                    add_core_of = ROOT
                 }
                 news_event = { id = r56.news_event.37 hours = 6 }
             }
+            add_state_claim = 699
+            custom_effect_tooltip = form_country_gs_required_coring_states_tt
             add_ideas = generic_recent_political_unification
             add_ideas = generic_recent_army_unification
             add_ideas = generic_recent_economic_unification
@@ -1779,68 +1783,48 @@ form_nation_mod_category = {
             factor = 500
         }
     }
+    
     reform_the_empire_of_mali = {
+
         fire_only_once = yes
+
         icon = generic_form_nation
 
         allowed = {
-            OR = {
-                original_tag = SEN
-                original_tag = GAM
-                original_tag = MLI
-                original_tag = VOL
-                original_tag = GNB
-            }
-
+           original_tag = MLI
         }
+
         visible = {
-            #avoid west africa - Ancient Mali combo
             NOT = {
                 has_cosmetic_tag = WAU_UNITED
             }
         }
+
         available = { #
-            all_state = {
-                OR = {
-                    NOT = { is_core_of = GAM }
-                    is_controlled_by = ROOT
-                }
-            }
-            all_state = {
-                OR = {
-                    NOT = { is_core_of = SEN }
-                    is_controlled_by = ROOT
-                }
-            }
-            all_state = {
-                OR = {
-                    NOT = { is_core_of = MLI }
-                    is_controlled_by = ROOT
-                }
-            }
-            all_state = {
-                OR = {
-                    NOT = { is_core_of = VOL }
-                    is_controlled_by = ROOT
-                }
-            }
-            all_state = {
-                OR = {
-                    NOT = { is_core_of = GNB }
-                    is_controlled_by = ROOT
-                }
+            is_subject = no
+            has_completed_focus = WAF_continue_expansion
+            controls_state = 898
+            controls_state = 556
+            controls_state = 899
+            controls_state = 272
+            controls_state = 701
+            controls_state = 557
+        }
+
+        highlight_states = {
+            highlight_state_targets = {
+                state = 898
+                state = 556
+                state = 899
+                state = 272
+                state = 701
+                state = 557
             }
         }
+
         complete_effect = {
             set_cosmetic_tag = MALI_UNITED
-            #if = {
-            #    limit = {
-            #        278 = { is_capital = no }
-            #    }
-            #    set_capital = 278
-            #}
             hidden_effect = {
-
                 if = {
                     limit = {
                         has_dlc = "La Resistance"
@@ -1849,11 +1833,10 @@ form_nation_mod_category = {
                         every_operative = {
                             limit = {
                                 OR = {
-                                    has_nationality = GAM
-                                    has_nationality = SEN
                                     has_nationality = MLI
-                                    has_nationality = VOL
-                                    has_nationality = GNB
+                                    has_nationality = SEN
+                                    has_nationality = GAM
+                                    has_nationality = MRT
                                 }
                                 NOT = {
                                     has_nationality = ROOT
@@ -1863,22 +1846,23 @@ form_nation_mod_category = {
                         }
                     }
                 }
-
-
                 every_state = { #This has a day of lag, for some reason.
                     limit = {
                         OR = {
-                            is_core_of = GAM
-                            is_core_of = SEN
-                            is_core_of = MLI
-                            is_core_of = VOL
-                            is_core_of = GNB
+                            state = 898
+                            state = 556
+                            state = 899
+                            state = 272
+                            state = 701
+                            state = 557
                         }
                     }
-                    add_core_of = PREV #ROOT
+                    add_core_of = ROOT
                 }
                 news_event = { id = r56.news_event.37 hours = 6 }
             }
+            add_state_claim = 699
+            custom_effect_tooltip = form_country_gs_required_coring_states_tt
             add_ideas = generic_recent_political_unification
             add_ideas = generic_recent_army_unification
             add_ideas = generic_recent_economic_unification
@@ -1888,6 +1872,7 @@ form_nation_mod_category = {
             factor = 50
         }
     }
+
 #    form_east_african_union = { # mmh be sure that BBA east african union works
 #        fire_only_once = yes
 #        icon = generic_form_nation
@@ -1970,6 +1955,7 @@ form_nation_mod_category = {
 #            factor = 50
 #        }
 #    }
+
     reunite_germany = {
         days_re_enable = 0
 

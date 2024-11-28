@@ -897,6 +897,7 @@ opinion_modifiers = {
 	PRC_2nd_ne_flag_replacement = { 
 		value = -100 
 	}
+
 ###------> ROM <><> <><> <><> <><> <><>
 
 	betrayed_balkan_pact = { value = -40 }
@@ -1113,6 +1114,20 @@ opinion_modifiers = {
 	
 	USA_sent_supplies = {
 		value = 20
+	}
+
+###------> YUG <><> <><> <><> <><> <><>
+
+	YUG_little_entente_ally = {
+		value = 25
+	}
+	
+	YUG_little_entente_enemy = {
+		value = -30
+	}
+
+	YUG_betrayed_little_entente = {
+		value = -40
 	}
 
 ###------> MEN <><> <><> <><> <><> <><>

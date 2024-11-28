@@ -1615,23 +1615,15 @@
 		}
 
 		available = {
-			OR = {
-				SOV = {
-					NOT = { has_war_with = ROOT }
-					has_government = communism
-					has_capitulated = no
-					is_faction_leader = yes
-				}
-				any_other_country = {
-					is_major = yes
-					has_government = communism
-					is_faction_leader = yes
-					NOT = { has_war_with = ROOT }
-				}
-			}
 			is_subject = no
 			is_in_faction = no
 			has_government = communism
+			any_other_country = {
+				is_major = yes
+				has_government = communism
+				is_faction_leader = yes
+				NOT = { has_war_with = ROOT }
+			}
 		}
 
 		completion_reward = {

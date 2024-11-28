@@ -10,7 +10,7 @@ characters = {
 		country_leader = {
 			ideology = despotism
 			traits = {
-				AFG_pragmatic_modernizer r56_trait_opposed_to_communism
+				AFG_pragmatic_modernizer polyglot r56_trait_opposed_to_communism #he knew Arabic, Persian, Pashto, Urdu, French and Russian
 			}
 			expire = "1965.1.1"
 			id = -1
@@ -728,7 +728,6 @@ characters = {
 		name = AFG_mubashir_al_tarazi
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/AFG/r56_portrait_AFG_Mubashir_Al_Tarazi.dds"
 				small = "GFX_idea_AFG_advisor_mubashir_al_tarazi"
 			}
 		}
@@ -853,7 +852,7 @@ characters = {
 		country_leader = {
 			ideology = socialism
 			traits = {
-				AFG_social_democrat AFG_exiled
+				resolute_social_democrat AFG_exiled
 			}
 			expire = "1955.1.1.12"
 			id = -1

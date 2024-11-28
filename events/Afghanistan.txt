@@ -98,7 +98,13 @@ country_event = {
 			OR = {
 				date < 1937.10.8
 				AFG = {
-					has_character = AFG_nisar_muhammad
+					has_country_flag = AFG_prevented_nisar_death
+				}
+				AFG = {
+					has_country_leader = {
+						character = AFG_nisar_muhammad
+						ruling_only = yes
+					}
 				}
 				SOV = {
 					NOT = {
@@ -184,7 +190,10 @@ country_event = {
 			}
 			modifier = {
 				AFG = {
-					has_character = AFG_nisar_muhammad
+					has_country_leader = {
+						character = AFG_nisar_muhammad
+						ruling_only = yes
+					}
 				}
 				factor = 1000
 			}
@@ -1643,7 +1652,7 @@ country_event = {
 
 	option = {
 		name = afghanistan.29.a ### ACCEPT THEM
-		unlock_decision_tooltip = reinstall_AFG_king
+		unlock_decision_tooltip = AFG_reinstall_the_king
 		ROOT = {
 			set_country_flag = accepted_afghan_exile
 		}
@@ -2678,6 +2687,10 @@ country_event = {
 	option = {
 		name = afghanistan.48.a
 		PER = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
 			set_politics = {
 				ruling_party = communism
 				elections_allowed = no
@@ -2689,12 +2702,6 @@ country_event = {
 				autonomy_state = autonomy_puppet
 				end_civil_wars = no
 				end_wars = no
-			}
-		}
-		PER = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.1
 			}
 		}
 	}
@@ -7332,7 +7339,10 @@ country_event = {
 		has_civil_war = yes
 		tag = AFG
 		has_government = communism
-		date < 1937.10.8
+		OR = {
+			date < 1937.10.8
+			has_country_flag = AFG_prevented_nisar_death
+		}
 		NOT = {
 			has_war_with = SOV
 		}

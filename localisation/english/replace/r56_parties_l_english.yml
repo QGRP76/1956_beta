@@ -606,11 +606,15 @@
  #KSH
  KSH_democratic_party:0 "Towarzëstwò Młodokaszëbów"
 
- LIB_democratic_party:0 "TWP"
- LIB_democratic_party_long:0 "True Whig Party"
- #fictious
- LIB_communism_party:0 "LCP"
- LIB_communism_party_long:0 "Liberian Communist Party"
+ #LIB
+ LIB_neutrality_party:0 "TWP"
+ LIB_neutrality_party_long:0 "True Whig Party"
+ LIB_democratic_party:0 "PPL"
+ LIB_democratic_party_long:0 "People's Party of Liberia"
+ LIB_fascism_party:0 "LNV" #fictious
+ LIB_fascism_party_long:0 "Liberian National Vanguard" #fictious
+ LIB_communism_party:0 "LSP" #fictious
+ LIB_communism_party_long:0 "Liberian Socialist Party" #fictious
 
  #LIE
  LIE_neutrality_party:0 "Haus Liechtenstein"

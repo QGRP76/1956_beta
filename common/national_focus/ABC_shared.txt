@@ -554,7 +554,7 @@
 	}
 	shared_focus = {
 		id = ABC_mechanization_effort
-		icon = GFX_goal_generic_mechanized
+		icon = GFX_focus_generic_mechanized
 		prerequisite = { focus = ABC_establish_a_armor_corp }
 		prerequisite = { focus = ABC_motorization_effort }
 		x = 3

@@ -686,14 +686,6 @@ leader_traits = {
 		stability_factor = 0.05
 		democratic_drift = 0.05
 	}
-	AFG_social_democrat = {
-		random = no
-		sprite = 13
-
-		political_power_factor = 0.1
-		drift_defence_factor = 0.15
-		democratic_drift = 0.05
-	}
 	AFG_golden_emir = {
 		random = no
 		army_core_defence_factor = 0.1

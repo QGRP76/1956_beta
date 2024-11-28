@@ -224,3 +224,16 @@ defined_text = {
 		localization_key = "[RAJ.GetAdjective]-[AFG.GetAdjective] War"
 	}
 }
+
+defined_text = {
+	name = GetIlliteracyVisibility
+	text = {
+		trigger = {
+			has_completed_focus = AFG_rural_schools
+		}
+		localization_key = "" #empty
+	}
+	text = {
+		localization_key = AFG_illiteracy_remove_tt
+	}
+}

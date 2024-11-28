@@ -2153,6 +2153,7 @@ AFG_civil_war = {
 			SOV = {
 				country_event = afghanistan.54
 			}
+			custom_effect_tooltip = AFG_civil_war_intervention_tt
 		}
 	}
 	AFG_utilize_great_war_artillery = {
@@ -2170,12 +2171,22 @@ AFG_civil_war = {
 		modifier = {
 			industrial_capacity_factory = -0.05
 		}
-		
-		cost = 25
+
+		custom_cost_text = decision_cost_CP_15_pp_15
+
+		custom_cost_trigger = {
+			command_power > 14
+			has_political_power > 14
+		}
 
 		visible = {
 			original_tag = AFG
 			has_civil_war = yes
+		}
+
+		complete_effect = {
+			add_command_power = -15
+			add_political_power = -15
 		}
 		
 		remove_effect = {
@@ -2278,14 +2289,12 @@ AFG_tajikistan_category = {
 		icon = GFX_decision_AFG_housing
 
 		allowed = {
-			TAG = AFG
+			original_tag = AFG
 		}
 
 		available = {
 			num_of_civilian_factories > 3
-			742 = {
-				is_owned_and_controlled_by = AFG
-			}
+			controls_state = 742
 		}
 
 		visible = {
@@ -2299,7 +2308,7 @@ AFG_tajikistan_category = {
 		days_remove = 120
 
 		highlight_states = {
-			highlight_state_targets = { state = 742 } 
+			highlight_state_targets = { state = 742 }
 		}
 
 		cost = 25
@@ -2331,69 +2340,69 @@ AFG_tajikistan_category = {
 
 		modifier = {
 			consumer_goods_factor = 0.1
-			industrial_capacity_factory = -0.03
+			industrial_capacity_factory = -0.05
 			weekly_manpower = -100
 		}
 		
 		remove_effect = {
-			742 = {
-				add_compliance = 5
-				add_extra_state_shared_building_slots = 3
-			}
-			custom_effect_tooltip = AFG_tajik_integration_tt
-			hidden_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					state = 742
+				}
 				if = {
 					limit = {
-						742 = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				increase_state_category = yes
+				add_compliance = 10
+				custom_effect_tooltip = AFG_tajik_integration_tt
+				hidden_effect = {
+					if = {
+						limit = {
 							has_dynamic_modifier = {
 								modifier = AFG_severe_tajik_separatism
 							}
 						}
-					}
-					742 = {
 						remove_dynamic_modifier = {
 							modifier = AFG_severe_tajik_separatism
 						}
-					}
-					742 = {
 						add_dynamic_modifier = {
 							modifier = AFG_strong_tajik_separatism
 						}
 					}
-				}
-				else_if = {
-					limit = {
-						742 = {
+					else_if = {
+						limit = {
 							has_dynamic_modifier = {
 								modifier = AFG_strong_tajik_separatism
 							}
 						}
-					}
-					742 = {
 						remove_dynamic_modifier = {
 							modifier = AFG_strong_tajik_separatism
 						}
-					}
-					742 = {
 						add_dynamic_modifier = {
 							modifier = AFG_mild_tajik_separatism
 						}
 					}
-				}
-				if = {
-					limit = {
-						742 = {
+					else_if = {
+						limit = {
 							has_dynamic_modifier = {
 								modifier = AFG_mild_tajik_separatism
 							}
 						}
-					}
-					742 = {
 						remove_dynamic_modifier = {
 							modifier = AFG_mild_tajik_separatism
 						}
-					}
-					742 = {
 						add_dynamic_modifier = {
 							modifier = AFG_quelled_tajik_separatism
 						}
@@ -2407,13 +2416,11 @@ AFG_tajikistan_category = {
 		icon = eng_propaganda_campaigns
 
 		allowed = {
-			TAG = AFG
+			original_tag = AFG
 		}
 
 		available = {
-			742 = {
-				is_owned_and_controlled_by = AFG
-			}
+			controls_state = 742
 		}
 
 		visible = {
@@ -2460,64 +2467,52 @@ AFG_tajikistan_category = {
 		fire_only_once = yes
 		
 		remove_effect = {
-			742 = {
-				add_compliance = 10
-				add_resistance = -10
-			}
-			if = {
+			random_owned_controlled_state = {
 				limit = {
-					742 = {
-						has_dynamic_modifier = {
+					state = 742
+				}
+				add_compliance = 15
+				add_resistance = -5
+				custom_effect_tooltip = AFG_tajik_integration_tt
+				hidden_effect = {
+					if = {
+						limit = {
+							has_dynamic_modifier = {
+								modifier = AFG_severe_tajik_separatism
+							}
+						}
+						remove_dynamic_modifier = {
 							modifier = AFG_severe_tajik_separatism
 						}
-					}
-				}
-				742 = {
-					remove_dynamic_modifier = {
-						modifier = AFG_severe_tajik_separatism
-					}
-				}
-				742 = {
-					add_dynamic_modifier = {
-						modifier = AFG_strong_tajik_separatism
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					742 = {
-						has_dynamic_modifier = {
+						add_dynamic_modifier = {
 							modifier = AFG_strong_tajik_separatism
 						}
 					}
-				}
-				742 = {
-					remove_dynamic_modifier = {
-						modifier = AFG_strong_tajik_separatism
-					}
-				}
-				742 = {
-					add_dynamic_modifier = {
-						modifier = AFG_mild_tajik_separatism
-					}
-				}
-			}
-			if = {
-				limit = {
-					742 = {
-						has_dynamic_modifier = {
+					else_if = {
+						limit = {
+							has_dynamic_modifier = {
+								modifier = AFG_strong_tajik_separatism
+							}
+						}
+						remove_dynamic_modifier = {
+							modifier = AFG_strong_tajik_separatism
+						}
+						add_dynamic_modifier = {
 							modifier = AFG_mild_tajik_separatism
 						}
 					}
-				}
-				742 = {
-					remove_dynamic_modifier = {
-						modifier = AFG_mild_tajik_separatism
-					}
-				}
-				742 = {
-					add_dynamic_modifier = {
-						modifier = AFG_quelled_tajik_separatism
+					else_if = {
+						limit = {
+							has_dynamic_modifier = {
+								modifier = AFG_mild_tajik_separatism
+							}
+						}
+						remove_dynamic_modifier = {
+							modifier = AFG_mild_tajik_separatism
+						}
+						add_dynamic_modifier = {
+							modifier = AFG_quelled_tajik_separatism
+						}
 					}
 				}
 			}
@@ -2528,13 +2523,11 @@ AFG_tajikistan_category = {
 		icon = POL_looming_peasants_strike
 
 		allowed = {
-			TAG = AFG
+			original_tag = AFG
 		}
 
 		available = {
-			742 = {
-				is_owned_and_controlled_by = AFG
-			}
+			controls_state = 742
 		}
 
 		visible = {
@@ -2581,68 +2574,56 @@ AFG_tajikistan_category = {
 		}
 		
 		remove_effect = {
-			742 = {
-				add_compliance = 5
+			random_owned_controlled_state = {
+				limit = {
+					state = 742
+				}
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 					instant_build = yes
 				}
-			}
-			if = {
-				limit = {
-					742 = {
-						has_dynamic_modifier = {
+				add_compliance = 10
+				custom_effect_tooltip = AFG_tajik_integration_tt
+				hidden_effect = {
+					if = {
+						limit = {
+							has_dynamic_modifier = {
+								modifier = AFG_severe_tajik_separatism
+							}
+						}
+						remove_dynamic_modifier = {
 							modifier = AFG_severe_tajik_separatism
 						}
-					}
-				}
-				742 = {
-					remove_dynamic_modifier = {
-						modifier = AFG_severe_tajik_separatism
-					}
-				}
-				742 = {
-					add_dynamic_modifier = {
-						modifier = AFG_strong_tajik_separatism
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					742 = {
-						has_dynamic_modifier = {
+						add_dynamic_modifier = {
 							modifier = AFG_strong_tajik_separatism
 						}
 					}
-				}
-				742 = {
-					remove_dynamic_modifier = {
-						modifier = AFG_strong_tajik_separatism
-					}
-				}
-				742 = {
-					add_dynamic_modifier = {
-						modifier = AFG_mild_tajik_separatism
-					}
-				}
-			}
-			if = {
-				limit = {
-					742 = {
-						has_dynamic_modifier = {
+					else_if = {
+						limit = {
+							has_dynamic_modifier = {
+								modifier = AFG_strong_tajik_separatism
+							}
+						}
+						remove_dynamic_modifier = {
+							modifier = AFG_strong_tajik_separatism
+						}
+						add_dynamic_modifier = {
 							modifier = AFG_mild_tajik_separatism
 						}
 					}
-				}
-				742 = {
-					remove_dynamic_modifier = {
-						modifier = AFG_mild_tajik_separatism
-					}
-				}
-				742 = {
-					add_dynamic_modifier = {
-						modifier = AFG_quelled_tajik_separatism
+					else_if = {
+						limit = {
+							has_dynamic_modifier = {
+								modifier = AFG_mild_tajik_separatism
+							}
+						}
+						remove_dynamic_modifier = {
+							modifier = AFG_mild_tajik_separatism
+						}
+						add_dynamic_modifier = {
+							modifier = AFG_quelled_tajik_separatism
+						}
 					}
 				}
 			}
@@ -2653,18 +2634,16 @@ AFG_tajikistan_category = {
 		icon = eng_trade_unions_support
 
 		allowed = {
-			TAG = AFG
+			original_tag = AFG
 		}
 
 		available = {
 			742 = {
-				is_owned_and_controlled_by = AFG
-			}
-			742 = {
 				has_dynamic_modifier = {
 					modifier = AFG_quelled_tajik_separatism
 				}
-				compliance > 60
+				compliance > 40
+				is_controlled_by = ROOT
 			}
 		}
 
@@ -2705,9 +2684,9 @@ AFG_tajikistan_category = {
 		
 		remove_effect = {
 			division_template = {
-				name = "Tajikistan People's Brigade"
+				name = "Tojikiston People's Brigade"
 
-				division_names_group = AFG_INF_01
+				division_names_group = SOV_INF_01
 				priority = 0
 				obsolete = yes
 				template_counter = 14
@@ -2721,26 +2700,28 @@ AFG_tajikistan_category = {
 					infantry = { x = 1 y = 2 }
 				}
 				support = {
-					artillery = {
-						x = 0 y = 0
-					}
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
 				}
 			}
-			if = {
-				limit = {
-					controls_state = 742
-				}
-				742 = {
-					create_unit = { 
-						division = "name = \"Tajikistan People's Brigade\" division_template = \"Tajikistan People's Brigade\" start_experience_factor = 0.2 start_equipment_factor = 0.95" owner = ROOT count = 1
-					}
-				}
-			}
-			742 = {
-				set_state_name = "Tajikistan"
-			}
-			add_state_core = 742
 			add_stability = 0.05
+			random_owned_controlled_state = {
+				limit = {
+					state = 742
+				}
+				add_core_of = ROOT
+				set_state_name = "Tojikiston"
+				custom_effect_tooltip = AFG_create_tajikistan_brigade_tt
+				hidden_effect = {
+					create_unit = { 
+						division = "name = \"Tojikiston People's Brigade\" division_template = \"Tojikiston People's Brigade\" start_experience_factor = 0.10 start_equipment_factor = 0.85"
+						owner = ROOT
+					}
+				}
+				remove_dynamic_modifier = {
+					modifier = AFG_quelled_tajik_separatism
+				}
+			}
 		}
 	}
 }
@@ -2752,11 +2733,9 @@ AFG_prepare_soviet_war = {
 
 		visible = {
 			has_completed_focus = AFG_undermine_moscow
-			OR = {
-				is_in_faction_with = SOV
-				is_subject_of = SOV
-			}
+			is_ally_with = SOV
 			NOT = {
+				has_war_with = SOV
 				has_completed_focus = AFG_end_soviet_rule
 			}
         }
@@ -2870,11 +2849,9 @@ AFG_prepare_soviet_war = {
 
 		visible = {
 			has_completed_focus = AFG_undermine_moscow
-			OR = {
-				is_in_faction_with = SOV
-				is_subject_of = SOV
-			}
+			is_ally_with = SOV
 			NOT = {
+				has_war_with = SOV
 				has_completed_focus = AFG_end_soviet_rule
 			}
         }
@@ -2987,12 +2964,10 @@ AFG_prepare_soviet_war = {
 		icon = GFX_decision_infrastructure_blow
 
         visible = {
-			has_completed_focus = AFG_sabotage_soviet_railways
-			OR = {
-				is_in_faction_with = SOV
-				is_subject_of = SOV
-			}
+			has_completed_focus = AFG_undermine_moscow
+			is_ally_with = SOV
 			NOT = {
+				has_war_with = SOV
 				has_completed_focus = AFG_end_soviet_rule
 			}
         }
@@ -3675,6 +3650,27 @@ AFG_persian_socialism_decision_category = {
 					}
 				}
 			}
+			custom_effect_tooltip = r56_possible_event_effects
+			effect_tooltip = {
+				PER = {
+					add_popularity = {
+						ideology = communism
+						popularity = 0.1
+					}
+					set_politics = {
+						ruling_party = communism
+						elections_allowed = no
+					}
+				}
+				AFG = {
+					set_autonomy = {
+						target = PER
+						autonomy_state = autonomy_puppet
+						end_civil_wars = no
+						end_wars = no
+					}
+				}
+			}
 		}
 
 		timeout_effect = {
@@ -3699,6 +3695,31 @@ AFG_persian_socialism_decision_category = {
 					PER = {
 						country_event = { id = afghanistan.70 hours = 3 }
 					}
+				}
+			}
+			custom_effect_tooltip = r56_possible_event_effects
+			effect_tooltip = {
+				PER = {
+					start_civil_war = {
+						ideology = ROOT
+						ruling_party = communism
+						army_ratio = 0.4
+						size = 0.9
+						capital = 266
+						keep_political_leader = yes
+						keep_political_party_members = no
+					}
+				}
+				AFG = {
+					set_autonomy = {
+						target = PER
+						autonomy_state = autonomy_puppet
+						end_civil_wars = no
+						end_wars = no
+					}
+				}
+				SOV = {
+					country_event = { id = afghanistan.76 days = 1 hours = 12 }
 				}
 			}
 		}
@@ -3737,6 +3758,8 @@ AFG_persian_socialism_decision_category = {
             factor = 10
         } 
 	}
+
+	#### PERSIAN SECTION ####
 
 	PER_propaganda_campaigns = {
 
@@ -5043,8 +5066,7 @@ AFG_revive_basmachi_decision_category = {
 					type = take_state_focus
 				}
 				division_template = {
-					name = "Basmachi Insurgents"
-	
+					name = "Basmachi Resistance Brigade"
 					division_names_group = AFG_INF_01
 					priority = 1
 	
@@ -5052,12 +5074,14 @@ AFG_revive_basmachi_decision_category = {
 						infantry = { x = 0 y = 0 }
 						infantry = { x = 0 y = 1 }
 						infantry = { x = 0 y = 2 }
+
 						infantry = { x = 1 y = 0 }
 						infantry = { x = 1 y = 1 }
 						infantry = { x = 1 y = 2 }
-						infantry = { x = 2 y = 0 }
-						infantry = { x = 2 y = 1 }
-						infantry = { x = 2 y = 2 }
+
+						cavalry = { x = 2 y = 0 }
+						cavalry = { x = 2 y = 1 }
+						cavalry = { x = 2 y = 2 }
 					}
 					support = {
 						artillery = {
@@ -5111,7 +5135,7 @@ AFG_revive_basmachi_decision_category = {
 							is_owned_and_controlled_by = SOV
 						}
 						create_unit = { 
-							division = "name = \"Basmachi Mujahideen\" division_template = \"Basmachi Insurgents\" start_experience_factor = 0.15 start_equipment_factor = 1"
+							division = "name = \"Basmachi Resistance Brigade\" division_template = \"Basmachi Resistance Brigade\" start_experience_factor = 0.20 start_equipment_factor = 0.95 start_manpower_factor = 0.9"
 							owner = AFG 
 							count = 1
 							allow_spawning_on_enemy_provs = yes
@@ -6464,7 +6488,9 @@ AFG_rebellion_in_pakistan_decision_category = {
 }
 political_actions = {
 	
-	reinstall_AFG_king = {
+	AFG_reinstall_the_king = {
+
+		priority = 50
 
 		icon = generic_monarchy
 
@@ -6682,6 +6708,116 @@ political_actions = {
 
 		ai_will_do = {
 			base = 5
+		}
+	}
+
+	AFG_rescind_the_turkish_afghan_defense_treaty = {
+
+		icon = GFX_decision_generic_break_treaty
+
+		days_re_enable = 180
+
+		allowed = {
+			OR = {
+				original_tag = AFG
+				original_tag = TUR
+			}
+		}
+
+		targets = { AFG TUR }
+
+		available = {
+			OR = {
+				is_guaranteed_by = AFG
+				is_guaranteed_by = TUR
+			}
+			OR = {
+				has_guaranteed = AFG
+				has_guaranteed = TUR
+			}
+		}
+
+		visible = {
+			OR = {
+				is_guaranteed_by = AFG
+				is_guaranteed_by = TUR
+			}
+			OR = {
+				has_guaranteed = AFG
+				has_guaranteed = TUR
+			}
+			NOT = {
+				is_in_faction_with = AFG
+				is_in_faction_with = TUR
+				has_war_together_with = AFG
+				has_war_together_with = TUR
+			}
+		}
+
+		cost = 25
+
+		remove_effect = {
+			add_stability = -0.03
+			AFG = {
+				diplomatic_relation = {
+					country = TUR
+					relation = guarantee
+					active = no
+				}
+				if = {
+					limit = {
+						ROOT = {
+							tag = TUR
+						}
+					}
+					add_opinion_modifier = {
+						target = TUR
+						modifier = betrayed_guarantee
+					}
+				}
+			}
+			TUR = {
+				diplomatic_relation = {
+					country = AFG
+					relation = guarantee
+					active = no
+				}
+				if = {
+					limit = {
+						ROOT = {
+							tag = AFG
+						}
+					}
+					add_opinion_modifier = {
+						target = AFG
+						modifier = betrayed_guarantee
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+			modifier = {
+				is_historical_focus_on = yes
+				original_tag = AFG
+				any_other_country = {
+					has_wargoal_against = TUR
+				}
+				factor = 100
+			}
+			modifier = {
+				is_historical_focus_on = yes
+				original_tag = TUR
+				any_other_country = {
+					has_wargoal_against = AFG
+				}
+				factor = 100
+			}
 		}
 	}
 }
@@ -9382,6 +9518,7 @@ AFG_foreign_aircraft_category = {
 					name = medium_air_research
 					bonus = 1
 					uses = 1
+					ahead_reduction = 0.5
 					category = medium_air
 				}
 			}
@@ -9395,6 +9532,7 @@ AFG_foreign_aircraft_category = {
 					name = fighter_bonus
 					bonus = 1
 					uses = 1
+					ahead_reduction = 0.5
 					category = light_fighter
 				}
 			}
@@ -9493,6 +9631,7 @@ AFG_foreign_aircraft_category = {
 					name = fighter_bonus
 					bonus = 1
 					uses = 1
+					ahead_reduction = 0.5
 					category = light_air
 				}
 			}
@@ -9506,6 +9645,7 @@ AFG_foreign_aircraft_category = {
 					name = fighter_bonus
 					bonus = 1
 					uses = 1
+					ahead_reduction = 0.5
 					category = light_fighter
 				}
 			}
@@ -9584,6 +9724,7 @@ AFG_foreign_aircraft_category = {
 					name = CAS_bonus
 					bonus = 1
 					uses = 1
+					ahead_reduction = 0.5
 					category = cat_air_bombs
 				}
 			}
@@ -9597,6 +9738,7 @@ AFG_foreign_aircraft_category = {
 					name = CAS_bonus
 					bonus = 1
 					uses = 1
+					ahead_reduction = 0.5
 					category = light_fighter
 				}
 			}
@@ -9750,8 +9892,9 @@ AFG_elections_category = {
 			custom_effect_tooltip = r56_newline
 			remove_trait = {
 				character = AFG_ghulam_muhammad_ghubar
+				ideology = socialism
 				trait = AFG_exiled
-			}
+		  	}
 			custom_effect_tooltip = r56_newline
 			set_country_flag = AFG_pardoned_prisoners
 			custom_effect_tooltip = available_political_advisor

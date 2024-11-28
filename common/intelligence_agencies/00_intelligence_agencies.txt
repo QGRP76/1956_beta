@@ -829,7 +829,7 @@ intelligence_agency = {
 intelligence_agency = {
 	
 	picture = GFX_r56_agency_logo_communist_4
-	names = { "Khadamat-e Aetla'at-e Dawlat" }
+	names = { "Khadamat-e Aetla'at-e Dawlati" }
 	
 	available = { 
 		tag = AFG

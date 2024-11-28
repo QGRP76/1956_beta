@@ -55,7 +55,7 @@ if = {
 }
 
 set_war_support = 0.25
-set_stability = 0.41
+set_stability = 0.42
 set_research_slots = 3
 
 add_ideas = {
@@ -143,16 +143,16 @@ set_country_flag = started_out_as_landlocked
 
 set_politics = {
 	ruling_party = neutrality
-	last_election = "1936.1.1"
-	election_frequency = 48
-	elections_allowed = no
+	last_election = "1934.3.28" #guess
+	election_frequency = 36
+	elections_allowed = yes
 }
 
 set_popularities = {
 	fascism = 8
-	communism = 4
-	democratic = 4
-	neutrality = 84
+	communism = 2
+	democratic = 12
+	neutrality = 78
 }
 
 set_variable = {
@@ -194,17 +194,79 @@ set_power_balance = {
 
 ####### DIPLOMACY
 
-diplomatic_relation = {
+diplomatic_relation = { # Soviet-Afghan Pact of Non-Agression
 	country = SOV
 	relation = non_aggression_pact
 	active = yes
 }
 
-AFG = {
-	country_event = {
-		id = afghanistan.20 days = 228
+diplomatic_relation = { # Turkish-Afghan Pact of Mutual Defense
+	country = TUR
+	relation = non_aggression_pact
+	active = yes
+}
+
+give_guarantee = TUR
+
+add_opinion_modifier = {
+	target = TUR
+	modifier = historical_ties
+}
+
+add_ai_strategy = {
+    type = befriend
+    id = TUR
+    value = 35
+}
+add_ai_strategy = {
+    type = support
+    id = TUR
+    value = 25
+}
+add_ai_strategy = {
+    type = diplo_action_acceptance
+    id = TUR
+    value = 15
+}
+add_ai_strategy = {
+    type = alliance
+    id = TUR
+    value = 10
+}
+
+TUR = {
+	give_guarantee = AFG
+	add_opinion_modifier = {
+		target = AFG
+		modifier = historical_ties
+	}
+	add_ai_strategy = {
+		type = befriend
+		id = AFG
+		value = 35
+	}
+	add_ai_strategy = {
+		type = support
+		id = AFG
+		value = 25
+	}
+	add_ai_strategy = {
+		type = diplo_action_acceptance
+		id = AFG
+		value = 15
+	}
+	add_ai_strategy = {
+		type = alliance
+		id = AFG
+		value = 10
 	}
 }
+
+# AFG = {
+# 	country_event = {
+# 		id = afghanistan.20 days = 228
+# 	}
+# }
 
 AFG = {
 	country_event = {

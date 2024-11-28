@@ -101,6 +101,10 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 50
+			random_owned_controlled_state = {
+				prioritize = { 1011 }
+				add_extra_state_shared_building_slots = 1
+			}
 			hidden_effect = {
 				set_variable = {
 					AFG_rural_schools_duration = 90
@@ -122,10 +126,6 @@ focus_tree = {
 					value = -0.05
 					tooltip_side = AFG_government_side
 				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 1011 }
-				add_extra_state_shared_building_slots = 1
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1719,7 +1719,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_finance_army_mechanization
-		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
+		icon = GFX_focus_generic_mechanized
 		cost = 5
 		prerequisite = {
 			focus = AFG_develop_the_tank_industry focus = AFG_tank_purchase
@@ -3118,7 +3118,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_kabul_air_college
-		icon = GFX_goal_generic_air_doctrine
+		icon = GFX_focus_generic_military_academy
 		x = 1
 		y = 1
 
@@ -6164,8 +6164,8 @@ focus_tree = {
 			set_politics = {
 				ruling_party = neutrality
 				elections_allowed = yes
-				last_election = "1936.12.14"
-				election_frequency = 48
+				last_election = "1937.3.28"
+				election_frequency = 36
 			}
 			custom_effect_tooltip = r56_newline
 			add_ideas = AFG_constitutional_monarchy_idea
@@ -8038,6 +8038,25 @@ focus_tree = {
 			custom_effect_tooltip = r56_newline
 			custom_effect_tooltip = AFG_appraoch_the_soviets
 			set_country_flag = AFG_soviet_support
+			if = {
+				limit = {
+					SOV = {
+						OR = {
+							has_country_leader = {
+								character = SOV_iosif_stalin
+								ruling_only = yes
+							}
+							has_completed_focus = SOV_the_centre
+						}
+						NOT = {
+							has_completed_focus = SOV_the_military_conspiracy
+						}
+					}
+				}
+				custom_effect_tooltip = AFG_prevent_nisar_death_tt
+				custom_effect_tooltip = AFG_once_nisar_completed_tt
+				set_country_flag = AFG_prevented_nisar_death
+			}
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
 	}
@@ -8851,6 +8870,21 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
 						building = arms_factory
 						size > 1
 						include_locked = yes
@@ -9548,10 +9582,7 @@ focus_tree = {
 		y = 1
 
 		available = {
-			OR = {
-				is_subject_of = SOV
-				is_in_faction_with = SOV
-			}
+			is_ally_with = SOV
 		}
 
 		prerequisite = { focus = AFG_incorporate_tajikistan }
@@ -9588,10 +9619,7 @@ focus_tree = {
 		y = 1
 
 		available = {
-			OR = {
-				is_subject_of = SOV
-				is_in_faction_with = SOV
-			}
+			is_ally_with = SOV
 		}
 
 		prerequisite = { focus = AFG_undermine_moscow }
@@ -9623,10 +9651,7 @@ focus_tree = {
 		y = 1
 
 		available = {
-			OR = {
-				is_subject_of = SOV
-				is_in_faction_with = SOV
-			}
+			is_ally_with = SOV
 		}
 
 		prerequisite = { focus = AFG_undermine_moscow }
@@ -9667,15 +9692,12 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_end_soviet_rule
-		icon = GFX_goal_generic_uprising
+		icon = GFX_focus_GER_proletarian_solidarity
 		x = 1
 		y = 1
 
 		available = {
-			OR = {
-				is_subject_of = SOV
-				is_in_faction_with = SOV
-			}
+			is_ally_with = SOV
 		}
 
 		prerequisite = { focus = AFG_sabotage_soviet_railways focus = AFG_seize_gun_stockpiles }
@@ -10562,7 +10584,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_contact_tribes
-		icon = GFX_focus_ETH_sway_the_warlords
+		icon = GFX_goal_JOR_appease_tribes
 		x = 1
 		y = 1
 
@@ -12187,10 +12209,10 @@ focus_tree = {
 		relative_position_id = AFG_tulaia_mutaharrika
 
 		completion_reward = {
-			add_ideas = AFG_global_islamic_revolution_idea
 			unlock_decision_category_tooltip = AFG_inflitrate_pakistan_category
 			activate_mission = AFG_declare_war
 			set_country_flag = AFG_india_war_flag
+			add_ideas = AFG_global_islamic_revolution_idea
 			custom_effect_tooltip = r56_newline
 			custom_effect_tooltip = AFG_will_lead_to_war_PAK
 		}

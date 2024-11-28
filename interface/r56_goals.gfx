@@ -2283,10 +2283,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/afg/r56_goal_AFG_the_kings_party.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_AFG_soviet_trade_agreement"
-		texturefile = "gfx/interface/goals/afg/r56_goal_AFG_soviet_trade_agreement.dds"
-	}
-	SpriteType = {
 		name = "GFX_goal_AFG_afghanistan_iran_union"
 		texturefile = "gfx/interface/goals/afg/r56_goal_AFG_afghanistan_iran_union.dds"
 	}

@@ -8,7 +8,7 @@ characters = {
 		}
 		country_leader = {
 			traits = {
-				AFG_social_democrat r56_trait_opposed_to_fascism
+				resolute_social_democrat r56_trait_opposed_to_fascism
 			}
 			ideology = socialism
 			expire = "1965.1.1"

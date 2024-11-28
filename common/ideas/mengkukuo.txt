@@ -1673,7 +1673,7 @@ ideas = {
 			
 			removal_cost = -1
 
-			picture = AFG_cavalry
+			picture = HUN_heirs_of_the_huns
 
 			modifier = {
 				cavalry_attack_factor = 0.05

@@ -33,7 +33,6 @@
 			trigger = {
 				OR = {
 					tag = BRM
-
 				}
 			}
 		}
@@ -43,7 +42,7 @@
 			trigger = {
 				OR = {
 					tag = COS
-					
+					has_focus_tree = west_africa_focus
 				}
 			}
 		}
@@ -1673,7 +1672,7 @@
 			trigger = {
 				OR = {
 					tag = COS
-					
+					has_focus_tree = west_africa_focus
 				}
 			}
 		}
@@ -3563,6 +3562,7 @@
 				OR = {
 					tag = ARM
 					tag = COS
+					has_focus_tree = west_africa_focus
 				}
 			}
 		}
