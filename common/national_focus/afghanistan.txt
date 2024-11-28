@@ -37,7 +37,6 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 1000
-				has_active_mission = AFG_third_loya_jirga_mission
 				has_country_flag = AFG_win_loya_jirga 
 			}
 		}

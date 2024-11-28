@@ -53,8 +53,6 @@ AFG_rural_schools_category = {
 
 	priority = 15
 
-	visible_when_empty = yes
-
 	on_map_area = {
 		target_array = AFG.core_states
 		target_trigger = {

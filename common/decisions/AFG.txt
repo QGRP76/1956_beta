@@ -6030,15 +6030,15 @@ AFG_rebellion_in_pakistan_decision_category = {
 					name = "Pakistani Mujahideen"
 					priority = 1
 					regiments = {
-						irregular_infantry = { x = 0 y = 0 }
-						irregular_infantry = { x = 0 y = 1 }
-						irregular_infantry = { x = 0 y = 2 }
-						irregular_infantry = { x = 1 y = 0 }
-						irregular_infantry = { x = 1 y = 1 }
-						irregular_infantry = { x = 1 y = 2 }
-						irregular_infantry = { x = 2 y = 0 }
-						irregular_infantry = { x = 2 y = 1 }
-						irregular_infantry = { x = 2 y = 2 }
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
 					}
 					support = {
 						recon = {
