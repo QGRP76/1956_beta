@@ -19,6 +19,7 @@ AUS_focus_tree_selection = {
 		name = STANDARD_TREE
 		text = "RULE_OPTION_STANDARD_TREE"
 		desc = "RULE_OPTION_STANDARD_TREE_DESC"
+		allow_achievements = yes
 	}
 }
 
@@ -31,6 +32,7 @@ BUL_focus_tree_selection = {
 		name = STANDARD_TREE
 		text = "RULE_OPTION_STANDARD_TREE"
 		desc = "RULE_OPTION_STANDARD_TREE_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = R56_TREE
@@ -49,6 +51,7 @@ BEL_focus_tree_selection = {
 		name = STANDARD_TREE
 		text = "RULE_OPTION_STANDARD_TREE"
 		desc = "RULE_OPTION_STANDARD_TREE_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = R56_TREE
@@ -73,6 +76,7 @@ DEN_focus_tree_selection = {
 		name = R56_TREE
 		text = "RULE_OPTION_R56_TREE"
 		desc = "RULE_OPTION_R56_TREE_DESC"
+		allow_achievements = yes
 	}
 }
 
@@ -4764,25 +4768,6 @@ obsolete_focus_branches_visibility = {
 		name = SHOW
 		text = "RULE_OPTION_SHOW"
 		desc = "RULE_OPTION_SHOW_DESC_DESC"
-		allow_achievements = yes
-	}
-}
-
-
-renaming_of_states_setting = {
-	name = "RULE_STATES_RENAMING"
-	group = "RULE_GROUP_GENERAL_UI"
-	icon = "GFX_boosting_party_popularity"
-	default = {
-		name = ALLOW_RENAMING
-		text = "RULE_OPTION_ALLOW_RENAMING"
-		desc = "RULE_OPTION_ALLOW_RENAMING_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = PHOHIBIT_RENAMING
-		text = "RULE_OPTION_PHOHIBIT_RENAMING"
-		desc = "RULE_OPTION_PHOHIBIT_RENAMING_DESC"
 		allow_achievements = yes
 	}
 }
