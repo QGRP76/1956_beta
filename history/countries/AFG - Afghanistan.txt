@@ -109,6 +109,8 @@ recruit_character = AFG_abdur_rahim_khan
 recruit_character = AFG_mastibek_tashmukhamedov
 recruit_character = AFG_akbar_khan
 recruit_character = AFG_nazir_ahmed
+recruit_character = AFG_zmarak_khan_zadran
+recruit_character = AFG_bacha_gul
 
 #only advisors
 recruit_character = AFG_asadullah_seraj_khan

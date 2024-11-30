@@ -38,10 +38,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/afg/advisors/r56_idea_AFG_advisor_turabaz_khan.dds"
 	}
 	spriteType = {
-		name = "GFX_r56_idea_AFG_advisor_humaira_begum"
-		texturefile = "gfx/interface/ideas/afg/advisors/r56_idea_AFG_advisor_humaira_begum.dds"
-	}
-	spriteType = {
 		name = "GFX_rt56_idea_AFG_advisor_homeira_seljuqi"
 		texturefile = "gfx/interface/ideas/afg/advisors/rt56_idea_AFG_advisor_homeira_seljuqi.dds"
 	}
@@ -160,6 +156,18 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_AFG_advisor_nisar_avalovich"
 	   	texturefile = "gfx/interface/ideas/afg/advisors/r56_idea_AFG_advisor_nisar_avalovich.dds"
+   	}
+	spriteType = {
+		name = "GFX_idea_AFG_advisor_abul_maududi"
+	   	texturefile = "gfx/interface/ideas/afg/advisors/r56_idea_AFG_advisor_abul_maududi.dds"
+   	}
+	spriteType = {
+		name = "GFX_idea_AFG_advisor_zmarak_zadran"
+	   	texturefile = "gfx/interface/ideas/afg/advisors/r56_idea_AFG_advisor_zmarak_zadran.dds"
+   	}
+	spriteType = {
+		name = "GFX_idea_AFG_advisor_bacha_gul"
+	   	texturefile = "gfx/interface/ideas/afg/advisors/r56_idea_AFG_advisor_bacha_gul.dds"
    	}
 
 ###------> ARG <><> <><> <><> <><> <><>

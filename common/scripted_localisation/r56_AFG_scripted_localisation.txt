@@ -216,12 +216,17 @@ defined_text = {
 					is_subject_of = ENG
 					has_cosmetic_tag = RAJ_UK
 				}
+				AND = {
+					owns_state = 442
+					owns_state = 444
+					owns_state = 445
+				}
 			}
 		}
 		localization_key = "4th Anglo-Afghan War"
 	}
 	text = {
-		localization_key = "[RAJ.GetAdjective]-[AFG.GetAdjective] War"
+		localization_key = "[442.Owner.GetAdjective]-[AFG.GetAdjective] War"
 	}
 }
 

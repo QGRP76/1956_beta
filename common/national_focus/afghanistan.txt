@@ -87,11 +87,6 @@ focus_tree = {
 				factor = 3
 				date > 1937.3.1
 			}
-			modifier = {
-				factor = 1000
-				has_active_mission = AFG_third_loya_jirga_mission
-				has_country_flag = AFG_win_loya_jirga 
-			}
 		}
 
 		prerequisite = { focus = AFG_begin_westernization }
@@ -669,6 +664,27 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+			modifier = {
+				is_historical_focus_on = no
+				factor = 3
+			}
+			modifier = {
+				OR = {
+					is_in_faction_with = SOV
+					is_in_faction_with = ENG
+					is_in_faction_with = GER
+					is_in_faction_with = USA
+				}
+				factor = 5
+			}
+			modifier = {
+				has_tech = atomic_research
+				factor = 10
+			}
 		}
 		
 		prerequisite = {
@@ -4367,7 +4383,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 5
+		cost = 10
 
 		available = {
 			has_government = neutrality
@@ -4384,13 +4400,57 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			unlock_decision_tooltip = AFG_imprison_political_opponents
-			add_ideas = AFG_censorship
+			add_research_slot = 1
 			if = {
 				limit = {
-					has_completed_focus = AFG_appoint_hashim
+					has_idea = AFG_illiteracy_5
 				}
-				add_research_slot = 1
+				country_event = { id = afghanistan.23 hours = 12 }
+			}
+			if = {
+				limit = {
+					has_idea = AFG_illiteracy_4
+				}
+				swap_ideas = {
+					remove_idea = AFG_illiteracy_4
+					add_idea = AFG_illiteracy_5
+				}
+			}
+			if = {
+				limit = {
+					has_idea = AFG_illiteracy_3
+				}
+				swap_ideas = {
+					remove_idea = AFG_illiteracy_3
+					add_idea = AFG_illiteracy_4
+				}
+			}
+			if = {
+				limit = {
+					has_idea = AFG_illiteracy_2
+				}
+				swap_ideas = {
+					remove_idea = AFG_illiteracy_2
+					add_idea = AFG_illiteracy_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = AFG_illiteracy_1
+				}
+				swap_ideas = {
+					remove_idea = AFG_illiteracy_1
+					add_idea = AFG_illiteracy_2
+				}
+			}
+			if = {
+				limit = {
+					has_idea = AFG_illiteracy
+				}
+				swap_ideas = {
+					remove_idea = AFG_illiteracy
+					add_idea = AFG_illiteracy_1
+				}
 			}
 			if = {
 				limit = {
@@ -4398,11 +4458,10 @@ focus_tree = {
 						id = AFG_power_balance
 					}
 				}
-				custom_effect_tooltip = r56_newline
 				add_power_balance_value = {
 					id = AFG_power_balance
-					value = 0.05
-					tooltip_side = AFG_tribal_side
+					value = -0.05
+					tooltip_side = AFG_government_side
 				}
 			}
 		}
@@ -4566,7 +4625,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 8
+		cost = 5
 
 		available = {
 			has_government = neutrality
@@ -4587,9 +4646,24 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = -15
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.05
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = AFG_power_balance
+					}
+				}
+				custom_effect_tooltip = r56_newline
+				add_power_balance_value = {
+					id = AFG_power_balance
+					value = -0.10
+					tooltip_side = AFG_government_side
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4600,7 +4674,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 8
+		cost = 5
 
 		available = {
 			has_government = neutrality
@@ -4621,9 +4695,24 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_war_support = -0.05
+			add_political_power = 75
 			add_popularity = {
 				ideology = fascism
 				popularity = -0.1
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = AFG_power_balance
+					}
+				}
+				custom_effect_tooltip = r56_newline
+				add_power_balance_value = {
+					id = AFG_power_balance
+					value = -0.05
+					tooltip_side = AFG_government_side
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
@@ -6410,9 +6499,8 @@ focus_tree = {
 				character = AFG_mohammed_daoud_khan
 				ideology = pashtun_nationalism
 			}
-			custom_effect_tooltip = AFG_NRP_tt
+			set_cosmetic_tag = AFG_NRP
 			hidden_effect = {
-				set_cosmetic_tag = AFG_NRP
 				every_character = {
 					limit = {
 						OR = {
@@ -7590,18 +7678,14 @@ focus_tree = {
 
 		available = {
 			has_government = neutrality
-			custom_trigger_tooltip = {
-				tooltip = AFG_controls_all_afghan_core
-				controls_state = 1009
-				controls_state = 1010
-				controls_state = 1011
-				controls_state = 415
-				controls_state = 267
-				controls_state = 1008
+			any_controlled_state = {
+				OR = {
+					state = 442
+					state = 445
+					state = 444
+					state = 1093
+				}
 			}
-			controls_state = 444
-			controls_state = 445
-			controls_state = 442
 		}
 
 		prerequisite = {
@@ -7615,9 +7699,28 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_state_core = 444
-			add_state_core = 445
-			add_state_core = 442
+			every_state = {
+				limit = {
+					OR = {
+						state = 442
+						state = 445
+						state = 444
+						state = 1093
+						state = 410
+					}
+				}
+				add_compliance = 15
+				add_resistance = -10
+				if = {
+					limit = {
+						NOT = {
+							is_claimed_by = ROOT
+						}
+					}
+					add_claim_by = ROOT
+				}
+			}
+			add_ideas = AFG_pashtunism
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -10896,6 +10999,9 @@ focus_tree = {
 					tooltip_side = AFG_tribal_side
 				}
 			}
+			hidden_effect = { # Civil War Flag
+				set_cosmetic_tag = AFG_EMI
+			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -10934,7 +11040,7 @@ focus_tree = {
 				name = "Jamiat-e Islami"
 			}
 			promote_character = AFG_abul_ala_maududi
-			custom_effect_tooltip = AFG_emirate_maududi_tt
+			set_cosmetic_tag = AFG_JAM
 			if = {
 				limit = {
 					has_power_balance = {
@@ -10948,11 +11054,50 @@ focus_tree = {
 					tooltip_side = AFG_government_side
 				}
 			}
-			hidden_effect = {
-				set_cosmetic_tag = AFG_JAM
-			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+	}
+	focus = {
+		id = AFG_utilize_the_sufis
+		icon = GFX_goal_PAL_figure_of_islamism
+		x = 0
+		y = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 8
+
+		available = {
+			has_government = fascism
+		}
+
+		prerequisite = {
+			focus = AFG_maududi_as_sheikhulislam
+		}
+
+		relative_position_id = AFG_maududi_as_sheikhulislam
+
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = AFG_fazl_omar_mojadidi
+			if = {
+				limit = {
+					has_power_balance = {
+						id = AFG_power_balance
+					}
+				}
+				custom_effect_tooltip = r56_newline
+				add_power_balance_value = {
+					id = AFG_power_balance
+					value = 0.10
+					tooltip_side = AFG_tribal_side
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 	focus = {
 		id = AFG_support_the_palestinians
@@ -11006,82 +11151,6 @@ focus_tree = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-	focus = {
-		id = AFG_invite_amin_al_husseini
-		icon = GFX_goal_AFG_invite_amin_al_husseini
-		x = 0
-		y = 2
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		cost = 5
-
-		prerequisite = {
-			focus = AFG_form_the_turkestan_legion
-		}
-
-		relative_position_id = AFG_support_the_palestinians
-
-		available = {
-			AND = {
-				has_government = fascism
-				PAL = {
-					exists = no
-				}
-			}
-		}
-
-		completion_reward = {
-			add_war_support = 0.05
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = AFG_amin_al_husseini
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-	}
-	focus = {
-		id = AFG_utilize_the_sufis
-		icon = GFX_goal_PAL_figure_of_islamism
-		x = 0
-		y = 2
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		cost = 8
-
-		available = {
-			has_government = fascism
-		}
-
-		prerequisite = {
-			focus = AFG_maududi_as_sheikhulislam
-		}
-
-		relative_position_id = AFG_maududi_as_sheikhulislam
-
-		completion_reward = {
-			add_political_power = 50
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = AFG_fazl_omar_mojadidi
-			if = {
-				limit = {
-					has_power_balance = {
-						id = AFG_power_balance
-					}
-				}
-				custom_effect_tooltip = r56_newline
-				add_power_balance_value = {
-					id = AFG_power_balance
-					value = 0.10
-					tooltip_side = AFG_tribal_side
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 	focus = {
 		id = AFG_approach_mubashir
@@ -11169,6 +11238,40 @@ focus_tree = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+	}
+	focus = {
+		id = AFG_invite_amin_al_husseini
+		icon = GFX_goal_AFG_invite_amin_al_husseini
+		x = 0
+		y = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 5
+
+		prerequisite = {
+			focus = AFG_form_the_turkestan_legion
+		}
+
+		relative_position_id = AFG_support_the_palestinians
+
+		available = {
+			AND = {
+				has_government = fascism
+				PAL = {
+					exists = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = AFG_amin_al_husseini
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 	focus = {
 		id = AFG_nationalize_spiznar
@@ -11290,7 +11393,7 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
-				set_cosmetic_tag = AFG_EMI
+				drop_cosmetic_tag = yes
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
@@ -12227,19 +12330,14 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			custom_trigger_tooltip = {
-				tooltip = AFG_controls_all_afghan_core
-				controls_state = 1009
-				controls_state = 1010
-				controls_state = 1011
-				controls_state = 415
-				controls_state = 267
-				controls_state = 1008
+			any_controlled_state = {
+				OR = {
+					state = 442
+					state = 445
+					state = 444
+					state = 1093
+				}
 			}
-			controls_state = 444
-			controls_state = 445
-			controls_state = 442
-			controls_state = 410
 		}
 		
 		prerequisite = {
@@ -12253,17 +12351,28 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = AFG_pashtunism
-			custom_effect_tooltip = r56_newline
-			add_state_core = 444
-			add_state_core = 445
-			add_state_core = 442
-			add_state_core = 410
-			custom_effect_tooltip = r56_newline
-			custom_effect_tooltip = AFG_PSH_tt
-			hidden_effect = {
-				set_cosmetic_tag = AFG_PSH
+			every_state = {
+				limit = {
+					OR = {
+						state = 442
+						state = 445
+						state = 444
+						state = 1093
+						state = 410
+					}
+				}
+				add_compliance = 15
+				add_resistance = -10
+				if = {
+					limit = {
+						NOT = {
+							is_claimed_by = ROOT
+						}
+					}
+					add_claim_by = ROOT
+				}
 			}
+			add_ideas = AFG_pashtunism
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}

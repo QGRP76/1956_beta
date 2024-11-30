@@ -483,3 +483,22 @@ AFG_elections_category = {
 
 	visible_when_empty = no
 }
+
+AFG_for_what_was_taken_from_us = {
+	
+	icon = GFX_decision_category_NOR_fascist_deploy_prep
+
+	picture = GFX_decision_cat_AFG_greater_afghanistan
+
+	allowed = {
+		original_tag = AFG
+	}
+
+	priority = 1000
+
+	visible = {
+		original_tag = AFG
+	}
+
+	visible_when_empty = no
+}

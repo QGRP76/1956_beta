@@ -591,6 +591,8 @@
  HUN_ADJ:0 "Hungarian"
  #HUN_subject:0 "$OVERLORDADJ$ $HUN$"
  #HUN_subject_DEF:0 "$OVERLORDADJ$ $HUN$"
+
+ #AFG
  AFG_fascism:0 "Islamic Emirate of Afghanistan"
  AFG_fascism_DEF:0 "the Islamic Emirate of Afghanistan"
  AFG_democratic:0 "Kingdom of Afghanistan"

@@ -37,7 +37,10 @@ country_event = {
 			last_election = "1938.3.27"
 			election_frequency = 48
 		}
-		promote_character = URG_alfredo_baldomir_ferrari
+		promote_character = {
+			character = URG_alfredo_baldomir_ferrari
+			ideology = conservatism_n
+		}
 		unlock_national_focus = URG_colorado_victory
 	}
 	option = {
@@ -64,7 +67,10 @@ country_event = {
 			election_frequency = 48
 		}
 		set_country_flag = URG_blanco_victory_flag
-		promote_character = URG_luis_alberto_de_herrera
+		promote_character = {
+			character = URG_luis_alberto_de_herrera
+			ideology = conservatism
+		}
 		set_party_name = {
 			ideology = democratic
 			long_name = URG_partido_nacional_party_long
@@ -107,9 +113,13 @@ country_event = {
 	
 	option = {
 		name = uruguay.2.a
-		promote_character = URG_consejo_nacional_de_administracion
+		promote_character = {
+			character = URG_consejo_nacional_de_administracion
+			ideology = centrism_democratic
+		}
 		add_stability = 0.05
 	}
+
 	option = {
 		name = uruguay.2.b
 		add_political_power = 150
@@ -128,7 +138,10 @@ country_event = {
 	
 	option = {
 		name = uruguay.3.a
-		promote_character = URG_consejo_nacional_de_administracion
+		promote_character = {
+			character = URG_consejo_nacional_de_administracion
+			ideology = centrism_democratic
+		}
 		add_stability = -0.1
 		add_popularity = {
 			ideology = fascism
@@ -207,7 +220,10 @@ country_event = {
 			election_frequency = 48
 		}
 		set_country_flag = URG_socialist_victory_flag
-		promote_character = URG_emilio_frugoni
+		promote_character = {
+			character = URG_emilio_frugoni
+			ideology = socialism
+		}
 		set_party_name = {
 			ideology = democratic
 			long_name = URG_partido_socialista_party_long

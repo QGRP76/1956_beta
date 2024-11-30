@@ -1162,7 +1162,10 @@ focus_tree = {
 					last_election = "1938.3.27"
 					election_frequency = 48
 				}
-				promote_character = URG_alfredo_baldomir_ferrari
+				promote_character = {
+					character = URG_alfredo_baldomir_ferrari
+					ideology = conservatism_n
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1210,7 +1213,10 @@ focus_tree = {
 					election_frequency = 48
 				}
 				set_country_flag = URG_blanco_victory_flag
-				promote_character = URG_luis_alberto_de_herrera
+				promote_character = {
+					character = URG_luis_alberto_de_herrera
+					ideology = conservatism
+				}
 				set_party_name = {
 					ideology = democratic
 					long_name = URG_partido_nacional_party_long
@@ -1247,7 +1253,10 @@ focus_tree = {
 		relative_position_id = URG_seize_the_opprotunity
 		completion_reward = {
 			effect_tooltip = {
-				promote_character = URG_consejo_nacional_de_administracion
+				promote_character = {
+					character = URG_consejo_nacional_de_administracion
+					ideology = centrism_democratic
+				}
 				add_stability = -0.1
 				add_popularity = {
 					ideology = fascism
@@ -1304,7 +1313,10 @@ focus_tree = {
 					election_frequency = 48
 				}
 				set_country_flag = URG_socialist_victory_flag
-				promote_character = URG_emilio_frugoni
+				promote_character = {
+					character = URG_emilio_frugoni
+					ideology = socialism
+				}
 				set_party_name = {
 					ideology = democratic
 					long_name = URG_partido_socialista_party_long
@@ -2171,7 +2183,10 @@ focus_tree = {
 			country_event = uruguay.2
 			custom_effect_tooltip = report_reward
 			effect_tooltip = {
-				promote_character = URG_consejo_nacional_de_administracion
+				promote_character = {
+					character = URG_consejo_nacional_de_administracion
+					ideology = centrism_democratic
+				}
 				add_stability = 0.05
 			}
 		}
@@ -2968,7 +2983,10 @@ focus_tree = {
 				ideology = democratic
 				popularity = 0.05
 			}
-			promote_character = URG_paulina_luisi
+			promote_character = {
+				character = URG_paulina_luisi
+				ideology = marxism
+			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	}

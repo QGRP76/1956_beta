@@ -1192,8 +1192,8 @@ VGE_reichskommissariat = {
 }
 
 AFG_PSH = {
-	color = rgb { 64 64 64 }
-    color_ui = rgb { 59 58 60 }
+	color = rgb { 96 96 96 }
+    color_ui = rgb { 96 96 96 }
 }
 
 AFG_JAM = {

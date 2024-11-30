@@ -45,8 +45,10 @@ characters = {
 			on_add = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -59,8 +61,10 @@ characters = {
 			on_remove = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -82,7 +86,7 @@ characters = {
 		country_leader = {
 			ideology = constitutional_monarchy
 			traits = {
-				PER_reza_shah_modernizer_new
+				PER_reza_shah_modernizer_new charismatic_monarch
 			}
 			expire = "1965.1.1"
 			id = -1
@@ -127,8 +131,10 @@ characters = {
 			on_add = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -141,8 +147,10 @@ characters = {
 			on_remove = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -210,8 +218,10 @@ characters = {
 			on_add = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -224,8 +234,10 @@ characters = {
 			on_remove = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -349,8 +361,10 @@ characters = {
 			on_add = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -363,8 +377,10 @@ characters = {
 			on_remove = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -428,8 +444,10 @@ characters = {
 			on_add = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -442,8 +460,10 @@ characters = {
 			on_remove = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -518,8 +538,10 @@ characters = {
 			on_add = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -532,8 +554,10 @@ characters = {
 			on_remove = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -595,7 +619,7 @@ characters = {
 			ideology = islamism
 			expire = "1956.1.1.12"
 			traits = {
-				AFG_pashtun_nationalist
+				AFG_pashtun_nationalist r56_trait_opposed_to_democracy
 			}
 			id = -1
 		}
@@ -637,8 +661,10 @@ characters = {
 			on_add = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -651,8 +677,10 @@ characters = {
 			on_remove = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -687,10 +715,37 @@ characters = {
 				original_tag = AFG
 			}
 			traits = {
-				army_concealment_2
+				army_infantry_2
 			}
 		}
-		corps_commander = {
+		advisor = {
+			cost = 100
+			available = {
+				OR = {
+					has_government = fascism
+					AND = {
+						has_country_leader = {
+							character = AFG_amanullah_khan
+							ruling_only = yes
+						}
+						has_country_flag = AFG_approached_haji_mirzali_khan
+						NOT = {
+							has_country_flag = AFG_dissatisfied_haji_mirzali_khan
+						}
+					}
+				}
+			}
+			slot = army_chief
+			ledger = army
+			idea_token = AFG_haji_mirzali_khan_chief
+			allowed = {
+				original_tag = AFG
+			}
+			traits = {
+				army_chief_morale_2
+			}
+		}
+		field_marshal = {
 			traits = {
 				war_hero
 				old_guard
@@ -750,8 +805,10 @@ characters = {
 			on_add = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -764,8 +821,10 @@ characters = {
 			on_remove = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -815,29 +874,67 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/AFG/r56_portrait_AFG_Abul_Ala_Maududi.dds"
+				small = "GFX_idea_AFG_advisor_abul_maududi"
 			}
 		}
 		country_leader = {
 			ideology = islamism
 			traits = {
-				AFG_islamic_revivalist
+				AFG_islamic_revivalist r56_trait_opposed_to_communism
 			}
 			expire = "1965.1.1"
 			id = -1
 		}
+		advisor = {
+			cost = 100
+			available = {
+				has_government = fascism
+			}
+			slot = high_command
+			ledger = army
+			idea_token = AFG_abul_ala_maududi_army
+			allowed = {
+				original_tag = AFG
+			}
+			traits = {
+				army_logistics_2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		advisor = {
+			cost = 100
+			available = {
+				has_government = fascism
+			}
+			slot = army_chief
+			ledger = army
+			idea_token = AFG_abul_ala_maududi_chief
+			allowed = {
+				original_tag = AFG
+			}
+			traits = {
+				army_chief_organizational_2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
 		corps_commander = {
 			traits = {
+				organizer
 				politically_connected
 			}
 			visible = {
 				has_completed_focus = AFG_waaidu
 				has_government = fascism
 			}
-			skill = 2
+			skill = 1
 			attack_skill = 1
-			defense_skill = 2
+			defense_skill = 1
 			planning_skill = 1
-			logistics_skill = 2
+			logistics_skill = 1
 			legacy_id = 38700
 		}
 	}
@@ -884,8 +981,10 @@ characters = {
 			on_add = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -898,8 +997,10 @@ characters = {
 			on_remove = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -973,8 +1074,10 @@ characters = {
 			on_add = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_communist_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_communist_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -987,8 +1090,10 @@ characters = {
 			on_remove = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_communist_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_communist_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -1038,8 +1143,10 @@ characters = {
 			on_add = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_communist_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_communist_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -1052,8 +1159,10 @@ characters = {
 			on_remove = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_communist_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_communist_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -1093,8 +1202,10 @@ characters = {
 			on_add = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -1107,8 +1218,10 @@ characters = {
 			on_remove = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -1148,8 +1261,10 @@ characters = {
 			on_add = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_communist_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_communist_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -1162,8 +1277,10 @@ characters = {
 			on_remove = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_communist_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_communist_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -1179,13 +1296,14 @@ characters = {
 		name = AFG_abdulrahman_mahmudi
 		portraits = {
 			civilian = {
+				large = "gfx/leaders/AFG/r56_portrait_AFG_Abdulrahman_Mahmudi.dds"
 				small = "GFX_idea_r56_idea_AFG_advisor_abdulrahman_mahmudi"
 			}
 		}
 		country_leader = {
-			ideology = anti_revisionism
+			ideology = democratic_socialism
 			traits = {
-				compassionate_commoner marxist_academic
+				compassionate_commoner gallant_doctor r56_trait_opposed_to_fascism
 			}
 			expire = "1955.1.1.12"
 			id = -1
@@ -1230,8 +1348,10 @@ characters = {
 			on_add = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_communist_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_communist_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -1244,8 +1364,10 @@ characters = {
 			on_remove = {
 				if = {
 					limit = {
-						has_power_balance = {
-							id = AFG_communist_power_balance
+						AFG = {
+							has_power_balance = {
+								id = AFG_communist_power_balance
+							}
 						}
 					}
 					add_power_balance_value = {
@@ -1385,7 +1507,7 @@ characters = {
 				original_tag = AFG
 			}
 			traits = {
-				army_infantry_2
+				army_regrouping_2
 			}
 			ai_will_do = {
 				factor = 10
@@ -1395,6 +1517,70 @@ characters = {
 			traits = {
 				infantry_officer
 				homeland_connoisseur
+				trickster
+			}
+			visible = {
+				has_completed_focus = AFG_waaidu
+				has_government = fascism
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id = 36789
+		}
+	}
+	AFG_zmarak_khan_zadran = {
+		name = AFG_zmarak_khan_zadran
+		portraits = {
+			army = {
+				large = "gfx/leaders/AFG/r56_portrait_AFG_Mazrak_Khan_Zadran.dds"
+				small = "GFX_idea_AFG_advisor_zmarak_zadran"
+			}
+		}
+		advisor = {
+			cost = 100
+			available = {
+				has_government = fascism
+			}
+			slot = high_command
+			ledger = army
+			idea_token = AFG_zmarak_khan_zadran
+			allowed = {
+				original_tag = AFG
+			}
+			traits = {
+				army_concealment_2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		advisor = {
+			cost = 100
+			available = {
+				has_government = fascism
+			}
+			slot = army_chief
+			ledger = army
+			idea_token = AFG_zmarak_khan_zadran
+			allowed = {
+				original_tag = AFG
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		corps_commander = {
+			traits = {
+				guerilla_fighter
+				irregulars_officer
+				ambusher
+				camouflage_expert
 			}
 			visible = {
 				has_completed_focus = AFG_waaidu
@@ -1404,6 +1590,50 @@ characters = {
 			attack_skill = 2
 			defense_skill = 4
 			planning_skill = 1
+			logistics_skill = 3
+			legacy_id = 36789
+		}
+	}
+	AFG_bacha_gul = {
+		name = AFG_bacha_gul
+		portraits = {
+			army = {
+				large = "gfx/leaders/kr_generic/Portrait_Arabia_Generic_new_5.dds"
+				small = "GFX_idea_AFG_advisor_bacha_gul"
+			}
+		}
+		advisor = {
+			cost = 100
+			available = {
+				has_government = fascism
+			}
+			slot = army_chief
+			ledger = army
+			idea_token = AFG_bacha_gul
+			allowed = {
+				original_tag = AFG
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		corps_commander = {
+			traits = {
+				guerilla_fighter
+				old_guard
+				caring_leader
+			}
+			visible = {
+				has_completed_focus = AFG_waaidu
+				has_government = fascism
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
 			logistics_skill = 1
 			legacy_id = 36789
 		}
@@ -1419,8 +1649,7 @@ characters = {
 		country_leader = {
 			ideology = stalinism
 			traits = {
-				polyglot
-				patriotic_socialist
+				polyglot patriotic_socialist r56_trait_opposed_to_fascism
 			}
 			expire = "1965.1.1"
 			id = -1
@@ -1462,8 +1691,7 @@ characters = {
 		country_leader = {
 			ideology = stalinism
 			traits = {
-				stalins_puppet
-				political_commissar
+				stalins_puppet political_commissar
 			}
 			expire = "1965.1.1"
 			id = -1
@@ -1479,6 +1707,7 @@ characters = {
 		country_leader = {
 			ideology = marxism
 			traits = {
+
 			}
 			expire = "1955.1.1.12"
 			id = -1
@@ -1820,6 +2049,12 @@ characters = {
 			allowed = {
 				original_tag = AFG
 			}
+			available = {
+				has_government = neutrality
+			}
+			visible = {
+				has_government = neutrality
+			}
 			traits = {
 				army_chief_defensive_2
 			}
@@ -2157,8 +2392,7 @@ characters = {
 		country_leader = {
 			ideology = islamic_socialism
 			traits = {
-				polyglot
-				nationalist_journalist_alt
+				polyglot nationalist_journalist_alt
 			}
 			expire = "1955.1.1.12"
 			id = -1

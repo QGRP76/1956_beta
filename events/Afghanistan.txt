@@ -4594,6 +4594,80 @@ country_event = { # RAJ RETURN EVENT ABOUT NAP - NO
 	}
 }
 
+state_event = { # Schools Opened
+	id = afghanistan.80
+	title = afghanistan.80.t
+	desc = afghanistan.80.d
+	picture = GFX_report_event_AFG_education_reform_ended
+
+	is_triggered_only = yes
+
+	immediate = {
+		save_event_target_as = AFG_illiteracy_state
+	}
+
+	option = {
+		name = afghanistan.80.a
+		effect_tooltip = {
+			add_political_power = 15
+			FROM = {
+                set_state_flag = AFG_school_opened
+            }
+			clr_country_flag = AFG_opening_schools_flag
+			if = {
+				limit = {
+					has_idea = AFG_illiteracy_5
+				}
+				swap_ideas = {
+					remove_idea = AFG_illiteracy_4
+					add_idea = AFG_illiteracy_5
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = AFG_illiteracy_4
+				}
+				swap_ideas = {
+					remove_idea = AFG_illiteracy_3
+					add_idea = AFG_illiteracy_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = AFG_illiteracy_3
+				}
+				swap_ideas = {
+					remove_idea = AFG_illiteracy_2
+					add_idea = AFG_illiteracy_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = AFG_illiteracy_2
+				}
+				swap_ideas = {
+					remove_idea = AFG_illiteracy_1
+					add_idea = AFG_illiteracy_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = AFG_illiteracy_1
+				}
+				swap_ideas = {
+					remove_idea = AFG_illiteracy
+					add_idea = AFG_illiteracy_1
+				}
+			}
+			set_country_flag = {
+				flag = AFG_opening_schools_ai_timer
+				value = 1
+				days = 60
+			}
+		}
+	}
+}
+
 # Left this here to be easily repurposed, not considered consistent with R56 so please dont restore without consulting the leads
 # country_event = { # THE LEMONADE SALESMAN
 # 	id = afghanistan.80

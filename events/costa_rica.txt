@@ -31,7 +31,10 @@ country_event = {
 			unlock_national_focus = COS_another_prn_term
 		}
 		custom_effect_tooltip = r56_newline
-		promote_character = COS_leon_cortes_castro
+		promote_character = {
+			character = COS_leon_cortes_castro
+			ideology = conservatism
+		}
 		set_country_flag = COS_castro_won
     }
 
@@ -50,7 +53,10 @@ country_event = {
 			unlock_national_focus = COS_liberal_victory
 		}
 		custom_effect_tooltip = r56_newline
-		promote_character = COS_octavio_beeche_arguello
+		promote_character = {
+			character = COS_octavio_beeche_arguello
+			ideology = liberalism
+		}
 		set_party_name = {
 			ideology = democratic
 			long_name = COS_partido_nacional_party_long

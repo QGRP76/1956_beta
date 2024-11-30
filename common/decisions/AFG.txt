@@ -1201,10 +1201,25 @@ AFG_rural_schools_category = {
 		}
 
         remove_effect = {
+			clr_country_flag = AFG_opening_schools_flag
 			FROM = {
                 set_state_flag = AFG_school_opened
+				if = {
+					limit = {
+						NOT = {
+							ROOT = {
+								has_idea = AFG_illiteracy_5
+							}
+						}
+					}
+					hidden_effect = {
+						state_event = {
+							id = afghanistan.80 hours = 12
+							trigger_for = owner
+						}
+					}
+				}
             }
-			clr_country_flag = AFG_opening_schools_flag
 			if = {
 				limit = {
 					has_idea = AFG_illiteracy_5
@@ -10037,14 +10052,9 @@ AFG_elections_category = {
 				}
 			}
 			custom_effect_tooltip = r56_newline
-			add_country_leader_role = {
+			promote_character = {
 				character = AFG_abdulrahman_mahmudi
-				promote_leader = yes
-				country_leader = {
-					ideology = democratic_socialism
-					expire = "1965.1.1.1"
-					traits = { compassionate_commoner marxist_academic }
-				}
+				ideology = democratic_socialism
 			}
 			hidden_effect = {
 				country_event = { id = afghanistan.108 days = 6 random_days = 6 hours = 12 }
@@ -10158,8 +10168,8 @@ ABC_army_effort = {
 		fire_only_once = yes
 		
 		custom_cost_trigger = {
-			command_power > 10
-			has_political_power > 10
+			command_power > 9
+			has_political_power > 9
 		}
 		
 		custom_cost_text = decision_cost_CP_10_pp_10
@@ -10222,8 +10232,8 @@ ABC_army_effort = {
 		fire_only_once = yes
 		
 		custom_cost_trigger = {
-			command_power > 10
-			has_political_power > 10
+			command_power > 9
+			has_political_power > 9
 		}
 		
 		custom_cost_text = decision_cost_CP_10_pp_10
@@ -10286,8 +10296,8 @@ ABC_army_effort = {
 		fire_only_once = yes
 		
 		custom_cost_trigger = {
-			command_power > 10
-			has_political_power > 10
+			command_power > 9
+			has_political_power > 9
 		}
 		
 		custom_cost_text = decision_cost_CP_10_pp_10
@@ -10327,6 +10337,487 @@ ABC_army_effort = {
 					id = AFG_power_balance
 					value = -0.05
 					tooltip_side = AFG_government_side
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+
+AFG_for_what_was_taken_from_us = {
+	AFG_proclaim_pashtunsitan_decision = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = AFG
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AFG_controls_all_afghan_core
+				controls_state = 1009
+				controls_state = 1010
+				controls_state = 1011
+				controls_state = 415
+				controls_state = 267
+				controls_state = 1008
+			}
+			controls_state = 444
+			controls_state = 445
+			controls_state = 442
+			controls_state = 1093
+			NOT = {
+				has_completed_focus = AFG_maududi_as_sheikhulislam
+				has_completed_focus = AFG_the_perso_afghan_union
+				has_completed_focus = AFG_soviet_expedition
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 100
+
+		visible = {
+			original_tag = AFG
+		}
+
+		remove_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 442
+						state = 445
+						state = 444
+						state = 1093
+						state = 410
+					}
+				}
+				add_compliance = 5
+				add_resistance = -10
+				if = {
+					limit = {
+						NOT = {
+							is_claimed_by = ROOT
+						}
+					}
+					add_claim_by = ROOT
+				}
+			}
+			add_war_support = 0.10
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.05
+			}
+			set_cosmetic_tag = AFG_PSH
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	AFG_reintegrate_peshawar = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = AFG
+		}
+
+		available = {
+			442 = {
+				is_controlled_by = ROOT
+				compliance > 15
+			}
+		}
+
+		fire_only_once = yes
+		
+		custom_cost_trigger = {
+			command_power > 14
+			has_political_power > 14
+		}
+		
+		custom_cost_text = decision_cost_CP_15_pp_15
+
+		visible = {
+			original_tag = AFG
+			442 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+
+		days_remove = 30
+
+		modifier = {
+			political_power_factor = -0.10
+			command_power_gain_mult = -0.05
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -15
+				add_political_power = -15
+			}
+		}
+
+		remove_effect = {
+			random_state = {
+				prioritize = { 442 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_stability = 0.05
+			add_state_core = 442
+			add_victory_points = {
+				province = 12717
+				value = 5
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	AFG_restore_pashtun_rule_in_quetta = {
+
+		icon = oppression
+
+		allowed = {
+			original_tag = AFG
+		}
+
+		available = {
+			445 = {
+				is_controlled_by = ROOT
+				compliance > 30
+			}
+		}
+
+		fire_only_once = yes
+		
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 49
+		}
+		
+		custom_cost_text = decision_cost_CP_25_pp_50
+
+		visible = {
+			original_tag = AFG
+			445 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+
+		days_remove = 60
+
+		modifier = {
+			political_power_factor = -0.10
+			command_power_gain_mult = -0.05
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+				add_political_power = -50
+			}
+		}
+
+		remove_effect = {
+			add_stability = 0.05
+			add_state_core = 445
+			add_victory_points = {
+				province = 5105
+				value = 2
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	AFG_pashtunize_karachi = {
+
+		icon = infiltrate_state
+
+		allowed = {
+			original_tag = AFG
+		}
+
+		available = {
+			1093 = {
+				is_controlled_by = ROOT
+				compliance > 45
+			}
+		}
+
+		fire_only_once = yes
+		
+		custom_cost_trigger = {
+			command_power > 49
+			has_political_power > 49
+		}
+		
+		custom_cost_text = decision_cost_CP_50_pp_50
+
+		visible = {
+			original_tag = AFG
+			1093 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+
+		days_remove = 120
+
+		modifier = {
+			political_power_factor = -0.15
+			command_power_gain_mult = -0.05
+			consumer_goods_factor = 0.10
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+				add_political_power = -75
+			}
+		}
+
+		remove_effect = {
+			random_state = {
+				prioritize = { 1093 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = {
+				prioritize = { 1093 }
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_stability = -0.05
+			add_state_core = 1093
+			add_victory_points = {
+				province = 3456
+				value = 5
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	AFG_cooperate_with_the_balochis = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			original_tag = AFG
+		}
+
+		available = {
+			444 = {
+				is_controlled_by = ROOT
+				compliance > 40
+			}
+		}
+
+		fire_only_once = yes
+		
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 49
+		}
+		
+		custom_cost_text = decision_cost_CP_25_pp_50
+
+		visible = {
+			original_tag = AFG
+			444 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+
+		days_remove = 60
+
+		modifier = {
+			political_power_factor = -0.15
+			command_power_gain_mult = -0.05
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+				add_political_power = -49
+			}
+		}
+
+		remove_effect = {
+			add_stability = 0.05
+			add_state_core = 444
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	AFG_integrate_the_railway_network = {
+
+		icon = generic_train
+
+		allowed = {
+			original_tag = AFG
+		}
+
+		available = {
+			NOT = {
+				any_state = {
+					OR = {
+						state = 442
+						state = 445
+						state = 444
+						state = 1093
+					}
+					NOT = {
+						is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+		
+		custom_cost_trigger = {
+			command_power > 49
+			has_political_power > 14
+		}
+		
+		custom_cost_text = decision_cost_CP_50_pp_15
+
+		visible = {
+			original_tag = AFG
+		}
+
+		days_remove = 90
+
+		modifier = {
+			production_speed_buildings_factor = -0.05
+			command_power_gain_mult = -0.10
+			consumer_goods_factor = 0.15
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -50
+				add_political_power = -15
+			}
+		}
+
+		remove_effect = {
+			add_stability = 0.05
+			every_state = {
+				limit = {
+					OR = {
+						state = 442
+						state = 445
+						state = 444
+						state = 1093
+					}
+				}
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 1093
+				}
+				build_railway = { #Karachi
+					level = 2
+					path = {
+						3456 10108 7049 10735
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 445
+					has_full_control_of_state = 442
+				}
+				build_railway = { #Quetta-Peshawar
+					level = 1
+					path = {
+						5105 8044 7975 1978 4998 12717
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 267
+					has_full_control_of_state = 442
+				}
+				build_railway = { #Kabul-Peshawar
+					level = 2
+					path = {
+						10737 12831 12717
+					}
 				}
 			}
 		}
