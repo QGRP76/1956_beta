@@ -2588,7 +2588,11 @@ ideas = {
 			}
 			
 			ai_will_do = {
-				factor = 1
+				factor = 100
+				modifier = {
+					date < 1940.1.1
+					factor = 0
+				}
 			}
 		}
 		AFG_bank_millie_afghan = {
@@ -2619,7 +2623,11 @@ ideas = {
 			}
 			
 			ai_will_do = {
-				factor = 1
+				factor = 100
+				modifier = {
+					date > 1940.1.1
+					factor = 0
+				}
 			}
 		}
 	}

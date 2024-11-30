@@ -332,7 +332,6 @@ characters = {
 			available = {
 				has_completed_focus = AFG_power_to_the_king
 				NOT = {
-					has_government = fascism
 					has_government = communism
 				}
 			}

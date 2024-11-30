@@ -313,6 +313,9 @@ characters={
 		name="Charles de Gaulle"
 		portraits={
 			civilian={
+				large=gfx/leaders/FRA/r56_portrait_FRA_Charles_De_Gaulle_Civilian.dds
+			}
+			army={
 				large=gfx/leaders/FRA/r56_portrait_FRA_Charles_De_Gaulle.dds
 				small=GFX_portrait_FRA_charles_de_gaulle_small
 			}

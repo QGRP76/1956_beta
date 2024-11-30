@@ -818,26 +818,22 @@ leader_traits = {
 		fascism_drift = 0.03
 		stability_factor = 0.10
 	}
-	AFG_the_kingmaker = {
-		random = no
-		sprite = 13 
-
-		political_power_factor = 0.05
-		fascism_drift = 0.03
-		stability_factor = 0.10
-	}
 	AFG_politically_disengaged = {
 		random = no
 
 		political_power_factor = -0.05
 		enemy_justify_war_goal_time = 0.25
 		stability_factor = 0.10
+		ai_focus_peaceful_factor = 0.15
+		opinion_gain_monthly_same_ideology = 10
 	}
 	AFG_politically_disengaged_2 = {
 		random = no
 
 		stability_factor = 0.15
 		enemy_justify_war_goal_time = 0.25
+		ai_focus_peaceful_factor = 0.15
+		opinion_gain_monthly_same_ideology = 20
 	}
 	AFG_exiled = {
 		random = no

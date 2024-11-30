@@ -894,7 +894,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_MAN_sufficient_army
+			picture = MAN_sufficient_army
 
 			modifier = {
 				conscription_factor = 0.10

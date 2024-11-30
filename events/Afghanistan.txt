@@ -3766,8 +3766,8 @@ country_event = {
 			}
 		}
 		name = afghanistan.67.b
+		complete_national_focus = AFG_unification_or_death
 		effect_tooltip = {
-			complete_national_focus = AFG_unification_or_death
 			add_war_support = 0.05
 			declare_war_on = {
 				type = take_state
@@ -3835,8 +3835,8 @@ country_event = { # RAJ SAYS NO TO CONFERENCE
 			}
 		}
 		name = afghanistan.68.b
+		complete_national_focus = AFG_unification_or_death
 		effect_tooltip = {
-			complete_national_focus = AFG_unification_or_death
 			add_war_support = 0.05
 			declare_war_on = {
 				type = take_state
@@ -4609,60 +4609,59 @@ state_event = { # Schools Opened
 	option = {
 		name = afghanistan.80.a
 		effect_tooltip = {
-			add_political_power = 15
-			FROM = {
-                set_state_flag = AFG_school_opened
-            }
-			clr_country_flag = AFG_opening_schools_flag
-			if = {
-				limit = {
-					has_idea = AFG_illiteracy_5
+			ROOT = {
+				add_political_power = 15
+				if = {
+					limit = {
+						has_idea = AFG_illiteracy_5
+					}
+					swap_ideas = {
+						remove_idea = AFG_illiteracy_4
+						add_idea = AFG_illiteracy_5
+					}
 				}
-				swap_ideas = {
-					remove_idea = AFG_illiteracy_4
-					add_idea = AFG_illiteracy_5
+				else_if = {
+					limit = {
+						has_idea = AFG_illiteracy_4
+					}
+					swap_ideas = {
+						remove_idea = AFG_illiteracy_3
+						add_idea = AFG_illiteracy_4
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = AFG_illiteracy_4
+				else_if = {
+					limit = {
+						has_idea = AFG_illiteracy_3
+					}
+					swap_ideas = {
+						remove_idea = AFG_illiteracy_2
+						add_idea = AFG_illiteracy_3
+					}
 				}
-				swap_ideas = {
-					remove_idea = AFG_illiteracy_3
-					add_idea = AFG_illiteracy_4
+				else_if = {
+					limit = {
+						has_idea = AFG_illiteracy_2
+					}
+					swap_ideas = {
+						remove_idea = AFG_illiteracy_1
+						add_idea = AFG_illiteracy_2
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = AFG_illiteracy_3
+				else_if = {
+					limit = {
+						has_idea = AFG_illiteracy_1
+					}
+					swap_ideas = {
+						remove_idea = AFG_illiteracy
+						add_idea = AFG_illiteracy_1
+					}
 				}
-				swap_ideas = {
-					remove_idea = AFG_illiteracy_2
-					add_idea = AFG_illiteracy_3
+				clr_country_flag = AFG_opening_schools_flag
+				set_country_flag = {
+					flag = AFG_opening_schools_ai_timer
+					value = 1
+					days = 60
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = AFG_illiteracy_2
-				}
-				swap_ideas = {
-					remove_idea = AFG_illiteracy_1
-					add_idea = AFG_illiteracy_2
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = AFG_illiteracy_1
-				}
-				swap_ideas = {
-					remove_idea = AFG_illiteracy
-					add_idea = AFG_illiteracy_1
-				}
-			}
-			set_country_flag = {
-				flag = AFG_opening_schools_ai_timer
-				value = 1
-				days = 60
 			}
 		}
 	}
@@ -6181,11 +6180,7 @@ country_event = { # Question of State
 			AFG_loya_jirga_good_var_var = 1
 		}
 		ai_chance = {
-			base = 20
-			modifier = {
-				has_country_flag = AFG_win_loya_jirga
-				factor = 100
-			}
+			base = 100
 			modifier = {
 				NOT = {
 					has_country_flag = AFG_win_loya_jirga
@@ -6225,16 +6220,10 @@ country_event = { # Question of State
 			AFG_loya_jirga_bad_var = 1
 		}
 		ai_chance = {
-			base = 10
+			base = 100
 			modifier = {
 				has_country_flag = AFG_win_loya_jirga
 				factor = 0
-			}
-			modifier = {
-				NOT = {
-					has_country_flag = AFG_win_loya_jirga
-				}
-				factor = 100
 			}
 		}
 	}
@@ -6290,11 +6279,7 @@ country_event = { # Status of Women
 			AFG_loya_jirga_good_var_var = 1
 		}
 		ai_chance = {
-			base = 20
-			modifier = {
-				has_country_flag = AFG_win_loya_jirga
-				factor = 100
-			}
+			base = 100
 			modifier = {
 				NOT = {
 					has_country_flag = AFG_win_loya_jirga
@@ -6339,16 +6324,10 @@ country_event = { # Status of Women
 			AFG_loya_jirga_bad_var = 1
 		}
 		ai_chance = {
-			base = 10
+			base = 100
 			modifier = {
 				has_country_flag = AFG_win_loya_jirga
 				factor = 0
-			}
-			modifier = {
-				NOT = {
-					has_country_flag = AFG_win_loya_jirga
-				}
-				factor = 100
 			}
 		}
 	}
@@ -6395,11 +6374,7 @@ country_event = { # Question of Islam
 			AFG_loya_jirga_good_var_var = 1
 		}
 		ai_chance = {
-			base = 20
-			modifier = {
-				has_country_flag = AFG_win_loya_jirga
-				factor = 100
-			}
+			base = 100
 			modifier = {
 				NOT = {
 					has_country_flag = AFG_win_loya_jirga
@@ -6423,16 +6398,10 @@ country_event = { # Question of Islam
 			AFG_loya_jirga_bad_var = 1
 		}
 		ai_chance = {
-			base = 10
+			base = 100
 			modifier = {
 				has_country_flag = AFG_win_loya_jirga
 				factor = 0
-			}
-			modifier = {
-				NOT = {
-					has_country_flag = AFG_win_loya_jirga
-				}
-				factor = 100
 			}
 		}
 	}
@@ -6470,11 +6439,7 @@ country_event = { # Social Reforms
 			AFG_loya_jirga_good_var_var = 1
 		}
 		ai_chance = {
-			base = 20
-			modifier = {
-				has_country_flag = AFG_win_loya_jirga
-				factor = 100
-			}
+			base = 100
 			modifier = {
 				NOT = {
 					has_country_flag = AFG_win_loya_jirga
@@ -6507,16 +6472,10 @@ country_event = { # Social Reforms
 			AFG_loya_jirga_bad_var = 1
 		}
 		ai_chance = {
-			base = 10
+			base = 100
 			modifier = {
 				has_country_flag = AFG_win_loya_jirga
 				factor = 0
-			}
-			modifier = {
-				NOT = {
-					has_country_flag = AFG_win_loya_jirga
-				}
-				factor = 100
 			}
 		}
 	}
@@ -6558,11 +6517,7 @@ country_event = { # The Direction Of The Loya Jirga
 			modifier = r56_AFG_bop_left
 		}
 		ai_chance = {
-			base = 20
-			modifier = {
-				has_country_flag = AFG_win_loya_jirga
-				factor = 100
-			}
+			base = 100
 			modifier = {
 				NOT = {
 					has_country_flag = AFG_win_loya_jirga
@@ -6579,16 +6534,10 @@ country_event = { # The Direction Of The Loya Jirga
 			modifier = r56_AFG_bop_right
 		}
 		ai_chance = {
-			base = 10
+			base = 100
 			modifier = {
 				has_country_flag = AFG_win_loya_jirga
 				factor = 0
-			}
-			modifier = {
-				NOT = {
-					has_country_flag = AFG_win_loya_jirga
-				}
-				factor = 100
 			}
 		}
 	}
@@ -7489,7 +7438,7 @@ country_event = {
 
 country_event = {
 	id = afghanistan.109
-	picture = GFX_report_event_AFG_national_front
+	picture = GFX_report_event_AFG_raj_border
 	title = afghanistan.109.t
 	desc = afghanistan.109.d
 

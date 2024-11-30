@@ -873,8 +873,12 @@
  afghanistan.107.d:0 "As [AFG.GetNonIdeologyName] descends into flames, and the whole nation is mobilized to fight and die for either side, Nisar Muhammad Yousafzai, an Afghan who has fought in the Second Anglo-Afghan War, and has dedicated his life to communism and the development of Tajikistan, has decided to join our cause and help us in our fight against the loyalists!"
 
  afghanistan.108.t:0 "Formation of the National Front!"
- afghanistan.108.a:0 "This is concerning..."
+ afghanistan.108.a:0 "A great threat, or a great opportunity, who is to say?"
  afghanistan.108.d:0 "After the legalization of the unions, the Students Union of Kābul University has went public, siding with the [AFG.GetCommunistParty]. This has indeed strengthened the [AFG.GetCommunistParty], which has led Abdulrahman Mahmudi, the leader of the 'Khalqists', to enter into a coalition with the [AFG.GetDemocraticParty], which has been named the National Front. They seek to democratize the nation, and give rights to the minorities within [AFG.GetNonIdeologyName], such as the Tajiks and Uzbeks, in order to truly unite [AFG.GetNonIdeologyName]."
+
+ afghanistan.109.t:0 "Crisis over the Durand!"
+ afghanistan.109.a:0 "This is concerning..."
+ afghanistan.109.d:0 "The past year has seen rising tensions between the Muslim Urdu-speaking population of North-West India and the Hindu Hindi-speaking regions of India. These tensions have reportedly come to a boil with the proclamation of independence and the foundation of a new state to the south of [AFG.GetNonIdeologyName] called Pakistan. The [RAJ.GetAdjective] government has addresed the declaration of independence, declaring it illegal, and an outright war has started on the Indian subcontinent. Many people have been displaced by the war, with many Hindus crossing the border into India, and the Muslims living on the Hindu side doing the exact same.\n\nThe particular reason that this conflict is crucial to the future of [AFG.GetNonIdeologyName] is due to the majority Pashtun-populated areas that are [442.GetName] and, to some extent, [445.GetName], which have come to make a large part of the new state of Pakistan. This conflict could prove to be [AFG.GetNonIdeologyName]'s' opportunity to finally unite the Pashtuns into one state, as well as achieve much-needed access to the sea, which would in-turn make international trade much easier and greatly benefit the [AFG.GetAdjective] economy... The question is, where should [AFG.GetNonIdeologyName] stand in this chaotic time for the region?"
 
  afghanistan.200.t:0 "Aftermath of the [GetYear] Civil War"
  afghanistan.200.a:0 "This is concerning..."
@@ -1490,6 +1494,7 @@
  AFG_the_peshawar_conference:0 "The [442.GetName] Referendum"
  accepted_NFP_self_determination:0 "Self-Determination For NWFP has been accepted."
  accepted_NFP_self_determination_cflag:0 "Has accepted Self-Determination For NWFP."
+ peshawar_conference_over:0 "The §Y[442.GetName] Referendum§! has been §Yfinished§!."
  AFG_placate_NFP:0 "Placate the Khudai Khidmatgars"
  AFG_anti_imperialist_speech:0 "Hold Anti-Imperialist Speech"
  AFG_religious_freedoms:0 "Assure Religious Freedoms"

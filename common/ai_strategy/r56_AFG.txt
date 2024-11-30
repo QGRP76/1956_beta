@@ -300,6 +300,35 @@ AFG_equipment_strategy = {
 		value = -5
 	}
 
+	ai_strategy = { # please stop building planes for the love of god
+		type = air_factory_balance
+		value = -50
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = small_plane_airframe_2
+		value = -5
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = small_plane_airframe_1
+		value = -999
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = small_plane_airframe_0
+		value = -999
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = small_plane_cas_airframe
+		value = -999
+	}
+
 	ai_strategy = {
 		type = equipment_variant_production_factor 
 		id = light_tank_destroyer_chassis
@@ -337,6 +366,7 @@ AFG_train_and_support_equipment_minimum = {
 		value = 1
 	}
 }
+
 AFG_aim_for_120k_army = {
 
 	allowed = {
@@ -693,5 +723,91 @@ AFG_dont_declare_while_at_war_TUR = {
 		type = declare_war
 		id = TUR
 		value = -300
+	}
+}
+
+AFG_be_neutral = {
+
+	allowed = {
+		original_tag = AFG
+	}
+
+	enable = {
+		OR = {
+			is_historical_focus_on = yes
+			has_government = neutrality
+			has_idea = neutrality_idea
+		}
+		has_war = no
+		is_in_faction = no
+		is_subject = no
+		NOT = {
+			has_country_leader = {
+				character = AFG_mohammed_daoud_khan
+				ruling_only = yes
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = antagonize
+		id = SOV
+		value = -25
+	}
+
+	ai_strategy = { # we just wanna be friends
+		type = alliance
+		id = SOV
+		value = -10
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = SOV
+		value = 10
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = TUR
+		value = -15
+	}
+
+	ai_strategy = { # friends with benefits?
+		type = alliance
+		id = TUR
+		value = 10
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = TUR
+		value = 15
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = PER
+		value = -10
+	}
+
+	ai_strategy = { # we like you
+		type = befriend
+		id = PER
+		value = 5
+	}
+
+	ai_strategy = { # we dont want any trouble
+		type = antagonize
+		id = ENG
+		value = -10
+	}
+
+	ai_strategy = { # we dont want any trouble
+		type = antagonize
+		id = RAJ
+		value = -10
 	}
 }

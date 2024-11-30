@@ -9923,7 +9923,16 @@ AFG_elections_category = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 5
+			modifier = {
+				democratic > 0.25
+				factor = 0
+				has_country_flag = AFG_AI_RANDOM_MAHMUD
+			}
+			modifier = {
+				has_country_flag = AFG_AI_RANDOM_GHULAM
+				factor = 100
+			}
 		}
 	}
 	AFG_combat_state_corruption = {
@@ -9992,7 +10001,16 @@ AFG_elections_category = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 5
+			modifier = {
+				democratic > 0.25
+				factor = 0
+				has_country_flag = AFG_AI_RANDOM_MAHMUD
+			}
+			modifier = {
+				has_country_flag = AFG_AI_RANDOM_GHULAM
+				factor = 100
+			}
 		}
 	}
 	AFG_legalize_unions = {
@@ -10063,7 +10081,16 @@ AFG_elections_category = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 5
+			modifier = {
+				democratic > 0.25
+				factor = 0
+				has_country_flag = AFG_AI_RANDOM_MAHMUD
+			}
+			modifier = {
+				has_country_flag = AFG_AI_RANDOM_GHULAM
+				factor = 100
+			}
 		}
 	}
 	AFG_organize_conservative_party_rally = {
@@ -10105,7 +10132,11 @@ AFG_elections_category = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 5
+			modifier = {
+				has_country_flag = AFG_AI_RANDOM_MAHMUD
+				factor = 100
+			}
 		}
 	}
 	AFG_organize_democratic_party_rally = {
@@ -10147,7 +10178,11 @@ AFG_elections_category = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 5
+			modifier = {
+				has_country_flag = AFG_AI_RANDOM_GHULAM
+				factor = 100
+			}
 		}
 	}
 }
@@ -10214,7 +10249,14 @@ ABC_army_effort = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 50
+			modifier = {
+				is_power_balance_in_range = {
+					id = AFG_power_balance
+					range = AFG_high_government_influence
+				}
+				factor = 0
+			}
 		}
 	}
 	AFG_modernize_the_artillery_school = {
@@ -10278,7 +10320,14 @@ ABC_army_effort = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 50
+			modifier = {
+				is_power_balance_in_range = {
+					id = AFG_power_balance
+					range = AFG_high_government_influence
+				}
+				factor = 0
+			}
 		}
 	}
 	AFG_establish_the_armor_academy = {
@@ -10342,7 +10391,14 @@ ABC_army_effort = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 50
+			modifier = {
+				is_power_balance_in_range = {
+					id = AFG_power_balance
+					range = AFG_high_government_influence
+				}
+				factor = 0
+			}
 		}
 	}
 }
@@ -10416,7 +10472,7 @@ AFG_for_what_was_taken_from_us = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 50
 		}
 	}
 	AFG_reintegrate_peshawar = {
@@ -10493,7 +10549,7 @@ AFG_for_what_was_taken_from_us = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 50
 		}
 	}
 	AFG_restore_pashtun_rule_in_quetta = {
@@ -10554,7 +10610,7 @@ AFG_for_what_was_taken_from_us = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 50
 		}
 	}
 	AFG_pashtunize_karachi = {
@@ -10647,7 +10703,7 @@ AFG_for_what_was_taken_from_us = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 50
 		}
 	}
 	AFG_cooperate_with_the_balochis = {
@@ -10704,7 +10760,7 @@ AFG_for_what_was_taken_from_us = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 50
 		}
 	}
 	AFG_integrate_the_railway_network = {
@@ -10823,7 +10879,7 @@ AFG_for_what_was_taken_from_us = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 50
 		}
 	}
 }

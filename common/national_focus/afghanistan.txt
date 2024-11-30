@@ -13354,7 +13354,7 @@ focus_tree = {
 	focus = {
 		id = AFG_crisis_over_the_durand
 		icon = GFX_goal_generic_phone_crisis
-		x = 89
+		x = 87
 		y = 0
 
 		cost = 5
@@ -13376,10 +13376,7 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			OR = {
-				is_debug = yes
-				has_country_flag = AFG_durand_crisis
-			}
+			has_country_flag = AFG_durand_crisis
 		}
 
 		available = {
@@ -13407,7 +13404,7 @@ focus_tree = {
 	focus = {
 		id = AFG_two_sides_one_people
 		icon = GFX_focus_generic_provoke_border_clashes
-		x = 2
+		x = 0
 		y = 1
 
 		cost = 8
@@ -13456,6 +13453,10 @@ focus_tree = {
 		y = 1
 
 		cost = 8
+
+		allow_branch = { # remove for next patch
+			always = no
+		}
 
 		prerequisite = {
 			focus = AFG_crisis_over_the_durand
@@ -14027,7 +14028,16 @@ focus_tree = {
 		}
 
 		available = {
-			always = no
+			has_global_flag = peshawar_conference_over
+			442 = {
+				owner = {
+					controls_state = 442
+					NOT = {
+						tag = AFG
+					}
+					has_war = yes
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -14036,14 +14046,17 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.10
-			effect_tooltip = {
-				set_state_owner = 442
-			}
+			transfer_state = 442
 			PAK = {
 				add_manpower = 10000
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
 					amount = 1000
+				}
+				diplomatic_relation = {
+					country = ROOT
+					relation = non_aggression_pact
+					active = yes
 				}
 			}
 		}

@@ -40,7 +40,7 @@ set_technology = {
 
 if = {
 	limit = { has_dlc = "By Blood Alone" }
-	set_air_oob = "AFG_1936_air_bba"
+	# set_air_oob = "AFG_1936_air_bba" enable if AI doesnt start building planes again
 	set_technology = {
 		iw_small_airframe = 1
 		engines_1 = 1
@@ -304,23 +304,23 @@ if = {
 	}								
 }
 
-if = {
-	limit = {
-		has_dlc = "By Blood Alone"
-	}
-	create_equipment_variant = {
-		name = "Polikarpov R-1"
-		type = small_plane_airframe_0
-		modules = {
-			fixed_main_weapon_slot = light_mg_2x
-			fixed_auxiliary_weapon_slot_1 = bomb_locks
-			engine_type_slot = engine_1_1x
-			special_type_slot_1 = empty
-		}
-		obsolete = yes
-		icon = "GFX_SOV_CAS_equipment_0_medium"
-	}
-}
+# if = {
+# 	limit = {
+# 		has_dlc = "By Blood Alone"
+# 	}
+# 	create_equipment_variant = {
+# 		name = "Polikarpov R-1"
+# 		type = small_plane_airframe_0
+# 		modules = {
+# 			fixed_main_weapon_slot = light_mg_2x
+# 			fixed_auxiliary_weapon_slot_1 = bomb_locks
+# 			engine_type_slot = engine_1_1x
+# 			special_type_slot_1 = empty
+# 		}
+# 		obsolete = yes
+# 		icon = "GFX_SOV_CAS_equipment_0_medium"
+# 	}
+# }
 
 if = {
 	limit = {
