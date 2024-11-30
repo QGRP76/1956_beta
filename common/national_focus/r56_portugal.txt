@@ -2682,6 +2682,15 @@ focus_tree = {
 				controls_state = 729
 			} 
 		}
+		bypass = {
+			NOT = {
+				controls_state = 540
+				controls_state = 544
+				controls_state = 296
+				controls_state = 721
+				controls_state = 729
+			} 
+		}
 		completion_reward = { country_event = portugal.47 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -3068,7 +3077,10 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = POR_crush_reactionary_impedence
-		available = { communism > 0.75 }
+		available = { 
+			neutrality < 0.2 
+			democratic < 0.2
+		}
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = POR_portugals_path_to_socialism

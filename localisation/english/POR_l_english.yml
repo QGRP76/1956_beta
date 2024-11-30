@@ -33,6 +33,8 @@
  POR_restore_catalan_regional_autonomy:0 "Restore Catalan Regional Autonomy"
  POR_restore_catalan_regional_autonomy_desc:0 ""
 
+ POR_reorganize_the_spanish_administration:0 "Reorganize the Spanish Administration"
+
  POR_organize_elections_in_the_hispanic_regions:0 "Organize Elections in the Hispanic Regions"
  POR_organize_elections_in_the_hispanic_regions_desc:0 ""
  organize_elections_in_the_hispanic_regions_tt:0 "Controls, and has at least 30% compliance in all mainland §YSpanish§! states"

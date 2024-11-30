@@ -261,12 +261,133 @@ POR_towards_a_greater_portugal = {
 		}
 	}
 
+	POR_reorganize_the_spanish_administration = {
+		icon = generic_form_nation
+		cost = 100
+		fire_only_once = yes
+		ai_will_do = { base = 20 }
+		visible = { 
+			has_cosmetic_tag = ESU_POR_unified
+			NOT = { 
+				has_completed_focus = POR_restore_civil_liberties
+				41 = { is_core_of = ROOT } 
+			} 
+		}
+		available = { 
+			has_completed_focus = POR_the_iberiian_social_revolution
+			custom_trigger_tooltip = {
+				tooltip = organize_elections_in_the_hispanic_regions_tt
+				790 = {
+					is_controlled_by = ROOT
+					compliance > 35
+				}
+				174 = {
+					is_controlled_by = ROOT
+					compliance > 35
+				}
+				788 = {
+					is_controlled_by = ROOT
+					compliance > 35
+				}
+				170 = {
+					is_controlled_by = ROOT
+					compliance > 35
+				}
+				169 = {
+					is_controlled_by = ROOT
+					compliance > 35
+				}
+				173 = {
+					is_controlled_by = ROOT
+					compliance > 35
+				}
+				789 = {
+					is_controlled_by = ROOT
+					compliance > 35
+				}
+				175 = {
+					is_controlled_by = ROOT
+					compliance > 35
+				}
+				41 = {
+					is_controlled_by = ROOT
+					compliance > 35
+				}
+				791 = {
+					is_controlled_by = ROOT
+					compliance > 35
+				}
+				176 = {
+					is_controlled_by = ROOT
+					compliance > 35
+				}
+				793 = {
+					is_controlled_by = ROOT
+					compliance > 35
+				}
+				168 = {
+					is_controlled_by = ROOT
+					compliance > 35
+				}
+				166 = {
+					is_controlled_by = ROOT
+					compliance > 35
+				}
+				794 = {
+					is_controlled_by = ROOT
+					compliance > 35
+				}
+				697 = {
+					is_controlled_by = ROOT
+					compliance > 35
+				}
+			}
+		}
+		days_remove = 15
+		remove_effect = {
+			every_state = {
+				limit = { 
+					OR = {
+						state = 790
+						state = 174
+						state = 788
+						state = 170
+						state = 169
+						state = 173
+						state = 789
+						state = 175
+						state = 41
+						state = 791
+						state = 176
+						state = 793
+						state = 168
+						state = 166
+						state = 794
+						state = 697
+						state = 178
+					}
+				}
+				add_core_of = ROOT
+				hidden_effect = {
+					remove_dynamic_modifier = { modifier = autonomous_state }
+					remove_dynamic_modifier = { modifier = semi_autonomous_state }
+				}
+			}
+		}
+	}
+
 	POR_organize_elections_in_the_hispanic_regions = {
 		icon = generic_form_nation
 		cost = 150
 		fire_only_once = yes
 		ai_will_do = { base = 20 }
-		visible = { has_cosmetic_tag = ESU_POR_unified }
+		visible = { 
+			has_cosmetic_tag = ESU_POR_unified
+			NOT = { 
+				has_completed_focus = POR_crush_reactionary_impedence 
+				41 = { is_core_of = ROOT }
+			}  
+		}
 		available = { 
 			has_completed_focus = POR_hold_fair_elections
 			custom_trigger_tooltip = {

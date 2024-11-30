@@ -2378,6 +2378,7 @@ country_event = {
 		}
 		every_controlled_state = {
 			limit = {
+				NOT = { is_core_of = ROOT }
 				OR = {
 					is_on_continent = africa
 					is_on_continent = asia
