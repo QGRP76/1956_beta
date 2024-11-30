@@ -1128,12 +1128,6 @@ diplomatic_relation = {
 }
 
 diplomatic_relation = {
-	country = TUR
-	relation = non_aggression_pact
-	active = yes
-}
-
-diplomatic_relation = {
 	country = LIT
 	relation = non_aggression_pact
 	active = yes
