@@ -378,8 +378,8 @@
  POR_join_the_global_fight_against_fascism:0 "Join the Global Fight Against Fascism"
  POR_join_the_global_fight_against_fascism_desc:0 "We cannot sit idle as the scourge of fascism takes root on our continent. Until the time is right, bourgeois democracy is a necessary evil, and a potential ally in our struggle against Europe's fascist menace!"
 
- POR_peace_with_the_western_democracies:0 "Peace With the Western Democracies"
- POR_peace_with_the_western_democracies_desc:0 ""
+ POR_peace_home_and_abroad:0 "Peace Home and Abroad"
+ POR_peace_home_and_abroad_desc:0 ""
 
  POR_the_red_army_of_the_west:0 "The Red Army of the West"
  POR_the_red_army_of_the_west_desc:0 ""
@@ -389,6 +389,8 @@
 
  POR_the_iberian_social_revolution:0 "The Iberian Social Revolution"
  POR_the_iberian_social_revolution_desc:0 ""
+ POR_promote_revolutionary_artwork:0 "Promote Revolutionary Artwork"
+ POR_suppress_symbols_of_portuguese_aristocracy:0 "Suppress Symbols of Portuguese Aristocracy"
 
  POR_crush_reactionary_impedence:0 "Crush Reactionary Impedence"
  POR_crush_reactionary_impedence_desc:0 "Portuguese democrats have learned nothing from the failings and sluggishness of democracy in the First Republic. Their plans for Portugal are a sham that will shatter the hopes of prosperity that a new revolution must bring. They, and Portugal's remaining Salazarists, must be cut from the nation at all costs!"

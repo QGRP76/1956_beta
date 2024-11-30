@@ -1310,10 +1310,10 @@ focus_tree = {
 					instant_build = yes
 					province = { id = 11885 }
 				}
-				#custom_effect_tooltip = {
-					#localization_key = building_state_modifier|dam
-					#INDENT = "    "
-				#}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2410,7 +2410,7 @@ focus_tree = {
 		completion_reward = { 
 			complete_national_focus = POR_never_another_la_lys
 			custom_effect_tooltip = CHL_skip_one_line_tt
-			unlock_decision_tooltip = POR_come_to_britains_aid 
+			unlock_decision_tooltip = POR_come_to_britains_aid
 			custom_effect_tooltip = POR_address_european_affairs_tt
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ALLIANCE }
@@ -3025,7 +3025,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_consolidate_the_revolution
 		available = {
-			always = no
 			NOT = { has_completed_focus = POR_restore_civil_liberties }
 		}
 		completion_reward = {
@@ -3152,15 +3151,15 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POR_portugals_path_to_marxism_leninism
-		available = {
-		}
 		completion_reward = {
+			add_political_power = 50
+			unlock_decision_tooltip = POR_promote_revolutionary_artwork
+			unlock_decision_tooltip = POR_suppress_symbols_of_portuguese_aristocracy
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			swap_ideas = {
 				remove_idea = POR_portugals_path_to_socialism2
 				add_idea = POR_the_iberian_social_revolution
 			}
-			custom_effect_tooltip = CHL_skip_one_line_tt
-
 		}
 		ai_will_do = { base = 5 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3197,6 +3196,7 @@ focus_tree = {
 			always = no
 		}
 		completion_reward = {
+			add_war_support = 0.05
 			set_rule = { can_create_factions = yes }
 		}
 		ai_will_do = {
@@ -3244,6 +3244,11 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
+			add_stability = 0.03
+			add_war_support = 0.03
+			set_rule = { can_guarantee_other_ideologies = yes }
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			add_ideas = POR_diplomatic_pragmatism
 		}
 		ai_will_do = {
 			base = 5
@@ -3334,14 +3339,17 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_peace_with_the_western_democracies
+		id = POR_peace_home_and_abroad
 		prerequisite = { focus = POR_diplomatic_pragmatism }
 		icon = GFX_focus_SWE_refuge_from_war
 		cost = 6
 		x = 1
 		y = 1
 		relative_position_id = POR_diplomatic_pragmatism
-		available = { is_subject = no }
+		available = { 
+			is_subject = no
+			always = no 
+		}
 		completion_reward = {
 		}
 		ai_will_do = {

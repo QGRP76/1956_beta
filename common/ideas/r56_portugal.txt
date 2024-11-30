@@ -232,7 +232,7 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.002
 				weekly_casualties_war_support = 0.001
-				war_stability_factor = 0.1
+				defensive_war_war_stability_factor = 0.1
 				justify_war_goal_time = 1
 			}
 		}
@@ -251,7 +251,7 @@ ideas = {
 			modifier = {
 				political_power_factor = 0.05
 				weekly_casualties_war_support = 0.001
-				war_stability_factor = 0.1
+				defensive_war_war_stability_factor = 0.1
 				justify_war_goal_time = 1
 				democratic_drift = -0.01
 			}
@@ -273,7 +273,7 @@ ideas = {
 				political_power_factor = 0.1
 				stability_factor = 0.05
 				weekly_casualties_war_support = 0.001
-				war_stability_factor = 0.1
+				defensive_war_war_stability_factor = 0.1
 				democratic_drift = -0.01
 			}
 		}
@@ -287,10 +287,10 @@ ideas = {
 			modifier = {
 				political_power_factor = 0.2
 				stability_factor = 0.05
-				stability_weekly = 0.002
+				stability_weekly = 0.001
 				weekly_casualties_war_support = 0.001
-				war_stability_factor = 0.1
-				democratic_drift = -0.02
+				defensive_war_war_stability_factor = 0.1
+				democratic_drift = -0.03
 			}
 		}
 
@@ -351,6 +351,25 @@ ideas = {
 			}
 		}
 
+		POR_diplomatic_pragmatism = {
+			picture = YUG_federal_defense_council
+			allowed = { original_tag = POR }
+			allowed_civil_war = { 
+				OR = {
+					has_government = communism
+					has_government = democratic
+				} 
+			}
+			removal_cost = -1
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.5
+				embargo_cost_factor = -0.5
+				guarantee_cost = -0.5
+				democratic_acceptance = 40
+				neutrality_acceptance = 25
+			}
+		}
+
 		POR_portugals_road_to_democracy = {
 			picture = worker_cluture
 			allowed = { original_tag = POR }
@@ -359,7 +378,7 @@ ideas = {
 				stability_weekly = -0.001
 				neutrality_drift = -0.02
 				weekly_casualties_war_support = 0.001
-				war_stability_factor = 0.1
+				defensive_war_war_stability_factor = 0.1
 				justify_war_goal_time = 1
 			}
 		}
@@ -373,7 +392,7 @@ ideas = {
 				stability_factor = 0.05
 				neutrality_drift = -0.02
 				weekly_casualties_war_support = 0.001
-				war_stability_factor = 0.1
+				defensive_war_war_stability_factor = 0.1
 			}
 		}
 
@@ -387,7 +406,7 @@ ideas = {
 				democratic_drift = 0.02
 				neutrality_drift = -0.02
 				weekly_casualties_war_support = 0.001
-				war_stability_factor = 0.1
+				defensive_war_war_stability_factor = 0.1
 			}
 		}
 
@@ -402,7 +421,7 @@ ideas = {
 				neutrality_drift = -0.02
 				communism_drift = 0.02
 				weekly_casualties_war_support = 0.001
-				war_stability_factor = 0.1
+				defensive_war_war_stability_factor = 0.1
 			}
 		}
 
@@ -416,7 +435,7 @@ ideas = {
 				}
 			}
 			modifier = {
-				conscription_factor = 0.05
+				conscription_factor = 0.1
 				military_leader_cost_factor = -0.25
 				neutrality_drift = -0.01
 			}
@@ -433,7 +452,7 @@ ideas = {
 				}
 			}
 			modifier = {
-				conscription_factor = 0.1
+				conscription_factor = 0.12
 				military_leader_cost_factor = -0.25
 				neutrality_drift = -0.02
 			}
@@ -451,7 +470,7 @@ ideas = {
 			modifier = {
 				war_stability_factor = 0.1
 				war_support_factor = 0.05
-				conscription_factor = 0.12
+				conscription_factor = 0.15
 				military_leader_cost_factor = -0.25
 				neutrality_drift = -0.02
 			}
@@ -603,7 +622,7 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.005
 				production_speed_buildings_factor = 0.125
-				production_factory_efficiency_gain_factor = 0.14
+				production_factory_efficiency_gain_factor = 0.15
 			}
 		}
 		
