@@ -23,7 +23,7 @@ focus_tree = {
 	
 	reset_on_civilwar = no
 
-	#shared_focus = MAJ_UNIFIED_majapahit_unification
+	shared_focus = MAL_UNIFIED_majapahit_unification
 
 	continuous_focus_position = { x = 50 y = 1100 }
 
@@ -489,6 +489,7 @@ focus_tree = {
 		cost = 3
 		relative_position_id = MAL_1937_goc_defense_of_malaya_report
 		prerequisite = { focus = MAL_1937_goc_defense_of_malaya_report }
+		mutually_exclusive = { focus = MAL_goc_recommendations_accepted }
 
 		available_if_capitulated = yes
 
@@ -1783,6 +1784,7 @@ focus_tree = {
 		cost = 5
 		relative_position_id = MAL_nationalize_natural_resources
 		prerequisite = { focus = MAL_nationalize_natural_resources }
+		mutually_exclusive = { focus = MAL_compensation }
 		
 		available_if_capitulated = yes
 
@@ -2450,6 +2452,7 @@ focus_tree = {
 		cost = 0
 		relative_position_id = MAL_reorganizing_the_colony
 		prerequisite = { focus = MAL_reorganizing_the_colony }
+		mutually_exclusive = { focus = MAL_civic_malaysian_nationalism }
 
 		available_if_capitulated = yes
 
@@ -5073,7 +5076,7 @@ focus_tree = {
 		cost = 0
 		relative_position_id = MAL_nusantara
 		prerequisite = { focus = MAL_nusantara focus = MAL_unite_our_people }
-		mutually_exclusive = { focus = MAL_return_of_the_majapahit }
+		mutually_exclusive = { focus = MAL_unify_south_east_asia }
 
 		available_if_capitulated = yes
 
@@ -5093,7 +5096,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = MAL_return_of_the_majapahit
+		id = MAL_unify_south_east_asia
 		icon = GFX_goal_unknown
 		x = 13
 		y = 1
@@ -5119,213 +5122,213 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ }
 	}
 	
-	focus = {
-		id = MAL_unify_south_east_asia
-		icon = GFX_focus_generic_support_the_left_right
-		x = 1
-		y = 1
-		cost = 0
-		relative_position_id = MAL_the_new_union
-		prerequisite = { focus = MAL_the_new_union focus = MAL_return_of_the_majapahit }
-
-		available_if_capitulated = yes
-
-		available = {
-		
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		completion_reward = {
-		
-		}
-
-		search_filters = { FOCUS_FILTER_ }
-	}
-	
-	focus = {
-		id = MAL_connect_the_cities
-		icon = GFX_focus_generic_railroad
-		x = -2
-		y = 1
-		cost = 0
-		relative_position_id = MAL_unify_south_east_asia
-		prerequisite = { focus = MAL_unify_south_east_asia }
-
-		available_if_capitulated = yes
-
-		available = {
-		
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		completion_reward = {
-		
-		}
-
-		search_filters = { FOCUS_FILTER_ }
-	}
-	
-	focus = {
-		id = MAL_naval_buildup
-		icon = GFX_goal_generic_construct_naval_dockyard
-		x = -1
-		y = 1
-		cost = 0
-		relative_position_id = MAL_connect_the_cities
-		prerequisite = { focus = MAL_connect_the_cities }
-
-		available_if_capitulated = yes
-
-		available = {
-		
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		completion_reward = {
-		
-		}
-
-		search_filters = { FOCUS_FILTER_ }
-	}
-	
-	focus = {
-		id = MAL_legacy_of_piracy
-		icon = GFX_goal_generic_navy_anti_submarine
-		x = 0
-		y = 1
-		cost = 0
-		relative_position_id = MAL_naval_buildup
-		prerequisite = { focus = MAL_naval_buildup }
-
-		available_if_capitulated = yes
-
-		available = {
-		
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		completion_reward = {
-		
-		}
-
-		search_filters = { FOCUS_FILTER_ }
-	}
-	
-	focus = {
-		id = MAL_ethnic_collaboration
-		icon = GFX_goal_unknown
-		x = 1
-		y = 1
-		cost = 0
-		relative_position_id = MAL_connect_the_cities
-		prerequisite = { focus = MAL_connect_the_cities }
-
-		available_if_capitulated = yes
-
-		available = {
-		
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		completion_reward = {
-		
-		}
-
-		search_filters = { FOCUS_FILTER_ }
-	}
-	
-	focus = {
-		id = MAL_unified_resource_development
-		icon = GFX_goal_generic_construct_civilian
-		x = 0
-		y = 1
-		cost = 0
-		relative_position_id = MAL_unify_south_east_asia
-		prerequisite = { focus = MAL_unify_south_east_asia }
-
-		available_if_capitulated = yes
-
-		available = {
-		
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		completion_reward = {
-		
-		}
-
-		search_filters = { FOCUS_FILTER_ }
-	}
-	
-	focus = {
-		id = MAL_defence_of_the_new_union
-		icon = GFX_goal_generic_military_sphere
-		x = 2
-		y = 1
-		cost = 0
-		relative_position_id = MAL_unify_south_east_asia
-		prerequisite = { focus = MAL_unify_south_east_asia }
-
-		available_if_capitulated = yes
-
-		available = {
-		
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		completion_reward = {
-		
-		}
-
-		search_filters = { FOCUS_FILTER_ }
-	}
-	
-	focus = {
-		id = MAL_a_united_armed_force
-		icon = GFX_focus_SOV_mobilization_plan
-		x = 0
-		y = 1
-		cost = 0
-		relative_position_id = MAL_defence_of_the_new_union
-		prerequisite = { focus = MAL_defence_of_the_new_union }
-
-		available_if_capitulated = yes
-
-		available = {
-		
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		completion_reward = {
-		
-		}
-
-		search_filters = { FOCUS_FILTER_ }
-	}
+#	focus = {
+#		id = MAL_return_of_the_majapahit
+#		icon = GFX_focus_generic_support_the_left_right
+#		x = 1
+#		y = 1
+#		cost = 0
+#		relative_position_id = MAL_the_new_union
+#		prerequisite = { focus = MAL_the_new_union focus = MAL_unify_south_east_asia }
+#
+#		available_if_capitulated = yes
+#
+#		available = {
+#		
+#		}
+#
+#		ai_will_do = {
+#			factor = 10
+#		}
+#
+#		completion_reward = {
+#		
+#		}
+#
+#		search_filters = { FOCUS_FILTER_ }
+#	}
+#	
+#	focus = {
+#		id = MAL_connect_the_cities
+#		icon = GFX_focus_generic_railroad
+#		x = -2
+#		y = 1
+#		cost = 0
+#		relative_position_id = MAL_return_of_the_majapahit
+#		prerequisite = { focus = MAL_return_of_the_majapahit }
+#
+#		available_if_capitulated = yes
+#
+#		available = {
+#		
+#		}
+#
+#		ai_will_do = {
+#			factor = 10
+#		}
+#
+#		completion_reward = {
+#		
+#		}
+#
+#		search_filters = { FOCUS_FILTER_ }
+#	}
+#	
+#	focus = {
+#		id = MAL_naval_buildup
+#		icon = GFX_goal_generic_construct_naval_dockyard
+#		x = -1
+#		y = 1
+#		cost = 0
+#		relative_position_id = MAL_connect_the_cities
+#		prerequisite = { focus = MAL_connect_the_cities }
+#
+#		available_if_capitulated = yes
+#
+#		available = {
+#		
+#		}
+#
+#		ai_will_do = {
+#			factor = 10
+#		}
+#
+#		completion_reward = {
+#		
+#		}
+#
+#		search_filters = { FOCUS_FILTER_ }
+#	}
+#	
+#	focus = {
+#		id = MAL_legacy_of_piracy
+#		icon = GFX_goal_generic_navy_anti_submarine
+#		x = 0
+#		y = 1
+#		cost = 0
+#		relative_position_id = MAL_naval_buildup
+#		prerequisite = { focus = MAL_naval_buildup }
+#
+#		available_if_capitulated = yes
+#
+#		available = {
+#		
+#		}
+#
+#		ai_will_do = {
+#			factor = 10
+#		}
+#
+#		completion_reward = {
+#		
+#		}
+#
+#		search_filters = { FOCUS_FILTER_ }
+#	}
+#	
+#	focus = {
+#		id = MAL_ethnic_collaboration
+#		icon = GFX_goal_unknown
+#		x = 1
+#		y = 1
+#		cost = 0
+#		relative_position_id = MAL_connect_the_cities
+#		prerequisite = { focus = MAL_connect_the_cities }
+#
+#		available_if_capitulated = yes
+#
+#		available = {
+#		
+#		}
+#
+#		ai_will_do = {
+#			factor = 10
+#		}
+#
+#		completion_reward = {
+#		
+#		}
+#
+#		search_filters = { FOCUS_FILTER_ }
+#	}
+#	
+#	focus = {
+#		id = MAL_unified_resource_development
+#		icon = GFX_goal_generic_construct_civilian
+#		x = 0
+#		y = 1
+#		cost = 0
+#		relative_position_id = MAL_return_of_the_majapahit
+#		prerequisite = { focus = MAL_return_of_the_majapahit }
+#
+#		available_if_capitulated = yes
+#
+#		available = {
+#		
+#		}
+#
+#		ai_will_do = {
+#			factor = 10
+#		}
+#
+#		completion_reward = {
+#		
+#		}
+#
+#		search_filters = { FOCUS_FILTER_ }
+#	}
+#	
+#	focus = {
+#		id = MAL_defence_of_the_new_union
+#		icon = GFX_goal_generic_military_sphere
+#		x = 2
+#		y = 1
+#		cost = 0
+#		relative_position_id = MAL_return_of_the_majapahit
+#		prerequisite = { focus = MAL_return_of_the_majapahit }
+#
+#		available_if_capitulated = yes
+#
+#		available = {
+#		
+#		}
+#
+#		ai_will_do = {
+#			factor = 10
+#		}
+#
+#		completion_reward = {
+#		
+#		}
+#
+#		search_filters = { FOCUS_FILTER_ }
+#	}
+#	
+#	focus = {
+#		id = MAL_a_united_armed_force
+#		icon = GFX_focus_SOV_mobilization_plan
+#		x = 0
+#		y = 1
+#		cost = 0
+#		relative_position_id = MAL_defence_of_the_new_union
+#		prerequisite = { focus = MAL_defence_of_the_new_union }
+#
+#		available_if_capitulated = yes
+#
+#		available = {
+#		
+#		}
+#
+#		ai_will_do = {
+#			factor = 10
+#		}
+#
+#		completion_reward = {
+#		
+#		}
+#
+#		search_filters = { FOCUS_FILTER_ }
+#	}
 	
 	### MALAYAN EMERGENCY
 	
