@@ -249,18 +249,17 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = 0.1
-				political_advisor_cost_factor = -0.15
+				political_power_factor = 0.05
 				weekly_casualties_war_support = 0.001
 				war_stability_factor = 0.1
 				justify_war_goal_time = 1
-				neutrality_drft = -0.01
+				democratic_drift = -0.01
 			}
 		}
 
-		POR_portugals_path_to_marxism_leninism_idea = {
+		POR_portugals_path_to_socialism2 = {
 			name = POR_portugals_path_to_socialism
-			picture = NOR_sivog
+			picture = SPR_class_war
 			allowed = { original_tag = POR }
 			cancel = { has_government = neutrality }
 			allowed_civil_war = { 
@@ -271,12 +270,27 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = 0.2
-				political_advisor_cost_factor = -0.3
+				political_power_factor = 0.1
+				stability_factor = 0.05
 				weekly_casualties_war_support = 0.001
 				war_stability_factor = 0.1
-				justify_war_goal_time = 0.5
-				neutrality_drft = -0.01
+				democratic_drift = -0.01
+			}
+		}
+
+		POR_the_iberian_social_revolution = {
+			picture = NOR_sivog
+			allowed = { original_tag = POR }
+			cancel = { has_government = neutrality }
+			allowed_civil_war = { has_government = communism } 
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.2
+				stability_factor = 0.05
+				stability_weekly = 0.002
+				weekly_casualties_war_support = 0.001
+				war_stability_factor = 0.1
+				democratic_drift = -0.02
 			}
 		}
 
@@ -292,9 +306,8 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_factor = -0.15
 				conscription_factor = 0.1
-				war_support_factor = 0.03
+				war_stability_factor = 0.05
 			}
 		}
 
@@ -311,9 +324,8 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_factor = -0.07
 				conscription_factor = 0.12
-				war_support_factor = 0.05
+				war_stability_factor = 0.1
 			}
 		}
 
@@ -329,12 +341,13 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
+				war_stability_factor = 0.15
 				conscription_factor = 0.15
-				war_support_factor = 0.05
-				high_command_cost_factor = -0.25
-				air_chief_cost_factor = -0.25
-				army_chief_cost_factor = -0.25
-				navy_chief_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.2
+				high_command_cost_factor = -0.2
+				air_chief_cost_factor = -0.2
+				army_chief_cost_factor = -0.2
+				navy_chief_cost_factor = -0.2
 			}
 		}
 
@@ -344,8 +357,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				stability_weekly = -0.001
-				political_power_gain = 0.05
-				neutrality_drift = -0.01
+				neutrality_drift = -0.02
 				weekly_casualties_war_support = 0.001
 				war_stability_factor = 0.1
 				justify_war_goal_time = 1
@@ -358,12 +370,10 @@ ideas = {
 			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
-				political_power_gain = 0.05
-				neutrality_drift = -0.01
-				political_advisor_cost_factor = -0.2
+				stability_factor = 0.05
+				neutrality_drift = -0.02
 				weekly_casualties_war_support = 0.001
 				war_stability_factor = 0.1
-				justify_war_goal_time = 0.5
 			}
 		}
 
@@ -372,12 +382,10 @@ ideas = {
 			allowed = { original_tag = POR }
 			removal_cost = -1
 			modifier = {
-				stability_weekly = 0.001
-				political_power_gain = 0.1
-				stability_factor = 0.05
+				political_power_factor = 0.1
+				stability_factor = 0.1
 				democratic_drift = 0.02
-				neutrality_drift = -0.01
-				political_advisor_cost_factor = -0.25
+				neutrality_drift = -0.02
 				weekly_casualties_war_support = 0.001
 				war_stability_factor = 0.1
 			}
@@ -391,11 +399,99 @@ ideas = {
 				political_power_gain = 0.2
 				stability_factor = 0.05
 				war_support_factor = 0.05
+				neutrality_drift = -0.02
 				communism_drift = 0.02
-				neutrality_drift = -0.01
-				political_advisor_cost_factor = -0.25
 				weekly_casualties_war_support = 0.001
 				war_stability_factor = 0.1
+			}
+		}
+
+		POR_protectors_of_portuguese_democracy = {
+			picture = MEX_revolutionary_army
+			allowed = { tag = POR }
+			allowed_civil_war = { 
+				OR = {
+					has_government = communism
+					has_government = democratic
+				}
+			}
+			modifier = {
+				conscription_factor = 0.05
+				military_leader_cost_factor = -0.25
+				neutrality_drift = -0.01
+			}
+		}
+
+		POR_protectors_of_portuguese_democracy2 = {
+			name = POR_protectors_of_portuguese_democracy
+			picture = MEX_revolutionary_army
+			allowed = { tag = POR }
+			allowed_civil_war = { 
+				OR = {
+					has_government = communism
+					has_government = democratic
+				}
+			}
+			modifier = {
+				conscription_factor = 0.1
+				military_leader_cost_factor = -0.25
+				neutrality_drift = -0.02
+			}
+		}
+
+		POR_army_of_the_revolution = {
+			picture = MEX_revolutionary_army
+			allowed = { tag = POR }
+			allowed_civil_war = { 
+				OR = {
+					has_government = communism
+					has_government = democratic
+				}
+			}
+			modifier = {
+				war_stability_factor = 0.1
+				war_support_factor = 0.05
+				conscription_factor = 0.12
+				military_leader_cost_factor = -0.25
+				neutrality_drift = -0.02
+			}
+		}
+
+		POR_restoring_the_portuguese_armed_forces = {
+			picture = generic_infantry_bonus
+			allowed = { tag = POR }
+			allowed_civil_war = { original_tag = POR }
+			modifier = {
+				political_power_factor = -0.1
+				command_power_gain = 0.1
+				army_leader_start_planning_level = 1
+				army_leader_start_logistics_level = 1
+			}
+		}
+
+		POR_restoring_the_portuguese_armed_forces2 = {
+			name = POR_restoring_the_portuguese_armed_forces
+			picture = generic_infantry_bonus
+			allowed = { tag = POR }
+			allowed_civil_war = { original_tag = POR }
+			modifier = {
+				political_power_factor = -0.05
+				command_power_gain = 0.15
+				army_leader_start_planning_level = 1
+				army_leader_start_logistics_level = 1
+			}
+		}
+
+		POR_depoliticized_military = {
+			picture = generic_infantry_bonus
+			allowed = { tag = POR }
+			allowed_civil_war = { original_tag = POR }
+			modifier = {
+				command_power_gain = 0.15
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				army_leader_start_planning_level = 1
+				army_leader_start_logistics_level = 1
 			}
 		}
 
@@ -450,6 +546,21 @@ ideas = {
 			}
 		}
 
+		POR_portuguese_mixed_economy = {
+			picture = generic_production_bonus
+			allowed = { original_tag = POR }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.002
+				political_power_factor = -0.2
+				stability_factor = 0.05
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.15
+				democratic_drift = 0.01
+				global_building_slots_factor = 0.1
+			}
+		}
+
 		POR_slow_collectivization = {
 			picture = generic_production_bonus
 			allowed = { original_tag = POR }
@@ -494,7 +605,18 @@ ideas = {
 				production_speed_buildings_factor = 0.125
 				production_factory_efficiency_gain_factor = 0.14
 			}
-		}		
+		}
+		
+		POR_democratic_collectivization = {
+			picture = generic_production_bonus
+			allowed = { original_tag = POR }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.2
+				democratic_drift = 0.01
+			}
+		}
 		
 		POR_the_red_industrial_revolution = {
 			picture = generic_production_bonus

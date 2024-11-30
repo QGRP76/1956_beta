@@ -620,34 +620,6 @@ POR_the_path_to_economic_progress = {
 		}
 	}
 
-	POR_factory_recruitment_drive = {
-		icon = generic_military
-		fire_only_once = no
-		days_re_enable = 150
-		cost = 50
-		ai_will_do = { base = 50 }
-		visible = {
-			OR = {
-				has_completed_focus = POR_escalate_the_industrialization 
-				has_completed_focus = POR_expand_support_for_fascist_trade_unions
-			} 
-		}
-		available = {
-			NOT = {
-				has_idea = POR_heavy_handed_central_planning
-				has_idea = POR_looming_economic_disaster
-			}
-		}
-		days_remove = 105
-		modifier = {
-			industrial_capacity_factory = 0.1
-			production_factory_efficiency_gain_factor = 0.15
-		}
-		remove_effect = {
-			add_to_variable = { POR_the_question_of_nationalization_decisions_taken = 1 }
-		}
-	}
-
 	POR_support_private_collectives = {
 		icon = generic_political_discourse
 		fire_only_once = no
@@ -717,11 +689,11 @@ POR_the_path_to_economic_progress = {
 		icon = GFX_decision_hol_attract_foreign_investors
 		fire_only_once = no
 		days_re_enable = 450
-		cost = 60
+		cost = 50
 		ai_will_do = { base = 25 }
 		visible = { 
 			OR = {
-				has_completed_focus = POR_forge_a_prosperous_proletariat
+				has_completed_focus = POR_maintain_the_fire
 				has_completed_focus = POR_reforge_the_social_state
 				has_completed_focus = POR_assistance_for_the_countryside
 			}
@@ -733,7 +705,7 @@ POR_the_path_to_economic_progress = {
 			if = {
 				limit = {
 					OR = {
-						has_completed_focus = POR_solidify_the_administrative_reforms
+						has_completed_focus = POR_solidify_the_economic_reforms
 						has_completed_focus = POR_restore_economic_stability
 					} 
 				}
@@ -756,6 +728,34 @@ POR_the_path_to_economic_progress = {
 		}
 	}
 
+	POR_factory_recruitment_drive = {
+		icon = generic_military
+		fire_only_once = no
+		days_re_enable = 170
+		cost = 60
+		ai_will_do = { base = 50 }
+		visible = {
+			OR = {
+				has_completed_focus = POR_escalate_the_industrialization 
+				has_completed_focus = POR_expand_support_for_fascist_trade_unions
+			} 
+		}
+		available = {
+			NOT = {
+				has_idea = POR_heavy_handed_central_planning
+				has_idea = POR_looming_economic_disaster
+			}
+		}
+		days_remove = 135
+		modifier = {
+			industrial_capacity_factory = 0.1
+			production_factory_efficiency_gain_factor = 0.15
+		}
+		remove_effect = {
+			add_to_variable = { POR_the_question_of_nationalization_decisions_taken = 1 }
+		}
+	}
+
 	POR_maternalistic_welfare = {
 		icon = GFX_decision_generic_welfare
 		fire_only_once = no
@@ -765,7 +765,7 @@ POR_the_path_to_economic_progress = {
 		visible = {
 			OR = {
 				has_completed_focus = POR_reforge_the_social_state 
-				has_completed_focus = POR_restore_the_social_state
+				has_completed_focus = POR_maintain_the_fire
 				has_completed_focus = POR_seek_urban_working_class_support
 			} 
 		}
@@ -803,7 +803,7 @@ POR_the_path_to_economic_progress = {
 			if = {
 				limit = {
 					OR = {
-						has_completed_focus = POR_solidify_the_administrative_reforms
+						has_completed_focus = POR_solidify_the_economic_reforms
 						has_completed_focus = POR_restore_economic_stability
 					} 
 				}
@@ -869,7 +869,7 @@ POR_the_path_to_economic_progress = {
 			if = {
 				limit = {
 					OR = {
-						has_completed_focus = POR_solidify_the_administrative_reforms
+						has_completed_focus = POR_solidify_the_economic_reforms
 						has_completed_focus = POR_restore_economic_stability
 					} 
 				}
@@ -900,7 +900,7 @@ POR_the_path_to_economic_progress = {
 			if = {
 				limit = {
 					OR = {
-						has_completed_focus = POR_solidify_the_administrative_reforms
+						has_completed_focus = POR_solidify_the_economic_reforms
 						has_completed_focus = POR_restore_economic_stability
 					} 
 				}
@@ -1314,26 +1314,6 @@ POR_securing_the_revolution = {
 		ai_will_do = { base = 200 }
 	}
 
-	POR_expand_civil_amnesty = {
-		icon = GFX_decision_eng_trade_unions_support
-		fire_only_once = yes
-		visible = { has_completed_focus = POR_merit_above_ideology }	
-		days_remove = 120
-		complete_effect = {
-			add_stability = -0.04
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.05
-			}
-		}
-		remove_effect = {
-			add_political_power = 35
-			add_stability = 0.02
-			set_country_flag = POR_expand_civil_amnesty_flag
-		}	
-		ai_will_do = { base = 100 }
-	}
-
 	POR_appropriate_church_riches = {
 		icon = generic_scorched_earth
 		fire_only_once = no
@@ -1355,6 +1335,78 @@ POR_securing_the_revolution = {
 			}
 		}
 		ai_will_do = { base = 1 }
+	}
+
+	POR_demand_oaths_of_loyalty = {
+		icon = generic_scorched_earth
+		fire_only_once = yes
+		visible = { has_completed_focus = POR_rehabilitate_the_armed_forces }
+		days_remove = 135
+		complete_effect = { 
+			add_stability = -0.05 
+		}
+		remove_effect = {
+			add_political_power = 25
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.03
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			if = {
+				limit = { has_idea = POR_protectors_of_portuguese_democracy }
+				swap_ideas = {
+					remove_idea = POR_protectors_of_portuguese_democracy
+					add_idea = POR_protectors_of_portuguese_democracy2
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = POR_protectors_of_portuguese_democracy2
+					add_idea = POR_army_of_the_revolution
+				}
+			}
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	POR_reintegrate_former_officers = {
+		cost = 50
+		icon = generic_prepare_civil_war
+		fire_only_once = yes
+		visible = { has_completed_focus = POR_merit_above_ideology }	
+		days_remove = 135
+		complete_effect = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+		}
+		remove_effect = {
+			add_stability = 0.03
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			if = {
+				limit = { has_idea = POR_protectors_of_portuguese_democracy }
+				swap_ideas = {
+					remove_idea = POR_protectors_of_portuguese_democracy
+					add_idea = POR_protectors_of_portuguese_democracy2
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = POR_protectors_of_portuguese_democracy2
+					add_idea = POR_army_of_the_revolution
+				}
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = POR_joao_de_azevedo_coutinho
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = POR_julio_botelho_moniz
+			set_country_flag = POR_reintegrate_former_officers_flag
+		}	
+		ai_will_do = { base = 100 }
 	}
 
 	POR_call_for_reconciliation = {
@@ -1449,6 +1501,93 @@ POR_securing_the_revolution = {
 		remove_effect = { set_country_flag = POR_end_the_political_trials_flag }
 	}
 
+	POR_clamp_down_on_anti_revolutionary_dissent = {
+		cost = 75
+		icon = oppression
+		fire_only_once = yes
+		visible = {
+			has_government = communism
+			has_completed_focus = POR_rehabilitate_the_armed_forces 
+		}
+		days_remove = 90
+		remove_effect = {
+			add_stability = 0.04
+			add_war_support = 0.02
+			if = {
+				limit = { has_idea = POR_protectors_of_portuguese_democracy }
+				swap_ideas = {
+					remove_idea = POR_protectors_of_portuguese_democracy
+					add_idea = POR_protectors_of_portuguese_democracy2
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = POR_protectors_of_portuguese_democracy2
+					add_idea = POR_army_of_the_revolution
+				}
+			}
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	POR_clamp_down_on_anti_democratic_leftists = {
+		cost = 75
+		icon = oppression
+		fire_only_once = yes
+		visible = {
+			has_government = democratic
+			has_completed_focus = POR_rehabilitate_the_armed_forces 
+		}
+		days_remove = 90
+		remove_effect = {
+			add_stability = 0.03
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			if = {
+				limit = { has_idea = POR_protectors_of_portuguese_democracy }
+				swap_ideas = {
+					remove_idea = POR_protectors_of_portuguese_democracy
+					add_idea = POR_protectors_of_portuguese_democracy2
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = POR_protectors_of_portuguese_democracy2
+					add_idea = POR_army_of_the_revolution
+				}
+			}
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	POR_expand_civil_amnesty = {
+		cost = 75
+		icon = GFX_decision_eng_trade_unions_support
+		fire_only_once = yes
+		visible = { has_completed_focus = POR_merit_above_ideology }	
+		days_remove = 120
+		complete_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+		remove_effect = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}	
+		ai_will_do = { base = 100 }
+	}
+
 	POR_stamp_out_clergy_influence = {
 		cost = 75
 		icon = oppression
@@ -1529,11 +1668,10 @@ POR_securing_the_revolution = {
 		icon = generic_scales
 		cost = 90
 		fire_only_once = yes
-		visible = { has_completed_focus = POR_consolidate_portuguese_democracy }	
+		visible = { has_completed_focus = POR_modernize_the_junta_institutions }	
 		days_remove = 180
 		modifier = { political_power_cost = 0.2 }
 		remove_effect = {
-			set_country_flag = POR_create_a_constitutional_judiciary_flag
 			add_stability = 0.04
 			add_popularity = {
 				ideology = ROOT
@@ -1548,7 +1686,7 @@ POR_securing_the_revolution = {
 		fire_only_once = yes
 		cost = 150
 		visible = {
-			has_completed_focus = POR_consolidate_portuguese_democracy
+			has_completed_focus = POR_modernize_the_junta_institutions
 			has_completed_focus = POR_the_question_of_our_colonies
 			NOT = { has_country_flag = POR_released_colonies_flag }
 		}
@@ -1586,14 +1724,14 @@ POR_securing_the_revolution = {
 			}
 			set_country_flag = POR_colonial_integration_flag
 			custom_effect_tooltip = CHL_skip_one_line_tt
-			unlock_decision_tooltip = POR_organize_provincial_elections_portuguese_guinea
-			unlock_decision_tooltip = POR_organize_provincial_elections_mozambique
-			unlock_decision_tooltip = POR_organize_provincial_elections_angola
+			unlock_decision_tooltip = POR_organize_guinean_provincial_elections
+			unlock_decision_tooltip = POR_organize_mozambican_provincial_elections
+			unlock_decision_tooltip = POR_organize_angolan_provincial_elections
 		}
 		ai_will_do = { base = 5 }
 	}
 
-	POR_organize_provincial_elections_portuguese_guinea = {
+	POR_organize_guinean_provincial_elections = {
 		icon = generic_nationalism
 		fire_only_once = yes
 		cost = 35
@@ -1627,7 +1765,7 @@ POR_securing_the_revolution = {
 		ai_will_do = { base = 1 }
 	}
 
-	POR_organize_provincial_elections_mozambique = {
+	POR_organize_mozambican_provincial_elections = {
 		icon = generic_nationalism
 		fire_only_once = yes
 		cost = 70
@@ -1663,7 +1801,7 @@ POR_securing_the_revolution = {
 		ai_will_do = { base = 1 }
 	}
 
-	POR_organize_provincial_elections_angola = {
+	POR_organize_angolan_provincial_elections = {
 		icon = generic_nationalism
 		fire_only_once = yes
 		cost = 105

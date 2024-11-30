@@ -148,7 +148,7 @@ characters = {
 
 	POR_jose_manuel_sarmento_de_beires = {
 		advisor = {
-			cost = 100
+			cost = 75
 			slot = air_chief
 			idea_token = POR_jose_manuel_sarmento_de_beires
 			ledger = air
@@ -184,12 +184,12 @@ characters = {
 				else = {
 					OR = {
 						has_completed_focus = POR_continue_salazars_policies
-						has_completed_focus = POR_merit_above_ideology
+						has_country_flag = POR_reintegrate_former_officers_flag
 					}
 				}
 			}
 			traits = { army_chief_reform_2 }
-			cost = 100
+			cost = 75
 			ai_will_do = { base = 1 }
 		}
 		name = POR_julio_botelho_moniz
@@ -287,9 +287,10 @@ characters = {
 					limit = { has_global_flag = por_lar_focus_tree }
 					has_completed_focus = POR_colonial_army
 				}
+				else = { has_completed_focus = POR_expand_overseas_recruitment }
 				NOT = { has_idea = POR_francisco_craveiro_lopes2 }
 			}
-			cost = 100
+			cost = 75
 			ledger = army
 			ai_will_do = { base = 1 }
 		}
@@ -302,9 +303,11 @@ characters = {
 					limit = { has_global_flag = por_lar_focus_tree }
 					has_completed_focus = POR_colonial_army
 				}
+				else = { has_completed_focus = POR_expand_overseas_recruitment }
 				NOT = { has_idea = POR_francisco_craveiro_lopes }				
 			}
 			name = POR_francisco_craveiro_lopes 
+			cost = 75
 			traits = { quartermaster_general }
 		}
 		name = POR_francisco_craveiro_lopes
@@ -428,7 +431,7 @@ characters = {
 			idea_token = POR_jaime_afreixo
 			allowed = { original_tag = POR }
 			traits = { navy_chief_old_guard }
-			cost = 100
+			cost = 50
 			ai_will_do = { base = 1 }
 		}
 		name = POR_jaime_afreixo
@@ -619,6 +622,7 @@ characters = {
 				else = { has_completed_focus = POR_pave_the_path_to_progress }
 			}
 			name = POR_jaime_cortesao 
+			cost = 75
 			traits = { compassionate_gentleman }
 		}
 		name = POR_jaime_cortesao
@@ -696,6 +700,7 @@ characters = {
 				}
 				else = { has_completed_focus = POR_pave_the_path_to_progress }
 			}
+			cost = 75
 			traits = { silent_workhorse }
 			ai_will_do = { base = 1 }
 		}
@@ -717,6 +722,7 @@ characters = {
 				}
 				else = { has_completed_focus = POR_portugals_path_to_marxism_leninism }
 			}
+			cost = 75
 			traits = { financial_expert }
 			ai_will_do = { base = 1 }
 		}
@@ -738,6 +744,7 @@ characters = {
 				}
 				else = { has_completed_focus = POR_integrate_the_blueshirts }
 			}
+			cost = 75
 			traits = { national_integralist }
 			ai_will_do = { base = 1000 }
 		}
@@ -765,6 +772,7 @@ characters = {
 				else = { has_completed_focus = POR_advance_the_cause_for_equality }
 				NOT = { has_idea = r56i_laws_gender_patriarchy } 
 			}
+			cost = 75
 			traits = { liberal_journalist }
 			ai_will_do = { base = 1 }
 		}
@@ -787,11 +795,12 @@ characters = {
 					OR = {
 						has_completed_focus = POR_promote_national_catholicism
 						has_completed_focus = POR_restore_the_empire
-						has_completed_focus = POR_merit_above_ideology
+						has_country_flag = POR_reintegrate_former_officers_flag
 					} 
 				}
 				
 			}
+			cost = 75
 			traits = { fortification_engineer }
 			ai_will_do = { base = 1 }
 		}
@@ -806,16 +815,15 @@ characters = {
 			slot = political_advisor
 			idea_token = POR_duarte_jose_pacheco
 			allowed = { original_tag = POR }
-			visible = {
+			available = {
 				if = {
 					limit = { has_focus_tree = r56_portuguese_focus }
-					OR = {
-						has_completed_focus = POR_continue_salazars_policies
-						has_completed_focus = POR_merit_above_ideology
-						has_completed_focus = POR_united_against_the_bolshevik_threat
-					} 
+					has_completed_focus = POR_continue_the_public_works_r56
 				}
+				else = { has_completed_focus = POR_continue_the_public_works }
+				NOT = { has_government = communism }
 			}
+			cost = 75
 			traits = { captain_of_industry }
 			ai_will_do = { base = 1 }
 		}
@@ -861,11 +869,12 @@ characters = {
 				}
 				else = {
 					OR = {
-						NOT = { has_completed_focus = POR_unite_against_salazar }
+						has_completed_focus = POR_promote_national_catholicism
 						has_country_flag = POR_foment_peace_with_the_church_flag	
 					} 
 				}
 			}
+			cost = 75
 			traits = { appeaser }
 			ai_will_do = { base = 1 }
 		}
@@ -913,6 +922,7 @@ characters = {
 				}
 			}
 			visible = { has_global_flag = por_lar_focus_tree }
+			cost = 75
 			traits = { traditionalist_theorist }
 			ai_will_do = { base = 1 }
 		}

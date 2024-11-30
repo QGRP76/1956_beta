@@ -315,7 +315,6 @@
 
  POR_end_the_popular_front:0 "End the Popular Front"
  POR_grant_womens_suffrage:0 "Grant Women's Suffrage"
- POR_create_a_constitutional_judiciary:0 "Create a Constitutional Judiciary"
  POR_loosen_censorship_policies:0 "Loosen Censorship Policies"
 
  POR_the_question_of_our_colonies:0 "The Question of Our Colonies"
@@ -382,9 +381,9 @@
  POR_peace_with_the_western_democracies:0 "Peace With the Western Democracies"
  POR_peace_with_the_western_democracies_desc:0 ""
 
- POR_towards_an_iberian_red_army:0 "Towards an Iberian Red Army"
- POR_towards_an_iberian_red_army_desc:0 ""
- POR_towards_an_iberian_red_army_tt:0 "§YEmpower Socialist Organizations§! decisions will §GUpgrade§! this national spirit"
+ POR_the_red_army_of_the_west:0 "The Red Army of the West"
+ POR_the_red_army_of_the_west_desc:0 ""
+ POR_the_red_army_of_the_west_tt:0 "§YEmpower Socialist Organizations§! decisions will §GUpgrade§! this national spirit"
  POR_integrating_socialist_militias:0 "Integrating Socialist Militia's"
  POR_protectors_of_the_revolution:0 "Protectors of the Revolution"
 
@@ -481,37 +480,47 @@
  POR_restore_economic_stability_desc:0 ""
  POR_the_path_to_economic_progress_decisions_taken_4_or_greater_tt:0 "Has carried out §Y4§! or more §YThe Path to Economic Progress§! decisions (Current progress is §Y[?POR_the_question_of_nationalization_decisions_taken]/4§!)"
  POR_upgrades_the_effects_of_all_the_question_of_nationalization_decisions_tt:0 "§GUpgrades§! the effects of all §YThe Question of Nationalization§! decisions."
+ POR_portuguese_mixed_economy:0 "Portuguese Mixed Economy"
+ POR_democratic_collectivization:0 "Democratic Collectivization"
 
  POR_accomodate_europes_balance_of_power:0 "Accomodate Europe's Balance of Power"
  POR_accomodate_europes_balance_of_power_desc:0 "Despite the work done at Versailles, revanchist expansionism has become the foreign policy of far too many nations. Any order on the continent, no matter how fragile, must be protected at all costs."
  
  POR_merit_above_ideology:0 "Merit Above Ideology"
  POR_merit_above_ideology_desc:0 "Peace is rapidly departing the European continent, and Portugal must stand ready. Whether we like it or not, the protection of the nation goes well above any benefits of further politicization of our armed forces."
+ POR_restoring_the_portuguese_armed_forces:0 "Restoring the Portuguese Armed Forces"
  POR_expand_civil_amnesty:0 "Expand Civil Amnesty"
+ POR_reintegrate_former_officers:0 "Reintegrate Former Officers"
+ POR_reintegrate_former_officers_flag:0 "Has completed Decision §YReintegrate Former Officers§!"
+ POR_depoliticized_military:0 "Depoliticized Army"
+
+ POR_clamp_down_on_anti_democratic_influence:0 "Reduce Anti-Democratic Influence"
+ POR_clamp_down_on_anti_democratic_influence_desc:0 ""
 
  POR_western_europes_model_democracy:0 "Western Europe's Model Democracy"
  POR_red_tinted_democracy:0 "Red-Tinted Democracy"
 
- POR_reform_the_junta_institutions:0 "Reform the Junta Institutions"
- POR_reform_the_junta_institutions_desc:0 ""
- POR_a_new_status_for_the_colonies:0 "A New Status For the Colonies"
- POR_organize_provincial_elections_portuguese_guinea:0 "Organize Provincial Elections (Portuguese Guinea)"
- POR_organize_provincial_elections_mozambique:0 "Organize Provincial Elections (Mozambique)"
- POR_organize_provincial_elections_angola:0 "Organize Provincial Elections (Angola)"
-
  POR_rehabilitate_the_armed_forces:0 "Rehabilitate the Armed Forces"
  POR_rehabilitate_the_armed_forces_desc:0 ""
+ POR_protectors_of_portuguese_democracy:0 "Protectors of Portuguese Democracy"
+ POR_demand_oaths_of_loyalty:0 "Demand Oaths of Loyalty"
+ POR_clamp_down_on_anti_revolutionary_dissent:0 "Clamp Down on Anti-Revolutionary Dissent"
+ POR_clamp_down_on_anti_democratic_leftists:0 "Clamp Down on Anti-Democratic Leftists"
+ POR_army_of_the_revolution:0 "Army of the Revolution"
 
- POR_modernize_the_administration:0 "Modernize the Administration"
- POR_modernize_the_administration_desc:0 ""
+ POR_modernize_the_junta_institutions:0 "Modernize the Junta Institutions"
+ POR_modernize_the_junta_institutions_desc:0 ""
+ POR_a_new_status_for_the_colonies:0 "A New Status For the Colonies"
+ POR_organize_guinean_provincial_elections:0 "Organize Guinean Provincial Elections"
+ POR_organize_mozambican_provincial_elections:0 "Organize Mozambican Provincial Elections"
+ POR_organize_angolan_provincial_elections:0 "Organize Angolan Provincial Elections"
+ POR_create_a_constitutional_judiciary:0 "Create a Constitutional Judiciary"
 
- POR_consolidate_portuguese_democracy:0 "Consolidate Portuguese Democracy"
- POR_consolidate_portuguese_democracy_desc:0 ""
+ POR_maintain_the_fire:0 "Maintain the Fire!"
+ POR_maintain_the_fire_desc:0 ""
 
- POR_further_the_reforms:0 "Further the Reforms"
- POR_further_the_reforms_desc:0 ""
- POR_create_a_constitutional_judiciary_flag:0 "Has completed Decision §YCreate a Constitutional Judiciary§!"
- POR_expand_civil_amnesty_flag:0 "Has completed Decision §YExpand Civil Amnesty§!"
+ POR_fortify_portuguese_democracy:0 "Fortify Portuguese Democracy"
+ POR_fortify_portuguese_democracy_desc:0 ""
 
  #Political - Historical (Maintain Salazar's Dictatorship)
  POR_continue_salazars_policies:0 "Continue Salazar's Policies"
