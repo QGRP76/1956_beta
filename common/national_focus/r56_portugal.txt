@@ -1181,301 +1181,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_import_foreign_machinery
-		prerequisite = { focus = POR_continue_the_public_works_r56 }
-		icon = GFX_goal_generic_construction_tools
-		cost = 10
-		ai_will_do = { base = 3 }
-		x = -2
-		y = 1
-		relative_position_id = POR_continue_the_public_works_r56
-		available = { has_tech = construction1 }
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.75
-				uses = 1
-				category = industry
-			}
-			random_controlled_state = {
-				limit = { is_core_of = ROOT }
-				prioritize = { 112 } 
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = POR_develop_portuguese_textiles
-		prerequisite = { focus = POR_import_foreign_machinery }
-		icon = GFX_focus_CHL_enlarge_the_textile_industries
-		cost = 8
-		ai_will_do = { base = 18 }
-		x = -1
-		y = 1
-		relative_position_id = POR_import_foreign_machinery
-		available = { has_tech = advanced_machine_tools }
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 180 }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex 
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = POR_modernize_the_national_rail_network
-		icon = GFX_focus_POL_warsaw_main_station
-		prerequisite = { focus = POR_subsidize_rolling_stock_production }
-		prerequisite = { focus = POR_import_foreign_machinery }
-		cost = 10
-		x = 1
-		y = 1
-		relative_position_id = POR_import_foreign_machinery
-		available = { 
-			has_tech = construction3 
-			controls_state = 112
-			controls_state = 180
-		}
-		completion_reward = {
-			112 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			180 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = POR_finish_the_santa_luzia_dam
-		prerequisite = { focus = POR_modernize_the_national_rail_network }
-		icon = GFX_focus_generic_hydroelectric_energy
-		cost = 15
-		ai_will_do = { base = 15 }
-		x = 0
-		y = 1
-		relative_position_id = POR_modernize_the_national_rail_network
-		available = {
-			has_tech = construction4
-			has_full_control_of_state = 181
-		}
-		completion_reward = {
-			hidden_effect = {
-				set_province_name = {
-					id = 11885
-					name = POR_cabril_dam
-				}
-			}	
-			add_ideas = POR_hydroelectric_power
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			181 = {
-				add_extra_state_shared_building_slots = 3	
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-					province = { id = 11885 }
-				}
-				add_building_construction = {
-					type = dam
-					level = 1
-					instant_build = yes
-					province = { id = 11885 }
-				}
-				custom_effect_tooltip = {
-					localization_key = building_state_modifier|dam
-					INDENT = "    "
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = POR_subsidize_rolling_stock_production
-		prerequisite = { focus = POR_continue_the_public_works_r56 }
-		icon = GFX_focus_SOV_organize_wreckers
-		cost = 10
-		x = 2
-		y = 1
-		relative_position_id = POR_continue_the_public_works_r56
-		available = { 
-			OR = {
-				has_tech = concentrated_industry
-				has_tech = dispersed_industry
-			}
-		}
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 112 }
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 795 }
-				add_extra_state_shared_building_slots = 1
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = POR_expand_the_mining_industry
-		prerequisite = { focus = POR_subsidize_rolling_stock_production }
-		icon = GFX_focus_generic_road_investment
-		cost = 8
-		ai_will_do = { base = 15 }
-		x = 1
-		y = 1
-		relative_position_id = POR_subsidize_rolling_stock_production
-		available = { 
-			has_tech = excavation1
-			has_tech = excavation2 
-		}
-		completion_reward = {
-			add_offsite_building = {
-				type = industrial_complex
-				level = 1
-			}
-			if = {
-				limit = { has_full_control_of_state = 112 }
-				112 = { 
-					add_resource = {
-						type = tungsten
-						amount = 6
-					}
-				}
-			}
-			if = {
-				limit = { has_full_control_of_state = 181 }
-				181 = { 
-					add_resource = {
-						type = tungsten
-						amount = 9
-					}
-				}
-			}
-			if = {
-				limit = { has_full_control_of_state = 795 }
-				795 = { 
-					add_resource = {
-						type = chromium
-						amount = 4
-					}
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESOURCES FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = POR_finish_the_urban_electrification
-		prerequisite = { focus = POR_import_foreign_machinery }
-		prerequisite = { focus = POR_subsidize_rolling_stock_production }
-		icon = GFX_focus_generic_energy
-		cost = 10
-		x = -1
-		y = 1
-		relative_position_id = POR_subsidize_rolling_stock_production
-		available = { 
-			OR = {
-				has_tech = concentrated_industry3
-				has_tech = dispersed_industry3
-			}
-			controls_state = 112
-			controls_state = 180
-		}
-		completion_reward = {
-			add_offsite_building = {
-				type = industrial_complex
-				level = 2
-			}
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			112 = { set_state_category = metropolis }
-			180 = { set_state_category = city }
-			
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = POR_modernize_the_countryside
-		prerequisite = { focus = POR_finish_the_urban_electrification }
-		icon = GFX_goal_generic_farm_tractor
-		cost = 15
-		x = 0
-		y = 1
-		relative_position_id = POR_finish_the_urban_electrification
-		available = { 
-			OR = {
-				has_tech = concentrated_industry4
-				has_tech = dispersed_industry4
-			}
-		}
-		completion_reward = {
-			add_stability = 0.04
-			add_tech_bonus = {
-				bonus = 1.5
-				ahead_reduction = 1.5
-				uses = 2
-				category = industry
-			}
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			every_controlled_state = {
-				limit = {
-					OR = { 
-						state = 181
-						state = 795
-					}
-				}
-				set_state_category = developed_rural
-			}
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			unlock_decision_tooltip = POR_support_food_exporters
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
 		id = POR_strengthen_the_colonial_administration
-		prerequisite = { focus = POR_subsidize_rolling_stock_production }
+		prerequisite = { focus = POR_continue_the_public_works_r56 }
 		icon = GFX_focus_generic_military_dictatorship
 		cost = 6
-		x = 2
-		y = 2
-		relative_position_id = POR_subsidize_rolling_stock_production
+		x = 4
+		y = 3 
+		relative_position_id = POR_continue_the_public_works_r56
 		available = {
 			OR = {
 				has_completed_focus = POR_continue_salazars_policies
@@ -1625,13 +1337,13 @@ focus_tree = {
 
 	focus = {
 		id = POR_never_another_la_lys
-		prerequisite = { focus = POR_import_foreign_machinery }
+		prerequisite = { focus = POR_continue_the_public_works_r56 }
 		icon = GFX_goal_r56_CAN_industry
 		cost = 5
 		ai_will_do = { base = 15 }
-		x = -2
-		y = 2
-		relative_position_id = POR_import_foreign_machinery
+		x = -4
+		y = 3
+		relative_position_id = POR_continue_the_public_works_r56
 		available = {
 			has_civil_war = no
 			has_war = yes 
@@ -1984,6 +1696,294 @@ focus_tree = {
 			add_ideas = POR_renewing_the_portuguese_armada
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = POR_import_foreign_machinery
+		prerequisite = { focus = POR_continue_the_public_works_r56 }
+		icon = GFX_goal_generic_construction_tools
+		cost = 10
+		ai_will_do = { base = 3 }
+		x = -2
+		y = 1
+		relative_position_id = POR_continue_the_public_works_r56
+		available = { has_tech = construction1 }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = industry
+			}
+			random_controlled_state = {
+				limit = { is_core_of = ROOT }
+				prioritize = { 112 } 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = POR_develop_portuguese_textiles
+		prerequisite = { focus = POR_import_foreign_machinery }
+		icon = GFX_focus_CHL_enlarge_the_textile_industries
+		cost = 8
+		ai_will_do = { base = 18 }
+		x = -1
+		y = 1
+		relative_position_id = POR_import_foreign_machinery
+		available = { has_tech = advanced_machine_tools }
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 180 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex 
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = POR_modernize_the_national_rail_network
+		icon = GFX_focus_POL_warsaw_main_station
+		prerequisite = { focus = POR_subsidize_rolling_stock_production }
+		prerequisite = { focus = POR_import_foreign_machinery }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = POR_import_foreign_machinery
+		available = { 
+			has_tech = construction3 
+			controls_state = 112
+			controls_state = 180
+		}
+		completion_reward = {
+			112 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			180 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = POR_finish_the_santa_luzia_dam
+		prerequisite = { focus = POR_modernize_the_national_rail_network }
+		icon = GFX_focus_generic_hydroelectric_energy
+		cost = 15
+		ai_will_do = { base = 15 }
+		x = 0
+		y = 1
+		relative_position_id = POR_modernize_the_national_rail_network
+		available = {
+			has_tech = construction4
+			has_full_control_of_state = 181
+		}
+		completion_reward = {
+			hidden_effect = {
+				set_province_name = {
+					id = 11885
+					name = POR_cabril_dam
+				}
+			}	
+			add_ideas = POR_hydroelectric_power
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			181 = {
+				add_extra_state_shared_building_slots = 3	
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					province = { id = 11885 }
+				}
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = { id = 11885 }
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = POR_subsidize_rolling_stock_production
+		prerequisite = { focus = POR_continue_the_public_works_r56 }
+		icon = GFX_focus_SOV_organize_wreckers
+		cost = 10
+		x = 2
+		y = 1
+		relative_position_id = POR_continue_the_public_works_r56
+		available = { 
+			OR = {
+				has_tech = concentrated_industry
+				has_tech = dispersed_industry
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 112 }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 795 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = POR_expand_the_mining_industry
+		prerequisite = { focus = POR_subsidize_rolling_stock_production }
+		icon = GFX_focus_generic_road_investment
+		cost = 8
+		ai_will_do = { base = 15 }
+		x = 1
+		y = 1
+		relative_position_id = POR_subsidize_rolling_stock_production
+		available = { 
+			has_tech = excavation1
+			has_tech = excavation2 
+		}
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			if = {
+				limit = { has_full_control_of_state = 112 }
+				112 = { 
+					add_resource = {
+						type = tungsten
+						amount = 6
+					}
+				}
+			}
+			if = {
+				limit = { has_full_control_of_state = 181 }
+				181 = { 
+					add_resource = {
+						type = tungsten
+						amount = 9
+					}
+				}
+			}
+			if = {
+				limit = { has_full_control_of_state = 795 }
+				795 = { 
+					add_resource = {
+						type = chromium
+						amount = 4
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESOURCES FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = POR_finish_the_urban_electrification
+		prerequisite = { focus = POR_import_foreign_machinery }
+		prerequisite = { focus = POR_subsidize_rolling_stock_production }
+		icon = GFX_focus_generic_energy
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = POR_subsidize_rolling_stock_production
+		available = { 
+			OR = {
+				has_tech = concentrated_industry3
+				has_tech = dispersed_industry3
+			}
+			controls_state = 112
+			controls_state = 180
+		}
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			112 = { set_state_category = metropolis }
+			180 = { set_state_category = city }
+			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = POR_modernize_the_countryside
+		prerequisite = { focus = POR_finish_the_urban_electrification }
+		icon = GFX_goal_generic_farm_tractor
+		cost = 15
+		x = 0
+		y = 1
+		relative_position_id = POR_finish_the_urban_electrification
+		available = { 
+			OR = {
+				has_tech = concentrated_industry4
+				has_tech = dispersed_industry4
+			}
+		}
+		completion_reward = {
+			add_stability = 0.04
+			add_tech_bonus = {
+				bonus = 1.5
+				ahead_reduction = 1.5
+				uses = 2
+				category = industry
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			every_controlled_state = {
+				limit = {
+					OR = { 
+						state = 181
+						state = 795
+					}
+				}
+				set_state_category = developed_rural
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			unlock_decision_tooltip = POR_support_food_exporters
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	}
 
 	#Political - Historical/Authoritarian
@@ -2407,11 +2407,51 @@ focus_tree = {
 			}
 		}
 		bypass = { has_completed_focus = POR_never_another_la_lys }
+
 		completion_reward = { 
-			complete_national_focus = POR_never_another_la_lys
-			custom_effect_tooltip = CHL_skip_one_line_tt
 			unlock_decision_tooltip = POR_come_to_britains_aid
 			custom_effect_tooltip = POR_address_european_affairs_tt
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			complete_national_focus = POR_never_another_la_lys
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = POR_never_another_la_lys_tt
+			effect_tooltip = {
+				if = {
+					limit = { has_war_support < 0.3 }
+					set_war_support = 0.3
+				}
+				else = { add_war_support = 0.05 }
+				custom_effect_tooltip = CHL_skip_one_line_tt
+				if = {
+					limit = { has_idea = civilian_economy }
+					add_ideas = partial_economic_mobilisation
+				}
+				else_if = {
+					limit = { has_idea = low_economic_mobilisation }
+					add_ideas = partial_economic_mobilisation
+					custom_effect_tooltip = CHL_skip_one_line_tt
+					random_owned_controlled_state = {
+						prioritize = { 112 }
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				else = {
+					random_owned_controlled_state = {
+						prioritize = { 112 }
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			} 
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ALLIANCE }
 	}
@@ -2683,6 +2723,7 @@ focus_tree = {
 			} 
 		}
 		bypass = {
+			has_war = no
 			NOT = {
 				controls_state = 540
 				controls_state = 544
@@ -2919,7 +2960,48 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_escalate_the_industrialization
 		bypass = { has_completed_focus = POR_never_another_la_lys }
-		completion_reward = { complete_national_focus = POR_never_another_la_lys }
+		completion_reward = { 
+			complete_national_focus = POR_never_another_la_lys
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = POR_never_another_la_lys_tt
+			effect_tooltip = {
+				if = {
+					limit = { has_war_support < 0.3 }
+					set_war_support = 0.3
+				}
+				else = { add_war_support = 0.05 }
+				custom_effect_tooltip = CHL_skip_one_line_tt
+				if = {
+					limit = { has_idea = civilian_economy }
+					add_ideas = partial_economic_mobilisation
+				}
+				else_if = {
+					limit = { has_idea = low_economic_mobilisation }
+					add_ideas = partial_economic_mobilisation
+					custom_effect_tooltip = CHL_skip_one_line_tt
+					random_owned_controlled_state = {
+						prioritize = { 112 }
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				else = {
+					random_owned_controlled_state = {
+						prioritize = { 112 }
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			} 
+		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
@@ -3938,7 +4020,48 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_end_the_austerity_measures
 		bypass = { has_completed_focus = POR_never_another_la_lys }
-		completion_reward = { complete_national_focus = POR_never_another_la_lys }
+		completion_reward = { 
+			complete_national_focus = POR_never_another_la_lys
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = POR_never_another_la_lys_tt
+			effect_tooltip = {
+				if = {
+					limit = { has_war_support < 0.3 }
+					set_war_support = 0.3
+				}
+				else = { add_war_support = 0.05 }
+				custom_effect_tooltip = CHL_skip_one_line_tt
+				if = {
+					limit = { has_idea = civilian_economy }
+					add_ideas = partial_economic_mobilisation
+				}
+				else_if = {
+					limit = { has_idea = low_economic_mobilisation }
+					add_ideas = partial_economic_mobilisation
+					custom_effect_tooltip = CHL_skip_one_line_tt
+					random_owned_controlled_state = {
+						prioritize = { 112 }
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				else = {
+					random_owned_controlled_state = {
+						prioritize = { 112 }
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			} 
+		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
 	}
 

@@ -279,67 +279,67 @@ POR_towards_a_greater_portugal = {
 				tooltip = organize_elections_in_the_hispanic_regions_tt
 				790 = {
 					is_controlled_by = ROOT
-					compliance > 35
+					compliance > 30
 				}
 				174 = {
 					is_controlled_by = ROOT
-					compliance > 35
+					compliance > 30
 				}
 				788 = {
 					is_controlled_by = ROOT
-					compliance > 35
+					compliance > 30
 				}
 				170 = {
 					is_controlled_by = ROOT
-					compliance > 35
+					compliance > 30
 				}
 				169 = {
 					is_controlled_by = ROOT
-					compliance > 35
+					compliance > 30
 				}
 				173 = {
 					is_controlled_by = ROOT
-					compliance > 35
+					compliance > 30
 				}
 				789 = {
 					is_controlled_by = ROOT
-					compliance > 35
+					compliance > 30
 				}
 				175 = {
 					is_controlled_by = ROOT
-					compliance > 35
+					compliance > 30
 				}
 				41 = {
 					is_controlled_by = ROOT
-					compliance > 35
+					compliance > 30
 				}
 				791 = {
 					is_controlled_by = ROOT
-					compliance > 35
+					compliance > 30
 				}
 				176 = {
 					is_controlled_by = ROOT
-					compliance > 35
+					compliance > 30
 				}
 				793 = {
 					is_controlled_by = ROOT
-					compliance > 35
+					compliance > 30
 				}
 				168 = {
 					is_controlled_by = ROOT
-					compliance > 35
+					compliance > 30
 				}
 				166 = {
 					is_controlled_by = ROOT
-					compliance > 35
+					compliance > 30
 				}
 				794 = {
 					is_controlled_by = ROOT
-					compliance > 35
+					compliance > 30
 				}
 				697 = {
 					is_controlled_by = ROOT
-					compliance > 35
+					compliance > 30
 				}
 			}
 		}
@@ -394,71 +394,71 @@ POR_towards_a_greater_portugal = {
 				tooltip = organize_elections_in_the_hispanic_regions_tt
 				790 = {
 					is_controlled_by = ROOT
-					compliance > 30
+					compliance > 25
 				}
 				174 = {
 					is_controlled_by = ROOT
-					compliance > 30
+					compliance > 25
 				}
 				788 = {
 					is_controlled_by = ROOT
-					compliance > 30
+					compliance > 25
 				}
 				170 = {
 					is_controlled_by = ROOT
-					compliance > 30
+					compliance > 25
 				}
 				169 = {
 					is_controlled_by = ROOT
-					compliance > 30
+					compliance > 25
 				}
 				173 = {
 					is_controlled_by = ROOT
-					compliance > 30
+					compliance > 25
 				}
 				789 = {
 					is_controlled_by = ROOT
-					compliance > 30
+					compliance > 25
 				}
 				175 = {
 					is_controlled_by = ROOT
-					compliance > 30
+					compliance > 25
 				}
 				41 = {
 					is_controlled_by = ROOT
-					compliance > 30
+					compliance > 25
 				}
 				791 = {
 					is_controlled_by = ROOT
-					compliance > 30
+					compliance > 25
 				}
 				176 = {
 					is_controlled_by = ROOT
-					compliance > 30
+					compliance > 25
 				}
 				793 = {
 					is_controlled_by = ROOT
-					compliance > 30
+					compliance > 25
 				}
 				168 = {
 					is_controlled_by = ROOT
-					compliance > 30
+					compliance > 25
 				}
 				166 = {
 					is_controlled_by = ROOT
-					compliance > 30
+					compliance > 25
 				}
 				794 = {
 					is_controlled_by = ROOT
-					compliance > 30
+					compliance > 25
 				}
 				697 = {
 					is_controlled_by = ROOT
-					compliance > 30
+					compliance > 25
 				}
 			}
 		}
-		days_remove = 90
+		days_remove = 85
 		remove_effect = {
 			every_state = {
 				limit = { 
@@ -1421,7 +1421,7 @@ POR_securing_the_revolution = {
 		icon = generic_scorched_earth
 		fire_only_once = no
 		days_re_enable = 405
-		visible = { has_completed_focus = POR_the_iberian_social_revolution }
+		visible = { has_completed_focus = POR_towards_institutional_atheism }
 		days_remove = 135
 		complete_effect = { 
 			add_stability = -0.03 
@@ -1751,7 +1751,7 @@ POR_securing_the_revolution = {
 		cost = 75
 		icon = oppression
 		fire_only_once = yes
-		visible = { has_completed_focus = POR_the_iberian_social_revolution }
+		visible = { has_completed_focus = POR_towards_institutional_atheism }
 		days_remove = 200
 		complete_effect = {
 			add_stability = -0.05
