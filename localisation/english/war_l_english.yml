@@ -111,11 +111,11 @@
  WAR_NAME_ENG_JAP:0 "Pacific War"
 
  #FRA
- WAR_NAME_FRA_GER:0 "Second Great War"
+ WAR_NAME_FRA_GER:0 "Second World War"
  WAR_NAME_FRA_ITA:0 "Franco-$SECOND$ War"
 
  #USA
- WAR_NAME_USA_GER:0 "Second Great War"
+ WAR_NAME_USA_GER:0 "Second World War"
  WAR_NAME_USA_JAP:0 "Pacific War"
  WAR_NAME_USA_CSA:0 "Second American Civil War"
  CIVIL_WAR_NAME_D01_USA:0 "Second American Civil War"
