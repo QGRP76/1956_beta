@@ -71,6 +71,7 @@ country_event = {
 			if = {
 				limit = {
 					FROM = {
+						original_tag = ROM
 						NOT = { has_completed_focus = ROM_exile_or_execution }
 						NOT = { has_completed_focus = ROM_the_romanian_civil_war }
 					}
@@ -78,17 +79,6 @@ country_event = {
 				FROM = {
 					country_event = { id = rt56.rom_abdicate.1 days = 14 }
 					set_country_flag = ROM_carol_abdicated
-				}
-				ROM = {
-					if = {
-						limit = {
-							has_idea = r56_ROM_carol_idea
-						}
-						swap_ideas = {
-							remove_idea = r56_ROM_carol_idea
-							add_idea = r56_ROM_michael_idea
-						}
-					}
 				}
 			}
 		}
@@ -697,7 +687,7 @@ country_event = {
 		name = soviet.20.a
 		set_global_flag = zxl_arrested
 		CHI = {
-			remove_unit_leader = 1200
+			remove_unit_leader_role = CHI_zhang_xueliang
 		}
 		if = {
 			limit = {
@@ -728,7 +718,7 @@ country_event = {
 		name = soviet.21.a
 		set_global_flag = zxl_arrested
 		CHI = {
-			remove_unit_leader = 1200
+			remove_unit_leader_role = CHI_zhang_xueliang
 		}
 		if = {
 			limit = {
@@ -768,7 +758,7 @@ country_event = {
 		name = soviet.22.a
 		set_global_flag = zxl_arrested
 		CHI = {
-			remove_unit_leader = 1200
+			remove_unit_leader_role = CHI_zhang_xueliang
 		}
 		if = {
 			limit = {
@@ -928,12 +918,12 @@ country_event = {
 			}
 		} 
 
-		hidden_effect = {
-
-			 FROM = {
-			 	country_event = { id = baltic.6 hours = 6}
-			 }			
-		}
+		#hidden_effect = {
+		#
+		#	 FROM = {
+		#	 	country_event = { id = baltic.6 hours = 6}
+		#	 }			
+		#}
 	}
 	option = {
 		name = soviet.35.b

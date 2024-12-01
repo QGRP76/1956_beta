@@ -25,7 +25,7 @@ characters={
 		}
 		country_leader={
 			ideology=absolute_monarchism
-			traits = { lawyer }
+			traits = { charismatic_monarch }
 			expire="1965.1.1"
 			id=-1
 		}
@@ -677,5 +677,20 @@ characters={
 				}			
 			}
 		}
-	}	
+	}
+	LUX_william_kroll = {
+		name = "William Kroll"
+		portraits = {
+			army = {
+				large = GFX_portrait_generic_europe_male_10
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_fast_learner }
+			skills = {
+				specialization_land = 1
+			}
+		}
+	}
 }

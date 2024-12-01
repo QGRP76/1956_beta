@@ -398,7 +398,7 @@ characters={
 			traits = {
 				r56_trait_opposed_to_communism
 			}			
-			ideology=centrism
+			ideology=despotism
 			expire="1965.1.1"
 			id=-1
 		}
@@ -973,6 +973,8 @@ characters={
 		}
 		advisor={
 			slot = high_command
+			idea_token = ROM_gheorghe_koslinski
+			ledger = navy
 			allowed = {
 				original_tag = ROM
 			}
@@ -990,6 +992,12 @@ characters={
 			coordination_skill=3
 			legacy_id=5642
 		}
+		scientist = {
+			traits = { scientist_trait_submarine_specialist }
+			skills = {
+				specialization_naval = 1
+			}
+		}
 	}
 	ROM_ioan_georgescu={
 		name=ROM_ioan_georgescu
@@ -1000,6 +1008,8 @@ characters={
 		}
 		advisor={
 			slot = theorist
+			idea_token = ROM_ioan_georgescu
+			ledger = navy
 			allowed = {
 				original_tag = ROM
 			}
@@ -1019,6 +1029,8 @@ characters={
 		}
 		advisor={
 			slot = high_command
+			idea_token = ROM_alexandru_gheorghiu
+			ledger = navy
 			allowed = {
 				original_tag = ROM
 			}
@@ -1326,12 +1338,7 @@ characters={
 			}
 			traits = {
 				silent_workhorse 
-			}
-			available = { }
-
-			ai_will_do = {
-
-			}				
+			}			
 		}
 	}
 
@@ -1492,4 +1499,64 @@ characters={
 			}
 		}
 	}	
+	ROM_elie_carafoli = {
+		name = "Elie Carafoli"
+		portraits = {
+			army = {
+				large = GFX_portrait_generic_europe_male_12
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_aircraft_specialist scientist_trait_gifted_engineer }
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
+	ROM_ion_grosu  = {
+		name = "Ion Grosu"
+		portraits = {
+			army = {
+				large = GFX_portrait_generic_europe_male_03
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_aircraft_specialist }
+			skills = {
+				specialization_air = 1
+			}
+		}
+	}
+	ROM_constantin_chiulai  = {
+		name = "Constantin Chiulai"
+		portraits = {
+			army = {
+				large = GFX_portrait_generic_europe_male_15
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_armored_specialist scientist_trait_r56_reckless_prototyper }
+			skills = {
+				specialization_land = 2
+			}
+		}
+	}
+	ROM_theodor_ionescu = {
+		name = "Theodor V. Ionescu"
+		portraits = {
+			army = {
+				large = GFX_portrait_generic_europe_male_06
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_power_expert }
+			skills = {
+				specialization_nuclear = 1
+			}
+		}
+	}
 }

@@ -4,7 +4,7 @@ focus_tree = {
         factor = 0
         modifier = {
             add = 100
-            tag = ISR
+            original_tag = ISR
         }
     }
 
@@ -286,7 +286,7 @@ focus_tree = {
 				1017 = {
 					create_unit = {
 						prioritize_location = 4088
-						division = "name = \"Negev Brigade \" division_template = \"Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 0 }" 
+						division = "name = \"Negev Brigade \" division_template = \"Ugdat Hir\" start_experience_factor = 0.1 start_equipment_factor = 0 }" 
 						owner = ISR
 					}
 				}
@@ -294,7 +294,7 @@ focus_tree = {
 			else = {
 				capital_scope = {
 					create_unit = {
-						division = "name = \"Negev Brigade \" division_template = \"Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 0 }" 
+						division = "name = \"Negev Brigade \" division_template = \"Ugdat Hir\" start_experience_factor = 0.1 start_equipment_factor = 0 }" 
 						owner = ISR
 					}
 				}
@@ -671,7 +671,7 @@ focus_tree = {
 				}
 				create_unit = {
 					prioritize_location = 1086
-					division = "name = \"Irgun Brigade \" division_template = \"Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 0 }" 
+					division = "name = \"Irgun Brigade \" division_template = \"Ugdat Hir\" start_experience_factor = 0.1 start_equipment_factor = 0 }" 
 					owner = ISR
 				}
 				
@@ -4688,7 +4688,7 @@ focus_tree = {
 
 	focus = {
 		id = ISR_irgun_in_power
-		icon = GFX_goal_military_government
+		icon = GFX_focus_generic_military_dictatorship
 		relative_position_id = ISR_convene_knesset
 		x = 36
 		y = 0
@@ -8381,7 +8381,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ISR_form_the_israeli_navy
-		cost = 7.9
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -8490,7 +8490,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ISR_form_the_israeli_navy
 
-		cost = 7.9
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -8726,7 +8726,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ISR_Dockyards
-		cost = 7.9
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -8794,7 +8794,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ISR_Dockyards
-		cost = 7.9
+		cost = 8
 
 		available_if_capitulated = yes
 

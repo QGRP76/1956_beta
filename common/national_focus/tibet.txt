@@ -400,10 +400,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 3
-		}		
-		
-		available = {
-			
 		}
 		completion_reward = {
 			add_political_power = 50
@@ -426,10 +422,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 3
-		}		
-		
-		available = {
-			
 		}
 		completion_reward = {
 			create_operative_leader = {
@@ -859,7 +851,7 @@ focus_tree = {
 					random_owned_controlled_state = {
 						prioritize = { 601 }
 						create_unit = {
-							division = "name = \"Independent Tibetan Division\" division_template = \"Milishia Qabalia\" start_experience_factor = 0.1 start_equipment_factor = 0.85 start_manpower_factor = 1"
+							division = "name = \"Independent Tibetan Division\" division_template = \"Independent Tibetan Division\" start_experience_factor = 0.1 start_equipment_factor = 0.85 start_manpower_factor = 1"
 							owner = ROOT
 							count = 1
 							allow_spawning_on_enemy_provs = yes
@@ -2214,7 +2206,6 @@ focus_tree = {
 						free_building_slots = {
 							building = infrastructure
 							size > 0
-							include_locked = yes
 						}
 					}
 					add_building_construction = {
@@ -2283,7 +2274,6 @@ focus_tree = {
 							free_building_slots = {
 								building = infrastructure
 								size > 0
-								include_locked = yes
 							}
 						}
 						add_extra_state_shared_building_slots = 1
@@ -2319,7 +2309,6 @@ focus_tree = {
 							free_building_slots = {
 								building = infrastructure
 								size > 0
-								include_locked = yes
 							}
 						}
 						add_extra_state_shared_building_slots = 1
@@ -2706,7 +2695,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 0
-						include_locked = yes
 					}
 				}
 				if = {
@@ -3656,7 +3644,6 @@ focus_tree = {
 						free_building_slots = {
 							building = infrastructure
 							size > 0
-							include_locked = yes
 						}
 					}
 					add_building_construction = {
@@ -3816,7 +3803,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 0
-						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -3832,7 +3818,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 0
-						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 1

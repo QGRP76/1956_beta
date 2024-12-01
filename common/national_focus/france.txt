@@ -87,18 +87,7 @@ focus_tree = {
 			OR = {
 				threat > 0.05
 				GER = {
-					if = {
-						limit = {
-							NOT = { has_global_flag = ger_vanilla_focus_tree }
-						}
-						has_completed_focus = GER_rhineland
-					}
-					if = {
-						limit = {
-							has_global_flag = ger_vanilla_focus_tree
-						}
-						has_completed_focus = GER_rhineland_vanilla
-					}
+					has_completed_focus = GER_remilitarize_the_rhineland
 				}
 				has_war_support > 0.2
 			}
@@ -210,6 +199,10 @@ focus_tree = {
 			focus = FRA_far_right_leagues
 			focus = FRA_radicalize_front
 			focus = FRA_action_francaise
+		}
+		available = {
+			
+			has_country_flag = FRA_1936_election
 		}
 		relative_position_id = FRA_rearmament	#dont use political ones, which may be hidden
 		x = 15
@@ -485,7 +478,7 @@ focus_tree = {
 			factor = 3
 		}
 		completion_reward = {
-			add_stability = 0.05
+			add_stability = -0.03
 			random_owned_controlled_state = {
 				prioritize = { 14 }
 				limit = {
@@ -579,11 +572,28 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			add_tech_bonus = {
-				name = FRA_nuclear_effort
-				bonus = 1
-				uses = 2
-				category = nuclear
+			IF = {	
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = nuclear_bonus
+					bonus = 1.0
+					uses = 1
+					category = nuclear
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.5
+				}
+			}
+			ELSE = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.8
+				}
 			}
 			hidden_effect = {
 				news_event = {
@@ -2636,7 +2646,7 @@ focus_tree = {
 		available = {
 			has_war_support > 0.2 #just making sure you aren't meta gaming
 		}
-
+		continue_if_invalid = yes
 		completion_reward = {
 			if = {
 				limit = {
@@ -2701,7 +2711,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-
+		continue_if_invalid = yes
 		available = {
 			has_war_support > 0.2 #just making sure you aren't meta gaming
 		}
@@ -2767,24 +2777,14 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_war_material_licence
 		}
+		continue_if_invalid = yes
 		available = {
+			has_war_support > 0.25
 			OR = {
-				threat > 0.2
-				GER = {
-					if = {
-						limit = {
-							NOT = { has_global_flag = ger_vanilla_focus_tree }
-						}
-						has_completed_focus = GER_anschluss
-					}
-					if = {
-						limit = {
-							has_global_flag = ger_vanilla_focus_tree
-						}
-						has_completed_focus = GER_anschluss_vanilla
-					}
+				threat > 0.25
+				any_home_area_neighbor_country = {
+					has_added_tension_amount > 10
 				}
-				has_war_support > 0.3
 			}
 		}
 		x = 11
@@ -2811,8 +2811,15 @@ focus_tree = {
 		}
 		x = 11
 		y = 3
+		continue_if_invalid = yes
 		available = {
-			threat > 0.15
+			has_war_support > 0.25
+			OR = {
+				threat > 0.25
+				any_home_area_neighbor_country = {
+					has_added_tension_amount > 15
+				}
+			}
 		}
 		bypass = {
 			OR = {
@@ -2877,8 +2884,10 @@ focus_tree = {
 		}
 		x = 11
 		y = 5
+		continue_if_invalid = yes
 		available = {
-			threat > 0.35
+			has_war_support > 0.30
+			threat > 0.30
 		}
 		bypass = {
 			OR = {
@@ -2902,6 +2911,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_defense_national_funds
 		}
+		continue_if_invalid = yes
 		available = {
 			OR = {
 				has_war = yes
@@ -2927,6 +2937,10 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = FRA_wartime_organisation_act
+		}
+		continue_if_invalid = yes
+		available = {
+			has_war_support > 0.35
 		}
 		x = 13
 		y = 5
@@ -6853,6 +6867,7 @@ focus_tree = {
 			any_state = {
 				OR = {
 					state = 34
+					state = 1095
 					state = 965
 					state = 6
 					state = 8
@@ -6879,6 +6894,7 @@ focus_tree = {
 		will_lead_to_war_with = HOL
 		completion_reward = {
 			add_state_claim = 34
+			add_state_claim = 1095
 			add_state_claim = 965
 			add_state_claim = 6
 			add_state_claim = 8
@@ -6897,6 +6913,7 @@ focus_tree = {
 					any_owned_state = {
 						OR = {
 							state = 34
+							state = 1095
 							state = 965
 							state = 6
 							state = 8
@@ -7647,6 +7664,7 @@ focus_tree = {
 				ROOT = {
 					add_state_claim = 8
 					add_state_claim = 34
+					add_state_claim = 1095
 					add_state_claim = 6
 					if = {
 						limit = {
@@ -7670,6 +7688,7 @@ focus_tree = {
 				custom_effect_tooltip = if_they_refuse_tt
 				ROOT = {
 					add_state_claim = 34
+					add_state_claim = 1095
 					add_state_claim = 6
 					add_state_claim = 8
 					add_state_claim = 7
@@ -7741,6 +7760,7 @@ focus_tree = {
 					OR = {
 						controls_state = 6
 						controls_state = 34
+						controls_state = 1095
 						controls_state = 965
 					}
 					exists = yes
@@ -7993,8 +8013,10 @@ focus_tree = {
 			is_subject = no
 			any_state = {
 				OR = {
-					state = 102
+				    state = 102
+					state = 853
 					state = 103
+					state = 852
 					state = 958
 					state = 736
 					state = 163
@@ -12216,6 +12238,10 @@ focus_tree = {
 					bonus = 0.5
 					uses = 1
 				}
+				add_breakthrough_progress = {
+					specialization = specialization_air
+					value = 0.25
+				}
 			}
 			else = {
 				add_tech_bonus = {
@@ -12223,6 +12249,10 @@ focus_tree = {
 					bonus = 1
 					uses = 1
 					category = cat_heavy_fighter
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_air
+					value = 0.25
 				}
 			}
 		}
@@ -12371,6 +12401,13 @@ focus_tree = {
 				uses = 3
 				category = jet_technology
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.50
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = r56_generic_jet_idea
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}

@@ -177,11 +177,45 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = maud_focus
-				bonus = 1.0
-				uses = 1
-				category = nuclear
+			IF = {
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = maud_focus
+					bonus = 0.75
+					uses = 1
+					category = nuclear
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.5
+				}
+			}
+			ELSE = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.75
+				}
+			}
+			if = {
+				limit = { 
+					ROOT = {
+						has_character = ENG_john_cockcroft
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				ROOT = { 
+					ENG_john_cockcroft = {
+						add_scientist_xp = {
+							experience = 500
+							specialization = specialization_nuclear
+						}
+					}
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -700,6 +734,11 @@ focus_tree = {
 				uses = 3
 				category = radar_tech
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.25
+			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -725,11 +764,45 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = maud_focus
-				bonus = 1.0
-				uses = 1
-				category = nuclear
+			IF = {
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = ENG_tube_alloys
+					bonus = 0.50
+					uses = 1
+					category = nuclear
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.25
+				}
+			}
+			ELSE = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.50
+				}
+			}
+			if = {
+				limit = { 
+					ROOT = {
+						has_character = ENG_james_chadwick
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				ROOT = { 
+					ENG_james_chadwick = {
+						add_scientist_xp = {
+							experience = 500
+							specialization = specialization_nuclear
+						}
+					}
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -931,18 +1004,7 @@ focus_tree = {
 							num_of_factories > 30
 						}
 						GER = {
-							if = {
-								limit = {
-									NOT = { has_global_flag = ger_vanilla_focus_tree }
-								}
-								has_completed_focus = GER_rhineland
-							}
-							if = {
-								limit = {
-									has_global_flag = ger_vanilla_focus_tree
-								}
-								has_completed_focus = GER_rhineland_vanilla
-							}
+							has_completed_focus = GER_remilitarize_the_rhineland
 						}
 						threat > 0.2
 					}
@@ -960,28 +1022,17 @@ focus_tree = {
 							num_of_factories > 30
 						}
 						GER = {
-							if = {
-								limit = {
-									NOT = { has_global_flag = ger_vanilla_focus_tree }
-								}
-								has_completed_focus = GER_rhineland
-							}
-							if = {
-								limit = {
-									has_global_flag = ger_vanilla_focus_tree
-								}
-								has_completed_focus = GER_rhineland_vanilla
-							}
+							has_completed_focus = GER_remilitarize_the_rhineland
 						}
 						threat > 0.2
 					}
 				}
 			}
 		} #at war with major or ger in rhineland or high threat
-		prerequisite = { focus = uk_industrial_focus }
+		prerequisite = { focus = royal_ordinance_focus } #was focus = uk_industrial_focus in the base game, I made it that way mostly to avoid reorganizing focuses, should probably be adjusted
 		icon = GFX_goal_generic_munitions_factories
-		x = 1
-		y = 2
+		x = 0
+		y = 1
 		relative_position_id = uk_industrial_focus
 		cost = 10
 		ai_will_do = {
@@ -1072,7 +1123,67 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
-	
+
+	focus = {
+		id = ENG_vickers_experimental_facility_focus 
+
+		prerequisite = { focus = uk_industrial_focus }
+
+		dynamic = yes
+
+		available = {
+			#126 = {
+			#	is_fully_controlled_by = ROOT
+			#}
+			surrender_progress < 0.5
+		} 
+
+		icon = GFX_focus_generic_aircraft_production
+
+		x = 1
+		y = 2
+		
+		relative_position_id = uk_industrial_focus
+
+		cost = 5
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			custom_effect_tooltip = ENG_vickers_experimental_facility_focus_tt
+			hidden_effect = {
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
+					}
+					prioritize = { 126 }
+					add_building_construction = {
+						type = air_facility
+						level = 1
+						instant_build = yes
+						province = 11333 # South London
+					}
+				}
+			}
+		}
+	}
+
 	focus = {
 		id = uk_small_arms_focus
 		prerequisite = { focus = royal_ordinance_focus }
@@ -1107,21 +1218,16 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = generic_secret_weapons_ns
 			add_tech_bonus = {
 				name = UK_secret_focus
-				bonus = 1.0
-				uses = 2
-				category = electronics
-			}
-			add_tech_bonus = {
-				name = UK_secret_focus
-				bonus = 1.0
-				uses = 2
+				bonus = 0.5 # was 1
+				uses = 1 # was 2
 				category = rocketry
 			}
 			add_tech_bonus = {
 				name = UK_secret_focus
-				bonus = 1.0
+				bonus = 0.5 # was 1
 				uses = 1
 				category = nuclear
 			}
@@ -1592,6 +1698,12 @@ focus_tree = {
 				uses = 4
 				category = jet_technology
 			}
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.50
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = r56_generic_jet_idea
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -3444,6 +3556,7 @@ focus_tree = {
 				if = {
 					limit = {
 						has_full_control_of_state = 444
+						has_full_control_of_state = 1093
 						has_full_control_of_state = 443
 						has_full_control_of_state = 445
 						has_full_control_of_state = 440
@@ -7081,7 +7194,6 @@ focus_tree = {
 		available = { 	
 			RAJ = {
 				is_subject_of = ENG
-				NOT = { surrender_progress > 0.1 } # if I got it correctly setting the autonomy to dominion level changes the occupation and can expel invading armies.
 			}
 		}
 
@@ -7101,6 +7213,7 @@ focus_tree = {
 			set_autonomy = {
 				target = RAJ
 				autonomy_state = autonomy_dominion
+				end_wars = no
 			}
 			RAJ = { add_timed_idea = { idea = ENG_indian_autonomy_RAJ_idea days = 730 } }
 			custom_effect_tooltip = ENG_indian_autonomy_tt
@@ -8025,7 +8138,11 @@ focus_tree = {
 					ruling_only = yes
 				}
 				has_country_leader =  {
-					name = "Lord Edward Halifax"
+					character = ENG_lord_edward_halifax
+					ruling_only = yes
+				}
+				has_country_leader =  {
+					character = ENG_clement_attlee
 					ruling_only = yes
 				}
 			}

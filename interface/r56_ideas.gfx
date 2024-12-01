@@ -6,16 +6,20 @@ spriteTypes = {
 	#Sub-Ideology
 	spriteType = {
 		name = "GFX_ideology_anarcho_capitalism"
-		texturefile = "gfx/interface/ideologies/voluntaryism_group.dds"
+		texturefile = "gfx/interface/ideologies/ancap_group.dds"
 	}
 	spriteType = {
 		name = "GFX_ideology_anarcho_capitalism_n"
-		texturefile = "gfx/interface/ideologies/voluntaryism_group.dds"
+		texturefile = "gfx/interface/ideologies/ancap_n_group.dds"
 	}
 
 ###------> Generic ideas <><> <><> <><> <><> <><>
 	#female advisors, not yet activated by Paradox
 
+	spriteType = {
+		name = "GFX_idea_recent_military_unification"
+		texturefile = "gfx/interface/ideas/generic/r56_idea_recent_military_unification.dds"
+	}
 	spriteType = {
 		name = "GFX_idea_r56_production"
 		texturefile = "gfx/interface/ideas/generic/r56_idea_production.dds"
@@ -251,20 +255,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/afg/r56_idea_AFG_hazaras_excluded.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_AFG_cavalry"
-		texturefile = "gfx/interface/ideas/afg/r56_idea_AFG_cavalry.dds"
-	}
-	spriteType = {
 		name = "GFX_idea_AFG_lawless_emirate"
 		texturefile = "gfx/interface/ideas/afg/r56_idea_AFG_lawless_emirate.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_AFG_unyielding_resolve"
 		texturefile = "gfx/interface/ideas/afg/r56_idea_AFG_unyielding_resolve.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_r56_AFG_khad"
-		texturefile = "gfx/interface/ideas/afg/r56_idea_AFG_khad.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_r56_AFG_zahir_shah"
@@ -306,6 +302,30 @@ spriteTypes = {
 		name = "GFX_idea_AFG_advisor_wazir_akbar_khan"
 	   	texturefile = "gfx/interface/ideas/afg/advisors/r56_idea_AFG_advisor_wazir_akbar_khan.dds"
    	}
+	spriteType = {
+		name = "GFX_idea_AFG_bank_millie"
+		texturefile = "gfx/interface/ideas/afg/companies/r56_idea_AFG_bank_millie.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AFG_ataturks_legacy"
+		texturefile = "gfx/interface/ideas/afg/r56_idea_AFG_ataturks_legacy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AFG_loya_jirga"
+		texturefile = "gfx/interface/ideas/afg/r56_idea_AFG_loya_jirga.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AFG_international_mujahideen"
+		texturefile = "gfx/interface/ideas/afg/r56_idea_AFG_international_mujahideen.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AFG_pashtunwali"
+		texturefile = "gfx/interface/ideas/afg/r56_idea_AFG_pashtunwali.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AFG_the_afghani"
+		texturefile = "gfx/interface/ideas/afg/r56_idea_AFG_the_afghani.dds"
+	}
 
 ###------> AUS <><> <><> <><> <><> <><>
 	spriteType = {
@@ -351,6 +371,66 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_AUS_skoda_engineers"
 		texturefile = "gfx/interface/ideas/aus/r56_idea_AUS_skoda_engineers.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_july_followed_june"
+		texturefile = "gfx/interface/ideas/aus/r56_idea_AUS_july_followed_june.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_constitution"
+		texturefile = "gfx/interface/ideas/aus/r56_idea_AUS_constitution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_constitution_burn"
+		texturefile = "gfx/interface/ideas/aus/r56_idea_AUS_constitution_burn.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_empire_constitution"
+		texturefile = "gfx/interface/ideas/aus/r56_idea_AUS_empire_constitution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_empire_constitution_burn"
+		texturefile = "gfx/interface/ideas/aus/r56_idea_AUS_empire_constitution_burn.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_united_front"
+		texturefile = "gfx/interface/ideas/aus/r56_idea_AUS_united_front.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_austrofascism_success"
+		texturefile = "gfx/interface/ideas/aus/r56_idea_AUS_austrofascism_success.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_president_miklas"
+		texturefile = "gfx/interface/ideas/aus/r56_idea_AUS_president_miklas.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_president_starhemberg"
+		texturefile = "gfx/interface/ideas/aus/r56_idea_AUS_president_starhemberg.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_president_seitz"
+		texturefile = "gfx/interface/ideas/aus/r56_idea_AUS_president_seitz.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_language_issue"
+		texturefile = "gfx/interface/ideas/aus/r56_idea_AUS_language_issue.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_hungarian_resistance"
+		texturefile = "gfx/interface/ideas/aus/r56_idea_AUS_hungarian_resistance.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_corporatism"
+		texturefile = "gfx/interface/ideas/aus/r56_idea_AUS_corporatism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_dolfuss_good"
+		texturefile = "gfx/interface/ideas/aus/r56_idea_AUS_dolfuss_good.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_dolfuss_bad"
+		texturefile = "gfx/interface/ideas/aus/r56_idea_AUS_dolfuss_bad.dds"
 	}
 
 
@@ -1230,6 +1310,18 @@ spriteType = {
 		name = "GFX_idea_HON_ancap_society"
 		texturefile = "gfx/interface/ideas/hon/r56_voluntaryism_society.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_HON_banana_republic"
+		texturefile = "gfx/interface/ideas/hon/r56_idea_HON_banana_republic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HON_indebted_to_the_west"
+		texturefile = "gfx/interface/ideas/hon/r56_idea_HON_indebted_to_the_west.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HON_political_instability"
+		texturefile = "gfx/interface/ideas/hon/r56_idea_HON_political_instability.dds"
+	}
 
 ###------> ITA <><> <><> <><> <><> <><>
 	##############
@@ -1381,16 +1473,48 @@ spriteType = {
 
 ###------> INS <><> <><> <><> <><> <><>
 	spriteType = {
-		name = "GFX_idea_shell"
-		texturefile = "gfx/interface/ideas/ins/companies/r56_idea_INS_shell.dds"
-	}
-	spriteType = {
 		name = "GFX_idea_INS_economy_idea"
 		texturefile = "gfx/interface/ideas/ins/r56_idea_INS_economy.dds"
 	}
 	spriteType = {#generic
 		name = "GFX_idea_indonesia_flag"
 		texturefile = "gfx/interface/ideas/ins/r56_idea_INS_indonesia_flag.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_INS_aniem"
+		texturefile = "gfx/interface/ideas/ins/r56_idea_INS_aniem.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_INS_gouvernmentsmarine"
+		texturefile = "gfx/interface/ideas/ins/r56_idea_INS_gouvernmentsmarine.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_INS_knilm"
+		texturefile = "gfx/interface/ideas/ins/r56_idea_INS_knilm.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_INS_pal_soerabaja"
+		texturefile = "gfx/interface/ideas/ins/r56_idea_INS_pal.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_INS_pelni"
+		texturefile = "gfx/interface/ideas/ins/r56_idea_INS_pelni.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_INS_pln"
+		texturefile = "gfx/interface/ideas/ins/r56_idea_INS_pln.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_INS_ptdi"
+		texturefile = "gfx/interface/ideas/ins/r56_idea_INS_ptdi.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_shell"
+		texturefile = "gfx/interface/ideas/ins/companies/r56_idea_INS_shell.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_INS_soerabaja_dm"
+		texturefile = "gfx/interface/ideas/ins/r56_idea_INS_soerabaja_dm.dds"
 	}
 
 
@@ -2664,7 +2788,15 @@ spriteType = {
 		name = "GFX_idea_MPL_united_against_france"
 		texturefile = "gfx/interface/ideas/mpl/r56_idea_MPL_united_against_france.dds"
 	}
-
+###------> JOR <><> <><> <><> <><> <><>
+	spriteType = {
+		name = "GFX_idea_JOR_terrain_experts"
+		texturefile = "gfx/interface/ideas/jor/r56_idea_JOR_terrain_experts.dds" 
+	}
+	spriteType = {
+		name = "GFX_idea_JOR_1928_treaty"
+		texturefile = "gfx/interface/ideas/jor/r56_idea_JOR_1928_treaty.dds" 
+	}
 	### -----> ISR
 	spriteType = {
 		name = "GFX_idea_ISR_aliyah"
@@ -2928,6 +3060,21 @@ spriteType = {
 	spriteType = {
 		name = "GFX_idea_MNC_rainier_III"
 		texturefile = "gfx/interface/ideas/mnc/r56_MNC_idea_Rainier_III.dds"
+	}
+
+###------> MEN <><> <><> <><> <><> <><>
+
+	spriteType = {
+		name = "GFX_idea_MEN_mongol_raids"
+		texturefile = "gfx/interface/ideas/men/r56_idea_MEN_mongol_raids.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MEN_kwantungs_invisible_hand"
+		texturefile = "gfx/interface/ideas/men/r56_idea_MEN_kwantungs_invisible_hand.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MEN_the_long_winter"
+		texturefile = "gfx/interface/ideas/men/r56_idea_MEN_the_long_winter.dds"
 	}
 
 }
