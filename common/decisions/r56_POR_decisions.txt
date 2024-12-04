@@ -274,7 +274,7 @@ POR_towards_a_greater_portugal = {
 			} 
 		}
 		available = { 
-			has_completed_focus = POR_the_iberiian_social_revolution
+			has_completed_focus = POR_the_iberian_social_revolution
 			custom_trigger_tooltip = {
 				tooltip = organize_elections_in_the_hispanic_regions_tt
 				790 = {
