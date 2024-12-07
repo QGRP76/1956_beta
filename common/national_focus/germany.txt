@@ -193,6 +193,10 @@ focus_tree = {
 			
 			GER_stop_rearmament = yes
 
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			remove_ideas = r56_GER_economic_uncertainty
+
 		}
 	}
 
@@ -853,7 +857,7 @@ focus_tree = {
 				59 = { #Hannover
 					is_owned_and_controlled_by = ROOT
 				}
-				978 = { #Baden
+				923 = { #Baden
 					is_owned_and_controlled_by = ROOT
 				}
 			}
@@ -873,11 +877,11 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					978 = { #Baden
+					923 = { #Baden
 						is_owned_and_controlled_by = ROOT
 					}
 				}
-				978 = { set_state_category = metropolis }
+				923 = { set_state_category = metropolis }
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -1745,11 +1749,15 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
+			remove_ideas = r56_GER_economic_uncertainty
+
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			add_timed_idea = {
 				idea = r56_GER_four_year_plan
 				days = 1460
 			}
+
 			#Set Variables for the Descision cost of GER_coerce_the_technocrats here for tooltips reasons
 			hidden_effect = {
 				set_variable = {
@@ -2726,6 +2734,22 @@ focus_tree = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = {
+					51 = {
+						is_fully_controlled_by = ROOT
+					}
+				}
+				51 = {
+					add_dynamic_modifier = { 
+						modifier = r56_concentrated_armament_program
+						scope = GER
+					}
 				}
 			}
 		}
@@ -7235,7 +7259,7 @@ focus_tree = {
 						state = 7
 						state = 35
 						state = 6
-						state = 977
+						state = 1094
 						state = 29
 						state = 785
 						state = 15
@@ -10231,7 +10255,7 @@ focus_tree = {
 				
 				custom_trigger_tooltip = {
 				 	tooltip = GER_anschluss_eq_trigger_tt
-				 	check_variable = { num_equipment_in_armies_k@infantry_equipment > 50 }
+				 	check_variable = { num_equipment_in_armies_k@infantry_equipment > 40 }
 				}
 			}
 			
@@ -10268,7 +10292,7 @@ focus_tree = {
 		select_effect = {
 			if = {
 				limit = {
-					has_global_flag = aus_got_focus_tree
+					has_global_flag = aus_dlc_focus_tree
 				}
 				AUS = {
 					country_event = {
@@ -12135,92 +12159,88 @@ focus_tree = {
 		}
 	}
 
-	#focus = {
-	#	id = GER_second_vienna_award
-	#	icon = GFX_goal_generic_cavalry
-	#	prerequisite = { focus = GER_fate_of_czechoslovakia focus = GER_integrate_czechoslovakia }
-#
-	#	x = -2
-	#	y = 1
-	#	relative_position_id = GER_fate_of_czechoslovakia
-	#	cost = 4
-	#	
-	#	bypass = {
-	#		OR = {
-	#			AND = {
-	#				OR = {
-	#					HUN = {
-	#						NOT = { has_government = fascism }
-	#						is_friend_or_potential_friend_of_GER = no
-	#					}
-	#					ROM = {
-	#						OR = {
-	#							AND = {
-	#								NOT = { controls_state = 76 }
-	#								NOT = { controls_state = 83 }
-	#								NOT = { controls_state = 84 }
-	#							}
-	#							has_war_with = HUN
-	#							AND = {
-	#								is_in_faction_with = GER
-	#								HUN = { NOT = { is_in_faction_with = GER } }#GER should not want to give #territory to Hungary if Romania joined the axis early.
-	#							}
-	#						}
-	#					}
-	#				}
-	#				OR = {
-	#					BUL = { is_friend_or_potential_friend_of_GER = no }
-	#					ROM = {
-	#						OR = {
-	#							NOT = { controls_state = 77 }
-	#							has_war_with = BUL					
-	#						}
-	#					}					
-	#				}
-	#			}
-	#			HUN = { exists = no } 
-	#			ROM = { exists = no	}
-	#			HUN = { has_capitulated = yes }
-	#			ROM = { has_capitulated = yes }
-	#			HUN = { is_subject_of = ROM } #just rude
-	#		}
-	#	}
-#
-	#	available = {
-	#		is_subject = no
-	#		is_faction_leader = yes
-	#		has_army_manpower = { size > 749999 }
-	#		custom_trigger_tooltip = {
-	#		 	tooltip = GER_second_vienna_award_eq_trigger_tt
-	#		 	check_variable = { num_equipment_in_armies_k@infantry_equipment > 60 }
-	#		}
-	#		has_capitulated = no
-	#	}
-#
-	#	ai_will_do = {
-	#		factor = 10
-	#	}
-	#	
-	#	search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL }
-	#
-	#	completion_reward = {
-	#	custom_effect_tooltip = "TODO_Manu: Effects are underwhelming, need something new"
-	#		if = {
-	#			limit = {
-	#				HUN = {
-	#					is_friend_or_potential_friend_of_GER = yes
-	#				}
-	#				ROM = {
-	#					controls_state = 76
-	#					NOT = { has_war_with = HUN }
-	#				}
-	#			}
-	#			country_event = { 
-	#				id = germany.20 
-	#			}
-	#		}
-	#	}
-	#}
+	focus = {
+		id = GER_second_vienna_award	#R56: was disabled in vanilla, consider adding in focuses around it
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = GER_fate_of_czechoslovakia focus = GER_integrate_czechoslovakia }
+
+		x = -3
+		y = 1
+		relative_position_id = GER_fate_of_czechoslovakia
+		cost = 4
+		
+		# bypass = {	#currently no focuses below it
+		# 	OR = {
+		# 		AND = {
+		# 			OR = {
+		# 				HUN = {
+		# 					NOT = { has_government = fascism }
+		# 					is_friend_or_potential_friend_of_GER = no
+		# 				}
+		# 				ROM = {
+		# 					OR = {
+		# 						AND = {
+		# 							NOT = { controls_state = 76 }
+		# 							NOT = { controls_state = 83 }
+		# 							NOT = { controls_state = 84 }
+		# 						}
+		# 						has_war_with = HUN
+		# 						AND = {
+		# 							is_in_faction_with = GER
+		# 							HUN = { NOT = { is_in_faction_with = GER } }#GER should not want to give #territory to Hungary if Romania joined the axis early.
+		# 						}
+		# 					}
+		# 				}
+		# 			}
+		# 			OR = {
+		# 				BUL = { is_friend_or_potential_friend_of_GER = no }
+		# 				ROM = {
+		# 					OR = {
+		# 						NOT = { controls_state = 77 }
+		# 						has_war_with = BUL					
+		# 					}
+		# 				}					
+		# 			}
+		# 		}
+		# 		HUN = { exists = no } 
+		# 		ROM = { exists = no	}
+		# 		HUN = { has_capitulated = yes }
+		# 		ROM = { has_capitulated = yes }
+		# 		HUN = { is_subject_of = ROM } #just rude
+		# 	}
+		# }
+
+		available = {
+			is_subject = no
+			is_faction_leader = yes
+			has_army_manpower = { size > 749999 }
+			custom_trigger_tooltip = {
+			 	tooltip = GER_second_vienna_award_eq_trigger_tt
+			 	check_variable = { num_equipment_in_armies_k@infantry_equipment > 60 }
+			}
+			has_capitulated = no
+
+			HUN = {
+				is_friend_or_potential_friend_of_GER = yes
+			}
+			ROM = {
+				controls_state = 76
+				NOT = { has_war_with = HUN }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL }
+	
+		completion_reward = {
+			country_event = { 
+				id = germany.20 
+			}
+		}
+	}
 
 	focus = {
 		id = GER_form_rome_berlin_axis
@@ -12339,7 +12359,7 @@ focus_tree = {
 				expire = 0
 			}
 
-			add_state_claim = 39
+			add_state_core = 39
 			add_state_claim = 850
 			add_state_claim = 853
 			add_state_claim = 852
@@ -13690,7 +13710,7 @@ focus_tree = {
 
 					give_resource_rights = {
 						receiver = ROOT 
-						state = 918 #Västerbotten 
+						state = 1029 #Västerbotten 
 					}
 				}
 
@@ -14392,6 +14412,7 @@ focus_tree = {
 				}
 				NOT = {
 					has_completed_focus = GER_kill_hitler
+					has_completed_focus = GER_oppose_hitler_ww
 				}
 			}
 		}
@@ -17766,12 +17787,12 @@ focus_tree = {
 			IF = {
 				limit = {
 					NOT = {
-						981 = { #Barotziland
+						1097 = { #Barotziland
 							is_claimed_by = ROOT
 						}
 					}
 				}
-				add_state_claim = 981
+				add_state_claim = 1097
 			}
 			IF = {
 				limit = {
@@ -20177,6 +20198,17 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
+			if = {
+				limit = {
+					has_idea = r56_GER_four_year_plan
+				}
+				modify_timed_idea = {
+					idea = r56_GER_four_year_plan
+					days = 30
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+
 			custom_effect_tooltip = {
 				localization_key = GER_ascension_of_character_focus_tt
 				CHARACTER = GER_hermann_goring
@@ -22558,9 +22590,12 @@ focus_tree = {
 				}
 			}
 
-			42 = { set_demilitarized_zone = no }
-			51 = { set_demilitarized_zone = no }
-			978 = { set_demilitarized_zone = no }
+			42 = { set_demilitarized_zone = no } #RHINELAND
+			51 = { set_demilitarized_zone = no } #MOSSELLAND
+			922 = { set_demilitarized_zone = no } #FRANKFURT
+			923 = { set_demilitarized_zone = no } #BADEN
+			989 = { set_demilitarized_zone = no } #OSTRHINELAND
+			1053 = { set_demilitarized_zone = no } #SAARLAND
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -34731,7 +34766,7 @@ focus_tree = {
 			add_state_claim = 774
 			add_state_claim = 771
 			add_state_claim = 770
-			add_state_claim = 981
+			add_state_claim = 1097
 			add_state_claim = 545
 			add_state_claim = 901
 			add_state_claim = 900
@@ -35017,9 +35052,12 @@ focus_tree = {
 				GER_remove_mefo_bills = yes
 			}
 
-			42 = { set_demilitarized_zone = no }
-			51 = { set_demilitarized_zone = no }
-			978 = { set_demilitarized_zone = no }
+			42 = { set_demilitarized_zone = no } #RHINELAND
+			51 = { set_demilitarized_zone = no } #MOSSELLAND
+			922 = { set_demilitarized_zone = no } #FRANKFURT
+			923 = { set_demilitarized_zone = no } #BADEN
+			989 = { set_demilitarized_zone = no } #OSTRHINELAND
+			1053 = { set_demilitarized_zone = no } #SAARLAND
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -39488,7 +39526,6 @@ focus_tree = {
 				add_state_claim = 773
 				add_state_claim = 777
 			}
-			complete_national_focus = GER_prepare_france_invasion
 		}
 		search_filters = {
 			FOCUS_FILTER_ALLIANCE
@@ -41365,13 +41402,13 @@ focus_tree = {
 					546 = {
 						set_state_owner_to = GER
 					}
-					1055 = {
-						set_state_owner_to = GER
-					}
 					541 = {
 						set_state_owner_to = GER
 					}
 					737 = {
+						set_state_owner_to = GER
+					}
+					726 = {
 						set_state_owner_to = GER
 					}
 					every_country = {

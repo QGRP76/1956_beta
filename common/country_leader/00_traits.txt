@@ -927,6 +927,7 @@ leader_traits = {
 	}
 
 	retired_officer = {
+		sprite = 13
 		random = yes
 		war_support_factor = 0.05
 		high_command_cost_factor = -0.25
@@ -1073,7 +1074,7 @@ leader_traits = {
 	}
 
 	nationalist_symbol = {
-		sprite = 12
+		sprite = 13
 		war_support_factor = 0.05
 		stability_factor = 0.05
 		army_core_attack_factor = 0.1
@@ -4651,7 +4652,7 @@ leader_traits = {
 		political_power_factor = 0.1
 	}
 
-		################################
+	################################
 	##       NORWAY TRAITS 		  ##
 	################################
 
@@ -13701,7 +13702,7 @@ leader_traits = {
 		command_power = @tier2_cp_cost
 
 		ai_will_do = {
-			factor = @army_chief_factor_2
+			factor = 2
 			modifier = {
 				factor = 0
 				command_power < @tier2_cp_cost
