@@ -29,7 +29,7 @@ POR_together_against_salazar = {
 	}
 }
 
-POR_securing_the_revolution = {
+POR_maintaining_the_fire = {
 	icon = GFX_decision_generic_election
 	priority = 1999
 	allowed = { original_tag = POR }

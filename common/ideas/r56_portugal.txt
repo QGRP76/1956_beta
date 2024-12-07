@@ -515,7 +515,7 @@ ideas = {
 		}
 
 		POR_general_directorate_of_securty_idea = {
-			name = POR_general_directorate_of_security
+			name = POR_repurposing_the_spn
 			picture = generic_spy_intel
 			allowed = { original_tag = POR }
 			removal_cost = -1

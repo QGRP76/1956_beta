@@ -814,7 +814,7 @@ POR_the_path_to_economic_progress = {
 		ai_will_do = { base = 25 }
 		visible = { 
 			OR = {
-				has_completed_focus = POR_maintain_the_fire
+				has_completed_focus = POR_continue_popular_reform
 				has_completed_focus = POR_reforge_the_social_state
 				has_completed_focus = POR_assistance_for_the_countryside
 			}
@@ -886,7 +886,7 @@ POR_the_path_to_economic_progress = {
 		visible = {
 			OR = {
 				has_completed_focus = POR_reforge_the_social_state 
-				has_completed_focus = POR_maintain_the_fire
+				has_completed_focus = POR_continue_popular_reform
 				has_completed_focus = POR_seek_urban_working_class_support
 			} 
 		}
@@ -1233,7 +1233,7 @@ POR_together_against_salazar = {
 	}
 }
 
-POR_securing_the_revolution = {
+POR_maintaining_the_fire = {
 	POR_answer_the_question_of_our_colonies = {   
 		icon = GFX_decision_generic_operation 
 		activation = { 

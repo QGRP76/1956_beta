@@ -2778,7 +2778,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_general_directorate_of_security
+		id = POR_reopen_the_national_propaganda_secretariat
 		prerequisite = { focus = POR_consolidate_the_revolution }
 		icon = GFX_goal_crush_resistance
 		cost = 6
@@ -2822,13 +2822,13 @@ focus_tree = {
 		id = POR_empower_socialist_organizations
 		prerequisite = { 
 			focus = POR_crush_reactionary_impedence
-			focus = POR_general_directorate_of_security 
+			focus = POR_reopen_the_national_propaganda_secretariat 
 		}
 		icon = GFX_focus_GER_support_the_proletarian_uprising
 		cost = 7
 		x = -1
 		y = 1
-		relative_position_id = POR_general_directorate_of_security
+		relative_position_id = POR_reopen_the_national_propaganda_secretariat
 		available = {
 			NOT = { has_completed_focus = POR_curb_political_militias }
 		}
@@ -3723,7 +3723,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_maintain_the_fire
+		id = POR_continue_popular_reform
 		prerequisite = { focus = POR_modernize_the_junta_institutions }
 		icon = GFX_goal_cuba_support_the_confederation_of_cuban_workers
 		cost = 8

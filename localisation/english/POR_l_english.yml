@@ -65,7 +65,7 @@
  POR_expand_the_merchant_fleet_desc:0 "The Great War displayed firsthand the incredible destruction that submarine warfare can pose for international trade. We must ensure that the Portuguese merchant fleet is ready to counter such disruptions."
 
  POR_anti_submarine_weaponry:0 "Anti-Submarine Weaponry"
- POR_anti_submarine_weaponry_desc:0 ""
+ POR_anti_submarine_weaponry_desc:0 "Anti-submarine technology has come long a way since the days of the Great War. We should modernize our navy along these lines."
 
  POR_the_future_of_naval_deterrence:0 "The Future of Naval Deterrence"
  POR_the_future_of_naval_deterrence_desc:0 ""
@@ -296,12 +296,13 @@
  POR_storm_the_national_assembly:0 "Storm the National Assembly"
  POR_storm_the_national_assembly_desc:0 "We are finally in a position where we may unseat the man responsible for so many years of lost progress! At once, we shall storm Lisbon, depose Salazar and his reactionary allies, and forge Portugal the tomorrow we deserve!"
  POR_storm_the_national_assembly_tt:0 "§RA civil war will start!§! The ratio of units under our command will depend on support for the ruling government."
- portugal.45.d:0 "Commmie civil war time"
+ portugal.45.d:0 "Today marks a new day for Portugal. No longer shall Portugal remain western Europe's backwater! No longer shall Salazar tyrannize our people. To the great Portugugese working class:"
+ portugal.45.a:0 "The time to take back our nation is now!"
  POR_reactionary_resistance:0 "Reactionary Resistance"
  POR_divided_revolution:0 "Divided Revolution"
 
  #Socialist/Democratic Decision Menu
- POR_securing_the_revolution:0 "Securing the Revolution"
+ POR_maintaining_the_fire:0 "Maintaining the Fire!"
 
  POR_answer_the_question_of_our_colonies:0 "Answer the Question of Our Colonies"
  POR_answer_the_question_of_our_colonies_desc:0 "Our revolution has ended with triumph, and we've secured our hold over the mainland. We must now move to address internal matters, the most important of which being our colonial holdings in Africa and Asia. Are we to withdraw from these long-held regions?"
@@ -364,9 +365,7 @@
 
  POR_reopen_the_national_propaganda_secretariat:0 "Reopen the National Propaganda Secretariat"
  POR_reopen_the_national_propaganda_secretariat_desc:0 ""
-
- POR_general_directorate_of_security:0 "General Directorate of Security"
- POR_general_directorate_of_security_desc:0 ""
+ POR_repurposing_the_spn:0 "Repurposing the SPN"
 
  POR_covert_return_to_the_world_stage:0 "Covert Return to the World Stage"
  POR_covert_return_to_the_world_stage_desc:0 ""
@@ -391,7 +390,7 @@
  POR_protectors_of_the_revolution:0 "Protectors of the Revolution"
 
  POR_the_iberian_social_revolution:0 "The Iberian Social Revolution"
- POR_the_iberian_social_revolution_desc:0 ""
+ POR_the_iberian_social_revolution_desc:0 "Even before the horrid leadership of Salazar's Estado-Novo, Portugal was decades behind the other nations of western Europe. We must bring down this unequal order, destroy the symbols of oppression he used, and instill a new revolutionary fervor upon our great working class!"
  POR_promote_revolutionary_artwork:0 "Promote Revolutionary Artwork"
  POR_suppress_symbols_of_portuguese_aristocracy:0 "Suppress Symbols of Portuguese Aristocracy"
 
@@ -438,10 +437,10 @@
  POR_land_redistribution:0 "Land Redistribution"
 
  POR_restore_the_social_state:0 "Restore the Social State"
- POR_restore_the_social_state_desc:0 ""
+ POR_restore_the_social_state_desc:0 "Salazar and his economic policies have cut the status of Portugal's safety-net in the name of austerity. We should undo these policies at once!"
 
  POR_end_the_educational_abyss:0 "End the Educational Abyss"
- POR_end_the_educational_abyss_desc:0 ""
+ POR_end_the_educational_abyss_desc:0 "We can tolerate no longer how Portugal remains one of Europe's most stubbornly illiterate nations. Programs investing in public education are a necessity if we are ever to join the other nations of the western world."
 
  POR_prepare_for_a_war_of_annihilation:0 "Prepare for a War of Annihilation"
  POR_prepare_for_a_war_of_annihilation_desc:0 ""
@@ -521,8 +520,8 @@
  POR_organize_angolan_provincial_elections:0 "Organize Angolan Provincial Elections"
  POR_create_a_constitutional_judiciary:0 "Create a Constitutional Judiciary"
 
- POR_maintain_the_fire:0 "Maintain the Fire!"
- POR_maintain_the_fire_desc:0 ""
+ POR_continue_popular_reform:0 "Continue Popular Reform"
+ POR_continue_popular_reform_desc:0 "Consolidating our rule, and consolidating Portuguese democracy should not be a matter of holding a gun to the head of the people. It is essential we never stop putting the needs of the peoplle first!"
 
  POR_fortify_portuguese_democracy:0 "Fortify Portuguese Democracy"
  POR_fortify_portuguese_democracy_desc:0 ""
