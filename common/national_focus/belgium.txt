@@ -8,11 +8,7 @@ focus_tree = {
 			add = 10
 			tag = BEL
 			has_dlc = "Gotterdammerung"
-			has_global_flag = bel_got_focus_tree
-		}
-		modifier = {
-			factor = 0
-			has_global_flag = aus_got_focus_tree
+			has_global_flag = bel_dlc_focus_tree
 		}
 	}
 
@@ -1097,7 +1093,7 @@ focus_tree = {
 			custom_effect_tooltip = BEL_modify_royal_military_academy_dynamic_modifier_tt
 			add_to_variable = { 
 				BEL_royal_military_academy_army_artillery_attack_factor = 0.1
-				tooltip = artillery_attack_factor_tt				
+				tooltip = army_artillery_attack_factor_tt				
 			}	
 		}
 
@@ -1647,8 +1643,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BEL_poudreries_reunions_de_belgique
-		icon = GFX_focus_BEL_poudreries_reunions_de_belgique 
+		id = BEL_poudreries_reunies_de_belgique
+		icon = GFX_focus_BEL_poudreries_reunies_de_belgique
 	
 		prerequisite = { focus = BEL_fn_herstal }								
 
@@ -3525,10 +3521,11 @@ focus = {
 				long_name = BEL_fascism_vnv_long
 				name = BEL_fascism_vnv
 			}
-			custom_effect_tooltip = BEL_vnv_dominant_tt
+			#rename the entire country to Flanders, fr?
+			#custom_effect_tooltip = BEL_vnv_dominant_tt
 
 			hidden_effect = {
-				set_cosmetic_tag = BEL_vnv_dominant
+				#set_cosmetic_tag = BEL_vnv_dominant
 
 				
 				if = {
@@ -3871,7 +3868,7 @@ focus = {
 
 	focus = {
 		id = BEL_strength_and_brotherhood
-		icon = GFX_focus_PLACEHOLDER #TODO_GK Pending ethics
+		icon = GFX_focus_BEL_order_of_the_golden_lion
 	
 		prerequisite = { focus = BEL_burgundy_rising }
 
@@ -7277,13 +7274,15 @@ focus = {
 	}
 
 	focus = {
-		id = BEL_wunderwaffle
-		icon = GFX_focus_BEL_wunderwaffle
+		id = BEL_stk
+		icon = GFX_focus_BEL_stk
 	
 		prerequisite = { focus = BEL_val_benoit_institutes }
 		prerequisite = { focus = BEL_engine_of_the_economy }
 		
 		relative_position_id = BEL_val_benoit_institutes
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
 		x = 1
 		y = 1

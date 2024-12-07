@@ -117,12 +117,13 @@ technologies = {
 			infantry_weapons
 			recon_tech
 		}
-
-		custom_effect_tooltip = {
-			localization_key = SP_UNLOCK_PROJECT
-			PROJECT = sp_r56_tank_optical_rangefinder
-		}
 		
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_r56_tank_optical_rangefinder
+			}
+		}
 
 		#special_project_specialization = { specialization_land }
 		
@@ -217,16 +218,16 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		categories = {
-			infantry_weapons
-		}
-
 		#Once we have more custom SP's this should be moved deeper into the tree
 		on_research_complete = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_PROJECT
 				PROJECT = sp_r56_gammon_bomb
 			}
+		}
+
+		categories = {
+			infantry_weapons
 		}
 
 		#special_project_specialization = { specialization_land }
@@ -1385,6 +1386,34 @@ technologies = {
 				movement = 0.05
 			}
 		}
+	}
+
+	mountain_defensive_training = {	#Austria
+
+		research_cost = 1
+
+		# only from focus!
+		allow = {
+			always = no
+		}
+
+
+		#If you change these
+		#Change the custom tooltip too: AUS_osterreichische_gebirgsjager_tt
+		infantry = {
+			mountain = {
+				defence = 0.05
+				movement = 0.05
+			}
+		}
+
+		mountaineers = {
+			mountain = {
+				defence = 0.05
+				movement = 0.1
+			}
+		}
+
 	}
 
 	

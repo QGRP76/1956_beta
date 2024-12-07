@@ -44,7 +44,7 @@ technologies = {
 			ap_attack = 0.05
 		}
 	}
-
+	#Adaptable Grenade
 	r56_gammon_bomb_tech = {
 		allow = {
 			always = no
@@ -60,7 +60,28 @@ technologies = {
 		}
 
 		paratrooper = {
-			ap_attack = 0.25
+			ap_attack = 1
+		}
+	}
+
+	#Heavy Tank Studies
+	r56_heavy_tank_studies_tech = {
+		allow = {
+			always = no
+		}
+		start_year = 1937
+
+		categories = {
+			cat_heavy_armor
+		}
+
+		heavy_armor = {
+			armor_value = 0.05
+			reliability_factor = 0.05
+		}
+
+		medium_armor = {
+			reliability_factor = 0.01
 		}
 	}
 
@@ -105,6 +126,42 @@ technologies = {
 		artillery_brigade = {
 			soft_attack = 0.01
 		}
-		
+	}
+
+	#############################
+		### Naval PROJECTS ###
+	#############################
+	r56_sp_naval_huff_duff_device_tech = {
+		allow = {
+			always = no
+		}
+		start_year = 1939
+
+		categories = {
+			naval_equipment
+			dd_tech
+		}
+
+		night_spotting_chance = 0.05
+
+		destroyer = {
+			sub_detection = 0.25
+		}
+
+		light_cruiser = {
+			sub_detection = 0.15
+		}
+
+		heavy_cruiser = {
+			sub_detection = 0.10
+		}
+
+		battle_cruiser = {
+			sub_detection = 0.05
+		}
+
+		battleship = {
+			sub_detection = 0.05
+		}
 	}
 }

@@ -154,9 +154,9 @@ characters = {
 				is_country_leader = no
 				if = {
 					limit = {
-						has_global_flag = ger_vanilla_focus_tree
+						has_dlc = "Gotterdammerung"
 					}
-					has_completed_focus = GER_oppose_hitler
+					has_completed_focus = GER_start_the_proletarian_revolution
 				}
 				else = {
 					has_completed_focus = GER_repeal_reichstag_fire_decree
@@ -2460,7 +2460,7 @@ characters = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					has_completed_focus = GER_reestablish_free_elections 
+					has_completed_focus = GER_restore_weimar
 				}
 				ELSE = {
 					has_completed_focus = GER_re_establish_free_elections_ww
@@ -2516,7 +2516,24 @@ characters = {
 				}
 			}
 			available = {
-				has_completed_focus = GER_repeal_reichstag_fire_decree	#note the lack of "the"
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					not = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+				is_country_leader = no
+				if = {
+					limit = {
+						has_dlc = "Gotterdammerung"
+					}
+					has_completed_focus = GER_start_the_proletarian_revolution
+				}
+				else = {
+					has_completed_focus = GER_repeal_reichstag_fire_decree	#note the lack of "the"
+				}
 			}
 			traits = {
 				communist_revolutionary
@@ -3085,6 +3102,7 @@ characters = {
 		name = "Walter Ulbricht"
 		portraits = {
 			army = {
+				large = GFX_portrait_GER_walter_ulbricht
 				small="GFX_idea_minister_GER_Walter_Ulbricht"
 			}
 		}
@@ -3096,23 +3114,14 @@ characters = {
 			}
 			visible = {
 				NOT = {
-					OR = {
-						has_completed_focus = GER_a_new_reich
-						has_completed_focus = GER_anschluss
-					}
+					has_completed_focus = GER_a_new_reich
+					has_completed_focus = GER_anschluss
+					has_dlc = "Gotterdammerung"	#focus below not available
 				}
 			}
 			available = {
 				has_government = communism
-				if = {
-					limit = {
-						has_global_flag = ger_vanilla_focus_tree
-					}
-					has_completed_focus = GER_bodenreform_projects
-				}
-				else = {
-					has_completed_focus = GER_collectivize_industry
-				}
+				has_completed_focus = GER_collectivize_industry
 			}		
 			ai_will_do = {
 				factor = 5
@@ -4556,7 +4565,7 @@ characters = {
 			}
 			available = {
 				OR = {
-					has_completed_focus = GER_rocketry_innovasions
+					has_completed_focus = GER_rocketry_innovations
 					has_completed_focus = GER_wunderwaffe
 					has_completed_focus = GER_glorious_mechanical_machinations
 				}
