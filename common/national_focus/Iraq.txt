@@ -68,7 +68,7 @@ focus_tree = {
 
 		x = 6
 		y = 1
-		cost = 8
+		cost = 10
 
 		ai_will_do = {
 			factor = 5
@@ -85,27 +85,45 @@ focus_tree = {
 		relative_position_id = IRQ_the_north
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 291 }
+			if = {
 				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
+					1045 = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
 					}
 				}
+				random_owned_controlled_state = {
+					limit = {
+						state = 1045
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			custom_effect_tooltip = r56_newline
+			random_owned_controlled_state = {
+				limit = {
+					state = 1045
+				}
 				add_building_construction = {
-					type = infrastructure
+					type = dam
 					level = 1
 					instant_build = yes
+					province = {
+						id = 7977
+					}
 				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				# Add AFG_hdyroelectric_power dynamic modifier here
+			}
+			custom_effect_tooltip = {
+				localization_key = building_state_modifier|dam
+				INDENT = "    "
 			}
 		}
 	}
@@ -168,9 +186,8 @@ focus_tree = {
 				prioritize = { 1048 }
 				limit = {
 					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
+						building = infrastructure
+						size > 0
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -184,9 +201,8 @@ focus_tree = {
 				prioritize = { 291 }
 				limit = {
 					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
+						building = infrastructure
+						size > 0
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -200,9 +216,8 @@ focus_tree = {
 				prioritize = { 1045 }
 				limit = {
 					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
+						building = infrastructure
+						size > 0
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -444,7 +459,24 @@ focus_tree = {
 		relative_position_id = IRQ_kut_dam
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			custom_effect_tooltip = IRQ_BE_Unlock
+			random_owned_controlled_state = {
+				prioritize = { 291 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = IRQ_baghdad_electric
 		}
 	}
 	focus = {
@@ -486,7 +518,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 0
-						include_locked = yes
 					}
 				}
 				increase_state_category = yes
@@ -990,7 +1021,7 @@ focus_tree = {
 
 		x = -3
 		y = 1
-		cost = 5
+		cost = 8
 
 		ai_will_do = {
 			factor = 5
@@ -1222,9 +1253,8 @@ focus_tree = {
 				limit = {
 					state = 1046
 					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
+						building = infrastructure
+						size > 0
 					}
 				}
 				increase_state_category = yes
@@ -1279,7 +1309,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 0
-						include_locked = yes
 					}
 				}
 				increase_state_category = yes
@@ -1561,7 +1590,7 @@ focus_tree = {
 				}
 			}
 			add_timed_idea = {
-				idea = COS_banking_reforms
+				idea = COS_banking_reforms_idea
 				days = 180
 			}
 		}
@@ -1759,9 +1788,8 @@ focus_tree = {
 				limit = {
 					state = 676
 					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
+						building = infrastructure
+						size > 0
 					}
 				}
 				increase_state_category = yes
@@ -3088,11 +3116,11 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			add_political_power = 35
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.05
 			}
-			add_political_power = 35
 			add_ideas = IRQ_military_political_intervention
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT FOCUS_FILTER_POLITICAL } 
@@ -3107,7 +3135,7 @@ focus_tree = {
 		
 		x = 1
 		y = 1
-		cost = 8
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -3126,7 +3154,6 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = IRQ_the_black_list_tt
-			add_stability = 0.05
 			custom_effect_tooltip = IRQ_black_list_army_tt
 			hidden_effect = {
 				remove_ideas = IRQ_the_black_list_idea
@@ -3164,16 +3191,13 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 35
+			custom_effect_tooltip = r56_newline
 			swap_ideas = {
 				remove_idea = IRQ_ghazi_idea
 				add_idea = IRQ_ghazi_idea_2
 			}
-			add_political_power = 35
-			add_popularity = {
-				ideology = neutrality
-				popularity = -0.05
-			}
-			add_war_support = 0.05
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL } 
 	}
@@ -3210,6 +3234,8 @@ focus_tree = {
 				ideology = neutrality
 				popularity = 0.05
 			}
+			custom_effect_tooltip = IRQ_ghazi_no_focus
+			custom_effect_tooltip = r56_newline
 			if = {
 				limit = {
 					has_idea = IRQ_ghazi_idea_2
@@ -3219,6 +3245,7 @@ focus_tree = {
 			else = {
 				remove_ideas = IRQ_ghazi_idea
 			}
+			custom_effect_tooltip = r56_newline
 			set_cosmetic_tag = IRQ_REP
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -3250,14 +3277,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = IRQ_ghazi_idea_2
-				add_idea = IRQ_ghazi_idea_3
-			}
-			add_political_power = 35
+			add_political_power = -15
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.05
+			}
+			custom_effect_tooltip = r56_newline
+			swap_ideas = {
+				remove_idea = IRQ_ghazi_idea_2
+				add_idea = IRQ_ghazi_idea_3
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -3383,10 +3411,11 @@ focus_tree = {
 					}
 					add_opinion_modifier = {
 						target = ROOT
-						modifier = medium_decrease
+						modifier = large_decrease
 					}
 				}
 			}
+			custom_effect_tooltip = r56_newline
 			remove_ideas = IRQ_oil_concessions
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT FOCUS_FILTER_POLITICAL } 
@@ -3528,10 +3557,6 @@ focus_tree = {
 		cancel_if_invalid = no
 
 		completion_reward = {
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.05
-			}
 			random_owned_controlled_state = {
 				prioritize = { 291 }
 				limit = {
@@ -3548,12 +3573,17 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_ideas = IRQ_german_treaty_2
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
 			diplomatic_relation = {
 				country = GER
 				relation = offer_military_access
 				active = yes
 			}
+			custom_effect_tooltip = r56_newline
+			add_ideas = IRQ_german_treaty_2
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 	}
@@ -3693,7 +3723,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 	}
 	focus = {
-		id = IRQ_militarize_the_saadabad_pact #TODO
+		id = IRQ_militarize_the_saadabad_pact
 		icon = GFX_focus_TUR_treaty_of_saadabad
 		prerequisite = {
 			focus = IRQ_strengthen_ties_with_iran
@@ -3711,16 +3741,50 @@ focus_tree = {
 		}
 
 		available = {
+			is_subject = no
+			is_in_faction = no
+			has_government = neutrality
 			has_country_leader = {
 				character = IRQ_bakr_sidqi
 				ruling_only = yes
+			}
+			any_country = {
+				has_country_flag = TUR_saadabad_pact_member
+				NOT = { 
+					has_war_with = ROOT
+					is_subject = yes
+					is_in_faction = yes
+				}
 			}
 		}
 
 		relative_position_id = IRQ_strengthen_ties_with_iran
 
 		completion_reward = {
-			
+			add_war_support = 0.05
+			create_faction = "Saadabad Pact"
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = TUR_saadabad_pact
+					}
+				}
+				custom_effect_tooltip = IRQ_will_invite_saadabad
+			}
+			every_other_country = {
+				limit = {
+					has_country_flag = TUR_saadabad_pact_member
+					capital_scope = {
+						is_on_continent = middle_east
+					}
+					NOT = { 
+						has_war_with = ROOT
+						is_subject = yes
+						is_in_faction = yes
+					}
+				}
+				country_event = { id = generic.5 hours = 6 }
+			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 	}
@@ -3779,7 +3843,7 @@ focus_tree = {
 		
 		x = 1
 		y = 1
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
@@ -3974,9 +4038,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 75
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = IRQ_ahmed_barzani
-			add_political_power = 125
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY_IMPROVEMENT } 
 	}
@@ -4042,6 +4107,12 @@ focus_tree = {
 			focus = IRQ_flames_of_jihad
 			focus = IRQ_golden_square_focus
 		}
+
+		available = {
+			NOT = {
+				has_completed_focus = IRQ_purge_the_reds
+			}
+		}
 		
 		x = 7
 		y = 1
@@ -4050,12 +4121,17 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available = {
-			#
-		}
 
 		completion_reward = {
-
+			add_stability = -0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.10
+			}
+			add_timed_idea = {
+				idea = MON_communist_propaganda_idea
+				days = 180
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -4069,7 +4145,7 @@ focus_tree = {
 		
 		x = -1
 		y = 1
-		cost = 5
+		cost = 8
 
 		ai_will_do = {
 			factor = 10
@@ -4082,11 +4158,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			ENG = { remove_resource_rights = 1045 }
-			ENG = { remove_resource_rights = 1048 }
-			remove_ideas = IRQ_oil_concessions
-			ENG = {
-				country_event = irq.15
+			add_stability = -0.05
+			add_political_power = 35
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.10
+			}
+			if = {
+				limit = {
+					has_completed_focus = IRQ_infiltrate_the_military
+				}
+				custom_effect_tooltip = IRQ_infiltrate_the_military_tt
+			}
+			else = {
+				custom_effect_tooltip = IRQ_undermine_sidqi_tt
 			}
 		}
 	}	
@@ -4100,7 +4185,7 @@ focus_tree = {
 		
 		x = 1
 		y = 1
-		cost = 5
+		cost = 8
 
 		ai_will_do = {
 			factor = 10
@@ -4113,11 +4198,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			ENG = { remove_resource_rights = 1045 }
-			ENG = { remove_resource_rights = 1048 }
-			remove_ideas = IRQ_oil_concessions
-			ENG = {
-				country_event = irq.15
+			add_war_support = 0.10
+			add_political_power = 15
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			if = {
+				limit = {
+					has_completed_focus = IRQ_undermine_sidqis_rule
+				}
+				custom_effect_tooltip = IRQ_infiltrate_the_military_tt
+			}
+			else = {
+				custom_effect_tooltip = IRQ_undermine_sidqi_tt
 			}
 		}
 	}	
@@ -4260,13 +4354,45 @@ focus_tree = {
 			factor = 10
 		}
 		
-		completion_reward = {
-			ENG = { remove_resource_rights = 1045 }
-			ENG = { remove_resource_rights = 1048 }
-			remove_ideas = IRQ_oil_concessions
-			ENG = {
-				country_event = irq.15
+		available = {
+			OR = {
+				controls_state = 1048
+				controls_state = 1045
+				controls_state = 676
 			}
+			has_country_leader = {
+				character = IRQ_bakr_sidqi
+				ruling_only = yes
+			}
+		}
+		
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 1048
+						state = 1045
+						state = 676
+					}
+				}
+				ENG = {
+					remove_resource_rights = PREV
+					if = {
+						limit = {
+							NOT = {
+								has_war_with = IRQ
+							}
+						}
+						country_event = { id = irq.15 hours = 12 }
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = large_decrease
+					}
+				}
+			}
+			custom_effect_tooltip = r56_newline
+			remove_ideas = IRQ_oil_concessions
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -4288,22 +4414,49 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			1048 = {
-				add_core_of = IRQ
-				add_dynamic_modifier = {
-					modifier = r56_IRQ_kurdish_minority
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 1048
+						state = 1049
+						state = 676
+					}
+					is_controlled_by = ROOT
 				}
-			}
-			1049 = {
-				add_core_of = IRQ
-				add_dynamic_modifier = {
-					modifier = r56_IRQ_kurdish_minority
+				if = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = kurdish_agitation
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = kurdish_agitation
+					}
 				}
-			}
-			add_political_power = 75
-			add_popularity = {
-				ideology = communism
-				popularity = 0.15
+				if = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = kurdish_separatism
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = kurdish_separatism
+					}
+				}
+				if = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = r56_IRQ_kurdish_minority
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = r56_IRQ_kurdish_minority
+					}
+				}
+				custom_effect_tooltip = r56_newline
+				add_dynamic_modifier = {
+					modifier = r56_IRQ_kurdish_workers_integrated
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4391,14 +4544,20 @@ focus_tree = {
 		
 		x = -1
 		y = 1
-		cost = 8
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
 		}
 		
 		completion_reward = {
-			
+			add_stability = 0.05
+			add_political_power = -35
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			remove_ideas = IRQ_shia_protests
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -7374,10 +7533,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_stability = 0.05
 			add_popularity = {
 				ideology = communism
-				popularity = -0.2
+				popularity = -0.10
 			}
+			custom_effect_tooltip = IRQ_communist_no_focus
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -7399,15 +7560,15 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = IRQ_Iran_treaty
-			add_opinion_modifier = {
-				target = PER
-				modifier = TUR_treaty_with_iran
-			}
 			PER = {
 				add_opinion_modifier = {
 					target = IRQ
-					modifier = TUR_treaty_with_iran
+					modifier = large_increase
 				}
+			}
+			add_opinion_modifier = {
+				target = PER
+				modifier = large_increase
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }

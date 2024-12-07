@@ -3214,15 +3214,13 @@ leader_traits = {
 	}
 
 	IRQ_the_shadow_king_2 = { # Undermine the King
-	name = IRQ_the_shadow_king
+		name = IRQ_the_shadow_king
 		random = no
 
 		stability_factor = 0.05
 		political_power_factor = 0.05
 		consumer_goods_factor = -0.05
 		fascism_drift = 0.01
-		war_support_factor = 0.05
-		mobilization_speed = 0.1
 	}
 
 	IRQ_the_shadow_king_3 = { # A Kingdom Just In Name...
@@ -3230,13 +3228,10 @@ leader_traits = {
 		random = no
 
 		stability_factor = 0.10
-		conscription_factor = 0.05
 		political_power_factor = 0.05
-		fascism_drift = 0.01
-		war_support_factor = 0.10
-		surrender_limit = 0.05
-		mobilization_speed = 0.1
-		drift_defence_factor = -0.05
+		war_support_factor = 0.05
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
 	}
 
 	IRQ_bismarck_of_the_arabs = {
@@ -3266,6 +3261,18 @@ leader_traits = {
 			id = "ENG"
 			value = -10
 		}
+	}
+	
+	IRQ_militant_kurdish_figurehead = {
+		random = no
+		sprite = 13
+
+		military_leader_cost_factor = -0.25
+		stability_factor = -0.05
+		war_support_factor = 0.10
+		war_support_weekly = 0.01
+		fascism_drift = 0.01
+		conscription_factor = 0.05
 	}
 
 ###------> ITA <><> <><> <><> <><> <><>

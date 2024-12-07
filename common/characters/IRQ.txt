@@ -1,12 +1,12 @@
-﻿characters={
-	IRQ_yasin_hashimi={
+﻿characters = {
+	IRQ_yasin_hashimi = {
 		name="Yaseen al-Hashimi"
-		portraits={
-			civilian={
+		portraits = {
+			civilian = {
 				large="gfx/leaders/IRQ/r56_portrait_IRQ_Yasin_Hashimi.dds"
 			}
 		}
-		country_leader={
+		country_leader = {
 			ideology= controlled_democracy
 			expire="1965.1.1"
 			id=-1
@@ -17,14 +17,14 @@
 			}
 		}
 	}
-	IRQ_mohamed_sadr ={
+	IRQ_mohamed_sadr = {
 		name="Muhammad al-Sadr"
-		portraits={
-			civilian={
+		portraits = {
+			civilian = {
 				large="gfx/leaders/IRQ/r56_portrait_IRQ_mohamed_sadr.dds"
 			}
 		}
-		country_leader={
+		country_leader = {
 			ideology= moderate_islamism
 			expire="1965.1.1"
 			id=-1
@@ -33,14 +33,14 @@
 			}
 		}
 	}
-	IRQ_hikmat_sulayman={
+	IRQ_hikmat_sulayman = {
 		name="Hikmat Sulayman"
-		portraits={
-			civilian={
+		portraits = {
+			civilian = {
 				large="gfx/leaders/IRQ/r56_portrait_IRQ_hikmat_suleyman.dds"
 			}
 		}
-		country_leader={
+		country_leader = {
 			ideology= military_junta
 			expire="1965.1.1"
 			id=-1
@@ -51,18 +51,18 @@
 			}
 		}
 	}
-	IRQ_ghazi_i={
+	IRQ_ghazi_i = {
 		name="Ghazi I"
-		portraits={
-			civilian={
+		portraits = {
+			civilian = {
 				large="gfx/leaders/IRQ/r56_portrait_IRQ_ghazi_I.dds"
 			}
-			army={
+			army = {
 				large="gfx/leaders/IRQ/r56_portrait_IRQ_ghazi_I.dds"
 				small="GFX_idea_IRQ_ghazi"
 			}
 		}
-		country_leader={
+		country_leader = {
 			ideology=absolute_monarchism
 			expire="1965.1.1"
 			id=-1
@@ -86,14 +86,14 @@
 			}			
 		}	
 	}
-	IRQ_rashid_ali_algaylani={
+	IRQ_rashid_ali_algaylani = {
 		name="Rashid Ali al-Gaylani"
-		portraits={
-			civilian={
+		portraits = {
+			civilian = {
 				large="GFX_portrait_iraq_rashid_al_gaylani"
 			}
 		}
-		country_leader={
+		country_leader = {
 			ideology=fascism_ideology
 			expire="1965.1.1"
 			id=-1
@@ -103,14 +103,14 @@
 			}
 		}
 	}
-	IRQ_yusuf_salman_yusuf={
+	IRQ_yusuf_salman_yusuf = {
 		name="Yusuf Salman Yusuf"
-		portraits={
-			civilian={
+		portraits = {
+			civilian = {
 				large="gfx/leaders/IRQ/r56_portrait_IRQ_Yusuf_Salman_Yusuf.dds"
 			}
 		}
-		country_leader={
+		country_leader = {
 			ideology=marxism
 			expire="1965.1.1"
 			id=-1
@@ -119,33 +119,33 @@
 			}
 		}
 	}
-	IRQ_kamel_chaderchi={
+	IRQ_kamel_chaderchi = {
 		name="Kamil Chaderchi"
-		portraits={
-			civilian={
+		portraits = {
+			civilian = {
 				large="gfx/leaders/IRQ/r56_portrait_IRQ_kamil_chaderchi.dds"
 			}
-			army={
+			army = {
 				small="GFX_idea_generic_navy_arab_1"
 			}
 		}
-		country_leader={
+		country_leader = {
 			ideology= socialism
 			expire="1949.1.1.12"
 			id=-1
-			traits={
+			traits = {
 				savvy_politician
 			}
 		}
 	}
-	IRQ_abd_al_ilah={
+	IRQ_abd_al_ilah = {
 		name="Abd al-Ilah ibn Ali al-Hashimi"
-		portraits={
-			civilian={
+		portraits = {
+			civilian = {
 				large="gfx/leaders/IRQ/r56_portrait_IRQ_abd_al_ilah.dds"
 			}
 		}
-		country_leader={
+		country_leader = {
 			ideology= constitutional_monarchy
 			expire="1949.1.1.12"
 			id=-1
@@ -154,23 +154,23 @@
 			}
 		}
 	}
-	IRQ_faisal_ii={
+	IRQ_faisal_ii = {
 		name="Faisal II"
-		portraits={
-			civilian={
+		portraits = {
+			civilian = {
 				large="gfx/leaders/IRQ/r56_portrait_IRQ_faisal_II.dds"
 			}
 		}
-		country_leader={
+		country_leader = {
 			ideology=absolute_monarchism
 			expire="1949.1.1.12"
 			id=-1
 		}
 	}
-	# IRQ_Tahsien_Ali={	#no portrait
+	# IRQ_Tahsien_Ali = {	#no portrait
 	# 	name="Tahsien Ali"
-	# 	portraits={
-	# 		army={
+	# 	portraits = {
+	# 		army = {
 	# 			small="GFX_idea_generic_army_arab_2"
 	# 			large="gfx/leaders/IRQ/r56_portrait_IRQ_Tahsien_Ali.dds"
 	# 		}
@@ -186,10 +186,10 @@
 	# 		logistics_skill = 2
 	# 	}
 	# }
-	# IRQ_Shaker_Saadoun={ #Who is this guy? No source
+	# IRQ_Shaker_Saadoun = { #Who is this guy? No source
 	# 	name="Shaker Mahmoud al-Saadoun"
-	# 	portraits={
-	# 		army={
+	# 	portraits = {
+	# 		army = {
 	# 			small="GFX_idea_generic_army_arab_2"
 	# 			large="gfx/leaders/kr_generic/Portrait_Arabia_Generic_land_new_4.dds"
 	# 		}
@@ -205,10 +205,10 @@
 	# 		logistics_skill = 2
 	# 	}
 	# }
-	# IRQ_Saabeh_naguib_alazi={	#Speaks 5 languages, Arabic, Turkish, English, German and French #no portrait
+	# IRQ_Saabeh_naguib_alazi = {	#Speaks 5 languages, Arabic, Turkish, English, German and French #no portrait
 	# 	name="Sabeeh Najib Al - Azi"
-	# 	portraits={
-	# 		army={
+	# 	portraits = {
+	# 		army = {
 	# 			small="GFX_idea_generic_army_arab_2"
 	# 			large="gfx/leaders/IRQ/r56_portrait_IRQ_Saabeh_naguib_alazi.dds"
 	# 		}
@@ -224,10 +224,10 @@
 	# 		logistics_skill = 3
 	# 	}
 	# }
-	# IRQ_sami_ftah ={	#no portrait
+	# IRQ_sami_ftah = {	#no portrait
 	# 	name="Sami Fata'ah" 
-	# 	portraits={
-	# 		army={
+	# 	portraits = {
+	# 		army = {
 	# 			small="GFX_idea_generic_army_arab_2"
 	# 			large="gfx/leaders/IRQ/r56_portrait_IRQ_sami_ftah.dds"
 	# 		}
@@ -242,7 +242,7 @@
 	# 		planning_skill = 2
 	# 		logistics_skill = 1
 	# 	}
-	# 	advisor={
+	# 	advisor = {
 	# 		slot = high_command
 	# 		idea_token = IRQ_fahmi_said
 	# 		ledger = air
@@ -258,42 +258,42 @@
 	# 		}
 	# 	}
 	# }
-	# IRQ_Haqqi_Tawfik_Mufti={	
+	# IRQ_Haqqi_Tawfik_Mufti = {	
 	# 	name="Haqqi Tawfik Al Mufti"
-	# 	portraits={
-	# 		army={
+	# 	portraits = {
+	# 		army = {
 	# 			small="GFX_idea_generic_army_arab_2"
 	# 			large="gfx/leaders/IRQ/r56_portrait_IRQ_Haqqi_Tawfik_Mufti.dds"
 	# 		}
 	# 	}
 	# }
-	# IRQ_Abdulsalam_arif={	
+	# IRQ_Abdulsalam_arif = {	
 	# 	name="Abdul Salam Arif"
-	# 	portraits={
-	# 		army={
+	# 	portraits = {
+	# 		army = {
 	# 			small="GFX_idea_generic_army_arab_2"
 	# 			large="gfx/leaders/IRQ/r56_portrait_IRQ_Abdulsalam_arif.dds"
 	# 		}
 	# 	}
 	# }
-	IRQ_abdul_al_karim_qasim={	
+	IRQ_abdul_al_karim_qasim = {	
 		name="Abdul al-Karim Qasim"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="GFX_idea_generic_army_arab_2"
 				large="gfx/leaders/IRQ/r56_portrait_IRQ_Abd_al_Karim_Qasim.dds"
 			}
 		}
 	}
-	IRQ_saleh_saib_al_huburi={
+	IRQ_saleh_saib_al_huburi = {
 		name="Saleh Saib al-Jubori"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="GFX_idea_IRQ_saleh_saib_al_huburi"
 				large="gfx/leaders/IRQ/r56_portrait_Saleh_Saib_al_Juburi.dds"
 			}
 		}
-		corps_commander={
+		corps_commander = {
 			traits = {
 				politically_connected artillerist
 			}
@@ -303,7 +303,7 @@
 			planning_skill = 1
 			logistics_skill = 1
 		}
-		advisor={
+		advisor = {
 			slot = high_command
 			idea_token = IRQ_saleh_saib_al_huburi
 			ledger = army
@@ -319,7 +319,7 @@
 			}
 		}
 	}
-	IRQ_nureddin_mahmud={
+	IRQ_nureddin_mahmud = {
 		corps_commander = {
 			traits = { politically_connected cavalry_officer }
 			skill = 2
@@ -328,7 +328,7 @@
 			planning_skill = 2
 			logistics_skill = 1
 		}
-		advisor={ #became head of Iraqi cavalry, supported fascist coup then pardoned
+		advisor = { #became head of Iraqi cavalry, supported fascist coup then pardoned
 			slot = high_command
 			idea_token = IRQ_nureddin_mahmud
 			ledger = army
@@ -344,20 +344,20 @@
 			}
 		}		
 		name="Nur al-Din Mahmud" #proper romanization
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/idea_arabia_generic_land_7.dds"
 				large="gfx/leaders/Arabia/portrait_arabia_generic_land_7.dds"
 			}
 		}
 	}		
-	IRQ_bakr_sidqi={ # Most competent general in Iraq
+	IRQ_bakr_sidqi = { # Most competent general in Iraq
 		name="Bakr Sidqi"
-		portraits={
+		portraits = {
 			civilian = {
 				small="gfx/interface/ideas/irq/IRQ_Baqri_Sikdi_2.dds"
 			}
-			army={
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_Baqri_Sikdi.dds"
 				large="gfx/leaders/IRQ/r56_portrait_Bakr_Sidqi_army.dds"
 			}
@@ -370,7 +370,7 @@
 			planning_skill = 4
 			logistics_skill = 1
 		}
-		advisor={
+		advisor = {
 			slot = high_command
 			idea_token = IRQ_bakr_sidqi_army
 			ledger = army
@@ -385,7 +385,7 @@
 				factor = 1.000
 			}
 		}
-		advisor={
+		advisor = {
 			slot = army_chief
 			idea_token = IRQ_bakr_sidqi_chief
 			ledger = army
@@ -401,7 +401,7 @@
 			}
 		}
 		# add theorist role if no other is viable
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = IRQ_bakr_sidqi
 			can_be_fired = no
@@ -425,7 +425,7 @@
 			}
 		}
 	}
-	# IRQ_tahir_atraqji ={ #Who is this guy? No source
+	# IRQ_tahir_atraqji = { #Who is this guy? No source
 	# 	corps_commander = {
 	# 		traits = { cavalry_officer trait_reckless }
 	# 		skill = 1
@@ -434,7 +434,7 @@
 	# 		planning_skill = 1
 	# 		logistics_skill = 1
 	# 	}
-	# 	advisor={
+	# 	advisor = {
 	# 		slot = high_command
 	# 		idea_token = IRQ_tahir_atraqji
 	# 		ledger = army
@@ -450,14 +450,14 @@
 	# 		}
 	# 	}
 	# 	name="Tahir Atraqji"
-	# 	portraits={
-	# 		army={
+	# 	portraits = {
+	# 		army = {
 	# 			small="gfx/interface/ideas/idea_arabia_generic_land_7.dds"
 	# 			large="gfx/leaders/Arabia/portrait_arabia_generic_land_7.dds"
 	# 		}
 	# 	}
 	# }
-	IRQ_salah_al_din_al_sabbagh={
+	IRQ_salah_al_din_al_sabbagh = {
 		corps_commander = {
 			traits = { politically_connected trickster AUS_nazi_loyalties } #replace with MEN_fascist_sympathizer later
 			skill = 2
@@ -466,7 +466,7 @@
 			planning_skill = 1
 			logistics_skill = 3
 		}
-		advisor={
+		advisor = {
 			slot = high_command
 			idea_token = IRQ_salah_al_din_al_sabbagh_army
 			ledger = army
@@ -481,7 +481,7 @@
 				factor = 1.000
 			}
 		}
-		advisor={
+		advisor = {
 			slot = army_chief
 			idea_token = IRQ_salah_al_din_al_sabbagh_chief
 			ledger = army
@@ -496,7 +496,7 @@
 				factor = 1.000
 			}
 		}
-		advisor={
+		advisor = {
 			slot = theorist
 			idea_token = IRQ_salah_al_din_al_sabbagh_theorist
 			ledger = army
@@ -512,14 +512,14 @@
 			}
 		}
 		name="Salah al-Din al-Sabbagh"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_Salah_al_Din_al_Sabbagh.dds"
 				large="gfx/leaders/IRQ/r56_portrait_Salah_al_Din_al_Sabbagh.dds"	
 			}
 		}
 	}	
-	IRQ_kamil_shabib={
+	IRQ_kamil_shabib = {
 		corps_commander = {
 			traits = { politically_connected career_officer }
 			skill = 2
@@ -528,7 +528,7 @@
 			planning_skill = 1
 			logistics_skill = 2
 		}
-		advisor={
+		advisor = {
 			slot = army_chief
 			idea_token = IRQ_kamil_shabib
 			allowed = {
@@ -543,14 +543,14 @@
 			}
 		}
 		name="Kamil Shabib"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/idea_arabia_generic_land_6.dds"
 				large="gfx/leaders/Arabia/portrait_arabia_generic_land_6.dds"
 			}
 		}
 	}
-	IRQ_jafar_al_askari ={
+	IRQ_jafar_al_askari = {
 		field_marshal = {
 			traits = { war_hero old_guard guerilla_fighter inflexible_strategist }
 			skill = 3
@@ -559,7 +559,7 @@
 			planning_skill = 3
 			logistics_skill = 2
 		}
-		advisor={
+		advisor = {
 			slot = army_chief
 			idea_token = IRQ_jafar_al_askari
 			allowed = {
@@ -573,7 +573,7 @@
 				factor = 1.000
 			}
 		}
-		advisor={
+		advisor = {
 			slot = high_command
 			idea_token = IRQ_jafar_al_askari
 			allowed = {
@@ -588,13 +588,13 @@
 			}
 		}
 		name="Ja'far al-Askari"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				large="gfx/leaders/IRQ/r56_portrait_IRQ_jafar_al_askari.dds"
 			}
 		}
 	}
-	IRQ_nuri_al_said={ #must be kept 
+	IRQ_nuri_al_said = { #must be kept 
 		advisor = {
 			slot = political_advisor
 			idea_token = IRQ_nuri_al_said
@@ -623,8 +623,8 @@
 			}
 		}
 		name="Nuri Pasha al-Said"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				large="gfx/leaders/IRQ/r56_portrait_Nuri_al_Said.dds"
 				small="gfx/interface/ideas/irq/IRQ_nuri_al_said.dds"
 			}
@@ -652,8 +652,8 @@
 			}
 		}
 	}
-	IRQ_tahsien_al_askari ={ #yes he's Jafar's bro
-		advisor={
+	IRQ_tahsien_al_askari = { #yes he's Jafar's bro
+		advisor = {
 			slot = political_advisor
 			idea_token = IRQ_tahsien_al_askari
 			allowed = {
@@ -668,13 +668,13 @@
 				}
 		}
 		name="Tahsien al-Askari"
-		portraits={
-			civilian={
+		portraits = {
+			civilian = {
 				small="gfx/interface/ideas/irq/IRQ_tahsien_al_askari.dds"
 			}
 		}
 	}
-	IRQ_abdul_latif_nuri ={ #Who is this guy? No source, will keep cuz portrait
+	IRQ_abdul_latif_nuri = { #Who is this guy? No source, will keep cuz portrait
 		corps_commander = {
 			traits = { desert_fox commando }
 			skill = 2
@@ -683,7 +683,7 @@
 			planning_skill = 1
 			logistics_skill = 3
 		}
-		advisor={
+		advisor = {
 			slot = high_command
 			idea_token = IRQ_abdul_latif_nuri
 			ledger = army
@@ -699,22 +699,22 @@
 			}
 		}
 		name="Abdul Latif Nuri"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				large="gfx/leaders/IRQ/r56_portrait_IRQ_abdul_latif_nuri.dds"
 			}
 		}
 	}	
-	IRQ_council={
+	IRQ_council = {
 		name="Majlis al-Ummah"
-		portraits={
-			civilian={
+		portraits = {
+			civilian = {
 				large="gfx/leaders/IRQ/r56_portrait_IRQ_council.dds"
 			}
 		}
 	}	
-	IRQ_fahmi_said={
-		advisor={
+	IRQ_fahmi_said = {
+		advisor = {
 			slot = high_command
 			idea_token = IRQ_fahmi_said
 			ledger = air
@@ -730,14 +730,14 @@
 				}
 		}
 		name="Fahmi Sa'id"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_Fahmi_Said.dds"
 			}
 		}
 	}
-	IRQ_ali_mahmud_al_shaykh={
-		advisor={
+	IRQ_ali_mahmud_al_shaykh = {
+		advisor = {
 			slot = political_advisor
 			idea_token = IRQ_ali_mahmud_al_shaykh
 			allowed = {
@@ -752,14 +752,14 @@
 			}
 		}
 		name="Ali Mahmud al-Shaykh"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_Ali_Mahmud_al_Shaykh.dds"
 			}
 		}
 	}
-	IRQ_jamil_al_midfai={
-		advisor={
+	IRQ_jamil_al_midfai = {
+		advisor = {
 			slot = political_advisor
 			idea_token = IRQ_jamil_al_midfai
 			allowed = {
@@ -774,14 +774,14 @@
 				}
 		}
 		name="Jamil al-Midfai"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_Jameel_Al_Madfaai.dds"
 			}
 		}
 	}
-	IRQ_muhammad_ali_jawad={
-		advisor={
+	IRQ_muhammad_ali_jawad = {
+		advisor = {
 			cost = 100
 			slot = theorist
 			idea_token = IRQ_muhammad_ali_jawad
@@ -794,14 +794,14 @@
 			}
 		}
 		name="Mohammed Ali Jawad"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_muhammad_ali_jawad.dds"
 			}
 		}
 	}
-	IRQ_josephine_haddad={
-		advisor={
+	IRQ_josephine_haddad = {
+		advisor = {
 			cost = 100
 			slot = theorist
 			idea_token = IRQ_muhammad_ali_jawad
@@ -817,20 +817,20 @@
 				}
 		}
 		name="Josephine Haddad"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_josephine_haddad.dds"
 			}
 		}
 	}
-	IRQ_zeid_bin_hussein={ #prince, uncle of the king                         #previously IRQ_amir_al_illah, not relevant
-		advisor={
+	IRQ_zeid_bin_hussein = { #prince, uncle of the king                         #previously IRQ_amir_al_illah, not relevant
+		advisor = {
 			slot = political_advisor
 			idea_token = IRQ_zeid_bin_hussein
-			allowed  = {
+			allowed = {
 				original_tag  = IRQ
 			}
-			traits  = {
+			traits = {
 				prince_of_terror 
 			}
 		}
@@ -843,42 +843,42 @@
 			logistics_skill = 1
 		}
 		name="Zayd ibn al-Husayn" #proper romanization
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_Zeid_bin_Hussein.dds"
 				large = "gfx/leaders/IRQ/r56_portrait_Zeid_bin_Hussein.dds"
 			}
 		}
 	} 
-	IRQ_ahmed_barzani ={ #a little cursed but bakr sidqi loves kurds more than qasim so... #demoman ... you forgot that Bakr Sidqi is Kurdish and Qassim is a Soviet ####
-		advisor={
+	IRQ_ahmed_barzani = { #a little cursed but bakr sidqi loves kurds more than qasim so... #demoman ... you forgot that Bakr Sidqi is Kurdish and Qassim is a Soviet ####
+		advisor = {
 			slot = political_advisor
 			idea_token = IRQ_ahmed_barzani
-			allowed  = {
+			allowed = {
 				original_tag = IRQ
 			}
 			available = {
 				has_completed_focus = IRQ_pardon_barzani
 			}
-			traits  = {
-				IRQ_militant_kurdish_figurehead 
+			traits = {
+				IRQ_militant_kurdish_figurehead
 			}
 		}
 		name="Ahmed Barzani"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_ahmed_barzani.dds"
 			}
 		}
 	}
-	IRQ_mariam_nerma={ #real, add ideological conditions?
+	IRQ_mariam_nerma = { #real, add ideological conditions?
 		name="Mariam Nerma"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="GFX_idea_generic_political_advisor_female_arab" #small="GFX_idea_generic_political_advisor_europe_1"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = IRQ_mariam_nerma
 			allowed = {
@@ -895,12 +895,12 @@
 	}	
 	IRQ_abdul_muhsin_al_hakim = { # Shia cleric
 		name="Abdul Muhsin al-Hakim"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_abdul_muhsin_al_hakim.dds"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = IRQ_abdul_muhsin_al_hakim
 			allowed = {
@@ -925,35 +925,35 @@
 	}	
 	IRQ_said_qazzaz = { #head of royal intelligence service
 		name = "Saiz Qazzaz"
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = IRQ_said_qazzaz
-			available  = {
+			available = {
 				has_intelligence_agency  = yes 
 			}
 			
-			allowed  = {
+			allowed = {
 				original_tag  = IRQ
 				has_dlc = "La Resistance"
 			}		
-			traits  = {
+			traits = {
 				head_of_intelligence 
 			}
 		}
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_said_qazzaz.dds"
 			}
 		}
 	}	
-	IRQ_ajeel_al_yawar={  #tribal leader
-		advisor={
+	IRQ_ajeel_al_yawar = {  #tribal leader
+		advisor = {
 			slot = political_advisor
 			idea_token = IRQ_ajeel_al_yawar
-			allowed  = {
+			allowed = {
 					original_tag  = IRQ
 				}
-				traits  = {
+				traits = {
 					popular_figurehead 
 				}
 				ai_will_do  = {
@@ -961,20 +961,20 @@
 				}
 		}
 		name="Ajeel al-Yawar"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_ajeel_al_yawar.dds"
 			}
 		}
 	}	
-	IRQ_muhammad_hadid={  #
-		advisor={
+	IRQ_muhammad_hadid = {  #
+		advisor = {
 			slot = political_advisor
 			idea_token = IRQ_muhammad_hadid
-			allowed  = {
+			allowed = {
 					original_tag  = IRQ
 				}
-				traits  = {
+				traits = {
 					captain_of_industry 
 				}
 				ai_will_do  = {
@@ -982,14 +982,14 @@
 				}
 		}
 		name="Muhammad Hadid"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_muhammad_hadid.dds"
 			}
 		}
 	}
-	IRQ_Ali_Mumtaz_al_Daftary={
-		advisor={
+	IRQ_Ali_Mumtaz_al_Daftary = {
+		advisor = {
 			slot = political_advisor
 			idea_token = IRQ_Ali_Mumtaz_al_Daftary
 			available = {
@@ -1006,14 +1006,14 @@
 			}
 		}
 		name="Ali Mumtaz al-Daftry"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_Ali_Mumtaz_al_Daftary.dds"
 			}
 		}
 	}
-	IRQ_Arshad_al_Umari={
-		advisor={
+	IRQ_Arshad_al_Umari = {
+		advisor = {
 			slot = political_advisor
 			idea_token = IRQ_Arshad_al_Umari
 			available = {
@@ -1029,14 +1029,14 @@
 			}
 		}
 		name="Arshad al-Umari"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_Arshad_al_Umari.dds"
 			}
 		}
 	}
-	IRQ_Zhiyaa_Jafar={
-		advisor={
+	IRQ_Zhiyaa_Jafar = {
+		advisor = {
 			slot = political_advisor
 			idea_token = IRQ_Zhiyaa_Jafar
 			available = {
@@ -1052,14 +1052,14 @@
 			}
 		}
 		name="Zhiya'a Jafar"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_Zhiyaa_Jafar.dds"
 			}
 		}
 	}
-	IRQ_Hamdi_al_Pachachi={
-		advisor={
+	IRQ_Hamdi_al_Pachachi = {
+		advisor = {
 			slot = political_advisor
 			idea_token = IRQ_Hamdi_al_Pachachi
 			available = {
@@ -1076,32 +1076,32 @@
 			}
 		}
 		name="Hamdi al-Pachachi"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_Hamdi_al_Pachachi.dds"
 			}
 		}
 	}
-	IRQ_jafar_abu_timman={ #must be kept 
-		advisor={
+	IRQ_jafar_abu_timman = { #must be kept 
+		advisor = {
 			can_be_fired = no
 			slot = political_advisor
 			idea_token = IRQ_jafar_abu_timman
-			allowed  = {
+			allowed = {
 				original_tag  = IRQ
 			}
 			available = {
-				NOT={
+				NOT = {
 					has_completed_focus = IRQ_continue_democratization
 				}
 			}
-			traits  = {
+			traits = {
 				democratic_reformer
 			}
 		}
 		name="Ja'far Abu al-Timman"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				large="gfx/leaders/IRQ/r56_portrait_Iraq_Jafar_Abu_al_Timman.dds"
 				small="gfx/interface/ideas/irq/IRQ_jafar_abu_timman.dds"
 			}
@@ -1117,7 +1117,7 @@
 		# 	logistics_skill = 1
 		# }
 	}
-	IRQ_taha_hashmi={ #must be kept but different role, probably staunch monarchist
+	IRQ_taha_hashmi = { #must be kept but different role, probably staunch monarchist
 		field_marshal = {
 			traits = { organizer politically_connected organisational_leader }
 			skill = 2
@@ -1138,7 +1138,7 @@
 				}
 			}
 		}
-		advisor={
+		advisor = {
 			can_be_fired = no
 			slot = political_advisor
 			idea_token = IRQ_taha_hashmi
@@ -1159,14 +1159,14 @@
 					}
 				}
 			}
-			allowed  = {
+			allowed = {
 				original_tag = IRQ
 			}
 			traits = {
 				puppet_prime_minister
 			}
 		}
-		advisor={
+		advisor = {
 			slot = high_command
 			idea_token = IRQ_taha_hashmi_army
 			ledger = army
@@ -1193,7 +1193,7 @@
 				factor = 1.500
 			}
 		}
-		advisor={
+		advisor = {
 			slot = army_chief
 			idea_token = IRQ_taha_hashmi_chief
 			ledger = army
@@ -1221,15 +1221,15 @@
 			}
 		}
 		name="Taha al-Hashmi"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				large="gfx/leaders/IRQ/r56_portrait_Taha_al_Hashimi.dds"
 				small="gfx/interface/ideas/irq/IRQ_taha_minister.dds"
 			}
 		}
 	}
-	IRQ_jalal_al_awqati={
-		advisor={
+	IRQ_jalal_al_awqati = {
+		advisor = {
 			cost = 100
 			slot = air_chief
 			idea_token = IRQ_jalal_al_awqati
@@ -1244,15 +1244,15 @@
 			}
 		}
 		name="Jalal al-Awqati"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_jalal_al_awqati.dds"
 			}
 		}
 		
 	}
-	IRQ_Salih_Jabr={
-		advisor={
+	IRQ_Salih_Jabr = {
+		advisor = {
 			cost = 100
 			slot = political_advisor
 			idea_token = IRQ_Salih_Jabr
@@ -1266,16 +1266,16 @@
 			}
 		}
 		name="Salih Jabr"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_Salih_Jabr.dds"
 			}
 		}
 		
 	}
-	IRQ_Mahmud_Salman={
+	IRQ_Mahmud_Salman = {
 		
-		advisor={
+		advisor = {
 			slot = high_command
 			idea_token = IRQ_Mahmud_Salman
 			ledger = army
@@ -1291,7 +1291,7 @@
 			}
 		}
 		
-		advisor={
+		advisor = {
 			cost = 100
 			slot = theorist
 			idea_token = IRQ_mahmud_salman_2
@@ -1302,8 +1302,8 @@
 			traits = { air_warfare_theorist }
 		}
 		name="Mahmud Salman"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_Mahmud_Salman.dds"
 				large="gfx/leaders/IRQ/r56_portrait_Mahmud_Salman.dds"
 			}
@@ -1311,7 +1311,7 @@
 	}
 	IRQ_Muhammad_Abdullatif_Asadi = {
 		
-		advisor={
+		advisor = {
 			cost = 100
 			slot = theorist
 			idea_token = IRQ_Muhammad_Abdullatif_Asadi
@@ -1321,7 +1321,7 @@
 			}
 			available = {
 				has_completed_focus = IRQ_iraqi_rocket_program
-				NOT={
+				NOT = {
 					has_war_with = USA
 				}
 				date > 1943.6.6
@@ -1337,15 +1337,15 @@
 			}
 		}
 		name="Muhammad Abdullatif Mutalib al-Asadi" #Muhammad Abdullatif Mutalib Al Asadi
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_Muhammad_Abdullatif_Asadi.dds"
 			}
 		}
 	}
 	IRQ_Hashim_Witry = {
 		
-		advisor={
+		advisor = {
 			cost = 100
 			slot = political_advisor
 			idea_token = IRQ_Hashim_Witry
@@ -1353,7 +1353,7 @@
 				original_tag = IRQ
 			}
 			available = {
-				NOT={
+				NOT = {
 					has_government = communism
 				}
 			}
@@ -1365,15 +1365,15 @@
 			}
 		}
 		name="Hashim al-Witry" #Hashim al-Witry
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_Hashim_Witry.dds"
 			}
 		}
 	}
 	IRQ_Younis_Sabawi = {
 		
-		advisor={
+		advisor = {
 			cost = 100
 			slot = political_advisor
 			idea_token = IRQ_Younis_Sabawi
@@ -1381,7 +1381,7 @@
 				original_tag = IRQ
 			}
 			available = {
-				NOT={
+				NOT = {
 					has_government = communism
 				}
 			}
@@ -1393,15 +1393,15 @@
 			}
 		}
 		name="Younis al-Sabawi"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_Younis_Sabawi.dds"
 			}
 		}
 	}
 	IRQ_Musatfa_Ali = {
 		
-		advisor={
+		advisor = {
 			cost = 100
 			slot = political_advisor
 			idea_token = IRQ_Musatfa_Ali
@@ -1409,7 +1409,7 @@
 				original_tag = IRQ
 			}
 			available = {
-				NOT={
+				NOT = {
 					has_government = fascism
 				}
 			}
@@ -1422,20 +1422,20 @@
 			}
 		}
 		name="Musatafa Ali"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_Musatfa_Ali.dds"
 			}
 		}
 	}
-	IRQ_charles_burnett={
-		advisor={
+	IRQ_charles_burnett = {
+		advisor = {
 			slot = air_chief
 			idea_token = IRQ_charles_burnett
-			allowed  = {
+			allowed = {
 					original_tag  = IRQ 
 				}
-				traits  = {
+				traits = {
 					air_chief_reform_2 
 				}
 				ai_will_do  = {
@@ -1444,14 +1444,14 @@
 				cost = 150
 		}
 		name="Charles Burnett"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/idea_charles_burnett.dds"
 			}
 		}
 	}
-	IRQ_clark_kerr={
-		advisor={
+	IRQ_clark_kerr = {
+		advisor = {
 			slot = political_advisor
 			idea_token = IRQ_clark_kerr
 			allowed = {
@@ -1466,8 +1466,8 @@
 			cost = 150
 		}
 		name="Archibald Clark Kerr"
-		portraits={
-			army={
+		portraits = {
+			army = {
 				small="gfx/interface/ideas/irq/IRQ_clark_kerr.dds"
 			}
 		}

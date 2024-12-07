@@ -641,22 +641,6 @@ kurdish_separatism = {
 	disable_strategic_redeployment = 1
 }
 
-
-r56_IRQ_kurdishified_nineveh = {
-	icon = GFX_modifiers_tur_kurdish_fatigue
-
-	army_speed_factor = 0.1
-	recruitable_population_factor = 0.05
-	production_speed_buildings_factor = 0.15
-	remove_trigger = {
-		controller = {
-			NOT = {
-				original_tag = IRQ
-			}
-		}
-	}
-}
-
 r56_IRQ_kurdish_minority = {
 	enable = { always = yes }
 
@@ -665,7 +649,17 @@ r56_IRQ_kurdish_minority = {
 	local_manpower = -0.2
 	local_building_slots_factor = -0.1
 	local_supplies = -0.1
+}
+
+r56_IRQ_kurdish_workers_integrated = {
+	enable = { always = yes }
+
+	icon = GFX_kurdish_workers
 	
+	local_manpower = -0.15
+	production_speed_buildings_factor = 0.05
+	local_resources_factor = 0.10
+	compliance_growth = 0.05
 }
 
 r56_AFG_attack_state = {

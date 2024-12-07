@@ -101,9 +101,11 @@ ideas = {
             }
         }
         IRQ_shia_protests = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -118,9 +120,11 @@ ideas = {
             }
         }
         IRQ_ghazi_idea = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 NOT = {
                     has_government = communism
@@ -139,6 +143,7 @@ ideas = {
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 NOT = {
                     has_government = communism
@@ -157,6 +162,7 @@ ideas = {
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 NOT = {
                     has_government = communism
@@ -174,9 +180,11 @@ ideas = {
         # END #
         
         IRQ_kurdish_conscription = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = no
             }
@@ -192,9 +200,11 @@ ideas = {
             }
         }
         IRQ_anti_british_sentiment = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -213,6 +223,7 @@ ideas = {
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -227,9 +238,11 @@ ideas = {
             }
         }
         IRQ_slight_german_leniency = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -244,9 +257,11 @@ ideas = {
             }
         }
         IRQ_1933_deprivation_act = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -260,9 +275,11 @@ ideas = {
             }
         }
         IRQ_dissolving_the_parliament1 = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -276,9 +293,11 @@ ideas = {
             }
         }
         IRQ_economic_policy = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -293,9 +312,11 @@ ideas = {
             }
         }
         IRQ_arabist_sentiment = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 is_subject = no
                 OR = {
@@ -315,9 +336,11 @@ ideas = {
             }
         }
         IRQ_victory_over_britain = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -346,16 +369,21 @@ ideas = {
             picture = nkvd
 
             modifier = {
-                conscription = 0.020
+                conscription = 0.01
+                army_org_factor = 0.05
                 war_support_factor = 0.1
                 army_core_defence_factor = 0.05
                 army_core_attack_factor = 0.05
+                pocket_penalty = -0.05
+                surrender_limit = 0.10
             }
         }
         IRQ_partial_victory_against_britain = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -369,9 +397,11 @@ ideas = {
             }
         }
         IRQ_islamist_cooperation = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -386,9 +416,11 @@ ideas = {
             }
         }
         IRQ_fasting_tactics_idea = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -403,9 +435,11 @@ ideas = {
             }
         }
         IRQ_conscription_laws_eased = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -419,9 +453,11 @@ ideas = {
             }
         }
         IRQ_arabism = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -436,9 +472,11 @@ ideas = {
             }
         }
         IRQ_military_investments = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -451,9 +489,11 @@ ideas = {
             }
         }
         IRQ_dissidents_suppressed = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -468,9 +508,11 @@ ideas = {
             }
         }
         IRQ_planning_the_countercoup = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -484,9 +526,11 @@ ideas = {
             }
         }
         IRQ_planning_the_countercoup2 = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -534,9 +578,11 @@ ideas = {
         #     }
         # }
         IRQ_spreading_the_world_revolution = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -568,9 +614,11 @@ ideas = {
         #     }
         # }
         IRQ_nra_leadership_jafar = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -586,9 +634,11 @@ ideas = {
             }
         }
         IRQ_abd_al_ilah_idea = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -601,9 +651,11 @@ ideas = {
             }
         }
         IRQ_faisal_idea = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -616,9 +668,11 @@ ideas = {
             }
         }
         IRQ_jizya_payments = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -633,9 +687,11 @@ ideas = {
             }
         }
         IRQ_ban_riba = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -650,9 +706,11 @@ ideas = {
             }
         }
         IRQ_sunni_shia_unity = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -722,9 +780,11 @@ ideas = {
             }
         }
         IRQ_shiate_supremacy = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -738,9 +798,11 @@ ideas = {
             }
         }
         IRQ_sharia = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -756,9 +818,11 @@ ideas = {
             }
         }
         IRQ_military_political_intervention = {
+
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = no
             }
@@ -768,17 +832,19 @@ ideas = {
 
             modifier = {
                 drift_defence_factor = 0.15
+                conscription = 0.005
                 neutrality_drift = 0.01
-                stability_factor = -0.05
                 army_org_factor = -0.05
                 political_power_factor = 0.10
                 command_power_gain_mult = 0.05
             }
         }
         IRQ_the_black_list_idea = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = no
             }
@@ -793,9 +859,11 @@ ideas = {
             }
         }
         IRQ_ghazis_personality_cult = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -809,9 +877,11 @@ ideas = {
             }
         }
         IRQ_intellectuals_invited = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -824,9 +894,11 @@ ideas = {
             }
         }
         IRQ_parliament_dissolved = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -841,9 +913,11 @@ ideas = {
             }
         }
         IRQ_sidqis_leadership = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -860,9 +934,11 @@ ideas = {
             }
         }
         IRQ_sidqis_leadership2 = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -878,9 +954,11 @@ ideas = {
             }
         }
         IRQ_assyrians_taxed = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -895,9 +973,11 @@ ideas = {
             }
         }
         IRQ_abdul_latif_coup = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = {
                 always = yes
             }
@@ -911,9 +991,11 @@ ideas = {
             }
         }
         IRQ_Iran_treaty = {
+            
             allowed = {
                 original_tag = IRQ
             }
+            
             allowed_civil_war = { always = no }
 
             picture = generic_constitutional_guarantees
