@@ -373,9 +373,7 @@ focus_tree = {
 			} 
 		}
 		continue_if_invalid = yes
-		ai_will_do = {
-			base = 4000
-		}
+		ai_will_do = { base = 4000 }
 		completion_reward = {
 			add_research_slot = 1
 			remove_ideas = POR_lackluster_armed_forces
@@ -453,9 +451,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = POR_study_the_spanish_civil_war
 		cost = 8
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		completion_reward = {
 			add_tech_bonus = {
 				ahead_reduction = 1
@@ -2629,7 +2625,7 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL   }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2897,52 +2893,40 @@ focus_tree = {
 		relative_position_id = POR_forge_a_prosperous_proletariat
 		completion_reward = {
 			if = {
-				limit = { 
-					has_idea = POR_transitioning_to_a_mixed_economy
+				limit = { has_idea = POR_the_question_of_nationalization_idea }
+				swap_ideas = {
+					remove_idea = POR_the_question_of_nationalization_idea
+					add_idea = POR_slow_collectivization
 				}
+			}
+			else_if = {
+				limit = { has_idea = POR_transitioning_to_a_mixed_economy }
 				swap_ideas = {
 					remove_idea = POR_transitioning_to_a_mixed_economy
 					add_idea = POR_slow_collectivization
 				}
 			}
 			else_if = {
-				limit = { 
-					has_idea = POR_slow_collectivization
-				}
+				limit = { has_idea = POR_slow_collectivization }
 				swap_ideas = {
 					remove_idea = POR_slow_collectivization
 					add_idea = POR_heavy_handed_central_planning
 				}
 			}
 			else_if = {
-				limit = { 
-					has_idea = POR_heavy_handed_central_planning
-				}
+				limit = { has_idea = POR_heavy_handed_central_planning }
 				swap_ideas = {
 					remove_idea = POR_heavy_handed_central_planning
 					add_idea = POR_looming_economic_disaster
 				}
 			}
-			else_if = {
-				limit = { 
-					has_idea = POR_looming_economic_disaster
-				}
-				add_stability = -0.05
-				random_owned_controlled_state = {
-					prioritize = { 112 }
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
 			else = {
-				swap_ideas = {
-					remove_idea = POR_the_question_of_nationalization_idea
-					add_idea = POR_slow_collectivization
+				add_stability = -0.03
+				add_popularity = {
+					ideology = ROOT
+					popularity = -0.03
 				}
+				custom_effect_tooltip = CHL_skip_one_line_tt
 			}
 			unlock_decision_tooltip = POR_factory_recruitment_drive
 			unlock_decision_tooltip = POR_direct_farmland_to_industrial_projects
@@ -3160,8 +3144,8 @@ focus_tree = {
 		y = 2
 		relative_position_id = POR_crush_reactionary_impedence
 		available = { 
-			neutrality < 0.2 
-			democratic < 0.2
+			neutrality < 0.25 
+			democratic < 0.25
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -3293,9 +3277,7 @@ focus_tree = {
 			add_war_support = 0.05
 			set_rule = { can_create_factions = yes }
 		}
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
@@ -3338,15 +3320,16 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-			add_stability = 0.03
-			add_war_support = 0.03
+			add_stability = 0.04
+			add_popularity = {
+				ideology = communism
+				popularity = -0.08
+			}
 			set_rule = { can_guarantee_other_ideologies = yes }
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			add_ideas = POR_diplomatic_pragmatism
 		}
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
@@ -3446,9 +3429,7 @@ focus_tree = {
 		}
 		completion_reward = {
 		}
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
@@ -3597,61 +3578,23 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_restore_economic_stability
+		id = POR_continue_popular_reform
 		prerequisite = { focus = POR_hold_fair_elections }
-		icon = GFX_goal_generic_financial_markets
+		icon = GFX_goal_cuba_support_the_confederation_of_cuban_workers
 		cost = 8
 		x = 2
 		y = 1
 		relative_position_id = POR_hold_fair_elections
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = POR_the_path_to_economic_progress_decisions_taken_4_or_greater_tt
-				check_variable = { 
-					POR_the_question_of_nationalization_decisions_taken = 4
-					compare = greater_than_or_equals 
-				}
-			}
-		}
 		completion_reward = {
-			custom_effect_tooltip = POR_upgrades_the_effects_of_all_the_question_of_nationalization_decisions_tt
+			add_political_power = 75
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.05
+			}
 			custom_effect_tooltip = CHL_skip_one_line_tt
-			if = {
-				limit = { has_idea = POR_the_question_of_nationalization_idea }
-				swap_ideas = {
-					remove_idea = POR_the_question_of_nationalization_idea
-					add_idea = POR_portuguese_mixed_economy
-				}
-			}
-			else_if = { 
-				limit = { has_idea = POR_slow_collectivization }
-				swap_ideas = {
-					remove_idea = POR_slow_collectivization
-					add_idea = POR_portuguese_mixed_economy
-				}
-			}
-			else_if = { 
-				limit = { has_idea = POR_heavy_handed_central_planning }
-				swap_ideas = {
-					remove_idea = POR_heavy_handed_central_planning
-					add_idea = POR_democratic_collectivization
-				}
-			}
-			else_if = { 
-				limit = { has_idea = POR_looming_economic_disaster }
-				swap_ideas = {
-					remove_idea = POR_looming_economic_disaster
-					add_idea = POR_democratic_collectivization
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = POR_transitioning_to_a_mixed_economy
-					add_idea = POR_portuguese_mixed_economy
-				}
-			}
+			unlock_decision_tooltip = POR_maternalistic_welfare
+			unlock_decision_tooltip = POR_subsidize_rural_farming
 		}
-		ai_will_do = { base = 5 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
@@ -3723,23 +3666,61 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_continue_popular_reform
+		id = POR_restore_economic_stability
 		prerequisite = { focus = POR_modernize_the_junta_institutions }
-		icon = GFX_goal_cuba_support_the_confederation_of_cuban_workers
-		cost = 8
+		icon = GFX_goal_generic_financial_markets
+		cost = 8	
 		x = -2
 		y = 2
 		relative_position_id = POR_modernize_the_junta_institutions
-		completion_reward = {
-			add_political_power = 75
-			add_popularity = {
-				ideology = ROOT
-				popularity = 0.05
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POR_the_path_to_economic_progress_decisions_taken_4_or_greater_tt
+				check_variable = { 
+					POR_the_question_of_nationalization_decisions_taken = 4
+					compare = greater_than_or_equals 
+				}
 			}
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			unlock_decision_tooltip = POR_maternalistic_welfare
-			unlock_decision_tooltip = POR_subsidize_rural_farming
 		}
+		completion_reward = {
+			custom_effect_tooltip = POR_upgrades_the_effects_of_all_the_question_of_nationalization_decisions_tt
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			if = {
+				limit = { has_idea = POR_the_question_of_nationalization_idea }
+				swap_ideas = {
+					remove_idea = POR_the_question_of_nationalization_idea
+					add_idea = POR_portuguese_mixed_economy
+				}
+			}
+			else_if = { 
+				limit = { has_idea = POR_slow_collectivization }
+				swap_ideas = {
+					remove_idea = POR_slow_collectivization
+					add_idea = POR_portuguese_mixed_economy
+				}
+			}
+			else_if = { 
+				limit = { has_idea = POR_heavy_handed_central_planning }
+				swap_ideas = {
+					remove_idea = POR_heavy_handed_central_planning
+					add_idea = POR_democratic_collectivization
+				}
+			}
+			else_if = { 
+				limit = { has_idea = POR_looming_economic_disaster }
+				swap_ideas = {
+					remove_idea = POR_looming_economic_disaster
+					add_idea = POR_democratic_collectivization
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = POR_transitioning_to_a_mixed_economy
+					add_idea = POR_portuguese_mixed_economy
+				}
+			}
+		}
+		ai_will_do = { base = 5 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 

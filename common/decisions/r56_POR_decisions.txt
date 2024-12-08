@@ -1762,6 +1762,11 @@ POR_maintaining_the_fire = {
 		}
 		remove_effect = {
 			add_political_power = 90
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			} 
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			if = {
 				limit = { has_idea = POR_reactionary_resistance2 }
 				swap_ideas = {
