@@ -1,5 +1,6 @@
 focus_tree = {
 	id = kazakhstan_focus
+
 	country = {
 		factor = 0
 		
@@ -8,17 +9,21 @@ focus_tree = {
 			tag = KAZ
 		}
 	}
+
 	shared_focus = TRK_turkestan_unification
 	shared_focus = GEN_Naval_Effort
 	shared_focus = GEN_Aviation_Effort
 	shared_focus = ABC_establish_a_general_staff
 	shared_focus = GEN_industrial_boom
+
 	continuous_focus_position = { x = 1200 y = 1400 }
+
 	default = no
+	
 	focus = {
 		id = KAZ_reinvigorating_the_economy
-		icon = GFX_goal_free_trade
-		x = 4
+		icon = GFX_goal_stock_exchange
+		x = 41
 		y = 0
 		cost = 10
 
@@ -36,14 +41,30 @@ focus_tree = {
 					is_core_of = ROOT
 					free_building_slots = {
 						building = industrial_complex
-						size > 1
+						size > 0
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -51,191 +72,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KAZ_agricultural_renewal
-		icon = GFX_focus_SOV_breadbasket_of_the_union
-		x = -2
-		y = 1
-		relative_position_id = KAZ_reinvigorating_the_economy
-		cost = 10
-		prerequisite = {focus = KAZ_reinvigorating_the_economy}
-
-		available = {
-			
-		}
-
-		ai_will_do = {
-			factor = 5
-		}		
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					is_core_of = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = KAZ_war_readiness
-		icon = GFX_focus_generic_little_entente
-		x = 2
-		y = 1
-		relative_position_id = KAZ_reinvigorating_the_economy
-		cost = 10
-		prerequisite = {focus = KAZ_reinvigorating_the_economy}
-
-		available = {
-			
-		}
-
-		ai_will_do = {
-			factor = 5
-		}		
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					is_core_of = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			add_war_support = 0.05
-			upgrade_economy_law = yes
-		}
-	}
-	focus = {
-		id = KAZ_military_industries
-		icon = GFX_goal_generic_construct_mil_factory
-		x = -2
-		y = 1
-		relative_position_id = KAZ_war_readiness
-		cost = 10
-		prerequisite = {focus = KAZ_agricultural_renewal}
-		prerequisite = {focus = KAZ_war_readiness}
-
-		available = {
-			
-		}
-
-		ai_will_do = {
-			factor = 5
-		}		
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					is_core_of = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}			
-		}
-	}
-	focus = {
-		id = KAZ_exploit_the_virgin_lands
-		icon = GFX_goal_generic_agriculture2
-		x = 0
-		y = 1
-		relative_position_id = KAZ_military_industries
-		cost = 10
-		prerequisite = {focus = KAZ_military_industries}
-
-		available = {
-			
-		}
-
-		ai_will_do = {
-			factor = 5
-		}		
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					is_core_of = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}			
-		}
-	}
-	focus = {
-		id = KAZ_agricultural_expansion
-		icon = GFX_goal_generic_agriculture
-		x = 0
-		y = 1
-		relative_position_id = KAZ_exploit_the_virgin_lands
-		cost = 10
-		prerequisite = {focus = KAZ_exploit_the_virgin_lands}
-
-		available = {
-			
-		}
-
-		ai_will_do = {
-			factor = 5
-		}		
-
-		completion_reward = {
-			add_stability = 0.05
-			if = { 
-				limit = { has_government = democratic }
-				add_popularity = { ideology = democratic popularity = 0.05 }
-			}
-			if = { 
-				limit = { has_government = communism }
-				add_popularity = { ideology = communism popularity = 0.05 }
-			}
-			add_timed_idea = {
-				idea = POL_the_Agrarian_Reform_Focus
-				days = 365
-			}			
-		}
-	}
-	focus = {
-		id = KAZ_industrial_expansion
-		icon = GFX_focus_generic_industry_2
+		icon = GFX_goal_agrarian_reform
 		x = -4
 		y = 1
 		relative_position_id = KAZ_reinvigorating_the_economy
@@ -253,7 +90,6 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
 					is_core_of = ROOT
 					free_building_slots = {
 						building = industrial_complex
@@ -267,22 +103,18 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}				
 			}
+			add_ideas = BHU_agriculatural_reform
 		}
 	}
 	focus = {
-		id = KAZ_almati_lead_industry
-		icon = GFX_focus_generic_industry_3
-		x = 0
+		id = KAZ_exploit_the_virgin_lands
+		icon = GFX_goal_generic_farming
+		x = -1
 		y = 1
-		relative_position_id = KAZ_industrial_expansion
+		relative_position_id = KAZ_agricultural_renewal
 		cost = 10
-		prerequisite = {focus = KAZ_industrial_expansion}
+		prerequisite = {focus = KAZ_agricultural_renewal}
 
 		available = {
 			
@@ -290,67 +122,124 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 5
-		}
+		}		
 
 		completion_reward = {
-			if = {
+			random_owned_controlled_state = {
+				increase_state_category = yes
 				limit = {
-					num_of_controlled_states < 2
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
 				}
-				random_owned_controlled_state = {
-					limit = {
-						is_core_of = ROOT
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
 			}
-			else = {
-				random_owned_controlled_state = {
-					limit = {
-						is_core_of = ROOT
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
+			random_owned_controlled_state = {
+				increase_state_category = yes
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
 					}
 				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = KAZ_agricultural_expansion
+		icon = GFX_goal_generic_farm_tractor
+		x = 0
+		y = 2
+		relative_position_id = KAZ_agricultural_renewal
+		cost = 8
+		prerequisite = {focus = KAZ_agricultural_renewal}
 
-				random_owned_controlled_state = {
-					limit = {
-						is_core_of = ROOT
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
+		available = {
+			
+		}
+
+		ai_will_do = {
+			factor = 5
+		}		
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.05
 			}
-			add_tech_bonus = {
-				name = excavation_tech_bonus_name
-				bonus = 1
-				uses = 1
-				category = excavation_tech
+			add_timed_idea = {
+				idea = RAJ_agriculture_subsidised
+				days = 365
 			}			
 		}
 	}
 	focus = {
-		id = KAZ_lead_ammunition_production
-		icon = GFX_goal_proving_grounds
-		x = -2
+		id = KAZ_war_readiness
+		icon = GFX_focus_generic_little_entente
+		x = 1
 		y = 1
-		relative_position_id = KAZ_military_industries
+		relative_position_id = KAZ_reinvigorating_the_economy
 		cost = 10
-		prerequisite = {focus = KAZ_almati_lead_industry}
-		prerequisite = {focus = KAZ_military_industries}
+		prerequisite = {focus = KAZ_reinvigorating_the_economy}
+
+		available = {
+			OR = {
+				threat > 0.05
+				has_war_support > 0.15
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_war_support = 0.05
+			upgrade_economy_law = yes
+		}
+	}
+	focus = {
+		id = KAZ_military_industries
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 3
+		y = 1
+		relative_position_id = KAZ_war_readiness
+		cost = 10
+		prerequisite = {focus = KAZ_industrial_expansion}
+		prerequisite = {focus = KAZ_war_readiness}
 
 		available = {
 			
@@ -363,36 +252,55 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
 					is_core_of = ROOT
 					free_building_slots = {
-						building = industrial_complex
-						size > 1
+						building = arms_factory
+						size > 0
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = steel_mill
+					type = arms_factory
 					level = 1
 					instant_build = yes
-				}				
-			}			
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:generic_infantry_equipment_organization = {
+					add_mio_size = 1
+					add_mio_funds = 500
+				}
+			}
 		}
 	}
 	focus = {
-		id = KAZ_increase_armament_production
-		icon = GFX_focus_secret_rearmament
-		x = 0
+		id = KAZ_industrial_expansion
+		icon = GFX_focus_generic_industry_2
+		x = -1
 		y = 1
-		relative_position_id = KAZ_lead_ammunition_production
-		cost = 10
-		prerequisite = {focus = KAZ_lead_ammunition_production}
+		relative_position_id = KAZ_reinvigorating_the_economy
+		cost = 8
+		prerequisite = {focus = KAZ_reinvigorating_the_economy}
 
 		available = {
 			
@@ -403,18 +311,37 @@ focus_tree = {
 		}		
 
 		completion_reward = {
-			add_ideas =	SOV_a_gun_in_every_hand_idea
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}	
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}			
+			}
 		}
 	}
-
 	focus = {
 		id = KAZ_accomodate_exiled_companies
-		icon = GFX_focus_generic_self_management
-		x = 2
+		icon = GFX_focus_DEN_limited_regulations
+		x = -1
 		y = 1
-		relative_position_id = KAZ_war_readiness
+		relative_position_id = KAZ_industrial_expansion
 		cost = 10
-		prerequisite = {focus = KAZ_war_readiness}
+		prerequisite = {focus = KAZ_industrial_expansion}
 
 		available = {
 			
@@ -468,7 +395,86 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = KAZ_EXPORTATION_NAZI_HELPERS
+		id = KAZ_lead_ammunition_production
+		icon = GFX_goal_proving_grounds
+		x = -1
+		y = 1
+		relative_position_id = KAZ_military_industries
+		cost = 10
+		prerequisite = {focus = KAZ_military_industries}
+
+		available = {
+			
+		}
+
+		ai_will_do = {
+			factor = 5
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = steel_mill
+					level = 1
+					instant_build = yes
+				}				
+			}			
+		}
+	}
+	focus = {
+		id = KAZ_increase_armament_production
+		icon = GFX_focus_secret_rearmament
+		x = 1
+		y = 1
+		relative_position_id = KAZ_military_industries
+		cost = 10
+		prerequisite = {focus = KAZ_military_industries}
+
+		available = {
+			
+		}
+
+		ai_will_do = {
+			factor = 5
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas =	SOV_a_gun_in_every_hand_idea
+		}
+	}
+	focus = {
+		id = KAZ_exportation_nazi_helpers
 		icon = GFX_goal_arrests
 		x = 0
 		y = 1
@@ -505,11 +511,11 @@ focus_tree = {
 	focus = {
 		id = KAZ_MOVING_FILM_STUDIOS
 		icon = GFX_goal_generic_cinema
-		x = -2
+		x = 5
 		y = 1
-		relative_position_id = KAZ_accomodate_exiled_companies
+		relative_position_id = KAZ_war_readiness
 		cost = 10
-		prerequisite = {focus = KAZ_accomodate_exiled_companies }
+		prerequisite = {focus = KAZ_war_readiness}
 
 
 		available = {
@@ -521,6 +527,8 @@ focus_tree = {
 		}		
 
 		completion_reward = {
+			add_political_power = 75
+			add_war_support = 0.1
 			add_ideas = KAZ_propaganda_studios
 			if = {
 				limit = {
@@ -530,87 +538,16 @@ focus_tree = {
 					add_ideas = KAZ_propaganda_studios
 				}
 			}
-			add_war_support = 0.1
 		}
 	}
-	# focus = {	#no clue what this would do
-	# 	id = KAZ_IVAN_THE_TERRIBLE
-	# 	icon = GFX_focus_eng_liberate_the_home_of_marx
-	# 	x = 0
-	# 	y = 2
-	# 	relative_position_id = KAZ_MOVING_FILM_STUDIOS
-	# 	cost = 10
-	# 	prerequisite = {focus = KAZ_MOVING_FILM_STUDIOS }
-	# 	available = {
-	# 		has_government = communism
-	# 	}
-
-	# 	ai_will_do = {
-	# 		factor = 5
-	# 	}		
-
-	# 	completion_reward = {
-			
-	# 	}
-	# }
-	# focus = {	#would be insanely lategame
-	# 	id = KAZ_LUNAR_FILM
-	# 	icon = GFX_goal_generic_CAS
-	# 	x = 0
-	# 	y = 6
-	# 	relative_position_id = KAZ_MOVING_FILM_STUDIOS
-	# 	cost = 10
-	# 	prerequisite = {focus = KAZ_MOVING_FILM_STUDIOS }
-	# 	prerequisite = {focus = KAZ_FIRST_COSMONAUT }
-
-
-	# 	available = {
-			
-	# 	}
-
-	# 	ai_will_do = {
-	# 		factor = 5
-	# 	}		
-
-	# 	completion_reward = {
-	# 		add_war_support = 0.05
-	# 		add_stability = 0.05
-	# 	}
-	# }
-
-	# focus = {
-	# 	id = KAZ_everything_above_the_sky
-	# 	icon = GFX_goal_generic_CAS
-	# 	x = -1
-	# 	y = 2
-	# 	relative_position_id = KAZ_LUNAR_FILM
-	# 	cost = 10
-	# 	prerequisite = {focus = KAZ_IVAN_THE_TERRIBLE }
-	# 	prerequisite = {focus = KAZ_LUNAR_FILM }
-	# 	allow_branch = { has_global_flag = turkestan_formed }
-
-
-	# 	available = {
-			
-	# 	}
-
-	# 	ai_will_do = {
-	# 		factor = 5
-	# 	}		
-
-	# 	completion_reward = {
-			
-	# 	}
-	# }
-
 	focus = {
-		id = KAZ_KHROUCHTCHEV_MEMORANDUM
+		id = KAZ_khrouchtchev_memorandum
 		icon = GFX_focus_hol_the_foundations_of_defense
 		x = 0
 		y = 1
-		relative_position_id = KAZ_EXPORTATION_NAZI_HELPERS
+		relative_position_id = KAZ_exportation_nazi_helpers
 		cost = 10
-		prerequisite = {focus = KAZ_EXPORTATION_NAZI_HELPERS }
+		prerequisite = {focus = KAZ_exportation_nazi_helpers }
 
 
 		available = {
@@ -630,9 +567,9 @@ focus_tree = {
 	# 	icon = GFX_goal_continuous_boost_freedom
 	# 	x = 0
 	# 	y = 1
-	# 	relative_position_id = KAZ_KHROUCHTCHEV_MEMORANDUM
+	# 	relative_position_id = KAZ_khrouchtchev_memorandum
 	# 	cost = 10
-	# 	prerequisite = {focus = KAZ_KHROUCHTCHEV_MEMORANDUM }
+	# 	prerequisite = {focus = KAZ_khrouchtchev_memorandum }
 
 
 	# 	available = {
@@ -648,9 +585,9 @@ focus_tree = {
 	# 	}
 	# }
 	focus = {
-		id = KAZ_NEW_PLANS_OF_WAR
+		id = KAZ_new_plans_of_war
 		icon = GFX_goal_communist_brain
-		x = 5
+		x = 8
 		y = 1
 		relative_position_id = KAZ_war_readiness
 		cost = 10
@@ -670,7 +607,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = KAZ_NEW_PLANS_OF_WAR
+				name = KAZ_new_plans_of_war
 				bonus = 1
 				uses = 3
 				category = electronics
@@ -680,14 +617,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = KAZ_SOVIET_SECRET_WEAPONS
+		id = KAZ_soviet_secret_weapons
 		icon = GFX_goal_soviet_rocketry
 		x = -1
 		y = 1
-		relative_position_id = KAZ_NEW_PLANS_OF_WAR
+		relative_position_id = KAZ_new_plans_of_war
 		cost = 10
-		prerequisite = {focus = KAZ_NEW_PLANS_OF_WAR}
-		mutually_exclusive = {focus = KAZ_KUN_PROJECT }
+		prerequisite = {focus = KAZ_new_plans_of_war}
+		mutually_exclusive = {focus = KAZ_kun_project }
 		available = {
 			SOV = {
 				exists = yes
@@ -756,14 +693,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = KAZ_KUN_PROJECT
+		id = KAZ_kun_project
 		icon = GFX_goal_ARG_sun
 		x = 1
 		y = 1
-		relative_position_id = KAZ_NEW_PLANS_OF_WAR
+		relative_position_id = KAZ_new_plans_of_war
 		cost = 10
-		prerequisite = {focus = KAZ_NEW_PLANS_OF_WAR}
-		mutually_exclusive = {focus = KAZ_SOVIET_SECRET_WEAPONS }
+		prerequisite = {focus = KAZ_new_plans_of_war}
+		mutually_exclusive = {focus = KAZ_soviet_secret_weapons }
 		available = {
 			num_of_factories > 200
 			NOT = {
@@ -782,13 +719,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = KAZ_NUCLEAR
+		id = KAZ_nuclear
 		icon = GFX_goal_generic_nuclear_energy
 		x = 0
 		y = 1
-		relative_position_id = KAZ_SOVIET_SECRET_WEAPONS
+		relative_position_id = KAZ_soviet_secret_weapons
 		cost = 10
-		prerequisite = {focus = KAZ_SOVIET_SECRET_WEAPONS focus = KAZ_KUN_PROJECT }
+		prerequisite = {focus = KAZ_soviet_secret_weapons focus = KAZ_kun_project }
 
 
 		available = {
@@ -835,13 +772,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = KAZ_SEMIPALATINSK_NUCLEAR_SITE
+		id = KAZ_semipalatinsk_nuclear_site
 		icon = GFX_focus_wonderweapons
 		x = 0
 		y = 1
-		relative_position_id = KAZ_NUCLEAR
+		relative_position_id = KAZ_nuclear
 		cost = 10
-		prerequisite = {focus = KAZ_NUCLEAR }
+		prerequisite = {focus = KAZ_nuclear }
 
 
 		available = {
@@ -876,13 +813,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = KAZ_SPACE
+		id = KAZ_space
 		icon = GFX_focus_ger_great_red_menace
 		x = 2
 		y = 1
-		relative_position_id = KAZ_SOVIET_SECRET_WEAPONS
+		relative_position_id = KAZ_soviet_secret_weapons
 		cost = 10
-		prerequisite = {focus = KAZ_SOVIET_SECRET_WEAPONS focus = KAZ_KUN_PROJECT }
+		prerequisite = {focus = KAZ_soviet_secret_weapons focus = KAZ_kun_project }
 		available = {
 			OR = {
 				num_of_factories > 50
@@ -946,13 +883,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = KAZ_BAIKONOUR_LAUNCHING_SITE
+		id = KAZ_baikonour_launching_site
 		icon = GFX_focus_rocketry
 		x = 0
 		y = 1
-		relative_position_id = KAZ_SPACE
+		relative_position_id = KAZ_space
 		cost = 10
-		prerequisite = {focus = KAZ_SPACE }
+		prerequisite = {focus = KAZ_space }
 
 		available = {
 			
@@ -1002,14 +939,14 @@ focus_tree = {
 		}
 	}
 	# focus = {	#would be insanely lategame
-	# 	id = KAZ_FIRST_COSMONAUT
+	# 	id = KAZ_first_cosmonaut
 	# 	icon = GFX_goal_generic_secret_weapon
 	# 	x = 0
 	# 	y = 3
-	# 	relative_position_id = KAZ_BAIKONOUR_LAUNCHING_SITE
+	# 	relative_position_id = KAZ_baikonour_launching_site
 	# 	cost = 10
-	# 	prerequisite = {focus = KAZ_BAIKONOUR_LAUNCHING_SITE }
-	# 	prerequisite = {focus = KAZ_Fanaticism focus = KAZ_Nationalism_Fanaticism }
+	# 	prerequisite = {focus = KAZ_baikonour_launching_site }
+	# 	prerequisite = {focus = KAZ_Fanaticism focus = KAZ_nationalism_fanaticism }
 	# 	prerequisite = {focus = KAZ_modern_logistics }
 	# 	prerequisite = {focus = KAZ_Own_Air_Doctrine }
 
@@ -1032,13 +969,13 @@ focus_tree = {
 	# 	}
 	# }
 	focus = {
-		id = KAZ_RAILWAY
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 10
+		id = KAZ_railway
+		icon = GFX_focus_generic_railroad
+		x = 1
 		y = 1
-		relative_position_id = KAZ_reinvigorating_the_economy
+		relative_position_id = KAZ_industrial_expansion
 		cost = 10
-		prerequisite = {focus = KAZ_reinvigorating_the_economy }
+		prerequisite = {focus = KAZ_industrial_expansion }
 
 		available = {
 			
@@ -1070,13 +1007,13 @@ focus_tree = {
 	focus = {
 		id = KAZ_temirtaw_steel_mill
 		icon = GFX_focus_generic_steel
-		cost = 10.00
+		cost = 10
 		prerequisite = {
-			focus = KAZ_RAILWAY
+			focus = KAZ_mining_tech
 		}
-		x = 3
+		x = -1
 		y = 1
-		relative_position_id = KAZ_RAILWAY
+		relative_position_id = KAZ_mining_tech
 		completion_reward = {
 			add_tech_bonus = {
                 name = construction_tech_bonus
@@ -1101,13 +1038,13 @@ focus_tree = {
 
 	}	
 	focus = {
-		id = KAZ_MINING_TECH
+		id = KAZ_mining_tech
 		icon = GFX_goal_excavation
 		x = -1
 		y = 1
-		relative_position_id = KAZ_RAILWAY
+		relative_position_id = KAZ_railway
 		cost = 10
-		prerequisite = {focus = KAZ_RAILWAY }
+		prerequisite = {focus = KAZ_railway }
 
 		available = {
 			
@@ -1127,13 +1064,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = KAZ_SECONDARY_ROADS
+		id = KAZ_secondary_roads
 		icon = GFX_goal_generic_road
 		x = 1
 		y = 1
-		relative_position_id = KAZ_RAILWAY
+		relative_position_id = KAZ_railway
 		cost = 10
-		prerequisite = {focus = KAZ_RAILWAY }
+		prerequisite = {focus = KAZ_railway }
 
 		available = {
 			
@@ -1158,7 +1095,7 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
-				prioritize = {588}
+				prioritize = { 588 }
 				limit = {
 					free_building_slots = {
 						building = infrastructure
@@ -1187,15 +1124,76 @@ focus_tree = {
 			}			
 		}
 	}
+	focus = {
+		id = KAZ_almati_lead_industry
+		icon = GFX_focus_generic_industry_3
+		x = 0
+		y = 2
+		relative_position_id = KAZ_secondary_roads
+		cost = 10
+		prerequisite = {focus = KAZ_secondary_roads}
 
+		available = {
+			controls_state = 586
+		}
+
+		allow_branch = {
+			original_tag = KAZ
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = excavation_tech_bonus_name
+				bonus = 0.5
+				uses = 1
+				ahead_reduction = 0.5
+				category = industry
+			}			
+		}
+	}
     focus = {
         id = KAZ_emba_bassin_oil_infrastructure
         icon = GFX_goal_generic_oil_refinery
         x = -1
         y = 1
-		prerequisite = { focus = KAZ_MINING_TECH }
-		prerequisite = { focus = KAZ_SECONDARY_ROADS }
-		relative_position_id = KAZ_SECONDARY_ROADS
+		prerequisite = { focus = KAZ_mining_tech }
+		relative_position_id = KAZ_secondary_roads
 		available = {
 			controls_state = 406			
         }	
@@ -1242,7 +1240,7 @@ focus_tree = {
 		id = KAZ_State_Matter
 		text = GEN_State_Matter
 		icon = GFX_focus_generic_self_management
-		x = 34
+		x = 65
 		y = 0
 		cost = 10
 
@@ -1778,7 +1776,7 @@ focus_tree = {
 	
 	
 	focus = {
-		id = KAZ_Restore_Khanate
+		id = KAZ_restore_khanate
 		icon = GFX_focus_generic_home_defense
 		prerequisite = { focus = KAZ_steppic_memories }
 		mutually_exclusive = { focus = KAZ_nationalism_focus }
@@ -1843,11 +1841,10 @@ focus_tree = {
 	focus = {
 		id = KAZ_khans_horde
 		icon = GFX_focus_generic_horse_studs
-		prerequisite = { focus = ABC_army_modernization }
-		prerequisite = { focus = KAZ_Restore_Khanate }
+		prerequisite = { focus = KAZ_restore_khanate }
 		x = -1
 		y = 1
-		relative_position_id = KAZ_Restore_Khanate
+		relative_position_id = KAZ_restore_khanate
 
 		cost = 5
 
@@ -1989,11 +1986,11 @@ focus_tree = {
 	focus = {
 		id = KAZ_khanate_expansionism
 		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = KAZ_Restore_Khanate focus = KAZ_nationalism_focus }
+		prerequisite = { focus = KAZ_restore_khanate focus = KAZ_nationalism_focus }
 				
 		x = 1
 		y = 1
-		relative_position_id = KAZ_Restore_Khanate
+		relative_position_id = KAZ_restore_khanate
 		
 		cost = 10
 
@@ -2044,7 +2041,7 @@ focus_tree = {
 		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = {focus = KAZ_invade_borderlands }
 		# mutually_exclusive = {
-		# 	focus = KAZ_Nationalism_Fanaticism
+		# 	focus = KAZ_nationalism_fanaticism
 		# }
 				
 		x = 0
@@ -2075,7 +2072,7 @@ focus_tree = {
 		id = KAZ_nationalism_focus
 		icon = GFX_goal_support_fascism #icon = GFX_goal_tripartite_pact
 		prerequisite = { focus = KAZ_steppic_memories }
-		mutually_exclusive = { focus = KAZ_Restore_Khanate }
+		mutually_exclusive = { focus = KAZ_restore_khanate }
 				
 
 		available = {
@@ -2129,7 +2126,7 @@ focus_tree = {
 		id = KAZ_Militarism
 		text = militarism
 		icon = GFX_goal_extensive_conscription_fascism
-		prerequisite = { focus = KAZ_nationalism_focus focus = KAZ_Restore_Khanate }
+		prerequisite = { focus = KAZ_nationalism_focus focus = KAZ_restore_khanate }
 		
 		x = 0
 		y = 1
@@ -2183,7 +2180,7 @@ focus_tree = {
 
 	# focus = {
 
-	# 	id = KAZ_Nationalism_Fanaticism
+	# 	id = KAZ_nationalism_fanaticism
 
 	# 	icon = GFX_goal_generic_army_elite
 	# 	prerequisite = { focus = KAZ_for_the_khan }

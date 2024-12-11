@@ -2393,7 +2393,10 @@ focus_tree = {
 			add_manpower = -5000
 			if = {
 				limit = {
-					has_completed_focus = COL_collectivist_ethos
+					has_completed_focus = PHI_may_2nd_uprising
+				}
+				set_rule = {
+					can_send_volunteers = yes
 				}
 				add_ideas = PHI_volunteers_in_the_war_nationalist
 				random_other_country = {
@@ -2410,15 +2413,12 @@ focus_tree = {
 						amount = 500
 						producer = ROOT
 					}
-					ROOT = {
-						add_relation_rule_override = {
-							target = PREV
-							can_send_volunteers = yes 
-						}
-					}
 				}
 			}
 			else = {
+				set_rule = {
+					can_send_volunteers = yes
+				}
 				add_ideas = PHI_volunteers_in_the_war_republican
 				random_other_country = {
 					limit = {
@@ -2433,12 +2433,6 @@ focus_tree = {
 						type = infantry_equipment
 						amount = 500
 						producer = ROOT
-					}
-					ROOT = {
-						add_relation_rule_override = {
-							target = PREV
-							can_send_volunteers = yes 
-						}
 					}
 				}
 			}

@@ -1168,6 +1168,9 @@
 				limit = {
 					has_completed_focus = COL_collectivist_ethos
 				}
+				set_rule = {
+					can_send_volunteers = yes
+				}
 				add_ideas = PHI_volunteers_in_the_war_nationalist
 				random_other_country = {
 					limit = {
@@ -1183,15 +1186,12 @@
 						amount = 500
 						producer = ROOT
 					}
-					ROOT = {
-						add_relation_rule_override = {
-							target = PREV
-							can_send_volunteers = yes 
-						}
-					}
 				}
 			}
 			else = {
+				set_rule = {
+					can_send_volunteers = yes
+				}
 				add_ideas = PHI_volunteers_in_the_war_republican
 				random_other_country = {
 					limit = {
@@ -1206,12 +1206,6 @@
 						type = infantry_equipment
 						amount = 500
 						producer = ROOT
-					}
-					ROOT = {
-						add_relation_rule_override = {
-							target = PREV
-							can_send_volunteers = yes 
-						}
 					}
 				}
 			}

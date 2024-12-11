@@ -1642,10 +1642,10 @@
 			}
 		}
 		offset = {
-			x = -40
-			y = 5
+			x = 2
+			y = 0
 			trigger = {
-				tag = KAZ
+				has_focus_tree = kazakhstan_focus
 			}
 		}
 		offset = {
@@ -1675,6 +1675,15 @@
 				OR = {
 					tag = COS
 					has_focus_tree = west_africa_focus
+				}
+			}
+		}
+		offset = {
+			x = 9
+			y = 0
+			trigger = {
+				OR = {
+					has_focus_tree = kazakhstan_focus
 				}
 			}
 		}
@@ -1885,13 +1894,6 @@
 			y = 0
 			trigger = {
 				has_focus_tree = ukraine_focus
-			}
-		}
-		offset = {
-			x = 36
-			y = 0
-			trigger = {
-				has_focus_tree = kazakhstan_focus
 			}
 		}
 		offset = { #remove when air for WLS done
@@ -3540,7 +3542,7 @@
 			}
 		}
 		offset = {
-			x = 37
+			x = 1
 			y = 0
 			trigger = {
 				has_focus_tree = kazakhstan_focus

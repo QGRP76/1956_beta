@@ -5222,19 +5222,16 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			any_country = {
-				OR = {
-					original_tag = PAK
-					original_tag = RAJ
+			any_other_country = {
+				any_owned_state = {
+					state = 445
+					state = 444
+					state = 442
 				}
 				NOT = {
-					has_war_with = AFG
-					is_subject_of = AFG
-					is_in_faction_with = AFG
+					has_war_with = ROOT
+					is_ally_with = ROOT
 				}
-				owns_state = 445
-				owns_state = 444
-				owns_state = 442
 			}
 		}
 
@@ -5247,18 +5244,13 @@ focus_tree = {
 					owns_state = 442
 				}
 				any_country = {
-					OR = {
-						original_tag = PAK
-						original_tag = RAJ
-					}
-					OR = {
-						has_war_with = AFG
-						is_subject_of = AFG
-						is_in_faction_with = AFG
-					}
 					owns_state = 445
 					owns_state = 444
 					owns_state = 442
+					OR = {
+						has_war_with = ROOT
+						is_ally_with = ROOT
+					}
 				}
 			}
 		}
@@ -7858,19 +7850,16 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			any_country = {
-				OR = {
-					original_tag = PAK
-					original_tag = RAJ
+			any_other_country = {
+				any_owned_state = {
+					state = 445
+					state = 444
+					state = 442
 				}
 				NOT = {
-					has_war_with = AFG
-					is_subject_of = AFG
-					is_in_faction_with = AFG
+					has_war_with = ROOT
+					is_ally_with = ROOT
 				}
-				owns_state = 445
-				owns_state = 444
-				owns_state = 442
 			}
 		}
 
@@ -7882,18 +7871,13 @@ focus_tree = {
 					owns_state = 442
 				}
 				any_country = {
-					OR = {
-						original_tag = PAK
-						original_tag = RAJ
-					}
-					OR = {
-						has_war_with = AFG
-						is_subject_of = AFG
-						is_in_faction_with = AFG
-					}
 					owns_state = 445
 					owns_state = 444
 					owns_state = 442
+					OR = {
+						has_war_with = ROOT
+						is_ally_with = ROOT
+					}
 				}
 			}
 		}
@@ -8473,7 +8457,6 @@ focus_tree = {
 						name = "Da Koranay Sángh"
 						priority = 1
 						division_names_group = AFG_CAV_01
-						override_model = cavalry_entity
 						template_counter = 6
 					
 						regiments = {
@@ -8495,7 +8478,6 @@ focus_tree = {
 						name = "Spiko Āsano Lawá"
 						priority = 1
 						division_names_group = AFG_CAV_01
-						override_model = cavalry_entity
 					
 						regiments = {
 							cavalry = { x = 0 y = 0 }
@@ -10584,19 +10566,16 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			any_country = {
-				OR = {
-					original_tag = PAK
-					original_tag = RAJ
+			any_other_country = {
+				any_owned_state = {
+					state = 445
+					state = 444
+					state = 442
 				}
 				NOT = {
-					has_war_with = AFG
-					is_subject_of = AFG
-					is_in_faction_with = AFG
+					has_war_with = ROOT
+					is_ally_with = ROOT
 				}
-				owns_state = 445
-				owns_state = 444
-				owns_state = 442
 			}
 		}
 
@@ -10608,18 +10587,13 @@ focus_tree = {
 					owns_state = 442
 				}
 				any_country = {
-					OR = {
-						original_tag = PAK
-						original_tag = RAJ
-					}
-					OR = {
-						has_war_with = AFG
-						is_subject_of = AFG
-						is_in_faction_with = AFG
-					}
 					owns_state = 445
 					owns_state = 444
 					owns_state = 442
+					OR = {
+						has_war_with = ROOT
+						is_ally_with = ROOT
+					}
 				}
 			}
 		}
@@ -10988,7 +10962,6 @@ focus_tree = {
 						name = "Da Koranay Sángh"
 						priority = 1
 						division_names_group = AFG_CAV_01
-						override_model = cavalry_entity
 					
 						regiments = {
 							infantry = { x = 0 y = 0 }
@@ -12513,20 +12486,16 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			has_government = fascism
-			any_country = {
-				OR = {
-					original_tag = PAK
-					original_tag = RAJ
+			any_other_country = {
+				any_owned_state = {
+					state = 445
+					state = 444
+					state = 442
 				}
 				NOT = {
-					has_war_with = AFG
-					is_subject_of = AFG
-					is_in_faction_with = AFG
+					has_war_with = ROOT
+					is_ally_with = ROOT
 				}
-				owns_state = 445
-				owns_state = 444
-				owns_state = 442
 			}
 		}
 
@@ -12538,18 +12507,13 @@ focus_tree = {
 					owns_state = 442
 				}
 				any_country = {
-					OR = {
-						original_tag = PAK
-						original_tag = RAJ
-					}
-					OR = {
-						has_war_with = AFG
-						is_subject_of = AFG
-						is_in_faction_with = AFG
-					}
 					owns_state = 445
 					owns_state = 444
 					owns_state = 442
+					OR = {
+						has_war_with = ROOT
+						is_ally_with = ROOT
+					}
 				}
 			}
 		}
@@ -12629,7 +12593,7 @@ focus_tree = {
 		y = 1
 
 		offset = {
-			x = -10
+			x = -12
 			y = 0 
 			trigger = {
 				has_completed_focus = AFG_power_to_the_king

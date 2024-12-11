@@ -16,13 +16,12 @@
                 original_tag = KYR
                 original_tag = TAN
             }
-			
 		}
 		x = 58		
 		y = 0
 		offset = {
-			x = 0
-			y = 7
+			x = 21
+			y = 0
 			trigger = {
 				tag = KAZ
 			}

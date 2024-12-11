@@ -63,6 +63,7 @@
  AFG_zmarak_khan_zadran:0 "Zmarak Khan Zadran"
  AFG_bacha_gul:0 "Bacha Gul"
  AFG_provisional_government:0 "Provisional Government"
+ AFG_sayyid_abdullah_shah:0 "Sayyid Abdullah Shah"
 
  afghanistan_focus:0 "[AFG.GetAdjective] National Focus"
  AFG_GATHERING_STORM_DESC:0 "Born amidst the ashes of the bloody Third Anglo-Afghan War, Afghanistan has been a battlefield of Empires for centuries. The small yet fragile country still suffers from the scars of the Civil War of 1929, which tore the poor nation apart and led to a sharp decline in the Afghan economy. \n\nSince the brutal assassination of Nadir Shah in 1933, the country has been de-facto led by the Regency Council overseeing the deeds of young Muhammad Zahir Shah. However, with dark clouds looming on the horizon, Afghanistan's future remains uncertain..."
@@ -1447,12 +1448,8 @@
  AFG_open_schools:0 "Build Rural Schools In [FROM.GetName]"
 
  # INFILTRATE PAKISTAN #
- AFG_inflitrate_pakistan_category:0 "Inflitrate [PAK.GetNonIdeologyName]"
- AFG_inflitrate_pakistan_category_desc:0 "The lush plains and steep mountains of [PAK.GetNonIdeologyName] served as the cradle of the Pashtun civilization. [AFG.GetNonIdeologyName]'s very culture and way of life emerged from this region many thousands of years ago! We must reclaim our rightful homeland!"
- AFG_infiltrate_baluchistan:0 "Infiltrate Baluchistan"
- AFG_infiltrate_peshawar:0 "Infiltrate [442.GetName]"
- AFG_infiltrate_quetta:0 "Infiltrate Quetta"
- AFG_infiltrating_tt:0 "§GWe will be granted support by the local people if we occupy this state.§!"
+ AFG_inflitrate_pakistan_category:0 "Pashtun Resistance in [PAK.GetNonIdeologyName]"
+ AFG_inflitrate_pakistan_category_desc:0 "The lush plains and steep mountains of [PAK.GetNonIdeologyName] served as the cradle of the Pashtun civilization. The Pashtun culture and way of life emerged from this region many thousands of years ago! However, to this very day, our people suffer under the heel of foreign powers, but worry not, our time has finally come!"
  AFG_declare_war:0 "[GetWarName]"
 
  # INTEGRATE TAJIKISTAN #
@@ -1489,7 +1486,7 @@
  # PAKISTANI RESISTANCE #
  AFG_rebellion_in_pakistan_decision_category:0 "[PAK.GetAdjective] Resistance"
  AFG_rebellion_in_pakistan_decision_category_desc:0 "The lordship of man over man is the root cause of all corrupt rule. These wise words were said by none other then Syed Abul A'la al-Maududi, one of the greatest Islamic thinkers of all time. The lordship of the [GetRajAdjective] tyrants over the [PAK.GetAdjective]s and Pashtuns must come to an end once and for all!"
- AFG_infiltrate_nwfp:0 "Infiltrate [FROM.GetName]"
+ AFG_infiltrate_nwfp:0 "Support [GetCorrectAdjective] Resistance in [FROM.GetName]"
 
  # THE PESHAWAR CONFERENCE #
  AFG_north_frontier_province:0 "The [442.GetName] Referendum"
@@ -1626,9 +1623,10 @@
  AFG_ongoing_offensive:0 "Ongoing Offensive"
  decision_cost_ie_100:0 "£infantry_equipment_text_icon  §Y100§!"
  decision_cost_ie_100_blocked:0 "£infantry_equipment_text_icon  §R100§!"
- decision_cost_ie_100_tooltip:0 "It costs £infantry_equipment_text_icon  §Y100§! to take the decision"
+ decision_cost_ie_100_tooltip:0 "It costs £infantry_equipment_text_icon  §Y100§! to take this decision."
  decision_cost_ie_500:0 "£infantry_equipment_text_icon  §Y500§!"
- decision_cost_ie_500_tooltip:0 "It costs £infantry_equipment_text_icon  §Y500§! to take the decision"
+ decision_cost_ie_500_tooltip:0 "\nIt costs £infantry_equipment_text_icon  §Y500§! to take this decision."
+ decision_cost_ie_500_blocked:0 "£infantry_equipment_text_icon  §R500§!"
 
  AFG_loya_jirga_finished:0 "The §YLoya Jirga§! has ended."
  AFG_loya_jirga_start:0 "Starts the §Y[GetYear] Loya Jirga§! Event Chain"
@@ -1650,7 +1648,7 @@
 
  AFG_opening_schools_flag:0 " Currently opening schools"
  AFG_opening_schools_state:0 "Is currently §Yopening schools§! here."
- AFG_india_war_flag:0 "The Uprising in [PAK.GetNonIdeologyName]"
+ AFG_india_war_flag:0 "The §YUprising§! in §Y[PAK.GetNonIdeologyName]§! has happened."
 
  AFG_increase_infiltration_tt:0 "Increase §t[AFG.GetAdjective] Infiltration Preperation§! in §Y[FROM.GetName]§! by one point."
  AFG_increase_infiltration_info_tt_1:0 "We will start with a §YPashtun Rebel Unit§! in §Y[FROM.GetName]§! once the war commences."
@@ -1660,7 +1658,7 @@
  AFG_fully_infiltrated_442:0 "Has 3 §t[AFG.GetAdjective] Infiltration Preperation§! points in §Y[442.GetName]§!."
  AFG_fully_infiltrated_444:0 "Has 3 §t[AFG.GetAdjective] Infiltration Preperation§! points in §Y[444.GetName]§!."
  AFG_fully_infiltrated_445:0 "Has 3 §t[AFG.GetAdjective] Infiltration Preperation§! points in §Y[445.GetName]§!."
- AFG_pakistani_infiltration_map_area:0 "Select where to prepare infiltration."
+ AFG_pakistani_infiltration_map_area:0 "Select where to support Pashtun resistance."
 
  AFG_amanullah_has_returned:0 "§YAmanullah Khan§! has returned from the §YRoyal Tour of Europe§!"
  AFG_red_cross_tt:0 "Add §YThe [AFG.GetAdjective] Red Cross§!, which grants (Consumer Goods Factories: §Y10.0%§!, Stability: §G+5.00%§!, Field Hospital Trickleback: §G+10%§!, Exp. Loss Factor: §G-10%§!)"
@@ -1882,7 +1880,7 @@
  AFG_create_2_turkestan_unit:0 "Create §O2§! §YTurkestan Legion§! divisions in §Y[THIS.GetName]§!."
  AFG_create_3_sivrah_unit:0 "Create §O3§! §YSivrah Mujahideen§! divisions in §Y[THIS.GetName]§!."
  AFG_if_at_war_effect:0 "§RWe will not enter a civil war as long as we are at war!§!"
- AFG_pakistani_generals_tt:0 "We will invite and acquire §Y[PAK.GetAdjective]§! communist generals."
+ AFG_pakistani_generals_tt:0 "We will §Yinvite and§! acquire §Y[PAK.GetAdjective]§! communist §Ygenerals§!."
  AFG_white_peace_PAK:0 "\n§RThis might lead us to peace within 120 days if the front solidifies, we will keep the lands we have captured thus far!§!"
  AFG_pakistani_resistance_tt:0 "These decisions will allow us to cooperate with resistance forces in §Y[PAK.GetNonIdeologyName]§! and launch an §Yuprising§!."
  AFG_basmachi_resistance_tt:0 "These decisions will allow us to support §YBasmachi§! resistance fighters and instigate a §Yrebellion§! in §Y[SOV.GetNameDef]§!."

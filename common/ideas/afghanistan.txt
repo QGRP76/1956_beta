@@ -538,7 +538,7 @@ ideas = {
 		}
 		AFG_foreign_trained_personnel = {
 			
-			picture = generic_air_fighter
+			picture = generic_air_payment
 		
 			allowed = {
 				always = yes

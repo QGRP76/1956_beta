@@ -1862,21 +1862,23 @@
  GEO_monarchy_communism_DEF:0 "the Georgian Socialist Republic"
 
  #KAZ
- KAZ_fascism:1 "Alash Orda"
- KAZ_fascism_DEF:1 "Alash Orda"
+ KAZ_fascism:1 "Alash Horde"
+ KAZ_fascism_DEF:1 "Alash Horde"
  KAZ_democratic:1 "Republic of Kazakhstan"
  KAZ_democratic_DEF:1 "the Republic of Kazakhstan"
- KAZ_neutrality:1 "Kazakh Khanate"
- KAZ_neutrality_DEF:1 "the Kazakh Khanate"
+ KAZ_neutrality:1 "Khanate of "Kazakhstan"
+ KAZ_neutrality_DEF:1 "the Khanate of "Kazakhstan"
  KAZ_communism:2 "Kazakh Soviet Socialist Republic"
  KAZ_communism_DEF:2 "the Kazakh Soviet Socialist Republic"
- KAZ_fascism_ADJ:0 "Kazakh"
+ KAZ_fascism_ADJ:0 "Alash"
  KAZ_democratic_ADJ:0 "Kazakh"
  KAZ_neutrality_ADJ:0 "Kazakh"
  KAZ_communism_ADJ:0 "Kazakh"
  KAZ:0 "Kazakhstan"
  KAZ_DEF:0 "Kazakhstan"
  KAZ_ADJ:0 "Kazakh"
+
+ #AZR
  AZR_fascism:0 "Realm of Eternal Fire"
  AZR_fascism_DEF:0 "the Realm of Eternal Fire"
  AZR_democratic:0 "Azerbaijan Democratic Republic"
