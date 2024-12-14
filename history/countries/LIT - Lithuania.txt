@@ -120,6 +120,7 @@ recruit_character = LIT_povilas_labanauskas
 recruit_character = LIT_viktoras_giedrys
 recruit_character = LIT_zenonas_gerulaitis
 recruit_character = LIT_jonas_juodisius
+recruit_character = LIT_jonas_vileisis
 
 ### SCIENTISTS ###
 recruit_character = LIT_adolfas_jucys

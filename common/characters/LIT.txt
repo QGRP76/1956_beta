@@ -243,35 +243,35 @@ characters={
 				small="GFX_idea_LIT_kazys_grinius"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = LIT_kazys_grinius
-			allowed = {
-				original_tag = LIT
-			}
-			visible = {
-				has_global_flag = LIT_vanilla_focus_tree
-			}
-			available = {
-				has_completed_focus = LIT_integrate_the_opposition
-			}
-			traits = {
-				democratic_reformer
-			}
-			ai_will_do = {
-				base = 0
-				modifier = {
-					add = 100
-					OR = {
-						has_government = democratic
-						has_country_flag = LIT_AI_RANDOM_DEMOCRATIC
-						has_game_rule = {
-							rule = LIT_ai_behavior
-							option = DEMOCRATIC
-						}
-					}
-				}
-			}
+		#advisor={
+		#	slot = political_advisor
+		#	idea_token = LIT_kazys_grinius
+		#	allowed = {
+		#		original_tag = LIT
+		#	}
+		#	visible = {
+		#		has_global_flag = LIT_vanilla_focus_tree
+		#	}
+		#	available = {
+		#		has_completed_focus = LIT_integrate_the_opposition
+		#	}
+		#	traits = {
+		#		democratic_reformer
+		#	}
+		#	ai_will_do = {
+		#		base = 0
+		#		modifier = {
+		#			add = 100
+		#			OR = {
+		#				has_government = democratic
+		#				has_country_flag = LIT_AI_RANDOM_DEMOCRATIC
+		#				has_game_rule = {
+		#					rule = LIT_ai_behavior
+		#					option = DEMOCRATIC
+		#				}
+		#			}
+		#		}
+		#}
 		}
 		country_leader={
 			ideology=socialism
