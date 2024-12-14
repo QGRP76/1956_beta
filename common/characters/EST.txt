@@ -1152,7 +1152,7 @@ characters={
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = EST_august_rei
+			idea_token = EST_theodor_pool
 			allowed = {
 				original_tag = EST
 			}
@@ -1161,6 +1161,25 @@ characters={
 			}
 			available  = {
 				has_government = democratic
+			}
+		}
+	}
+
+	EST_nikolai_kostnar={
+		name="Nikolai Köstner"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = EST_nikolai_kostnar
+			allowed = {
+				original_tag = EST
+			}
+			traits = {
+				economist
 			}
 		}
 	}

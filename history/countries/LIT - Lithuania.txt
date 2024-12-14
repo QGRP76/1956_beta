@@ -45,10 +45,10 @@ recruit_character = LIT_algirdas_sliesoraitis	#political - fascist from the rt56
 recruit_character = LIT_augustinas_voldemaras	#updated instances, disabled fascist fascist_demagogue role for r56 tree and ported leader trait
 recruit_character = LIT_kazys_skuchas			#unchanged new, anti-communist commander with focus check, DOES HE WORK WITHOUT THIS FOCUS TREE?
 recruit_character = LIT_feliksas_baltusis		#requires communist rule with r56 tree through conditional condition
-recruit_character = LIT_vincentas_latozaite		#unchanged, identical theorist role, had portrait aireuropegeneric1 - kept vanilla's aireuropegeneric2
-recruit_character = LIT_albinas_cepas			#unchanged, identical hc role, had portrait europegeneric2 - kept vanilla's europegeneric3
+#recruit_character = LIT_vincentas_latozaite		#unchanged, identical theorist role, had portrait aireuropegeneric1 - kept vanilla's aireuropegeneric2
+#recruit_character = LIT_albinas_cepas			#unchanged, identical hc role, had portrait europegeneric2 - kept vanilla's europegeneric3
 recruit_character = LIT_adolfas_ramanauskas		#unchanged, identical hc role, had portrait europegeneric4 - kept vanilla's europegeneric5
-recruit_character = LIT_juozas_ambrazevicius	#unchanged, air chief, entirely identical
+#recruit_character = LIT_juozas_ambrazevicius	#unchanged, air chief, entirely identical
 recruit_character = LIT_jonas_chernius			#ID was misspelled, unchanged, theorist that now has a portrait			
 recruit_character = LIT_vladas_karvelis			#unchanged, navy chief, entirely identical
 recruit_character = LIT_antanas_gustaitis		#unchanged, air chief, now has a portrait
@@ -114,6 +114,12 @@ recruit_character = LIT_karl_gero				#neutrality leader, will likely get an inst
 #generals that become visible through LIT_new_noble_class
 recruit_character = LIT_juozas_giedraitis
 recruit_character = LIT_mikas_gedgaudas
+recruit_character = LIT_icikas_meskupas
+recruit_character = LIT_celovas_januskecius
+recruit_character = LIT_povilas_labanauskas
+recruit_character = LIT_viktoras_giedrys
+recruit_character = LIT_zenonas_gerulaitis
+recruit_character = LIT_jonas_juodisius
 
 ### SCIENTISTS ###
 recruit_character = LIT_adolfas_jucys
