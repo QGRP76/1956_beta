@@ -232,7 +232,6 @@ characters={
 			id=-1
 		}
 	}
-
 	LIT_kazys_grinius={
 		name=LIT_kazys_grinius
 		portraits={
@@ -243,54 +242,9 @@ characters={
 				small="GFX_idea_LIT_kazys_grinius"
 			}
 		}
-		#advisor={
-		#	slot = political_advisor
-		#	idea_token = LIT_kazys_grinius
-		#	allowed = {
-		#		original_tag = LIT
-		#	}
-		#	visible = {
-		#		has_global_flag = LIT_vanilla_focus_tree
-		#	}
-		#	available = {
-		#		has_completed_focus = LIT_integrate_the_opposition
-		#	}
-		#	traits = {
-		#		democratic_reformer
-		#	}
-		#	ai_will_do = {
-		#		base = 0
-		#		modifier = {
-		#			add = 100
-		#			OR = {
-		#				has_government = democratic
-		#				has_country_flag = LIT_AI_RANDOM_DEMOCRATIC
-		#				has_game_rule = {
-		#					rule = LIT_ai_behavior
-		#					option = DEMOCRATIC
-		#				}
-		#			}
-		#		}
-		#}
-		}
-		country_leader={
-			ideology=socialism
-			expire="1965.1.1"
-			id=-1
-			traits = { democratic_crusader surgeon_general }
-		}
-	}
-
-	LIT_jonas_vileisis={
-		name="Jonas Vileišis"
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_2"
-			}
-		}
 		advisor={
 			slot = political_advisor
-			idea_token = LIT_jonas_vileisis
+			idea_token = LIT_kazys_grinius
 			allowed = {
 				original_tag = LIT
 			}
@@ -317,6 +271,12 @@ characters={
 					}
 				}
 			}
+		}
+		country_leader={
+			ideology=socialism
+			expire="1965.1.1"
+			id=-1
+			traits = { democratic_crusader surgeon_general }
 		}
 	}
 
@@ -645,6 +605,38 @@ characters={
 		}
 	}
 
+	LIT_stasys_pundzevicius={
+		name = "Stasys Pundzevičius"
+		portraits={
+			army={
+				large="GFX_Portrait_Europe_Generic_land_new_7"
+				small="GFX_idea_generic_army_europe_1"
+			}
+		}
+		corps_commander={
+			traits = {	air_force_ties infantry_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id=-1
+		}
+		advisor={
+			slot = army_chief
+			idea_token = LIT_stasys_pundzevicius
+			allowed = {
+				original_tag = LIT
+			}
+			traits = {
+				army_chief_morale_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
 
 	### NAVY CHIEFS ###
 
@@ -678,9 +670,6 @@ characters={
 			maneuvering_skill=2
 			coordination_skill=2
 			legacy_id=0
-			visible = {
-				has_global_flag = LIT_vanilla_focus_tree
-			}
 		}
 	}
 
@@ -916,21 +905,52 @@ characters={
 		name=LIT_jonas_juodisius 
 		portraits={
 			army={
+				large="GFX_Portrait_Europe_Generic_land_new_4"
 				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+		corps_commander={
+			traits = { artillerist }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}	
+		#advisor={
+		#	slot = high_command
+		#	idea_token = LIT_jonas_juodisius
+		#	allowed = {
+		#		original_tag = LIT
+		#	}
+		#	ledger = army
+		#	traits = {
+		#		army_artillery_2
+		#	}
+		#	cost = 100
+		#	ai_will_do = {
+		#		factor = 1.000
+		#	}
+		#}
+	}
+
+	LIT_albinas_cepas={
+		name=LIT_albinas_cepas
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_3"
 			}
 		}
 		advisor={
 			slot = high_command
-			idea_token = LIT_jonas_juodisius
+			idea_token = LIT_albinas_cepas
+			ledger = army
 			allowed = {
 				original_tag = LIT
 			}
-			ledger = army
-			visible={
-				NOT = { has_global_flag = LIT_vanilla_focus_tree }
-			}
 			traits = {
-				army_artillery_2
+				army_infantry_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -963,6 +983,30 @@ characters={
 		}
 	}
 
+	LIT_jonas_mikenas={
+		name = "Jonas Mikėnas"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_3"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = LIT_jonas_mikenas
+			ledger = air
+			allowed = {
+				original_tag = LIT
+			}
+			traits = {
+				air_air_superiority_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
 	LIT_viktoras_giedrys={
 		name="Viktoras Giedrys"
 		portraits={
@@ -987,6 +1031,30 @@ characters={
 		}
 	}
 
+	LIT_jonas_liorentas={
+		name = "Jonas Liorentas"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_2"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = LIT_jonas_liorentas
+			ledger = air
+			allowed = {
+				original_tag = LIT
+			}
+			traits = {
+				air_tactical_bombing_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
 	LIT_adolfas_ramanauskas={
 		name=LIT_adolfas_ramanauskas
 		portraits={
@@ -1003,6 +1071,30 @@ characters={
 			}
 			traits = {
 				army_concealment_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	LIT_klemensas_popeliucka={
+		name= "Klemensas Popeliučka"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_5"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = LIT_klemensas_popeliucka
+			ledger = army
+			allowed = {
+				original_tag = LIT
+			}
+			traits = {
+				army_entrenchment_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -1045,32 +1137,32 @@ characters={
 		}
 	}
 
-	LIT_jonas_juodisius={
-		name="Jonas Juodišius"
+	LIT_kazys_tallat_kelpsa={
+		name="Kazys Tallat-Kelpša"
 		portraits={
 			army={
-				large="GFX_Portrait_Europe_Generic_land_new_4"
+				large="GFX_Portrait_Europe_Generic_land_new_5"
 				small="GFX_idea_generic_army_europe_2"
 			}
 		}
 		corps_commander={
-			traits={ artillerist }
+			traits = { cavalry_officer }
 			skill=2
-			attack_skill=1
-			defense_skill=2
+			attack_skill=3
+			defense_skill=1
 			planning_skill=2
-			logistics_skill=2
+			logistics_skill=1
 			legacy_id=-1
-		}
+		}		
 		advisor={
 			slot = high_command
-			idea_token = LIT_jonas_juodisius
+			idea_token = LIT_kazys_tallat_kelpsa
 			ledger = army
 			allowed = {
 				original_tag = LIT
 			}
 			traits = {
-				army_regrouping_2
+				army_cavalry_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -1078,7 +1170,6 @@ characters={
 			}
 		}
 	}
-
 
 	### POLITICAL ADVISORS ###
 

@@ -67,7 +67,7 @@ recruit_character = LIT_vytautas_petrulis		#different political functions DLC/no
 recruit_character = LIT_kazys_musteikis			#high command in r56, unchanged DLC-locked commander - can we use his image? was generic_army_europe_3
 
 #new r56 characters - probably fine for DLC tree
-recruit_character = LIT_povilas_plechavicius	#high command
+#recruit_character = LIT_povilas_plechavicius	#high command
 
 #new characters - r56 tree exclusive, managed by visibility since characters are loaded before game rules/global flags are set
 recruit_character = LIT_antanas_macuika			#high command and political - fascist
@@ -119,8 +119,13 @@ recruit_character = LIT_celovas_januskecius
 recruit_character = LIT_povilas_labanauskas
 recruit_character = LIT_viktoras_giedrys
 recruit_character = LIT_zenonas_gerulaitis
+recruit_character = LIT_juozas_tamosauskas
+recruit_character = LIT_jonas_mikenas
+recruit_character = LIT_jonas_liorentas
 recruit_character = LIT_jonas_juodisius
-recruit_character = LIT_jonas_vileisis
+recruit_character = LIT_stasys_pundzevicius
+recruit_character = LIT_kazys_tallat_kelpsa
+recruit_character = LIT_klemensas_popeliucka
 
 ### SCIENTISTS ###
 recruit_character = LIT_adolfas_jucys

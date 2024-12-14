@@ -1069,17 +1069,18 @@ characters={
 		name = "Jāzeps Baško"
 		portraits={
 			army={
-				small="GFX_idea_generic_air_europe_3"
+				small="GFX_idea_generic_air_europe_2"
 			}
 		}
 		advisor={
 			slot = air_chief
 			idea_token = LAT_jazeps_basko
+			ledger = air
 			allowed = {
-					original_tag = LAT
+				original_tag = LAT
 			}
 			traits = {
-				air_chief_ground_support_2
+				air_chief_reform_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -1116,22 +1117,22 @@ characters={
 		}
 	}
 
-	LAT_jonas_liorentas={
-		name = "Jonas Liorentas"
+	LAT_rudolf_drillis={
+		name = "Rūdolfs Drillis"
 		portraits={
 			army={
-				small="GFX_idea_generic_air_europe_2"
+				small="GFX_idea_generic_air_europe_3"
 			}
 		}
 		advisor={
 			slot = high_command
-			idea_token = LAT_jonas_liorentas
+			idea_token = LAT_rudolf_drillis
 			ledger = air
 			allowed = {
 				original_tag = LAT
 			}
 			traits = {
-				air_tactical_bombing_2
+				air_air_combat_training_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -1236,8 +1237,8 @@ characters={
 		}
 	}
 
-	LAT_jonas_mikenas={
-		name = "Jonas Mikėnas"
+	LAT_voldemars_jakubov={
+		name = "Voldemārs Jakubov"
 		portraits={
 			army={
 				small="GFX_idea_generic_air_europe_2"
@@ -1245,13 +1246,13 @@ characters={
 		}
 		advisor={
 			slot = high_command
-			idea_token = LAT_jonas_mikenas
+			idea_token = LAT_voldemars_jakubov
 			ledger = air
 			allowed = {
 				original_tag = LAT
 			}
 			traits = {
-				air_air_superiority_2
+				air_naval_strike_2
 			}
 			cost = 100
 			ai_will_do = {

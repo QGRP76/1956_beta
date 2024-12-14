@@ -66,10 +66,9 @@ recruit_character = LAT_martins_hartmanis
 recruit_character = LAT_fricis_lipstonns
 recruit_character = LAT_janis_indans
 recruit_character = LAT_jazeps_basko
-recruit_character = LAT_jonas_liorentas
 recruit_character = LAT_ernests_barotajs
 recruit_character = LAT_oskars_eduards_kalns
-recruit_character = LAT_jonas_mikenas
+recruit_character = LAT_voldemars_jakubov
 recruit_character = LAT_alberts_brambats
 recruit_character = LAT_arturs_dalbergs
 recruit_character = LAT_arvids_kurse
@@ -77,6 +76,7 @@ recruit_character = LAT_karlis_berzins
 recruit_character = LAT_ernsets_morics
 recruit_character = LAT_izidors_muiznieks
 recruit_character = LAT_kristaps_eliass
+recruit_character = LAT_rudolf_drillis
 
 
 recruit_character = LAT_zhanis_bahs					#used instances for his portraits - marijn check?:D
