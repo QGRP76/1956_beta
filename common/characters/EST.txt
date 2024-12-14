@@ -54,6 +54,21 @@ characters={
 		}
 	}
 
+	EST_johannes_lauristin={
+		name="Johannes Lauristin"
+		portraits={
+			civilian={
+				large="gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_6.dds"
+			}
+		}
+		country_leader={
+			ideology=leninism
+			expire="1965.1.1"
+			id=-1
+			traits = { revolutionary_writer }
+		}
+	}
+
 	EST_johannes_kabin={
 		name=EST_johannes_kabin
 		portraits={
@@ -84,11 +99,11 @@ characters={
 			}
 		}
 
-		country_leader={
-			ideology=stalinism
-			expire="1965.1.1"
-			id=-1
-		}
+		#country_leader={
+		#	ideology=stalinism
+		#	expire="1965.1.1"
+		#	id=-1
+		#}
 	}
 
 	EST_jaan_tonisson={
@@ -134,13 +149,28 @@ characters={
 				}
 			}
 		}
-		country_leader={
-			ideology = socialism
-			traits = {
-				triumphant_revolutionary
+		#country_leader={
+		#	ideology = socialism
+		#	traits = {
+		#		triumphant_revolutionary
+		#	}
+		#	expire="1965.1.1"
+		#	id=-1
+		#}
+	}
+
+	EST_ants_piip={
+		name="Ants Piip"
+		portraits={
+			civilian={
+				large="gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_4.dds"
 			}
+		}
+		country_leader={
+			ideology=socialism
 			expire="1965.1.1"
 			id=-1
+			traits = { lawyer }
 		}
 	}
 
@@ -175,21 +205,21 @@ characters={
 			}
 		}
 
-		field_marshal={
-			traits={ old_guard }
-			skill=3
-			attack_skill=2
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=-1
-			visible = { 
-				has_dlc = "No Step Back" 
-				NOT = {
-					has_government = communism
-				}
-			}
-		}
+		#field_marshal={
+		#	traits={ old_guard }
+		#	skill=3
+		#	attack_skill=2
+		#	defense_skill=3
+		#	planning_skill=2
+		#	logistics_skill=3
+		#	legacy_id=-1
+		#	visible = { 
+		#		has_dlc = "No Step Back" 
+		#		NOT = {
+		#			has_government = communism
+		#		}
+		#	}
+		#}
 	}
 
 	EST_herbert_brede={
