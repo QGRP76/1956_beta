@@ -241,7 +241,7 @@ characters={
 		}
 		advisor={
 			slot = high_command
-			idea_token = EST_alexander_jaakson
+			idea_token = EST_herbert_brede
 			ledger = army
 			allowed = {
 				original_tag = EST
@@ -334,7 +334,7 @@ characters={
 					small="GFX_idea_EST_aleksander_jaakson"
 				}
 			}
-			 #corps_commander = { #Purged after annexed by soviets
+			 corps_commander = { #Purged after annexed by soviets
 			 	traits = { career_officer infantry_officer vigorous promising }
 			 	skill = 2
 			    attack_skill = 2
@@ -470,24 +470,23 @@ characters={
 		    planning_skill = 1
 		    logistics_skill = 2
 			visible = { 
-
+			}				
+		}
+		advisor={
+			slot = high_command
+			idea_token = EST_gustav_jonson
+			ledger = army
+			allowed = {
+				original_tag = EST
 			}
-			advisor={
-				slot = high_command
-				idea_token = EST_gustav_jonson
-				ledger = army
-				allowed = {
-					original_tag = EST
-				}
-				traits = {
-					army_cavalry_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-			}						
-		}		
+			traits = {
+				army_cavalry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}	
 	}
 
 	### THEORISTS ###
@@ -536,6 +535,71 @@ characters={
 		}
 	}
 
+	EST_august_kasekamp={
+		name="August Kasekamp"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_1"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = EST_august_kasekamp
+			ledger = army
+			allowed = {
+				original_tag = EST
+			}
+			
+			traits = {
+				military_theorist
+			}
+		}
+	}
+
+	EST_herman_liikane={
+		name="Herman Liikane"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_europe_2"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = EST_herman_liikane
+			ledger = navy
+			allowed = {
+				original_tag = EST
+			}
+			
+			traits = {
+				naval_theorist
+			}
+		}
+	}
+
+	EST_hans_kitvel={
+		name="Hans Kitvel"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_2"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = EST_hans_kitvel
+			ledger = navy
+			allowed = {
+				original_tag = EST
+			}
+			
+			traits = {
+				air_warfare_theorist
+			}
+		}
+	}
 
 	### ARMY CHIEFS ###
 
@@ -564,6 +628,56 @@ characters={
 				small="GFX_idea_EST_alfons_rebane"
 			}
 		}
+	}
+
+	EST_jaan_maide={
+		advisor={
+			slot = army_chief
+			idea_token = EST_jaan_maide
+			traits = {
+				army_chief_morale_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		} 
+		name="Jaan Maide"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_3"
+			}
+		}
+	}
+
+	EST_nikolai_reek={
+		advisor={
+			slot = army_chief
+			idea_token = EST_nikolai_reek
+			traits = {
+				army_chief_organizational_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		} 
+		name="Nikolai Reek"
+		portraits={
+			army={
+				large="GFX_Portrait_Europe_Generic_land_new_9"
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = -1
+		}	
 	}
 	
 
@@ -615,6 +729,71 @@ characters={
 		}
 	}
 
+	EST_valev_mere={
+		name="Valev Mere"
+		portraits={
+			army={
+				large="GFX_Portrait_Europe_Generic_navy_new_1"
+				small="GFX_idea_generic_navy_europe_2" #No portrait
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = EST_valev_mere
+			allowed = {
+				original_tag = EST
+			}
+			traits = {
+				navy_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		navy_leader={
+			traits={ fleet_protector }
+			skill = 2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+
+	EST_valentin_grenz={
+		name="Valentin Grenz"
+		portraits={
+			army={
+				large="GFX_Portrait_Europe_Generic_navy_new_3"
+				small="GFX_idea_generic_navy_europe_3" #No portrait
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = EST_valentin_grenz
+			allowed = {
+				original_tag = EST
+			}
+			traits = {
+				navy_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		navy_leader={
+			traits={ navy_career_officer spotter }
+			skill = 2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=2
+			legacy_id=-1
+		}	
+	}
 
 	### AIR CHIEFS ###
 
@@ -652,8 +831,8 @@ characters={
 		}		
 	}
 
-	EST_leo_sepp={
-		name="Leo Sepp"
+	EST_valfried_gutmann={
+		name="Valfried Gutmann"
 		portraits={
 			army={
 				small="GFX_idea_generic_air_europe_3" #No portrait
@@ -661,7 +840,7 @@ characters={
 		}
 		advisor={
 			slot = air_chief
-			idea_token = EST_leo_sepp
+			idea_token = EST_valfried_gutmann
 			allowed = {
 				original_tag = EST
 			}
@@ -801,6 +980,32 @@ characters={
 			}
 			traits = {
 				popular_figurehead 
+			}
+		}
+	}
+
+	EST_leo_sepp={
+		name="Leo Sepp"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_3" #No portrait
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = EST_leo_sepp
+			allowed = {
+				original_tag = EST
+			}
+			traits = {
+				financial_expert				
+			}
+			available  = {
+				has_government = democratic
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
 	}
