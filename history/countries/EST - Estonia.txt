@@ -70,6 +70,12 @@ recruit_character = EST_nikolai_reek
 recruit_character = EST_valev_mere
 recruit_character = EST_valentin_grenz
 recruit_character = EST_valfried_gutmann
+recruit_character = EST_jaan_kruus
+recruit_character = EST_martin_volmer_jervan
+recruit_character = EST_roman_kruul
+recruit_character = EST_juhan_karl_fischer
+recruit_character = EST_kurt_arced_linneberg
+recruit_character = EST_theodor_pool
 
 ### SCIENTISTS ###
 recruit_character = EST_voldemar_post

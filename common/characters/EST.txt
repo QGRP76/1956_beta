@@ -934,6 +934,136 @@ characters={
 		}
 	}
 
+	EST_jaan_kruus={
+		name="Jaan Kruus"
+		portraits={
+			army={
+				large = "GFX_Portrait_Europe_Generic_land_new_3"
+				small = "GFX_idea_generic_army_europe_3"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = EST_jaan_kruus
+			ledger = army
+			allowed = {
+				original_tag = EST
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+			traits = { infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+	EST_martin_volmer_jervan={
+		name="Martin-Volmer Jervan"
+		portraits={
+			army={
+				small = "GFX_idea_generic_army_europe_2"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = EST_martin_volmer_jervan
+			ledger = army
+			allowed = {
+				original_tag = EST
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	EST_roman_kruul={
+		name="Roman Kuul"
+		portraits={
+			army={
+				small = "GFX_idea_generic_air_europe_1"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = EST_roman_kruul
+			ledger = army
+			allowed = {
+				original_tag = EST
+			}
+			traits = {
+				air_air_combat_training_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	EST_juhan_karl_fischer={
+		name="Juhan Karl Fischer"
+		portraits={
+			army={
+				small = "GFX_idea_generic_navy_europe_2"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = EST_juhan_karl_fischer
+			ledger = army
+			allowed = {
+				original_tag = EST
+			}
+			traits = {
+				air_naval_strike_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	EST_kurt_arced_linneberg={
+		name="Kurt-Arved Linneberg"
+		portraits={
+			army={
+				small = "GFX_idea_generic_navy_europe_1"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = EST_kurt_arced_linneberg
+			ledger = army
+			allowed = {
+				original_tag = EST
+			}
+			traits = {
+				navy_naval_air_defense_1
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
 
 	### POLITICAL ADVISORS ###
 
@@ -979,7 +1109,10 @@ characters={
 				original_tag = EST
 			}
 			traits = {
-				popular_figurehead 
+				slient_workhorse
+			}
+			available  = {
+				has_government = democratic
 			}
 		}
 	}
@@ -1006,6 +1139,28 @@ characters={
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
+			}
+		}
+	}
+
+	EST_theodor_pool={
+		name="Theodor Pool"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = EST_august_rei
+			allowed = {
+				original_tag = EST
+			}
+			traits = {
+				ambitious_agrarian
+			}
+			available  = {
+				has_government = democratic
 			}
 		}
 	}
@@ -1177,22 +1332,22 @@ characters={
 				vapsid_economist 
 			}
 		}
-		navy_leader={
-			traits={ 
-				chief_engineer
-			}
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			maneuvering_skill=2
-			coordination_skill=2
-			legacy_id=-1
-			visible = { 
-				NOT = {
-					has_government = communism
-				}
-			}			
-		}		
+		#navy_leader={
+		#	traits={ 
+		#		chief_engineer
+		#	}
+		#	skill=3
+		#	attack_skill=3
+		#	defense_skill=3
+		#	maneuvering_skill=2
+		#	coordination_skill=2
+		#	legacy_id=-1
+		#	visible = { 
+		#		NOT = {
+		#			has_government = communism
+		#		}
+		#	}			
+		#}		
 	}
 	EST_hermann_salza={
 		name="Hermann Salza"
@@ -1211,10 +1366,16 @@ characters={
 		 	maneuvering_skill = 1
 		 	coordination_skill = 2
 			legacy_id=-1
-			visible = { 
-				NOT = {
-					has_government = communism
+			}
+			advisor={
+				slot = high_command
+				idea_token = EST_hermann_salza
+				ledger = navy
+				allowed = {
+					original_tag = EST
 				}
+				traits = { navy_fleet_logistics_2 }
+				cost = 100
 			}			
 		}		
 	}
