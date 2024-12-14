@@ -878,7 +878,6 @@ characters={
 		}
 		instance = {
 			allowed = {
-				has_dlc = "No Step Back"
 				NOT = { 
 					has_dlc = "No Step Back"
 				}
