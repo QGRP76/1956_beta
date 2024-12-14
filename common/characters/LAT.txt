@@ -196,10 +196,25 @@ characters={
 			}
 		}
 
+		#country_leader={
+		#	ideology=socialism
+		#	expire="1965.1.1"
+		#	id=-1
+		#}
+	}
+
+	LAT_pauls_kalnins={
+		name="Pauls Kalniņš"
+		portraits={
+			civilian={
+				large="gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_7.dds"
+			}
+		}
 		country_leader={
 			ideology=socialism
 			expire="1965.1.1"
 			id=-1
+			traits = { ICE_progressive_doctor }
 		}
 	}
 
@@ -213,9 +228,43 @@ characters={
 				small="GFX_idea_LAT_augusts_kirhensteins"
 			}
 		}
+		#advisor={
+		#	slot = political_advisor
+		#	idea_token = LAT_augusts_kirhensteins
+		#	allowed = {
+		#		original_tag = LAT
+		#	}
+		#	available = {
+		#		if = {
+		#			limit = { has_DLC = "No Step Back" }
+		#			has_completed_focus = BALTIC_restore_workers_republic
+		#		}
+		#	}
+		#	traits = {
+		#		communist_revolutionary 
+		#	}
+		#	ai_will_do = {
+		#		factor = 0
+		#	}
+		#}
+
+		country_leader={
+			ideology=leninism
+			expire="1965.1.1"
+			id=-1
+		}
+	}
+
+	LAT_karlis_ozolins={
+		name="Kārlis Ozoliņš"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
 		advisor={
 			slot = political_advisor
-			idea_token = LAT_augusts_kirhensteins
+			idea_token = LAT_karlis_ozolins
 			allowed = {
 				original_tag = LAT
 			}
@@ -231,12 +280,6 @@ characters={
 			ai_will_do = {
 				factor = 0
 			}
-		}
-
-		country_leader={
-			ideology=marxism
-			expire="1965.1.1"
-			id=-1
 		}
 	}
 	
@@ -270,16 +313,16 @@ characters={
 			}
 		}
 
-		field_marshal={
-			traits={ old_guard }
-			skill=3
-			attack_skill=2
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=-1
-			visible = { has_dlc = "No Step Back" }
-		}
+		#field_marshal={
+		#	traits={ old_guard }
+		#	skill=3
+		#	attack_skill=2
+		#	defense_skill=3
+		#	planning_skill=3
+		#	logistics_skill=2
+		#	legacy_id=-1
+		#	visible = { has_dlc = "No Step Back" }
+		#}
 
 		country_leader={
 			ideology=oligarchism
@@ -596,6 +639,57 @@ characters={
 		}
 	}
 
+	LAT_ceslovas_januskevicus={
+		name = "Česlovas Januškevičius"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_2"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = LAT_ceslovas_januskevicus
+			ledger = air
+			allowed = {
+				original_tag = LAT
+			}
+			traits = {
+				air_warfare_theorist
+			}
+		}
+	}
+
+	LAT_rienholds_blodnieks={
+		name = "Reinholds Bļodnieks"
+		portraits={
+			army={
+				large="GFX_Portrait_Europe_Generic_navy_new_1"
+				small="GFX_idea_generic_navy_europe_2"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = LAT_rienholds_blodnieks
+			ledger = air
+			allowed = {
+				original_tag = LAT
+			}
+			traits = {
+				naval_theorist
+			}
+		}
+		navy_leader={
+			traits = { seawolf }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 2
+			legacy_id=-1
+		}
+	}
 
 	### ARMY CHIEFS ###
 
