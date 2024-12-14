@@ -1109,7 +1109,7 @@ characters={
 				original_tag = EST
 			}
 			traits = {
-				slient_workhorse
+				silent_workhorse		
 			}
 			available  = {
 				has_government = democratic
