@@ -53,7 +53,6 @@ recruit_character = EST_alfons_rebane
 recruit_character = EST_juri_uluots
 recruit_character = EST_boris_kumm
 recruit_character = EST_august_rei
-#recruit_character = EST_jaan_anvelt
 recruit_character = EST_johan_laidoner
 
 recruit_character = EST_gustav_jonson
@@ -62,6 +61,7 @@ recruit_character = EST_hermann_salza
 recruit_character = EST_herbert_brede
 recruit_character = EST_johannes_lauristin
 recruit_character = EST_ants_piip
+recruit_character = EST_jaan_anvelt
 
 ### SCIENTISTS ###
 recruit_character = EST_voldemar_post
