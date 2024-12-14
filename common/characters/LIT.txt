@@ -649,66 +649,37 @@ characters={
 	### NAVY CHIEFS ###
 
 	LIT_antanas_kaskelis={
-		instance = {
-			allowed = {
-				has_global_flag = LIT_vanilla_focus_tree
-			}
-			name=LIT_antanas_kaskelis
-			portraits={
-				army={
-					large="gfx/leaders/FRA/Portrait_France_Jean-Pierre_Esteva.dds"
-					small="gfx/interface/ideas/idea_FRA_jean-pierre_esteva.dds"
-				}
-			}
-			advisor={
-				slot = navy_chief
-				idea_token = LIT_antanas_kaskelis
-				allowed = {
-					original_tag = LIT
-				}
-				traits = {
-					navy_chief_maneuver_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+		name=LIT_antanas_kaskelis
+		portraits={
+			army={
+				large="gfx/leaders/FRA/Portrait_France_Jean-Pierre_Esteva.dds"
+				small="gfx/interface/ideas/idea_FRA_jean-pierre_esteva.dds"
 			}
 		}
-	}
-		instance = {
+		advisor={
+			slot = navy_chief
+			idea_token = LIT_antanas_kaskelis
 			allowed = {
-				NOT = { has_global_flag = LIT_vanilla_focus_tree }
+				original_tag = LIT
 			}
-			name=LIT_antanas_kaskelis
-			portraits={
-				army={
-					large="gfx/leaders/FRA/Portrait_France_Jean-Pierre_Esteva.dds"
-					small="gfx/interface/ideas/idea_FRA_jean-pierre_esteva.dds"
-				}
+			traits = {
+				navy_chief_maneuver_2
 			}
-			advisor={
-				slot = navy_chief
-				idea_token = LIT_antanas_kaskelis
-				allowed = {
-					original_tag = LIT
-				}
-				traits = {
-					navy_chief_maneuver_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
 			}
-			navy_leader={
-				traits={ old_guard_navy gentlemanly }
-				skill=2
-				attack_skill=1
-				defense_skill=2
-				maneuvering_skill=2
-				coordination_skill=2
-				legacy_id=0
+		}
+		navy_leader={
+			traits={ old_guard_navy gentlemanly }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
+			visible = {
+				has_global_flag = LIT_vanilla_focus_tree
 			}
 		}
 	}
