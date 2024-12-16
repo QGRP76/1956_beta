@@ -742,7 +742,7 @@ characters = {
 					limit = { has_global_flag = por_lar_focus_tree }
 					has_completed_focus = POR_national_syndicalism 
 				}
-				else = { has_completed_focus = POR_integrate_the_blueshirts }
+				else = { has_government = fascism }
 			}
 			cost = 75
 			traits = { national_integralist }

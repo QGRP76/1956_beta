@@ -3775,7 +3775,7 @@ focus_tree = {
 				}
 			}
 		}
-		x = 70
+		x = 68
 		y = 0
 		offset = {
 			x = -24
@@ -3807,10 +3807,17 @@ focus_tree = {
 		prerequisite = { focus = POR_restore_valiance_to_the_nation }
 		mutually_exclusive = { focus = POR_one_revolution_to_end_them_all }
 		icon = GFX_focus_generic_infiltration
-		cost = 4
+		cost = 5
 		x = -1
 		y = 1
 		relative_position_id = POR_restore_valiance_to_the_nation
+		completion_reward = {
+			set_party_name = {
+				ideology = fascism
+				long_name = POR_neutrality_party_long
+				name = POR_neutrality_party
+			}
+		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
@@ -3818,7 +3825,7 @@ focus_tree = {
 		id = POR_unify_the_monarchist_opposition
 		prerequisite = { focus = POR_radicalize_salazars_allies }
 		icon = GFX_focus_generic_monarchy_1
-		cost = 8
+		cost = 10
 		x = -2
 		y = 1
 		relative_position_id = POR_radicalize_salazars_allies
@@ -3833,7 +3840,7 @@ focus_tree = {
 		prerequisite = { focus = POR_restore_valiance_to_the_nation }
 		mutually_exclusive = { focus = POR_radicalize_salazars_allies }
 		icon = GFX_focus_ITA_generic_fascist_workers
-		cost = 4
+		cost = 5
 		x = 1
 		y = 1
 		relative_position_id = POR_restore_valiance_to_the_nation
@@ -3861,7 +3868,7 @@ focus_tree = {
 		id = POR_call_for_foreign_assistance
 		prerequisite = { focus = POR_one_revolution_to_end_them_all }
 		icon = GFX_goal_molotov_ribbentrop_pact
-		cost = 4
+		cost = 5
 		x = 2
 		y = 1
 		relative_position_id = POR_one_revolution_to_end_them_all
@@ -3872,13 +3879,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_approach_young_officers
+		id = POR_contacts_in_the_armed_forces
 		prerequisite = { 
 			focus = POR_radicalize_salazars_allies
 			focus = POR_one_revolution_to_end_them_all
 		}
 		icon = GFX_focus_POL_beck_ribbentrop
-		cost = 6
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = POR_radicalize_salazars_allies
@@ -3945,19 +3952,31 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_integrate_the_blueshirts
+		id = POR_purge_the_remaining_salazarists
+		mutually_exclusive = { focus = POR_united_against_the_bolshevik_threat }
 		prerequisite = { focus = POR_march_on_lisbon }
-		icon = GFX_focus_generic_fascist_troops
-		cost = 8
-		x = -4
+		icon = GFX_focus_CZE_german_puppet
+		cost = 6
+		x = -1
+		y = 1
+		relative_position_id = POR_march_on_lisbon
+		available = { has_civil_war = no }
+		completion_reward = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = POR_united_against_the_bolshevik_threat
+		mutually_exclusive = { focus = POR_purge_the_remaining_salazarists }
+		prerequisite = { focus = POR_march_on_lisbon }
+		icon = GFX_focus_generic_full_social_mobilization
+		cost = 6
+		x = 1
 		y = 1
 		relative_position_id = POR_march_on_lisbon
 		available = { has_civil_war = no }
 		completion_reward = { 
-			swap_ideas = {
-				remove_idea = POR_renewed_instability
-				add_idea = POR_renewed_instability2
-			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = POR_alberto_monsaraz
 		}
@@ -3966,61 +3985,16 @@ focus_tree = {
 
 	focus = {
 		id = POR_forge_a_cult_of_personality
-		prerequisite = { focus = POR_integrate_the_blueshirts }
+		prerequisite = { 
+			focus = POR_purge_the_remaining_salazarists 
+			focus = POR_united_against_the_bolshevik_threat
+		}
 		icon = GFX_goal_generic_uprising
-		cost = 8
-		x = -2
-		y = 1
-		relative_position_id = POR_integrate_the_blueshirts
-		completion_reward = { 
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = POR_reinstitute_the_secret_police
-		prerequisite = { focus = POR_integrate_the_blueshirts }
-		icon = GFX_goal_generic_secret_documents
 		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = POR_integrate_the_blueshirts
-		completion_reward = {
-			add_political_power = 25
-			swap_ideas = {
-				remove_idea = POR_renewed_instability2
-				add_idea = POR_secret_police_crackdowns
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = POR_purge_the_remaining_salazarists
-		prerequisite = { focus = POR_reinstitute_the_secret_police }
-		mutually_exclusive = { focus = POR_united_against_the_bolshevik_threat }
-		icon = GFX_focus_CZE_german_puppet
-		cost = 6
 		x = 1
 		y = 1
-		relative_position_id = POR_reinstitute_the_secret_police
-		completion_reward = {
-			remove_ideas = POR_secret_police_crackdowns
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = POR_united_against_the_bolshevik_threat
-		prerequisite = { focus = POR_reinstitute_the_secret_police }
-		mutually_exclusive = { focus = POR_purge_the_remaining_salazarists }
-		icon = GFX_focus_generic_full_social_mobilization
-		cost = 6
-		x = -1
-		y = 1
-		relative_position_id = POR_reinstitute_the_secret_police
-		completion_reward = {
-			remove_ideas = POR_secret_police_crackdowns
+		relative_position_id = POR_purge_the_remaining_salazarists
+		completion_reward = { 
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -4030,8 +4004,8 @@ focus_tree = {
 		prerequisite = { focus = POR_march_on_lisbon }
 		icon = GFX_goal_italy_autarky
 		cost = 8
-		x = 0
-		y = 1
+		x = -3
+		y = 2
 		relative_position_id = POR_march_on_lisbon
 		available = { 
 			has_civil_war = no
@@ -4051,7 +4025,7 @@ focus_tree = {
 		prerequisite = { focus = POR_end_the_austerity_measures }
 		icon = GFX_goal_generic_factories_green
 		cost = 5
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = POR_end_the_austerity_measures
 		bypass = { has_completed_focus = POR_never_another_la_lys }
@@ -4101,26 +4075,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_heavy_handed_development
-		prerequisite = { focus = POR_end_the_austerity_measures }
-		icon = GFX_focus_generic_modernize_industry
-		cost = 6
-		x = -2
-		y = 1
-		relative_position_id = POR_end_the_austerity_measures
-		completion_reward = {
-			add_stability = 0.03
-			unlock_decision_tooltip = POR_direct_farmland_to_industrial_projects
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
 		id = POR_draft_portugals_own_labor_charter
 		prerequisite = { focus = POR_end_the_austerity_measures }
 		icon = GFX_goal_QBC_clerical_fascism
 		cost = 8
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = POR_end_the_austerity_measures
 		completion_reward = { add_ideas = POR_portugals_own_labor_charter }
@@ -4132,7 +4091,7 @@ focus_tree = {
 		prerequisite = { focus = POR_draft_portugals_own_labor_charter }
 		icon = GFX_focus_SOV_breadbasket_of_the_union
 		cost = 8
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = POR_draft_portugals_own_labor_charter
 		completion_reward = {
@@ -4143,6 +4102,27 @@ focus_tree = {
 			}
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			unlock_decision_tooltip = POR_maternalistic_welfare
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = POR_expand_support_for_fascist_trade_unions
+		prerequisite = { focus = POR_draft_portugals_own_labor_charter }
+		icon = GFX_focus_ITA_generic_fascist_workers
+		cost = 8
+		x = -1
+		y = 1
+		relative_position_id = POR_draft_portugals_own_labor_charter
+		completion_reward = {
+			add_political_power = 40
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.03
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			unlock_decision_tooltip = POR_factory_recruitment_drive
+			unlock_decision_tooltip = POR_support_private_collectives
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -4160,27 +4140,6 @@ focus_tree = {
 			add_research_slot = 1
 			custom_effect_tooltip = CHL_skip_one_line_tt 
 			unlock_decision_tooltip = POR_invest_in_public_education
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = POR_expand_support_for_fascist_trade_unions
-		prerequisite = { focus = POR_draft_portugals_own_labor_charter }
-		icon = GFX_focus_ITA_generic_fascist_workers
-		cost = 8
-		x = 1
-		y = 1
-		relative_position_id = POR_draft_portugals_own_labor_charter
-		completion_reward = {
-			add_political_power = 40
-			add_popularity = {
-				ideology = ROOT
-				popularity = 0.03
-			}
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			unlock_decision_tooltip = POR_factory_recruitment_drive
-			unlock_decision_tooltip = POR_support_private_collectives
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -4208,8 +4167,8 @@ focus_tree = {
 		prerequisite = { focus = POR_march_on_lisbon }
 		icon = GFX_focus_generic_monarchy_2
 		cost = 8
-		x = 4
-		y = 1
+		x = 3
+		y = 2
 		relative_position_id = POR_march_on_lisbon
 		available = { has_civil_war = no }
 		completion_reward = {
@@ -4245,7 +4204,7 @@ focus_tree = {
 		prerequisite = { focus = POR_restore_the_empire }
 		icon = GFX_goal_generic_demand_territory
 		cost = 6
-		x = 2
+		x = -1
 		y = 1
 		relative_position_id = POR_restore_the_empire
 		completion_reward = {
@@ -4263,7 +4222,7 @@ focus_tree = {
 		prerequisite = { focus = POR_restore_the_empire }
 		icon = GFX_focus_generic_annex_country
 		cost = 8
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = POR_restore_the_empire
 		completion_reward = {
@@ -4369,7 +4328,10 @@ focus_tree = {
 
 	focus = {
 		id = POR_avenge_the_1821_disaster
-		prerequisite = { focus = POR_destabilize_brazil }
+		prerequisite = { 
+			focus = POR_destabilize_brazil
+			focus = POR_prepare_the_colonial_frontlines 
+		}
 		icon = GFX_focus_por_recover_brazil
 		cost = 8
 		x = 0
@@ -4378,9 +4340,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			NOT = {
-				BRA = {
-					is_ally_with = POR
-				}
+				BRA = { is_ally_with = POR }
 			}
 		}
 		will_lead_to_war_with = BRA
