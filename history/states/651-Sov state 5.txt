@@ -4,6 +4,10 @@ state={
 	name="STATE_651" # Ufa
 	manpower = 2238169
 
+	resources = {
+		oil = 8
+	}
+
 	state_category = city
 
 	history={
@@ -11,7 +15,6 @@ state={
 		buildings = {
 			infrastructure = 3 #was: 5
 			industrial_complex = 1
-
 		}
 		victory_points = {
 			1278 5

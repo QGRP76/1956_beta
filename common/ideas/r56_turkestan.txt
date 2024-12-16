@@ -3,7 +3,72 @@
 
 ideas = {
 	country = {
-		KAZ_semipalatinsk_test_site = {
+		TRK_slight_soviet_colonization = {
+
+			picture = TRK_slight_soviet_colonization
+
+			removal_cost = -1
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				conscription_factor = -0.05
+				stability_factor = -0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		TRK_moderate_soviet_colonization = {
+
+			picture = TRK_moderate_soviet_colonization
+
+			removal_cost = -1
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				conscription_factor = -0.15
+				industrial_capacity_factory = -0.05
+				stability_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				consumer_goods_factor = -0.10
+			}
+		}
+		TRK_severe_soviet_colonization = {
+
+			picture = TRK_severe_soviet_colonization
+
+			removal_cost = -1
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				conscription_factor = -0.25
+				industrial_capacity_factory = -0.10
+				stability_factor = -0.05
+				stability_weekly = -0.001
+				production_speed_buildings_factor = -0.10
+				consumer_goods_factor = -0.15
+			}
+		}
+		TRK_semipalatinsk_test_site = {
 
 			picture = generic_exploit_mines
 
@@ -21,7 +86,7 @@ ideas = {
 				production_speed_nuclear_reactor_factor = 0.25
 			}
 		}
-		KAZ_propaganda_studios = {
+		TRK_propaganda_studios = {
 			picture = generic_exploit_mines
 
 			removal_cost = -1
@@ -49,7 +114,7 @@ ideas = {
 				war_stability_factor = 0.10
 			}			
 		}
-		KAZ_the_KUN_project = {
+		TRK_the_KUN_project = {
 			picture = generic_exploit_mines
 
 			removal_cost = -1
@@ -66,7 +131,7 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 		}
-		KAZ_military_government = {
+		TRK_military_government = {
 			picture = generic_exploit_mines
 
 			removal_cost = -1
@@ -88,8 +153,7 @@ ideas = {
 		}
 	}
 	industrial_concern = {
-
-		KAZ_embaneft = {
+		TRK_embaneft = {
 			name = "Embaneft"
 			picture = generic_refining_concern_1
 

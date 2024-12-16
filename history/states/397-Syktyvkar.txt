@@ -4,9 +4,9 @@ state={
 	name="STATE_397"
 	manpower = 161546
 	state_category = pastoral
-	resources={
-		oil=7 # was: 8 moved from 262
-	}
+	# resources={
+	# 	oil=7 # oil extracted much later
+	# }
 	history={
 		owner = SOV
 		buildings = {

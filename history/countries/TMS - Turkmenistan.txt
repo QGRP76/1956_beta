@@ -78,6 +78,16 @@ if = {
 	}
 }
 
+add_ideas = {
+	TRK_slight_soviet_colonization
+}
+
+set_party_name = {
+	ideology = fascism
+	long_name = TRK_fascist_party
+	name = TRK_fascist_party
+}
+
 set_politics = {
 	ruling_party = democratic
 	last_election = "1936.1.1"
@@ -96,5 +106,5 @@ create_country_leader = {
 	name = "Balysh Ovezov"
 	picture = "gfx/leaders/TMS/r56_portrait_TMS_Balysh_Ovezov.dds"
 	expire = "1965.1.1"
-	ideology = leninism
+	ideology = stalinism
 }

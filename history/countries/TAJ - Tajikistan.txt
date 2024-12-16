@@ -3,9 +3,6 @@
 #oob = ""
 
 set_country_flag = started_out_as_landlocked
-add_ideas = {
-	TIB_mountainous_people
-}
 
 # Starting tech
 set_technology = {
@@ -75,6 +72,11 @@ if = {
 			basic_torpedo = 1
 		}
 	}
+}
+
+add_ideas = {
+	TRK_slight_soviet_colonization
+	TIB_mountainous_people
 }
 
 set_politics = {

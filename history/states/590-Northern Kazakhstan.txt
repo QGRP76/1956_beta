@@ -6,6 +6,11 @@ state={
 	
 	state_category = town
 
+	resources = {
+		chromium = 6
+		steel = 1
+	}
+
 	history={
 		owner = SOV
 		victory_points = {

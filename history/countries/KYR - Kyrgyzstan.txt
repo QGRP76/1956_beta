@@ -71,6 +71,16 @@ if = {
 	}
 }
 
+add_ideas = {
+	TRK_moderate_soviet_colonization
+}
+
+set_party_name = {
+	ideology = fascism
+	long_name = TRK_fascist_party
+	name = TRK_fascist_party
+}
+
 set_politics = {
 	ruling_party = democratic
 	last_election = "1936.1.1"

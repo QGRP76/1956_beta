@@ -3,6 +3,10 @@ state={
 	id=575
 	name="STATE_575" # Kirensk
 	manpower = 128475
+
+	resources = {
+		aluminium = 2
+	}
 	
 	state_category = wasteland
 

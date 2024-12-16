@@ -80,6 +80,16 @@ if = {
 	}
 }
 
+add_ideas = {
+	TRK_severe_soviet_colonization
+}
+
+set_party_name = {
+	ideology = fascism
+	long_name = TRK_fascist_party
+	name = TRK_fascist_party
+}
+
 set_politics = {
 	ruling_party = democratic
 	last_election = "1936.1.1"
@@ -150,21 +160,9 @@ create_country_leader = { # Former Alash party member turned German collabrator
 }
 
 recruit_character = KAZ_kazhymukan_munaitpasov
-recruit_character = KAZ_awt
-recruit_character = KAZ_acd2
-recruit_character = KAZ_nt
 recruit_character = KAZ_tolesin_aliyev
 recruit_character = KAZ_alibi_dzhangildin
-recruit_character = KAZ_stc
-recruit_character = KAZ_aa2
-recruit_character = KAZ_ncm
-recruit_character = KAZ_communist_guy
-recruit_character = KAZ_pot
-recruit_character = KAZ_nccr
-recruit_character = KAZ_fascist_guy
 recruit_character = KAZ_sabit_mukanov
-recruit_character = KAZ_coi
-recruit_character = KAZ_democratic_guy
 recruit_character = KAZ_musin_nurkhan
 recruit_character = KAZ_ramazan_kurmangaliyev
 recruit_character = KAZ_shamil_karatayev
@@ -176,7 +174,3 @@ recruit_character = KAZ_khiuaz_dospanova
 recruit_character = KAZ_ivan_pavlov
 recruit_character = KAZ_talgat_bigeldinov
 recruit_character = KAZ_bauyrzhan_momyshuly
-
-
-
-

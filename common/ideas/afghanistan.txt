@@ -2068,6 +2068,36 @@ ideas = {
 				local_resources_factor = 0.05
 			}
 		}
+		AFG_welfare_state = {
+			
+			picture = MON_sheltering_refugees
+		
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = { always = no }
+
+			cancel = {
+				OR = {
+					NOT = {
+						has_government = neutrality
+					}
+					NOT = {
+						has_government = democratic
+					}
+				}
+			}
+				
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.05
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = -0.1
+				production_factory_efficiency_gain_factor = 0.10
+				democratic_drift = 0.01
+			}
+		}
 		AFG_stable_currency = {
 			
 			picture = AFG_the_afghani

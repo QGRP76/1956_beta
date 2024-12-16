@@ -3,14 +3,14 @@ state={
 	id=584
 	name="STATE_584"
 	resources={
-		oil=7.000
+		oil=3
 	}
 
 	history={
 		add_core_of = TMS
 		owner = SOV
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 			industrial_complex = 1
 			7477 = {
 				naval_base = 1

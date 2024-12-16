@@ -2,6 +2,11 @@ state = {
 	id = 881
 	name = "STATE_881" # Karagandy
 
+	resources = {
+		steel = 3
+		chromium = 2
+	}
+
 	history = {
 		owner = SOV
 		buildings = {

@@ -1569,7 +1569,6 @@ focus_tree = {
 			country_event = { id = men.33 hours = 4 }
 		}
 
-
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 611 }

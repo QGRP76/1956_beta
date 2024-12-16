@@ -2,12 +2,15 @@ state={
 	id=985
 	name="STATE_985"
 	resources={
-		steel=2.000
+		steel=1
 	}
 	
 	history={
-		add_core_of = TMS
 		owner = SOV
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
 		victory_points = {
 			12333 3 
 		}
