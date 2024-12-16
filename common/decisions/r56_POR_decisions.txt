@@ -2009,8 +2009,8 @@ POR_restoring_valiance_to_portugal = {
 		days_re_enable = 30
 		cost = 65
 		visible = { 
-			has_completed_focus = POR_seek_restorationist_support
-			NOT = { has_completed_focus = POR_unlatch_salazars_grip }
+			has_completed_focus = POR_restore_valiance_to_the_nation
+			NOT = { has_completed_focus = POR_march_on_lisbon }
 		}
 		highlight_states = {
 			highlight_state_targets = { state = 180 }
@@ -2064,7 +2064,7 @@ POR_restoring_valiance_to_portugal = {
 		ai_will_do = { base = 10 }
 		visible = { has_idea = POR_the_battle_for_the_nation_fas }
 		days_remove = 35
-		cancel_trigger = { has_completed_focus = POR_unlatch_salazars_grip }
+		cancel_trigger = { has_completed_focus = POR_march_on_lisbon }
 		remove_effect = {
 			add_stability = -0.05
 			add_popularity = {

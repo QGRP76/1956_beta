@@ -521,7 +521,7 @@
  POR_create_a_constitutional_judiciary:0 "Create a Constitutional Judiciary"
 
  POR_continue_popular_reform:0 "Continue Popular Reform"
- POR_continue_popular_reform_desc:0 "Consolidating our rule, and consolidating Portuguese democracy should not be a matter of holding a gun to the head of the people. It is essential we never stop putting the needs of the peoplle first!"
+ POR_continue_popular_reform_desc:0 "Consolidating our rule, and more importantly, Portuguese democracy, should not be a matter of holding a gun to the head of the people. Gaining the true support of the people is our best path forward!"
 
  POR_fortify_portuguese_democracy:0 "Fortify Portuguese Democracy"
  POR_fortify_portuguese_democracy_desc:0 ""
@@ -613,19 +613,30 @@
  POR_the_battle_for_the_nation_fas:0 "The Battle For the Nation"
  POR_restoring_valiance_to_portugal:0 "Restoring Valiance to Portugal"
  POR_antagonize_socialist_organizations:0 "Antagonize Socialist Organizations"
-
- POR_seek_foreign_intervention:0 "Seek Foreign Intervention"
- POR_seek_foreign_intervention_desc:0 ""
- 
- POR_seek_restorationist_support:0 "Seek Restorationist Support"
- POR_seek_restorationist_support_desc:0 ""
- POR_seek_restorationist_support_tt:0 "Unlocks §YPro-Monarchist Rally§! decisions"
  POR_rally_the_monarchists_of_porto:0 "Rally the Monarchists of Porto!"
  POR_spread_monarchist_propaganda:0 "Spread Monarchist Propaganda"
 
- POR_unlatch_salazars_grip:0 "Unlatch Salazar's Grip"
- POR_unlatch_salazars_grip_desc:0 ""
- POR_unlatch_salazars_grip_tt:0 "§RIf Fascism support is below 60%, a civil war will start!§! The ratio of units under our command will depend on support for the ruling government."
+ POR_one_revolution_to_end_them_all:0 "One Revolution to End Them All"
+ POR_one_revolution_to_end_them_all_desc:0 ""
+
+ POR_call_for_foreign_assistance:0 "Call For Foreign Assistance"
+ POR_call_for_foreign_assistance_desc:0 ""
+
+ POR_mobilize_popular_support:0 "Mobilize Popular Support"
+ POR_mobilize_popular_support_desc:0 ""
+
+ POR_radicalize_salazars_allies:0 "Radicalize Salazar's Allies"
+ POR_radicalize_salazars_allies_desc:0 ""
+
+ POR_approach_young_officers:0 "Approach Young Officers"
+ POR_approach_young_officers_desc:0 ""
+
+ POR_unify_the_monarchist_opposition:0 "Unify the Monarchist Opposition"
+ POR_unify_the_monarchist_opposition_desc:0 ""
+
+ POR_march_on_lisbon:0 "March on Lisbon"
+ POR_march_on_lisbon_desc:0 ""
+ POR_march_on_lisbon_tt:0 "§RIf Fascism support is below 60%, a civil war will start!§! The ratio of units under our command will depend on support for the ruling government."
  POR_renewed_instability:0 "Renewed Instability"
  portugal.43.t:0 "Storming the National Assembly"
  portugal.43.d:0 "Successful fascist coup"
