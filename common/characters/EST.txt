@@ -1416,7 +1416,7 @@ characters={
 		}
 		advisor={
 			slot = high_command
-			idea_token = EST_voldemar_mere
+			idea_token = EST_hermann_salza
 			ledger = navy
 			allowed = {
 				original_tag = EST
