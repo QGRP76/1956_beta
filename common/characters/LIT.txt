@@ -959,30 +959,6 @@ characters={
 		}
 	}
 
-	LIT_albinas_cepas={
-		name=LIT_albinas_cepas
-		portraits={
-			army={
-				small="GFX_idea_generic_army_europe_3"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = LIT_albinas_cepas
-			ledger = army
-			allowed = {
-				original_tag = LIT
-			}
-			traits = {
-				army_infantry_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
 	LIT_jonas_mikenas={
 		name = "Jonas Mikėnas"
 		portraits={

@@ -1383,25 +1383,6 @@ characters={
 		}
 	}
 
-	LAT_karlis_berzins={
-		name=""
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_1"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = LAT_karlis_berzins
-			allowed = {
-				original_tag = LAT
-			}
-			traits = {
-				economist
-			}
-		}
-	}
-
 	LAT_ernsets_morics={
 		name="Ernests Morics"
 		portraits={
