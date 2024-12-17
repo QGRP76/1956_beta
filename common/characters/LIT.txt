@@ -2508,7 +2508,7 @@ characters={
 				original_tag = LIT
 			}
 			traits = {
-				air_air_combat_training_2
+				air_chief_safety_2
 			}
 			cost = 100
 			ai_will_do = {
