@@ -143,10 +143,10 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Elizaveta Alikhanovna" # Decendent of Gengish
-	picture = "gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_4.dds"
+	picture = "gfx/leaders/r56_generic/r56_generic_portrait_regency.dds"
 	expire = "1953.3.1"
 	ideology = constitutional_monarchy
-	traits = { constitutional_monarch r56_trait_opposed_to_communism }
+	traits = { spirit_of_genghis constitutional_monarch }
 	
 	#Sabit Mukanov writer, popular figurehead
 	#Baymirza Hayit Mahmutmirzaoğlov fascist Uzbekistan
