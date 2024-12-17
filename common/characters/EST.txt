@@ -1061,7 +1061,7 @@ characters={
 	}
 
 	EST_aleksander_pulk= {
-		name="Aleksander Pul"
+		name="Aleksander Pulk"
 		portraits={
 			army={
 				small="GFX_idea_generic_army_europe_6"
