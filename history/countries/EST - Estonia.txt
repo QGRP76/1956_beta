@@ -79,6 +79,7 @@ recruit_character = EST_theodor_pool
 recruit_character = EST_nikolai_kostnar
 recruit_character = EST_johannes_orasmaa
 recruit_character = EST_aleksander_pulk
+recruit_character = EST_karl_selter
 
 ### SCIENTISTS ###
 recruit_character = EST_voldemar_post
