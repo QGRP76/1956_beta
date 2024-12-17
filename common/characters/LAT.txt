@@ -1384,7 +1384,7 @@ characters={
 	}
 
 	LAT_ernsets_morics={
-		name="Ernests Morics"
+		name="Ernests Moric"
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_europe_3"
