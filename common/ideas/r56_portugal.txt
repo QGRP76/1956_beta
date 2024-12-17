@@ -839,7 +839,15 @@ ideas = {
 			}
 			cancel = { has_government = communism }
 			removal_cost = -1
-			modifier = { stability_factor = 0.05 }
+			modifier = {
+				war_support_factor = 0.05
+				neutrality_drift = -0.01
+				communism_drift = -0.01 
+			}
+			targeted_modifier = {
+				tag = BRA
+				compliance_growth = 0.1
+			}
 		}
 	}
 }
