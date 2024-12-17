@@ -77,6 +77,8 @@ recruit_character = EST_juhan_karl_fischer
 recruit_character = EST_kurt_arced_linneberg
 recruit_character = EST_theodor_pool
 recruit_character = EST_nikolai_kostnar
+recruit_character = EST_johannes_orasmaa
+recruit_character = EST_aleksander_pulk
 
 ### SCIENTISTS ###
 recruit_character = EST_voldemar_post

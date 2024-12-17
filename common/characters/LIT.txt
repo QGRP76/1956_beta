@@ -417,11 +417,11 @@ characters={
 		}
 		corps_commander = {
 			traits = { war_hero BALTIC_anti_bolshevik }
-			skill=2
-			attack_skill=2
-			defense_skill=1
+			skill=3
+			attack_skill=3
+			defense_skill=2
 			planning_skill=4
-			logistics_skill=1
+			logistics_skill=2
 			legacy_id=6502 #from r56 content, didnt have one in vanilla
 			visible = {
 				has_dlc = "No Step Back" 
@@ -457,11 +457,11 @@ characters={
 		}
 		corps_commander={
 			traits={ infantry_officer JAP_communist_sympathizer }
-			skill=2
+			skill=3
 			attack_skill=2
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
 			legacy_id=-1
 			visible = { has_dlc = "No Step Back" }
 		}

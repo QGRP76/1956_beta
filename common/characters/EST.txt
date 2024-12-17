@@ -938,7 +938,7 @@ characters={
 		name="Jaan Kruus"
 		portraits={
 			army={
-				large = "GFX_Portrait_Europe_Generic_land_new_3"
+				large = "GFX_Portrait_Europe_Generic_land_new_4"
 				small = "GFX_idea_generic_army_europe_3"
 			}
 		}
@@ -1038,6 +1038,44 @@ characters={
 			ai_will_do = {
 				factor = 1.000
 			}
+		}
+	}
+
+	EST_johannes_orasmaa= {
+		name="Johannes Orasmaa"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_3"
+				large="GFX_Portrait_Europe_Generic_land_new_5"
+			}
+		}
+		corps_commander={
+			traits = { artillerist }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id=-1
+		}
+	}
+
+	EST_aleksander_pulk= {
+		name="Aleksander Pulk"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_6"
+				large="GFX_Portrait_Europe_Generic_land_new_6"
+			}
+		}
+		corps_commander={
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id=-1
 		}
 	}
 

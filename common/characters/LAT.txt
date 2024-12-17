@@ -1118,8 +1118,8 @@ characters={
 		}
 	}
 
-	LAT_rudolf_drillis={
-		name = "Rūdolfs Drillis"
+	LAT_alfreds_valeika={
+		name = "Alfrēds Valeika"
 		portraits={
 			army={
 				small="GFX_idea_generic_air_europe_3"
@@ -1127,7 +1127,7 @@ characters={
 		}
 		advisor={
 			slot = high_command
-			idea_token = LAT_rudolf_drillis
+			idea_token = LAT_alfreds_valeika
 			ledger = air
 			allowed = {
 				original_tag = LAT
@@ -1242,7 +1242,7 @@ characters={
 		name = "Voldemārs Jakubov"
 		portraits={
 			army={
-				small="GFX_idea_generic_air_europe_2"
+				small="GFX_idea_generic_navy_europe_2"
 			}
 		}
 		advisor={
