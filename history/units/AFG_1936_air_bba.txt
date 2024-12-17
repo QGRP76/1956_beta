@@ -1,9 +1,10 @@
 air_wings = {
-	267 = { 
-		small_plane_cas_airframe_0 = {
+	267 = {
+		small_plane_airframe_0 =  {
 			owner = "AFG" 
-			amount = 18
-			version_name = "Airco DH.9A"
+			amount = 4
+			creator = "AFG"
+			version_name = "Polikarpov R-1"
 		}
 	}
 }

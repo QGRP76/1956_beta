@@ -5615,7 +5615,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-            every_country = {
+            every_other_country = {
                 limit = {
                     NOT = {
                         has_war_with =  ROOT
@@ -5633,7 +5633,12 @@ focus_tree = {
                             NOT = {
                                 original_tag = FIN
                                 has_government = fascism #Bad Franco!
-                                is_subject = yes
+								AND = {
+									is_subject = yes
+									NOT = {
+										is_subject_of = ROOT
+									}
+								}
                             }
                         }
                     }
@@ -12159,10 +12164,13 @@ focus_tree = {
 				uses = 3
 				category = jet_technology
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_breakthrough_progress = {
 				specialization = specialization_air
 				value = 0.75
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = r56_generic_jet_idea
 		}
 	}
 

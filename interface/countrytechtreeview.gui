@@ -1104,7 +1104,7 @@ guiTypes = {
 			margin = { top = 13 left = 13 bottom = 24 right = 25}
 			drag_scroll = { left middle }
 			verticalScrollbar = "right_vertical_slider"
-			#horizontalScrollbar = "bottom_horizontal_slider"
+			horizontalScrollbar = "bottom_horizontal_slider"
 			scroll_wheel_factor = 40
 
 			background = {
@@ -1116,7 +1116,7 @@ guiTypes = {
 				name = "techtree_stripes"
 				position = { x= 0 y= 0 }
 				size = {
-					width = 1450 height = 1290
+					width = 1600 height = 1290
 					min = { width = 100%% height = 100%% }
 				}
 				clipping = no
@@ -3340,19 +3340,6 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 
-			instantTextBoxType = {
-				name = "airtech_year7"
-				position = { x = 30 y = 318 }
-				textureFile = ""
-				font = "hoi_36header"
-				borderSize = {x = 0 y = 4}
-				text = "1950"
-				maxWidth = 170
-				maxHeight = 32
-				format = left
-				Orientation = "UPPER_LEFT"
-			}
-
 			containerWindowType = {
 				name = "airtech_year_left"
 				position = { x=2000 y=0 }
@@ -3532,7 +3519,7 @@ guiTypes = {
 			}
 
 			gridboxtype = {
-				name = "bba_early_transport_plane_tree"
+				name = "bba_improved_transport_plane_tree"
 				position = { x = 850 y = 32 }
 				size = { width = 400 height = 1000 }
 				slotsize = { width = 70 height = 70 }
@@ -5011,7 +4998,7 @@ guiTypes = {
 			iconType = {
 				name = "MIO_icon"
 				spriteType = "GFX_design_team_icon"
-				position = { x = 4 y = 2 }
+				position = { x = 8 y = 5 }
 				alwaystransparent = yes
 				Orientation = "CENTER"
 			}

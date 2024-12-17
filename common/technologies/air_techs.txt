@@ -20,7 +20,6 @@ technologies = {
 			position = { x = 1 y = 2 } 
 		}
 		
-		special_project_specialization = { specialization_air }
 		categories = {
 			air_equipment
 			transport_planes_cat
@@ -59,7 +58,6 @@ categories = {
 			air_equipment
 			transport_planes_cat
 		}
-		special_project_specialization = { specialization_air }
 		ai_will_do = {
 			factor = 1
 			
@@ -84,11 +82,11 @@ categories = {
 		}
 		
 		special_project_specialization = { specialization_air }
-categories = {
+		categories = {
 			air_equipment
 			transport_planes_cat
 		}
-		special_project_specialization = { specialization_air }
+
 		ai_will_do = {
 			factor = 1
 			
@@ -121,7 +119,7 @@ categories = {
 		}
 		
 		special_project_specialization = { specialization_air }
-categories = {
+		categories = {
 			light_air
 			light_fighter
 			air_equipment
@@ -774,9 +772,9 @@ categories = {
 	}
 
 	supersonic_fighter1 = {
-		allow_branch = {
-			has_dlc = "Gotterdammerung"		
-		}
+		# allow_branch = {
+		# 	has_dlc = "Gotterdammerung"		
+		# }
 
 		allow = {
 			ROOT = {
@@ -784,7 +782,7 @@ categories = {
 			}
 		}
 		enable_equipments = {
-			supersonic_fighter_equipment_1
+			jet_fighter_equipment_x
 		}
 		
 		research_cost = 2
@@ -2510,50 +2508,50 @@ categories = {
 	}
 ###------> New Jet Fighters   <><> <><> <><> <><> <><>
 	
-	jet_fighter_a = {
+	# jet_fighter_a = {
 
-		allow = { 	 		
-			ROOT = {
-				is_special_project_completed = sp:sp_air_axial_jet_engine
-			} 
-		}
+	# 	allow = { 	 		
+	# 		ROOT = {
+	# 			is_special_project_completed = sp:sp_air_axial_jet_engine
+	# 		} 
+	# 	}
 
-		enable_equipments = {
-			jet_fighter_equipment_x
-		}
+	# 	enable_equipments = {
+	# 		jet_fighter_equipment_x
+	# 	}
 		
-		research_cost = 2
-		start_year = 1955
+	# 	research_cost = 2
+	# 	start_year = 1955
 
-		folder = {
-			name = air_techs_folder
-			position = { x = 0 y = 16 }
-		}
+	# 	folder = {
+	# 		name = air_techs_folder
+	# 		position = { x = 0 y = 16 }
+	# 	}
 		
-		special_project_specialization = { specialization_air }
-		is_special_project_tech = yes
-		categories = {
-			light_air
-			jet_technology
-			mio_cat_all_light_fighter_and_modules
-			mio_cat_all_light_aircraft_and_modules
-		}
+	# 	special_project_specialization = { specialization_air }
+	# 	is_special_project_tech = yes
+	# 	categories = {
+	# 		light_air
+	# 		jet_technology
+	# 		mio_cat_all_light_fighter_and_modules
+	# 		mio_cat_all_light_aircraft_and_modules
+	# 	}
 		
-		sub_technologies = {
-			cv_jet_fighter_a
-		}
+	# 	sub_technologies = {
+	# 		cv_jet_fighter_a
+	# 	}
 		
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 500
-					type = fighter
-				}
-				factor = 5
-			}			
-		}
-	}
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 		modifier = {
+	# 			has_deployed_air_force_size = {
+	# 				size > 500
+	# 				type = fighter
+	# 			}
+	# 			factor = 5
+	# 		}			
+	# 	}
+	# }
 	
 ###------> X   <><> <><> <><> <><> <><>
 	
@@ -2929,7 +2927,7 @@ categories = {
 		}
 		
 		special_project_specialization = { specialization_air }
-categories = {
+	categories = {
 			medium_air
 			air_equipment
 			cat_scout_plane
@@ -2972,7 +2970,7 @@ categories = {
 		}
 		
 		special_project_specialization = { specialization_air }
-categories = {
+		categories = {
 			medium_air
 			air_equipment
 			cat_scout_plane
@@ -3015,7 +3013,7 @@ categories = {
 	# 	}
 		
 	# 	special_project_specialization = { specialization_air }
-categories = {
+	#	categories = {
 	# 		medium_air
 	# 		air_equipment
 	# 		heavy_air
@@ -3055,7 +3053,7 @@ categories = {
 		}
 		
 		special_project_specialization = { specialization_air }
-categories = {
+		categories = {
 			medium_air
 			air_equipment
 			heavy_air
