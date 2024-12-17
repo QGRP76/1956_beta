@@ -501,7 +501,7 @@ country_event = {
 			factor = 100
 		}
 
-		975 = {
+		1086 = {
 			transfer_state_to = ROOT
 		}
 
@@ -1117,7 +1117,7 @@ country_event = {
 	}
 }
 
-# Hungary demands Burgenland - event for owner of (975) 
+# Hungary demands Burgenland - event for owner of (1086) 
 country_event = {
 	id = WW_hungary.23
 	title = WW_hungary.23.t
@@ -1210,7 +1210,7 @@ country_event = {
 
 		add_political_power = 25
 
-		transfer_state = 975
+		transfer_state = 1086
 
 	}
 }
@@ -1236,7 +1236,7 @@ country_event = {
 		create_wargoal = {
 			type = take_state_focus
 			target = FROM
-			generator = { 975 }
+			generator = { 1086 }
 		}	
 
 	}
@@ -1250,7 +1250,7 @@ country_event = {
 
 		add_stability = -0.05
 		add_war_support = -0.05
-		remove_state_claim = 975
+		remove_state_claim = 1086
 
 	}
 }
@@ -3967,7 +3967,7 @@ country_event = {
 					state = 153
 					state = 152
 					state = 4
-					state = 975
+					state = 1086
 					state = 976
 					state = 69
 					state = 9
@@ -4004,11 +4004,11 @@ country_event = {
 		IF = {
 			limit = {
 				FROM = {
-					has_character = CZE_vojtyech_luzha
+					has_character = CZKE_vojtech_boris_luza
 				}
 			}
 			FROM = {
-				CZE_vojtyech_luzha = {
+				CZKE_vojtech_boris_luza = {
 					set_nationality = ROOT
 				}
 			}
@@ -4017,11 +4017,11 @@ country_event = {
 		IF = {
 			limit = {
 				FROM = {
-					has_character = CZE_josef_shnejdarek
+					has_character = CZE_josef_snejdarek
 				}
 			}
 			FROM = {
-				CZE_josef_shnejdarek = {
+				CZE_josef_snejdarek = {
 					set_nationality = ROOT
 				}
 			}
@@ -4030,11 +4030,11 @@ country_event = {
 		IF = {
 			limit = {
 				FROM = {
-					has_character = CZE_richard_tesarzhik
+					has_character = CZE_richard_tesarik
 				}
 			}
 			FROM = {
-				CZE_richard_tesarzhik = {
+				CZE_richard_tesarik = {
 					set_nationality = ROOT
 				}
 			}
@@ -4043,11 +4043,11 @@ country_event = {
 		IF = {
 			limit = {
 				FROM = {
-					has_character = CZE_sergej_vojcechovsky
+					has_character = CZE_sergey_vojcehovsky
 				}
 			}
 			FROM = {
-				CZE_sergej_vojcechovsky = {
+				CZE_sergey_vojcehovsky = {
 					set_nationality = ROOT
 				}
 			}
@@ -4272,7 +4272,7 @@ country_event = {
 	}
 }
 
-# Hungary offers to purchase Burgenland - event for owner of (975) 
+# Hungary offers to purchase Burgenland - event for owner of (1086) 
 country_event = {
 	id = WW_hungary.83
 	title = WW_hungary.83.t
@@ -4321,7 +4321,7 @@ country_event = {
 			FROM = {
 				add_political_power = -120
 
-				transfer_state = 975
+				transfer_state = 1086
 			}
 			
 		}
@@ -4390,7 +4390,7 @@ country_event = {
 
 		add_political_power = -120
 
-		transfer_state = 975
+		transfer_state = 1086
 
 	}
 }
@@ -4416,7 +4416,7 @@ country_event = {
 		create_wargoal = {
 			type = take_state_focus
 			target = FROM
-			generator = { 975 }
+			generator = { 1086 }
 		}	
 
 	}
@@ -4430,12 +4430,12 @@ country_event = {
 
 		add_political_power = 10
 		
-		remove_state_claim = 975
+		remove_state_claim = 1086
 
 	}
 }
 
-# Hungary stages an uprising in Leitha - event for owner of (975) 
+# Hungary stages an uprising in Leitha - event for owner of (1086) 
 country_event = {
 	id = WW_hungary.86
 	title = WW_hungary.86.t
@@ -4481,7 +4481,7 @@ country_event = {
 		declare_war_on = {
 			target = FROM
 			type = take_core_state
-			generator = 975
+			generator = 1086
 		}		
 
 	}
@@ -5465,6 +5465,7 @@ country_event = {
 		HUN_remove_trianon_effect = yes
 
 		hidden_effect = {
+			promote_character = HUN_ferenc_szalasi	#r56: vanilla relies on order of recruitment in the history file
 			news_event = { id = news.298 days = 1 }
 		}
 
@@ -6123,6 +6124,30 @@ country_event = {
 			}
 			ROOT = {
 				transfer_state = 73
+			}
+		}
+		IF = {
+			limit = {
+				OR = {
+					FROM = {
+						owns_state = 996
+					}
+					FROM = {
+						any_subject_country = {
+							is_ai = yes
+							owns_state = 996
+						}
+					}
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			996 = {
+				add_core_of = ROOT
+			}
+			ROOT = {
+				transfer_state = 996
 			}
 		}
 	}

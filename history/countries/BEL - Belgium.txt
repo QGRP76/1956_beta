@@ -112,6 +112,8 @@ recruit_character = BEL_fernand_verstraete
 #BEL_jules_pire Wallonia only?
 #BEL_yvan_gerard wallonia only?
 
+recruit_character = BEL_victor_van_daele
+
 if = {
 	limit = {
 		has_dlc = "Gotterdammerung"
@@ -119,8 +121,10 @@ if = {
 	recruit_character = BEL_nicolas_florine
 	recruit_character = BEL_georges_lemaitre
 	recruit_character = BEL_alfred_renard
-	recruit_character = BEL_mike_donnet			#should verify before update release that he hasnt been made freely available
+	recruit_character = BEL_mike_donnet							#should verify before update release that he hasnt been made freely available
 	recruit_character = BEL_auguste_piccard
+	recruit_character = BEL_charles_count_of_flanders_person	#not sure who/what this is
+	recruit_character = BEL_king_leopold_iii					#DLC version
 }
 set_country_flag = started_out_as_landlocked
 set_technology = {
@@ -145,6 +149,7 @@ set_technology = {
 	tech_trucks = 1
 	motorised_infantry = 1
 	basic_train = 1
+	bicycle_infantry = 1	#they have bicycle divs in their OOB since GD, so added this
 }
 if = {
 	limit = { has_dlc = "By Blood Alone" }

@@ -16,7 +16,7 @@ on_actions = {
 					}
 					has_dlc = "Gotterdammerung"
 				}
-				set_global_flag = aus_got_focus_tree
+				set_global_flag = aus_dlc_focus_tree
 				AUS = {
 					load_focus_tree = austria_focus_tree
 					remove_country_leader_trait = AUS_rock_and_a_hard_place
@@ -66,6 +66,8 @@ on_actions = {
 						modifier = AUS_austrofascism_opm
 					}	
 
+					load_oob = "AUS_ww_1936"
+
 					# rules are set here
 
 					country_lock_all_division_template = yes
@@ -87,6 +89,26 @@ on_actions = {
 						id = austria.127
 						days = 190
 					}
+
+					set_variable = { r56_bundeslaender_current = -1 }
+					set_country_flag = austrian_pre_coup_powerstruggle			
+					set_variable = { r56_bundeslaender_burgenland_frame = 1 }
+					set_variable = { r56_bundeslaender_kaernten_frame = 3 }
+					set_variable = { r56_bundeslaender_niederoesterreich_frame = 6 }
+					set_variable = { r56_bundeslaender_oberoesterreich_frame = 1 }
+					set_variable = { r56_bundeslaender_salzburg_frame = 3 }
+					set_variable = { r56_bundeslaender_steiermark_frame = 3 }
+					set_variable = { r56_bundeslaender_suedtirol_frame = 7 }
+					set_variable = { r56_bundeslaender_tirol_frame = 2 }
+					set_variable = { r56_bundeslaender_vorarlberg_frame = 6 }
+					set_variable = { r56_bundeslaender_wien_frame = 1 }
+					r56_bundeslaender_calculate_divisions = yes
+					set_variable = { r56_bundeslaender_GOV = 3 }
+					set_variable = { r56_bundeslaender_NAZI = 10 }
+					activate_mission = AUS_bundeslaender_salzburg_nazi_rising
+					set_variable = { AUS_fortified_states = 0 }
+
+					load_oob = "r56_AUS_1936"
 				}
 			}
 			### Bulgaria [BUL] [BFTB]
@@ -262,7 +284,7 @@ on_actions = {
 					}
 					has_dlc = "Gotterdammerung"
 				}
-				set_global_flag = bel_got_focus_tree
+				set_global_flag = bel_dlc_focus_tree
 				BEL = {
 					load_focus_tree = belgium_focus
 					remove_ideas = BEL_leopold3
@@ -302,6 +324,12 @@ on_actions = {
 					# King Leopold
 					set_country_flag = BEL_leopold_flag
 
+					#DLC Autonomy Level
+					set_autonomy = {
+						target = COG
+						autonomous_state = autonomy_colony
+						freedom_level = 0.2
+					}
 				}
 
 				#COG
@@ -309,9 +337,22 @@ on_actions = {
 
 				### Set National Spirits ###
 				COG = {
+					# Setup 1936 politics - need to be reset because of Autonomy change - DLC values
+					set_politics = {
+						ruling_party = neutrality
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = no
+					}
+					set_popularities = {
+						neutrality = 80
+						democratic = 20
+					}
+
 					load_focus_tree = congo_focus
 					add_country_leader_trait = pro_allied_governor_general
 					remove_ideas = COG_force_publique_conscription
+
 					add_ideas = {
 						COG_the_invisible_roof
 						COG_vast_decentralized_state_idea
@@ -392,6 +433,21 @@ on_actions = {
 					set_variable = { COG_armee_nationale_congolaise_modifier_cas_damage_reduction = 0 }
 					set_variable = { COG_armee_nationale_congolaise_modifier_dig_in_speed_factor = 0 }
 					set_variable = { COG_armee_nationale_congolaise_modifier_training_time_factor = 0 }
+				}
+			}
+			else_if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				768 = {
+					remove_dynamic_modifier = {
+						modifier = COG_rwandan_separatism_modifier
+					}	
+				}
+				769 = {
+					remove_dynamic_modifier = {
+						modifier = COG_burundian_separatism_modifier
+					}	
 				}
 			}
 

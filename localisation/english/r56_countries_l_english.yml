@@ -90,18 +90,6 @@
  BAD_neutrality_DEF:0 "the Grand Duchy of Baden"
  BAD_neutrality_ADJ:0 "Badian"
 
- #BAR
- BAR:0 "Barbados"
- BAR_ADJ:0 "Barbadian"
- BAR_democratic:0 "Republic of Barbados"
- BAR_democratic_DEF:0 "the Republic of Barbados"
- BAR_neutrality:0 "Republic of Barbados"
- BAR_neutrality_DEF:0 "the Republic of Barbados"
- BAR_communism:0 "Socialist Republic of Barbados"
- BAR_communism_DEF:0 "the Socialist Republic of Barbados"
- BAR_fascism:0 "State of Barbados"
- BAR_fascism_DEF:0 "the State of Barbados"
-
  #BCO
  BCO_communism:1 "Commune of Cascadia"
  BCO_communism_DEF:1 "the Cascadian Commune"
@@ -131,6 +119,18 @@
  BHR_democratic_DEF:0 "the Republic of Bahrain"
  BHR_communism:0 "Bahrainian Liberation Front"
  BHR_communism_DEF:0 "the Bahrainian Liberation Front"
+
+ #BRB
+ BRB:0 "Barbados"
+ BRB_ADJ:0 "Barbadian"
+ BRB_democratic:0 "Republic of Barbados"
+ BRB_democratic_DEF:0 "the Republic of Barbados"
+ BRB_neutrality:0 "Republic of Barbados"
+ BRB_neutrality_DEF:0 "the Republic of Barbados"
+ BRB_communism:0 "Socialist Republic of Barbados"
+ BRB_communism_DEF:0 "the Socialist Republic of Barbados"
+ BRB_fascism:0 "State of Barbados"
+ BRB_fascism_DEF:0 "the State of Barbados"
 
  #BRN
  BRN:0 "Brunei"
@@ -768,6 +768,18 @@
  RGR_communism:0 "Chinese Socialist State"
  RGR_communism_ADJ:0 "Reformed Chinese"
  RGR_communism_DEF:0 "the Chinese Socialist State"
+
+ #RHI
+ RHI:0 "Rhineland"
+ RHI_ADJ:0 "Rhenish"
+ RHI_democratic:0 "Rhenish Republic"
+ RHI_democratic_ADJ:0 "the Rhenish Republic"
+ RHI_neutrality:0 "Confederation of the Rhine"
+ RHI_neutrality_desc:0 "the Confederation of the Rhine"
+ RHI_fascism:0 "Rhenish Reich"
+ RHI_fascism_ADJ:0 "the Rhenish Reich"
+ RHI_communism:0 "Soviet Republic of the Rhine"
+ RHI_communism_ADJ:0 "the Soviet Republic of the Rhine"
 
  #RUT
  RUT:0 "Carpatho-Ukraine"
