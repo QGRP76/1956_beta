@@ -142,21 +142,23 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Mukhtar Auezov"
+	name = "Elizaveta Alikhanovna" # Decendent of Gengish
 	picture = "gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_4.dds"
 	expire = "1953.3.1"
-	ideology = social_nationalism
-	#Mustafa Shokay fascist leader wanted great turkestan also linked to Khiva khan family
+	ideology = constitutional_monarchy
+	traits = { constitutional_monarch r56_trait_opposed_to_communism }
+	
 	#Sabit Mukanov writer, popular figurehead
 	#Baymirza Hayit Mahmutmirzaoğlov fascist Uzbekistan
 	#Veli Kayyum Han?? Uzbekistan fascist
 }
 
-create_country_leader = { # Former Alash party member turned German collabrator
+create_country_leader = { # fascist leader wanted great turkestan also linked to Khiva khan family. Former Alash party member turned German collabrator
 	name = "Mustafa Shokay"
 	picture = "gfx/leaders/KAZ/r56_portrait_KAZ_Mustafa_Shokai.dds"
 	expire = "1941.12.27"
 	ideology = gen_nazism
+	traits = { polyglot r56_trait_opposed_to_communism }
 }
 
 recruit_character = KAZ_kazhymukan_munaitpasov
