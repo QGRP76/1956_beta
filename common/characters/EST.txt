@@ -1376,7 +1376,21 @@ characters={
 				large="GFX_portrait_EST_hermann_salza"
 			}
 		}
-
+		advisor={
+			slot = high_command
+			idea_token = EST_voldemar_mere
+			ledger = navy
+			allowed = {
+				original_tag = EST
+			}
+			traits = {
+				navy_fleet_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 		navy_leader={
 		 	traits = { seawolf gentlemanly }
 		 	skill = 2
@@ -1385,17 +1399,7 @@ characters={
 		 	maneuvering_skill = 1
 		 	coordination_skill = 2
 			legacy_id=-1
-			}
-			advisor={
-				slot = high_command
-				idea_token = EST_hermann_salza
-				ledger = navy
-				allowed = {
-					original_tag = EST
-				}
-				traits = { navy_fleet_logistics_2 }
-				cost = 100
-			}			
+		
 		}		
 	}
 	EST_hjalmar_mae={

@@ -735,6 +735,7 @@ characters={
 		name=LIT_juozas_tamosauskas
 		portraits={
 			army={
+				large="GFX_Portrait_Europe_Generic_navy_new_1"
 				small="GFX_idea_generic_navy_europe_2"
 			}
 		}

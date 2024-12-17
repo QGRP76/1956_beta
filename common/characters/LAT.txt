@@ -966,6 +966,7 @@ characters={
 		name="Fricis Lipstons"
 		portraits={
 			army={
+				large="GFX_Portrait_Europe_Generic_navy_new_3"
 				small="GFX_Portrait_Europe_Generic_navy_1_small"
 			}
 		}
