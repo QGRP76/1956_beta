@@ -1137,7 +1137,23 @@
 		}		
 	}
 		
-
+    BEL_victor_michem = {
+        name="Victor Michem"
+        portraits={
+            army={
+                large="GFX_Portrait_Europe_Generic_land_new_4"
+            }
+        }
+        corps_commander={
+            traits = { career_officer flemish infantry_officer }
+            skill=2
+            attack_skill=2
+            defense_skill=2
+            planning_skill=1
+            logistics_skill=2
+            legacy_id=-1
+        }        
+    }
 
 	BEL_oscar_michiels = {
 		advisor = {
