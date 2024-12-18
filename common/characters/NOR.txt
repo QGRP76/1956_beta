@@ -480,7 +480,7 @@ characters={
 			}
 		}
 		corps_commander = {
-			traits = { artillerist brilliant_strategist cavalry_officer engineer_officer trait_engineer ranger } ### Known as a hard working and intelligent officer, prominent both in military and civilian life. Mainly an artillerist, also involved with cavalry.
+			traits = {  brilliant_strategist cavalry_officer engineer_officer trait_engineer ranger } ### Known as a hard working and intelligent officer, prominent both in military and civilian life. Mainly an artillerist, also involved with cavalry.
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
@@ -488,21 +488,7 @@ characters={
 			logistics_skill = 3
 			legacy_id = -1
 		}
-		advisor = {
-			cost = 100
-			
-			slot = high_command
-			idea_token = NOR_jacob_hvinden_haug
-			allowed = {
-				original_tag = NOR
-			}
-			traits = {
-				army_artillery_2
-			}
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
+
 	}
 
 	NOR_wilhelm_von_tangen_hansteen = {
