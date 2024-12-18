@@ -1320,7 +1320,7 @@ characters={
 	}	
 
 	NOR_niels_larsen_bruun = {
-		name = "Niels Larsen Bruun"
+		name = "Niels Larsen Bruu"
 		portraits = {
 			army = {
 				small = "GFX_idea_generic_navy_europe_1"
