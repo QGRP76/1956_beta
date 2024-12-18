@@ -2470,7 +2470,7 @@ characters={
 	}
 
 	LIT_stasys_pundzevichius={
-	name = LIT_stasys_pundzevichiusd
+	name = LIT_stasys_pundzevichius
 		portraits={
 			army={
 				small="GFX_idea_LIT_stasys_pundzevicius"
