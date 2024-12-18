@@ -77,7 +77,7 @@ recruit_character = NOR_dag_krohn
 recruit_character = NOR_birger_grinde
 recruit_character = NOR_olaf_helset
 recruit_character = NOR_jacob_hvinden_haug
-recruit_character = NOR_niels_larsen_bruu
+recruit_character = NOR_niels_larsen_bruun
 
 ### SCIENTISTS ###
 recruit_character = NOR_njal_hole
