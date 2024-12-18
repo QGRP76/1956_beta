@@ -108,9 +108,9 @@ recruit_character = BEL_henri_decarpentrie
 recruit_character = BEL_etienne_glorie
 recruit_character = BEL_victor_billet
 recruit_character = BEL_fernand_verstraete
-recruit_character = BEL_walter_coppens
 recruit_character = BEL_rene_de_grave 
 recruit_character = BEL_adhemar_tapproge
+recruit_character = BEL_victor_michem
 #BEL_andre_becquet Wallonia only?
 #BEL_jules_pire Wallonia only?
 #BEL_yvan_gerard wallonia only?

@@ -1118,23 +1118,7 @@
 			}
 		}
 	}
-	BEL_walter_coppens = {
-		name="Walter Coppens"
-		portraits={
-			army={
-				large="GFX_Portrait_Europe_Generic_land_new_9"
-			}
-		}
-		corps_commander={
-			traits = { walloon infantry_officer }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=3
-			legacy_id=-1
-		}		
-	}
+
 	BEL_rene_de_grave = {
 		name="René De Grave"
 		portraits={
@@ -1148,6 +1132,24 @@
 			attack_skill=2
 			defense_skill=1
 			planning_skill=3
+			logistics_skill=1
+			legacy_id=-1
+		}		
+	}
+
+	BEL_victor_michem = {
+		name="Victor Michem"
+		portraits={
+			army={
+				large="GFX_Portrait_Europe_Generic_land_new_4"
+			}
+		}
+		corps_commander={
+			traits = { flemish infantry_officer career_officer }
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
 			logistics_skill=1
 			legacy_id=-1
 		}		
