@@ -207,7 +207,7 @@ characters={
 		name="Pauls Kalniņš"
 		portraits={
 			civilian={
-				large="gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_7.dds"
+				large="gfx/leaders/LAT/r56_portrait_LAT_Pauls_Kalnins.dds"
 			}
 		}
 		country_leader={
