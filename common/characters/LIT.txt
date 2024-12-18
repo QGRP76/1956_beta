@@ -2469,8 +2469,8 @@ characters={
 		}
 	}
 
-	LIT_stasys_pundzevichius={
-		name=LIT_stasys_pundzevichius
+	LIT_stasys_pundzevichius=s
+		name=LIT_stasys_pundzevichiusd
 		portraits={
 			army={
 				small="GFX_idea_LIT_stasys_pundzevicius"
