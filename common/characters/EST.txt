@@ -1227,7 +1227,7 @@ characters={
 	}
 
 	EST_karl_selter={
-		name="Karl Selter"s
+		name="Karl Selter"
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_europe_3"

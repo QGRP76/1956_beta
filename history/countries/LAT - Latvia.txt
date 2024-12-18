@@ -76,7 +76,7 @@ recruit_character = LAT_karlis_berzins
 recruit_character = LAT_ernsets_morics
 recruit_character = LAT_izidors_muiznieks
 recruit_character = LAT_kristaps_eliass
-recruit_character = LAT_alfreds_valeikas
+recruit_character = LAT_alfreds_valeika
 
 
 recruit_character = LAT_zhanis_bahs					#used instances for his portraits - marijn check?:D
