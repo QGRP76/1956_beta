@@ -1,4 +1,59 @@
 characters={
+    KAZ_nikolay_aleksandrovich = {
+		name = "Nikolay Aleksandrovich Skvortsov" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KAZ/portrait_kaz_nikolay_skvortsov.dds"
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			expire = "1953.3.1"
+			id = -1
+		}
+	}
+	KAZ_ilyas_zhansugurov = {
+		name = "Ilyas Zhansugurov" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KAZ/portrait_kaz_ilyas_zhansugurov.dds"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1953.3.1"
+			id = -1
+			traits = { r56_trait_opposed_to_communism }
+		}
+	}
+	KAZ_elizaveta_alikhanovna = { # Decendent of Gengish # First Kazakh's president's daughter
+		name = "Elizaveta Alikhanovna" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/r56_generic/r56_generic_portrait_regency.dds" #Placeholder
+			}
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+			expire = "1960.3.1"
+			id = -1
+			traits = { spirit_of_genghis ICE_progressive_doctor }
+		}
+	}
+	KAZ_mustafa_shokay = { # fascist leader wanted great turkestan also linked to Khiva khan family. Former Alash party member turned German collabrator
+		name = "Mustafa Shokay" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KAZ/r56_portrait_KAZ_Mustafa_Shokai.dds"
+			}
+		}
+		country_leader = {
+			ideology = ultranationalism
+			expire = "1941.12.27"
+			id = -1
+			traits = { polyglot likes_germany r56_trait_opposed_to_communism }
+		}
+	}
 	KAZ_kazhymukan_munaitpasov = { #wrestling champion who had ties with the Alash party... I would have prefer the Alash party but they were all killed by the Soviets, so wrestling mad lad it is.
 		name="Kazhymukan Munaitpasov"
 		portraits={

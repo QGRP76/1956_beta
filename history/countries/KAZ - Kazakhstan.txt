@@ -1,7 +1,7 @@
 ﻿capital = 586 #Alma-Ata
 
 set_war_support = 0.2
-set_stability = 0.50 
+set_stability = 0.50
 set_research_slots = 3
 
 # Starting tech
@@ -125,41 +125,14 @@ if = {
 		mtg_transport = 1
 	}
 }
-
-create_country_leader = {
-	name = "Nikolay Aleksandrovich Skvortsov"
-	picture = "gfx/leaders/KAZ/portrait_kaz_nikolay_skvortsov.dds"
-	expire = "1953.3.1"
-	ideology = stalinism
-}
-
-create_country_leader = {
-	name = "Ilyas Zhansugurov"
-	picture = "gfx/leaders/KAZ/portrait_kaz_ilyas_zhansugurov.dds"
-	expire = "1953.3.1"
-	ideology = conservatism
-	traits = { r56_trait_opposed_to_communism }
-}
-
-create_country_leader = {
-	name = "Elizaveta Alikhanovna" # Decendent of Gengish # First Kazakh's president's daughter
-	picture = "gfx/leaders/r56_generic/r56_generic_portrait_regency.dds"
-	expire = "1953.3.1"
-	ideology = constitutional_monarchy
-	traits = { spirit_of_genghis constitutional_monarch }
-}
-
-create_country_leader = { # fascist leader wanted great turkestan also linked to Khiva khan family. Former Alash party member turned German collabrator
-	name = "Mustafa Shokay"
-	picture = "gfx/leaders/KAZ/r56_portrait_KAZ_Mustafa_Shokai.dds"
-	expire = "1941.12.27"
-	ideology = gen_nazism
-	traits = { polyglot r56_trait_opposed_to_communism }
-}
-              #Sabit Mukanov writer, popular figurehead
+    #Sabit Mukanov writer, popular figurehead
 	#Baymirza Hayit Mahmutmirzaoğlov fascist Uzbekistan
 	#Veli Kayyum Han?? Uzbekistan fascist
 
+recruit_character = KAZ_nikolay_aleksandrovich
+recruit_character = KAZ_ilyas_zhansugurov
+recruit_character = KAZ_elizaveta_alikhanovna
+recruit_character = KAZ_mustafa_shokay
 recruit_character = KAZ_kazhymukan_munaitpasov
 recruit_character = KAZ_tolesin_aliyev
 recruit_character = KAZ_alibi_dzhangildin
