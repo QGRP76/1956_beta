@@ -10,7 +10,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=oligarchis
+			ideology=oligarchism
 			traits = {
 				political_dancer
 			}
