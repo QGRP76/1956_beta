@@ -1295,13 +1295,12 @@ ideas = {
 				original_TAG = LUX
 			}
 
-			available = {
-				has_completed_focus = LUX_support_arbed
+			modifier = {
+				local_resources_factor = 0.10
 			}
 
-
 			research_bonus = {
-				industry = 0.15
+				industry = 0.10
 			}
 
 			traits = { industrial_steel_mills_trait }
@@ -1320,6 +1319,10 @@ ideas = {
 
 			cost = 150
 			removal_cost = 10
+
+			modifier = {
+				party_popularity_stability_factor = 0.05 #Token extra stat to make concern 'unique' 
+			}
 
 			research_bonus = {
 				electronics = 0.15
