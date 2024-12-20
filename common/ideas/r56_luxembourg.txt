@@ -1295,6 +1295,10 @@ ideas = {
 				original_TAG = LUX
 			}
 
+			available = {
+				has_completed_focus = LUX_support_arbed
+			}
+
 			modifier = {
 				local_resources_factor = 0.10
 			}
@@ -1325,7 +1329,7 @@ ideas = {
 			}
 
 			research_bonus = {
-				electronics = 0.15
+				electronics = 0.10
 			}
 
 			traits = { electronics_concern }
