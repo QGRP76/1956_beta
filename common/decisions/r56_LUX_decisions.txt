@@ -254,7 +254,7 @@ LUX_ministries = {
 				check_variable = { LUX.num_of_ministers > 4 }
 			}
 		}
-		priority = 10
+		priority = 11
 
 		allowed = {
 			original_tag = LUX

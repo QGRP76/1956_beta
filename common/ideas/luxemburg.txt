@@ -28,7 +28,7 @@ ideas = {
 				improve_relations_maintain_cost_factor = -0.50
 				trade_opinion_factor = 0.50
 				ai_get_ally_desire_factor = -50
-				production_speed_arms_factory_factor = -0.80
+				production_speed_arms_factory_factor = -0.50
 				mobilization_laws_cost_factor = 0.667
 				economy_cost_factor = 0.667
 			}
@@ -60,7 +60,7 @@ ideas = {
 				improve_relations_maintain_cost_factor = -0.50
 				trade_opinion_factor = 0.50
 				ai_get_ally_desire_factor = -50
-				production_speed_arms_factory_factor = -0.80
+				production_speed_arms_factory_factor = -0.50
 				mobilization_laws_cost_factor = 1.00
 				economy_cost_factor = 1.00
 			}
@@ -698,8 +698,8 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = -0.15
-				global_building_slots_factor = 0.20
-				production_speed_buildings_factor = 0.10
+				#global_building_slots_factor = 0.20
+				production_speed_buildings_factor = 0.15
 			}
 		}
 
