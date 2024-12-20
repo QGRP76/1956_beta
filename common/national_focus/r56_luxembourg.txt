@@ -591,9 +591,9 @@ focus_tree = {
 		id = LUX_establish_national_labour_council
 		dynamic = yes
 		icon = GFX_goal_generic_forceful_treaty
-		cost = 5
-		#x = 45
-		x = 38
+		cost = 3
+		#x = 47
+		x = 40
 		y = 0
 		offset = {
 			x = -9
@@ -782,6 +782,25 @@ focus_tree = {
 			custom_effect_tooltip = LUX_the_maulkuerfgesetz_tt
 			custom_effect_tooltip = r56_newline
 			country_event = luxembourg.202
+
+			custom_effect_tooltip = r56_possible_event_effects
+			custom_effect_tooltip = LUX_maulkuerfgesetz_passed_tt
+			effect_tooltip = { activate_decision = ban_communist_party }
+			custom_effect_tooltip = r56_newline
+			effect_tooltip = {
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.02
+				}
+				add_stability = -0.03
+			}
+
+			custom_effect_tooltip = r56_newline
+			custom_effect_tooltip = r56_alternative_event_effects
+			custom_effect_tooltip = LUX_maulkuerfgesetz_didnt_pass_tt
+			effect_tooltip = { add_ideas = r56_LUX_polarized_society }
+			custom_effect_tooltip = r56_newline
+			add_stability = 0.02
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -1034,7 +1053,7 @@ focus_tree = {
 	# social democrats
 	focus = {
 		id = LUX_first_social_democratic_government
-		icon = GFX_goal_generic_socdem
+		icon = GFX_goal_LUX_socdem_victory
 		cost = 0
 		x = -3
 		y = 1
@@ -1990,7 +2009,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_ideas = r56_legacy_of_luxembourg_crisis_1
+			add_ideas = r56_LUX_restored_neutrality
 			custom_effect_tooltip = r56_newline
 			add_power_balance_value = {
 				id = LUX_neutrality_balance
@@ -2010,8 +2029,8 @@ focus_tree = {
 		available = { has_idea = r56_legacy_of_luxembourg_crisis_1 }
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = r56_legacy_of_luxembourg_crisis_1
-				add_idea = r56_legacy_of_luxembourg_crisis_2
+				remove_idea = r56_LUX_restored_neutrality
+				add_idea = r56_LUX_total_neutrality
 			}
 			add_power_balance_value = {
 				id = LUX_neutrality_balance
@@ -2804,7 +2823,7 @@ focus_tree = {
 		id = LUX_begin_workers_revolution
 		icon = GFX_goal_communist_revolt
 		cost = 0
-		x = -16
+		x = -17
 		y = 1
 		offset = {
 			x = 14
@@ -2841,8 +2860,15 @@ focus_tree = {
 			focus = LUX_begin_workers_revolution
 			focus = LUX_first_social_democratic_government
 		}
-		x = -5
+		x = -7
 		y = 1
+		offset = {
+			x = 5
+			y = 0
+			trigger = {
+				has_country_flag = LUX_maulkuerfgesetz_passed
+			}
+		}
 		cost = 5
 		ai_will_do = {
 			factor = 2
@@ -2879,7 +2905,7 @@ focus_tree = {
 		id = LUX_legislative_reforms
 		icon = GFX_generic_goal_communist_reforms
 		cost = 5
-		x = 5
+		x = 4
 		y = 1
 		offset = {
 			trigger = {
@@ -2977,7 +3003,7 @@ focus_tree = {
 		id = LUX_erase_monarchist_legacy
 		icon = GFX_focus_NOR_send_the_king_back_to_denmark
 		cost = 5
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = LUX_abolish_monarchy
 		prerequisite = { focus = LUX_abolish_monarchy }
@@ -3009,7 +3035,7 @@ focus_tree = {
 		id = LUX_grant_citizenship
 		icon = GFX_goal_generic_monarchy_cooperation
 		cost = 5
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = LUX_abolish_monarchy
 		prerequisite = { focus = LUX_abolish_monarchy }
@@ -3511,7 +3537,7 @@ focus_tree = {
 		id = LUX_follow_moscow_line
 		icon = GFX_focus_SOV_stalins_cult_of_personality
 		cost = 8
-		x = 3
+		x = 4
 		y = 2
 		relative_position_id = LUX_unite_the_country
 		prerequisite = { focus = LUX_abandon_the_foolish_policy }
@@ -4446,7 +4472,7 @@ focus_tree = {
 			set_politics = {
 				ruling_party = fascism
 				name = LUX_vdb_party
-				long_name = LUX_vdb_party
+				long_name = LUX_vdb_party_long
 			}
 
 			custom_effect_tooltip = r56_newline

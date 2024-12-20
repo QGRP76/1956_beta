@@ -1251,6 +1251,40 @@ ideas = {
 				guarantee_cost = 0.25
 			}
 		}
+		r56_LUX_restored_neutrality = {
+			picture = neutrality_idea
+
+			available = {
+				has_war = no
+				is_in_faction = no
+			}
+
+			modifier = {
+				join_faction_tension = 0.50
+				send_volunteers_tension = 0.50
+				guarantee_tension = 0.50
+				ai_get_ally_desire_factor = -50
+				army_core_defence_factor = 0.08
+				army_defence_against_major_factor = 0.05
+			}
+		}
+		r56_LUX_total_neutrality = {
+			picture = neutrality_idea
+
+			available = {
+				has_war = no
+				is_in_faction = no
+			}
+
+			modifier = {
+				join_faction_tension = 0.80
+				send_volunteers_tension = 0.80
+				guarantee_tension = 0.80
+				ai_get_ally_desire_factor = -80
+				army_core_defence_factor = 0.15
+				army_defence_against_major_factor = 0.10
+			}
+		}
 	}
 
 	industrial_concern = {
