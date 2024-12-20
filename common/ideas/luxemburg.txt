@@ -1295,12 +1295,16 @@ ideas = {
 				original_TAG = LUX
 			}
 
+			available = {
+				has_completed_focus = LUX_support_arbed
+			}
+
 
 			research_bonus = {
 				industry = 0.15
 			}
 
-			traits = { industrial_concern }
+			traits = { industrial_steel_mills_trait }
 
 			modifier = {
 				

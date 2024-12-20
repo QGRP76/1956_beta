@@ -1836,14 +1836,17 @@ country_event = {		# not forming benelux
 	}
 }
 
-country_event = {
+country_event = {		# collectivised eco becomes good
 	id = luxembourg.250
+	title = luxembourg.250.t
+	desc = luxembourg.250.d
 
-	hidden = yes
+	picture = GFX_report_event_generic_factory
 
 	is_triggered_only = yes
 
-	option = {
+	option = {			# 
+		name = luxembourg.250.a
 		swap_ideas = {
 			remove_idea = r56_LUX_collectivized_economy
 			add_idea = r56_LUX_collectivized_economy_2

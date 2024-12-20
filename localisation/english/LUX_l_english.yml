@@ -1,6 +1,8 @@
 ﻿l_english:
  luxembourg_tree:0 "Luxembourgian National Focus"
  #Focues and related custom TT's
+ LUX_support_arbed:0 "Support ARBED"
+ LUX_support_arbed_desc:0 "ARBED is a relatively new company, but it shows lots of promise. Supporting such a flourishing company will surely pay of in the long run."
  LUX_establish_national_labour_council:0 "[GetStrikeFocusName]"
  LUX_establish_national_labour_council_desc:0 "The matter of social justice is a hot one in Luxembourg. The workers are known to lean left politically and caving to their demands might finally appease them. However, we would be caving to the socialists and communists."
  LUX_focus_autocompletion_tt:0 "This focus will be §Hbypassed in early 1937§!.\n"
@@ -436,6 +438,10 @@
  luxembourg.228.a:0 "[LUX.GetNonIdeologyName] shall be defended!"
  luxembourg.228.b:0 "This is none of our concern."
 
+ luxembourg.250.t:0 "The Fruits of Our Labour"
+ luxembourg.250.d:0 "We knew that switching our economic policy to that of a collectivized one would be difficult. We knew the people would need an adjustment period to it. We knew there would be burgeois resistance to seizing the means of productions.\n\nYet we, the proletariat of [ROOT.GetNonIdeologyName], persevered and pushed through. Through our hard labour, through the work of thousands of talented workers, intellectuals and planners, we can call the revolutionised economy to be completed."
+ luxembourg.250.a:0 "We exist in the context of all in which we live and what came before us."
+
  luxembourg.270.t:0 "A New Foreign Doctrine"
  luxembourg.270.d:0 "With the failure of our negotiations regarding a potential reaffirmation of the Treaty of London, our country is in a very vulnerable position. There are undoubtadly foreign plans in the works to either destabilise or conquer [ROOT.GetNonIdeologyName].\n\nIn an effort to resolve this issue, our Minister of Foreign Affairs has reached out to the Prime Minister and suggested a new course of action. It entails reaching out to both [GER.GetNameDef] and [FRA.GetNameDef], our most powerful neighbours, and gaining their support for a neutral and independent [ROOT.GetNameDef].\n\nHowever, this proposal is not without its risks. Another failure will noticably weaken us further on the global stage, while a success may still be interpreted as a breach in our total neutrality."
  luxembourg.270.a:0 "Let us pursue this effort."
@@ -645,7 +651,7 @@
  LUX_hadir:0 "HADIR"
  LUX_esch_archette_aerodrome:0 "S.A. pour l'Aménagement et l'Exploitation de l'Aérodrome d'Esch/Alzette"
  LUX_luxair:0 "Luxair"
- LUX_radio_luxembourg:0 "Radio Luxembourg"
+ LUX_radio_luxembourg:0 "Compagnie Luxembourgeoise de Radiodiffusion"
  LUX_lou_hemmer:0 "Lou Hemmer"
  LUX_lou_hemmer2:0 "Lou Hemmer"
  LUX_henri_stein:0 "Henri Stein"
