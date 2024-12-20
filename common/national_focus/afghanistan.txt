@@ -2335,11 +2335,21 @@ focus_tree = {
 			add_to_variable = {
 				AFG_recon_factor = 0.10
 			}
-			custom_effect_tooltip = AFG_increase_milishia_cap_by_6
+			custom_effect_tooltip = AFG_increase_milishia_cap_by_6_rangers
 			add_war_support = 0.05
 			hidden_effect = {
 				add_to_variable = { AFG_milishia_cap = 6 }
 				set_division_template_cap = { division_template = "Qawmi Maleshe" division_cap = AFG_milishia_cap }
+				add_units_to_division_template = {
+					template_name = "Qawmi Maleshe"
+					regiments = {
+						irregular_infantry = 0
+						irregular_infantry = 1
+					}
+					support = {
+						rangers_support = 0
+					}
+				}
 			}
 			add_doctrine_cost_reduction = {
 				name = army_doc_bonus
@@ -3642,6 +3652,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 			activate_mission = AFG_elections_mission
+			unlock_decision_category_tooltip = AFG_elections_category
 			custom_effect_tooltip = r56_newline
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = AFG_homeira_seljuqi
@@ -5276,7 +5287,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AFG_operation_blue_mosque
-		icon = GFX_goal_generic_seize_iran
+		icon = GFX_focus_generic_attack_iran
 		x = 0
 		y = 2
 

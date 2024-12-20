@@ -49,7 +49,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 100
+			factor = 75
 		}
 
 		completion_reward = {
@@ -99,7 +99,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 100
+			factor = 80
 		}
 
 		completion_reward = {
@@ -140,7 +140,11 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 100
+			factor = 80
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
 		}
 
 		completion_reward = {
@@ -194,8 +198,6 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			
-
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 500
@@ -1160,7 +1162,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 100
+			factor = 200
 		}
 
 		completion_reward = {
@@ -6282,7 +6284,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 
 		completion_reward = {
@@ -6356,7 +6358,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 
 		completion_reward = {
