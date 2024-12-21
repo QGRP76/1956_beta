@@ -23,12 +23,12 @@ defined_text = {
 defined_text = {
 	name = Get80PPCostTT
 	text = {
-		localization_key = decision_cost_pp_75_tt_blocked
-		trigger = { has_political_power < 75 }
+		localization_key = decision_cost_pp_80_tt_blocked
+		trigger = { has_political_power < 80 }
 	}
 	text = {
-		localization_key = decision_cost_pp_75_tt_tooltip
-		trigger = { has_political_power > 49.99 }
+		localization_key = decision_cost_pp_80_tt_tooltip
+		trigger = { has_political_power > 79.99 }
 	}
 }
 defined_text = {

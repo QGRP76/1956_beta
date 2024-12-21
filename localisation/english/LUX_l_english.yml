@@ -962,6 +962,9 @@
  LUX_fascist_balance_romanticise_past:0 "Romanticise our Past"
  LUX_fascist_balance_romanticise_past_desc:0 "There have been many efforts to de-mystify our glorious past. So-called historians have spread lies about it as well. It is time we reclaim what we have lost."
 
+ #Generic renames
+ LUX_generic_motorized_mechanized_organization:0 "Opel - Lëtzebuerg" #Not a great fit, better then nothing. Replace if better name is found. 
+
 # characters
  LUX_joseph_bech:0 "Joseph Bech"
  LUX_pierre_dupong:0 "Pierre Dupong"

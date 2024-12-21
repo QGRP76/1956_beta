@@ -158,12 +158,22 @@ boel_zonen_organization = {
 	icon = GFX_idea_boel_zonen
 	allowed = {
 		OR = {
-			original_TAG = BEL
-			original_TAG = FLA
+			original_tag = BEL
+			original_tag = FLA
+			original_tag = LUX
 		}
 	}
 	available = {
-
+		if = {
+			limit = {
+				owner = {
+					original_tag = LUX
+				}
+			}
+			owner = {
+				controls_state = 6
+			}
+		}
 	}
 	initial_trait = {
 		name = generic_mio_initial_trait_raiding_fleet
