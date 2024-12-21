@@ -960,7 +960,10 @@ LUX_fascist_balance_decision_category = {
 		modifier = {
 			stability_weekly = -0.001
 			fascism_drift = 0.02
-			power_balance_daily = 0.003
+			custom_modifier_tooltip = LUX_fascist_balance_fascist_propaganda_tt
+			hidden_modifier = {
+				power_balance_daily = 0.003
+			}
 		}
 	}
 	LUX_fascist_balance_continued_army_infiltration = {

@@ -180,33 +180,26 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = LUX_develop_special_forces
-		icon = GFX_goal_generic_special_forces
+		id = LUX_nationalise_railway_companies
+		icon = GFX_goal_generic_train
 		prerequisite = { focus = LUX_weaponary_modernization }
 		x = -1
 		y = 1
 		relative_position_id = LUX_weaponary_modernization
-		cost = 10
+		cost = 5
 		available = {
 		}
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_ideas = special_forces
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = LUX_train_manufacturer
+
 			custom_effect_tooltip = r56_newline
-			add_tech_bonus = {
-				name = LUX_develop_special_forces
-				bonus = 1
-				uses = 1
-				category = r56_special_forces_training_tech 
-			}
-			add_tech_bonus = {
-				name = LUX_develop_special_forces
-				bonus = 0.5
-				uses = 1
-				category = mountaineers_tech
-				category = r56_desert_infantry_tech
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 15
 			}
 		}
 	}
@@ -239,11 +232,11 @@ focus_tree = {
 		id = LUX_recruit_marines
 		icon = GFX_goal_generic_amphibious_assault
 		prerequisite = { focus = LUX_monegasque_naval_academy }
-		prerequisite = { focus = LUX_develop_special_forces }
+		prerequisite = { focus = LUX_nationalise_railway_companies }
 
 		x = -1
 		y = 1
-		relative_position_id = LUX_develop_special_forces
+		relative_position_id = LUX_nationalise_railway_companies
 		cost = 10
 		available = {
 		}
@@ -262,11 +255,11 @@ focus_tree = {
 	focus = {
 		id = LUX_luxembourg_military_insituite
 		icon = GFX_focus_generic_military_academy
-		prerequisite = { focus = LUX_develop_special_forces focus = LUX_the_luxembourg_industrial_fund }
+		prerequisite = { focus = LUX_nationalise_railway_companies focus = LUX_the_luxembourg_industrial_fund }
 
 		x = 1
 		y = 1
-		relative_position_id = LUX_develop_special_forces
+		relative_position_id = LUX_nationalise_railway_companies
 		cost = 10
 		available = {
 		}
@@ -367,14 +360,14 @@ focus_tree = {
 	focus = {
 		id = LUX_support_arbed
 		icon = GFX_goal_BEL_steel
-		prerequisite = { focus = LUX_encourage_local_arms_production }
+		prerequisite = { focus = LUX_the_grand_university_of_luxembourg_city focus = LUX_encourage_local_arms_production }
 
 		x = 1
 		y = 1
-		relative_position_id = LUX_encourage_local_arms_production
+		relative_position_id = LUX_the_grand_university_of_luxembourg_city
 		cost = 10
 
-		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESOURCES }
 
 		completion_reward = {
 			custom_effect_tooltip = available_industrial_concern
@@ -424,10 +417,10 @@ focus_tree = {
 	focus = {
 		id = LUX_the_roars_of_thunder
 		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus = LUX_the_grand_university_of_luxembourg_city focus = LUX_encourage_local_arms_production }
+		prerequisite = { focus = LUX_encourage_local_arms_production }
 		x = 1
 		y = 1
-		relative_position_id = LUX_the_grand_university_of_luxembourg_city
+		relative_position_id = LUX_encourage_local_arms_production
 		cost = 10
 		available = {
 		}
@@ -604,7 +597,7 @@ focus_tree = {
 			trigger = { has_completed_focus = LUX_appoint_new_prime_minister }
 		}
 		offset = {
-			x = -28
+			x = -24
 			trigger = { has_completed_focus = LUX_contest_election_results }
 		}
 		completion_reward = {
@@ -2794,7 +2787,7 @@ focus_tree = {
 				add_idea = r56_LUX_economic_dependence_2
 			}
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESOURCES }
 	}
 	focus = {
 		id = LUX_renegotiate_trade_agreements
@@ -2830,7 +2823,7 @@ focus_tree = {
 		x = -17
 		y = 1
 		offset = {
-			x = 14
+			x = 17
 			trigger = { has_completed_focus = LUX_begin_workers_revolution }
 		}
 		relative_position_id = LUX_finalise_government_formation
@@ -2868,10 +2861,18 @@ focus_tree = {
 		y = 1
 		offset = {
 			x = 5
-			y = 0
 			trigger = {
-				has_country_flag = LUX_maulkuerfgesetz_passed
+				OR = {
+					has_country_flag = LUX_maulkuerfgesetz_passed
+					has_completed_focus = LUX_the_dupong_ministry
+					has_completed_focus = LUX_liberal_victory
+					has_completed_focus = LUX_first_social_democratic_government
+				}
 			}
+		}
+		offset = {
+			x = 3
+			trigger = { has_completed_focus = LUX_begin_workers_revolution }
 		}
 		cost = 5
 		ai_will_do = {
@@ -2912,6 +2913,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		offset = {
+			x = 3
 			trigger = {
 				OR = {
 					has_country_flag = LUX_maulkuerfgesetz_passed
@@ -2920,7 +2922,6 @@ focus_tree = {
 					has_completed_focus = LUX_the_dupong_ministry
 				}
 			}
-			x = -3
 		}
 		relative_position_id = LUX_begin_workers_revolution
 		prerequisite = {
@@ -2944,6 +2945,17 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = LUX_legislative_reforms
+		offset = {
+			y = -2
+			trigger = {
+				OR = {
+					has_country_flag = LUX_maulkuerfgesetz_passed
+					has_completed_focus = LUX_first_social_democratic_government
+					has_completed_focus = LUX_liberal_victory
+					has_completed_focus = LUX_the_dupong_ministry
+				}
+			}
+		}
 		prerequisite = { focus = LUX_legislative_reforms }
 		available = {
 			NOT = {
@@ -3010,6 +3022,17 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = LUX_abolish_monarchy
+		offset = {
+			x = -1
+			trigger = {
+				OR = {
+					has_country_flag = LUX_maulkuerfgesetz_passed
+					has_completed_focus = LUX_first_social_democratic_government
+					has_completed_focus = LUX_liberal_victory
+					has_completed_focus = LUX_the_dupong_ministry
+				}
+			}
+		}
 		prerequisite = { focus = LUX_abolish_monarchy }
 		mutually_exclusive = { focus = LUX_grant_citizenship }
 		available = {
@@ -3042,6 +3065,17 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = LUX_abolish_monarchy
+		offset = {
+			x = -1
+			trigger = {
+				OR = {
+					has_country_flag = LUX_maulkuerfgesetz_passed
+					has_completed_focus = LUX_first_social_democratic_government
+					has_completed_focus = LUX_liberal_victory
+					has_completed_focus = LUX_the_dupong_ministry
+				}
+			}
+		}
 		prerequisite = { focus = LUX_abolish_monarchy }
 		mutually_exclusive = { focus = LUX_erase_monarchist_legacy }
 		available = {
@@ -4107,7 +4141,7 @@ focus_tree = {
 		x = 8
 		y = 1
 		offset = {
-			x = -15
+			x = -9
 			trigger = { has_completed_focus = LUX_contest_election_results }
 		}
 		relative_position_id = LUX_the_maulkuerfgesetz
@@ -4119,10 +4153,7 @@ focus_tree = {
 		}
 		available = {
 			has_country_flag = LUX_elections_over
-			custom_trigger_tooltip = {
-				tooltip = LUX_contest_election_results_trigger_tt
-				check_variable = { LUX.confidence < 10 }
-			}
+			has_country_flag = LUX_elections_indecisive
 			GER = {
 				has_completed_focus = GER_remilitarize_the_rhineland
 			}
@@ -4518,13 +4549,11 @@ focus_tree = {
 						autonomy_state = autonomy_reichskommissariat
 					}
 				}
-			}
-
-			hidden_effect = {
 				BEL = {
 					remove_ideas = BEL_BEL_LUX_customs_union
 					remove_ideas = r56_BEL_uebl_2
 				}
+				news_event = luxembourg.350
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_TFV_AUTONOMY }

@@ -446,7 +446,7 @@ country_event = {		# 1937 elections over; KPL victory
 	trigger = {
 		has_country_flag = LUX_elections_starting
 		#check_variable = { LUX.turnout > 20 }
-		#check_variable = { LUX.confidence > 10 }
+		check_variable = { LUX.confidence > 10 }
 		check_variable = { LUX.KPL_support > LUX.PD_support }
 		check_variable = { LUX.KPL_support > LUX.PRL_support }
 		check_variable = { LUX.KPL_support > LUX.LSAP_support }
@@ -1986,6 +1986,48 @@ country_event = {		# request to invade benelux
 					hours = 4
 					random_hours = 2
 				}
+			}
+		}
+	}
+}
+
+news_event = {			# luxembourg going nazi
+	id = luxembourg.350
+	title = luxembourg.350.t
+	desc = luxembourg.350.d
+
+	picture = GFX_news_event_fascist_gathering
+
+	is_triggered_only = yes
+	fire_for_sender = no
+
+	major = yes
+	show_major = {
+		OR = {
+			is_neighbor_of = LUX
+			original_tag = LUX
+			original_tag = BEL
+			original_tag = GER
+		}
+	}
+
+	option = {			# great
+		name = luxembourg.350.a
+		trigger = {
+			OR = {
+				has_country_leader_ideology = nazism
+				has_country_leader_ideology = gen_nazism
+				is_in_faction_with = GER
+			}
+		}
+	}
+	option = {			# concerning
+		name = luxembourg.350.b
+		trigger = {
+			NOT = {
+				has_country_leader_ideology = nazism
+				has_country_leader_ideology = gen_nazism
+				is_in_faction_with = GER
 			}
 		}
 	}
