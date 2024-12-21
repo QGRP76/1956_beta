@@ -6,14 +6,6 @@
  SOV_gunpoint_diplomacy_desc: "Despite nominal independence, [ROOT.GetNameDef] is under [SOV.GetAdjective] occupation and influence."
  autonomy_military_occupation: "Military Occupation"
 
-#SOV
- #Decisions
- CW_soviet_occupations: "Occupied Territories"
- CW_soviet_occupations_desc: "[GetNameDefCap] currently controls lands that it doesn't intend to keep, how we let go of them however is still up to us, giving us some strategic opportunities."
- SOV_release_AZE_puppet: "Set up an Azerbijani government in Iran"
- SOV_release_AZE_puppet_desc: "To legitimize our control of Iranian lands and pressure them for oil rights, we can covertly support the setting up of an "independent" government of Azerbijan in Iranian lands."
- SOV_release_KUR_puppet: "Set up a Kurdish State in Iran"
-
 #General occupation decisions
  discuss_the_german_issue: "Discuss the German Occupation"
  discuss_the_austrian_issue: "Discuss the Austrian Occupation"
@@ -216,6 +208,28 @@
  cold_war.44.a: "It is in our interest to strengthen them"
  cold_war.44.b: "If these fall into the wrong hands..."
 
+ cold_war.45.t: "Italy Requests Aid Package"
+ cold_war.45.d: "Officials of the communist party of [ITA.GetNameDef] have come with a unique proposal: in order to improve their popularity and avoid reliance on [USA.GetNameDef], they request that we provide an alternative to the aid they have provided to other European nations."
+ cold_war.45.a: "This could pull them into our sphere"
+ cold_war.45.b: "There is no hope for communism in [ITA.GetNonIdeologyName]"
+
+ cold_war.46.t: "An Italian Civil War?"
+ cold_war.46.d: ""
+ cold_war.46.a: "An incredible opportunity to spread communism"
+ cold_war.46.b: "This would damage our international reputation too much"
+
+ cold_war.47.t1: "[FROM.GetName] Provides Support for Civil War"
+ cold_war.47.t2: "[FROM.GetName] Refuses to Support for Civil War"
+ cold_war.47.d1: "To the surprise of our delegation, [SOV.GetLeader] has spoken out in support of our revolutionary plans, with [SOV.GetNameDef] set to support us materially."
+ cold_war.47.d2: "Our delegation to [SOV.GetNameDef] has returned with news: [SOV.GetLeader] does not wish for an Italian revolution to happen. Whether it is due to a fear of foreign interference, potential defeat, or for fearing escalation on the world stage is unknown, but it is now up to us whether to continue our plans for a revolution."
+ cold_war.47.a: "It is time for revolution"
+ cold_war.47.b: "Let us continue the Italian path to socialism"
+
+ cold_war.48.t: "A Deal with [YUG.GetNameDef]?"
+ cold_war.48.d: "The [ITA.GetAdjective] communist party has been unique in maintaining territorial claims even after the war, in this case over [YUG.GetAdjective] territory. Abandoning these claims seems like the perfect bargaining chip to get some support from our neighbors, who possess a wide arrangement of captured weapons."
+ cold_war.48.a: "We must foster good relations."
+ cold_war.48.b: "This is our rightful territory!"
+
 #ideas
  stalin_constitution_derivative: "[ROOT.GetAdjective] Republican Constitution"
  stalin_constitution_derivative_desc: "[ROOT.GetNameDefCap] has adopted a constitution derived from the 1936 Soviet Constitution."
@@ -321,6 +335,7 @@
 
  #oob
  HOL_1945_special_corps: "Korps Commandotroepen"
+ 
 
 #ITA
  #focus
@@ -331,8 +346,12 @@
  #modifier
  mafia_domination: "Dominant Mafia Presence"
 
+ #ideas
+ SOV_financing_ITA_support: "Financing Support for [ITA.GetName]"
+ SOV_marshall_plan_alternative_aid_idea: "[SOV.GetAdjective] Economic Support"
+
  #tooltip
- ITA_monarchy_path_unlock_by_referendum_tt: "§YThis focus may be unlocked based on the outcome of the monarchy referendum, its outcome is based on the popularity of the monarchist party.§!"
+ ITA_monarchy_path_unlock_by_referendum_tt: "§YThis focus may be unlocked based on the outcome of the monarchy referendum.§!"
 
 #YUG
  #ideas
@@ -371,7 +390,7 @@
  USA_loyalty_review_program: "The Loyalty Review Program"
 
  #ideas
- USA_marshall_plan_aid_idea: "[USA.GetName] Economic Support"
+ USA_marshall_plan_aid_idea: "[USA.GetAdjective] Economic Support"
 
 #FRA
  #focus
@@ -459,6 +478,9 @@ PAK_attack_kashmir: "Conquer [FROM.GetName]"
  CZE_continue_producing_german_designs: "Continue Producing German Designs"
  #flag
  CZE_commies_influence_police_hire_ministers_resign: "The parliament has dared to protest Communist corruption of the institutions."
+ CZE_started_five_year_plan: "Completed §YThe Five Year Plan§!"
+ CZE_revolted_against_soviets: "Revolted against [SOV.GetNameDef]"
+ CW_czechoslovak_autonomy_postyalta: "Granted [CZE.GetNonIdeologyName] limited autonomy"
  #idea
  CZE_provisional_army: "Provisional Organization of the [ROOT.GetAdjective] Armed Forces"
  CZE_inflation: "Problematic Inflation"
@@ -548,4 +570,19 @@ nuclear_source_modifier_tt: "This state provides fissile material which can be u
  KUR_SOV_communism_subject_DEF: "the Republic of Kurdistan"
 
 #Misc
-modifier_production_cost_max_ship_hull_submarine: "Submarine Max Cost"
+ modifier_production_cost_max_ship_hull_submarine: "Submarine Max Cost"
+
+#SOV
+ #Decisions
+ CW_soviet_occupations: "Occupied Territories"
+ CW_soviet_occupations_desc: "[GetNameDefCap] currently controls lands that it doesn't intend to keep, how we let go of them however is still up to us, giving us some strategic opportunities."
+ SOV_release_AZE_puppet: "Set up an Azerbijani government in Iran"
+ SOV_release_AZE_puppet_desc: "To legitimize our control of Iranian lands and pressure them for oil rights, we can covertly support the setting up of an "independent" government of Azerbijan in Iranian lands."
+ SOV_release_KUR_puppet: "Set up a Kurdish State in Iran"
+
+ #Flags
+ FIN_moscow_armistice_signed: "The Moscow Armistice was signed between [FIN.GetNonIdeologyName] and [SOV.GetNameDef]"
+
+ #focus
+ SOV_pressure_finnish_government: "Pressure the [FIN.GetAdjective] Government"
+ SOV_pressure_finnish_government_desc: "The Finnish communists are too weak to overthrow the [FIN.GetAdjective] government, but by arming them and launching protests and spreading anti-government rumors, we can make it clear that our influence over them is to be respected."
