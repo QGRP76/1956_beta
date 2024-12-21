@@ -4153,9 +4153,17 @@ focus_tree = {
 		}
 		available = {
 			has_country_flag = LUX_elections_over
-			has_country_flag = LUX_elections_indecisive
-			GER = {
-				has_completed_focus = GER_remilitarize_the_rhineland
+			custom_trigger_tooltip = {
+				tooltip = LUX_contest_election_results_trigger_tt
+				check_variable = { LUX.confidence < 10 }
+			}
+			OR = {
+				GER = {
+					has_completed_focus = GER_remilitarize_the_rhineland
+				}
+				any_neighbor_country = {
+					has_added_tension_amount > 5
+				}
 			}
 			has_country_flag = LUX_maulkuerfgesetz_passed
 		}
@@ -4503,15 +4511,16 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			set_cosmetic_tag = LUX_gau
-			set_politics = {
-				ruling_party = fascism
-				name = LUX_vdb_party
-				long_name = LUX_vdb_party_long
+			hidden_effect = {
+				set_cosmetic_tag = LUX_gau
+				set_politics = {
+					ruling_party = fascism
+					name = LUX_vdb_party
+					long_name = LUX_vdb_party_long
+				}
 			}
-
-			custom_effect_tooltip = r56_newline
 			remove_ideas = r56_legacy_of_luxembourg_crisis_1
+			custom_effect_tooltip = r56_newline
 			if = {
 				limit = { has_idea = BEL_LUX_BEL_customs_union }
 				remove_ideas = BEL_LUX_BEL_customs_union
@@ -4520,19 +4529,28 @@ focus_tree = {
 				limit = { has_idea = r56_LUX_uebl_2 }
 				remove_ideas = r56_LUX_uebl_2
 			}
+			custom_effect_tooltip = r56_newline
 			remove_ideas = LUX_charlotte
-
 			custom_effect_tooltip = r56_newline
-			GER = {
-				set_autonomy = {
-					target = ROOT
-					autonomy_state = autonomy_reichskommissariat
-					end_wars = no
+			if = {
+				limit = {
+					GER = {
+						has_government = fascism
+						has_completed_focus = GER_remilitarize_the_rhineland
+					}
 				}
+				GER = {
+					set_autonomy = {
+						target = ROOT
+						autonomy_state = autonomy_reichskommissariat
+						end_wars = no
+					}
+				}
+				ROOT = {
+					custom_effect_tooltip = LUX_kratzenbergs_luxemburg_tt
+				}
+				custom_effect_tooltip = r56_newline
 			}
-			custom_effect_tooltip = LUX_kratzenbergs_luxemburg_tt
-
-			custom_effect_tooltip = r56_newline
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.15
