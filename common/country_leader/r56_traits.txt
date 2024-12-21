@@ -5028,6 +5028,15 @@ leader_traits = {
 		consumer_goods_factor = -0.15
 	}
 
+###------> KAZ <><> <><> <><> <><> <><>	
+		
+	KAZ_healthcare_expert = {
+		random = no
+		sprite = 13
+		army_morale_factor = 0.05
+		monthly_population = 0.25
+	}
+
 ###------> SIA <><> <><> <><> <><> <><>	
 		
 	minister_of_education = {

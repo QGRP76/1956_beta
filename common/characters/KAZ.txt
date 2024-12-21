@@ -12,6 +12,7 @@ characters={
 			id = -1
 		}
 	}
+	
 	KAZ_ilyas_zhansugurov = {
 		name = "Ilyas Zhansugurov" 
 		portraits = {
@@ -26,6 +27,7 @@ characters={
 			traits = { r56_trait_opposed_to_communism }
 		}
 	}
+	
 	KAZ_elizaveta_alikhanovna = { # Decendent of Gengish # First Kazakh's president's daughter
 		name = "Elizaveta Alikhanovna" 
 		portraits = {
@@ -40,7 +42,8 @@ characters={
 			traits = { spirit_of_genghis ICE_progressive_doctor }
 		}
 	}
-	KAZ_mustafa_shokay = { # fascist leader wanted great turkestan also linked to Khiva khan family. Former Alash party member turned German collabrator
+	
+	KAZ_mustafa_shokay = { # fascist leader wanted great turkestan also linked to Khiva khan family. Former Alash party member turned German collabrator & is grand child 16x of a Golden Horde guy
 		name = "Mustafa Shokay" 
 		portraits = {
 			civilian = {
@@ -54,7 +57,708 @@ characters={
 			traits = { polyglot likes_germany r56_trait_opposed_to_communism }
 		}
 	}
-	KAZ_kazhymukan_munaitpasov = { #wrestling champion who had ties with the Alash party... I would have prefer the Alash party but they were all killed by the Soviets, so wrestling mad lad it is.
+	
+	KAZ_raimzhan_marsekov = { # Prominent and popular member of Alash. helped set it up, was a lawyer, and fled to China. 
+		name="Raimzhan Marsekov"
+		portraits={
+			civilian={
+				small="GFX_idea_generic_war_industrialist_western_european_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_raimzhan_marsekov
+			allowed = {
+				original_tag = KAZ
+				NOT = {
+				    has_country_leader = KAZ_raimzhan_marsekov
+				}
+			}
+			available = { #Killed in 1937
+			    date > 1937.1.1
+				country_exists = KAZ
+				NOT = {
+				    date > 1937.1.1
+					KAZ = {
+					    exists = no
+					}
+					has_government = communism
+				}
+			}
+			visible = {
+			}
+			cost = 100
+			traits = {
+			    laywer
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+		
+		country_leader = {
+			ideology = conservatism
+			expire = "1960.3.1"
+			id = -1
+			traits = { popular_figurehead2 lawyer anti_communist }
+		}
+	}
+	
+	KAZ_aidarkhan_turlybayev = { # Lawyer accused of Nationalist Activities and Pan-Turkism
+		name="Aidarkhan Turlybayev"
+		portraits={
+			civilian={
+				small="GFX_idea_generic_political_advisor_asia_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_aidarkhan_turlybayev
+			allowed = {
+				original_tag = KAZ
+			}
+			available = { #Killed in 1937
+			    NOT = {
+					SOV = {
+					    has_country_leader = SOV_iosif_stalin
+						has_government = communism
+						has_completed_focus = SOV_the_zinovyevite_terrorist_center
+					}
+					has_government = communism
+				}
+			}
+			visible = {
+			}
+			cost = 100
+			traits = {
+				laywer
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+	
+	KAZ_bazarbai_mametov = {
+		name="Bazarbai Mametov"
+		portraits={
+			civilian={
+				small="GFX_idea_CHI_dai_li"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_bazarbai_mametov
+			allowed = {
+				original_tag = KAZ
+			}
+			available = {
+			
+			}
+			visible = {
+			}
+			cost = 150
+			traits = {
+				economist
+				crafty_diplomat
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+	
+	KAZ_ibrahim_dzhainakov = { # Anti Communist too
+		name="Ibrahim Dzhainakov"
+		portraits={
+			civilian={
+				small="GFX_idea_generic_fascist_demagogue_asian_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_ibrahim_dzhainakov
+			allowed = {
+				original_tag = KAZ
+			}
+			available = {
+			    NOT = {
+				    has_government = communism
+				}
+			}
+			visible = {
+			}
+			cost = 100
+			traits = {
+				NOR_pacifist_diplomat
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+	
+	KAZ_alimkhan_ermekov = {
+		name="Alimkhan Ermekov"
+		portraits={
+			civilian={
+				small="GFX_idea_CHI_h_h_kung"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_alimkhan_ermekov
+			allowed = {
+				original_tag = KAZ
+			}
+			available = {
+			
+			}
+			visible = {
+			}
+			cost = 250
+			traits = {
+				map_redrawer
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+	
+	KAZ_aliaskar_alibekov = { #Was a general too so its worth adding that too
+		name="Aliaskar Alibekov"
+		portraits={
+			civilian={
+				small="GFX_idea_generic_political_advisor_asia_1"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_aliaskar_alibekov
+			allowed = {
+				original_tag = KAZ
+			}
+			available = { #Killed in 1937
+			    NOT = {
+					SOV = {
+					    has_country_leader = SOV_iosif_stalin
+						has_government = communism
+						has_completed_focus = SOV_the_zinovyevite_terrorist_center
+					}
+					has_government = communism
+				}
+			}
+			visible = {
+			}
+			cost = 100
+			traits = {
+				theocratic_diplomat
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+	
+	KAZ_alpyspi_kalmenev = { # Money Big
+		name="Alpyspi Kalmenev"
+		portraits={
+			civilian={
+				small="GFX_idea_CHI_dai_li"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_eldes_omarov
+			allowed = {
+				original_tag = KAZ
+			}
+			available = { #Killed in 1937
+			    NOT = {
+					SOV = {
+					    has_country_leader = SOV_iosif_stalin
+						has_government = communism
+						has_completed_focus = SOV_the_zinovyevite_terrorist_center
+					}
+				}
+			}
+			visible = {
+			}
+			cost = 150
+			traits = {
+			    industrious_banker
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+	
+	KAZ_eldes_omarov = { # Newspaper Writer
+		name="Eldes Omarov"
+		portraits={
+			civilian={
+				small="GFX_idea_CHI_chen_guofu"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_eldes_omarov
+			allowed = {
+				original_tag = KAZ
+			}
+			available = { #Killed in 1937
+			    NOT = {
+					SOV = {
+					    has_country_leader = SOV_iosif_stalin
+						has_government = communism
+						has_completed_focus = SOV_the_zinovyevite_terrorist_center
+					}
+					has_government = communism
+				}
+			}
+			visible = {
+			}
+			cost = 150
+			traits = {
+			    AFG_newspaper_editor
+				polyglot
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+	
+	KAZ_akhmet_baitursynov = { # Prominent member of Alash. he also switched sides when Alash started falling
+		name="Akhmet Baitursynov"
+		portraits={
+			civilian={
+				small="GFX_idea_generic_communist_revolutionary_asian_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_akhmet_baitursynov
+			allowed = {
+				original_tag = KAZ
+			}
+			available = { #Killed in 1937
+			    NOT = {
+					SOV = {
+					    has_country_leader = SOV_iosif_stalin
+						has_government = communism
+						has_completed_focus = SOV_the_zinovyevite_terrorist_center
+                    }
+				}
+			}
+			visible = {
+			}
+			cost = 150
+			traits = {
+			    minister_of_education
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+	
+	KAZ_saken_seifullin = {
+		name="Saken Seifullin"
+		portraits={
+			civilian={
+				small="GFX_idea_generic_political_advisor_asia_3"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_saken_seifullin
+			allowed = {
+				original_tag = KAZ
+			}
+			available = { #Killed in 1938
+			    NOT = {
+					SOV = {
+					    has_country_leader = SOV_iosif_stalin
+						has_government = communism
+						has_completed_focus = SOV_the_anti_soviet_trotskyist_center
+                    }
+				}
+			}
+			visible = {
+			}
+			cost = 100
+			traits = {
+			    socialist_writer
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+	
+	KAZ_alibi_dzhangildin = {
+		name="Alibi Dzhangildin"
+		portraits={
+			civilian={
+				small="GFX_idea_generic_democratic_reformer_asian_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_alibi_dzhangildin
+			allowed = {
+				original_tag = KAZ
+			}
+			available = {
+			    has_government = communism
+			}
+			visible = {
+			}
+			cost = 100
+			traits = {
+			    AFG_newspaper_editor
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+	
+	KAZ_turar_ryskulov = {
+		name="Turar Ryskulov"
+		portraits={
+			civilian={
+				small="GFX_idea_CHI_t_v_soong"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_turar_ryskulov
+			allowed = {
+				original_tag = KAZ
+			}
+			available = { # Killed in 1938
+			    NOT = {
+					SOV = {
+					    has_country_leader = SOV_iosif_stalin
+						has_government = communism
+						has_completed_focus = SOV_the_anti_soviet_trotskyist_center
+                    }
+				}
+			}
+			visible = {
+			}
+			cost = 150
+			traits = {
+			    nationalist_diplomat
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+	
+	KAZ_temirbek_zhurgenov = {
+		name="Temirbek Zhurgenov"
+		portraits={
+			civilian={
+				small="GFX_idea_generic_political_advisor_asia_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_temirbek_zhurgenov
+			allowed = {
+				original_tag = KAZ
+			}
+			available = { # Killed in 1938
+			    NOT = {
+					SOV = {
+					    has_country_leader = SOV_iosif_stalin
+						has_government = communism
+						has_completed_focus = SOV_the_anti_soviet_trotskyist_center
+                    }
+				}
+			}
+			visible = {
+			}
+			cost = 150
+			traits = {
+			    minister_of_education
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+	
+	KAZ_maksut_zhylysbayev = { #If recruited u can ask for Astrakhan
+		name="Maksut Zhylysbayev"
+		portraits={
+			civilian={
+				small="GFX_idea_generic_communist_revolutionary_asian_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_maksut_zhylysbayev
+			allowed = {
+				original_tag = KAZ
+			}
+			available = { # Killed in 1938
+			    NOT = {
+					SOV = {
+					    has_country_leader = SOV_iosif_stalin
+						has_government = communism
+						has_completed_focus = SOV_the_anti_soviet_trotskyist_center
+                    }
+				}
+			}
+			visible = {
+			}
+			cost = 150
+			traits = {
+			    BRA_sugar_king
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+	
+	KAZ_mukhtar_auezov = { 
+		name="Mukhtar Auezov"
+		portraits={
+			civilian={
+				small="GFX_idea_generic_democratic_reformer_asian_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_mukhtar_auezov
+			allowed = {
+				original_tag = KAZ
+			}
+			available = {
+			    has_government = communism
+			}
+			visible = {
+			}
+			cost = 150
+			traits = {
+			    the_academic
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+	
+	KAZ_khalel_dosmukhamedov = { 
+		name="Khalel Dosmukhamedov"
+		portraits={
+			civilian={
+				small="GFX_idea_generic_communist_revolutionary_asian_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_khalel_dosmukhamedov
+			allowed = {
+				original_tag = KAZ
+			}
+			available = { # killed in 1939
+                NOT = {
+					SOV = {
+					    has_country_leader = SOV_iosif_stalin
+						has_government = communism
+						has_completed_focus = SOV_the_military_conspiracy
+                    }
+				}
+			}
+			visible = {
+			}
+			cost = 150
+			traits = {
+			    KAZ_healthcare_expert
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+	
+	KAZ_telzhan_shonanov = { 
+		name="Telzhan Shonanov"
+		portraits={
+			civilian={
+				small="GFX_idea_generic_political_advisor_asia_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_telzhan_shonanov
+			allowed = {
+				original_tag = KAZ
+			}
+			available = { # killed in 1938
+                NOT = {
+					SOV = {
+					    has_country_leader = SOV_iosif_stalin
+						has_government = communism
+						has_completed_focus = SOV_the_anti_soviet_trotskyist_center
+                    }
+				}
+				has_government = communism
+			}
+			visible = {
+			}
+			cost = 150
+			traits = {
+			    SWE_education_for_all
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+	
+	KAZ_isa_kashkinbayev = { 
+		name="Isa Kashkinbayev"
+		portraits={
+			civilian={
+				small="GFX_idea_CHI_dai_li"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_isa_kashkinbayev
+			allowed = {
+				original_tag = KAZ
+			}
+			available = { 
+			
+			}
+			visible = {
+			}
+			cost = 150
+			traits = {
+			    ICE_progressive_doctor
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+	
+	KAZ_tel_zhamanmurynov = { 
+		name="Tel Zhamanmurynov"
+		portraits={
+			civilian={
+				small="GFX_idea_generic_captain_of_industry_commonwealth_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_tel_zhamanmurynov
+			allowed = {
+				original_tag = KAZ
+			}
+			available = { # killed in 1938
+                NOT = {
+					SOV = {
+					    has_country_leader = SOV_iosif_stalin
+						has_government = communism
+						has_completed_focus = SOV_the_anti_soviet_trotskyist_center
+                    }
+				}
+				has_government = communism
+			}
+			visible = {
+			}
+			cost = 150
+			traits = {
+			    SWE_minister_of_agriculture
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+	
+	KAZ_nygmet_nurmakov = { 
+		name="Nygmet Nurmakov"
+		portraits={
+			civilian={
+				small="GFX_idea_generic_fascist_demagogue_asian_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_nygmet_nurmakov
+			allowed = {
+				original_tag = KAZ
+			}
+			available = { #Killed in 1937
+			    NOT = {
+					SOV = {
+					    has_country_leader = SOV_iosif_stalin
+						has_government = communism
+						has_completed_focus = SOV_the_zinovyevite_terrorist_center
+					}
+				}
+			}
+			visible = {
+			}
+			cost = 100
+			traits = {
+				great_compromiser
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+	
+	KAZ_kudaibergen_zhubanov = { 
+		name="Kudaibergen Zhubanov"
+		portraits={
+			civilian={
+				small="GFX_idea_generic_political_advisor_europe_4"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KAZ_kudaibergen_zhubanov
+			allowed = {
+				original_tag = KAZ
+			}
+			available = { #Killed in 1938
+			    NOT = {
+					SOV = {
+					    has_country_leader = SOV_iosif_stalin
+						has_government = communism
+						has_completed_focus = SOV_the_anti_soviet_trotskyist_center
+                    }
+				}
+			}
+			visible = {
+			}
+			cost = 200
+			traits = {
+				accomplished_professor
+				polyglot
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+	
+	KAZ_kazhymukan_munaitpasov = { #wrestling champion who had ties with the Alash party
 		name="Kazhymukan Munaitpasov"
 		portraits={
 			army={
@@ -71,7 +775,6 @@ characters={
 				
 			}			
 			traits = {
-				staunch_traditionalist
 				propaganda_expert #because why not?
 			}
 			ai_will_do = {
@@ -81,12 +784,12 @@ characters={
 						has_government = neutrality
 						has_idea = GEN_Strenghten_Monarchy_I
 					}
-					 
 					add = 25
 				}
 			}
 		}
 	}
+	
     KAZ_tolesin_aliyev={
         name = "Tolesin Aliyev"
         portraits={
@@ -119,6 +822,7 @@ characters={
             legacy_id=0
         }
     }
+	
 	KAZ_alibi_dzhangildin={
 		name = "Alibi Dzhangildin"
 		portraits={
@@ -138,6 +842,7 @@ characters={
 			}
 		}
 	}
+	
 	KAZ_sabit_mukanov={
 		name = "Sabit Mukanov"
 		portraits={
@@ -152,10 +857,11 @@ characters={
 				original_tag  = KAZ
 			}
 			traits  = {
-				popular_figurehead 
+				popular_figurehead2 
 			}
 		}
 	}
+	
 	KAZ_ramazan_kurmangaliyev={
         name = "Ramazan Kurmangaliyev"
         portraits={
@@ -178,6 +884,7 @@ characters={
                 }
         }
     }
+	
 	KAZ_musin_nurkhan={
         name = "Musin Nurkhan"
 		portraits={
@@ -210,6 +917,7 @@ characters={
             legacy_id=0
         }
     }
+	
 	KAZ_shamil_karatayev={
 		name = "Shamil Karatayev"
 		portraits={
@@ -232,6 +940,7 @@ characters={
 			}
 		}
 	}
+	
 	KAZ_gusman_azerbaev={
 		name = "Gusman Azerbaev"
 		portraits={
@@ -250,6 +959,7 @@ characters={
 			legacy_id=0
 		}
 	}
+	
     KAZ_shakir_zheksenbaev={
         name = "Shakir Zheksenbaev"
         portraits={
@@ -282,6 +992,7 @@ characters={
             legacy_id=0
         }
     }
+	
 	KAZ_bakhtyuras_besikbayev={
 		name = "Bakhtyuras Besikbayev"
 		portraits={
@@ -306,6 +1017,7 @@ characters={
 				}
 		}
 	}
+	
 	KAZ_sergey_lugansky={
 		name = "Sergey Lugansky"
 		portraits={
@@ -329,6 +1041,7 @@ characters={
 				}
 		}
 	}
+	
 	KAZ_khiuaz_dospanova={
 		name = "Khiuaz Dospanova"
 		portraits={ 
@@ -357,6 +1070,7 @@ characters={
 			}
 		}
 	}
+	
 	KAZ_ivan_pavlov={
 		name = "Ivan Pavlov"
 		portraits={ #Needs a European Looking portrait
@@ -413,7 +1127,8 @@ characters={
 				factor = 1.000
 			}
 		}
-	}	
+	}
+	
 	KAZ_bauyrzhan_momyshuly={	#Момышулы Бауыржан
 		name = "Bauyrzhan Momyshuly"
 		portraits={
@@ -458,5 +1173,5 @@ characters={
 			logistics_skill=1
 			legacy_id=0
 		}
-	}					
+	}				
 }

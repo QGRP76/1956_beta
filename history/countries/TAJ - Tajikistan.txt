@@ -95,3 +95,4 @@ set_popularities = {
 
 recruit_character = TAJ_shirinsho_shotemur
 recruit_character = TAJ_dmitri_protopopov
+recruit_character = TAJ_hodimi_jamolak
