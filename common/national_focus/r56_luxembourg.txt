@@ -193,6 +193,20 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
+			if = {
+				limit = {
+					can_build_railway = {
+						start_province = 6583
+						target_province = 13427
+					}
+				}
+				build_railway = { 
+					path = { 6583 13427 }
+				}
+				custom_effect_tooltip = r56_newline
+			}
+
+
 			custom_effect_tooltip = available_industrial_concern
 			show_ideas_tooltip = LUX_train_manufacturer
 
@@ -200,6 +214,20 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = train_equipment
 				amount = 15
+			}
+
+			custom_effect_tooltip = r56_newline
+			add_tech_bonus = {
+				name = LUX_nationalise_railway_companies
+				bonus = 0.5
+				uses = 1
+				category = train_tech
+			}
+			
+			custom_effect_tooltip = r56_newline
+			add_timed_idea = {
+				idea = r56_USA_mobilize_the_railways_idea
+				days = 180
 			}
 		}
 	}
