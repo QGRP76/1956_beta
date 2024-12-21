@@ -293,6 +293,16 @@ spriteTypes = {
 		name = "GFX_portrait_POL_Stefan_Frankowski"
 		texturefile = "gfx/leaders/POL/portrait_POL_Stefan_Frankowski.dds"
 	}
+	
+	SpriteType = {
+		name = "GFX_portrait_POL_pavel_bermondt_avlov"
+		texturefile = "gfx/leaders/POL/portrait_POL_pavel_bermondt_avlov.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_portrait_POL_rudiger_von_der_goltz"
+		texturefile = "gfx/leaders/POL/portrait_POL_rudiger_von_der_goltz.dds"
+	}
 
 	###Australia
 
@@ -3840,7 +3850,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = GFX_portrait_Aurelio_Mosquera
-		texturefile = "gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
+		texturefile = "gfx/leaders/ECU/r56_portrait_ECU_Aurelio_Mosquera.dds"
 	}
 
 	spriteType = {
