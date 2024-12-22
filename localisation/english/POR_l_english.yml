@@ -191,8 +191,11 @@
  POR_revanchist_rearmament:0 "Revanchist Rearmament"
  POR_revanchist_rearmament_desc:0 ""
 
- POR_expand_support_for_fascist_trade_unions:0 "Expand Support for Fascist Trade Unions"
- POR_expand_support_for_fascist_trade_unions_desc:0 ""
+ POR_integrate_fascist_labor_organizations:0 "Integrate Fascist Labor Organizations"
+ POR_integrate_fascist_labor_organizations_desc:0 ""
+
+ POR_syndicalize_the_vital_sectors:0 "Syndicalize the Vital Sectors"
+ POR_syndicalize_the_vital_sectors_desc:0 ""
 
  POR_arm_fascist_labor_syndicates:0 "Arm Fascist Labor Syndicates"
  POR_arm_fascist_labor_syndicates_desc:0 ""
@@ -651,15 +654,36 @@
  POR_reinstitute_the_secret_police:0 "Reinstitute the Secret Police"
  POR_reinstitute_the_secret_police_desc:0 ""
  POR_secret_police_crackdowns:0 "Secret Police Crackdowns"
- 
+
+ POR_nationalize_the_blueshirts:0 "Nationalize the Blueshirts"
+ POR_nationalize_the_blueshirts_desc:0 ""
+
+ POR_consolidate_countryside_support:0 "Consolidate Countryside Support"
+ POR_consolidate_countryside_support_desc:0 ""
+
  POR_forge_a_cult_of_personality:0 "Forge a Cult of Personality"
  POR_forge_a_cult_of_personality_desc:0 ""
 
- POR_purge_the_remaining_salazarists:0 "Purge the Remaining Salazarists"
- POR_purge_the_remaining_salazarists_desc:0 ""
+ POR_all_against_the_bolshevik_threat:0 "All Against the Bolshevik Threat"
+ POR_all_against_the_bolshevik_threat_desc:0 ""
 
- POR_united_against_the_bolshevik_threat:0 "United Against the Bolshevik Threat"
- POR_united_against_the_bolshevik_threat_desc:0 ""
+ POR_peace_with_the_opposition:0 "Peace With the Opposition"
+ POR_peace_with_the_opposition_desc:0 ""
+
+ POR_forcefully_absorb_the_blueshirts:0 "Forcefully Absorb the Blueshirts"
+ POR_forcefully_absorb_the_blueshirts_desc:0 ""
+
+ POR_hijack_the_propaganda_ministry:0 "Hijack the Propaganda Ministry"
+ POR_hijack_the_propaganda_ministry_desc:0 ""
+
+ POR_govern_by_concensus:0 "Govern by Concensus"
+ POR_govern_by_concensus_desc:0 ""
+
+ POR_crush_moderate_defiance:0 "Crush Moderate Defiance"
+ POR_crush_moderate_defiance_desc:0 ""
+
+ POR_alliance_between_church_and_state:0 "Alliance Between Church and State"
+ POR_alliance_between_church_and_state_desc:0 ""
 
  POR_draft_portugals_own_labor_charter:0 "Draft Portugal's Own Labor Charter"
  POR_draft_portugals_own_labor_charter_desc:0 ""
@@ -672,12 +696,18 @@
  POR_reforge_the_social_state_desc:0 ""
  POR_maternalistic_welfare:0 "Maternalistic Welfare"
 
+ POR_maintain_the_mixed_economy:0 "Maintain the Mixed Economy"
+ POR_maintain_the_mixed_economy_desc:0 ""
+
  POR_eradicate_rural_illiteracy:0 "Eradicate Rural Illiteracy"
  POR_eradicate_rural_illiteracy_desc:0 ""
 
  POR_restore_the_empire:0 "Restore the Empire"
  POR_restore_the_empire_desc:0 ""
  POR_king_duarte_nuno:0 "King Duarte Nuno"
+
+ POR_anti_communist_commitments:0 "Anti-Communist Commitments"
+ POR_anti_communist_commitments_desc:0 ""
 
  POR_reenter_european_affairs:0 "Re-enter European Affairs"
  POR_reenter_european_affairs_desc:0 ""
@@ -697,8 +727,10 @@
  POR_avenge_the_1821_disaster:0 "Avenge the 1821 Disaster"
  POR_avenge_the_1821_disaster_desc:0 ""
 
+ POR_restore_porto_brazilian_ties:0 "Restore Porto-Brazilian Ties"
+ POR_restore_porto_brazilian_ties_desc:0 ""
+
  POR_prepare_the_colonial_frontlines:0 "Prepare the Colonial Frontlines"
- POR_prepare_the_colonial_frontlines_desc:0 ""
 
  POR_demolish_british_control_over_africa:0 "Demolish British Control Over Africa!"
  POR_demolish_british_control_over_africa_desc:0 ""

@@ -749,7 +749,7 @@ POR_the_path_to_economic_progress = {
 		visible = { 
 			OR = {
 				has_completed_focus = POR_forge_a_prosperous_proletariat
-				has_completed_focus = POR_expand_support_for_fascist_trade_unions
+				has_completed_focus = POR_integrate_fascist_labor_organizations
 			}
 		}
 		days_remove = 120
@@ -858,7 +858,7 @@ POR_the_path_to_economic_progress = {
 		visible = {
 			OR = {
 				has_completed_focus = POR_escalate_the_industrialization 
-				has_completed_focus = POR_expand_support_for_fascist_trade_unions
+				has_completed_focus = POR_integrate_fascist_labor_organizations
 			} 
 		}
 		available = {
@@ -976,8 +976,8 @@ POR_the_path_to_economic_progress = {
 		visible = {
 			OR = {
 				has_completed_focus = POR_restore_the_social_state
-				has_completed_focus = POR_eradicate_rural_illiteracy	
-				has_completed_focus = POR_plan_for_popular_education
+				has_completed_focus = POR_reforge_the_social_state
+				has_completed_focus = POR_assistance_for_the_countryside
 			} 
 		}
 		days_remove = 175
@@ -1008,12 +1008,7 @@ POR_the_path_to_economic_progress = {
 		days_re_enable = 365
 		cost = 75
 		ai_will_do = { base = 10 }
-		visible = {
-			OR = {
-				has_completed_focus = POR_escalate_the_industrialization 
-				has_completed_focus = POR_heavy_handed_development
-			} 
-		}
+		visible = { has_completed_focus = POR_escalate_the_industrialization }
 		available = { has_government = communism }
 		days_remove = 120
 		remove_effect = {
