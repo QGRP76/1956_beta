@@ -127,41 +127,6 @@ country_event = {	# monarchist & fascist
 	days = 6
 }
 
-1945.1.1 = {
-	add_country_leader_role = {
-		character = LUX_pierre_dupong
-		country_leader = {
-			expire = "1965.1.1"
-			traits = {
-				
-			}
-			ideology = conservatism
-		}
-		promote_leader = yes
-	}
-	set_party_name = {
-		ideology = democratic
-		long_name = "Chrëschtlech Sozial Vollekspartei"
-		name = "CSV"
-	}
-	remove_ideas = r56_legacy_of_luxembourg_crisis
-	swap_ideas = {
-		remove_idea = LUX_charlotte
-		add_idea = LUX_charlotte_2
-	}
-	set_politics = {
-		ruling_party = democratic
-		last_election = "1942.10.21"
-		election_frequency = 36
-		elections_allowed = yes
-	}
-	set_popularities = {
-		democratic = 85
-		fascism = 5
-		communism = 10
-	}
-}
-
 if = {
 	limit = {
 		has_dlc = "La Resistance"
@@ -195,3 +160,33 @@ if = {
 	
 }
 
+1945.1.1 = {
+	add_country_leader_role = {
+		character = LUX_pierre_dupong
+		country_leader = {
+			expire = "1965.1.1"
+			traits = {
+				
+			}
+			ideology = conservatism
+		}
+		promote_leader = yes
+	}
+	set_party_name = {
+		ideology = democratic
+		long_name = "Chrëschtlech Sozial Vollekspartei"
+		name = "CSV"
+	}
+	remove_ideas = r56_legacy_of_luxembourg_crisis
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1942.10.21"
+		election_frequency = 36
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 85
+		fascism = 5
+		communism = 10
+	}
+}
