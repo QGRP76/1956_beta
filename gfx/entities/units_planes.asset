@@ -110,6 +110,37 @@ entity = {
 	version = 2
 }
 entity = {
+	name = "POL_fighter_equipment_1_entity"
+	clone = "POL_light_plane_entity"
+	version = 1
+}
+entity = {
+	name = "POL_cv_fighter_equipment_1_entity"
+	clone = "POL_light_plane_entity"
+	version = 1
+}
+entity = {
+	name = "POL_fighter_equipment_2_entity"
+	clone = "POL_light_plane_entity"
+	version = 1
+}
+entity = {
+	name = "POL_cv_fighter_equipment_2_entity"
+	clone = "POL_light_plane_entity"
+	version = 1
+}
+entity = {
+	name = "POL_fighter_equipment_3_entity"
+	clone = "POL_light_plane_entity"
+	version = 1
+}
+entity = {
+	name = "POL_cv_fighter_equipment_3_entity"
+	clone = "POL_light_plane_entity"
+	version = 1
+}
+
+entity = {
 	name = "POL_tac_bomber_equipment_0_entity"
 	pdxmesh = "pol_plane_heavy_mesh"
 	
@@ -151,6 +182,16 @@ entity = {
 	}
 	scale = 0.28
 	version = 2
+}
+entity = {
+	name = "POL_tac_bomber_equipment_1_entity"
+	clone = "POL_medium_plane_entity"
+	version = 1
+}
+entity = {
+	name = "POL_tac_bomber_equipment_2_entity"
+	clone = "POL_medium_plane_entity"
+	version = 1
 }
 
 entity = { #use heavy fighter
@@ -2081,6 +2122,21 @@ entity = {
 	}
 	scale = 0.144
 }
+entity = {
+	name = "SOV_nav_bomber_equipment_2_entity"
+	clone = "SOV_light_plane_entity"
+	version = 1
+}
+entity = {
+	name = "SOV_nav_bomber_equipment_3_entity"
+	clone = "SOV_light_plane_entity"
+	version = 1
+}
+entity = {
+	name = "SOV_fighter_equipment_2_entity"
+	clone = "SOV_light_plane_entity"
+	version = 1
+}
 
 
 entity = {
@@ -2104,6 +2160,42 @@ entity = {
 	scale = 0.208
 }
 entity = {
+	name = "SOV_tac_bomber_equipment_1_entity"
+	clone = "SOV_medium_plane_entity"
+	version = 1
+}
+entity = {
+	name = "SOV_tac_bomber_equipment_0_entity"
+	clone = "SOV_medium_plane_entity"
+	version = 1
+}
+entity = {
+	name = "SOV_tac_bomber_equipment_3_entity"
+	clone = "SOV_medium_plane_entity"
+	version = 1
+}
+entity = {
+	name = "SOV_nav_bomber_equipment_2_entity"
+	clone = "SOV_medium_plane_entity"
+	version = 1
+}
+entity = {
+	name = "SOV_heavy_fighter_equipment_3_entity"
+	clone = "SOV_medium_plane_entity"
+	version = 1
+}
+entity = {
+	name = "SOV_heavy_fighter_equipment_1_entity"
+	clone = "SOV_medium_plane_entity"
+	version = 1
+}
+entity = {
+	name = "SOV_heavy_fighter_equipment_2_entity"
+	clone = "SOV_medium_plane_entity"
+	version = 1
+}
+
+entity = {
 	name = "SOV_heavy_plane_entity"
 	pdxmesh = "SOV_plane_heavy_mesh"
 	state = { name = "bomb" animation = "idle" 
@@ -2121,6 +2213,11 @@ entity = {
 		
 	}
 	scale = 0.288
+}
+entity = {
+	name = "SOV_strat_bomber_equipment_3_entity"
+	clone = "SOV_heavy_plane_entity"
+	version = 1
 }
 
 #copy of generic plane actually i-16 polikarpov

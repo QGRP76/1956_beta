@@ -478,7 +478,6 @@ entity = {
 	scale = 0.144
 	version = 5
 }
-#substitute for interwar plane already present in unit_planes
 
 entity = {
 	name = "GER_fighter_equipment_2_entity"
@@ -567,12 +566,6 @@ entity = {
 	scale = 0.122
 	version = 5
 }
-entity = {
-	name = "POL_fighter_equipment_1_entity"
-	clone = "POL_light_plane_entity"
-	version = 1
-}
-
 
 entity = {
 	name = "POL_cv_fighter_equipment_1_entity"
@@ -600,11 +593,6 @@ entity = {
 	scale = 0.122
 	version = 5
 }
-entity = {
-	name = "POL_cv_fighter_equipment_1_entity"
-	clone = "POL_light_plane_entity"
-	version = 1
-}
 
 entity = {
 	name = "POL_fighter_equipment_2_entity"
@@ -633,11 +621,6 @@ entity = {
 	}
 	scale = 0.122
 	version = 5
-}
-entity = {
-	name = "POL_fighter_equipment_2_entity"
-	clone = "POL_light_plane_entity"
-	version = 1
 }
 
 entity = {
@@ -668,12 +651,6 @@ entity = {
 	scale = 0.122
 	version = 5
 }
-entity = {
-	name = "POL_cv_fighter_equipment_2_entity"
-	clone = "POL_light_plane_entity"
-	version = 1
-}
-
 
 entity = {
 	name = "POL_CAS_equipment_1_entity"
@@ -763,11 +740,7 @@ entity = {
 	scale = 0.165
 	version = 5
 }
-entity = {
-	name = "POL_tac_bomber_equipment_1_entity"
-	clone = "POL_medium_plane_entity"
-	version = 1
-}
+
 entity = {
 	name = "POL_tac_bomber_equipment_2_entity"
 	pdxmesh = "POL_tactical_bomber_2_mesh"
@@ -792,11 +765,7 @@ entity = {
 	scale = 0.165
 	version = 5
 }
-entity = {
-	name = "POL_tac_bomber_equipment_2_entity"
-	clone = "POL_medium_plane_entity"
-	version = 1
-}
+
 entity = {
 	name = "POL_heavy_fighter_equipment_1_entity"
 	pdxmesh = "POL_heavy_fighter_1_mesh"
@@ -860,12 +829,6 @@ entity = {
 	scale = 0.122
 	version = 5
 }
-entity = {
-	name = "POL_fighter_equipment_3_entity"
-	clone = "POL_light_plane_entity"
-	version = 1
-}
-
 
 entity = {
 	name = "POL_cv_fighter_equipment_3_entity"
@@ -896,11 +859,6 @@ entity = {
 	}
 	scale = 0.122
 	version = 5
-}
-entity = {
-	name = "POL_cv_fighter_equipment_3_entity"
-	clone = "POL_light_plane_entity"
-	version = 1
 }
 
 entity = {
@@ -986,12 +944,6 @@ entity = {
 	scale = 0.175
 	version = 5
 }
-entity = {
-	name = "SOV_nav_bomber_equipment_2_entity"
-	clone = "SOV_light_plane_entity"
-	version = 1
-}
-
 
 entity = {
 	name = "SOV_nav_bomber_equipment_3_entity"
@@ -1015,11 +967,6 @@ entity = {
 	}
 	scale = 0.175
 	version = 5
-}
-entity = {
-	name = "SOV_nav_bomber_equipment_3_entity"
-	clone = "SOV_light_plane_entity"
-	version = 1
 }
 
 entity = {
@@ -1048,11 +995,6 @@ entity = {
 	scale = 0.165
 	version = 5
 }
-entity = {
-	name = "SOV_tac_bomber_equipment_1_entity"
-	clone = "SOV_medium_plane_entity"
-	version = 1
-}
 
 entity = {
 	name = "SOV_fighter_equipment_1_entity"
@@ -1080,7 +1022,6 @@ entity = {
 	scale = 0.122
 	version = 5
 }
-#SOV_fighter_equipment_1_entity already in unit_planes
 
 entity = {
 	name = "SOV_tac_bomber_equipment_0_entity"
@@ -1104,11 +1045,6 @@ entity = {
 	}
 	scale = 0.165
 	version = 5
-}
-entity = {
-	name = "SOV_tac_bomber_equipment_0_entity"
-	clone = "SOV_medium_plane_entity"
-	version = 1
 }
 
 entity = {
@@ -1136,8 +1072,6 @@ entity = {
 	scale = 0.122
 	version = 5
 }
-#SOV_fighter_equipment_0_entity already in unit_planes
-
 
 entity = {
 	name = "SOV_tac_bomber_equipment_3_entity"
@@ -1158,11 +1092,6 @@ entity = {
 	}
 	scale = 0.165
 	version = 5
-}
-entity = {
-	name = "SOV_tac_bomber_equipment_3_entity"
-	clone = "SOV_medium_plane_entity"
-	version = 1
 }
 
 entity = {
@@ -1190,11 +1119,6 @@ entity = {
 	scale = 0.155
 	version = 5
 }
-entity = {
-	name = "SOV_strat_bomber_equipment_3_entity"
-	clone = "SOV_heavy_plane_entity"
-	version = 1
-}
 
 entity = {
 	name = "SOV_fighter_equipment_2_entity"
@@ -1221,11 +1145,7 @@ entity = {
 	scale = 0.122
 	version = 5
 }
-entity = {
-	name = "SOV_fighter_equipment_2_entity"
-	clone = "SOV_light_plane_entity"
-	version = 1
-}
+
 entity = {
 	name = "SOV_CAS_equipment_1_entity"
 	pdxmesh = "SOV_cas_1_mesh"
@@ -1557,8 +1477,6 @@ entity = {
 	version = 5
 }
 
-#HUN_fighter_equipment_0_entity substitute already in unit_planes
-
 # Romania
 entity = {
 	name = "ROM_fighter_equipment_1_entity"
@@ -1597,9 +1515,6 @@ entity = {
 	version = 2
 }
 
-
-
-
 entity = {
 	name = "ROM_CAS_equipment_1_entity"
 	pdxmesh = "ROM_cas_1_mesh"
@@ -1632,8 +1547,6 @@ entity = {
 	version = 2
 }
 
-
-
 entity = {
 	name = "ROM_fighter_equipment_0_entity"
 	pdxmesh = "ROM_fighter_0_mesh"
@@ -1660,9 +1573,6 @@ entity = {
 	scale = 0.122
 	version = 5
 }
-
-# ROM_fighter_equipment_0_entity substitute already there
-
 
 entity = {
 	name = "ROM_fighter_equipment_3_entity"
@@ -1700,7 +1610,6 @@ entity = {
 	clone = "ROM_light_plane_entity"
 	version = 2
 }
-
 
 # Yugoslavia
 entity = {
@@ -1805,8 +1714,6 @@ entity = {
 	version = 5
 }
 
-#YUG_fighter_equipment_0_entity already in the other file
-
 entity = {
 	name = "YUG_fighter_equipment_1_entity"
 	pdxmesh = "YUG_fighter_1_mesh"
@@ -1842,7 +1749,6 @@ entity = {
 	clone = "YUG_light_plane_entity"
 	version = 2
 }
-
 
 # Reused Assets 
 
@@ -1989,11 +1895,6 @@ entity = {
 	scale = 0.175
 	version = 5
 }	
-entity = {
-	name = "SOV_nav_bomber_equipment_2_entity"
-	clone = "SOV_medium_plane_entity"
-	version = 1
-}
 
 entity = {
 	name = "SOV_heavy_fighter_equipment_3_entity"
@@ -2018,11 +1919,6 @@ entity = {
 	}
 	scale = 0.175
 	version = 5
-}	
-entity = {
-	name = "SOV_heavy_fighter_equipment_3_entity"
-	clone = "SOV_medium_plane_entity"
-	version = 1
 }
 
 entity = {
@@ -2053,11 +1949,6 @@ entity = {
 	}
 	scale = 0.208
 	version = 5
-}	
-entity = {
-	name = "SOV_heavy_fighter_equipment_1_entity"
-	clone = "SOV_medium_plane_entity"
-	version = 1
 }
 
 entity = {
@@ -2088,11 +1979,6 @@ entity = {
 	}
 	scale = 0.208
 	version = 5
-}
-entity = {
-	name = "SOV_heavy_fighter_equipment_2_entity"
-	clone = "SOV_medium_plane_entity"
-	version = 1
 }
 
 entity = {
