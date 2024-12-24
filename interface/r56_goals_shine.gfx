@@ -9345,71 +9345,6 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_generic_tourism_shine"
-		texturefile = "gfx/interface/goals/generic/r56_generic_tourism.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/generic/r56_generic_tourism.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/generic/r56_generic_tourism.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
-	SpriteType = {
-		name = "GFX_goal_generic_republican_fascism_shine"
-		texturefile = "gfx/interface/goals/generic/r56_generic_republican_fascism.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/generic/r56_generic_republican_fascism.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/generic/r56_generic_republican_fascism.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
-   
-	SpriteType = {
 		name = "GFX_goal_generic_underground_factories_shine"
 		texturefile = "gfx/interface/goals/generic/r56_goal_generic_underground_factories.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -17824,6 +17759,39 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
+	SpriteType = {
+		name = "GFX_goal_generic_monarchy_cooperation"
+		texturefile = "gfx/interface/goals/generic/r56_goal_generic_monarchy_cooperation.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/generic/r56_goal_generic_monarchy_cooperation.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/generic/r56_goal_generic_monarchy_cooperation.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
 
 	SpriteType = {
 		name = "GFX_goal_AFG_army_shine"
@@ -70241,6 +70209,38 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
+	#INS
+	SpriteType = {
+		name = "GFX_goal_INS_army_shine"
+		texturefile = "gfx/interface/goals/ins/r56_goal_INS_army.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ins/r56_goal_INS_army.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ins/r56_goal_INS_army.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+		}
+		legacy_lazy_load = no
+	}
+
+	#MEN
 	SpriteType = {
 		name = "GFX_goal_MEN_rather_reform_then_change_shine"
 		texturefile = "gfx/interface/goals/men/r56_goal_MEN_rather_refrom_then_change.dds"
@@ -70481,7 +70481,7 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
-	###---> QBC
+	###---> MPL
 	
 	SpriteType = {
 		name = "GFX_goal_QBC_r56_quebec_libre_shine"
@@ -70802,8 +70802,6 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
-
-	###---> MPL
 
 	SpriteType = {
 		name = "GFX_goal_MPL_start_shine"
@@ -73909,14 +73907,12 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
-	#IRQ
-
-	SpriteType = {
-		name = "GFX_goal_IRQ_Babil_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_babil.dds"
+	spriteType = {
+		name = "GFX_goal_generic_befriend_belgium_shine"
+		textureFile = "gfx/interface/goals/generic/r56_goal_generic_befriend_belgium.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_babil.dds"
+			animationmaskfile = "gfx/interface/goals/generic/r56_goal_generic_befriend_belgium.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -73929,7 +73925,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_babil.dds"
+			animationmaskfile = "gfx/interface/goals/generic/r56_goal_generic_befriend_belgium.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -73943,12 +73939,12 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
-	SpriteType = {
-		name = "GFX_goal_IRQ_Allies_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_Allies.dds"
+	spriteType = {
+		name = "GFX_goal_LUX_reaffirm_treaty_of_london_shine"
+		textureFile = "gfx/interface/goals/LUX/r56_goal_LUX_reaffirm_treaty_of_london.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_Allies.dds"
+			animationmaskfile = "gfx/interface/goals/LUX/r56_goal_LUX_reaffirm_treaty_of_london.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -73961,39 +73957,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_Allies.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-	
-	SpriteType = {
-		name = "GFX_goal_IRQ_NBP_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_NBP.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_NBP.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_NBP.dds"
+			animationmaskfile = "gfx/interface/goals/LUX/r56_goal_LUX_reaffirm_treaty_of_london.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -74007,12 +73971,12 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
-	SpriteType = {
-		name = "GFX_goal_IRQ_Kurd_ref_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_Kurd_ref.dds"
+	spriteType = {
+		name = "GFX_goal_LUX_demonstrate_our_will_shine"
+		textureFile = "gfx/interface/goals/LUX/r56_goal_LUX_demonstrate_our_will.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_Kurd_ref.dds"
+			animationmaskfile = "gfx/interface/goals/LUX/r56_goal_LUX_demonstrate_our_will.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -74025,7 +73989,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_Kurd_ref.dds"
+			animationmaskfile = "gfx/interface/goals/LUX/r56_goal_LUX_demonstrate_our_will.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -74039,12 +74003,12 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
-	SpriteType = {
-		name = "GFX_goal_IRQ_Kuwait_fort_shine"
-		texturefile = "gfx/interface/goals/irq/r56_IRQ_Kuwait_fort.dds"
+	spriteType = {
+		name = "GFX_goal_LUX_expand_the_gau_shine"
+		textureFile = "gfx/interface/goals/LUX/r56_goal_LUX_expand_the_gau.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_IRQ_Kuwait_fort.dds"
+			animationmaskfile = "gfx/interface/goals/LUX/r56_goal_LUX_expand_the_gau.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -74057,135 +74021,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_IRQ_Kuwait_fort.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-    
-	SpriteType = {
-		name = "GFX_goal_IRQ_hashemites_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_hashemites.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_hashemites.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_hashemites.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-   
-	SpriteType = {
-		name = "GFX_goal_IRQ_hashemites2_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_hashemites2.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_hashemites2.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_hashemites2.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-	
-	SpriteType = {
-		name = "GFX_goal_IRQ_syria_unity_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_syria_unity.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_syria_unity.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_syria_unity.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-	
-	SpriteType = {
-		name = "GFX_goal_IRQ_Nuri_shine"
-		texturefile = "gfx/interface/goals/irq/r56_IRQ_Nuri.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_IRQ_Nuri.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_IRQ_Nuri.dds"
+			animationmaskfile = "gfx/interface/goals/LUX/r56_goal_LUX_expand_the_gau.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -74199,12 +74035,12 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
-	SpriteType = {
-		name = "GFX_goal_IRQ_assyrians_shine"
-		texturefile = "gfx/interface/goals/irq/r56_IRQ_assyrians.dds"
+	spriteType = {
+		name = "GFX_goal_generic_attack_benelux_shine"
+		textureFile = "gfx/interface/goals/generic/r56_goal_generic_attack_benelux.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_IRQ_assyrians.dds"
+			animationmaskfile = "gfx/interface/goals/generic/r56_goal_generic_attack_benelux.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -74217,39 +74053,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_IRQ_assyrians.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-	
-	SpriteType = {
-		name = "GFX_goal_IRQ_royal_referendum_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_royal_referendum.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_royal_referendum.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_royal_referendum.dds"
+			animationmaskfile = "gfx/interface/goals/generic/r56_goal_generic_attack_benelux.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -74263,12 +74067,12 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
-	SpriteType = {
-		name = "GFX_goal_IRQ_abdul_latif_takes_power_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_abdul_latif_takes_power.dds"
+	spriteType = {
+		name = "GFX_goal_generic_big_german_flag_shine"
+		textureFile = "gfx/interface/goals/generic/r56_goal_generic_big_german_flag.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_abdul_latif_takes_power.dds"
+			animationmaskfile = "gfx/interface/goals/generic/r56_goal_generic_big_german_flag.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -74281,7 +74085,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_abdul_latif_takes_power.dds"
+			animationmaskfile = "gfx/interface/goals/generic/r56_goal_generic_big_german_flag.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -74295,12 +74099,12 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
-	SpriteType = {
-		name = "GFX_goal_IRQ_bakirs_personal_state_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_bakirs_personal_state.dds"
+	spriteType = {
+		name = "GFX_goal_LUX_dreams_of_federation_shine"
+		textureFile = "gfx/interface/goals/LUX/r56_goal_LUX_dreams_of_federation.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_bakirs_personal_state.dds"
+			animationmaskfile = "gfx/interface/goals/LUX/r56_goal_LUX_dreams_of_federation.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -74313,7 +74117,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_bakirs_personal_state.dds"
+			animationmaskfile = "gfx/interface/goals/LUX/r56_goal_LUX_dreams_of_federation.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -74327,12 +74131,12 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
-	SpriteType = {
-		name = "GFX_goal_IRQ_get_rid_of_ghazi_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_get_rid_of_ghazi.dds"
+	spriteType = {
+		name = "GFX_goal_LUX_decentralised_alliance_shine"
+		textureFile = "gfx/interface/goals/LUX/r56_goal_LUX_decentralised_alliance.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_get_rid_of_ghazi.dds"
+			animationmaskfile = "gfx/interface/goals/LUX/r56_goal_LUX_decentralised_alliance.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -74345,7 +74149,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_get_rid_of_ghazi.dds"
+			animationmaskfile = "gfx/interface/goals/LUX/r56_goal_LUX_decentralised_alliance.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -74359,12 +74163,12 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
-	SpriteType = {
-		name = "GFX_goal_IRQ_ghazi_in_sidqis_shadow_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_ghazi_in_sidqis_shadow.dds"
+	spriteType = {
+		name = "GFX_goal_LUX_conservative_victory_shine"
+		textureFile = "gfx/interface/goals/LUX/r56_goal_LUX_conservative_victory.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_ghazi_in_sidqis_shadow.dds"
+			animationmaskfile = "gfx/interface/goals/LUX/r56_goal_LUX_conservative_victory.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -74377,7 +74181,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_ghazi_in_sidqis_shadow.dds"
+			animationmaskfile = "gfx/interface/goals/LUX/r56_goal_LUX_conservative_victory.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -74391,12 +74195,12 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
-	SpriteType = {
-		name = "GFX_goal_IRQ_sidqi_reputation_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_sidqi_reputation.dds"
+	spriteType = {
+		name = "GFX_goal_LUX_liberal_victory_shine"
+		textureFile = "gfx/interface/goals/LUX/r56_goal_LUX_liberal_victory.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_sidqi_reputation.dds"
+			animationmaskfile = "gfx/interface/goals/LUX/r56_goal_LUX_liberal_victory.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -74409,7 +74213,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_sidqi_reputation.dds"
+			animationmaskfile = "gfx/interface/goals/LUX/r56_goal_LUX_liberal_victory.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -74423,12 +74227,12 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
-	SpriteType = {
-		name = "GFX_goal_IRQ_empower_kurdish_workers_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_empower_kurdish_workers.dds"
+	spriteType = {
+		name = "GFX_goal_LUX_socdem_victory_shine"
+		textureFile = "gfx/interface/goals/LUX/r56_goal_LUX_socdem_victory.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_empower_kurdish_workers.dds"
+			animationmaskfile = "gfx/interface/goals/LUX/r56_goal_LUX_socdem_victory.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -74441,7 +74245,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_empower_kurdish_workers.dds"
+			animationmaskfile = "gfx/interface/goals/LUX/r56_goal_LUX_socdem_victory.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -74455,12 +74259,12 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
-	SpriteType = {
-		name = "GFX_goal_IRQ_yasins_reforms_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_yasins_reforms.dds"
+	spriteType = {
+		name = "GFX_goal_LUX_communist_victory_shine"
+		textureFile = "gfx/interface/goals/LUX/r56_goal_LUX_communist_victory.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_yasins_reforms.dds"
+			animationmaskfile = "gfx/interface/goals/LUX/r56_goal_LUX_communist_victory.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -74473,7 +74277,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_yasins_reforms.dds"
+			animationmaskfile = "gfx/interface/goals/LUX/r56_goal_LUX_communist_victory.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -74487,12 +74291,12 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
-	SpriteType = {
-		name = "GFX_goal_IRQ_reform_the_army_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_reform_the_army.dds"
+	spriteType = {
+		name = "GFX_goal_LUX_commemorate_independence_shine"
+		textureFile = "gfx/interface/goals/LUX/r56_goal_LUX_commemorate_independence.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_reform_the_army.dds"
+			animationmaskfile = "gfx/interface/goals/LUX/r56_goal_LUX_commemorate_independence.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -74505,7 +74309,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_reform_the_army.dds"
+			animationmaskfile = "gfx/interface/goals/LUX/r56_goal_LUX_commemorate_independence.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -74518,549 +74322,4 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
-
-	SpriteType = {
-		name = "GFX_goal_IRQ_regular_exercises_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_regular_exercises.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_regular_exercises.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_regular_exercises.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
-	SpriteType = {
-		name = "GFX_goal_IRQ_army_modernization_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_army_modernization.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_army_modernization.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_army_modernization.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
-	SpriteType = {
-		name = "GFX_goal_IRQ_ghazi_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_ghazi.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_ghazi.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_ghazi.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
-	SpriteType = {
-		name = "GFX_goal_IRQ_flames_of_marxism_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_flames_of_marxism.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_flames_of_marxism.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_flames_of_marxism.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-	
-	SpriteType = {
-		name = "GFX_goal_IRQ_hashemite_airforce_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_hashemite_airforce.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_hashemite_airforce.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_hashemite_airforce.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
-	SpriteType = {
-		name = "GFX_goal_IRQ_hashemite_army_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_hashemite_army.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_hashemite_army.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_hashemite_army.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-	
-	SpriteType = {
-		name = "GFX_goal_IRQ_hashemite_navy_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_hashemite_navy.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_hashemite_navy.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_hashemite_navy.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-	
-	SpriteType = {
-		name = "GFX_goal_IRQ_map_shine"
-		texturefile = "gfx/interface/goals/irq/r56_IRQ_map.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_IRQ_map.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_IRQ_map.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
-	SpriteType = {
-		name = "GFX_goal_IRQ_North_shine"
-		texturefile = "gfx/interface/goals/irq/r56_IRQ_North.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_IRQ_North.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_IRQ_North.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-	
-	SpriteType = {
-		name = "GFX_goal_IRQ_South_shine"
-		texturefile = "gfx/interface/goals/irq/r56_IRQ_South.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_IRQ_South.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_IRQ_South.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
-	
-	SpriteType = {
-		name = "GFX_goal_royal_election_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_royal_election.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_royal_election.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_royal_election.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
-	SpriteType = {
-		name = "GFX_goal_IRQ_Arabistan_shine"
-		texturefile = "gfx/interface/goals/irq/r56_IRQ_Arabistan.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_IRQ_Arabistan.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_IRQ_Arabistan.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
-	SpriteType = {
-		name = "GFX_goal_IRQ_mesopotamia_shine"
-		texturefile = "gfx/interface/goals/irq/r56_IRQ_mesopotamia.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_IRQ_mesopotamia.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_IRQ_mesopotamia.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
-	SpriteType = {
-		name = "GFX_goal_IRQ_pardon_barzani_shine"
-		texturefile = "gfx/interface/goals/irq/r56_goal_IRQ_pardon_barzani.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_pardon_barzani.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/irq/r56_goal_IRQ_pardon_barzani.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-	
-	###---> JOR
-
-	SpriteType = {
-		name = "GFX_goal_JOR_purge_tribes_shine"
-		texturefile = "gfx/interface/goals/jor/r56_goal_JOR_purge_tribes.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/jor/r56_goal_JOR_purge_tribes.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   # <- the animated file
-			animationrotation = -90.0        # -90 clockwise 90 counterclockwise(by default)
-			animationlooping = no            # yes or no ;)
-			animationtime = 0.75                # in seconds
-			animationdelay = 0            # in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/jor/r56_goal_JOR_purge_tribes.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"    # <- the animated file
-			animationrotation = 90.0        # -90 clockwise 90 counterclockwise(by default)
-			animationlooping = no            # yes or no ;)
-			animationtime = 0.75                # in seconds
-			animationdelay = 0            # in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
-	SpriteType = {
-		name = "GFX_goal_JOR_appease_tribes_shine"
-		texturefile = "gfx/interface/goals/jor/r56_goal_JOR_appease_tribes.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/jor/r56_goal_JOR_appease_tribes.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   # <- the animated file
-			animationrotation = -90.0        # -90 clockwise 90 counterclockwise(by default)
-			animationlooping = no            # yes or no ;)
-			animationtime = 0.75                # in seconds
-			animationdelay = 0            # in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/jor/r56_goal_JOR_appease_tribes.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"    # <- the animated file
-			animationrotation = 90.0        # -90 clockwise 90 counterclockwise(by default)
-			animationlooping = no            # yes or no ;)
-			animationtime = 0.75                # in seconds
-			animationdelay = 0            # in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
-	SpriteType = {
-		name = "GFX_goal_JOR_arab_legion_shine"
-		texturefile = "gfx/interface/goals/jor/r56_goal_JOR_arab_legion.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/jor/r56_goal_JOR_arab_legion.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   # <- the animated file
-			animationrotation = -90.0        # -90 clockwise 90 counterclockwise(by default)
-			animationlooping = no            # yes or no ;)
-			animationtime = 0.75                # in seconds
-			animationdelay = 0            # in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/jor/r56_goal_JOR_arab_legion.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"    # <- the animated file
-			animationrotation = 90.0        # -90 clockwise 90 counterclockwise(by default)
-			animationlooping = no            # yes or no ;)
-			animationtime = 0.75                # in seconds
-			animationdelay = 0            # in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
 }
