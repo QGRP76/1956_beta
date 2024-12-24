@@ -1003,6 +1003,7 @@ ideas = {
 
             modifier = {
                 stability_factor = 0.05
+                opinion_gain_monthly_same_ideology_factor = 0.10
             }
         }
         IRQ_finalized_budget = {

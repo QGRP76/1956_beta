@@ -641,12 +641,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/r56_decision_cat_MON_ship.dds"
 	}
 ###--->  SIA <><> <><> <><>
+
 	spriteType = {
 		name = "GFX_decision_cat_fuel_resistance_in_indochina"
 		texturefile = "gfx/interface/decisions/decision_cat_fuel_resistance_in_indochina.dds"
 	}
 
 ###--->  ITA <><> <><> <><>
+
 	spriteType = {
 		name = "GFX_decision_italy_fascist_foreign_policy"
 		texturefile = "gfx/interface/decisions/decision_italy_fascist_foreign_policy.dds"
@@ -656,7 +658,15 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/r56_decision_cat_italian_east_africa.dds"
 	}	
 
+###--->  IRQ <><> <><> <><>
+
+	spriteType = {
+		name = "GFX_decision_cat_IRQ_october_coup"
+		texturefile = "gfx/interface/decisions/decision_cat_IRQ_october_coup.dds"
+	}	
+
 ###--->  USA <><> <><> <><>
+
 	spriteType = {
 		name = "GFX_decision_generic_scales"
 		texturefile = "gfx/interface/decisions/r56_decision_generic_scales.dds"

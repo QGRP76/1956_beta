@@ -906,19 +906,44 @@ IRQ_royal_consolidation_category={
 	}
 }
 IRQ_october_coup_category = {
-	IRQ_october_coup_mission = {
-		icon = GFX_decision_generic_ignite_civil_war
+	IRQ_october_countercoup_mission = {
+		icon = GFX_decision_generic_army_support
+
 		priority = 100
+
 		allowed = {
 			original_tag = IRQ
 		}
 
 		available = {
-			has_completed_focus = IRQ_the_october_coup
+			has_completed_focus = IRQ_ensure_the_armys_loyalty
 		}
 
 		is_good = no
-		days_mission_timeout = 300
+
+		days_mission_timeout = 120
+
+		timeout_effect = {
+			country_event = irq.10
+		}
+	}
+	IRQ_ensure_army_loyalty_mission = {
+		icon = GFX_decision_generic_army_support
+
+		priority = 100
+
+		allowed = {
+			original_tag = IRQ
+		}
+
+		available = {
+			has_completed_focus = IRQ_launch_the_countercoup
+		}
+
+		is_good = no
+
+		days_mission_timeout = 120
+
 		timeout_effect = {
 			country_event = irq.10
 		}

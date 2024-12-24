@@ -372,7 +372,7 @@
  IRQ_jizya_payments:0 "Jizya Payments"
  IRQ_sharia:0 "Shari'a"
  IRQ_GER_OIL:0 "The §Y[GER.GetAdjective]s§! have been granted §Ycontrol§! over our §Yoil extraction facilities§!."
- IRQ_Iran_treaty:0 "1937 Shatt al-Arab Treaty"
+ IRQ_Iran_treaty:0 "Shatt al-Arab Treaty"
  IRQ_sunni_shia_unity:0 "Sunni-Shia Unity"
  IRQ_sniper_teams_idea:0 "Sniper Teams"
  IRQ_spreading_the_world_revolution:0 "Spreading The World Revolution"
@@ -756,12 +756,12 @@
 
  # END #
 
- IRQ_admin_renovate_tt: "§YHas completed renovate setup§!"
- IRQ_expand_hamdan_tt: "§YHas completed expansion setup§!"
- IRQ_industrialize_karbala_tt: "§YHas completed renovate setup§!"
- IRQ_kut_dam_tt: "§YHas set the corner stone§!"
- IRQ_kirkuk_oil_tt: "§YHas expanded drilling§!"
- IRQ_south_electrify_tt: "§YHas laid power lines§!"
+ IRQ_admin_renovate_tt:0 "§YHas completed renovate setup§!"
+ IRQ_expand_hamdan_tt:0 "§YHas completed expansion setup§!"
+ IRQ_industrialize_karbala_tt:0 "§YHas completed renovate setup§!"
+ IRQ_kut_dam_tt:0 "§YHas set the corner stone§!"
+ IRQ_kirkuk_oil_tt:0 "§YHas expanded drilling§!"
+ IRQ_south_electrify_tt:0 "§YHas laid power lines§!"
  #Decisions ---
  IRQ_kurdish_conflict_category:0 "Kurdish-Iraqi Conflict"
  IRQ_kurdish_conflict_category_desc:0 "The Kurds historically have always wanted independence, and a sovereign state, this is present in Turkey and Iran, but their strongest hold is on our northern territories of Erbil, Sulaymaniyah and Kirkuk.\n\n A Kurdish State could threaten the stability of our state, and they could establish a state if their resistance gains strength."
@@ -776,8 +776,12 @@
  IRQ_kurd_rebellion_mission:0 "Brewing Rebellion in Kurdistan"
  IRQ_infiltrating_kurdish_militias:0 "Infiltrate Kurdish Militias"
  IRQ_october_coup_category:0 "Rising Military Tensions"
- IRQ_october_coup_category_desc:0 "It is fairly obvious, but Bakr Sidqis discontent with the government especially for Yaseen's refusal to promote him  is going to eventually lead into a military Coup D'etat.\n\n§RIf we have completed 5 or more Army reforms the Coup will fully succeed, if we have completed 5 or more Political Reforms, we will be able to counter-coup.§!"
- IRQ_october_coup_mission:0 "Coup d'etat"
+
+ IRQ_october_coup_category_desc:0 "The aftermath of the October Coup, as it has come to be known, has left the [ROOT.GetAdjective] nation divided, as if it wasn't divided enough already... Nevertheless, Bakr Sidqi, a rebellious yet brilliant Kurd who has rose through the army ranks enjoys support from many anti-British figures, however, a large part of the army has yet to fully yield to his command...[GetIrqCountercoupVisibility]"
+ IRQ_countercoup_success_visibility:0 "\n\nCountercoup Success Chance: §Y[?IRQ_countercoup_chance_var|%Y0]§!\n"
+ IRQ_october_countercoup_mission:0 "Jaysh al-'Iraq Countercoup"
+ IRQ_ensure_army_loyalty_mission:0 "Bakr Sidqi Ensures Army Loyalty"
+
  IRQ_border_conflicts:0 "Border Raids"
  IRQ_border_conflicts_desc:0 "Continuing the spread of our caliphate is integral to liberating our people from colonialism, and uniting our brothers with their own people, however we cannot declare full-scale wars as these oppressive empires would easily overpower us, and thus we will initiate raids across each border, in which we will kick out the garrisons of the controlling areas we initiate raids on."
  IRQ_raids_lower_arabia:0 "Raids In Lower Arabia"
@@ -804,6 +808,11 @@
 
  IRQ_will_be_completed_once:0 "Will be §Yautocompleted§! once the following §Ytriggers§! have been §Ymet§!:"
  IRQ_october_coup_happened:0 "§YBakr Sidqi§! has launched the §ROctober Coup§!."
+ IRQ_increase_chance_by_10:0 "The §YCountercoup Success Chance§! will be §Gincreased§! by §Y10%§!."
+ IRQ_increase_chance_by_15:0 "The §YCountercoup Success Chance§! will be §Gincreased§! by §Y15%§!."
+ IRQ_approach_the_army_staff_tt:0 "In case of the §YCountercoup§! §Rfailing§!, the §Yproportion§! of §Yunits§! that side with the §Yloyalist faction§! will be reduced from §Y60%§! to §Y50%§!."
+ IRQ_coerce_the_officers_tt:0 "In case of the §YCountercoup§! §Rfailing§!, the §Yproportion§! of §Yunits§! that side with the §Yloyalist faction§! will be reduced from §Y60%§! to §Y40%§!."
+
  IRQ_islamic_kingdom:0 "Islamic Kingdom Of Iraq"
  IRQ_militant_kurdish_figurehead:0 "Militant Kurdish Figurehead"
  IRQ_iraqi_arab_republics:0 "The Iraqi Arab Republics"

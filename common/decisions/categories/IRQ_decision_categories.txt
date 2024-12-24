@@ -32,7 +32,9 @@ IRQ_royal_consolidation_category = {
 	}
 }
 IRQ_october_coup_category = {
-	icon = military_operation
+	icon = generic_crisis
+
+	picture = GFX_decision_cat_IRQ_october_coup
 
 	priority = 500
 

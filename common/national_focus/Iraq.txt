@@ -2661,7 +2661,7 @@ focus_tree = {
 
 		x = 1
 		y = 1
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 10
@@ -3019,7 +3019,7 @@ focus_tree = {
 		
 		x = 0
 		y = 1
-		cost = 5
+		cost = 8
 
 		ai_will_do = {
 			factor = 10
@@ -3187,6 +3187,9 @@ focus_tree = {
 			has_country_leader = {
 				character = IRQ_bakr_sidqi
 				ruling_only = yes
+			}
+			NOT = {
+				has_completed_focus = IRQ_get_rid_of_ghazi
 			}
 		}
 		
@@ -5891,8 +5894,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = IRQ_planning_the_countercoup
 			add_political_power = 50
+			add_stability = -0.05
+			activate_mission = IRQ_ensure_army_loyalty_mission
+			add_ideas = IRQ_planning_the_countercoup
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -5909,15 +5914,17 @@ focus_tree = {
 		
 		x = -1
 		y = 1
-		cost = 5
+		cost = 8
 
 		ai_will_do = {
 			factor = 10
 		}
 
 		completion_reward = {
-			add_ideas = IRQ_planning_the_countercoup
-			add_political_power = 50
+			add_command_power = 35
+			add_political_power = -15
+			custom_effect_tooltip = IRQ_increase_chance_by_15
+			custom_effect_tooltip = IRQ_approach_the_army_staff_tt
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -5934,15 +5941,17 @@ focus_tree = {
 		
 		x = 1
 		y = 1
-		cost = 5
+		cost = 8
 
 		ai_will_do = {
 			factor = 10
 		}
 
 		completion_reward = {
-			add_ideas = IRQ_planning_the_countercoup
-			add_political_power = 50
+			add_command_power = 10
+			add_political_power = 25
+			custom_effect_tooltip = IRQ_increase_chance_by_10
+			custom_effect_tooltip = IRQ_coerce_the_officers_tt
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
