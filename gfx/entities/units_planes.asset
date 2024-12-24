@@ -1094,6 +1094,78 @@ entity = {
 }
 
 entity = {
+	name = "GER_cv_nav_bomber_equipment_1_entity"
+	clone = "GER_light_plane_entity"
+	version = 1
+}
+
+entity = {
+	name = "GER_CAS_equipment_3_entity"
+	clone = "GER_light_plane_entity"
+	version = 1
+}
+
+entity = {
+	name = "GER_CAS_equipment_2_entity"
+	clone = "GER_light_plane_entity"
+	version = 1
+}
+
+entity = {
+	name = "GER_CAS_equipment_1_entity"
+	clone = "GER_light_plane_entity"
+	version = 1
+}
+
+entity = {
+	name = "GER_cv_fighter_equipment_3_entity"
+	clone = "GER_light_plane_entity"
+	version = 1
+}
+
+entity = {
+	name = "GER_nav_bomber_equipment_1_entity"
+	clone = "GER_light_plane_entity"
+	version = 1
+}
+
+entity = {
+	name = "GER_fighter_equipment_3_entity"
+	clone = "GER_light_plane_entity"
+	version = 1
+}
+
+entity = {
+	name = "GER_nav_bomber_equipment_2_entity"
+	clone = "GER_light_plane_entity"
+	version = 1
+}
+
+entity = {
+	name = "GER_cv_fighter_equipment_1_entity"
+	clone = "GER_light_plane_entity"
+	version = 1
+}
+
+entity = {
+	name = "GER_fighter_equipment_3_entity"
+	clone = "GER_light_plane_entity"
+	version = 1
+}
+
+entity = {
+	name = "GER_fighter_equipment_2_entity"
+	clone = "GER_light_plane_entity"
+	version = 1
+}
+
+entity = {
+	name = "GER_cv_CAS_equipment_1_entity"
+	clone = "GER_light_plane_entity"
+	version = 1
+}
+
+entity = {
 	name = "GER_medium_plane_entity"
 	pdxmesh = "GER_plane_medium_mesh"
 	state = { name = "bomb" animation = "idle" 
@@ -1113,6 +1185,36 @@ entity = {
 	}
 	scale = 0.208
 }
+entity = {
+	name = "GER_heavy_fighter_equipment_2_entity"
+	clone = "GER_medium_plane_entity"
+	version = 1
+}
+entity = {
+	name = "GER_tac_bomber_equipment_0_entity"
+	clone = "GER_medium_plane_entity"
+	version = 1
+}
+entity = {
+	name = "GER_tac_bomber_equipment_1_entity"
+	clone = "GER_medium_plane_entity"
+	version = 1
+}
+entity = {
+	name = "GER_tac_bomber_equipment_3_entity"
+	clone = "GER_medium_plane_entity"
+	version = 1
+}
+entity = {
+	name = "GER_heavy_fighter_equipment_1_entity"
+	clone = "GER_medium_plane_entity"
+	version = 1
+}
+entity = {
+	name = "GER_heavy_fighter_equipment_3_entity"
+	clone = "GER_medium_plane_entity"
+	version = 1
+}
 
 entity = {
 	name = "GER_heavy_plane_entity"
@@ -1131,6 +1233,17 @@ entity = {
 	}
 	scale = 0.288
 }
+entity = {
+	name = "GER_strat_bomber_equipment_1_entity"
+	clone = "GER_heavy_plane_entity"
+	version = 1
+}
+entity = {
+	name = "GER_strat_bomber_equipment_3_entity"
+	clone = "GER_heavy_plane_entity"
+	version = 1
+}
+
 entity = { 
 	name = "GER_jet_plane_entity"
 	pdxmesh = "GER_plane_jet_mesh"

@@ -21,12 +21,6 @@ entity = {
 	scale = 0.144
 	version = 5
 }
-entity = {
-	name = "GER_cv_nav_bomber_equipment_1_entity"
-	clone = "GER_light_plane_entity"
-	version = 1
-}
-
 
 entity = {
 	name = "GER_strat_bomber_equipment_1_entity"
@@ -47,12 +41,6 @@ entity = {
 	scale = 0.288
 	version = 5
 }
-entity = {
-	name = "GER_strat_bomber_equipment_1_entity"
-	clone = "GER_heavy_plane_entity"
-	version = 1
-}
-
 
 entity = {
 	name = "GER_CAS_equipment_3_entity"
@@ -78,12 +66,6 @@ entity = {
 	scale = 0.144
 	version = 5
 }
-entity = {
-	name = "GER_CAS_equipment_3_entity"
-	clone = "GER_light_plane_entity"
-	version = 1
-}
-
 
 entity = {
 	name = "GER_CAS_equipment_2_entity"
@@ -108,12 +90,6 @@ entity = {
 	scale = 0.122
 	version = 5
 }
-entity = {
-	name = "GER_CAS_equipment_2_entity"
-	clone = "GER_light_plane_entity"
-	version = 1
-}
-
 
 entity = {
 	name = "GER_CAS_equipment_1_entity"
@@ -138,12 +114,6 @@ entity = {
 	scale = 0.122
 	version = 5
 }
-entity = {
-	name = "GER_CAS_equipment_1_entity"
-	clone = "GER_light_plane_entity"
-	version = 1
-}
-
 
 entity = {
 	name = "GER_cv_fighter_equipment_3_entity"
@@ -168,12 +138,6 @@ entity = {
 	scale = 0.122
 	version = 5
 }
-entity = {
-	name = "GER_cv_fighter_equipment_3_entity"
-	clone = "GER_light_plane_entity"
-	version = 1
-}
-
 
 entity = {
 	name = "GER_nav_bomber_equipment_1_entity"
@@ -193,11 +157,6 @@ entity = {
 	}
 	scale = 0.144
 	version = 5
-}
-entity = {
-	name = "GER_nav_bomber_equipment_1_entity"
-	clone = "GER_light_plane_entity"
-	version = 1
 }
 
 entity = {
@@ -224,11 +183,6 @@ entity = {
 	scale = 0.122
 	version = 5
 }
-entity = {
-	name = "GER_fighter_equipment_3_entity"
-	clone = "GER_light_plane_entity"
-	version = 1
-}
 
 entity = {
 	name = "GER_nav_bomber_equipment_2_entity"
@@ -253,11 +207,6 @@ entity = {
 	scale = 0.144
 	version = 5
 }
-entity = {
-	name = "GER_nav_bomber_equipment_2_entity"
-	clone = "GER_light_plane_entity"
-	version = 1
-}
 
 entity = {
 	name = "GER_cv_fighter_equipment_1_entity"
@@ -281,11 +230,6 @@ entity = {
 	}
 	scale = 0.2
 	version = 5
-}
-entity = {
-	name = "GER_cv_fighter_equipment_1_entity"
-	clone = "GER_light_plane_entity"
-	version = 1
 }
 
 entity = {
@@ -313,12 +257,6 @@ entity = {
 	scale = 0.16
 	version = 5
 }
-entity = {
-	name = "GER_heavy_fighter_equipment_2_entity"
-	clone = "GER_medium_plane_entity"
-	version = 1
-}
-
 
 entity = {
 	name = "GER_tac_bomber_equipment_0_entity"
@@ -342,11 +280,6 @@ entity = {
 	}
 	scale = 0.144
 	version = 5
-}
-entity = {
-	name = "GER_tac_bomber_equipment_0_entity"
-	clone = "GER_medium_plane_entity"
-	version = 1
 }
 
 entity = {
@@ -372,12 +305,6 @@ entity = {
 	scale = 0.15
 	version = 5
 }
-entity = {
-	name = "GER_tac_bomber_equipment_1_entity"
-	clone = "GER_medium_plane_entity"
-	version = 1
-}
-
 
 entity = {
 	name = "GER_tac_bomber_equipment_3_entity"
@@ -402,11 +329,6 @@ entity = {
 	}
 	scale = 0.144
 	version = 5
-}
-entity = {
-	name = "GER_tac_bomber_equipment_3_entity"
-	clone = "GER_medium_plane_entity"
-	version = 1
 }
 
 entity = {
@@ -433,12 +355,6 @@ entity = {
 	scale = 0.18
 	version = 5
 }
-entity = {
-	name = "GER_heavy_fighter_equipment_1_entity"
-	clone = "GER_medium_plane_entity"
-	version = 1
-}
-
 
 entity = {
 	name = "GER_heavy_fighter_equipment_3_entity"
@@ -464,11 +380,6 @@ entity = {
 	scale = 0.15
 	version = 5
 }
-entity = {
-	name = "GER_heavy_fighter_equipment_3_entity"
-	clone = "GER_medium_plane_entity"
-	version = 1
-}
 
 entity = {
 	name = "GER_nav_bomber_equipment_3_entity"
@@ -489,12 +400,6 @@ entity = {
 	scale = 0.144
 	version = 5
 }
-entity = {
-	name = "GER_fighter_equipment_3_entity"
-	clone = "GER_light_plane_entity"
-	version = 1
-}
-
 
 entity = {
 	name = "GER_fighter_equipment_0_entity"
@@ -546,11 +451,6 @@ entity = {
 	scale = 0.110
 	version = 5
 }
-entity = {
-	name = "GER_fighter_equipment_2_entity"
-	clone = "GER_light_plane_entity"
-	version = 1
-}
 
 entity = {
 	name = "GER_strat_bomber_equipment_3_entity"
@@ -579,12 +479,6 @@ entity = {
 	scale = 0.200
 	version = 5
 }
-entity = {
-	name = "GER_strat_bomber_equipment_3_entity"
-	clone = "GER_heavy_plane_entity"
-	version = 1
-}
-
 
 # Poland
 entity = {
@@ -1796,11 +1690,6 @@ entity = {
 	}
 	scale = 0.122
 	version = 5
-}
-entity = {
-	name = "GER_cv_CAS_equipment_1_entity"
-	clone = "GER_light_plane_entity"
-	version = 1
 }
 
 entity = {
