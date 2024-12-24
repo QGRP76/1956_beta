@@ -2991,6 +2991,91 @@ entity = {
 		scale = 1		
 	}
 
+####################################
+####################################
+######### GERMAN BICYCLE ###########
+####################################
+####################################
+
+
+######### GERMANY BICYCLE RIFLE #########
+
+######### BICYCLE RIFLE #########
+entity = {
+	clone = "bicycle_entity"
+	name = "GER_bicycle_entity"
+	pdxmesh = "bicycle_frame_mesh"
+
+	attach = { 	name = "infantry"		infantry = "GER_bicycle_rider_rifle_entity" }
+	attach = { 	name = "combined"		combined = "GER_bicycle_rifle_combined_entity" }
+	attach = { 	name = "bicycle"		bike = "GER_bicycle_vehicle_entity" }
+}
+
+entity = {
+	clone = "generic_bicycle_vehicle_entity"
+	name = "GER_bicycle_vehicle_entity"
+	pdxmesh = "bicycle_vehicle_mesh"
+
+	scale = 0.8
+}
+
+entity = {
+	clone = "generic_bicycle_rifle_combined_entity"
+	name = "GER_bicycle_rifle_combined_entity"
+	pdxmesh = "bicycle_vehicle_mesh"
+
+	attach = { 	name = "rider"	bike_center = "GER_bicycle_rider_rifle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	clone = "generic_bicycle_rider_rifle_entity"
+	name = "GER_bicycle_rider_rifle_entity"
+	pdxmesh = "GER_infantry_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" } 
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+
+	scale = 1
+}
+
+
+######### DEFAULT BICYCLE MG #########
+
+entity = {
+	clone = "generic_bicycle_2_entity"
+	name = "GER_bicycle_2_entity"
+	pdxmesh = "bicycle_frame_mesh"
+
+	attach = { 	name = "infantry"		infantry = "GER_bicycle_rider_mg_entity" }
+	attach = { 	name = "combined"		combined = "GER_bicycle_mg_combined_entity" }
+	attach = { 	name = "bicycle"		bike = "GER_bicycle_vehicle_entity" }
+}
+
+entity = {
+	clone = "generic_bicycle_mg_combined_entity"
+	name = "GER_bicycle_mg_combined_entity"
+	pdxmesh = "bicycle_vehicle_mesh"
+
+	attach = { 	name = "rider"	bike_center = "GER_bicycle_rider_mg_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	clone = "generic_bicycle_rider_mg_entity"
+	name = "GER_bicycle_rider_mg_entity"
+	pdxmesh = "GER_infantry_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_mg_left_entity" }
+
+	scale = 1
+}
+
+
 # MACHINE GUN
 	
 	entity = {
