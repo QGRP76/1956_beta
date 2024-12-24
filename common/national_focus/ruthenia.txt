@@ -1473,7 +1473,7 @@ focus_tree = {
 	}	
 	focus = {
 		id = RUT_extraction_focus
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_focus_generic_mining_industry
 		prerequisite = { focus = RUT_food_processing_plant focus = RUT_construction_focus}
 		relative_position_id = RUT_food_processing_plant
 		x = 0
@@ -1600,7 +1600,7 @@ focus_tree = {
     }
     focus = {
         id = RUT_regional_industrialization
-        icon = GFX_goal_generic_construct_civ_factory
+        icon = GFX_focus_generic_modernize_industry
         relative_position_id = RUT_food_processing_plant
 		x = 0
         y = 5
