@@ -1492,6 +1492,10 @@ country_event = {
 		hidden_effect = {
 			add_ideas = POR_reactionary_resistance
 			add_ideas = POR_divided_revolution
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2400
+			}
 			if = {
 				limit = {
 					GER = { has_opinion_modifier = fascism_leanings_good }
@@ -1514,7 +1518,7 @@ country_event = {
 				limit = {
 					NOT = { is_core_of = ROOT }
 				}
-				add_compliance = 18		#To compensate for the reduction upon switching ideologies
+				add_compliance = 20		#To compensate for the reduction upon switching ideologies
 			}
 			if = {
 				limit = { has_completed_focus = POR_ally_anti_colonial_resistance }
@@ -1568,11 +1572,11 @@ country_event = {
 				}
 			}
 			add_war_support = 0.05
-			add_manpower = 25000
+			add_manpower = 30000
 		}
 		else = {
 			add_war_support = 0.03
-			add_manpower = 20000
+			add_manpower = 25000
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			add_ideas = limited_conscription
 		}
@@ -1588,7 +1592,7 @@ country_event = {
 				states = { 180 795 181 698 697 702 296 705 796 540 892 891 897 896 544 321 721 729 }
 				112 = {
 					create_unit = {
-						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.6" 
+						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.62" 
 						owner = POR
 						allow_spawning_on_enemy_provs = yes
 						prioritize_location = 11805
@@ -1597,14 +1601,14 @@ country_event = {
 				}
 				795 = {
 					create_unit = {
-						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.6" 
+						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.62" 
 						owner = POR
 						allow_spawning_on_enemy_provs = yes
 						prioritize_location = 924
 						count = 1
 					}
 					create_unit = {
-						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.6" 
+						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.62" 
 						owner = POR
 						allow_spawning_on_enemy_provs = yes
 						prioritize_location = 9869
@@ -1613,14 +1617,14 @@ country_event = {
 				}
 				179 = {
 					create_unit = {
-						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.6" 
+						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.62" 
 						owner = POR
 						allow_spawning_on_enemy_provs = yes
 						prioritize_location = 6933
 						count = 1
 					}
 					create_unit = {
-						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.6" 
+						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.62" 
 						owner = POR
 						allow_spawning_on_enemy_provs = yes
 						prioritize_location = 980
@@ -1708,7 +1712,7 @@ country_event = {
 				states = { 180 795 181 698 697 702 296 705 796 540 892 891 897 896 544 321 721 729 }
 				112 = {
 					create_unit = {
-						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.7" 
+						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.72" 
 						owner = POR
 						allow_spawning_on_enemy_provs = yes
 						prioritize_location = 11805
@@ -1717,14 +1721,14 @@ country_event = {
 				}
 				795 = {
 					create_unit = {
-						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.7" 
+						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.72" 
 						owner = POR
 						allow_spawning_on_enemy_provs = yes
 						prioritize_location = 924
 						count = 1
 					}
 					create_unit = {
-						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.7" 
+						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.72" 
 						owner = POR
 						allow_spawning_on_enemy_provs = yes
 						prioritize_location = 9869
@@ -1733,14 +1737,14 @@ country_event = {
 				}
 				179 = {
 					create_unit = {
-						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.7" 
+						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.72" 
 						owner = POR
 						allow_spawning_on_enemy_provs = yes
 						prioritize_location = 6933
 						count = 1
 					}
 					create_unit = {
-						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.7" 
+						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.72" 
 						owner = POR
 						allow_spawning_on_enemy_provs = yes
 						prioritize_location = 980
@@ -1822,7 +1826,7 @@ country_event = {
 				states = { 180 795 181 698 697 702 296 705 796 540 892 891 897 896 544 321 721 729 }
 				112 = {
 					create_unit = {
-						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.75" 
+						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.77" 
 						owner = POR
 						allow_spawning_on_enemy_provs = yes
 						prioritize_location = 11805
@@ -1831,14 +1835,14 @@ country_event = {
 				}
 				795 = {
 					create_unit = {
-						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.75" 
+						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.77" 
 						owner = POR
 						allow_spawning_on_enemy_provs = yes
 						prioritize_location = 924
 						count = 1
 					}
 					create_unit = {
-						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.75" 
+						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.77" 
 						owner = POR
 						allow_spawning_on_enemy_provs = yes
 						prioritize_location = 9869
@@ -1847,14 +1851,14 @@ country_event = {
 				}
 				179 = {
 					create_unit = {
-						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.75" 
+						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.77" 
 						owner = POR
 						allow_spawning_on_enemy_provs = yes
 						prioritize_location = 6933
 						count = 1
 					}
 					create_unit = {
-						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.75" 
+						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.77" 
 						owner = POR
 						allow_spawning_on_enemy_provs = yes
 						prioritize_location = 980
@@ -1935,7 +1939,7 @@ country_event = {
 				states = { 180 795 181 698 697 702 296 705 796 540 892 891 897 896 544 321 721 729 }
 				112 = {
 					create_unit = {
-						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.8" 
+						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.82" 
 						owner = POR
 						allow_spawning_on_enemy_provs = yes
 						prioritize_location = 11805
@@ -1944,14 +1948,14 @@ country_event = {
 				}
 				795 = {
 					create_unit = {
-						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.8" 
+						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.82" 
 						owner = POR
 						allow_spawning_on_enemy_provs = yes
 						prioritize_location = 924
 						count = 1
 					}
 					create_unit = {
-						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.8" 
+						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.82" 
 						owner = POR
 						allow_spawning_on_enemy_provs = yes
 						prioritize_location = 9869
@@ -1960,14 +1964,14 @@ country_event = {
 				}
 				179 = {
 					create_unit = {
-						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.8" 
+						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.82" 
 						owner = POR
 						allow_spawning_on_enemy_provs = yes
 						prioritize_location = 6933
 						count = 1
 					}
 					create_unit = {
-						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.8" 
+						division = "division_template = \"Brigada de Infantaria\" start_experience_factor = 0.04 start_equipment_factor = 0.82" 
 						owner = POR
 						allow_spawning_on_enemy_provs = yes
 						prioritize_location = 980
@@ -1982,7 +1986,7 @@ country_event = {
 					}
 					180 = {
 						create_unit = {
-							division = "name = \"Brigada de Infantaria\" division_template = \"Brigada de Infantaria\" start_experience_factor = 0.4 start_equipment_factor = 0.9" 
+							division = "name = \"Brigada de Infantaria\" division_template = \"Brigada de Infantaria\" start_experience_factor = 0.4 start_equipment_factor = 0.92" 
 							owner = PREV
 							count = 3
 							prioritize_location = 9817
@@ -1990,19 +1994,19 @@ country_event = {
 					}
 					181 = {
 						create_unit = {
-							division = "name = \"Brigada de Infantaria\" division_template = \"Brigada de Infantaria\" start_experience_factor = 0.4 start_equipment_factor = 0.9" 
+							division = "name = \"Brigada de Infantaria\" division_template = \"Brigada de Infantaria\" start_experience_factor = 0.4 start_equipment_factor = 0.92" 
 							owner = PREV
 							count = 2
 							prioritize_location = 9787
 						}
 						create_unit = {
-							division = "name = \"Brigada de Infantaria\" division_template = \"Brigada de Infantaria\" start_experience_factor = 0.4 start_equipment_factor = 0.9" 
+							division = "name = \"Brigada de Infantaria\" division_template = \"Brigada de Infantaria\" start_experience_factor = 0.4 start_equipment_factor = 0.92" 
 							owner = PREV
 							count = 3
 							prioritize_location = 6996
 						}
 						create_unit = {
-							division = "name = \"Brigada de Infantaria\" division_template = \"Brigada de Infantaria\" start_experience_factor = 0.4 start_equipment_factor = 0.9" 
+							division = "name = \"Brigada de Infantaria\" division_template = \"Brigada de Infantaria\" start_experience_factor = 0.4 start_equipment_factor = 0.92" 
 							owner = PREV
 							count = 2
 							prioritize_location = 11885
@@ -2010,13 +2014,13 @@ country_event = {
 					}
 					795 = {
 						create_unit = {
-							division = "name = \"Brigada de Infantaria\" division_template = \"Brigada de Infantaria\" start_experience_factor = 0.4 start_equipment_factor = 0.9" 
+							division = "name = \"Brigada de Infantaria\" division_template = \"Brigada de Infantaria\" start_experience_factor = 0.4 start_equipment_factor = 0.92" 
 							owner = PREV
 							count = 2
 							prioritize_location = 844
 						}
 						create_unit = {
-							division = "Brigada de Infantaria\" division_template = \"Brigada de Infantaria\" start_experience_factor = 0.4 start_equipment_factor = 0.9" 
+							division = "Brigada de Infantaria\" division_template = \"Brigada de Infantaria\" start_experience_factor = 0.4 start_equipment_factor = 0.92" 
 							owner = PREV
 							count = 1
 							prioritize_location = 6986
@@ -2030,7 +2034,7 @@ country_event = {
 							create_unit = {
 								division = "name = \"Brigada de Infantaria\" division_template = \"Brigada de Infantaria\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
 								owner = PREV
-								count = 2
+								count = 3
 								prioritize_location = 8248
 							}
 						}
@@ -2157,6 +2161,8 @@ country_event = {
 		ai_chance = { base = 10 }
 		set_country_flag = POR_released_colonies_flag
 		mark_focus_tree_layout_dirty = yes
+		add_political_power = 50
+		add_manpower = 20000
 		custom_effect_tooltip = portugal.47.a_tt
 		custom_effect_tooltip = CHL_skip_one_line_tt
 		if = {
@@ -2267,8 +2273,12 @@ country_event = {
 		mark_focus_tree_layout_dirty = yes
 		if = {
 			limit = { has_completed_focus = POR_ally_anti_colonial_resistance }
-			add_stability = -0.05
+			add_political_power = -35
+			add_stability = -0.03
+			custom_effect_tooltip = CHL_skip_one_line_tt
 		}
+		else = { add_political_power = 25 }
+		add_manpower = 10000
 		add_popularity = {
 			ideology = democratic
 			popularity = 0.1
@@ -2371,6 +2381,7 @@ country_event = {
 		name = portugal.47.c	#... About that.
 		trigger = { has_completed_focus = POR_ally_anti_colonial_resistance }
 		ai_chance = { base = 0 }
+		add_political_power = -35
 		add_stability = -0.05
 		add_popularity = {
 			ideology = ROOT
@@ -2385,7 +2396,6 @@ country_event = {
 				}
 			}
 			add_compliance = -5
-			add_resistance = 5
 		}
 	}
 	option = {

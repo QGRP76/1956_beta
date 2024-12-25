@@ -1816,7 +1816,6 @@ focus_tree = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
-					province = { id = 11885 }
 				}
 				add_building_construction = {
 					type = dam
@@ -3279,34 +3278,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_anti_colonial_action
-		prerequisite = { focus = POR_covert_return_to_the_world_stage }
-		icon = GFX_focus_ITA_corpo_volontari_della_liberta
-		cost = 6
-		x = -1
-		y = 1
-		relative_position_id = POR_covert_return_to_the_world_stage
-		available = { 
-			always = no
-			is_subject = no
-			custom_trigger_tooltip = {
-				tooltip = POR_anti_colonial_action_trigger
-				AND = {
-					has_completed_focus = POR_the_question_of_our_colonies
-					OR = {
-						has_country_flag = POR_released_colonies_flag
-						has_country_flag = POR_colonial_autonomy_flag
-					}
-				}	
-			} 
-		}
-		completion_reward = {
-		}
-		ai_will_do = { base = 5 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
 		id = POR_diplomatic_pragmatism
 		prerequisite = { focus = POR_portugals_path_to_marxism_leninism }
 		mutually_exclusive = { focus = POR_covert_return_to_the_world_stage }
@@ -3410,24 +3381,6 @@ focus_tree = {
 			}
 		}
 		ai_will_do = { base = 2 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = POR_peace_home_and_abroad
-		prerequisite = { focus = POR_diplomatic_pragmatism }
-		icon = GFX_focus_SWE_refuge_from_war
-		cost = 6
-		x = 1
-		y = 1
-		relative_position_id = POR_diplomatic_pragmatism
-		available = { 
-			is_subject = no
-			always = no 
-		}
-		completion_reward = {
-		}
-		ai_will_do = { base = 5 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
