@@ -2019,7 +2019,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 50
 			unlock_decision_tooltip = POR_support_the_spanish_nationalists_r56
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			custom_effect_tooltip = available_chief_of_army
@@ -3791,12 +3791,13 @@ focus_tree = {
 		available = { always = no }
 		completion_reward = {
 			add_political_power = 35
-			unlock_decision_tooltip = POR_antagonize_socialist_organizations
+			unlock_decision_tooltip = POR_incite_fearmongering
+			unlock_decision_tooltip = POR_attack_salazars_modesty
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			swap_ideas = {
-				add_idea = POR_the_battle_for_the_nation_fas
+				add_idea = POR_disgruntled_republicans_fas
 				remove_idea = POR_disgruntled_republicans
-			}
+			}	
 			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3816,6 +3817,11 @@ focus_tree = {
 				ideology = fascism
 				long_name = POR_neutrality_party_long
 				name = POR_neutrality_party
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			swap_ideas = {
+				add_idea = POR_the_battle_for_the_nation_fas
+				remove_idea = POR_disgruntled_republicans
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3844,6 +3850,12 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = POR_restore_valiance_to_the_nation
+		completion_reward = {
+			swap_ideas = {
+				add_idea = POR_the_battle_for_the_nation_fas
+				remove_idea = POR_disgruntled_republicans
+			}
+		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
@@ -3860,6 +3872,9 @@ focus_tree = {
 		relative_position_id = POR_one_revolution_to_end_them_all
 		available = {
 			NOT = { has_completed_focus = POR_march_on_lisbon } 
+		}
+		completion_reward = {
+			unlock_decision_tooltip = POR_appeal_to_disgruntled_farmers
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -4143,11 +4158,6 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = POR_king_duarte_nuno
 			custom_effect_tooltip = CHL_skip_one_line_tt
-			set_party_name = {
-			    ideology = neutrality
-			    long_name = POR_monarchy_party_long
-			    name = POR_monarchy_party
-			}
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.1
@@ -4163,13 +4173,19 @@ focus_tree = {
 					ideology = constitutional_monarchy
 					traits = { constitutional_monarch_minor }
 				}
+				set_cosmetic_tag = KOP_kingdom_portugal
+				set_party_name = {
+					ideology = neutrality
+					long_name = POR_monarchy_party_long
+					name = POR_monarchy_party
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
-		id = POR_reclaim_our_overseas_belongings
+		id = POR_avenge_our_overseas_losses
 		prerequisite = { focus = POR_restore_the_empire }
 		icon = GFX_focus_generic_annex_country
 		cost = 5
@@ -4180,7 +4196,7 @@ focus_tree = {
 			add_war_support = 0.1
 			add_named_threat = { 
 				threat = 3 
-				name = POR_reclaim_our_overseas_belongings 
+				name = POR_avenge_our_overseas_losses
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4188,12 +4204,12 @@ focus_tree = {
 
 	focus = {
 		id = POR_prepare_the_colonial_frontlines
-		prerequisite = { focus = POR_reclaim_our_overseas_belongings }
+		prerequisite = { focus = POR_avenge_our_overseas_losses }
 		icon = GFX_goal_generic_jungle_warfare
 		cost = 5
 		x = -1
 		y = 1
-		relative_position_id = POR_reclaim_our_overseas_belongings
+		relative_position_id = POR_avenge_our_overseas_losses
 		available = {
 			is_subject = no
 			NOT = {
@@ -4260,12 +4276,12 @@ focus_tree = {
 
 	focus = {
 		id = POR_destabilize_brazil
-		prerequisite = { focus = POR_reclaim_our_overseas_belongings }
+		prerequisite = { focus = POR_avenge_our_overseas_losses }
 		icon = GFX_focus_BRA_department_of_propaganda
 		cost = 5
 		x = 1
 		y = 1
-		relative_position_id = POR_reclaim_our_overseas_belongings
+		relative_position_id = POR_avenge_our_overseas_losses
 		available = {
 			is_subject = no
 			NOT = {
@@ -4350,8 +4366,6 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			set_rule = { can_create_factions = yes }
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			unlock_decision_tooltip = POR_request_axis_membership
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}

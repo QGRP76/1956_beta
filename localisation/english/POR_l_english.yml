@@ -618,7 +618,11 @@
  POR_restore_valiance_to_the_nation_desc:0 "Despite the stability that the Estado-Novo has brought to Portugal, their unwavering modesty is a weakness that strangles all potential for a strong Portugal. With the chance at hand, we shall make Portugal into what it needs to be: a beacon of fascism on the Iberian Peninsula!"
  POR_the_battle_for_the_nation_fas:0 "The Battle For the Nation"
  POR_restoring_valiance_to_portugal:0 "Restoring Valiance to Portugal"
- POR_antagonize_socialist_organizations:0 "Antagonize Socialist Organizations"
+ POR_incite_fearmongering:0 "Incite Fearmongering"
+ POR_attack_salazars_modesty:0 "Attack Salazar's Modesty"
+
+
+
  POR_rally_the_monarchists_of_porto:0 "Rally the Monarchists of Porto!"
  POR_spread_monarchist_propaganda:0 "Spread Monarchist Propaganda"
 
@@ -630,6 +634,7 @@
 
  POR_mobilize_popular_support:0 "Mobilize Popular Support"
  POR_mobilize_popular_support_desc:0 ""
+ POR_appeal_to_disgruntled_farmers:0 "Appeal to Disgruntled Farmers"
 
  POR_radicalize_salazars_allies:0 "Radicalize Salazar's Allies"
  POR_radicalize_salazars_allies_desc:0 ""
@@ -717,8 +722,8 @@
  POR_align_with_rome:0 "Align With Rome"
  POR_align_with_rome_desc:0 "While our long-running friendship with the British has gotten us far, it has become increasingly clear that they have failed to represent Portugal's needs. The Italians have worked hard towards establishing influence across the Mediteranean; such an arrangement clearly fits within Portuguese interests!"
 
- POR_reclaim_our_overseas_belongings:0 "Reclaim Our Overseas Belongings"
- POR_reclaim_our_overseas_belongings_desc:0 ""
+ POR_avenge_our_overseas_losses:0 "Avenge Our Overseas Losses"
+ POR_avenge_our_overseas_losses_desc:0 ""
 
  POR_destabilize_brazil:0 "Destabilize Brazil"
  POR_destabilize_brazil_desc:0 ""
