@@ -1,5 +1,5 @@
 #DLC model pack file. Needs a replacement for every plane in order for the normal planes to appear in RT56
-
+# moved to units_planes.asset, because a clone that isn't defined in the same file as its parent will throw an error, easily avoidable by consolidating them all in the same file (Harain)
 # Germany
 entity = {
     name = "GER_cv_nav_bomber_equipment_1_entity"
@@ -1175,11 +1175,6 @@ entity = {
 }
 entity = {
 	name = "SOV_CAS_equipment_1_entity"
-	clone = "CAS_equipment_entity"
-	version = 1
-}
-entity = {
-	name = "SOV_CAS_equipment_1_entity"
 	clone = "SOV_scout_plane_entity"
 	version = 2
 }
@@ -1208,11 +1203,6 @@ entity = {
 	}
 	scale = 0.165
 	version = 5
-}
-entity = {
-	name = "SOV_nav_bomber_equipment_1_entity"
-	clone = "CAS_equipment_entity"
-	version = 1
 }
 entity = {
 	name = "SOV_nav_bomber_equipment_1_entity"
@@ -1251,11 +1241,6 @@ entity = {
 }
 entity = {
 	name = "SOV_CAS_equipment_2_entity"
-	clone = "CAS_equipment_entity"
-	version = 1
-}
-entity = {
-	name = "SOV_CAS_equipment_2_entity"
 	clone = "SOV_scout_plane_entity"
 	version = 2
 }
@@ -1287,11 +1272,6 @@ entity = {
 	}
 	scale = 0.122
 	version = 5
-}
-entity = {
-	name = "SOV_CAS_equipment_3_entity"
-	clone = "CAS_equipment_entity"
-	version = 1
 }
 entity = {
 	name = "SOV_CAS_equipment_3_entity"
@@ -1331,11 +1311,6 @@ entity = {
 }
 entity = {
 	name = "HUN_fighter_equipment_1_entity"
-	clone = "light_plane_entity"
-	version = 1
-}
-entity = {
-	name = "HUN_fighter_equipment_1_entity"
 	clone = "HUN_light_plane_entity"
 	version = 2
 }
@@ -1371,12 +1346,6 @@ entity = {
 	scale = 0.122
 	version = 5
 }
-entity = {
-	name = "HUN_heavy_fighter_equipment_3_entity"
-	clone = "HUN_heavy_plane_entity"
-	version = 1
-}
-
 
 entity = {
 	name = "HUN_heavy_fighter_equipment_2_entity"
@@ -1406,12 +1375,6 @@ entity = {
 	scale = 0.122
 	version = 5
 }
-entity = {
-	name = "HUN_heavy_fighter_equipment_2_entity"
-	clone = "HUN_heavy_plane_entity"
-	version = 1
-}
-
 
 entity = {
 	name = "HUN_CAS_equipment_1_entity"
@@ -1437,11 +1400,6 @@ entity = {
 	}
 	scale = 0.110
 	version = 5
-}
-entity = {
-	name = "HUN_CAS_equipment_1_entity"
-	clone = "light_plane_entity"
-	version = 1
 }
 entity = {
 	name = "HUN_CAS_equipment_1_entity"
@@ -1503,11 +1461,6 @@ entity = {
 	}
 	scale = 0.122
 	version = 5
-}
-entity = {
-	name = "ROM_fighter_equipment_1_entity"
-	clone = "light_plane_entity"
-	version = 1
 }
 entity = {
 	name = "ROM_fighter_equipment_1_entity"
@@ -1602,11 +1555,6 @@ entity = {
 }
 entity = {
 	name = "ROM_fighter_equipment_3_entity"
-	clone = "light_plane_entity"
-	version = 1
-}
-entity = {
-	name = "ROM_fighter_equipment_3_entity"
 	clone = "ROM_light_plane_entity"
 	version = 2
 }
@@ -1641,11 +1589,6 @@ entity = {
 }
 entity = {
 	name = "YUG_fighter_equipment_3_entity"
-	clone = "light_plane_entity"
-	version = 1
-}
-entity = {
-	name = "YUG_fighter_equipment_3_entity"
 	clone = "YUG_light_plane_entity"
 	version = 2
 }
@@ -1677,11 +1620,6 @@ entity = {
 	version = 5
 }
 
-entity = {
-	name = "YUG_heavy_fighter_equipment_2_entity"
-	clone = "medium_plane_entity"
-	version = 1
-}
 entity = {
 	name = "YUG_heavy_fighter_equipment_2_entity"
 	clone = "YUG_medium_plane_entity"
@@ -1738,11 +1676,6 @@ entity = {
 	}
 	scale = 0.110
 	version = 5
-}
-entity = {
-	name = "YUG_fighter_equipment_1_entity"
-	clone = "light_plane_entity"
-	version = 1
 }
 entity = {
 	name = "YUG_fighter_equipment_1_entity"

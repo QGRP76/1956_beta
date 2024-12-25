@@ -539,6 +539,17 @@ entity = {
 	scale = 0.288
 }
 entity = {
+	name = "HUN_heavy_fighter_equipment_3_entity"
+	clone = "HUN_heavy_plane_entity"
+	version = 1
+}
+entity = {
+	name = "HUN_heavy_fighter_equipment_2_entity"
+	clone = "HUN_heavy_plane_entity"
+	version = 1
+}
+
+entity = {
 	name = "HUN_EMPIRE_medium_plane_entity"
 	pdxmesh = "HUN_EMPIRE_GER_plane_medium_mesh"
 	state = { name = "bomb" animation = "idle" 
@@ -635,6 +646,16 @@ entity = {
 	scale = 0.124
 	version = 2
 }
+entity = {
+	name = "HUN_fighter_equipment_1_entity"
+	clone = "light_plane_entity"
+	version = 1
+}
+entity = {
+	name = "HUN_CAS_equipment_1_entity"
+	clone = "light_plane_entity"
+	version = 1
+}
 
 
 entity = {
@@ -655,6 +676,16 @@ entity = {
 		
 	}
 	scale = 0.288
+}
+entity = {
+	name = "ROM_fighter_equipment_1_entity"
+	clone = "light_plane_entity"
+	version = 1
+}
+entity = {
+	name = "ROM_fighter_equipment_3_entity"
+	clone = "light_plane_entity"
+	version = 1
 }
 
 entity = { 
@@ -8777,6 +8808,21 @@ entity = {
 	scale = 0.12
 	version = 2
 }
+entity = {
+	name = "YUG_fighter_equipment_1_entity"
+	clone = "light_plane_entity"
+	version = 1
+}
+entity = {
+	name = "YUG_fighter_equipment_3_entity"
+	clone = "light_plane_entity"
+	version = 1
+}
+entity = {
+	name = "YUG_heavy_fighter_equipment_2_entity"
+	clone = "medium_plane_entity"
+	version = 1
+}
 
 entity = {
 	name = "TUR_fighter_equipment_0_entity"
@@ -9962,6 +10008,26 @@ entity = {
 	name = "cv_CAS_equipment_entity"
 	clone = "CAS_equipment_entity"
 	version = 2
+}
+entity = {
+	name = "SOV_CAS_equipment_1_entity"
+	clone = "CAS_equipment_entity"
+	version = 1
+}
+entity = {
+	name = "SOV_nav_bomber_equipment_1_entity"
+	clone = "CAS_equipment_entity"
+	version = 1
+}
+entity = {
+	name = "SOV_CAS_equipment_2_entity"
+	clone = "CAS_equipment_entity"
+	version = 1
+}
+entity = {
+	name = "SOV_CAS_equipment_3_entity"
+	clone = "CAS_equipment_entity"
+	version = 1
 }
 #ROM use is historical
 entity = {
