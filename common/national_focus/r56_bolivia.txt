@@ -23,7 +23,7 @@ focus_tree = {
 	focus = {
 		id = BOL_a_defeated_patria
 		icon = GFX_goal_unknown
-		x = 19
+		x = 1
 		y = 0
 
 		search_filters = {
@@ -204,13 +204,14 @@ focus_tree = {
 	}
     
 	focus = {
-		id = BOL_Consolidation_of_socialismo_militar
+		id = BOL_consolidation_of_socialismo_militar
 		icon = GFX_goal_generic_communist_officer
-		x = 32
-		y = 6
+		x = 0
+		y = 1
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		relative_position_id = BOL_the_end_of_corruption
 		prerequisite = { focus = BOL_the_end_of_corruption  }
 		completion_reward = {
 			
@@ -220,14 +221,15 @@ focus_tree = {
 
 
 	focus = {
-		id = BOL_Resistance_to_Imperialist_Influence
+		id = BOL_resistance_to_imperialist_influence
 		icon = GFX_focus_SOV_military_purge
-		x = 33
-		y = 7
+		x = 1
+		y = 2
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BOL_Consolidation_of_socialismo_militar  }
+		relative_position_id = BOL_the_end_of_corruption
+		prerequisite = { focus = BOL_consolidation_of_socialismo_militar  }
 		completion_reward = {
 			
 		}
@@ -238,137 +240,148 @@ focus_tree = {
 	focus = {
 		id = BOL_the_destiny_of_our_revolution
 		icon = GFX_goal_generic_crisis
-		x = 32
-		y = 8
+		x = 0
+		y = 3
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BOL_Resistance_to_Imperialist_Influence }
-		prerequisite = { focus =BOL_Resistance_to_Imperialist_Influence  }
+		relative_position_id = BOL_the_end_of_corruption
+		prerequisite = { focus = BOL_resistance_to_imperialist_influence }
+		prerequisite = { focus =BOL_support_for_revolutionary_movements }
 	}
 
 
 	focus = {
-		id = BOL_The_savior_of_the_people
+		id = BOL_the_savior_of_the_people
 		icon = GFX_goal_communist_brigades
-		x = 38
-		y = 9
+		x = 6
+		y = 1
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		relative_position_id = BOL_the_destiny_of_our_revolution
 		prerequisite = { focus = BOL_the_destiny_of_our_revolution}
-		mutually_exclusive = { focus = BOL_Consolidation_of_the_Military_Junta }
+		mutually_exclusive = { focus = BOL_consolidation_of_the_military_junta }
 	}
 
 
 	focus = {
-		id = BOL_Consolidation_of_the_Military_Junta
+		id = BOL_consolidation_of_the_military_junta
 		icon = GFX_goal_unknown
-		x = 25
-		y = 9
+		x = -5
+		y = 1
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		relative_position_id = BOL_the_destiny_of_our_revolution
 		prerequisite = { focus = BOL_the_destiny_of_our_revolution}
-		mutually_exclusive = { focus =BOL_The_savior_of_the_people }
+		mutually_exclusive = { focus =BOL_the_savior_of_the_people }
 	}
 	
 	focus = {
-		id = BOL_International_Diplomatic_Opening
+		id = BOL_international_diplomatic_opening
 		icon = GFX_goal_generic_land_seizure
-		x = 27
-		y = 10
+		x = 2
+		y = 1
+		relative_position_id = BOL_consolidation_of_the_military_junta
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BOL_Consolidation_of_the_Military_Junta}
+		prerequisite = { focus = BOL_consolidation_of_the_military_junta}
 	}
 
 	focus = {
-		id = BOL_Pragmatic_Economic_Reform
+		id = BOL_pragmatic_economic_reform
 		icon = GFX_goal_generic_munitions_factories
-		x = 23
-		y = 10
+		x = -2
+		y = 1
+		relative_position_id = BOL_consolidation_of_the_military_junta
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BOL_Consolidation_of_the_Military_Junta}
+		prerequisite = { focus = BOL_consolidation_of_the_military_junta}
 	}
 
 
 	focus = {
 		id = BOL_Modernization_of_Military_Administration
 		icon = GFX_goal_small_infantry
-		x = 22
-		y = 11
+		x = -3
+		y = 2
+		relative_position_id = BOL_consolidation_of_the_military_junta
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BOL_Pragmatic_Economic_Reform}
+		prerequisite = { focus = BOL_pragmatic_economic_reform}
 	}
 
 	
 
 	
 	focus = {
-		id = BOL_Regional_Strategic_Alliances
+		id = BOL_regional_strategic_alliances
 		icon = GFX_goal_generic_peaceful_diplomacy
-		x = 25
-		y = 10
+		x = 0
+		y = 1
+		relative_position_id = BOL_consolidation_of_the_military_junta
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BOL_Consolidation_of_the_Military_Junta}
+		prerequisite = { focus = BOL_consolidation_of_the_military_junta}
 	}
 
 	
 	focus = {
-		id = BOL_National_Literacy_Program
+		id = BOL_national_literacy_program
 		icon = GFX_goal_unknown
-		x = 26
-		y = 11
+		x = 1
+		y = 2
+		relative_position_id = BOL_consolidation_of_the_military_junta
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BOL_Regional_Strategic_Alliances}
-		prerequisite = { focus = BOL_International_Diplomatic_Opening}
+		prerequisite = { focus = BOL_regional_strategic_alliances}
+		prerequisite = { focus = BOL_international_diplomatic_opening}
 	}
 
 	
 	focus = {
-		id = BOL_Government_of_Technocrats
+		id = BOL_government_of_technocrats
 		icon = GFX_goal_unknown
-		x = 24
-		y = 11
+		x = -1
+		y = 2
+		relative_position_id = BOL_consolidation_of_the_military_junta
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BOL_Pragmatic_Economic_Reform}
-		prerequisite = { focus = BOL_Regional_Strategic_Alliances}
+		prerequisite = { focus = BOL_pragmatic_economic_reform}
+		prerequisite = { focus = BOL_regional_strategic_alliances}
 	}
     
 
 	focus = {
 		id = BOL_a_new_bolivia
 		icon = GFX_goal_unknown
-		x = 25
-		y = 12
+		x = 0
+		y = 3
+		relative_position_id = BOL_consolidation_of_the_military_junta
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BOL_Government_of_Technocrats}
-		prerequisite = { focus = BOL_National_Literacy_Program}
+		prerequisite = { focus = BOL_government_of_technocrats}
+		prerequisite = { focus = BOL_national_literacy_program}
 	}
 
 	
 	focus = {
 		id = BOL_the_dictatorship_of_quintanilla
 		icon = GFX_goal_unknown
-		x = 29
-		y = 13
+		x = 4
+		y = 1
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		relative_position_id = BOL_a_new_bolivia
 		prerequisite = { focus = BOL_a_new_bolivia}
 		mutually_exclusive = { focus =BOL_call_new_elections}
 	}
@@ -377,11 +390,12 @@ focus_tree = {
 	focus = {
 		id = BOL_call_new_elections
 		icon = GFX_goal_unknown
-		x = 18
-		y = 13
+		x = -5
+		y = 1
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		relative_position_id = BOL_a_new_bolivia
 		prerequisite = { focus = BOL_a_new_bolivia}
 		mutually_exclusive = { focus =BOL_the_dictatorship_of_quintanilla}
 	}
@@ -391,8 +405,9 @@ focus_tree = {
 	focus = {
 		id = BOL_expand_the_Bolivian_will
 		icon = GFX_goal_unknown
-		x = 25
-		y = 14
+		x = -4
+		y = 1
+		relative_position_id = BOL_the_dictatorship_of_quintanilla
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -400,14 +415,15 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = BOL_Support_for_Revolutionary_Movements
+		id = BOL_support_for_revolutionary_movements
 		icon = GFX_focus_SOV_mobilization_plan
-		x = 31
-		y = 7
+		x = -1
+		y = 2
+		relative_position_id = BOL_the_end_of_corruption
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BOL_Consolidation_of_socialismo_militar  }
+		prerequisite = { focus = BOL_consolidation_of_socialismo_militar }
 	}
 
 	focus = {
@@ -566,7 +582,7 @@ focus_tree = {
 	focus = {
 		id = BOL_accept_help_from_nationalists
 		icon = GFX_focus_ITA_generic_fascist_workers
-		x = -4
+		x = -3
 		y = 1
 		relative_position_id = BOL_a_second_chance
 		search_filters = {
@@ -708,6 +724,35 @@ focus_tree = {
 	}
 
 	focus = {
+		id = BOL_5
+		icon = GFX_goal_generic_censorship
+		x = 2
+		y = 6
+		relative_position_id = BOL_accept_help_from_nationalists
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		
+		prerequisite = { focus =BOL_1}
+		
+		prerequisite = { focus =BOL_2}
+	}
+	focus = {
+		id = BOL_6
+		icon = GFX_goal_generic_censorship
+		x = 0
+		y = 7
+		relative_position_id = BOL_accept_help_from_nationalists
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		
+		prerequisite = { focus =BOL_4}
+		prerequisite = { focus =BOL_3}
+		prerequisite = { focus =BOL_5}
+	}
+
+	focus = {
 		id = BOL_seek_help_from_indigenous_peoples
 		icon = GFX_goal_unknown
 		x = 3
@@ -776,11 +821,12 @@ focus_tree = {
 	focus = {
 		id = BOL_democratize_the_country
 		icon = GFX_goal_democracy_people
-		x = 16
-		y = 9
+		x = 5
+		y = 4
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		relative_position_id = BOL_failed_coup
 		prerequisite = { focus =  BOL_disarm_the_Bolivian_army }
 		mutually_exclusive = { focus =BOL_a_second_chance}
 	}
@@ -862,7 +908,7 @@ focus_tree = {
     
 
 	focus = {
-		id = BOL_Children_of_Pachamama
+		id = BOL_children_of_pachamama
 		icon = GFX_goal_unknown
 		x = 0
 		y = 6
@@ -874,7 +920,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BOL_the_true_heirs_of_the_Inca_empire
+		id = BOL_the_true_heirs_of_the_inca_empire
 		icon = GFX_goal_unknown
 		x = 0
 		y = 7
@@ -882,97 +928,106 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BOL_Children_of_Pachamama }
+		prerequisite = { focus = BOL_children_of_pachamama }
 	}
 
 	
 	focus = {
-		id = BOL_Aymara_architecture
+		id = BOL_aymara_architecture
 		icon = GFX_goal_unknown
-		x = 11
-		y = 18
+		x = -2
+		y = 8
+		relative_position_id = BOL_seek_help_from_indigenous_peoples
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BOL_the_true_heirs_of_the_Inca_empire }
+		prerequisite = { focus = BOL_the_true_heirs_of_the_inca_empire }
 	}
 
 	focus = {
-		id = BOL_Chakana_Insurgente
+		id = BOL_chakana_insurgente
 		icon = GFX_goal_unknown
-		x = 9
-		y = 18
+		x = 0
+		y = 8
+		relative_position_id = BOL_seek_help_from_indigenous_peoples
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BOL_the_true_heirs_of_the_Inca_empire }
+		prerequisite = { focus = BOL_the_true_heirs_of_the_inca_empire}
 	}
 
 
 	focus = {
-		id = BOL_The_Aymara_popular_army
+		id = BOL_the_aymara_popular_army
 		icon = GFX_goal_unknown
-		x = 9
-		y = 19
+		x = 0
+		y = 9
+		relative_position_id = BOL_seek_help_from_indigenous_peoples
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BOL_Chakana_Insurgente }
+		prerequisite = { focus = BOL_chakana_insurgente }
 	}
 
 	
 	focus = {
-		id = BOL_Red_Ayllu_in_Distant_Lands
+		id = BOL_red_ayllu_in_distant_lands
 		icon = GFX_goal_unknown
-		x = 9
-		y = 20
+		x = 0
+		y = 10
+		relative_position_id = BOL_seek_help_from_indigenous_peoples
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BOL_The_Aymara_popular_army }
+		prerequisite = { focus = BOL_the_aymara_popular_army }
 	}
 
 		
 	focus = {
 		id = BOL_the_war_against_the_colonizers
 		icon = GFX_goal_unknown
-		x = 10
-		y = 21
+		x = 1
+		y = 11
+		relative_position_id = BOL_seek_help_from_indigenous_peoples
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BOL_Red_Ayllu_in_Distant_Lands }
+		prerequisite = { focus = BOL_red_ayllu_in_distant_lands }
+		prerequisite = { focus = BOL_impose_the_family_ayllu_system }
 	}
 
 	focus = {
 		id = BOL_the_destiny_of_america
 		icon = GFX_goal_unknown
-		x = 8
-		y = 21
+		x = -1
+		y = 11
+		relative_position_id = BOL_seek_help_from_indigenous_peoples
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BOL_Red_Ayllu_in_Distant_Lands }
+		prerequisite = { focus = BOL_red_ayllu_in_distant_lands }
 	}
 
 
 	focus = {
 		id = BOL_the_false_son_of_the_sun
 		icon = GFX_goal_unknown
-		x = 7
-		y = 18
+		x = 2
+		y = 8
+		relative_position_id = BOL_seek_help_from_indigenous_peoples
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BOL_the_true_heirs_of_the_Inca_empire }
+		prerequisite = { focus = BOL_the_true_heirs_of_the_inca_empire }
 	}
 
 
 	focus = {
 		id = BOL_help_Chilean_anarchists
 		icon = GFX_goal_unknown
-		x = 7
-		y = 19
+		x = 2
+		y = 9
+		relative_position_id = BOL_seek_help_from_indigenous_peoples
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -981,10 +1036,11 @@ focus_tree = {
 
 		
 	focus = {
-		id = BOL_Impose_the_family_ayllu_system
+		id = BOL_impose_the_family_ayllu_system
 		icon = GFX_goal_unknown
-		x = 7
-		y = 20
+		x = 2
+		y = 10
+		relative_position_id = BOL_seek_help_from_indigenous_peoples
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
