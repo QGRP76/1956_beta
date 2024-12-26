@@ -41,18 +41,47 @@ characters={
 			}
 		}
 	}
-	GRL_greenland_worker_councils={	#why was it LaR-locked if it uses our portrait and vanilla has no Greenland at all? - Fantom
-		name=GRL_greenland_worker_councils
-		portraits={
-			civilian={
-				large="gfx/leaders/r56_generic/r56_generic_collective.dds"
+	GRL_greenland_worker_councils={
+		
+		instance = {
+			allowed = {
+				has_dlc = "Trials of Allegiance"
+			}
+			name=GRL_greenland_worker_councils
+			portraits={
+				civilian = {
+					large = GFX_portrait_INU_council
+				}
+			}
+			country_leader={
+				ideology=marxism
+				expire="1965.1.1"
+				id=-1	
+				traits = {
+					communist_council_trait
+				}
 			}
 		}
-		country_leader={
-			ideology=marxism
-			expire="1965.1.1"
-			id=-1			
+		instance = {
+			allowed = {
+				NOT = {
+					has_dlc = "Trials of Allegiance"
+				}
+			}
+			name=GRL_greenland_worker_councils
+			portraits={
+				civilian={
+					large="gfx/leaders/r56_generic/r56_generic_collective.dds"
+				}
+			}
+			country_leader={
+				ideology=marxism
+				expire="1965.1.1"
+				id=-1			
+			}
 		}
+
+
 	}
 	GRL_knud_oldendow={
 		name=GRL_knud_oldendow
