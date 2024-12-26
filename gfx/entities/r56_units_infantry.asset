@@ -1674,15 +1674,19 @@ entity = { clone = "RAJ_infantry_2_entity_snow" name = "HYD_infantry_5_entity_sn
 entity = { clone = "RAJ_infantry_2_entity_snow" name = "HYD_infantry_6_entity_snow" version = 2 }
 
 #Mg for tfv infantry - version 1 are in units_infantry.asset
-entity = { clone = "AST_infantry_2_entity" name = "AST_infantry_4_entity" version = 2 }
-entity = { clone = "AST_infantry_2_entity" name = "AST_infantry_5_entity" version = 2 }
-entity = { clone = "AST_infantry_2_entity" name = "AST_infantry_6_entity" version = 2 }
-entity = { clone = "CAN_infantry_2_entity" name = "CAN_infantry_4_entity" version = 2 }
-entity = { clone = "CAN_infantry_2_entity" name = "CAN_infantry_5_entity" version = 2 }
-entity = { clone = "CAN_infantry_2_entity" name = "CAN_infantry_6_entity" version = 2 }
-entity = { clone = "NZL_infantry_2_entity" name = "NZL_infantry_4_entity" version = 2 }
-entity = { clone = "NZL_infantry_2_entity" name = "NZL_infantry_5_entity" version = 2 }
-entity = { clone = "NZL_infantry_2_entity" name = "NZL_infantry_6_entity" version = 2 }
+# version 2 moved to tfv_units_infantry.asset
+# entity = { clone = "AST_infantry_2_entity" name = "AST_infantry_4_entity" version = 2 }
+# entity = { clone = "AST_infantry_2_entity" name = "AST_infantry_5_entity" version = 2 }
+# entity = { clone = "AST_infantry_2_entity" name = "AST_infantry_6_entity" version = 2 }
+# entity = { clone = "CAN_infantry_2_entity" name = "CAN_infantry_4_entity" version = 2 }
+# entity = { clone = "CAN_infantry_2_entity" name = "CAN_infantry_5_entity" version = 2 }
+# entity = { clone = "CAN_infantry_2_entity" name = "CAN_infantry_6_entity" version = 2 }
+# entity = { clone = "NZL_infantry_2_entity" name = "NZL_infantry_4_entity" version = 2 }
+# entity = { clone = "NZL_infantry_2_entity" name = "NZL_infantry_5_entity" version = 2 }
+# entity = { clone = "NZL_infantry_2_entity" name = "NZL_infantry_6_entity" version = 2 }
+# entity = { clone = "SAF_infantry_2_entity" name = "SAF_infantry_4_entity" version = 2 }
+# entity = { clone = "SAF_infantry_2_entity" name = "SAF_infantry_5_entity" version = 2 }
+# entity = { clone = "SAF_infantry_2_entity" name = "SAF_infantry_6_entity" version = 2 }
 
 entity = { clone = "RAJ_infantry_2_entity" name = "RAJ_infantry_4_entity" version = 2 }
 entity = { clone = "RAJ_infantry_2_entity_snow" name = "RAJ_infantry_4_entity_snow" version = 2 }
@@ -1691,9 +1695,6 @@ entity = { clone = "RAJ_infantry_2_entity" name = "RAJ_infantry_5_entity" versio
 entity = { clone = "RAJ_infantry_2_entity_snow" name = "RAJ_infantry_6_entity_snow" version = 2 }
 entity = { clone = "RAJ_infantry_2_entity" name = "RAJ_infantry_6_entity" version = 2 }
 
-entity = { clone = "SAF_infantry_2_entity" name = "SAF_infantry_4_entity" version = 2 }
-entity = { clone = "SAF_infantry_2_entity" name = "SAF_infantry_5_entity" version = 2 }
-entity = { clone = "SAF_infantry_2_entity" name = "SAF_infantry_6_entity" version = 2 }
 
 #late Mg for DoD infantry - version 1 are in units_infantry.asset
 entity = { clone = "CZE_infantry_2_entity" name = "CZE_infantry_4_entity" version = 2 }
