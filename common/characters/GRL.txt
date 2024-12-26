@@ -45,7 +45,7 @@ characters={
 		
 		instance = {
 			allowed = {
-				has_dlc = "Trials of Allegiance"
+				has_dlc = "Trial of Allegiance"
 			}
 			name=GRL_greenland_worker_councils
 			portraits={
@@ -65,7 +65,7 @@ characters={
 		instance = {
 			allowed = {
 				NOT = {
-					has_dlc = "Trials of Allegiance"
+					has_dlc = "Trial of Allegiance"
 				}
 			}
 			name=GRL_greenland_worker_councils
